@@ -23,7 +23,7 @@ Implemented inside `narfid` only. `go` was read as the reference implementation 
 
 ## Contact flow
 
-The user supplied sales WhatsApp number `+201066471110`. Visitors enter their name, institution, branch count and interested plan, review the details, then open an encoded WhatsApp message. The message sends only when the visitor chooses Send in WhatsApp. No lead database, checkout, login or automatic external messaging was added.
+The user supplied sales WhatsApp number `+201066471110`. Visitors enter their name, institution, branch count and interested plan, review the details, then open an encoded WhatsApp message. The message sends only when the visitor chooses Send in WhatsApp. No lead database, checkout or automatic external messaging was added. Board authentication is a separate flow described in `board-authentication.md`.
 
 The form validates required names, preserves details when editing the reviewed request and supports copying its text. It does not persist visitor data.
 
@@ -50,4 +50,4 @@ Production build, TypeScript, ESLint and HTTP checks are run against the complet
 
 ## Next stage
 
-Existing club-member subscriptions are distinct from future Nerved vendor billing. Tenant onboarding, annual SaaS payments, entitlements, tenant lifecycle and management accounts remain separate work; review the backend audit before implementing them.
+Existing club-member subscriptions are distinct from future Nerved vendor billing. Tenant onboarding, annual SaaS payments, entitlements and tenant lifecycle remain separate work; review the backend audit before implementing them. Board login and a protected welcome area are now implemented; future internal management sections are the next stage. See `board-authentication.md` for account provisioning requirements.

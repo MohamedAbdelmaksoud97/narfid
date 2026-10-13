@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import dashboardImage from "@/public/images/nerved-dashboard.png";
 import { DirectionProvider } from "@base-ui/react/direction-provider";
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -512,6 +513,9 @@ export function LandingPage() {
               ))}
             </nav>
             <div className="header-actions">
+              <Link href="/login" className="board-login-link">
+                دخول الإدارة
+              </Link>
               <Button size="navigation" onClick={() => openDemo()}>
                 احجز عرضًا توضيحيًا <ArrowUpLeft data-icon="inline-end" />
               </Button>
@@ -545,6 +549,10 @@ export function LandingPage() {
                   <ArrowUpLeft />
                 </a>
               ))}
+              <Link href="/login" onClick={() => setMenuOpen(false)}>
+                دخول الإدارة
+                <ArrowUpLeft />
+              </Link>
             </nav>
           )}
         </header>

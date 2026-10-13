@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "auth:bootstrap": "node --env-file=.env.local scripts/bootstrap-board-users.mjs",
+    "test:auth": "node --test tests/board-access.test.mjs",
+    "test:auth:http": "node --env-file=.env.local scripts/test-board-auth-http.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

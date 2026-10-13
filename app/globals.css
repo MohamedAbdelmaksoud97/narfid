@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -194,6 +194,15 @@
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.board-login-link {
+  color: var(--muted-foreground);
+  font-size: 12px;
+  white-space: nowrap;
+  padding: 10px;
+}
+.board-login-link:hover {
+  color: var(--primary);
 }
 .menu-toggle {
   display: none;
@@ -1576,7 +1585,7 @@ h2 {
   .header-inner {
     gap: 15px;
   }
-  .header-actions > button:first-child {
+  .header-actions > button:not(.menu-toggle) {
     font-size: 12px;
     padding-inline: 12px;
   }
@@ -1724,6 +1733,9 @@ h2 {
   }
 }
 @media (max-width: 719px) {
+  .board-login-link {
+    display: none;
+  }
   .system-shot-caption {
     padding: 9px 12px;
     font-size: 9px;
@@ -1744,12 +1756,12 @@ h2 {
   .menu-toggle {
     display: inline-flex;
   }
-  .header-actions > button:first-child {
+  .header-actions > button:not(.menu-toggle) {
     font-size: 11px;
     height: 36px;
     padding-inline: 12px;
   }
-  .header-actions > button:first-child svg {
+  .header-actions > button:not(.menu-toggle) svg {
     display: none;
   }
   .hero {
@@ -2135,7 +2147,7 @@ h2 {
   .header-actions {
     gap: 2px;
   }
-  .header-actions > button:first-child {
+  .header-actions > button:not(.menu-toggle) {
     font-size: 10px;
     padding-inline: 8px;
   }
@@ -2224,5 +2236,342 @@ h2 {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Nerved board authentication */
+.board-auth-page,
+.board-workspace {
+  min-height: 100dvh;
+}
+.board-auth-page {
+  display: flex;
+  flex-direction: column;
+}
+.board-auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 96px;
+  gap: 20px;
+}
+.board-home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted-foreground);
+  font-size: 13px;
+}
+.board-home-link svg {
+  width: 16px;
+  height: 16px;
+}
+.board-auth-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 100px;
+  align-items: center;
+  flex: 1;
+  padding-block: 55px 85px;
+}
+.board-auth-intro h1 {
+  font-size: clamp(40px, 4vw, 58px);
+  line-height: 1.45;
+}
+.board-auth-intro > p {
+  margin-top: 24px;
+  max-width: 440px;
+  color: var(--muted-foreground);
+  font-size: 15px;
+  line-height: 1.9;
+}
+.board-auth-intro .section-kicker > svg {
+  width: 17px;
+  height: 17px;
+}
+.board-auth-mark {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 48px;
+  color: var(--muted-foreground);
+  font-size: 12px;
+}
+.board-login-panel {
+  --muted-foreground: color-mix(in srgb, var(--foreground) 70%, var(--card));
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 12px;
+  padding: 38px;
+  max-width: 470px;
+  width: 100%;
+  justify-self: end;
+}
+.board-login-heading {
+  margin-bottom: 30px;
+}
+.board-lock {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid var(--border);
+  background: var(--background);
+  border-radius: 8px;
+  color: var(--primary);
+  margin-bottom: 22px;
+}
+.board-lock svg {
+  width: 22px;
+  height: 22px;
+}
+.board-login-heading h2 {
+  font-size: 28px;
+  letter-spacing: -0.6px;
+}
+.board-login-heading p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 8px;
+  color: var(--muted-foreground);
+}
+.board-login-form [data-slot="input"] {
+  height: 46px;
+  font-size: 15px;
+  background: var(--background);
+}
+.board-login-form [data-slot="field-label"] {
+  font-size: 14px;
+}
+.board-login-form [data-slot="field-description"] {
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 6px;
+}
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+.board-login-form [data-slot="alert"] {
+  text-align: right;
+}
+.board-auth-footer {
+  padding-block: 22px;
+  border-top: 1px solid var(--border);
+  color: var(--muted-foreground);
+  font-size: 11px;
+}
+.board-loading {
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.board-loading-page {
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  color: var(--muted-foreground);
+}
+.board-workspace-header {
+  border-bottom: 1px solid var(--border);
+}
+.board-workspace-header > div {
+  min-height: 86px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.board-workspace-actions {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.board-workspace-actions [data-slot="badge"] {
+  height: 28px;
+  padding-inline: 12px;
+  gap: 6px;
+}
+.board-workspace-content {
+  padding-block: 80px;
+}
+.board-workspace-content h1 {
+  font-size: clamp(38px, 4vw, 56px);
+}
+.board-workspace-content > p {
+  margin-top: 20px;
+  color: var(--muted-foreground);
+  font-size: 15px;
+  line-height: 1.9;
+}
+.board-member-card {
+  --muted-foreground: color-mix(in srgb, var(--foreground) 70%, var(--card));
+  display: grid;
+  grid-template-columns: auto 1fr 1.15fr;
+  gap: 24px;
+  align-items: center;
+  background: var(--card);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-top: 38px;
+  max-width: 970px;
+}
+.board-member-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  color: var(--primary);
+  background: var(--background);
+}
+.board-member-icon svg {
+  width: 23px;
+  height: 23px;
+}
+.board-member-card h2 {
+  font-size: 22px;
+}
+.board-member-card p {
+  font-size: 12px;
+  color: var(--muted-foreground);
+  line-height: 1.8;
+  margin-top: 7px;
+}
+.board-member-card dl {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-inline-start: 1px solid var(--border);
+  padding-inline-start: 28px;
+}
+.board-member-card dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 13px;
+}
+.board-member-card dt {
+  color: var(--muted-foreground);
+}
+.board-member-card dd {
+  overflow-wrap: anywhere;
+}
+.board-next-step {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  margin-block: 32px;
+}
+.board-next-step > svg {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+.board-next-step h2 {
+  font-size: 18px;
+}
+.board-next-step p {
+  color: var(--muted-foreground);
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 8px;
+}
+@media (max-width: 959px) {
+  .board-auth-layout {
+    gap: 45px;
+  }
+  .board-auth-intro h1 {
+    font-size: 44px;
+  }
+  .board-login-panel {
+    padding: 28px;
+  }
+  .board-member-card {
+    grid-template-columns: auto 1fr;
+  }
+  .board-member-card dl {
+    grid-column: span 2;
+    border-inline-start: 0;
+    padding-inline-start: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 22px;
+  }
+}
+@media (max-width: 719px) {
+  .board-auth-header {
+    min-height: 82px;
+  }
+  .board-home-link {
+    font-size: 11px;
+    gap: 5px;
+  }
+  .board-auth-layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding-block: 32px 52px;
+  }
+  .board-auth-intro h1 {
+    font-size: 37px;
+  }
+  .board-auth-intro > p {
+    font-size: 13px;
+    margin-top: 17px;
+  }
+  .board-auth-mark {
+    display: none;
+  }
+  .board-login-panel {
+    justify-self: stretch;
+    max-width: none;
+    padding: 27px;
+  }
+  .board-login-heading h2 {
+    font-size: 25px;
+  }
+  .board-auth-footer {
+    font-size: 10px;
+  }
+  .board-workspace-header > div {
+    min-height: 78px;
+    gap: 12px;
+  }
+  .board-workspace-actions {
+    gap: 8px;
+  }
+  .board-workspace-actions [data-slot="badge"] {
+    display: none;
+  }
+  .board-workspace-actions [data-slot="button"] {
+    font-size: 11px;
+    padding-inline: 12px;
+  }
+  .board-workspace-content {
+    padding-block: 50px;
+  }
+  .board-workspace-content > p {
+    font-size: 13px;
+  }
+  .board-member-card {
+    padding: 24px;
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .board-member-card h2 {
+    font-size: 20px;
+  }
+  .board-member-card dl > div {
+    font-size: 12px;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .board-member-card dd {
+    text-align: start;
   }
 }
