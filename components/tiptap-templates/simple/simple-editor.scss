@@ -1,0 +1,71 @@
+// Template layout scoped to the article workspace; it never changes the site font.
+.simple-editor-wrapper {
+  --tt-toolbar-bg-color: var(--card);
+  --tt-toolbar-border-color: var(--border);
+  --tt-bg-color: var(--background);
+  --tt-theme-text: var(--foreground);
+  --tt-brand-color-500: var(--primary);
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  background: var(--background);
+  .article-toolbar[data-variant="fixed"] {
+    position: sticky;
+    top: 0;
+    height: auto;
+    padding: 8px;
+    flex-wrap: wrap;
+    overflow: visible;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    gap: 6px;
+  }
+  .tiptap-toolbar-group {
+    flex-shrink: 0;
+  }
+  .simple-editor-content {
+    min-height: 520px;
+  }
+  .tiptap.ProseMirror.simple-editor {
+    font-family: var(--font-arabic), sans-serif;
+    padding: clamp(20px, 4vw, 52px);
+    min-height: 520px;
+    outline: none;
+    white-space: pre-wrap;
+    max-width: 860px;
+    margin-inline: auto;
+    p.is-editor-empty:first-child::before {
+      content: attr(data-placeholder);
+      color: var(--muted-foreground);
+      float: inline-start;
+      height: 0;
+      pointer-events: none;
+    }
+    [data-resize-container] {
+      max-width: 100%;
+    }
+    [data-resize-handle] {
+      background: var(--primary);
+      border: 2px solid var(--background);
+      border-radius: 4px;
+      width: 9px;
+      height: 9px;
+    }
+  }
+  .simple-editor-search-and-replace {
+    position: sticky;
+    top: 12px;
+    margin: 12px;
+    max-width: calc(100% - 24px);
+  }
+  .editor-context-tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    flex-basis: 100%;
+    font-size: 13px;
+    color: var(--muted-foreground);
+  }
+}

@@ -15,6 +15,7 @@ export const navigation = [
   { label: "لماذا نرفد؟", href: "#why-nerved" },
   { label: "الباقات", href: "#pricing" },
   { label: "الأسئلة الشائعة", href: "#faq" },
+  { label: "المقالات", href: "/articles" },
 ];
 
 export const features = [

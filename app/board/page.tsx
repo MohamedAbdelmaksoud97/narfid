@@ -79,6 +79,10 @@ async function BoardWorkspace() {
             <p>سنضيف أقسام الإدارة ومحتواها هنا في المراحل القادمة.</p>
           </div>
         </div>
+        <Link href="/board/articles" className={buttonVariants({ size: "marketing" })}>
+          إدارة المقالات
+          <ArrowUpLeft data-icon="inline-end" />
+        </Link>
         <Link
           href="/"
           className={buttonVariants({ variant: "outline", size: "marketing" })}

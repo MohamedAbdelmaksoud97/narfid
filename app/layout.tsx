@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Tajawal } from "next/font/google";
+import "@/styles/_variables.scss";
+import "@/styles/_keyframe-animations.scss";
 import "./globals.css";
+import { NavigationGuardProvider } from "@/components/articles/navigation-guard-provider";
 
 const arabicSans = Tajawal({
   variable: "--font-arabic",
@@ -54,9 +57,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="ar"
       dir="rtl"
+      data-scroll-behavior="smooth"
       className={`${arabicSans.variable} dark h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <NavigationGuardProvider>{children}</NavigationGuardProvider>
+      </body>
     </html>
   );
 }
