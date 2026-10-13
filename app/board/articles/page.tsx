@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 import { requireArticleSession } from "@/lib/articles/server";
 import { ArticleError } from "@/lib/articles/validation";
 import { Badge } from "@/components/ui/badge";
@@ -46,10 +46,6 @@ async function Workspace({ searchParams }: Props) {
       <RefreshOnReturn />
       <header className="articles-manager-header">
         <div>
-          <Link href="/board" className="article-back-link">
-            <ArrowRight />
-            مجلس الإدارة
-          </Link>
           <span className="section-kicker">محتوى نرفد</span>
           <h1>المقالات</h1>
           <p>

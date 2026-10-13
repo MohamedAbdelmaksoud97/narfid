@@ -14,6 +14,7 @@ type Guard = {
   historyState: () => unknown;
 };
 const Context = createContext<(guard: Guard) => () => void>(() => () => {});
+const LeaveContext = createContext<() => boolean>(() => true);
 
 // Root registration precedes Next's passive popstate listener. A guard installed
 // only inside a page can be removed by Activity before the history event reaches it.
@@ -25,6 +26,16 @@ export function NavigationGuardProvider({ children }: { children: ReactNode }) {
       return () => {
         guards.current.delete(guard);
       };
+    },
+    [],
+  );
+  const confirmNavigation = useMemo(
+    () => () => {
+      const unsaved = [...guards.current].some((guard) => guard.shouldBlock());
+      return (
+        !unsaved ||
+        window.confirm("عندك تعديلات لم تُحفظ. هل تريد مغادرة المحرر؟")
+      );
     },
     [],
   );
@@ -51,8 +62,17 @@ export function NavigationGuardProvider({ children }: { children: ReactNode }) {
     window.addEventListener("popstate", onHistory, true);
     return () => window.removeEventListener("popstate", onHistory, true);
   }, []);
-  return <Context.Provider value={register}>{children}</Context.Provider>;
+  return (
+    <Context.Provider value={register}>
+      <LeaveContext.Provider value={confirmNavigation}>
+        {children}
+      </LeaveContext.Provider>
+    </Context.Provider>
+  );
 }
 export function useNavigationGuard() {
   return useContext(Context);
+}
+export function useConfirmNavigation() {
+  return useContext(LeaveContext);
 }

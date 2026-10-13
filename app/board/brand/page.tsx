@@ -2,13 +2,7 @@ import type { Metadata } from "next";
 import { Suspense, type CSSProperties, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowRight,
-  ArrowUpLeft,
-  Download,
-  ExternalLink,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowUpLeft, Download, ExternalLink, ShieldCheck } from "lucide-react";
 import { requireBoardMember } from "@/lib/auth/session";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -111,33 +105,6 @@ async function BrandWorkspace() {
   await requireBoardMember();
   return (
     <main className="board-workspace brand-guide">
-      <header className="board-workspace-header">
-        <div className="container">
-          <Link
-            href="/board"
-            aria-label="نرفد — مجلس الإدارة"
-            className="brand"
-          >
-            <Image
-              src="/logo.png"
-              alt="نرفد"
-              width={1672}
-              height={941}
-              sizes="280px"
-            />
-          </Link>
-          <Link
-            href="/board"
-            className={buttonVariants({
-              variant: "outline",
-              size: "navigation",
-            })}
-          >
-            <ArrowRight data-icon="inline-start" /> مجلس الإدارة
-          </Link>
-        </div>
-      </header>
-
       <div className="container">
         <header className="brand-guide-hero">
           <div className="brand-guide-meta">

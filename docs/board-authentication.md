@@ -2,7 +2,7 @@
 
 ## Scope
 
-Email/password login for five pre-provisioned board accounts. No sign-up UI, public account creation action, OAuth flow or password recovery email flow was added. The landing page links to `/login`; authorized users enter `/board`, which currently contains a welcome screen and account details. Future management sections are intentionally left for later stages.
+Email/password login for five pre-provisioned board accounts. No sign-up UI, public account creation action, OAuth flow or password recovery email flow was added. The landing page links to `/login`; authorized users enter `/board`. A shared workspace layout provides persistent navigation for the overview, brand reference, article list and article editor.
 
 Supabase Auth stores the users, password hashes, sessions and administrator-managed membership in its managed Postgres `auth` schema. A separate public profile table is not needed for this stage. No custom SQL or database migration was applied.
 
@@ -36,7 +36,7 @@ The `.private` directory is ignored by Git and is outside `public`. Passwords/ad
 ## Authorization and sessions
 
 - The proxy verifies signed JWT claims and refreshes Supabase SSR cookies.
-- The board page separately calls `getUser()` to read live Auth user data and check the exact five-email allowlist plus the admin-controlled membership flag.
+- The board layout and protected pages call `getUser()` to read live Auth user data and check the exact five-email allowlist plus the admin-controlled membership flag. Article access also checks its active database membership, as documented in `article-editor.md`.
 - An authenticated user outside the board list cannot enter the board page. User-editable `user_metadata` cannot grant access.
 - Removing the membership flag blocks subsequent server checks.
 - Cookies are HttpOnly, SameSite=Lax and Secure in production. The board login uses server actions; it does not depend on browser access to Supabase auth cookies.
@@ -46,6 +46,22 @@ The `.private` directory is ignored by Git and is outside `public`. Passwords/ad
 - There is no signup route. Dashboard-level Supabase public sign-up settings are not changed by this script; administrator-controlled board membership remains required even if that API is enabled.
 
 For future sections, call `requireBoardMember()` inside every sensitive server action/data accessor, not only in a surrounding layout.
+
+## Shared board workspace
+
+`app/board/layout.tsx` authenticates the member behind Suspense and renders `components/board/board-shell.tsx`. The shared layout remains mounted while its child pages change. The public site and login remain outside it.
+
+- The right sidebar contains overview, brand and articles, with an active link that includes nested editor routes.
+- The sticky navbar shows the current section, breadcrumbs, account context, public-site link and logout.
+- The desktop sidebar collapses to icons. Its UI preference is stored in `nerved_board_sidebar`, scoped to `/board` with SameSite=Lax and Secure on HTTPS; it has no authentication authority.
+- Mobile navigation uses the shadcn Base UI Sheet, with an Arabic title, focus management, Escape/close controls and automatic closing after navigation.
+- The sidebar uses Ctrl/⌘+\\, leaving Ctrl/⌘+B to editor formatting. Already-handled keyboard events are respected.
+- Unsaved article edits retain their existing link/history guards. Logout also consults the same active draft guards before submitting its server action.
+- Container queries adapt editor settings and the brand index to the width available after the sidebar, including tablet widths.
+
+The official `@shadcn/sidebar` registry supplied Sidebar, Sheet, Tooltip, Skeleton and the mobile hook. Existing Button/Input/Separator files were preserved. The mobile hook uses `useSyncExternalStore` for the current React rules.
+
+`tests/browser/board-layout.spec.ts` checks actual login, persistent layout DOM, active routes, collapsed state across navigation/reload, editor shortcuts, canceling logout with unsaved edits, mobile navigation at 390px, no overflow at 768/1024px, and anonymous protection after logout and browser back. It cleans up only the draft it creates. Screenshots are local in `.private/board-layout-qa`.
 
 ## Checks
 

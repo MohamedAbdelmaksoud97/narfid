@@ -8,6 +8,18 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+## Brand context — NARFID
+
+Whenever a task requires understanding Nerved (نرفد), its nature as a
+technology provider, platform offering, Saudi target customers, positioning,
+vision, mission, goals, brand personality, voice, content, or commercial model,
+read and follow `.agents/skills/narfid/SKILL.md` before making those decisions.
+
+Use the NARFID skill for brand context and messaging. Visual identity remains
+in the UI-system skill; for tasks involving both brand content and UI, use
+NARFID alongside the UI skills below. Verify current capabilities and proposed
+pricing against the sources linked in the skill before making specific claims.
+
 ## UI components
 
 Before adding, editing, styling, or composing UI components,

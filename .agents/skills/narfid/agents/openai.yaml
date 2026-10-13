@@ -1,0 +1,4 @@
+interface:
+  display_name: "NARFID"
+  short_description: "مرجع نرفد واستراتيجيتها وعملائها وصوتها"
+  default_prompt: "استخدم $narfid لفهم نرفد وصياغة محتوى يناسب رسالتها وعملاءها في السوق السعودي."

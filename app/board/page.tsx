@@ -1,19 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import {
-  ArrowUpLeft,
-  CheckCircle2,
-  FileText,
-  LogOut,
-  Palette,
-  ShieldCheck,
-} from "lucide-react";
+import { ArrowUpLeft, CheckCircle2, FileText, Palette } from "lucide-react";
 import { requireBoardMember } from "@/lib/auth/session";
-import { logoutAction } from "@/app/login/actions";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -31,31 +21,6 @@ async function BoardWorkspace() {
   const member = await requireBoardMember();
   return (
     <main className="board-workspace">
-      <header className="board-workspace-header">
-        <div className="container">
-          <Link href="/" aria-label="نرفد — الرئيسية" className="brand">
-            <Image
-              src="/logo.png"
-              alt="نرفد"
-              width={1672}
-              height={941}
-              sizes="280px"
-            />
-          </Link>
-          <div className="board-workspace-actions">
-            <Badge variant="secondary">
-              <ShieldCheck />
-              مجلس الإدارة
-            </Badge>
-            <form action={logoutAction}>
-              <Button type="submit" variant="outline" size="navigation">
-                تسجيل الخروج
-                <LogOut data-icon="inline-end" />
-              </Button>
-            </form>
-          </div>
-        </div>
-      </header>
       <section className="board-workspace-content container">
         <span className="section-kicker">
           <span className="status-dot" />
