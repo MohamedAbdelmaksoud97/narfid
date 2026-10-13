@@ -2,11 +2,25 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpLeft, CheckCircle2, LogOut, ShieldCheck } from "lucide-react";
+import {
+  ArrowUpLeft,
+  CheckCircle2,
+  FileText,
+  LogOut,
+  Palette,
+  ShieldCheck,
+} from "lucide-react";
 import { requireBoardMember } from "@/lib/auth/session";
 import { logoutAction } from "@/app/login/actions";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "مجلس الإدارة | نرفد",
@@ -52,7 +66,7 @@ async function BoardWorkspace() {
           <br />
           <span>{member.name}.</span>
         </h1>
-        <p>تم تسجيل دخولك بنجاح. مساحة مجلس الإدارة جاهزة للخطوات القادمة.</p>
+        <p>مساحة الفريق لإدارة محتوى نرفد، والرجوع إلى هويتها واتجاهها.</p>
         <div className="board-member-card">
           <span className="board-member-icon">
             <CheckCircle2 />
@@ -72,17 +86,53 @@ async function BoardWorkspace() {
             </div>
           </dl>
         </div>
-        <div className="board-next-step">
-          <ShieldCheck />
-          <div>
-            <h2>نبدأ من هنا</h2>
-            <p>سنضيف أقسام الإدارة ومحتواها هنا في المراحل القادمة.</p>
-          </div>
+        <div className="board-sections">
+          <Card>
+            <CardHeader>
+              <Palette aria-hidden="true" />
+              <CardTitle>هوية نرفد</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                الرؤية والرسالة، العملاء، صوت البراند وشخصيته، والمرجع البصري
+                لفريقنا.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="/board/brand"
+                className={buttonVariants({ size: "navigation" })}
+              >
+                استكشف هوية نرفد
+                <ArrowUpLeft data-icon="inline-end" />
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardHeader>
+              <FileText aria-hidden="true" />
+              <CardTitle>المقالات</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                اكتب محتوى نرفد، وراجع المسودات، وانشر ما يساعد المؤسسات
+                الرياضية.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="/board/articles"
+                className={buttonVariants({
+                  variant: "outline",
+                  size: "navigation",
+                })}
+              >
+                إدارة المقالات
+                <ArrowUpLeft data-icon="inline-end" />
+              </Link>
+            </CardFooter>
+          </Card>
         </div>
-        <Link href="/board/articles" className={buttonVariants({ size: "marketing" })}>
-          إدارة المقالات
-          <ArrowUpLeft data-icon="inline-end" />
-        </Link>
         <Link
           href="/"
           className={buttonVariants({ variant: "outline", size: "marketing" })}
