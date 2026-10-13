@@ -15,6 +15,11 @@ export const ArticleImage = Image.extend({
     return {
       ...this.parent?.(),
       caption: { default: "", rendered: false },
+      layout: {
+        default: "block",
+        parseHTML: (el) => el.getAttribute("data-layout") ?? "block",
+        renderHTML: (attrs) => ({ "data-layout": attrs.layout }),
+      },
       textAlign: {
         default: "center",
         parseHTML: (el) => el.getAttribute("data-align") ?? "center",

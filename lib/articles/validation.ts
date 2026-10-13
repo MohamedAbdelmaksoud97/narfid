@@ -86,6 +86,7 @@ const nodeAttrs = new Set([
   "alt",
   "title",
   "caption",
+  "layout",
   "width",
   "height",
   "startAt",
@@ -141,6 +142,8 @@ function validateAttrs(
         throw new ArticleError("خصائص المحتوى غير صالحة.");
       if (key === "dir" && !["rtl", "ltr", "auto"].includes(value))
         throw new ArticleError("اتجاه النص غير صالح.");
+      if (key === "layout" && !["block", "wrap"].includes(value))
+        throw new ArticleError("اختر صورة في سطر مستقل أو بجانب النص.");
       if (
         ["textAlign", "align"].includes(key) &&
         !["left", "center", "right", "justify"].includes(value)

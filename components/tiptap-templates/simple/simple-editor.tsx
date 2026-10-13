@@ -105,6 +105,8 @@ function ExtendedTools({
     editor,
     selector: ({ editor }) => ({
       image: editor.isActive("image"),
+      imageAlign: editor.getAttributes("image").textAlign ?? "center",
+      imageLayout: editor.getAttributes("image").layout ?? "block",
       table: editor.isActive("table"),
     }),
   });
@@ -120,6 +122,24 @@ function ExtendedTools({
   const selection = useRef({ from: 1, to: 1 });
   const controller = useRef<AbortController | null>(null);
   useEffect(() => () => controller.current?.abort(), []);
+  function writeBesideImage() {
+    const position = editor.state.selection.from;
+    const image = editor.state.doc.nodeAt(position);
+    if (image?.type.name !== "image") return;
+    const nextPosition = position + image.nodeSize;
+    const next = editor.state.doc.nodeAt(nextPosition);
+    const chain = editor
+      .chain()
+      .focus()
+      .updateAttributes("image", {
+        layout: "wrap",
+        textAlign:
+          selected.imageAlign === "center" ? "right" : selected.imageAlign,
+      });
+    if (!next?.isTextblock)
+      chain.insertContentAt(nextPosition, { type: "paragraph" });
+    chain.setTextSelection(nextPosition + 1).run();
+  }
   function open(kind: "image" | "youtube", editing = false) {
     setEditingImage(editing);
     selection.current = {
@@ -391,12 +411,17 @@ function ExtendedTools({
             variant="outline"
             size="sm"
             aria-label="محاذاة الصورة"
+            value={[selected.imageAlign]}
+            disabled={disabled}
             onValueChange={(values) => {
               if (values[0])
                 editor
                   .chain()
                   .focus()
-                  .updateAttributes("image", { textAlign: values[0] })
+                  .updateAttributes("image", {
+                    textAlign: values[0],
+                    ...(values[0] === "center" ? { layout: "block" } : {}),
+                  })
                   .run();
             }}
           >
@@ -404,6 +429,37 @@ function ExtendedTools({
             <ToggleGroupItem value="center">وسط</ToggleGroupItem>
             <ToggleGroupItem value="left">يسار</ToggleGroupItem>
           </ToggleGroup>
+          <ToggleGroup
+            variant="outline"
+            size="sm"
+            aria-label="موضع الصورة مع النص"
+            value={[selected.imageLayout]}
+            disabled={disabled}
+            onValueChange={(values) => {
+              if (values[0])
+                editor
+                  .chain()
+                  .focus()
+                  .updateAttributes("image", {
+                    layout: values[0],
+                    ...(values[0] === "wrap" && selected.imageAlign === "center"
+                      ? { textAlign: "right" }
+                      : {}),
+                  })
+                  .run();
+            }}
+          >
+            <ToggleGroupItem value="block">سطر مستقل</ToggleGroupItem>
+            <ToggleGroupItem value="wrap">النص بجانب الصورة</ToggleGroupItem>
+          </ToggleGroup>
+          <Button
+            size="sm"
+            variant="outline"
+            disabled={disabled}
+            onClick={writeBesideImage}
+          >
+            اكتب بجانبها
+          </Button>
           <span>اسحب أطراف الصورة لتغيير حجمها.</span>
         </div>
       )}
@@ -529,7 +585,10 @@ export const SimpleEditor = memo(function SimpleEditor({
     textDirection: "auto",
     extensions: [
       ...articleExtensions(),
-      Placeholder.configure({ placeholder: "ابدأ كتابة مقالك هنا…" }),
+      Placeholder.configure({
+        placeholder: ({ editor }) =>
+          editor.isEmpty ? "ابدأ كتابة مقالك هنا…" : "اكتب هنا…",
+      }),
       CharacterCount,
       Selection,
       FindAndReplace.configure({ searchDebounceMs: 250, injectCSS: false }),
@@ -543,6 +602,7 @@ export const SimpleEditor = memo(function SimpleEditor({
         role: "textbox",
         "aria-multiline": "true",
         spellcheck: "true",
+        dir: direction,
       },
       // Strip clipboard's external images and unsafe embed/style baggage; pasted text
       // still goes through the actual schema parser and server validation.

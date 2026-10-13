@@ -35,15 +35,61 @@
     white-space: pre-wrap;
     max-width: 860px;
     margin-inline: auto;
-    p.is-editor-empty:first-child::before {
+    .is-empty[dir="auto"] {
+      direction: inherit;
+    }
+    .is-empty[data-placeholder]::before {
       content: attr(data-placeholder);
       color: var(--muted-foreground);
-      float: inline-start;
+      position: absolute;
+      inset-inline: 0;
+      text-align: inherit;
+      float: none;
       height: 0;
       pointer-events: none;
     }
-    [data-resize-container] {
+    [data-resize-container][data-node="image"] {
       max-width: 100%;
+      direction: ltr;
+      margin-block: 24px;
+      clear: both;
+      justify-content: center;
+      background: transparent;
+      &:has(img[data-align="left"]) {
+        justify-content: flex-start;
+      }
+      &:has(img[data-align="right"]) {
+        justify-content: flex-end;
+      }
+      [data-resize-wrapper] {
+        max-width: 100%;
+      }
+      img {
+        height: auto !important;
+      }
+      &.ProseMirror-selectednode [data-resize-wrapper] {
+        outline: 2px solid var(--primary);
+        border-radius: var(--radius-md);
+      }
+      &:has(img[data-layout="wrap"]):not(:has(img[data-align="center"])) {
+        width: fit-content;
+        max-width: 45%;
+        float: right;
+        margin: 0 0 16px 24px;
+        &:has(img[data-align="left"]) {
+          float: left;
+          margin: 0 24px 16px 0;
+        }
+        @media (max-width: 620px) {
+          &,
+          &:has(img[data-align="left"]) {
+            float: none;
+            max-width: 100%;
+            width: 100%;
+            margin: 24px 0;
+          }
+        }
+      }
     }
     [data-resize-handle] {
       background: var(--primary);
@@ -52,6 +98,11 @@
       width: 9px;
       height: 9px;
     }
+  }
+  .tiptap.ProseMirror.simple-editor::after {
+    content: "";
+    display: block;
+    clear: both;
   }
   .simple-editor-search-and-replace {
     position: sticky;

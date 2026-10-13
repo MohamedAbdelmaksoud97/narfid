@@ -37,7 +37,16 @@ export function ArticleRenderer({
             children,
           ),
         image: ({ node }) => (
-          <figure className="article-figure" data-align={node.attrs.textAlign}>
+          <figure
+            className="article-figure"
+            data-align={node.attrs.textAlign}
+            data-layout={node.attrs.layout ?? "block"}
+            style={
+              node.attrs.layout === "wrap"
+                ? { width: node.attrs.width ?? undefined }
+                : undefined
+            }
+          >
             {/* Authenticated drafts need browser cookies; the Next image optimizer cannot forward them. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

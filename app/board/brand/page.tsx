@@ -21,6 +21,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { BrandSectionNavigation } from "@/components/brand/section-navigation";
 import {
   brand,
   brandSections,
@@ -48,16 +49,15 @@ export const metadata: Metadata = {
 function BrandSection({
   id,
   title,
-  english,
   description,
   children,
 }: {
-  id: string;
+  id: (typeof brandSections)[number]["id"];
   title: string;
-  english: string;
   description: string;
   children: ReactNode;
 }) {
+  const sectionIndex = brandSections.findIndex((section) => section.id === id);
   return (
     <section
       id={id}
@@ -65,8 +65,10 @@ function BrandSection({
       aria-labelledby={`${id}-heading`}
     >
       <header className="brand-section-heading">
-        <span className="section-kicker" lang="en" dir="ltr">
-          {english}
+        <span className="section-kicker">
+          <span dir="ltr">{String(sectionIndex + 1).padStart(2, "0")}</span>
+          {" / "}
+          {brandSections[sectionIndex].label}
         </span>
         <h2 id={`${id}-heading`}>{title}</h2>
         <p>{description}</p>
@@ -146,9 +148,7 @@ async function BrandWorkspace() {
               إصدار {brand.version} · {brand.reviewedAt}
             </span>
           </div>
-          <span className="section-kicker" lang="en" dir="ltr">
-            THE NERVED BRAND
-          </span>
+          <span className="section-kicker">هوية نرفد</span>
           <h1>
             نرفد.
             <br />
@@ -176,14 +176,7 @@ async function BrandWorkspace() {
         <div className="brand-guide-layout">
           <aside className="brand-guide-index">
             <p>في هذا المرجع</p>
-            <nav aria-label="أقسام هوية نرفد">
-              {brandSections.map((section, index) => (
-                <a key={section.id} href={`#${section.id}`}>
-                  <span dir="ltr">{String(index + 1).padStart(2, "0")}</span>
-                  {section.label}
-                </a>
-              ))}
-            </nav>
+            <BrandSectionNavigation sections={brandSections} />
             <span>
               الهوية البصرية الحالية، ومقترح استراتيجي يتطور مع تجربة العملاء.
             </span>
@@ -193,7 +186,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="foundation"
               title="السند يبدأ من فهم العمل."
-              english="01 / Brand foundation"
               description="هويتنا التجارية، ومكاننا في السوق، والقيمة التي نعد بتقديمها."
             >
               <blockquote className="brand-statement">{brand.idea}</blockquote>
@@ -227,19 +219,18 @@ async function BrandWorkspace() {
             <BrandSection
               id="direction"
               title="وجهة واضحة. وخطوات قابلة للقياس."
-              english="02 / Vision, mission & goals"
               description="صياغة مقترحة للرؤية والرسالة. الأهداف التالية خطة عمل، وتُراجع بالأرقام الفعلية عند بدء التنفيذ."
             >
               <div className="brand-grid brand-grid-two">
                 <TextCard
                   title="الرؤية"
                   text={brand.vision}
-                  kicker="Vision / إلى أين نتجه"
+                  kicker="إلى أين نتجه"
                 />
                 <TextCard
                   title="الرسالة"
                   text={brand.mission}
-                  kicker="Mission / ماذا نفعل كل يوم"
+                  kicker="ماذا نفعل كل يوم"
                 />
               </div>
               <div className="brand-north-star">
@@ -262,7 +253,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="market"
               title="السعودية هي نقطة البداية."
-              english="03 / Market context"
               description="السياق العام يدعم اختيار القطاع، بينما المقابلات والاستخدام الفعلي يحددان الطلب على نرفد."
             >
               <TextCard
@@ -300,7 +290,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="personas"
               title="نخاطب القرار. ونفهم المستخدم."
-              english="04 / Client personas"
               description="شخصيات مبنية على أدوار التشغيل في المنصة؛ فرضيات للمقابلات وليست نتائج بحث ميداني مكتمل. الشخص الواحد قد يجمع أكثر من دور."
             >
               <div className="brand-grid brand-grid-two">
@@ -342,7 +331,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="character"
               title="مساند. عملي. واضح. وطموح."
-              english="05 / Values & personality"
               description="شخصية نرفد تظهر في السلوك بقدر ما تظهر في الكلمات. نموذجنا: شريك يفهم التفاصيل ويقترح خطوة مفيدة."
             >
               <div className="brand-grid brand-grid-two">
@@ -361,7 +349,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="voice"
               title="نتحدث بوضوح، ونترك الدليل يتكلم."
-              english="06 / Voice & messaging"
               description="صوت واحد في الموقع والعروض والمقالات والدعم. العربية المهنية البسيطة هي الأساس؛ المصطلحات الإنجليزية حين تضيف معنى."
             >
               <div className="brand-grid brand-grid-two">
@@ -404,7 +391,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="visuals"
               title="هوية هادئة. وإشارة خضراء واضحة."
-              english="07 / Visual identity"
               description="ألوان المشروع الحالية مع Tajawal والشعارين الموجودين. نستخدم الهوية نفسها في المنتج والموقع والمحتوى."
             >
               <div className="brand-grid brand-grid-two">
@@ -451,8 +437,8 @@ async function BrandWorkspace() {
                       <Image
                         src="/logo%20symbol.png"
                         alt="رمز نرفد"
-                      width={1254}
-                      height={1254}
+                        width={1254}
+                        height={1254}
                         sizes="160px"
                       />
                     </div>
@@ -537,7 +523,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="experience"
               title="وعدنا يظهر في كل خطوة."
-              english="08 / Customer experience"
               description="معيار تجربة نبنيه مع الفريق. تفاصيل المدد والدعم والتسليم تُحدد في نطاق التعاقد."
             >
               <ol className="brand-journey">
@@ -556,7 +541,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="growth"
               title="نُظهر القيمة قبل طلب الشراء."
-              english="09 / Content & growth"
               description="محتوى من داخل العمل الرياضي، وعروض تشرح الاستخدام، وقياس يربط النشاط بطلبات مؤهلة وتجديدات."
             >
               <div className="brand-grid brand-grid-two">
@@ -588,7 +572,6 @@ async function BrandWorkspace() {
             <BrandSection
               id="governance"
               title="مرجع واحد لفريق يتكلم بصوت واحد."
-              english="10 / Governance"
               description="قواعد عملية للمبيعات والتسويق والمنتج والدعم. الموجّهات الاستراتيجية هنا مقترحة؛ الهوية البصرية تعكس المشروع الحالي."
             >
               <div className="brand-grid brand-grid-two">

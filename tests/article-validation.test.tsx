@@ -144,6 +144,45 @@ test("publishing requires actual copy and accessible images", () => {
     }),
   );
 });
+test("image wrapping survives validation and safe rendering; arbitrary layout values are rejected", () => {
+  const content = {
+    type: "doc",
+    content: [
+      {
+        type: "image",
+        attrs: {
+          src: image,
+          alt: "اختبار",
+          caption: "تعليق",
+          layout: "wrap",
+          textAlign: "left",
+          width: 320,
+        },
+      },
+      {
+        type: "paragraph",
+        content: [{ type: "text", text: "نص بجانب الصورة" }],
+      },
+    ],
+  };
+  assert.doesNotThrow(() => validateDocument(content, id));
+  const html = renderToStaticMarkup(<ArticleRenderer content={content} />);
+  assert.match(html, /data-layout="wrap"/);
+  assert.match(html, /data-align="left"/);
+  assert.match(html, /width:320px/);
+  assert.match(html, /نص بجانب الصورة/);
+  assert.throws(() =>
+    validateDocument(
+      {
+        type: "doc",
+        content: [
+          { type: "image", attrs: { src: image, layout: "position:absolute" } },
+        ],
+      },
+      id,
+    ),
+  );
+});
 test("public static rendering escapes text and creates semantic safe media", () => {
   const html = renderToStaticMarkup(
     <ArticleRenderer

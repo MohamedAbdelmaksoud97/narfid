@@ -26,16 +26,16 @@ export const brand = {
 } as const;
 
 export const brandSections = [
-  { id: "foundation", label: "جوهر نرفد", english: "Brand foundation" },
-  { id: "direction", label: "الرؤية والرسالة والأهداف", english: "Direction" },
-  { id: "market", label: "السوق والفرصة", english: "Saudi market" },
-  { id: "personas", label: "شخصيات العملاء", english: "Client personas" },
-  { id: "character", label: "القيم والشخصية", english: "Brand personality" },
-  { id: "voice", label: "الصوت والرسائل", english: "Brand voice" },
-  { id: "visuals", label: "الهوية البصرية", english: "Visual identity" },
-  { id: "experience", label: "تجربة العميل", english: "Brand experience" },
-  { id: "growth", label: "المحتوى والنمو", english: "Growth playbook" },
-  { id: "governance", label: "مرجع الفريق", english: "Brand governance" },
+  { id: "foundation", label: "جوهر نرفد" },
+  { id: "direction", label: "الرؤية والرسالة والأهداف" },
+  { id: "market", label: "السوق والفرصة" },
+  { id: "personas", label: "شخصيات العملاء" },
+  { id: "character", label: "القيم والشخصية" },
+  { id: "voice", label: "الصوت والرسائل" },
+  { id: "visuals", label: "الهوية البصرية" },
+  { id: "experience", label: "تجربة العميل" },
+  { id: "growth", label: "المحتوى والنمو" },
+  { id: "governance", label: "مرجع الفريق" },
 ] as const;
 
 export const brandGoals = [
