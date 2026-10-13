@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import dashboardImage from "@/public/images/nerved-dashboard.png";
 import { DirectionProvider } from "@base-ui/react/direction-provider";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import {
@@ -8,25 +9,19 @@ import {
   ArrowLeft,
   ArrowUpLeft,
   ArrowUpRight,
-  Bell,
   CalendarDays,
   Check,
-  CheckCheck,
-  CheckCircle2,
   ChefHat,
   ChevronLeft,
   Copy,
-  Dumbbell,
   Fingerprint,
   GitBranch,
   Layers3,
-  LayoutDashboard,
   Menu,
   MessageCircle,
   Package,
   Play,
   ReceiptText,
-  Settings2,
   ShieldCheck,
   Smartphone,
   Sparkles,
@@ -43,7 +38,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Accordion,
   AccordionContent,
@@ -98,258 +92,42 @@ function Brand({ symbol = false }: { symbol?: boolean }) {
   );
 }
 
-function RevenueChart() {
-  return (
-    <div className="revenue-chart">
-      <div className="chart-title">
-        <span>نظرة على الإيرادات</span>
-        <span className="muted">هذا الأسبوع</span>
-      </div>
-      <div className="chart-plot">
-        <div className="chart-grid" aria-hidden="true">
-          <span>9k</span>
-          <span>6k</span>
-          <span>3k</span>
-        </div>
-        <svg
-          viewBox="0 0 420 132"
-          role="img"
-          aria-label="رسم توضيحي لإيرادات أسبوع تجريبي"
-        >
-          <defs>
-            <linearGradient id="revenue-fill" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stopColor="var(--primary)" stopOpacity=".2" />
-              <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M0 110 C25 110 30 78 60 81 S100 108 130 72 S175 96 200 57 S247 74 275 45 S318 69 340 31 S393 48 420 9 L420 132 L0 132 Z"
-            fill="url(#revenue-fill)"
-          />
-          <path
-            d="M0 110 C25 110 30 78 60 81 S100 108 130 72 S175 96 200 57 S247 74 275 45 S318 69 340 31 S393 48 420 9"
-            stroke="var(--primary)"
-            strokeWidth="2.5"
-            fill="none"
-          />
-          <circle
-            cx="340"
-            cy="31"
-            r="4.5"
-            fill="var(--primary)"
-            stroke="var(--card)"
-            strokeWidth="3"
-          />
-        </svg>
-      </div>
-      <div className="chart-days">
-        <span>السبت</span>
-        <span>الأحد</span>
-        <span>الاثنين</span>
-        <span>الثلاثاء</span>
-        <span>الأربعاء</span>
-        <span>الخميس</span>
-        <span>الجمعة</span>
-      </div>
-    </div>
-  );
-}
-
-function DashboardPreview() {
+function SystemScreenshot() {
   return (
     <div className="preview-stage" id="preview">
       <div className="preview-glow" aria-hidden="true" />
-      <div className="dashboard">
-        <div className="dashboard-topbar">
-          <div className="dashboard-wordmark">
-            <Brand symbol />
-            <strong>نرفد</strong>
-            <span className="muted">/</span>
-            <span>ناديك الرياضي</span>
-          </div>
-          <span className="preview-live">
-            <i /> معاينة المنظومة
+      <figure className="system-shot-frame">
+        <a
+          href="/images/nerved-dashboard.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="system-shot-link"
+          aria-label="عرض لقطة لوحة التحكم بالحجم الكامل"
+        >
+          <Image
+            src={dashboardImage}
+            alt="لوحة التحكم الفعلية للنظام بهوية نرفد: الأعضاء والاشتراكات والحضور والإيرادات، بأرقام توضيحية"
+            preload
+            placeholder="blur"
+            sizes="(max-width: 719px) calc(100vw - 40px), (max-width: 959px) 630px, (max-width: 1199px) 48vw, 660px"
+            className="system-shot-image"
+          />
+        </a>
+        <figcaption className="system-shot-caption">
+          <span>
+            <i className="status-dot" /> لقطة من النظام بهوية نرفد · بيانات
+            توضيحية
           </span>
-        </div>
-        <div className="dashboard-body">
-          <aside className="dashboard-sidebar" aria-hidden="true">
-            <span className="sidebar-icon is-active">
-              <LayoutDashboard />
-            </span>
-            <span className="sidebar-icon">
-              <UsersRound />
-            </span>
-            <span className="sidebar-icon">
-              <CalendarDays />
-            </span>
-            <span className="sidebar-icon">
-              <ReceiptText />
-            </span>
-            <span className="sidebar-icon">
-              <ChefHat />
-            </span>
-            <span className="sidebar-icon">
-              <Package />
-            </span>
-            <span className="sidebar-icon sidebar-bottom">
-              <Settings2 />
-            </span>
-          </aside>
-          <div className="dashboard-main">
-            <div className="dashboard-greeting">
-              <div>
-                <span className="muted">كل شيء تحت نظرك</span>
-                <h3>يوم جديد. رؤية أوضح.</h3>
-              </div>
-              <Bell aria-hidden="true" />
-            </div>
-            <Tabs defaultValue="overview">
-              <TabsList variant="line" aria-label="استكشف معاينة المنصة">
-                <TabsTrigger value="overview">نظرة عامة</TabsTrigger>
-                <TabsTrigger value="members">الأعضاء</TabsTrigger>
-                <TabsTrigger value="bookings">الحجوزات</TabsTrigger>
-              </TabsList>
-              <TabsContent value="overview">
-                <div className="dashboard-stats">
-                  {[
-                    {
-                      title: "الأعضاء النشطون",
-                      value: "1,248",
-                      icon: UsersRound,
-                      label: "عضو",
-                    },
-                    {
-                      title: "إيرادات الشهر",
-                      value: "48,650",
-                      icon: ReceiptText,
-                      label: "ر.س",
-                    },
-                    {
-                      title: "حجوزات اليوم",
-                      value: "24",
-                      icon: CalendarDays,
-                      label: "حجز",
-                    },
-                  ].map(({ title, value, icon: Icon, label }) => (
-                    <div className="dashboard-stat" key={title}>
-                      <div>
-                        <span>{title}</span>
-                        <Icon aria-hidden="true" />
-                      </div>
-                      <strong dir="ltr">{value}</strong>
-                      <small>{label}</small>
-                    </div>
-                  ))}
-                </div>
-                <RevenueChart />
-                <div className="dashboard-bottom">
-                  <span>
-                    <span className="status-dot" /> ملخص تشغيل الفرع
-                  </span>
-                  <span>الأعضاء · المبيعات · الحجوزات</span>
-                </div>
-              </TabsContent>
-              <TabsContent value="members">
-                <div className="demo-panel-heading">
-                  <strong>العضويات تحت نظرك</strong>
-                  <Badge variant="secondary">بيانات تجريبية</Badge>
-                </div>
-                <div className="demo-member-list">
-                  {[
-                    {
-                      initials: "أ م",
-                      label: "عضو تجريبي ٠١",
-                      plan: "اشتراك سنوي",
-                      status: "نشط",
-                    },
-                    {
-                      initials: "س ع",
-                      label: "عضو تجريبي ٠٢",
-                      plan: "اشتراك ٣ أشهر",
-                      status: "قريب التجديد",
-                    },
-                    {
-                      initials: "م ن",
-                      label: "عضو تجريبي ٠٣",
-                      plan: "اشتراك شهري",
-                      status: "نشط",
-                    },
-                  ].map((member) => (
-                    <div className="demo-member" key={member.label}>
-                      <span className="demo-avatar">{member.initials}</span>
-                      <div>
-                        <strong>{member.label}</strong>
-                        <span>{member.plan}</span>
-                      </div>
-                      <Badge variant="outline">{member.status}</Badge>
-                    </div>
-                  ))}
-                </div>
-                <div className="demo-tip">
-                  <ShieldCheck />
-                  <span>سجل العضو والاشتراك والحضور في ملف واحد.</span>
-                </div>
-              </TabsContent>
-              <TabsContent value="bookings">
-                <div className="demo-panel-heading">
-                  <strong>جدول النشاطات</strong>
-                  <Badge variant="secondary">بيانات تجريبية</Badge>
-                </div>
-                <div className="demo-booking-list">
-                  {[
-                    {
-                      time: "16:00",
-                      title: "حصة لياقة جماعية",
-                      note: "١٢ من ٢٠ مشاركًا",
-                      icon: Dumbbell,
-                    },
-                    {
-                      time: "17:30",
-                      title: "حجز ملعب",
-                      note: "الملعب ٠١ · ٦٠ دقيقة",
-                      icon: CalendarDays,
-                    },
-                    {
-                      time: "19:00",
-                      title: "تدريب شخصي",
-                      note: "جلسة فردية · ٤٥ دقيقة",
-                      icon: UsersRound,
-                    },
-                  ].map(({ time, title, note, icon: Icon }) => (
-                    <div className="demo-booking" key={time}>
-                      <time dir="ltr">{time}</time>
-                      <span className="booking-icon">
-                        <Icon />
-                      </span>
-                      <div>
-                        <strong>{title}</strong>
-                        <span>{note}</span>
-                      </div>
-                      <CheckCircle2 />
-                    </div>
-                  ))}
-                </div>
-              </TabsContent>
-            </Tabs>
-          </div>
-        </div>
-        <div className="preview-caption">
-          <span>واجهة توضيحية · جميع البيانات تجريبية</span>
-          <span dir="ltr">NERVED / WORKSPACE</span>
-        </div>
-      </div>
-      <div className="floating-note">
-        <span className="floating-icon">
-          <CheckCheck />
-        </span>
-        <div>
-          <strong>تفاصيل مترابطة.</strong>
-          <span>من أول اشتراك إلى كل فرع.</span>
-        </div>
-        <span className="floating-spark">
-          <Sparkles />
-        </span>
-      </div>
+          <a
+            href="/images/nerved-dashboard.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="فتح صورة النظام بالحجم الكامل"
+          >
+            <ArrowUpRight aria-hidden="true" />
+          </a>
+        </figcaption>
+      </figure>
     </div>
   );
 }
@@ -817,7 +595,7 @@ export function LandingPage() {
                 <span dir="ltr">BUILT FOR SPORTS. DESIGNED FOR GROWTH.</span>
               </div>
             </div>
-            <DashboardPreview />
+            <SystemScreenshot />
             <a href="#platform" className="explore-hint">
               اكتشف ما يمكن لنرفد أن يضيفه <ArrowDownLeft />
             </a>

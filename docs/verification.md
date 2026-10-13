@@ -19,3 +19,12 @@
 CUA reported no available browsers or apps. Desktop/mobile rendering, screenshots, live dialog/tab/FAQ interaction and external WhatsApp handoff were not exercised in a real browser. No message was sent to the supplied number.
 
 The changes are local to `narfid`. No deployment was performed, and no Go source was modified.
+
+## Hero screenshot update
+
+- The hand-built dashboard preview was replaced with `public/images/nerved-dashboard.png`, edited from the original system screenshot using built-in ImageGen.
+- The generated image was visually inspected for the original layout, Nerved branding and illustrative values. Full edit prompt and provenance are recorded in `hero-image.md`.
+- `npm run build` and `npm run lint` passed after integration.
+- Production preview on port 3010: page, optimized hero image and full-resolution image all returned HTTP 200.
+- The updated caption is present and the obsolete interactive preview tabs are absent from rendered HTML.
+- Desktop/mobile page rendering remains unverified in a browser; the image asset itself was visually reviewed.

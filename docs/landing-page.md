@@ -9,14 +9,15 @@ Implemented inside `narfid` only. `go` was read as the reference implementation 
 - Background `#1C1C1C`, cards `#2E2E2E`, text `#EDEDED`, borders `#333333`, accent `#3ECF8E`.
 - The `UI-system/SKILL.md` path referenced by `AGENTS.md` does not exist in this checkout; the available design document above was read and used.
 - Both existing logos are reused without modifying their files. Go Fitness is the first client, not the product brand.
-- Dashboard numbers and member/appointment examples are synthetic and explicitly labeled.
+- The hero uses the actual GO dashboard screenshot, edited to Nerved colors and logo with illustrative values. Source provenance and editing prompt are in `hero-image.md`. It can be opened at full size.
 
 ## Main files
 
 - `app/page.tsx`: page entry.
 - `app/layout.tsx`: language, font and metadata.
 - `app/globals.css`: semantic tokens, responsive styling and reduced motion.
-- `components/landing-page.tsx`: sections, preview tabs, FAQ and demo request.
+- `components/landing-page.tsx`: sections, system screenshot, FAQ and demo request.
+- `public/images/nerved-dashboard.png`: rebranded system screenshot used in the hero.
 - `lib/landing-content.ts`: contact, prices and text.
 - `components/ui/`: shadcn Base UI primitives.
 
