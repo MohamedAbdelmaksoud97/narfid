@@ -20,6 +20,15 @@ in the UI-system skill; for tasks involving both brand content and UI, use
 NARFID alongside the UI skills below. Verify current capabilities and proposed
 pricing against the sources linked in the skill before making specific claims.
 
+## Articles — writing and publishing
+
+Before writing, editing, importing, publishing, or troubleshooting Nerved
+articles, read and follow `.agents/skills/narfid-articles/SKILL.md` alongside
+the NARFID brand skill when brand context is needed. Reuse the existing
+editor, validation, media, and publication workflow. For ordinary content
+work, use its content-only path and focused verification; do not repeat
+the site-wide SEO setup or rebuild article infrastructure.
+
 ## UI components
 
 Before adding, editing, styling, or composing UI components,
