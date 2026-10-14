@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
-import { ArrowUpLeft, CheckCircle2, FileText, Palette } from "lucide-react";
+import { ArrowUpLeft, FileText, Palette } from "lucide-react";
 import { requireBoardMember } from "@/lib/auth/session";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -27,30 +27,9 @@ async function BoardWorkspace() {
           مساحة نرفد الداخلية
         </span>
         <h1>
-          أهلًا،
-          <br />
-          <span>{member.name}.</span>
+          أهلًا، <span>{member.name}.</span>
         </h1>
         <p>مساحة الفريق لإدارة محتوى نرفد، والرجوع إلى هويتها واتجاهها.</p>
-        <div className="board-member-card">
-          <span className="board-member-icon">
-            <CheckCircle2 />
-          </span>
-          <div>
-            <h2>حسابك متصل</h2>
-            <p>أنت داخل مساحة مجلس الإدارة بحسابك المخصّص.</p>
-          </div>
-          <dl>
-            <div>
-              <dt>الحساب</dt>
-              <dd dir="ltr">{member.email}</dd>
-            </div>
-            <div>
-              <dt>نوع الوصول</dt>
-              <dd>عضو مجلس الإدارة</dd>
-            </div>
-          </dl>
-        </div>
         <div className="board-sections">
           <Card>
             <CardHeader>
