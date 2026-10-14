@@ -9,6 +9,7 @@ import {
   ExternalLink,
   FileText,
   LayoutDashboard,
+  ListChecks,
   LogOut,
   Palette,
   Search,
@@ -38,6 +39,7 @@ import {
 
 const sections = [
   { label: "نظرة عامة", href: "/board", icon: LayoutDashboard },
+  { label: "المهام القادمة", href: "/board/tasks", icon: ListChecks },
   { label: "هوية نرفد", href: "/board/brand", icon: Palette },
   { label: "المقالات", href: "/board/articles", icon: FileText },
   { label: "تحسين البحث", href: "/board/seo", icon: Search },

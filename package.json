@@ -9,6 +9,7 @@
     "lint": "eslint",
     "auth:bootstrap": "node --env-file=.env.local scripts/bootstrap-board-users.mjs",
     "test:auth": "node --test tests/board-access.test.mjs",
+    "test:tasks": "tsx --test tests/tasks.test.ts",
     "test:auth:http": "node --env-file=.env.local scripts/test-board-auth-http.mjs",
     "test:articles": "tsx --test tests/article-validation.test.tsx",
     "test:articles:browser": "node --env-file=.env.local node_modules/@playwright/test/cli.js test",

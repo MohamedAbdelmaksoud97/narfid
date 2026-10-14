@@ -7,7 +7,7 @@ import { connection } from "next/server";
  * If using Fluid compute: Don't put this client in a global variable. Always create a new client within each
  * function when using it.
  */
-export async function createClient() {
+export async function createClient(requestTimeoutMs?: number) {
   // The Auth SDK reads the clock while initializing token expiry.
   // Keep SDK initialization at request time under Cache Components.
   await connection();
@@ -17,6 +17,22 @@ export async function createClient() {
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
     {
+      ...(requestTimeoutMs
+        ? {
+            global: {
+              fetch: (input: RequestInfo | URL, init?: RequestInit) =>
+                fetch(input, {
+                  ...init,
+                  signal: init?.signal
+                    ? AbortSignal.any([
+                        init.signal,
+                        AbortSignal.timeout(requestTimeoutMs),
+                      ])
+                    : AbortSignal.timeout(requestTimeoutMs),
+                }),
+            },
+          }
+        : {}),
       cookieOptions: {
         httpOnly: true,
         sameSite: "lax",

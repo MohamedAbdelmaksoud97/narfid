@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
-import { ArrowUpLeft, FileText, Palette, Search } from "lucide-react";
+import { ArrowUpLeft, FileText, ListChecks, Palette, Search } from "lucide-react";
 import { requireBoardMember } from "@/lib/auth/session";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -29,8 +29,13 @@ async function BoardWorkspace() {
         <h1>
           أهلًا، <span>{member.name}.</span>
         </h1>
-        <p>مساحة الفريق لإدارة محتوى نرفد، والرجوع إلى هويتها وخطة ظهورها في البحث.</p>
+        <p>مساحة الفريق لمتابعة مهام نرفد، وإدارة محتواها، والرجوع إلى هويتها وخطة ظهورها في البحث.</p>
         <div className="board-sections">
+          <Card>
+            <CardHeader><ListChecks aria-hidden="true" /><CardTitle>المهام القادمة</CardTitle></CardHeader>
+            <CardContent><p>خطة إطلاق نرفد وتطويرها، بمهام رئيسية وفرعية وتقدم محفوظ لكل خطوة.</p></CardContent>
+            <CardFooter><Link href="/board/tasks" className={buttonVariants({ size: "navigation" })}>تابع خطة التنفيذ <ArrowUpLeft data-icon="inline-end" /></Link></CardFooter>
+          </Card>
           <Card>
             <CardHeader>
               <Palette aria-hidden="true" />
