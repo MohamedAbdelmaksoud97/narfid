@@ -2,6 +2,8 @@ import { createElement } from "react";
 import { renderToReactElement } from "@tiptap/static-renderer/pm/react";
 import type { JSONContent } from "@tiptap/core";
 import { articleExtensions } from "@/lib/articles/extensions";
+import { articleHeadings } from "@/lib/articles/editorial";
+import { imageSrcSet, imageVariant } from "@/lib/articles/media";
 import {
   validateDocument,
   youtubeSafeLink,
@@ -21,6 +23,8 @@ export function ArticleRenderer({
   } catch {
     return <p role="alert">تعذر عرض محتوى المقال بصيغته الحالية.</p>;
   }
+  const headings = articleHeadings(safe);
+  let headingIndex = 0;
   const element = renderToReactElement({
     content: safe,
     extensions: articleExtensions(),
@@ -31,6 +35,7 @@ export function ArticleRenderer({
           createElement(
             `h${Math.min(Number(node.attrs.level) + 1, 6)}`,
             {
+              id: headings[headingIndex++]?.id,
               dir: node.attrs.dir,
               style: { textAlign: node.attrs.textAlign ?? undefined },
             },
@@ -50,7 +55,9 @@ export function ArticleRenderer({
             {/* Authenticated drafts need browser cookies; the Next image optimizer cannot forward them. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={node.attrs.src}
+              src={imageVariant(node.attrs.src, 960)}
+              srcSet={imageSrcSet(node.attrs.src)}
+              sizes="(max-width: 700px) calc(100vw - 40px), 860px"
               alt={node.attrs.alt ?? ""}
               width={node.attrs.width ?? undefined}
               height={node.attrs.height ?? undefined}
@@ -111,8 +118,18 @@ export function ArticleRenderer({
         link: ({ mark, children }) => (
           <a
             href={mark.attrs.href}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
+            target={
+              String(mark.attrs.href).startsWith("/") ||
+              String(mark.attrs.href).startsWith("#")
+                ? undefined
+                : "_blank"
+            }
+            rel={
+              String(mark.attrs.href).startsWith("/") ||
+              String(mark.attrs.href).startsWith("#")
+                ? undefined
+                : "noopener noreferrer"
+            }
           >
             {children}
           </a>

@@ -4,6 +4,9 @@ import "@/styles/_variables.scss";
 import "@/styles/_keyframe-animations.scss";
 import "./globals.css";
 import { NavigationGuardProvider } from "@/components/articles/navigation-guard-provider";
+import { siteOrigin, indexingEnabled } from "@/lib/seo";
+import { Suspense } from "react";
+import { PublicAnalytics } from "@/components/public/public-analytics";
 
 const arabicSans = Tajawal({
   variable: "--font-arabic",
@@ -13,9 +16,11 @@ const arabicSans = Tajawal({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  ),
+  metadataBase: new URL(siteOrigin()),
+  robots: { index: indexingEnabled(), follow: indexingEnabled() },
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
   title: "نرفد | السند التقني للمؤسسات الرياضية",
   description:
     "منظومة واحدة لإدارة الأعضاء والاشتراكات والحجوزات ونقاط البيع والمطبخ والمخزون والفروع. اكتشف نرفد وخطط الاشتراك السنوية للمؤسسات الرياضية.",
@@ -62,6 +67,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <NavigationGuardProvider>{children}</NavigationGuardProvider>
+        {indexingEnabled() &&
+          /^G-[A-Z0-9]+$/.test(
+            process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "",
+          ) && (
+            <Suspense fallback={null}>
+              <PublicAnalytics
+                measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!}
+              />
+            </Suspense>
+          )}
       </body>
     </html>
   );

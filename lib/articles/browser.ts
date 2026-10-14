@@ -34,6 +34,13 @@ export async function uploadArticleImage(
   file: File,
   signal?: AbortSignal,
 ) {
+  return (await uploadArticleImageResult(id, file, signal)).url;
+}
+export async function uploadArticleImageResult(
+  id: string,
+  file: File,
+  signal?: AbortSignal,
+) {
   if (
     !["image/png", "image/jpeg", "image/webp", "image/gif"].includes(
       file.type,
@@ -46,9 +53,8 @@ export async function uploadArticleImage(
     );
   const form = new FormData();
   form.set("file", file);
-  const { url } = await articleRequest<{ url: string }>(
+  return articleRequest<{ url: string; width: number; height: number }>(
     `/api/board/articles/${id}/images`,
     { method: "POST", body: form, signal },
   );
-  return url;
 }

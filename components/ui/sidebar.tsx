@@ -200,7 +200,7 @@ function Sidebar({
           <SheetHeader className="sr-only">
             <SheetTitle>أقسام لوحة الإدارة</SheetTitle>
             <SheetDescription>
-              تنقّل بين نظرة عامة وهوية نرفد والمقالات.
+              تنقّل بين نظرة عامة وهوية نرفد والمقالات ودليل تحسين البحث.
             </SheetDescription>
           </SheetHeader>
           <div className="flex h-full w-full flex-col">{children}</div>

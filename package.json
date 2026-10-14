@@ -13,7 +13,9 @@
     "test:articles": "tsx --test tests/article-validation.test.tsx",
     "test:articles:browser": "node --env-file=.env.local node_modules/@playwright/test/cli.js test",
     "test:articles:http": "node --env-file=.env.local scripts/test-articles-http.mjs",
-    "db:articles:inspect": "node --env-file=.env.local scripts/article-db.mjs"
+    "db:articles:inspect": "node --env-file=.env.local scripts/article-db.mjs",
+    "seo:seed": "node --env-file=.env.local --import=tsx scripts/seed-seo-articles.ts",
+    "test:seo:http": "node --env-file=.env.local --import=tsx scripts/test-seo-http.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",

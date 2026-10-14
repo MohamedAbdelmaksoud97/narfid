@@ -13,8 +13,10 @@ export function PublicArticleHeader() {
         />
       </Link>
       <nav aria-label="تصفح الموقع">
+        <Link href="/solutions/memberships">الحلول</Link>
+        <Link href="/pricing">الباقات</Link>
         <Link href="/articles">المقالات</Link>
-        <Link href="/#contact">تواصل معنا</Link>
+        <Link href="/contact">تواصل معنا</Link>
       </nav>
     </header>
   );

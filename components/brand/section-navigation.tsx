@@ -6,8 +6,10 @@ type Section = { id: string; label: string };
 
 export function BrandSectionNavigation({
   sections,
+  label = "أقسام هوية نرفد",
 }: {
   sections: readonly Section[];
+  label?: string;
 }) {
   const navigation = useRef<HTMLElement>(null);
   const [activeSection, setActiveSection] = useState<string | undefined>(
@@ -53,7 +55,7 @@ export function BrandSectionNavigation({
   }, [sections]);
 
   return (
-    <nav ref={navigation} aria-label="أقسام هوية نرفد">
+    <nav ref={navigation} aria-label={label}>
       {sections.map((section, index) => (
         <a
           key={section.id}

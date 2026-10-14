@@ -27,7 +27,7 @@ import {
   ImageIcon,
 } from "lucide-react";
 import { articleExtensions } from "@/lib/articles/extensions";
-import { uploadArticleImage } from "@/lib/articles/browser";
+import { uploadArticleImageResult } from "@/lib/articles/browser";
 import { youtubeId } from "@/lib/articles/types";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -173,13 +173,16 @@ function ExtendedTools({
         if (!alt.trim())
           throw new Error("أضف وصفًا بديلًا يوضّح محتوى الصورة.");
         let src: string | undefined;
+        let dimensions: { width: number; height: number } | undefined;
         if (file) {
           controller.current = new AbortController();
-          src = await uploadArticleImage(
+          const image = await uploadArticleImageResult(
             articleId,
             file,
             controller.current.signal,
           );
+          src = image.url;
+          dimensions = { width: image.width, height: image.height };
         }
         if (imagePosition.current !== null) {
           editor
@@ -187,7 +190,7 @@ function ExtendedTools({
             .focus()
             .setNodeSelection(imagePosition.current)
             .updateAttributes("image", {
-              ...(src ? { src } : {}),
+              ...(src ? { src, ...dimensions } : {}),
               alt: alt.trim(),
               caption: caption.trim(),
             })
@@ -200,7 +203,7 @@ function ExtendedTools({
             .setTextSelection(selection.current)
             .insertContent({
               type: "image",
-              attrs: { src, alt: alt.trim(), caption: caption.trim() },
+              attrs: { src, ...dimensions, alt: alt.trim(), caption: caption.trim() },
             })
             .command(({ tr }) => {
               // Inserting before an existing block can leave a text selection;

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
-import { ArrowUpLeft, FileText, Palette } from "lucide-react";
+import { ArrowUpLeft, FileText, Palette, Search } from "lucide-react";
 import { requireBoardMember } from "@/lib/auth/session";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -29,7 +29,7 @@ async function BoardWorkspace() {
         <h1>
           أهلًا، <span>{member.name}.</span>
         </h1>
-        <p>مساحة الفريق لإدارة محتوى نرفد، والرجوع إلى هويتها واتجاهها.</p>
+        <p>مساحة الفريق لإدارة محتوى نرفد، والرجوع إلى هويتها وخطة ظهورها في البحث.</p>
         <div className="board-sections">
           <Card>
             <CardHeader>
@@ -73,6 +73,20 @@ async function BoardWorkspace() {
               >
                 إدارة المقالات
                 <ArrowUpLeft data-icon="inline-end" />
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardHeader>
+              <Search aria-hidden="true" />
+              <CardTitle>تحسين الظهور في البحث</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>خطة الإطلاق والمقالات، وفهم القياس، وخطوات أسبوعية وشهرية لتطوير ظهور نرفد.</p>
+            </CardContent>
+            <CardFooter>
+              <Link href="/board/seo" className={buttonVariants({ variant: "outline", size: "navigation" })}>
+                افتح دليل تحسين البحث <ArrowUpLeft data-icon="inline-end" />
               </Link>
             </CardFooter>
           </Card>

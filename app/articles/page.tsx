@@ -17,12 +17,20 @@ import {
 } from "@/components/ui/empty";
 import { pageNumber, type Publication } from "@/lib/articles/types";
 import { buttonVariants } from "@/components/ui/button";
-export const metadata: Metadata = {
-  title: "مقالات نرفد | التقنية وإدارة المؤسسات الرياضية",
-  description: "أفكار ورؤى من نرفد حول إدارة المؤسسات الرياضية والتحول الرقمي.",
-  alternates: { canonical: "/articles" },
-};
+import { pageMetadata } from "@/lib/seo";
+import { imageSrcSet, imageVariant } from "@/lib/articles/media";
+import { PublicFooter } from "@/components/public/public-page";
 type Props = { searchParams: Promise<{ page?: string | string[] }> };
+export async function generateMetadata({
+  searchParams,
+}: Props): Promise<Metadata> {
+  const page = pageNumber((await searchParams).page);
+  return pageMetadata(
+    `مقالات إدارة المؤسسات الرياضية${page > 1 ? ` — صفحة ${page}` : ""}`,
+    "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+    page > 1 ? `/articles?page=${page}` : "/articles",
+  );
+}
 async function Library({ searchParams }: Props) {
   const page = pageNumber((await searchParams).page);
   const size = 12;
@@ -30,7 +38,7 @@ async function Library({ searchParams }: Props) {
   const { data, error, count } = await supabase
     .from("article_publications")
     .select(
-      "id,title,slug,excerpt,cover_image_url,cover_image_alt,tags,author_name,published_at",
+      "id,title,slug,excerpt,cover_image_url,cover_image_alt,cover_image_width,cover_image_height,tags,author_name,published_at",
       { count: "exact" },
     )
     .order("published_at", { ascending: false })
@@ -67,7 +75,11 @@ async function Library({ searchParams }: Props) {
                 {safeMedia(article.cover_image_url) ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
-                    src={article.cover_image_url}
+                    src={imageVariant(article.cover_image_url, 640)}
+                    srcSet={imageSrcSet(article.cover_image_url)}
+                    sizes="(max-width: 600px) calc(100vw - 40px), (max-width: 1000px) 45vw, 380px"
+                    width={article.cover_image_width ?? undefined}
+                    height={article.cover_image_height ?? undefined}
                     alt={article.cover_image_alt}
                     loading="lazy"
                   />
@@ -129,6 +141,7 @@ async function Library({ searchParams }: Props) {
           </nav>
         )}
       </main>
+      <PublicFooter />
     </>
   );
 }

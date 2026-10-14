@@ -1,6 +1,7 @@
 import { getSchema, type JSONContent } from "@tiptap/core";
 import { articleExtensions } from "./extensions";
 import { UUID_RE, documentText, youtubeId, type ArticleFields } from "./types";
+import { solutions } from "@/lib/solutions";
 
 export class ArticleError extends Error {
   constructor(
@@ -17,6 +18,9 @@ export function safeLink(value: unknown): value is string {
     /[\u0000-\u0020\u007f]/.test(value)
   )
     return false;
+  if (value.startsWith("/") && !value.startsWith("//") && !value.includes("\\"))
+    return true;
+  if (/^#[\p{L}\p{N}_-]+$/u.test(value)) return true;
   try {
     const url = new URL(value);
     return (
@@ -252,6 +256,38 @@ export function validateFields(value: unknown, id: string): ArticleFields {
     throw new ArticleError("بحد أقصى 10 وسوم، و40 حرفًا لكل وسم.");
   if (!["rtl", "ltr"].includes(v.direction as string))
     throw new ArticleError("اتجاه المقال غير صالح.");
+  for (const key of ["cover_image_width", "cover_image_height"]) {
+    if (
+      v[key] != null &&
+      (!Number.isInteger(v[key]) ||
+        Number(v[key]) < 1 ||
+        Number(v[key]) > 10000)
+    )
+      throw new ArticleError("أبعاد الغلاف غير صالحة.");
+  }
+  if (
+    v.related_solution != null &&
+    !solutions.some((s) => s.slug === v.related_solution)
+  )
+    throw new ArticleError("الحل المرتبط غير صالح.");
+  if (v.public_author_slug != null && v.public_author_slug !== "nerved-team")
+    throw new ArticleError("الكاتب العام غير صالح.");
+  if (
+    v.search_intent != null &&
+    !["informational", "commercial", "transactional"].includes(
+      String(v.search_intent),
+    )
+  )
+    throw new ArticleError("نية البحث غير صالحة.");
+  const review = v.review_due_at ?? null;
+  if (
+    review !== null &&
+    (typeof review !== "string" ||
+      !/^\d{4}-\d{2}-\d{2}$/.test(review) ||
+      !Number.isFinite(Date.parse(review)) ||
+      new Date(review).toISOString().slice(0, 10) !== review)
+  )
+    throw new ArticleError("موعد المراجعة غير صالح.");
   return {
     title: bounded(v.title, 200, "العنوان"),
     slug,
@@ -264,6 +300,21 @@ export function validateFields(value: unknown, id: string): ArticleFields {
     seo_title: bounded(v.seo_title, 70, "عنوان البحث"),
     seo_description: bounded(v.seo_description, 180, "وصف البحث"),
     direction: v.direction as "rtl" | "ltr",
+    cover_image_width: v.cover_image_url
+      ? ((v.cover_image_width as number | null) ?? null)
+      : null,
+    cover_image_height: v.cover_image_url
+      ? ((v.cover_image_height as number | null) ?? null)
+      : null,
+    related_solution: (v.related_solution as string | null) ?? null,
+    public_author_slug: "nerved-team",
+    editorial_question: bounded(v.editorial_question ?? "", 500, "سؤال القارئ"),
+    primary_keyword: bounded(v.primary_keyword ?? "", 150, "الموضوع الرئيسي"),
+    search_intent: (v.search_intent ??
+      "informational") as ArticleFields["search_intent"],
+    audience: bounded(v.audience ?? "", 200, "الجمهور"),
+    editorial_notes: bounded(v.editorial_notes ?? "", 5000, "ملاحظات التحرير"),
+    review_due_at: review as string | null,
   };
 }
 export function validatePublication(fields: ArticleFields) {

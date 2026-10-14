@@ -230,6 +230,8 @@ function FeatureVisual({ kind }: { kind: (typeof features)[number]["kind"] }) {
   );
 }
 
+const featurePaths = { members: "memberships", finance: "point-of-sale", kitchen: "kitchen-inventory", inventory: "kitchen-inventory", bookings: "bookings", branches: "branches" };
+
 type DemoDraft = { name: string; club: string; branches: string; plan: string };
 
 function DemoDialog({
@@ -516,7 +518,7 @@ export function LandingPage() {
               <Link href="/login" className="board-login-link">
                 دخول الإدارة
               </Link>
-              <Button size="navigation" onClick={() => openDemo()}>
+              <Button size="navigation" data-analytics="demo_request_start" onClick={() => openDemo()}>
                 احجز عرضًا توضيحيًا <ArrowUpLeft data-icon="inline-end" />
               </Button>
               <Button
@@ -573,7 +575,7 @@ export function LandingPage() {
                 وحجوزاتك ومبيعاتك وتشغيلك اليومي. لتمنح ناديك وقتًا أكبر للنمو.
               </p>
               <div className="hero-actions">
-                <Button size="marketing" onClick={() => openDemo()}>
+                <Button size="marketing" data-analytics="demo_request_start" onClick={() => openDemo()}>
                   خلّنا نرفد ناديك <ArrowUpLeft data-icon="inline-end" />
                 </Button>
                 <a
@@ -671,7 +673,7 @@ export function LandingPage() {
                       <FeatureVisual kind={kind} />
                     </CardContent>
                     <CardFooter>
-                      <span>{detail}</span>
+                      <Link href={`/solutions/${featurePaths[kind]}`}>{detail}</Link>
                       <ArrowUpLeft aria-hidden="true" />
                     </CardFooter>
                   </Card>
@@ -1014,7 +1016,7 @@ export function LandingPage() {
               </h2>
               <p>خلّنا نريك كيف يمكن لنرفد أن يخدم مؤسستك.</p>
             </div>
-            <Button size="marketing" onClick={() => openDemo()}>
+            <Button size="marketing" data-analytics="demo_request_start" onClick={() => openDemo()}>
               احجز عرضًا توضيحيًا
               <ArrowUpLeft data-icon="inline-end" />
             </Button>
@@ -1040,11 +1042,15 @@ export function LandingPage() {
                   {item.label}
                 </a>
               ))}
+              <Link href="/pricing">تفاصيل الباقات السنوية</Link>
+              <Link href="/technology-partnership">الشراكة التقنية</Link>
+              <Link href="/about">عن نرفد</Link>
+              <Link href="/articles">مقالات نرفد</Link>
             </div>
             <div className="footer-links">
               <span>خلّنا نتواصل</span>
               <a href="#faq">الأسئلة الشائعة</a>
-              <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <a href={whatsappUrl} data-analytics="whatsapp_click" target="_blank" rel="noopener noreferrer">
                 واتساب
                 <ArrowUpLeft />
               </a>

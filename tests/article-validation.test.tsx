@@ -10,8 +10,50 @@ import {
   imageFormat,
 } from "../lib/articles/validation";
 import { slugify, type ArticleFields } from "../lib/articles/types";
+import { articleHeadings } from "../lib/articles/editorial";
+import { indexingEnabled, siteOrigin } from "../lib/seo";
 const id = "55555555-5555-4555-8555-555555555555";
 const image = `/media/articles/${id}/11111111-1111-4111-8111-111111111111.png`;
+
+test("indexing needs an explicit live HTTPS origin and remains disabled for previews", () => {
+  const keys = ["NEXT_PUBLIC_SITE_URL", "SITE_INDEXING_ENABLED", "VERCEL_ENV"] as const;
+  const before = keys.map(key => process.env[key]);
+  try {
+    process.env.NEXT_PUBLIC_SITE_URL = "https://nerved.invalid";
+    process.env.SITE_INDEXING_ENABLED = "false";
+    process.env.VERCEL_ENV = "production";
+    assert.equal(indexingEnabled(), false);
+    process.env.SITE_INDEXING_ENABLED = "true";
+    assert.equal(indexingEnabled(), true);
+    process.env.VERCEL_ENV = "preview";
+    assert.equal(indexingEnabled(), false);
+    process.env.VERCEL_ENV = "production";
+    process.env.NEXT_PUBLIC_SITE_URL = "http://localhost:3000";
+    assert.equal(indexingEnabled(), false);
+    process.env.NEXT_PUBLIC_SITE_URL = "https://nerved.invalid/path";
+    assert.throws(siteOrigin);
+  } finally { keys.forEach((key, i) => { if (before[i] === undefined) delete process.env[key]; else process.env[key] = before[i]; }); }
+});
+
+test("internal links stay navigable and duplicate heading anchors match the TOC", () => {
+  assert.equal(safeLink("/solutions/memberships"), true);
+  assert.equal(safeLink("//evil.example"), false);
+  assert.equal(safeLink("/\\evil.example"), false);
+  const doc = { type: "doc", content: [
+    { type: "heading", attrs: { level: 1 }, content: [{ type: "text", text: "خطوة أولى" }] },
+    { type: "heading", attrs: { level: 1 }, content: [{ type: "text", text: "خطوة أولى" }] },
+    { type: "paragraph", content: [{ type: "text", text: "حل الاشتراكات", marks: [{ type: "link", attrs: { href: "/solutions/memberships" } }] }] },
+  ] };
+  const headings = articleHeadings(doc);
+  assert.notEqual(headings[0].id, headings[1].id);
+  const html = renderToStaticMarkup(<ArticleRenderer content={doc} />);
+  for (const heading of headings) assert.ok(html.includes(`id="${heading.id}"`));
+  assert.match(html, /<a href="\/solutions\/memberships">/);
+});
+test("editorial fields reject bad dates, unknown solutions and fabricated author identities", () => {
+  assert.equal(validateFields({ ...fields, review_due_at: "2027-01-14", related_solution: "memberships" }, id).review_due_at, "2027-01-14");
+  for (const patch of [{ review_due_at: "2027-02-30" }, { related_solution: "fake-feature" }, { public_author_slug: "fake-expert" }, { cover_image_width: -1 }]) assert.throws(() => validateFields({ ...fields, ...patch }, id));
+});
 const fields: ArticleFields = {
   title: "إدارة الاشتراكات",
   slug: "إدارة-الاشتراكات",

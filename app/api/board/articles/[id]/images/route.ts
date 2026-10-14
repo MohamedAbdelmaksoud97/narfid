@@ -30,6 +30,7 @@ export async function POST(request: Request, context: Context) {
     const format = imageFormat(body);
     if (!format || format.type !== file.type)
       throw new ArticleError("ارفع صورة PNG أو JPG أو WebP أو GIF صالحة.");
+    let width: number; let height: number;
     try {
       const decoder = sharp(body, { limitInputPixels: 40000000, pages: 1 });
       const metadata = await decoder.metadata();
@@ -41,6 +42,9 @@ export async function POST(request: Request, context: Context) {
       )
         throw new Error("Image dimensions");
       await decoder.stats(); // Decode pixels too; a valid-looking header is insufficient.
+      const rotated = [5, 6, 7, 8].includes(metadata.orientation ?? 1);
+      width = rotated ? metadata.height : metadata.width;
+      height = rotated ? metadata.width : metadata.height;
     } catch {
       throw new ArticleError("ملف الصورة تالف أو أبعاده أكبر من المسموح.");
     }
@@ -53,7 +57,7 @@ export async function POST(request: Request, context: Context) {
         cacheControl: "0",
       });
     if (error) throw new ArticleError("تعذر رفع الصورة. حاول مرة أخرى.", 503);
-    return json({ url: `/media/articles/${path}` }, 201);
+    return json({ url: `/media/articles/${path}`, width, height }, 201);
   } catch (error) {
     return failure(error);
   }

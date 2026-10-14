@@ -13,6 +13,16 @@ export type ArticleFields = {
   seo_title: string;
   seo_description: string;
   direction: "rtl" | "ltr";
+  cover_image_width?: number | null;
+  cover_image_height?: number | null;
+  related_solution?: string | null;
+  public_author_slug?: string;
+  editorial_question?: string;
+  primary_keyword?: string;
+  search_intent?: "informational" | "commercial" | "transactional";
+  audience?: string;
+  editorial_notes?: string;
+  review_due_at?: string | null;
 };
 export type Article = ArticleFields & {
   id: string;
@@ -63,6 +73,16 @@ export function articleFields(article: Article): ArticleFields {
     seo_title,
     seo_description,
     direction,
+    cover_image_width = null,
+    cover_image_height = null,
+    related_solution = null,
+    public_author_slug = "nerved-team",
+    editorial_question = "",
+    primary_keyword = "",
+    search_intent = "informational",
+    audience = "",
+    editorial_notes = "",
+    review_due_at = null,
   } = article;
   return {
     title,
@@ -76,6 +96,16 @@ export function articleFields(article: Article): ArticleFields {
     seo_title,
     seo_description,
     direction,
+    cover_image_width,
+    cover_image_height,
+    related_solution,
+    public_author_slug,
+    editorial_question,
+    primary_keyword,
+    search_intent,
+    audience,
+    editorial_notes,
+    review_due_at,
   };
 }
 export function documentText(doc: JSONContent): string {

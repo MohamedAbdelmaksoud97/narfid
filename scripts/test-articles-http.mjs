@@ -238,9 +238,10 @@ try {
   assert.equal(article.status, "draft");
   const unpublished = await request(`/articles/${fields.slug}`, {}, false);
   const missingHtml = await unpublished.text();
-  // Next returns 200 + noindex if notFound occurs after the PPR stream started.
-  assert.ok([200, 404].includes(unpublished.status));
-  assert.match(missingHtml, /name="robots" content="noindex"/);
+  // Proxy resolves existence before the PPR stream: real 404 and noindex.
+  assert.equal(unpublished.status, 404);
+  assert.match(missingHtml, /name="robots" content="noindex(?:, nofollow)?"/);
+  assert.equal(unpublished.headers.get("x-robots-tag"), "noindex");
   assert.ok(!missingHtml.includes("English paragraph"));
   assert.equal((await request(url, {}, false)).status, 404);
   console.log(

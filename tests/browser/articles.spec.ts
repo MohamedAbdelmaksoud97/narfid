@@ -255,9 +255,9 @@ test("real board author: autosave, media privacy, RTL/LTR, formatting, publish a
         page.getByRole("button", { name: "نشر المقال", exact: true }),
       ).toBeVisible();
       const missing = await publicRequest.request.get(`/articles/${slug}`);
-      expect([200, 404]).toContain(missing.status());
+      expect(missing.status()).toBe(404);
       const missingHtml = await missing.text();
-      expect(missingHtml).toContain('content="noindex"');
+      expect(missingHtml).toMatch(/name="robots" content="noindex(?:, nofollow)?"/);
       expect(missingHtml).not.toContain("Private unpublished revision");
       expect((await publicRequest.request.get(media!)).status()).toBe(404);
     } finally {

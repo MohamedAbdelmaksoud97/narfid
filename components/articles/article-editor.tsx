@@ -37,9 +37,10 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { useArticleDraft } from "@/hooks/use-article-draft";
-import { uploadArticleImage } from "@/lib/articles/browser";
+import { uploadArticleImageResult } from "@/lib/articles/browser";
 import { slugify, type Article, type Category } from "@/lib/articles/types";
 import type { JSONContent } from "@tiptap/core";
+import { EditorialPanel } from "./editorial-panel";
 
 export function ArticleEditor({
   initial,
@@ -78,8 +79,8 @@ export function ArticleEditor({
     setUploading(true);
     setUploadError("");
     try {
-      const url = await uploadArticleImage(initial.id, file);
-      change({ cover_image_url: url });
+      const image = await uploadArticleImageResult(initial.id, file);
+      change({ cover_image_url: image.url, cover_image_width: image.width, cover_image_height: image.height });
     } catch (error) {
       setUploadError(
         error instanceof Error ? error.message : "تعذر رفع الغلاف.",
@@ -253,7 +254,7 @@ export function ArticleEditor({
                   size="sm"
                   variant="outline"
                   onClick={() =>
-                    change({ cover_image_url: null, cover_image_alt: "" })
+                    change({ cover_image_url: null, cover_image_alt: "", cover_image_width: null, cover_image_height: null })
                   }
                   disabled={locked}
                 >
@@ -437,6 +438,10 @@ export function ArticleEditor({
               </Field>
             </FieldGroup>
           </section>
+          {article.status === "published" && (
+            <p className="text-sm text-muted-foreground">عند نشر تغيير الرابط، يحوّل الرابط القديم إلى النسخة المنشورة الحالية تلقائيًا.</p>
+          )}
+          <EditorialPanel fields={fields} change={change} locked={locked} />
           {article.status === "published" && (
             <section className="article-settings-section">
               <h2>النشر</h2>

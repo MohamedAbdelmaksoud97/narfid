@@ -11,6 +11,7 @@ import {
   LayoutDashboard,
   LogOut,
   Palette,
+  Search,
   ShieldCheck,
   X,
 } from "lucide-react";
@@ -39,6 +40,7 @@ const sections = [
   { label: "نظرة عامة", href: "/board", icon: LayoutDashboard },
   { label: "هوية نرفد", href: "/board/brand", icon: Palette },
   { label: "المقالات", href: "/board/articles", icon: FileText },
+  { label: "تحسين البحث", href: "/board/seo", icon: Search },
 ] as const;
 type Props = {
   member: { name: string; email: string };
