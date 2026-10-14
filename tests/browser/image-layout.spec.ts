@@ -3,6 +3,8 @@ import { readFile, mkdir } from "node:fs/promises";
 import { createClient } from "@supabase/supabase-js";
 import sharp from "sharp";
 
+test.use({ actionTimeout: 15000 });
+
 const admin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
   process.env.SUPABASE_SECRET_KEY!,
@@ -77,8 +79,14 @@ test("image alignment, text wrapping and empty Arabic paragraphs persist in prev
       .click();
     await expect(empty).toHaveCSS("direction", "rtl");
     await empty.click();
+    // A following heading must stay intact, with an editable paragraph beside
+    // the image rather than a cursor in a heading that clears the image float.
+    await page.keyboard.insertText("عنوان تالٍ محفوظ");
+    await page.keyboard.press("Control+Alt+2");
+    await expect(editor.locator("h2")).toHaveText("عنوان تالٍ محفوظ");
+    await page.keyboard.press("Home");
     const png = await sharp({
-      create: { width: 240, height: 160, channels: 3, background: "#3ecf8e" },
+      create: { width: 1600, height: 1000, channels: 3, background: "#3ecf8e" },
     })
       .png()
       .toBuffer();
@@ -98,6 +106,9 @@ test("image alignment, text wrapping and empty Arabic paragraphs persist in prev
       '[data-resize-container][data-node="image"]',
     );
     await expect(image).toBeVisible();
+    await expect(
+      page.getByRole("group", { name: "خصائص الصورة", exact: true }),
+    ).toBeVisible();
     const alignment = page.getByRole("group", {
       name: "محاذاة الصورة",
       exact: true,
@@ -133,29 +144,62 @@ test("image alignment, text wrapping and empty Arabic paragraphs persist in prev
         (element) => getComputedStyle(element).backgroundColor,
       ),
     ).toBe("rgba(0, 0, 0, 0)");
-    await alignment.getByRole("button", { name: "يسار", exact: true }).click();
     await page
-      .getByRole("group", { name: "موضع الصورة مع النص", exact: true })
-      .getByRole("button", { name: "النص بجانب الصورة", exact: true })
+      .getByRole("button", { name: "اكتب يسار الصورة", exact: true })
       .click();
-    await expect(container).toHaveCSS("float", "left");
-    await page
-      .getByRole("button", { name: "اكتب بجانبها", exact: true })
-      .click();
+    await expect(image).toHaveAttribute("data-align", "right");
+    await expect(image).toHaveAttribute("data-layout", "wrap");
+    await expect(container).toHaveCSS("float", "right");
+    await expect(editor.locator("h2")).toHaveText("عنوان تالٍ محفوظ");
+    const emptyBeside = editor.locator(
+      '[data-resize-container][data-node="image"] + p.is-empty',
+    );
+    const emptyBox = (await emptyBeside.boundingBox())!;
+    const imageBeforeTyping = (await image.boundingBox())!;
+    expect(emptyBox.x + emptyBox.width).toBeLessThan(imageBeforeTyping.x);
+    expect(emptyBox.y).toBeLessThan(
+      imageBeforeTyping.y + imageBeforeTyping.height,
+    );
+    await mkdir(".private/article-qa", { recursive: true });
+    await editor.screenshot({
+      path: ".private/article-qa/image-wrap-empty-right.png",
+    });
     const copy =
       "نص عربي بجانب الصورة يشرح تفاصيل عمل المؤسسة الرياضية وكيف تساعد نرفد فريقها. ".repeat(
         5,
       );
     await page.keyboard.insertText(copy);
-    const beside = editor.locator("p").last();
+    const beside = editor.locator("p").filter({ hasText: "نص عربي بجانب الصورة" });
     await expect(beside).toContainText("نص عربي بجانب الصورة");
-    const range = await beside.evaluate((element) => {
+    const firstTextRect = () => beside.evaluate((element) => {
       const selection = document.createRange();
       selection.setStart(element.firstChild!, 0);
       selection.setEnd(element.firstChild!, 5);
       const box = selection.getBoundingClientRect();
-      return { x: box.x, y: box.y, bottom: box.bottom };
+      return { x: box.x, right: box.right, y: box.y, bottom: box.bottom };
     });
+    const leftText = await firstTextRect();
+    const rightImage = (await image.boundingBox())!;
+    expect(leftText.right).toBeLessThan(rightImage.x);
+    expect(leftText.y).toBeLessThan(rightImage.y + rightImage.height);
+    expect(leftText.bottom).toBeGreaterThan(rightImage.y);
+
+    // Switching sides reuses the adjacent paragraph and keeps its content.
+    await image.click();
+    await expect(
+      page.getByRole("group", { name: "خصائص الصورة", exact: true }),
+    ).toBeVisible();
+    await page
+      .getByRole("button", { name: "اكتب يمين الصورة", exact: true })
+      .click();
+    await expect(image).toHaveAttribute("data-align", "left");
+    await expect(container).toHaveCSS("float", "left");
+    await expect(beside).toHaveCount(1);
+    await expect(beside).toHaveText(copy.trim());
+    await page.keyboard.press("End");
+    await page.keyboard.insertText(" إضافة بعد تغيير الجهة.");
+    await expect(beside).toContainText("إضافة بعد تغيير الجهة.");
+    const range = await firstTextRect();
     const box = (await image.boundingBox())!;
     expect(range.x).toBeGreaterThan(box.x + box.width);
     expect(range.y).toBeLessThan(box.y + box.height);

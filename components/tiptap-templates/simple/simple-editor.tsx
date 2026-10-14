@@ -15,6 +15,7 @@ import { Placeholder } from "@tiptap/extension-placeholder";
 import { CharacterCount } from "@tiptap/extension-character-count";
 import { FindAndReplace } from "@tiptap/extension-find-and-replace";
 import { Selection } from "@tiptap/extensions";
+import { NodeSelection } from "@tiptap/pm/state";
 import {
   ImagePlus,
   Table2,
@@ -122,7 +123,7 @@ function ExtendedTools({
   const selection = useRef({ from: 1, to: 1 });
   const controller = useRef<AbortController | null>(null);
   useEffect(() => () => controller.current?.abort(), []);
-  function writeBesideImage() {
+  function writeBesideImage(textSide: "left" | "right") {
     const position = editor.state.selection.from;
     const image = editor.state.doc.nodeAt(position);
     if (image?.type.name !== "image") return;
@@ -133,10 +134,10 @@ function ExtendedTools({
       .focus()
       .updateAttributes("image", {
         layout: "wrap",
-        textAlign:
-          selected.imageAlign === "center" ? "right" : selected.imageAlign,
+        textAlign: textSide === "left" ? "right" : "left",
       });
-    if (!next?.isTextblock)
+    // Headings/code blocks clear floats; create a paragraph without altering them.
+    if (next?.type.name !== "paragraph")
       chain.insertContentAt(nextPosition, { type: "paragraph" });
     chain.setTextSelection(nextPosition + 1).run();
   }
@@ -197,8 +198,21 @@ function ExtendedTools({
             .chain()
             .focus()
             .setTextSelection(selection.current)
-            .setImage({ src, alt: alt.trim() })
-            .updateAttributes("image", { caption: caption.trim() })
+            .insertContent({
+              type: "image",
+              attrs: { src, alt: alt.trim(), caption: caption.trim() },
+            })
+            .command(({ tr }) => {
+              // Inserting before an existing block can leave a text selection;
+              // select the new image so its writing controls appear immediately.
+              tr.doc.descendants((node, position) => {
+                if (node.type.name === "image" && node.attrs.src === src) {
+                  tr.setSelection(NodeSelection.create(tr.doc, position));
+                  return false;
+                }
+              });
+              return true;
+            })
             .run();
         }
       }
@@ -453,14 +467,26 @@ function ExtendedTools({
             <ToggleGroupItem value="wrap">النص بجانب الصورة</ToggleGroupItem>
           </ToggleGroup>
           <Button
+            type="button"
             size="sm"
-            variant="outline"
+            variant="secondary"
             disabled={disabled}
-            onClick={writeBesideImage}
+            onMouseDown={(event) => event.preventDefault()}
+            onClick={() => writeBesideImage("left")}
           >
-            اكتب بجانبها
+            اكتب يسار الصورة
           </Button>
-          <span>اسحب أطراف الصورة لتغيير حجمها.</span>
+          <Button
+            type="button"
+            size="sm"
+            variant="secondary"
+            disabled={disabled}
+            onMouseDown={(event) => event.preventDefault()}
+            onClick={() => writeBesideImage("right")}
+          >
+            اكتب يمين الصورة
+          </Button>
+          <span>اختر جهة النص لبدء الكتابة، واسحب أطراف الصورة لتغيير حجمها.</span>
         </div>
       )}
       <Dialog

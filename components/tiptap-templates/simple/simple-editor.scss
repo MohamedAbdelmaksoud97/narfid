@@ -72,6 +72,8 @@
         border-radius: var(--radius-md);
       }
       &:has(img[data-layout="wrap"]):not(:has(img[data-align="center"])) {
+        // Relative paragraphs extend under floats; keep the image selectable.
+        z-index: 1;
         width: fit-content;
         max-width: 45%;
         float: right;
@@ -97,6 +99,12 @@
       border-radius: 4px;
       width: 9px;
       height: 9px;
+    }
+    // Give the empty paragraph/caret a real box beside the float, so its
+    // placeholder and click target occupy the available writing area.
+    [data-resize-container]:has(img[data-layout="wrap"]):not(:has(img[data-align="center"]))
+      + p.is-empty {
+      display: flow-root;
     }
   }
   .tiptap.ProseMirror.simple-editor::after {
