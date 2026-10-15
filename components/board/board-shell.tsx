@@ -11,6 +11,7 @@ import {
   LayoutDashboard,
   ListChecks,
   LogOut,
+  Megaphone,
   Palette,
   Search,
   ShieldCheck,
@@ -31,6 +32,9 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubItem,
+  SidebarMenuSubButton,
   SidebarProvider,
   SidebarSeparator,
   SidebarTrigger,
@@ -40,6 +44,7 @@ import {
 const sections = [
   { label: "نظرة عامة", href: "/board", icon: LayoutDashboard },
   { label: "المهام القادمة", href: "/board/tasks", icon: ListChecks },
+  { label: "التسويق", href: "/board/marketing", icon: Megaphone },
   { label: "هوية نرفد", href: "/board/brand", icon: Palette },
   { label: "المقالات", href: "/board/articles", icon: FileText },
   { label: "تحسين البحث", href: "/board/seo", icon: Search },
@@ -136,6 +141,48 @@ function Workspace({ member, children }: Omit<Props, "defaultOpen">) {
                         <section.icon aria-hidden="true" />
                         <span>{section.label}</span>
                       </SidebarMenuButton>
+                      {section.href === "/board/marketing" &&
+                        pathname.startsWith("/board/marketing") && (
+                          <SidebarMenuSub className="board-marketing-submenu">
+                            {[
+                              {
+                                label: "السوشيال ميديا",
+                                href: "/board/marketing/social",
+                              },
+                              {
+                                label: "سنابشات",
+                                href: "/board/marketing/social/snapchat",
+                              },
+                              {
+                                label: "إنستجرام",
+                                href: "/board/marketing/social/instagram",
+                              },
+                              {
+                                label: "إكس",
+                                href: "/board/marketing/social/x",
+                              },
+                              {
+                                label: "فيسبوك",
+                                href: "/board/marketing/social/facebook",
+                              },
+                            ].map((item) => (
+                              <SidebarMenuSubItem key={item.href}>
+                                <SidebarMenuSubButton
+                                  render={<Link href={item.href} />}
+                                  isActive={pathname === item.href}
+                                  aria-current={
+                                    pathname === item.href ? "page" : undefined
+                                  }
+                                  onClick={() => {
+                                    if (isMobile) setOpenMobile(false);
+                                  }}
+                                >
+                                  {item.label}
+                                </SidebarMenuSubButton>
+                              </SidebarMenuSubItem>
+                            ))}
+                          </SidebarMenuSub>
+                        )}
                     </SidebarMenuItem>
                   ))}
                 </SidebarMenu>

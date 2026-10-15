@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
-import { ArrowUpLeft, FileText, ListChecks, Palette, Search } from "lucide-react";
+import {
+  ArrowUpLeft,
+  FileText,
+  ListChecks,
+  Megaphone,
+  Palette,
+  Search,
+} from "lucide-react";
 import { requireBoardMember } from "@/lib/auth/session";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -29,12 +36,53 @@ async function BoardWorkspace() {
         <h1>
           أهلًا، <span>{member.name}.</span>
         </h1>
-        <p>مساحة الفريق لمتابعة مهام نرفد، وإدارة محتواها، والرجوع إلى هويتها وخطة ظهورها في البحث.</p>
+        <p>
+          مساحة الفريق لمتابعة مهام نرفد، وإدارة محتواها، والرجوع إلى هويتها
+          وخطة ظهورها في البحث.
+        </p>
         <div className="board-sections">
           <Card>
-            <CardHeader><ListChecks aria-hidden="true" /><CardTitle>المهام القادمة</CardTitle></CardHeader>
-            <CardContent><p>خطة إطلاق نرفد وتطويرها، بمهام رئيسية وفرعية وتقدم محفوظ لكل خطوة.</p></CardContent>
-            <CardFooter><Link href="/board/tasks" className={buttonVariants({ size: "navigation" })}>تابع خطة التنفيذ <ArrowUpLeft data-icon="inline-end" /></Link></CardFooter>
+            <CardHeader>
+              <Megaphone aria-hidden="true" />
+              <CardTitle>التسويق</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                خطة نرفد التسويقية، وأدلة المنصات الاجتماعية، و٤٠ منشورًا مصورًا
+                جاهزًا للمراجعة والتحميل.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="/board/marketing"
+                className={buttonVariants({
+                  variant: "outline",
+                  size: "navigation",
+                })}
+              >
+                افتح مساحة التسويق <ArrowUpLeft data-icon="inline-end" />
+              </Link>
+            </CardFooter>
+          </Card>
+          <Card>
+            <CardHeader>
+              <ListChecks aria-hidden="true" />
+              <CardTitle>المهام القادمة</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+                خطة إطلاق نرفد وتطويرها، بمهام رئيسية وفرعية وتقدم محفوظ لكل
+                خطوة.
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="/board/tasks"
+                className={buttonVariants({ size: "navigation" })}
+              >
+                تابع خطة التنفيذ <ArrowUpLeft data-icon="inline-end" />
+              </Link>
+            </CardFooter>
           </Card>
           <Card>
             <CardHeader>
@@ -87,10 +135,19 @@ async function BoardWorkspace() {
               <CardTitle>تحسين الظهور في البحث</CardTitle>
             </CardHeader>
             <CardContent>
-              <p>خطة الإطلاق والمقالات، وفهم القياس، وخطوات أسبوعية وشهرية لتطوير ظهور نرفد.</p>
+              <p>
+                خطة الإطلاق والمقالات، وفهم القياس، وخطوات أسبوعية وشهرية لتطوير
+                ظهور نرفد.
+              </p>
             </CardContent>
             <CardFooter>
-              <Link href="/board/seo" className={buttonVariants({ variant: "outline", size: "navigation" })}>
+              <Link
+                href="/board/seo"
+                className={buttonVariants({
+                  variant: "outline",
+                  size: "navigation",
+                })}
+              >
                 افتح دليل تحسين البحث <ArrowUpLeft data-icon="inline-end" />
               </Link>
             </CardFooter>
