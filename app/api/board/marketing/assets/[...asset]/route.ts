@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { marketingAccess } from "@/lib/marketing/server";
+import { createMarketingArchive } from "@/lib/marketing/archive";
 import {
   findPlatform,
   postFilename,
@@ -56,6 +57,20 @@ export async function GET(
   }
   if (!valid) return new Response(null, { status: 404, headers });
   try {
+    const archivePlatform =
+      asset.length === 1 && asset[0].endsWith("-posts.zip")
+        ? asset[0] === "all-posts.zip"
+          ? "all"
+          : findPlatform(asset[0].replace(/-posts\.zip$/, ""))?.id
+        : undefined;
+    if (archivePlatform)
+      return new Response(await createMarketingArchive(archivePlatform), {
+        headers: {
+          ...headers,
+          "Content-Type": "application/zip",
+          "Content-Disposition": `attachment; filename="narfid-${asset[0]}"`,
+        },
+      });
     const data = await readFile(
       join(process.cwd(), "content/marketing/assets", ...asset),
     );

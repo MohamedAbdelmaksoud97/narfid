@@ -6,7 +6,14 @@ const nextConfig: NextConfig = {
   partialPrefetching: true,
   allowedDevOrigins: ["127.0.0.1"],
   outputFileTracingIncludes: {
-    "/api/board/marketing/assets/**": ["./content/marketing/assets/**/*"],
+    "/api/board/marketing/assets/**": [
+      "./content/marketing/assets/**/*.png",
+      "./content/marketing/assets/**/*.webp",
+      "./content/marketing/assets/**/*.txt",
+    ],
+  },
+  outputFileTracingExcludes: {
+    "/api/board/marketing/assets/**": ["./content/marketing/assets/*.zip"],
   },
   turbopack: {
     rules: {

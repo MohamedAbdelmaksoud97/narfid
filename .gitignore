@@ -38,6 +38,9 @@ yarn-error.log*
 # Local board-account credentials; never publish or commit.
 /.private/
 
+# Generated marketing bundles; the board streams ZIPs from the original assets.
+/content/marketing/assets/*.zip
+
 # vercel
 .vercel
 

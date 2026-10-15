@@ -7,7 +7,7 @@ import {
   postAsset,
 } from "../../lib/marketing/social";
 
-test("marketing strategy, platform guides, forty protected images and downloads work", async ({
+test("marketing strategy, platform guides, 120 protected images and downloads work", async ({
   page,
   context,
   request,
@@ -85,7 +85,7 @@ test("marketing strategy, platform guides, forty protected images and downloads 
     await expect(
       page.getByRole("heading", { name: platform.name, exact: true, level: 1 }),
     ).toBeVisible();
-    await expect(page.locator(".social-post-card")).toHaveCount(10);
+    await expect(page.locator(".social-post-card")).toHaveCount(30);
     await page
       .getByRole("button", { name: "التصور الكامل للفيديو", exact: true })
       .click();
@@ -93,7 +93,7 @@ test("marketing strategy, platform guides, forty protected images and downloads 
       page.getByText(platform.videoDirection, { exact: false }),
     ).toBeVisible();
     await page.locator("#posts").scrollIntoViewIfNeeded();
-    const first = postsFor(platform.id)[0];
+    const first = postsFor(platform.id)[10];
     await page
       .getByRole("button", {
         name: `معاينة المنشور ${first.id}: ${first.headline.replaceAll("\n", " ")}`,
@@ -104,7 +104,16 @@ test("marketing strategy, platform guides, forty protected images and downloads 
     await expect(dialog).toBeVisible();
     await expect(dialog.getByRole("heading", { level: 2 })).toBeInViewport();
     await expect(dialog.getByRole("img")).toBeVisible();
-    await expect.poll(() => dialog.getByRole("img").evaluate((element: HTMLImageElement) => element.complete && element.naturalWidth > 0)).toBe(true);
+    await expect
+      .poll(() =>
+        dialog
+          .getByRole("img")
+          .evaluate(
+            (element: HTMLImageElement) =>
+              element.complete && element.naturalWidth > 0,
+          ),
+      )
+      .toBe(true);
     await dialog
       .getByRole("button", { name: "نسخ النص المرافق", exact: true })
       .click();
@@ -167,9 +176,19 @@ test("marketing strategy, platform guides, forty protected images and downloads 
     path: ".private/marketing-qa/platform-mobile.png",
     fullPage: false,
   });
-  await page.locator(".social-post-thumbnail").first().click();
+  await page.locator(".social-post-thumbnail").nth(18).click();
   await expect(page.getByRole("dialog")).toBeVisible();
-  await expect.poll(() => page.getByRole("dialog").getByRole("img").evaluate((element: HTMLImageElement) => element.complete && element.naturalWidth > 0)).toBe(true);
+  await expect
+    .poll(() =>
+      page
+        .getByRole("dialog")
+        .getByRole("img")
+        .evaluate(
+          (element: HTMLImageElement) =>
+            element.complete && element.naturalWidth > 0,
+        ),
+    )
+    .toBe(true);
   await expect(
     page.getByRole("dialog").getByRole("heading", { level: 2 }),
   ).toBeInViewport();

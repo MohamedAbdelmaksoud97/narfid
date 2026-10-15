@@ -61,7 +61,7 @@ export function PlatformCards() {
               {platform.width} × {platform.height} px
             </span>
             <p className="text-muted-foreground">
-              ١٠ صور + النصوص + تصور الصور والفيديو
+              ٣٠ صورة + النصوص + تصور الصور والفيديو
             </p>
           </CardContent>
           <CardFooter>
@@ -114,7 +114,7 @@ export function AllPostsDownload() {
       className={buttonVariants({ size: "navigation" })}
     >
       <Download data-icon="inline-start" />
-      تحميل الحزمة كاملة — ٤٠ صورة
+      تحميل الحزمة كاملة — ١٢٠ صورة
     </a>
   );
 }

@@ -1,3 +1,4 @@
+import { createProductPosts, productScreens } from "./product-posts";
 export type PlatformId = "snapchat" | "instagram" | "x" | "facebook";
 export const socialScenes = {
   gym: { file: "gym-concept.png", description: "صالة تدريب" },
@@ -69,6 +70,8 @@ export type SocialPost = {
   platform: PlatformId;
   theme: string;
   scene: SocialScene;
+  screenshot?: keyof typeof productScreens;
+  imageStyle?: "wide" | "focus";
   eyebrow: string;
   headline: string;
   subline: string;
@@ -89,7 +92,8 @@ export type SocialPost = {
     | "branches"
     | "checklist"
     | "network"
-    | "dashboard";
+    | "dashboard"
+    | "product";
 };
 type Scene = { time: string; visual: string; voice: string };
 export type SocialPlatform = {
@@ -128,7 +132,7 @@ export const socialPlatforms: SocialPlatform[] = [
     bio: "نرفد | السند التقني للمؤسسات الرياضية. اشتراكات، حجوزات وتشغيل متصل. ناقش احتياج مؤسستك واحجز عرضًا توضيحيًا.",
     tone: "مباشرة وقريبة: سؤال واحد ثم فكرة واحدة. عربية سهلة مناسبة للسعودية، من دون مبالغة أو حديث يوحي بأن المخاطب مشترك في النادي.",
     cadence:
-      "الدفعة الأولى ١٠ قصص مصورة خلال أربعة أسابيع: ٣، ثم ٣، ثم ٢، ثم ٢. بعد توفر تصوير حقيقي يمكن تجربة يومين إلى ثلاثة أيام أسبوعيًا، بكل يوم سلسلة قصيرة؛ يحدد الأداء والقدرة الإنتاجية الإيقاع التالي.",
+      "٣٠ قصة مصورة خلال نحو ١١ أسبوعًا: أول ١٠ قصص في أربعة أسابيع بتوزيع ٣، ٣، ٢، ٢؛ ثم ٢٠ قصة بلقطات النظام بمعدل يقارب ٣ أسبوعيًا. راجع التفاعل وجودة الطلبات أسبوعيًا وعدّل الإيقاع؛ لا تنشر الحزمة دفعة واحدة.",
     imageDirection:
       "صورة عمودية 9:16؛ عنوان كبير في وسط المساحة، مع مشهد تصوري مرتبط بالموضوع: صالة تدريب أو استقبال أو ملعب أو مطبخ أو مخزون أو مساحة إدارة، ورسم تشغيلي بسيط. الشعار العربي واضح أعلى منطقة القراءة دون اسم إنجليزي أو ترقيم للحملة. حد أقصى لفكرة واحدة وثلاث نقاط قصيرة. الصورة مستقلة وليست شريحة ناقصة من سلسلة.",
     videoDirection:
@@ -189,7 +193,7 @@ export const socialPlatforms: SocialPlatform[] = [
     bio: "نرفد | السند التقني للمؤسسات الرياضية\nأعضاء، اشتراكات، حجوزات وتشغيل متصل\nاحجز عرضًا يناسب مؤسستك ↓",
     tone: "تعليمية مرتبة، عنوان قصير ثم شرح عملي في الوصف. نتحدث عن تنظيم العمل والقرار الإداري؛ لا نستخدم صور تمارين استعراضية أو وعود نتائج مالية غير مثبتة.",
     cadence:
-      "١٠ صور في أربعة أسابيع بتوزيع ٣، ٣، ٢، ٢. ثبّت لاحقًا تعريف نرفد، وما الذي تديره، وكيف تطلب العرض. اختبر نافذتي نشر من إحصاءات الحساب؛ لا نفترض ساعة نجاح ثابتة.",
+      "٣٠ صورة خلال نحو ١١ أسبوعًا: أول ١٠ في أربعة أسابيع بتوزيع ٣، ٣، ٢، ٢؛ ثم ٢٠ شرحًا بلقطات النظام بمعدل يقارب ٣ أسبوعيًا. ثبّت تعريف نرفد وكيفية طلب العرض. اختبر وقت النشر من إحصاءات الحساب وعدّل الإيقاع حسب النتائج.",
     imageDirection:
       "خلاصة 4:5 بحجم 1440×1800؛ عنوان كبير، مساحات هادئة، رسم واحد أو ثلاث نقاط، وتوقيع نرفد. الحزمة الحالية صور مستقلة؛ يمكن لاحقًا تحويل الشرح الطويل إلى كاروسيل ٤–٦ شرائح بنفس النسبة مع فائدة مكتملة بكل شريحة.",
     videoDirection:
@@ -247,7 +251,7 @@ export const socialPlatforms: SocialPlatform[] = [
     bio: "نرفد | السند التقني للمؤسسات الرياضية. نربط تفاصيل التشغيل ونناقش احتياجات التطوير والتكامل. احجز عرضًا توضيحيًا يناسب مؤسستك.",
     tone: "مركزة ودقيقة: فكرة واحدة، مثال واحد، أو سؤال مهني. تجنب الجدال والترند غير المرتبط والوسوم الكثيرة. النص قابل للفهم دون الصورة، والصورة تضيف بنية بصرية.",
     cadence:
-      "١٠ منشورات أصلية في أربعة أسابيع، مع ردود نوعية عند وجود نقاش مناسب. اختر موضوعين للتعمق لاحقًا في سلسلة قصيرة إذا ظهرت أسئلة حقيقية؛ لا نضيف سلاسل آلية لزيادة العدد.",
+      "٣٠ منشورًا خلال نحو ١١ أسبوعًا: أول ١٠ في أربعة أسابيع، ثم ٢٠ لقطة من النظام مع شرح موجز بمعدل يقارب ٣ أسبوعيًا. أضف ردودًا نوعية عند وجود نقاش مناسب، واختر موضوعين للتعمق إذا ظهرت أسئلة حقيقية.",
     imageDirection:
       "صورة أفقية 1200×628 بنسبة تقارب 1.91:1، بعنوان من سطرين كحد إبداعي ورسم مختصر في النصف الآخر. لا نصغّر ملصق إنستجرام العمودي. كل صورة لها نسخة تحريرية خاصة، وشعار في هامش آمن.",
     videoDirection:
@@ -306,7 +310,7 @@ export const socialPlatforms: SocialPlatform[] = [
     bio: "نرفد هي السند التقني للمؤسسات الرياضية. منظومة لإدارة الأعضاء والاشتراكات والحجوزات والمبيعات والمطبخ ومخزون المنتجات والفروع، مع خدمات تطوير وتكامل حسب احتياج المؤسسة.",
     tone: "تفسيرية ومطمئنة: موقف من العمل، لماذا يهم، وثلاث خطوات أو أسئلة. نرحّب بالاعتراض ونوضح النطاق. لا نكرر النص المختصر لإكس ونعتبره شرحًا كافيًا.",
     cadence:
-      "١٠ منشورات تعليمية خلال أربعة أسابيع، مع مراجعة أسبوعية للأسئلة وجودة الجمهور. المشاركة في مجموعة مرتبطة بالنشاط تكون بإذن وقيمة واضحة؛ لا ننسخ المنشور إلى مجموعات كثيرة دفعة واحدة.",
+      "٣٠ منشورًا تعليميًا خلال نحو ١١ أسبوعًا: أول ١٠ في أربعة أسابيع، ثم ٢٠ منشورًا بلقطات النظام بمعدل يقارب ٣ أسبوعيًا. راجع الأسئلة وجودة الجمهور أسبوعيًا. المشاركة في مجموعة مرتبطة بالنشاط تكون بإذن وقيمة واضحة.",
     imageDirection:
       "صورة خلاصة 4:5 بحجم 1440×1800؛ مشهد أو رسم واحد، عنوان واضح، ومخطط من ٣ نقاط يمكن قراءته مستقلًا. الوصف يحمل القصة والتفاصيل. النسخة الحالية أعدت لفيسبوك بصياغة وبناء مختلفين عن إنستجرام، ولا تُستخدم كقصة دون إعادة إخراج.",
     videoDirection:
@@ -673,7 +677,7 @@ const copies: Record<PlatformId, Copy[]> = {
   ],
 };
 
-export const socialPosts: SocialPost[] = socialPlatforms.flatMap((platform) =>
+const launchPosts: SocialPost[] = socialPlatforms.flatMap((platform) =>
   copies[platform.id].map(([headline, subline, points, caption], index) => ({
     id: String(index + 1).padStart(2, "0"),
     platform: platform.id,
@@ -709,6 +713,11 @@ export const socialPosts: SocialPost[] = socialPlatforms.flatMap((platform) =>
   })),
 );
 
+export const socialPosts: SocialPost[] = socialPlatforms.flatMap((platform) => [
+  ...launchPosts.filter((post) => post.platform === platform.id),
+  ...createProductPosts(platform),
+]);
+
 export function findPlatform(value: string) {
   return socialPlatforms.find((platform) => platform.id === value);
 }
@@ -723,7 +732,15 @@ export function postAsset(post: SocialPost, preview = false) {
 }
 export function suggestedWeek(post: SocialPost) {
   const index = Number(post.id);
-  return index <= 3 ? 1 : index <= 6 ? 2 : index <= 8 ? 3 : 4;
+  return index <= 10
+    ? index <= 3
+      ? 1
+      : index <= 6
+        ? 2
+        : index <= 8
+          ? 3
+          : 4
+    : 5 + Math.floor((index - 11) / 3);
 }
 export function trackedDestination(post: SocialPost) {
   return `${post.destination}?utm_source=${post.platform}&utm_medium=organic_social&utm_campaign=nerved_launch&utm_content=${post.platform}_${post.id}`;

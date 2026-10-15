@@ -58,12 +58,14 @@ export function SocialLibrary({
       <header className="social-library-header">
         <div>
           <span className="section-kicker">
-            دفعة البداية / ١٠ منشورات مصورة
+            مكتبة المحتوى / {posts.length.toLocaleString("ar-SA")} منشورًا
+            مصورًا
           </span>
           <h2 id="social-library-heading">مكتبة {platform.name}</h2>
           <p>
             معاينة أصل الصورة، والنص المرافق، والوصف البديل، وترتيب أسبوعي
-            مقترح. كل ملف قابل للتحميل.
+            مقترح. تشمل المكتبة ١٠ منشورات تعريفية و٢٠ منشورًا بلقطات من واجهات
+            النظام بهوية نرفد وبيانات عرض تجريبية. كل ملف قابل للتحميل.
           </p>
         </div>
         <a

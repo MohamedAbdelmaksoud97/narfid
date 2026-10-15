@@ -1,0 +1,82 @@
+{
+  "capturedAt": "2026-10-15",
+  "source": "go/go",
+  "mode": "Actual reference UI; browser-only identity styling; isolated fictional API fixtures; no backend access",
+  "screens": [
+    {
+      "key": "overview",
+      "route": "/",
+      "file": "overview.png"
+    },
+    {
+      "key": "members",
+      "route": "/members",
+      "file": "members.png"
+    },
+    {
+      "key": "subscriptions",
+      "route": "/subscriptions",
+      "file": "subscriptions.png"
+    },
+    {
+      "key": "attendance",
+      "route": "/attendance",
+      "file": "attendance.png"
+    },
+    {
+      "key": "bookings",
+      "route": "/bookings",
+      "file": "bookings.png"
+    },
+    {
+      "key": "staff",
+      "route": "/staff",
+      "file": "staff.png"
+    },
+    {
+      "key": "inventory",
+      "route": "/system-settings/retail-inventory",
+      "file": "inventory.png"
+    },
+    {
+      "key": "branches",
+      "route": "/system-settings/branches",
+      "file": "branches.png"
+    },
+    {
+      "key": "roles",
+      "route": "/system-settings/roles",
+      "file": "roles.png"
+    },
+    {
+      "key": "restaurant",
+      "route": "/restaurant",
+      "file": "restaurant.png"
+    },
+    {
+      "key": "finance",
+      "route": "/finance",
+      "file": "finance.png"
+    },
+    {
+      "key": "services",
+      "route": "/system-settings/services",
+      "file": "services.png"
+    },
+    {
+      "key": "kitchen",
+      "route": "/restaurant",
+      "file": "kitchen.png"
+    },
+    {
+      "key": "meals",
+      "route": "/restaurant",
+      "file": "meals.png"
+    }
+  ],
+  "unmatchedEndpoints": [
+    "/me/account-notifications/unread-count",
+    "/organizations/00000000-0000-4000-8000-000000000001/access-device-events",
+    "/organizations/00000000-0000-4000-8000-000000000001/access-device-events/stream"
+  ]
+}
