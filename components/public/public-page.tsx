@@ -76,7 +76,7 @@ export function PublicFooter() {
   return (
     <footer className="public-footer container">
       <div>
-        <strong>نرفد · Nerved</strong>
+        <strong>نرفد · narfid</strong>
         <p>السند التقني للمؤسسات الرياضية.</p>
       </div>
       <nav aria-label="روابط نرفد">

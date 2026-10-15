@@ -1,6 +1,6 @@
 ---
 name: narfid
-description: "Understand and apply the NARFID brand context for نرفد / Nerved: its identity as a technology provider for sports institutions in Saudi Arabia, platform capabilities, positioning, vision, mission, goals, customer personas, personality, voice, content and annual SaaS offer. Use when writing brand or product copy, articles, sales materials, customer journeys, or making decisions that depend on what Nerved offers and whom it serves. Visual identity is maintained separately in the project's UI-system skill."
+description: "Understand and apply the NARFID brand context for نرفد / narfid: its identity as a technology provider for sports institutions in Saudi Arabia, platform capabilities, positioning, vision, mission, goals, customer personas, personality, voice, content and annual SaaS offer. Use when writing brand or product copy, articles, sales materials, customer journeys, or making decisions that depend on what narfid offers and whom it serves. Visual identity is maintained separately in the project's UI-system skill."
 ---
 
 # NARFID — مرجع براند نرفد
@@ -28,7 +28,8 @@ description: "Understand and apply the NARFID brand context for نرفد / Nerve
 
 ## ماهية نرفد
 
-- **الاسم العربي:** نرفد. **الاسم الإنجليزي العام:** Nerved. استخدم هذين الاسمين في المحتوى التجاري. `NARFID` اسم هذه المهارة و`narfid` اسم المشروع؛ لا يغيّران الاسم العام للبراند. عناوين الدخول التجريبية تحت `nerfed.example` ليست بريد مبيعات أو نطاقًا تجاريًا مثبتًا.
+- **الاسم العربي:** نرفد. **الاسم الإنجليزي العام:** `narfid` بالحروف الصغيرة، بحسب تصحيح المالك في ١٥ أكتوبر ٢٠٢٦. لا تستخدم التهجئة السابقة Nerved في محتوى جديد. `NARFID` اسم هذه المهارة. عناوين الدخول التجريبية تحت `nerfed.example` ليست بريد مبيعات أو نطاقًا تجاريًا مثبتًا؛ لا تغيّر معرفات الحسابات أو المسارات المنشورة لمجرد تصحيح الاسم.
+- **صور منشورات التسويق:** استخدم الشعار العربي الأصلي؛ لا تضف اسمًا إنجليزيًا أو قفلًا نصيًا مثل `NERVED / 01` أو `narfid / 01` أو ترقيم حملة أعلى الصورة. الاسم الإنجليزي الصحيح معلومة للكتابة عند الحاجة، وليس طلبًا لإضافته إلى الصور. نوّع المشاهد بحسب الموضوع ولا تحصر المؤسسة الرياضية في ملعب واحد. مرجع الهوية البصرية يظل في مهارة UI-system.
 - **الوصف:** السند التقني للمؤسسات الرياضية.
 - **المعنى:** الاسم مستلهم من الرفادة والمساعدة؛ سند عملي يفهم تفاصيل العمل ويساعد المؤسسة وفريقها على استخدام التقنية.
 - **طبيعة الشركة:** مزوّد تقني للمؤسسات الرياضية، يبيع للمؤسسات لا للأفراد. منصة إدارة المؤسسات الرياضية هي نواة الشركة، ومنها تتوسع خدمات التطوير والتكامل حسب الاحتياج.

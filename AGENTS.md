@@ -10,7 +10,7 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 ## Brand context — NARFID
 
-Whenever a task requires understanding Nerved (نرفد), its nature as a
+Whenever a task requires understanding narfid (نرفد), its nature as a
 technology provider, platform offering, Saudi target customers, positioning,
 vision, mission, goals, brand personality, voice, content, or commercial model,
 read and follow `.agents/skills/narfid/SKILL.md` before making those decisions.
@@ -22,7 +22,7 @@ pricing against the sources linked in the skill before making specific claims.
 
 ## Articles — writing and publishing
 
-Before writing, editing, importing, publishing, or troubleshooting Nerved
+Before writing, editing, importing, publishing, or troubleshooting narfid
 articles, read and follow `.agents/skills/narfid-articles/SKILL.md` alongside
 the NARFID brand skill when brand context is needed. Reuse the existing
 editor, validation, media, and publication workflow. For ordinary content

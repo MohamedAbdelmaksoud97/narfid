@@ -12,11 +12,30 @@
 
 الاستراتيجية في `lib/marketing/strategy.ts`، وأدلة المنصات والأربعون نصًا في `lib/marketing/social.ts`. الرسائل مشتقة من مهارة NARFID وتدقيق وظائف المنصة؛ الهوية من مرجع UI-system، مع Tajawal وشعار `public/logo.png`. لا تحتوي الحزمة أرقام أداء أو شهادات عملاء أو أسعارًا مقترحة مطبوعة.
 
-الصورة `public/images/nerved-dashboard.png` أصل الموقع المعاد تسميته ببيانات تجريبية؛ ليست تقرير نتائج عميل. خلفية الملعب في `content/marketing/source/court-concept.png` مشهد تصوري أنشئ بأداة **imagegen المدمجة**. لا يُنسب إلى منشأة حقيقية. الرسومات والأيقونات تعليمية، منفذة بـHTML/CSS وLucide، وليست شاشات منتج مزعومة.
+الاسم الإنجليزي الصحيح **narfid**. صور المنشورات تستخدم الشعار العربي الأصلي، دون إضافة اسم إنجليزي أو قفل نصي أو ترقيم حملة أعلى اليسار. حُذف القفل السابق من الصور الأربعين ومن قالب التصدير؛ لا يُستبدل بتهجئة أخرى.
 
-نص توليد الخلفية:
+الصورة `public/images/nerved-dashboard.png` أصل الموقع المعاد تسميته ببيانات تجريبية؛ ليست تقرير نتائج عميل. يحتفظ اسم الملف التقني القديم بمساره. الخلفيات الست في `content/marketing/source/` مشاهد تصورية، لا تُنسب إلى منشآت حقيقية. أُنشئت الخلفيات الجديدة بأداة **imagegen المدمجة** وحُفظت داخل المشروع. الرسومات والأيقونات تعليمية، منفذة بـHTML/CSS وLucide، وليست شاشات منتج مزعومة.
 
-> Use case: ads-marketing. Asset type: one original editorial background photograph for a Saudi B2B sports-management technology brand called Nerved. Generate a premium, realistic architectural photograph of a contemporary indoor sports club: an empty indoor padel court with charcoal walls, a restrained emerald-green court and thin mint court lines, dramatic but believable side lighting, carefully detailed floor and mesh, quiet professional atmosphere. Wide horizontal composition, high resolution. Main visual interest in lower-right and central court geometry, upper-left dark negative space suitable for later Arabic typesetting. Palette charcoal #1c1c1c, muted gray, subtle natural emerald #3ecf8e accents. No people, no flags, no readable text, no logos, no UI, no statistics, no watermarks. This is an illustrative brand scene, not a photograph of an existing named client. Do not create a poster or add any text. One continuous photorealistic image.
+| الأصل                   | الاستخدام                                        |
+| ----------------------- | ------------------------------------------------ |
+| `gym-concept.png`       | صالة تدريب لمنشورات التعريف والاشتراكات والشراكة |
+| `reception-concept.png` | استقبال النادي والاشتراكات ونقاط البيع           |
+| `court-concept.png`     | الملعب الأصلي، لمنشورات الحجوزات فقط             |
+| `kitchen-concept.png`   | تحضير الوجبات الصحية                             |
+| `inventory-concept.png` | المنتجات والمخزون الرياضي                        |
+| `workspace-concept.png` | الإدارة والفروع والانتقال والشراكة               |
+
+تحتوي كل مجموعة منصة على المشاهد الست، وتختلف خلفية بعض الموضوعات بين المنصات. ربط كل منشور بمشهده ووصفه البديل في `lib/marketing/social.ts`، ويتضمن `manifest.json` المشهد المستخدم إلى جانب البصمة والمقاس.
+
+نصوص توليد الخلفيات الخمس الجديدة: النص المشترك التالي ثم وصف المشهد المعني، كما استُخدما في كل استدعاء مستقل:
+
+> Use case: ads-marketing. Asset type: original background photograph for Arabic social posts of narfid, a Saudi B2B sports-management technology provider. Style: premium realistic editorial photography, believable materials, charcoal architecture #1c1c1c, muted neutral tones with restrained natural emerald #3ecf8e accents. One continuous wide 3:2 photograph, not a collage or a poster. Compose an interesting central/lower scene that survives portrait cropping, with darker quiet space near the top for later typesetting. Realistic soft directional lighting, sophisticated calm professional atmosphere. No people, no readable text, no letters or numbers, no logos, no signage, no watermarks, no UI. Illustrative fictional facility, not a named client.
+
+- `gym-concept.png`: Scene: a contemporary fitness club strength-training floor, architectural view down neatly arranged charcoal dumbbell racks, adjustable training benches and cable stations, subtle emerald upholstery, textured rubber floor, diffused daylight through tall windows. Focus on recognisable high-quality gym equipment; no sports court.
+- `reception-concept.png`: Scene: a premium Saudi fitness club reception, curved charcoal stone check-in desk, a small blank-screen point-of-sale terminal, neat turnstile in the distance, softly lit lockers and an emerald accent lounge chair. Natural timber details, welcoming professional interior. No sports court, no gym machines dominating.
+- `kitchen-concept.png`: Scene: a sports club healthy-meal preparation counter, editorial close view of neatly organised unbranded meal boxes, fresh grilled chicken, rice and vibrant vegetables, a stainless preparation bench and softly blurred professional kitchen in the background. Charcoal containers and an emerald tile detail, appetising natural light. No court or gym equipment.
+- `inventory-concept.png`: Scene: a well-organised sports club retail stockroom, eye-level close architectural view of charcoal shelves with neatly folded mint and grey towels, blank unbranded sports bottles, small plain boxes, spare training bands. Soft diagonal window light, tidy practical inventory setting, real materials, restrained emerald accents. No text on any packaging. No court.
+- `workspace-concept.png`: Scene: a sports institution manager's quiet modern workspace beside a glazed view toward an out-of-focus fitness facility. A charcoal desk with a closed blank notebook, pen, slim laptop seen from the back with no logo, and a subtle emerald chair. Refined administrative setting with depth and believable daylight, focus on the desk. No charts, no readable screen content, no court.
 
 ## إعادة التصدير
 
@@ -28,6 +47,6 @@
 
 ## التحقق
 
-`npm run test:marketing` يفحص العدد والتميّز وحد نصوص إكس والأبعاد والبصمات وتطابق ملفات النص. اختبار `tests/browser/marketing.spec.ts` يفحص صلاحيات الزائر والتنقل والمعاينة والنسخ والتحميل والملفات الأربعين وواجهة الهاتف. يشمل التصدير فحص تجاوز المساحة وفحص CRC لكل أرشيف.
+`npm run test:marketing` يفحص العدد والتميّز وحد نصوص إكس والأبعاد والبصمات وتطابق ملفات النص وربط الوصف البديل بالمشهد وتنوع المشاهد الست في كل منصة. اختبار `tests/browser/marketing.spec.ts` يفحص صلاحيات الزائر والتنقل والمعاينة والنسخ والتحميل والملفات الأربعين وواجهة الهاتف. يشمل التصدير منع الاسم الإنجليزي وترقيم الحملة في رأس الصورة، وفحص تجاوز المساحة وفحص CRC لكل أرشيف.
 
 نجحت فحوص المحتوى والأصول، وESLint، وبناء الإنتاج مع TypeScript. نجحت تجربة Chromium على نسخة الإنتاج المحلية: تحميل الملفات الأربعين وحزم المنصات والحزمة الكاملة، ومنع الزائر من الوصول، وتحديد الفصل أثناء التمرير، ونسخ النص والوصف البديل، ومعاينة الهاتف دون تجاوز أفقي. أُدرجت ملفات الأصول الـ١٢٦ في تتبع ملفات مسار التحميل لنسخة النشر.

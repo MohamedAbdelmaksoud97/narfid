@@ -6,6 +6,7 @@ import sharp from "sharp";
 import {
   socialPlatforms,
   socialPosts,
+  socialScenes,
   postsFor,
   postFilename,
   trackedDestination,
@@ -18,9 +19,14 @@ test("four platform-specific sets have ten unique posts with complete copy", () 
   assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 40);
   for (const platform of socialPlatforms) {
     assert.equal(postsFor(platform.id).length, 10);
+    assert.equal(
+      new Set(postsFor(platform.id).map((post) => post.scene)).size,
+      6,
+    );
     for (const post of postsFor(platform.id)) {
       assert.ok(post.caption.length > 50);
       assert.ok(post.alt.length > 30);
+      assert.ok(post.alt.includes(socialScenes[post.scene].description));
       assert.equal(post.points.length, 3);
       assert.ok(
         post.destination.startsWith("/") && !post.destination.startsWith("//"),
@@ -61,6 +67,7 @@ test("all forty PNGs and lightweight previews match the export manifest", async 
         createHash("sha256").update(bytes).digest("hex"),
         entry.sha256,
       );
+      assert.equal(entry.scene, post.scene);
       const preview = await sharp(
         path.replace(".png", ".preview.webp"),
       ).metadata();

@@ -23,6 +23,7 @@ import {
 import {
   socialPlatforms,
   socialPosts,
+  socialScenes,
   postFilename,
   postsFor,
   suggestedWeek,
@@ -153,8 +154,8 @@ function html(
     *{box-sizing:border-box}html,body{margin:0;width:${width}px;height:${height}px;background:#1c1c1c;color:#ededed;font-family:Tajawal,sans-serif}body{overflow:hidden}
     .canvas{height:100%;width:100%;position:relative;padding:80px;display:flex;flex-direction:column;isolation:isolate;background:#1c1c1c;overflow:hidden}
     .canvas::after{content:"";position:absolute;inset:28px;border:1px solid #333;border-radius:6px;pointer-events:none;z-index:-1}
-    .scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:65% center;opacity:.6;z-index:-3}.veil{position:absolute;inset:0;background:linear-gradient(180deg,#1c1c1c 5%,#1c1c1ced 25%,#1c1c1c65 64%,#1c1c1c 100%);z-index:-2}
-    .masthead{display:flex;align-items:center;justify-content:space-between;gap:25px;height:105px;flex-shrink:0}.logo{width:255px;height:auto;object-fit:contain}.series{font-size:24px;letter-spacing:2px;color:#b6b6b6;direction:ltr}.series b{color:#3ecf8e;font-weight:500}
+    .scene{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85;z-index:-3}.veil{position:absolute;inset:0;background:linear-gradient(180deg,#1c1c1cf5 0%,#1c1c1cdb 24%,#1c1c1c55 58%,#1c1c1c99 82%,#1c1c1cf5 100%);z-index:-2}
+    .masthead{display:flex;align-items:center;gap:25px;height:105px;flex-shrink:0}.logo{width:255px;height:auto;object-fit:contain}
     .body{flex:1;min-height:0;display:flex;flex-direction:column;gap:44px;padding-top:65px}.copy{flex-shrink:0}.eyebrow{font-size:28px;color:#3ecf8e;font-weight:500;margin:0 0 24px;display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:23px;height:3px;background:#3ecf8e}
     h1{font-size:100px;line-height:1.28;letter-spacing:-2px;font-weight:800;white-space:pre-line;margin:0;max-width:100%;text-wrap:balance}.subline{font-size:34px;line-height:1.65;color:#c8c8c8;margin:25px 0 0;max-width:95%;font-weight:400}.graphic{flex:1;min-height:260px;display:flex;flex-direction:column;justify-content:center;gap:24px;padding-block:12px}.graphic-label{font-size:19px;color:#a3a3a3;margin:0 0 28px}
     .footer{border-top:1px solid #4a4a4a;padding-top:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-shrink:0}.cta{font-size:29px;font-weight:700;display:flex;align-items:center;gap:16px}.cta svg{color:#3ecf8e}.sign{font-size:21px;color:#b6b6b6;max-width:270px;line-height:1.6}
@@ -168,28 +169,41 @@ function html(
     .dashboard-frame{border:1px solid #484848;border-radius:18px;background:#202020;overflow:hidden}.frame-heading{display:flex;align-items:center;gap:12px;padding:20px 24px;font-size:23px;border-bottom:1px solid #444}.frame-heading>span:last-child{margin-inline-start:auto;font-size:18px;color:#aaa}.live-dot{width:10px;height:10px;background:#3ecf8e;border-radius:50%}.dashboard-frame>img{width:100%;height:400px;object-fit:cover;object-position:top;display:block}.mini-points{display:flex;flex-wrap:wrap;justify-content:space-around;gap:20px;font-size:28px;color:#c9c9c9;margin-top:12px}.mini-points>span{display:flex;align-items:center;gap:10px}.mini-points svg{color:#3ecf8e}
     [data-platform=facebook] .point{border-radius:6px;border-inline-start:3px solid #3ecf8e}[data-platform=facebook] h1{font-size:94px}[data-platform=facebook] .eyebrow{font-size:27px}
     [data-format=story]{padding:180px 72px 330px}[data-format=story]::after{inset:152px 28px 300px}[data-format=story] .masthead{height:78px}[data-format=story] .logo{width:220px}[data-format=story] .body{padding-top:60px;gap:32px}[data-format=story] h1{font-size:92px;line-height:1.3}[data-format=story] .eyebrow{font-size:26px;margin-bottom:22px}[data-format=story] .subline{font-size:32px;line-height:1.55}[data-format=story] .graphic{min-height:250px}[data-format=story] .point{padding:24px}[data-format=story] .point strong{font-size:30px}[data-format=story] .point-icon svg{width:40px;height:40px}[data-format=story] .graphic-label{font-size:17px;margin-bottom:20px}[data-format=story] .footer{padding-top:24px}[data-format=story] .sign{font-size:19px;max-width:195px}[data-format=story] .cta{font-size:25px}[data-format=story] .brand-orbit{height:390px}[data-format=story] .orbit-ring{width:290px;height:290px}[data-format=story] .orbit-tag{font-size:26px;padding:15px 20px}[data-format=story] .network-nodes .point strong{font-size:23px}[data-format=story] .network-nodes .point{padding:22px 9px}[data-format=story] .dashboard-frame>img{height:300px}[data-format=story] .mini-points{font-size:23px}
-    [data-format=landscape]{padding:30px 48px}[data-format=landscape]::after{inset:14px}[data-format=landscape] .masthead{height:58px}[data-format=landscape] .logo{width:165px}[data-format=landscape] .series{font-size:15px}[data-format=landscape] .body{padding-top:26px;display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:center}[data-format=landscape] h1{font-size:53px;line-height:1.36;letter-spacing:-1px}[data-format=landscape] .eyebrow{font-size:17px;margin-bottom:17px}[data-format=landscape] .subline{font-size:22px;line-height:1.65;margin-top:17px}[data-format=landscape] .graphic{min-height:0;max-height:330px;gap:10px;padding:0}[data-format=landscape] .point{padding:14px 18px;gap:17px;border-radius:10px}[data-format=landscape] .point strong{font-size:23px}[data-format=landscape] .point-icon svg{width:30px;height:30px}[data-format=landscape] .micro{font-size:12px}[data-format=landscape] .point>div{gap:2px}[data-format=landscape] .flow{gap:12px}[data-format=landscape] .flow .point:after{height:12px;bottom:-13px;right:32px}[data-format=landscape] .graphic-label{font-size:13px;margin:0 0 14px}[data-format=landscape] .footer{padding-top:17px}[data-format=landscape] .cta{font-size:20px}[data-format=landscape] .cta svg{width:23px;height:23px}[data-format=landscape] .sign{font-size:16px;max-width:none}[data-format=landscape] .brand-orbit{height:285px}[data-format=landscape] .orbit-ring{width:215px;height:215px;box-shadow:0 0 0 24px #3ecf8e06}[data-format=landscape] .orbit-center{width:95px;height:95px;border-radius:25px}[data-format=landscape] .orbit-center svg{width:50px;height:50px}[data-format=landscape] .orbit-tag{font-size:20px;padding:12px 17px}[data-format=landscape] .tag-0{top:0;right:15%}[data-format=landscape] .tag-1{bottom:9px;right:0}[data-format=landscape] .tag-2{bottom:9px;left:0}[data-format=landscape] .network-center{font-size:20px;padding:15px 22px;gap:14px}[data-format=landscape] .network-center svg{width:35px;height:35px}[data-format=landscape] .network-line{height:35px}[data-format=landscape] .network-line:before{height:35px}[data-format=landscape] .network-nodes{gap:8px;padding-top:17px}[data-format=landscape] .network-nodes .point{padding:14px 7px;gap:8px}[data-format=landscape] .network-nodes .point strong{font-size:18px}[data-format=landscape] .court-diagram{height:150px;margin:0}[data-format=landscape] .court-diagram>div{width:60px;height:60px;right:calc(50% - 30px);top:calc(50% - 30px);border-radius:14px}[data-format=landscape] .court-diagram svg{width:35px;height:35px}[data-format=landscape] .diagram-points{gap:8px}[data-format=landscape] .diagram-points .point{padding:12px 7px;gap:5px}[data-format=landscape] .diagram-points .point strong{font-size:17px}[data-format=landscape] .receipt{padding:18px;border-radius:12px}[data-format=landscape] .receipt-heading{font-size:20px;gap:15px;padding-bottom:12px}[data-format=landscape] .receipt-heading svg{width:29px;height:29px}[data-format=landscape] .receipt .point{padding:12px 0}[data-format=landscape] .receipt .point strong{font-size:20px}[data-format=landscape] .receipt-end{font-size:17px;padding-top:14px}[data-format=landscape] .checklist{gap:15px}[data-format=landscape] .check-row{padding:20px;gap:15px;border-radius:10px}[data-format=landscape] .check-circle{width:36px;height:36px}[data-format=landscape] .check-circle svg{width:23px;height:23px}[data-format=landscape] .check-row strong{font-size:23px}[data-format=landscape] .check-row small{font-size:16px}[data-format=landscape] .stock{gap:20px}[data-format=landscape] .stock-symbol{box-shadow:7px 7px 0 #292929,14px 14px 0 #333;border-radius:15px}[data-format=landscape] .stock-symbol svg{width:58px;height:58px}[data-format=landscape] .stock-points{gap:12px}[data-format=landscape] .stock-points .point{padding:16px}[data-format=landscape] .stock-points .point strong{font-size:20px}[data-format=landscape] .dashboard-frame{border-radius:10px}[data-format=landscape] .frame-heading{padding:10px 12px;font-size:14px;gap:7px}[data-format=landscape] .frame-heading>span:last-child{font-size:11px}[data-format=landscape] .dashboard-frame>img{height:220px}[data-format=landscape] .mini-points{font-size:17px;gap:7px}[data-format=landscape] .mini-points svg{width:19px;height:19px}
-  </style></head><body><article class="canvas" data-format="${format}" data-platform="${post.platform}">
-  ${post.layout === "hero" ? `<img class="scene" src="${scene}" alt=""/><div class="veil"></div>` : ""}
-  <header class="masthead"><img class="logo" src="${logo}" alt="نرفد"/><span class="series">NERVED <b>/ ${post.id}</b></span></header>
+    [data-format=landscape]{padding:30px 48px}[data-format=landscape]::after{inset:14px}[data-format=landscape] .masthead{height:58px}[data-format=landscape] .logo{width:165px}[data-format=landscape] .body{padding-top:26px;display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:center}[data-format=landscape] h1{font-size:53px;line-height:1.36;letter-spacing:-1px}[data-format=landscape] .eyebrow{font-size:17px;margin-bottom:17px}[data-format=landscape] .subline{font-size:22px;line-height:1.65;margin-top:17px}[data-format=landscape] .graphic{min-height:0;max-height:330px;gap:10px;padding:0}[data-format=landscape] .point{padding:14px 18px;gap:17px;border-radius:10px}[data-format=landscape] .point strong{font-size:23px}[data-format=landscape] .point-icon svg{width:30px;height:30px}[data-format=landscape] .micro{font-size:12px}[data-format=landscape] .point>div{gap:2px}[data-format=landscape] .flow{gap:12px}[data-format=landscape] .flow .point:after{height:12px;bottom:-13px;right:32px}[data-format=landscape] .graphic-label{font-size:13px;margin:0 0 14px}[data-format=landscape] .footer{padding-top:17px}[data-format=landscape] .cta{font-size:20px}[data-format=landscape] .cta svg{width:23px;height:23px}[data-format=landscape] .sign{font-size:16px;max-width:none}[data-format=landscape] .brand-orbit{height:285px}[data-format=landscape] .orbit-ring{width:215px;height:215px;box-shadow:0 0 0 24px #3ecf8e06}[data-format=landscape] .orbit-center{width:95px;height:95px;border-radius:25px}[data-format=landscape] .orbit-center svg{width:50px;height:50px}[data-format=landscape] .orbit-tag{font-size:20px;padding:12px 17px}[data-format=landscape] .tag-0{top:0;right:15%}[data-format=landscape] .tag-1{bottom:9px;right:0}[data-format=landscape] .tag-2{bottom:9px;left:0}[data-format=landscape] .network-center{font-size:20px;padding:15px 22px;gap:14px}[data-format=landscape] .network-center svg{width:35px;height:35px}[data-format=landscape] .network-line{height:35px}[data-format=landscape] .network-line:before{height:35px}[data-format=landscape] .network-nodes{gap:8px;padding-top:17px}[data-format=landscape] .network-nodes .point{padding:14px 7px;gap:8px}[data-format=landscape] .network-nodes .point strong{font-size:18px}[data-format=landscape] .court-diagram{height:150px;margin:0}[data-format=landscape] .court-diagram>div{width:60px;height:60px;right:calc(50% - 30px);top:calc(50% - 30px);border-radius:14px}[data-format=landscape] .court-diagram svg{width:35px;height:35px}[data-format=landscape] .diagram-points{gap:8px}[data-format=landscape] .diagram-points .point{padding:12px 7px;gap:5px}[data-format=landscape] .diagram-points .point strong{font-size:17px}[data-format=landscape] .receipt{padding:18px;border-radius:12px}[data-format=landscape] .receipt-heading{font-size:20px;gap:15px;padding-bottom:12px}[data-format=landscape] .receipt-heading svg{width:29px;height:29px}[data-format=landscape] .receipt .point{padding:12px 0}[data-format=landscape] .receipt .point strong{font-size:20px}[data-format=landscape] .receipt-end{font-size:17px;padding-top:14px}[data-format=landscape] .checklist{gap:15px}[data-format=landscape] .check-row{padding:20px;gap:15px;border-radius:10px}[data-format=landscape] .check-circle{width:36px;height:36px}[data-format=landscape] .check-circle svg{width:23px;height:23px}[data-format=landscape] .check-row strong{font-size:23px}[data-format=landscape] .check-row small{font-size:16px}[data-format=landscape] .stock{gap:20px}[data-format=landscape] .stock-symbol{box-shadow:7px 7px 0 #292929,14px 14px 0 #333;border-radius:15px}[data-format=landscape] .stock-symbol svg{width:58px;height:58px}[data-format=landscape] .stock-points{gap:12px}[data-format=landscape] .stock-points .point{padding:16px}[data-format=landscape] .stock-points .point strong{font-size:20px}[data-format=landscape] .dashboard-frame{border-radius:10px}[data-format=landscape] .frame-heading{padding:10px 12px;font-size:14px;gap:7px}[data-format=landscape] .frame-heading>span:last-child{font-size:11px}[data-format=landscape] .dashboard-frame>img{height:220px}[data-format=landscape] .mini-points{font-size:17px;gap:7px}[data-format=landscape] .mini-points svg{width:19px;height:19px}
+    [data-format=landscape] .veil{background:linear-gradient(270deg,#1c1c1cf5 0%,#1c1c1cdb 40%,#1c1c1c66 75%,#1c1c1c99 100%)}
+    [data-scene=kitchen] .scene{object-position:60% center}[data-scene=inventory] .scene{object-position:45% center}
+  </style></head><body><article class="canvas" data-format="${format}" data-platform="${post.platform}" data-scene="${post.scene}">
+  <img class="scene" src="${scene}" alt=""/><div class="veil"></div>
+  <header class="masthead"><img class="logo" src="${logo}" alt="نرفد"/></header>
   <div class="body"><div class="copy"><p class="eyebrow">${escape(post.eyebrow)}</p><h1>${escape(post.headline)}</h1><p class="subline">${escape(post.subline)}</p></div><div class="graphic">${diagram(post, dashboard)}</div></div>
-  <p class="graphic-label">${post.layout === "hero" ? "مشهد تصوري" : post.layout === "dashboard" ? "واجهة ببيانات تجريبية" : "رسم توضيحي للفكرة"}</p>
+  <p class="graphic-label">${post.layout === "hero" ? "مشهد تصوري" : post.layout === "dashboard" ? "واجهة ببيانات تجريبية · مشهد تصوري" : "مشهد ورسم توضيحيان"}</p>
   <footer class="footer"><span class="cta">${escape(post.cta)} ${arrow}</span><span class="sign">نرفد مؤسستك بالتقنية.</span></footer></article></body></html>`;
 }
 
 async function main() {
   await mkdir(output, { recursive: true });
-  const [fontCss, logoBuffer, sceneBuffer, dashboardBuffer] = await Promise.all(
-    [
+  const [fontCss, logoBuffer, sceneEntries, dashboardBuffer] =
+    await Promise.all([
       fonts(),
       sharp(join(root, "public/logo.png")).trim().png().toBuffer(),
-      readFile(join(root, "content/marketing/source/court-concept.png")),
+      Promise.all(
+        Object.entries(socialScenes).map(
+          async ([key, scene]) =>
+            [
+              key,
+              uri(
+                await readFile(
+                  join(root, "content/marketing/source", scene.file),
+                ),
+              ),
+            ] as const,
+        ),
+      ),
       readFile(join(root, "public/images/nerved-dashboard.png")),
-    ],
-  );
+    ]);
   const logo = uri(logoBuffer),
-    scene = uri(sceneBuffer),
     dashboard = uri(dashboardBuffer);
+  const scenes = Object.fromEntries(sceneEntries);
   const browser = await chromium.launch({
     channel: "chromium",
     headless: true,
@@ -201,6 +215,7 @@ async function main() {
     height: number;
     bytes: number;
     sha256: string;
+    scene: string;
   }[] = [];
   try {
     const page = await browser.newPage({ deviceScaleFactor: 1 });
@@ -218,10 +233,18 @@ async function main() {
             platform.height,
             fontCss,
             logo,
-            scene,
+            scenes[post.scene],
             dashboard,
           ),
         );
+        const visibleCopy = await page.locator("body").innerText();
+        if (
+          /\b(?:nerved|narfid)\b/i.test(visibleCopy) ||
+          (await page.locator(".masthead").innerText()) !== ""
+        )
+          throw new Error(
+            `${platform.id}/${post.id}: remove English branding and campaign numbering from the image.`,
+          );
         await page.evaluate(async () => {
           await document.fonts.ready;
           await Promise.all(
@@ -284,6 +307,7 @@ async function main() {
           height: platform.height,
           bytes: png.length,
           sha256: createHash("sha256").update(png).digest("hex"),
+          scene: post.scene,
         });
         console.log(
           `Rendered ${platform.id}/${file} (${Math.round(png.length / 1024)} KB)`,

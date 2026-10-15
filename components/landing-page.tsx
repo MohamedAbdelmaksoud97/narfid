@@ -1059,7 +1059,7 @@ export function LandingPage() {
               </Button>
             </div>
             <div className="footer-statement">
-              <span dir="ltr">NERVED</span>
+              <span dir="ltr">narfid</span>
               <p>
                 تقنية تسند.
                 <br />

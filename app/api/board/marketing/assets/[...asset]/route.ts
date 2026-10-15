@@ -78,7 +78,7 @@ export async function GET(
         "Content-Length": String(data.length),
         ...(download
           ? {
-              "Content-Disposition": `attachment; filename="nerved-${asset.length === 2 ? `${asset[0]}-` : ""}${name}"`,
+              "Content-Disposition": `attachment; filename="narfid-${asset.length === 2 ? `${asset[0]}-` : ""}${name}"`,
             }
           : {}),
       },

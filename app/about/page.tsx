@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PublicPage, ContactCta } from "@/components/public/public-page";
 import { pageMetadata, organizationSchema, structuredJson } from "@/lib/seo";
 const description =
-  "نرفد، Nerved، مزوّد تقني للمؤسسات الرياضية يستهدف السوق السعودي. تعرّف إلى رؤيتنا ودور منصة الإدارة في مساندة تشغيل المؤسسة ونموها.";
+  "نرفد، narfid، مزوّد تقني للمؤسسات الرياضية يستهدف السوق السعودي. تعرّف إلى رؤيتنا ودور منصة الإدارة في مساندة تشغيل المؤسسة ونموها.";
 export const metadata = pageMetadata(
   "عن نرفد — السند التقني للمؤسسات الرياضية",
   description,

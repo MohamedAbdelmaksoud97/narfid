@@ -68,7 +68,7 @@ export function organizationSchema() {
     "@type": "Organization",
     "@id": absoluteUrl("/#organization"),
     name: "نرفد",
-    alternateName: "Nerved",
+    alternateName: "narfid",
     url: siteOrigin(),
     logo: absoluteUrl("/logo.png"),
     description: "السند التقني للمؤسسات الرياضية",

@@ -1,6 +1,6 @@
 ---
 name: narfid-articles
-description: "Write, edit, import, publish and verify Nerved articles using the existing Tiptap editor and Supabase publication workflow. Use for article content, article images, editorial SEO fields and article-specific publishing issues; avoid rebuilding the editor or repeating the full site SEO setup for ordinary content work."
+description: "Write, edit, import, publish and verify narfid articles using the existing Tiptap editor and Supabase publication workflow. Use for article content, article images, editorial SEO fields and article-specific publishing issues; avoid rebuilding the editor or repeating the full site SEO setup for ordinary content work."
 ---
 
 # مقالات نرفد — المسار المختصر

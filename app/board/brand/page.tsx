@@ -160,7 +160,7 @@ async function BrandWorkspace() {
                 <TextCard
                   title="القصة والمعنى"
                   text={brand.story}
-                  kicker="نرفد / Nerved"
+                  kicker="نرفد / narfid"
                 />
                 <TextCard
                   title="تموضعنا"
@@ -472,7 +472,7 @@ async function BrandWorkspace() {
                     </p>
                   </div>
                   <p lang="en" dir="ltr" className="brand-latin-specimen">
-                    Nerved. Technology that supports your ambition.
+                    narfid. Technology that supports your ambition.
                   </p>
                 </CardContent>
               </Card>
@@ -558,7 +558,7 @@ async function BrandWorkspace() {
           </div>
         </div>
         <footer className="brand-guide-footer">
-          <span>نرفد / Nerved · {brand.descriptor}</span>
+          <span>نرفد / narfid · {brand.descriptor}</span>
           <a href="#" className="brand-source-link">
             العودة إلى بداية المرجع ↑
           </a>

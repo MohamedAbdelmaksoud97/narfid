@@ -1,8 +1,74 @@
 export type PlatformId = "snapchat" | "instagram" | "x" | "facebook";
+export const socialScenes = {
+  gym: { file: "gym-concept.png", description: "صالة تدريب" },
+  reception: { file: "reception-concept.png", description: "استقبال نادٍ" },
+  court: { file: "court-concept.png", description: "ملعب" },
+  kitchen: { file: "kitchen-concept.png", description: "تحضير وجبات صحية" },
+  inventory: {
+    file: "inventory-concept.png",
+    description: "مخزون منتجات رياضية",
+  },
+  workspace: {
+    file: "workspace-concept.png",
+    description: "مساحة إدارة مؤسسة رياضية",
+  },
+} as const;
+type SocialScene = keyof typeof socialScenes;
+const backgrounds: Record<PlatformId, SocialScene[]> = {
+  snapchat: [
+    "gym",
+    "reception",
+    "court",
+    "reception",
+    "kitchen",
+    "inventory",
+    "workspace",
+    "workspace",
+    "gym",
+    "reception",
+  ],
+  instagram: [
+    "reception",
+    "gym",
+    "court",
+    "reception",
+    "kitchen",
+    "inventory",
+    "workspace",
+    "workspace",
+    "workspace",
+    "gym",
+  ],
+  x: [
+    "workspace",
+    "gym",
+    "court",
+    "reception",
+    "kitchen",
+    "inventory",
+    "workspace",
+    "workspace",
+    "gym",
+    "reception",
+  ],
+  facebook: [
+    "gym",
+    "reception",
+    "court",
+    "reception",
+    "kitchen",
+    "inventory",
+    "workspace",
+    "workspace",
+    "workspace",
+    "gym",
+  ],
+};
 export type SocialPost = {
   id: string;
   platform: PlatformId;
   theme: string;
+  scene: SocialScene;
   eyebrow: string;
   headline: string;
   subline: string;
@@ -64,7 +130,7 @@ export const socialPlatforms: SocialPlatform[] = [
     cadence:
       "الدفعة الأولى ١٠ قصص مصورة خلال أربعة أسابيع: ٣، ثم ٣، ثم ٢، ثم ٢. بعد توفر تصوير حقيقي يمكن تجربة يومين إلى ثلاثة أيام أسبوعيًا، بكل يوم سلسلة قصيرة؛ يحدد الأداء والقدرة الإنتاجية الإيقاع التالي.",
     imageDirection:
-      "صورة عمودية 9:16؛ عنوان كبير في وسط المساحة، وتحتَه مشهد ملعب تصوري أو رسم تشغيلي بسيط. الشعار واضح أعلى منطقة القراءة. حد أقصى لفكرة واحدة وثلاث نقاط قصيرة. الصورة مستقلة وليست شريحة ناقصة من سلسلة.",
+      "صورة عمودية 9:16؛ عنوان كبير في وسط المساحة، مع مشهد تصوري مرتبط بالموضوع: صالة تدريب أو استقبال أو ملعب أو مطبخ أو مخزون أو مساحة إدارة، ورسم تشغيلي بسيط. الشعار العربي واضح أعلى منطقة القراءة دون اسم إنجليزي أو ترقيم للحملة. حد أقصى لفكرة واحدة وثلاث نقاط قصيرة. الصورة مستقلة وليست شريحة ناقصة من سلسلة.",
     videoDirection:
       "سلسلة من ٣–٤ لقطات عمودية، لكل لقطة ٦–١٠ ثوانٍ تقريبًا. افتتح بمشكلة حقيقية، ثم لقطة من بيئة تجريبية، ثم إجراء واضح ودعوة للرد. تصوير هاتف مستقر بصوت بشري واضح وترجمة عربية داخل المشهد؛ لا نغطي الشاشة بتسجيل أفقي مصغّر.",
     videoLength:
@@ -612,6 +678,7 @@ export const socialPosts: SocialPost[] = socialPlatforms.flatMap((platform) =>
     id: String(index + 1).padStart(2, "0"),
     platform: platform.id,
     theme: themes[index],
+    scene: backgrounds[platform.id][index],
     eyebrow: [
       "السند التقني",
       "الأعضاء والاشتراكات",
@@ -628,7 +695,7 @@ export const socialPosts: SocialPost[] = socialPlatforms.flatMap((platform) =>
     subline,
     points,
     caption,
-    alt: `${headline.replaceAll("\n", " ")} — ${subline} ${points.join("، ")}. تصميم نرفد بخط تاجوال وأخضرها على خلفية داكنة${index === 0 ? "، مع مشهد ملعب تصوري." : " ورسم توضيحي للفكرة."}`,
+    alt: `${headline.replaceAll("\n", " ")} — ${subline} ${points.join("، ")}. تصميم نرفد بخط تاجوال وأخضرها، مع مشهد تصوري لـ${socialScenes[backgrounds[platform.id][index]].description}${layouts[index] === "dashboard" ? " وواجهة النظام ببيانات تجريبية." : " ورسم توضيحي للفكرة."}`,
     cta:
       index === 7
         ? "راجع خطة انتقالك"

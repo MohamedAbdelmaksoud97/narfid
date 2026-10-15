@@ -133,7 +133,7 @@ test("marketing strategy, platform guides, forty protected images and downloads 
       .click();
     const download = await downloadPromise;
     expect(download.suggestedFilename()).toBe(
-      `nerved-${platform.id}-${first.id}-${first.theme}.png`,
+      `narfid-${platform.id}-${first.id}-${first.theme}.png`,
     );
     expect(await download.failure()).toBeNull();
     await page.keyboard.press("Escape");
