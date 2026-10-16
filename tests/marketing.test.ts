@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import sharp from "sharp";
 import { unzipSync } from "fflate";
+import { socialCaptions } from "../lib/marketing/captions.ar";
 import {
   createMarketingArchive,
   marketingArchiveFiles,
@@ -23,6 +24,7 @@ test("four platform-specific sets have thirty unique posts with complete copy", 
   assert.equal(new Set(socialPosts.map((post) => post.headline)).size, 120);
   assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 120);
   for (const platform of socialPlatforms) {
+    assert.equal(socialCaptions[platform.id].length, 30);
     assert.equal(postsFor(platform.id).length, 30);
     assert.equal(
       postsFor(platform.id).filter((post) => post.screenshot).length,

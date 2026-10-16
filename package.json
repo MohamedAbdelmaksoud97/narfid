@@ -12,6 +12,7 @@
     "test:tasks": "tsx --test tests/tasks.test.ts",
     "marketing:export": "tsx scripts/render-social-posts.tsx",
     "marketing:capture": "tsx scripts/capture-marketing-screens.ts",
+    "marketing:captions": "tsx scripts/export-social-captions.ts",
     "test:marketing": "tsx --test tests/marketing.test.ts",
     "test:auth:http": "node --env-file=.env.local scripts/test-board-auth-http.mjs",
     "test:articles": "tsx --test tests/article-validation.test.tsx",

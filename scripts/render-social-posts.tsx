@@ -26,8 +26,7 @@ import {
   socialScenes,
   postFilename,
   postsFor,
-  suggestedWeek,
-  trackedDestination,
+  postText,
   type SocialPost,
 } from "../lib/marketing/social";
 import { productScreens } from "../lib/marketing/product-posts";
@@ -328,7 +327,7 @@ async function main() {
           );
         await writeFile(
           join(output, platform.id, file.replace(".png", ".txt")),
-          `${post.caption}\n\nالوصف البديل:\n${post.alt}\n\nالوجهة النسبية المقترحة (أضف الدومين المعتمد عند النشر):\n${trackedDestination(post)}\n\nالأسبوع المقترح: ${suggestedWeek(post)}\n`,
+          postText(post),
           "utf8",
         );
         manifest.push({
