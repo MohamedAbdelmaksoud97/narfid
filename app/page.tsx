@@ -1,4 +1,5 @@
 import { LandingPage } from "@/components/landing-page";
+import { LandingArticles } from "@/components/articles/landing-articles";
 import { organizationSchema, structuredJson, pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
@@ -10,7 +11,7 @@ export const metadata = pageMetadata(
 export default function Home() {
   return (
     <>
-      <LandingPage />
+      <LandingPage articles={<LandingArticles />} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

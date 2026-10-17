@@ -5,7 +5,7 @@ import Link from "next/link";
 import { MemberAppSection } from "@/components/member-app-section";
 import dashboardImage from "@/public/images/nerved-dashboard.png";
 import { DirectionProvider } from "@base-ui/react/direction-provider";
-import { useEffect, useRef, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import {
   ArrowDownLeft,
   ArrowLeft,
@@ -473,7 +473,7 @@ function DemoDialog({
   );
 }
 
-export function LandingPage() {
+export function LandingPage({ articles }: { articles: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [demoOpen, setDemoOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState("أحتاج مساعدة في الاختيار");
@@ -966,6 +966,8 @@ export function LandingPage() {
               ))}
             </div>
           </section>
+
+          {articles}
 
           <section className="faq-section container section-space" id="faq">
             <div className="faq-copy">
