@@ -1,7 +1,19 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { Check, Copy, Download, Expand } from "lucide-react";
+import { Check, Copy, Download, Expand, RefreshCw } from "lucide-react";
+import { socialCategories } from "@/lib/marketing/categories";
+import { usePublications } from "./use-publications";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { Switch } from "@/components/ui/switch";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import {
+  Empty,
+  EmptyHeader,
+  EmptyTitle,
+  EmptyDescription,
+} from "@/components/ui/empty";
 import {
   postAsset,
   suggestedWeek,
@@ -37,8 +49,77 @@ export function SocialLibrary({
   const [selected, setSelected] = useState<SocialPost | null>(null);
   const [copied, setCopied] = useState("");
   const [status, setStatus] = useState("");
+  const [category, setCategory] = useState("all");
+  const [filter, setFilter] = useState("all");
+  const publication = usePublications(platform.id);
+  const categories = [
+    {
+      id: "all",
+      name: "الكل",
+      description:
+        "وازن بين التعريف والتعليم والمحتوى الذي يساعد صاحب القرار؛ اختر موضوعًا ثم راجع سجل النشر قبل الاستخدام.",
+    },
+    ...socialCategories,
+  ];
+  const publishedCount = publication.rows?.filter(
+    (row) => row.published,
+  ).length;
+  const publicationFor = (id: string) =>
+    publication.rows?.find((row) => row.post_id === id);
+  function publicationControl(post: SocialPost, inPreview = false) {
+    const row = publicationFor(post.id);
+    const controlId = `published-${platform.id}-${post.id}${inPreview ? "-preview" : ""}`;
+    return (
+      <div
+        className="social-publication"
+        data-published={Boolean(row?.published)}
+      >
+        <div>
+          <label htmlFor={controlId}>
+            {publication.pending === post.id
+              ? "جارٍ الحفظ…"
+              : !row || publication.error
+                ? "حالة النشر غير متاحة"
+                : row.published
+                  ? "تم نشره"
+                  : "لم يُنشر بعد"}
+          </label>
+          <p>
+            {row?.published_at ? (
+              <>
+                سُجّل في{" "}
+                <time dateTime={row.published_at}>
+                  {new Intl.DateTimeFormat("ar-SA", {
+                    dateStyle: "medium",
+                    timeZone: "Asia/Riyadh",
+                    calendar: "gregory",
+                  }).format(new Date(row.published_at))}
+                </time>
+              </>
+            ) : (
+              "فعّله بعد نشره على الحساب"
+            )}
+          </p>
+        </div>
+        <Switch
+          id={controlId}
+          dir="ltr"
+          checked={row?.published ?? false}
+          disabled={
+            !row || Boolean(publication.error) || Boolean(publication.pending)
+          }
+          aria-label={`تم نشر المنشور ${post.id}`}
+          onCheckedChange={(checked) => {
+            setStatus("");
+            void publication.toggle(post.id, checked);
+          }}
+        />
+      </div>
+    );
+  }
   const previewTitle = useRef<HTMLHeadingElement>(null);
   async function copy(text: string, key: string) {
+    publication.clearNotice();
     try {
       await navigator.clipboard.writeText(text);
       setCopied(key);
@@ -64,8 +145,9 @@ export function SocialLibrary({
           <h2 id="social-library-heading">مكتبة {platform.name}</h2>
           <p>
             معاينة أصل الصورة، والنص المرافق، والوصف البديل، وترتيب أسبوعي
-            مقترح. تشمل المكتبة ١٠ منشورات تعريفية و٢٠ منشورًا بلقطات من واجهات
-            النظام بهوية نرفد وبيانات عرض تجريبية. كل ملف قابل للتحميل.
+            مقترح، موزّعة على سبعة تصنيفات. تشمل المكتبة ٤٠ منشورًا بلقطات من
+            واجهات النظام بهوية نرفد وبيانات عرض تجريبية. سجّل النشر بعد استخدام
+            كل منشور.
           </p>
         </div>
         <a
@@ -77,74 +159,196 @@ export function SocialLibrary({
           تحميل الصور والنصوص
         </a>
       </header>
-      <p role="status" aria-live="polite" className="marketing-copy-status">
-        {status}
+      <div className="social-library-tools">
+        <div className="social-publication-summary" aria-live="polite">
+          <Badge variant="secondary">
+            {publishedCount === undefined
+              ? "جارٍ تحميل السجل…"
+              : `${publishedCount.toLocaleString("ar-SA")} تم نشره · ${(posts.length - publishedCount).toLocaleString("ar-SA")} لم يُنشر`}
+          </Badge>
+          <span>
+            السجل مشترك بين أعضاء الإدارة، ويتحدّث دوريًا وعند العودة للصفحة.
+          </span>
+        </div>
+        <Button
+          size="sm"
+          variant="outline"
+          disabled={publication.refreshing || Boolean(publication.pending)}
+          onClick={() => void publication.refresh()}
+        >
+          <RefreshCw data-icon="inline-start" />
+          {publication.refreshing ? "جارٍ التحديث…" : "تحديث سجل النشر"}
+        </Button>
+      </div>
+      {publication.error && (
+        <Alert variant="destructive">
+          <AlertTitle>تعذر التحقق من حالة النشر</AlertTitle>
+          <AlertDescription>
+            {publication.error} لا تعتمد على الحالة المعروضة حتى تحديث السجل
+            بنجاح.
+          </AlertDescription>
+        </Alert>
+      )}
+      <p className="marketing-small-note">
+        الزر يسجّل النشر اليدوي داخل نرفد ولا ينشر على حسابات التواصل. راجع
+        السجل قبل النشر، ثم فعّل الزر فور الانتهاء لتفادي إعادة استخدام البوست.
       </p>
-      <div className="social-post-grid">
-        {posts.map((post) => (
-          <Card className="social-post-card" key={post.id}>
-            <button
-              type="button"
-              className="social-post-thumbnail"
-              aria-label={`معاينة المنشور ${post.id}: ${post.headline.replaceAll("\n", " ")}`}
-              onClick={() => {
-                setSelected(post);
-                setStatus("");
-              }}
-            >
-              <Image
-                src={postAsset(post, true)}
-                alt={post.alt}
-                width={480}
-                height={Math.round((480 * platform.height) / platform.width)}
-                unoptimized
-                loading="lazy"
-              />
+      <p role="status" aria-live="polite" className="marketing-copy-status">
+        {publication.notice || status}
+      </p>
+      <Tabs
+        value={category}
+        onValueChange={(value) => setCategory(String(value))}
+        className="social-category-tabs"
+      >
+        <TabsList
+          aria-label="تصنيفات المنشورات"
+          className="social-category-list"
+        >
+          {categories.map((item) => (
+            <TabsTrigger key={item.id} value={item.id}>
+              {item.name}
               <span>
-                <Expand aria-hidden="true" />
-                معاينة الصورة
+                {(item.id === "all"
+                  ? posts.length
+                  : posts.filter((post) => post.category === item.id).length
+                ).toLocaleString("ar-SA")}
               </span>
-            </button>
-            <CardHeader>
-              <div className="social-post-meta">
-                <Badge variant="secondary">{post.goal}</Badge>
+            </TabsTrigger>
+          ))}
+        </TabsList>
+        <div className="social-library-filter">
+          <ToggleGroup
+            aria-label="تصفية حسب حالة النشر"
+            value={[filter]}
+            onValueChange={(values) => {
+              if (values.length) setFilter(String(values[0]));
+            }}
+            variant="outline"
+            size="sm"
+            disabled={!publication.rows || Boolean(publication.error)}
+          >
+            <ToggleGroupItem value="all">كل الحالات</ToggleGroupItem>
+            <ToggleGroupItem value="unpublished">لم يُنشر</ToggleGroupItem>
+            <ToggleGroupItem value="published">تم نشره</ToggleGroupItem>
+          </ToggleGroup>
+        </div>
+        {categories.map((item) => {
+          const visiblePosts = posts.filter(
+            (post) =>
+              (item.id === "all" || post.category === item.id) &&
+              (filter === "all" ||
+                (filter === "published"
+                  ? publicationFor(post.id)?.published === true
+                  : publicationFor(post.id)?.published === false)),
+          );
+          return (
+            <TabsContent key={item.id} value={item.id}>
+              <div className="social-category-intro">
+                <p>{item.description}</p>
                 <span>
-                  الأسبوع {suggestedWeek(post)} · منشور {post.id}
+                  {visiblePosts.length.toLocaleString("ar-SA")} منشورًا في العرض
+                  الحالي
                 </span>
               </div>
-              <CardTitle as="h3">
-                {post.headline.replaceAll("\n", " ")}
-              </CardTitle>
-              <CardDescription>{post.audience}</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p className="social-caption-excerpt">{post.caption}</p>
-            </CardContent>
-            <CardFooter className="social-post-actions">
-              <a
-                href={`${postAsset(post)}?download=1`}
-                download
-                className={buttonVariants({ variant: "outline", size: "sm" })}
-              >
-                <Download data-icon="inline-start" />
-                تحميل PNG
-              </a>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => void copy(post.caption, `caption-${post.id}`)}
-              >
-                {copied === `caption-${post.id}` ? (
-                  <Check data-icon="inline-start" />
-                ) : (
-                  <Copy data-icon="inline-start" />
-                )}
-                نسخ النص
-              </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
+              {!visiblePosts.length && (
+                <Empty>
+                  <EmptyHeader>
+                    <EmptyTitle>لا توجد منشورات بهذه التصفية</EmptyTitle>
+                    <EmptyDescription>
+                      غيّر حالة النشر أو اختر تصنيفًا آخر لاستعراض بقية المكتبة.
+                    </EmptyDescription>
+                  </EmptyHeader>
+                </Empty>
+              )}
+              <div className="social-post-grid">
+                {visiblePosts.map((post) => (
+                  <Card
+                    className="social-post-card"
+                    key={post.id}
+                    data-post-id={post.id}
+                    data-category={post.category}
+                  >
+                    <button
+                      type="button"
+                      className="social-post-thumbnail"
+                      aria-label={`معاينة المنشور ${post.id}: ${post.headline.replaceAll("\n", " ")}`}
+                      onClick={() => {
+                        setSelected(post);
+                        setStatus("");
+                      }}
+                    >
+                      <Image
+                        src={postAsset(post, true)}
+                        alt={post.alt}
+                        width={480}
+                        height={Math.round(
+                          (480 * platform.height) / platform.width,
+                        )}
+                        unoptimized
+                        loading="lazy"
+                      />
+                      <span>
+                        <Expand aria-hidden="true" />
+                        معاينة الصورة
+                      </span>
+                    </button>
+                    <CardHeader>
+                      <div className="social-post-meta">
+                        <Badge variant="secondary">
+                          {
+                            socialCategories.find(
+                              (category) => category.id === post.category,
+                            )!.name
+                          }
+                        </Badge>
+                        <span>
+                          الأسبوع {suggestedWeek(post)} · منشور {post.id}
+                        </span>
+                      </div>
+                      <CardTitle as="h3">
+                        {post.headline.replaceAll("\n", " ")}
+                      </CardTitle>
+                      <CardDescription>{post.audience}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="social-caption-excerpt">{post.caption}</p>
+                      {publicationControl(post)}
+                    </CardContent>
+                    <CardFooter className="social-post-actions">
+                      <a
+                        href={`${postAsset(post)}?download=1`}
+                        download
+                        className={buttonVariants({
+                          variant: "outline",
+                          size: "sm",
+                        })}
+                      >
+                        <Download data-icon="inline-start" />
+                        تحميل PNG
+                      </a>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() =>
+                          void copy(post.caption, `caption-${post.id}`)
+                        }
+                      >
+                        {copied === `caption-${post.id}` ? (
+                          <Check data-icon="inline-start" />
+                        ) : (
+                          <Copy data-icon="inline-start" />
+                        )}
+                        نسخ النص
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                ))}
+              </div>
+            </TabsContent>
+          );
+        })}
+      </Tabs>
       <Dialog
         open={Boolean(selected)}
         onOpenChange={(open) => {
@@ -181,6 +385,7 @@ export function SocialLibrary({
                   {selected.goal} · الأسبوع {suggestedWeek(selected)}
                 </Badge>
                 <h3>{selected.headline.replaceAll("\n", " ")}</h3>
+                {publicationControl(selected, true)}
                 <p className="marketing-long-copy">{selected.caption}</p>
                 <div className="social-post-actions">
                   <Button
@@ -232,7 +437,7 @@ export function SocialLibrary({
                   نسخ المسار مع التتبع
                 </Button>
                 <p role="status" aria-live="polite">
-                  {status}
+                  {publication.notice || status}
                 </p>
               </div>
             </div>

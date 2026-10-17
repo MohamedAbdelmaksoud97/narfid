@@ -290,6 +290,206 @@
     "screenshot": "overview-focus"
   },
   {
+    "platform": "snapchat",
+    "file": "31-first-visit.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 787664,
+    "sha256": "6e238f1934069c7b16345cd4bc0b8091f01420c7eb52fe5c5df876de5b220063",
+    "scene": "reception",
+    "screenshot": "members-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "32-package-fit.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1084271,
+    "sha256": "8d79cbf9869ab58ff136683a5e69c9abb392f2a7b0212f852f379cc2d65cea86",
+    "scene": "gym",
+    "screenshot": "services-wide"
+  },
+  {
+    "platform": "snapchat",
+    "file": "33-reception-handoff.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 779074,
+    "sha256": "593c7cf90eb6c81cc769c2f9e0cd6ddcb1996d8b6b700ca53edac9ca6fc44664",
+    "scene": "reception",
+    "screenshot": "attendance-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "34-academy-groups.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 822191,
+    "sha256": "dfed45a0c8dce824f3466f12bd0f7dba2f5f2bc1b0341a5281b66f6cbe3f1367",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "35-personal-training.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1089394,
+    "sha256": "77fb5a328cdfb59ccce0577099e3c798b91d6b35c34c677cf9d8a4c7fffb1cd5",
+    "scene": "gym",
+    "screenshot": "bookings-wide"
+  },
+  {
+    "platform": "snapchat",
+    "file": "36-booking-policy.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 816329,
+    "sha256": "f511a5e05d8b8e900a594c2ba4d96e50240e868b383adf5e18e87e9170339e53",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "37-shift-difference.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 755557,
+    "sha256": "9842bc8efef1269bf451ae30b393e2462497e6aa7370c01c82f5a12aaa715fb8",
+    "scene": "workspace",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "38-refund-review.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 802525,
+    "sha256": "633bafed3032b8ededcfd5a8a5315dd047e5bb283677b9dbcce0232781c66ef7",
+    "scene": "reception",
+    "screenshot": "finance-wide"
+  },
+  {
+    "platform": "snapchat",
+    "file": "39-retail-service.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 764937,
+    "sha256": "fc30418eb50b862678857113ee25a87294864e70f95fbb8feb90ef8761d743a9",
+    "scene": "inventory",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "40-kitchen-handoff.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 851936,
+    "sha256": "0dfab7ded6c7c463544edb9ddfc3b111bf1389812e6f2b93febb361338bcc6dd",
+    "scene": "kitchen",
+    "screenshot": "kitchen-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "41-menu-preparation.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 884359,
+    "sha256": "dc8da07da1bee5ff3fbe00e9b4e89b015a7a01ac7411cbc7e22639a9619397a0",
+    "scene": "kitchen",
+    "screenshot": "restaurant-wide"
+  },
+  {
+    "platform": "snapchat",
+    "file": "42-stock-count.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 772545,
+    "sha256": "0731d2e7b995f926f5b0ad0aad3b8802ed901ae5d2bda507c07eb592f284e882",
+    "scene": "inventory",
+    "screenshot": "inventory-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "43-branch-readiness.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 741550,
+    "sha256": "17bdd7e60ee7198ae1499d3724dc2dee97216b27f6f3edef1cb4b3de4f68a208",
+    "scene": "workspace",
+    "screenshot": "branches-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "44-team-practice.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1094644,
+    "sha256": "39c72db0d90754ffcbfc4b5ed193a3e0a5ffa957718e52f84a6513a79d41d89d",
+    "scene": "gym",
+    "screenshot": "staff-wide"
+  },
+  {
+    "platform": "snapchat",
+    "file": "45-access-review.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 787579,
+    "sha256": "3a52d6f13104ad260681410cb3c3b49145765c2f86e1a9e3e9dc9077a4fbd0d4",
+    "scene": "reception",
+    "screenshot": "roles-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "46-season-readiness.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 835998,
+    "sha256": "30cfb58f1b8b686cc8bada785556db1d4a150a0ae2a9739e911936effb3dc061",
+    "scene": "court",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "47-software-questions.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 801892,
+    "sha256": "1bd753fb0d9ffb5b5ca5862beda3eb3947773b75a23f1faba2201191c51c4fd2",
+    "scene": "workspace",
+    "screenshot": "overview-wide"
+  },
+  {
+    "platform": "snapchat",
+    "file": "48-weekly-review.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 780551,
+    "sha256": "2851a94f1f2ee1dcf62773f82eb2cc0ab0e0bc7a7ca60a10ebc4284c9a6f3220",
+    "scene": "workspace",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "49-integration-brief.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 756689,
+    "sha256": "e0b21d96c209f6eaac0412008422f6637ea157728a3f3485516f30288466040a",
+    "scene": "workspace",
+    "screenshot": "services-focus"
+  },
+  {
+    "platform": "snapchat",
+    "file": "50-annual-scope.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1089212,
+    "sha256": "8c25f66d751553173058571fbb39e20dc0c2148567563759a58adbee1610ae99",
+    "scene": "gym",
+    "screenshot": "services-wide"
+  },
+  {
     "platform": "instagram",
     "file": "01-brand.png",
     "width": 1440,
@@ -578,6 +778,206 @@
     "sha256": "47722a0af7833a7e99a10d63f66f4a331aa7d2f8a3157e196b744bc3786d008f",
     "scene": "reception",
     "screenshot": "overview-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "31-first-visit.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 860998,
+    "sha256": "c5d712eaf2db46fd9da2292a751ce0ba1b547b27bac6d18a34a45e570ef01d20",
+    "scene": "reception",
+    "screenshot": "members-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "32-package-fit.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1086841,
+    "sha256": "7ff35eb980f85bab6eec20b27e6519fbc9ec59159c25ad722e74db06b41d7885",
+    "scene": "gym",
+    "screenshot": "services-wide"
+  },
+  {
+    "platform": "instagram",
+    "file": "33-reception-handoff.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 851280,
+    "sha256": "1b4a17a87809ec30f3002717e522083767821f861c6454f0e225e90d2c95e735",
+    "scene": "reception",
+    "screenshot": "attendance-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "34-academy-groups.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 859694,
+    "sha256": "50e9477ee88debcdb2fff9d7a1d05164a9e3ece29af4ad8ba8e7891cfac535ce",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "35-personal-training.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1097909,
+    "sha256": "a99a3721494a73ed38e15eb48985ab8996eacd66854f0fd7f3d7b523c29f2780",
+    "scene": "gym",
+    "screenshot": "bookings-wide"
+  },
+  {
+    "platform": "instagram",
+    "file": "36-booking-policy.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 855005,
+    "sha256": "46b1aa851d6477a701a9be1564b62e4c6e4472eba88c88707421facf30d5a759",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "37-shift-difference.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 822744,
+    "sha256": "bdcf514699e720d47c801025232abcc6860ea2c1e095a5e329778b051a0ef7d9",
+    "scene": "workspace",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "38-refund-review.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 867861,
+    "sha256": "a9b24821f3bb73b34aea5db62a184c1d89dc9666cfcb931a1e4442799b9c8871",
+    "scene": "reception",
+    "screenshot": "finance-wide"
+  },
+  {
+    "platform": "instagram",
+    "file": "39-retail-service.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 869938,
+    "sha256": "e792bf9ad4b4104501a79744143962422ed560f4d3b784df70714302d2dc952b",
+    "scene": "inventory",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "40-kitchen-handoff.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 937253,
+    "sha256": "00b1f2a174b96e65740214bc33072fb2b3cce093f089884610fb455b8517ad04",
+    "scene": "kitchen",
+    "screenshot": "kitchen-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "41-menu-preparation.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 938767,
+    "sha256": "4c62ab64f87fb3c0190a6758285de05848494378abdd200e9a119f405c04571d",
+    "scene": "kitchen",
+    "screenshot": "restaurant-wide"
+  },
+  {
+    "platform": "instagram",
+    "file": "42-stock-count.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 882954,
+    "sha256": "888a966969c77d61f573c964f93438fe79384c9331c417341389f201930d7360",
+    "scene": "inventory",
+    "screenshot": "inventory-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "43-branch-readiness.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 808324,
+    "sha256": "cd9eb77f8717a9a691756d114e1cfb9ce8a80456692981bd9155b129cbba861f",
+    "scene": "workspace",
+    "screenshot": "branches-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "44-team-practice.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1101512,
+    "sha256": "322d0b18f2d325c26aa5d66a3864c28ced14d49102d6ba4d26e5e1f5f277f9ac",
+    "scene": "gym",
+    "screenshot": "staff-wide"
+  },
+  {
+    "platform": "instagram",
+    "file": "45-access-review.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 867098,
+    "sha256": "57ee58ce79c05da19c01baafc4b099a2cadc4362329df312acf675b78f1d094c",
+    "scene": "reception",
+    "screenshot": "roles-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "46-season-readiness.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 878607,
+    "sha256": "6f900c077d4b13ad15567e6e617bc6cd7f89f48ee2b00957523d3deceb8e1a68",
+    "scene": "court",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "47-software-questions.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 874241,
+    "sha256": "ab79e8d0e632d1f985a066702240ffdd10edf8e4dddfaf8b837b22182a2bbc71",
+    "scene": "workspace",
+    "screenshot": "overview-wide"
+  },
+  {
+    "platform": "instagram",
+    "file": "48-weekly-review.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 853917,
+    "sha256": "a19eac76a218367a976a220782303257c8e929665cb1f8024a7500d5f644851d",
+    "scene": "workspace",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "49-integration-brief.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 824147,
+    "sha256": "372c9b2200d214bc7b763888369c2e0b531d059c98985ed163b7154ccabe460d",
+    "scene": "workspace",
+    "screenshot": "services-focus"
+  },
+  {
+    "platform": "instagram",
+    "file": "50-annual-scope.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1094366,
+    "sha256": "6aae74c93f58a78e8b46d35ccf59ae85bb7f2b9f85bca27a5671824ce7cfe4db",
+    "scene": "gym",
+    "screenshot": "services-wide"
   },
   {
     "platform": "x",
@@ -870,6 +1270,206 @@
     "screenshot": "overview-focus"
   },
   {
+    "platform": "x",
+    "file": "31-first-visit.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 555507,
+    "sha256": "38589e526ffd15548673d0697405d1c704ff44a6cdfe22d70b036696478b445a",
+    "scene": "reception",
+    "screenshot": "members-focus"
+  },
+  {
+    "platform": "x",
+    "file": "32-package-fit.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 640609,
+    "sha256": "b6e7436c76db6fa13e38797f86885a574676c136426a6777cb5ee7b02c3a52ff",
+    "scene": "gym",
+    "screenshot": "services-wide"
+  },
+  {
+    "platform": "x",
+    "file": "33-reception-handoff.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 552601,
+    "sha256": "5a4945e4e62ec29ee0a45075a680182e4f4bda26663fba436e682e2182b9d37b",
+    "scene": "reception",
+    "screenshot": "attendance-focus"
+  },
+  {
+    "platform": "x",
+    "file": "34-academy-groups.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 522344,
+    "sha256": "b462e6670873bcddc6658278e5d364106e4dfc3c0a926682aa549bffc7256c45",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "x",
+    "file": "35-personal-training.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 641965,
+    "sha256": "ad81d53d125df785ae214838103aeb1af278597ddb35abc5b9755b83d4e9b99a",
+    "scene": "gym",
+    "screenshot": "bookings-wide"
+  },
+  {
+    "platform": "x",
+    "file": "36-booking-policy.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 523263,
+    "sha256": "e3a288fa720a9600d61d4eacbb85ee1e90a69cbc2b39135d9da1c87299af751e",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "x",
+    "file": "37-shift-difference.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 495173,
+    "sha256": "e533c0f1efaad892aeebe484f953e0191bb9f87996b92c14ad2a6830166ec548",
+    "scene": "workspace",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "x",
+    "file": "38-refund-review.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 560373,
+    "sha256": "3497e094a26a4b5b8c6a84607fc25b24c88064b1404415f774552d4676f22ebc",
+    "scene": "reception",
+    "screenshot": "finance-wide"
+  },
+  {
+    "platform": "x",
+    "file": "39-retail-service.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 521302,
+    "sha256": "e00ccc1725bdf2c9ba23b79be5d8d897cf95a141bb6bfddfacfd9ccb88d06ac3",
+    "scene": "inventory",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "x",
+    "file": "40-kitchen-handoff.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 565272,
+    "sha256": "737d8e0dc3f3fbce2fb233562807919837a2497817fa76c759326ce214dda417",
+    "scene": "kitchen",
+    "screenshot": "kitchen-focus"
+  },
+  {
+    "platform": "x",
+    "file": "41-menu-preparation.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 574409,
+    "sha256": "dde6040397bc027a9675af115399ca04ee619e558b44f4ae16e4c409c92a9201",
+    "scene": "kitchen",
+    "screenshot": "restaurant-wide"
+  },
+  {
+    "platform": "x",
+    "file": "42-stock-count.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 522786,
+    "sha256": "6cae8486e6bb93c6e85da4dcbb3f1b7ee36a3abb6dfaa4e2ee03e0d95d910d5c",
+    "scene": "inventory",
+    "screenshot": "inventory-focus"
+  },
+  {
+    "platform": "x",
+    "file": "43-branch-readiness.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 492639,
+    "sha256": "4af38aeeb55b937cf06c420061cd34d773d1da70a6f6ac317df7f7b418ba1415",
+    "scene": "workspace",
+    "screenshot": "branches-focus"
+  },
+  {
+    "platform": "x",
+    "file": "44-team-practice.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 643701,
+    "sha256": "58b411e52f0f8e75114e1235902d5d81374b01b3891dbf045afc466965135a18",
+    "scene": "gym",
+    "screenshot": "staff-wide"
+  },
+  {
+    "platform": "x",
+    "file": "45-access-review.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 557622,
+    "sha256": "7b357301db8fc91992077d1aee2322da6608c475719bd4d6763e7066f04b5d95",
+    "scene": "reception",
+    "screenshot": "roles-focus"
+  },
+  {
+    "platform": "x",
+    "file": "46-season-readiness.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 524601,
+    "sha256": "6959d84b9820cd1b1ccc0c5b1b8a50aa051ea8b2152857afb95dcad09c4b63e2",
+    "scene": "court",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "x",
+    "file": "47-software-questions.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 511690,
+    "sha256": "4a185c6be2aabaf7f2935383582f57fff4010abc719f3811ab706acad6722429",
+    "scene": "workspace",
+    "screenshot": "overview-wide"
+  },
+  {
+    "platform": "x",
+    "file": "48-weekly-review.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 504724,
+    "sha256": "c051b4f384f790288445fb2fd2b0c2674bcbd5335e9624d399fbea23699f10b8",
+    "scene": "workspace",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "x",
+    "file": "49-integration-brief.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 495473,
+    "sha256": "cf742dcbbc495475e5e8b82681b25dd985ffe3a8a34d13ad27c763e37cd676ac",
+    "scene": "workspace",
+    "screenshot": "services-focus"
+  },
+  {
+    "platform": "x",
+    "file": "50-annual-scope.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 644489,
+    "sha256": "c4181f8fe5c2782136d1d7047a356b7642177bd19041569762f865706b5d99d7",
+    "scene": "gym",
+    "screenshot": "services-wide"
+  },
+  {
     "platform": "facebook",
     "file": "01-brand.png",
     "width": 1440,
@@ -1158,5 +1758,205 @@
     "sha256": "c08dc5bdfcab4a83b607d4f90547fe0a7539cb2b02e80237daab17c76e9e29cc",
     "scene": "reception",
     "screenshot": "overview-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "31-first-visit.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 866010,
+    "sha256": "ee5b9297ac5ff3fcd8670061d69ab5b18ee3ef16fd2f4642fcbb439008b32d7f",
+    "scene": "reception",
+    "screenshot": "members-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "32-package-fit.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1087557,
+    "sha256": "5e4d880de6ddc4e52e4544df170d4f9c536c21af380fec16ea0265b173fbbae6",
+    "scene": "gym",
+    "screenshot": "services-wide"
+  },
+  {
+    "platform": "facebook",
+    "file": "33-reception-handoff.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 854510,
+    "sha256": "be110d0ca6e0bc6585bb4c410f64ad55c9d9501fe0716aff7b9f1ae8407cac15",
+    "scene": "reception",
+    "screenshot": "attendance-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "34-academy-groups.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 863194,
+    "sha256": "f785432382a29aa5c339918be5005ff174b8054033859643ea80af93fb4cb0aa",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "35-personal-training.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1094391,
+    "sha256": "dfe842b2bcb62b3a9ff3765869afaae5358c19ff431ed6bae81bc38f6cdca847",
+    "scene": "gym",
+    "screenshot": "bookings-wide"
+  },
+  {
+    "platform": "facebook",
+    "file": "36-booking-policy.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 860069,
+    "sha256": "3f3cdd9b4f9ca3195449c5b2648dd0940fcfa9396b952b400637c1e1ffe3ed63",
+    "scene": "court",
+    "screenshot": "bookings-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "37-shift-difference.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 823184,
+    "sha256": "a71279a3da9ceb4d1cdf87cecce49b12ae8b13cac05df1510cb64a8391d13711",
+    "scene": "workspace",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "38-refund-review.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 868742,
+    "sha256": "63cde6997b7b962fc99ef19ea158bba99dfef702fce6ff84a9d9001b0344b32b",
+    "scene": "reception",
+    "screenshot": "finance-wide"
+  },
+  {
+    "platform": "facebook",
+    "file": "39-retail-service.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 873235,
+    "sha256": "ebb698d6b61b0e6d160ac10e4394f2402305bf016083b0e8c66e929f0a17029c",
+    "scene": "inventory",
+    "screenshot": "finance-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "40-kitchen-handoff.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 928770,
+    "sha256": "761248a14a8d36eedaa28deac38a7c8482465a8540b82ff063ee24219fb0b3ed",
+    "scene": "kitchen",
+    "screenshot": "kitchen-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "41-menu-preparation.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 943328,
+    "sha256": "458648508fe8fa75e2171f247c429db9b99e96bd3b7a386e502f48ee2716f9dd",
+    "scene": "kitchen",
+    "screenshot": "restaurant-wide"
+  },
+  {
+    "platform": "facebook",
+    "file": "42-stock-count.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 880265,
+    "sha256": "7aa50aa337d02c93d9d5cc37d8f2ffb406fbea9e6c3a2d097c7f04ab656c47ec",
+    "scene": "inventory",
+    "screenshot": "inventory-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "43-branch-readiness.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 805703,
+    "sha256": "abb28c4a6b66ae28f630b69db843929692d0110ea664b24a917c7664441b4a89",
+    "scene": "workspace",
+    "screenshot": "branches-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "44-team-practice.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1100935,
+    "sha256": "c8cef16470318e032f3e8fe4b648fdf781b5e80f21dcb4727ac761e646eca1a0",
+    "scene": "gym",
+    "screenshot": "staff-wide"
+  },
+  {
+    "platform": "facebook",
+    "file": "45-access-review.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 868224,
+    "sha256": "e0669f946e1acdd161f7aad263dca6acc0dea678e9ffabca6b908c3432a8b75c",
+    "scene": "reception",
+    "screenshot": "roles-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "46-season-readiness.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 883143,
+    "sha256": "dcff55d8dbb7e9545297a781195f437f712f3b33d4a942ba497b6601b7bd00e0",
+    "scene": "court",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "47-software-questions.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 877003,
+    "sha256": "39ee77d5f0a7d301870e8f0f39b73e4f3bf7c5cc5f9a08cf416357cfa0b4b01d",
+    "scene": "workspace",
+    "screenshot": "overview-wide"
+  },
+  {
+    "platform": "facebook",
+    "file": "48-weekly-review.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 860120,
+    "sha256": "7dd5c333a1475de51a44faac0f453c70391f78f0fe00cdda2cca30f6e9f56f68",
+    "scene": "workspace",
+    "screenshot": "overview-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "49-integration-brief.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 821393,
+    "sha256": "05f591b2625a6a8bf8eee4ba2d1f4d97b76f55a8b1e242d753f19695d6097d4b",
+    "scene": "workspace",
+    "screenshot": "services-focus"
+  },
+  {
+    "platform": "facebook",
+    "file": "50-annual-scope.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1225797,
+    "sha256": "62796f032558e39ae4d8d284fd403ddcf8525e7615a41a1c69c6df35066c2cc4",
+    "scene": "gym",
+    "screenshot": "services-wide"
   }
 ]

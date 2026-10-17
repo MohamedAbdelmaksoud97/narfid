@@ -71,7 +71,7 @@ async function Workspace() {
             <span>دور ومحتوى مستقل لكل منصة</span>
           </div>
           <div>
-            <strong>١٢٠ صورة</strong>
+            <strong>٢٠٠ صورة</strong>
             <span>بمقاسات فعلية ونصوص مرافقة</span>
           </div>
           <div>

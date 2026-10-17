@@ -1,8 +1,9 @@
 import type { PlatformId } from "./social";
+import { expansionCaptions } from "./expansion-copy.ar";
 
 // Captions are edited independently of the words baked into the existing images.
-// Order follows the stable post IDs 01–30 for each platform.
-export const socialCaptions: Record<PlatformId, readonly string[]> = {
+// Order follows the stable post IDs 01–30; expansion adds 31–50 below.
+const originalCaptions: Record<PlatformId, readonly string[]> = {
   snapchat: [
     "وقت الزحمة، كل قسم يحتاج يعرف خطوته الجاية.\nنرفد تجمع اشتراكاتك وحجوزاتك وتشغيل فروعك في منظومة واحدة.\nخلّنا نتعرّف على احتياج ناديك.",
     "عضو جدّد، وعضو قرب ينتهي اشتراكه.\nمع نرفد تراجع حالة كل اشتراك وتتابع الإجراء المناسب له.\nمين يتابع التجديدات عندكم؟",
@@ -131,4 +132,11 @@ export const socialCaptions: Record<PlatformId, readonly string[]> = {
     "الخدمة التي تبيعها المؤسسة هي نقطة البداية في الإعداد.\n\nدخول الصالة له طريقة تنفيذ، والجلسة التدريبية لها ترتيب، وخطة الوجبات لها دورة أخرى. تتيح نرفد تعريف الخدمات بحسب ما تقدمه المؤسسة فعلًا.\n\nشاركنا أهم الخدمات في نشاطك لنناقش إعدادها المناسب.",
     "قبل عرض نرفد القادم، اجمع من فريقك سؤالًا واحدًا يستحق المشاهدة.\n\nقد يكون عن تجديد اشتراك، أو تأكيد حجز، أو مراجعة رصيد منتج. نأخذ السؤال ونشاهد دورته في المنصة، ثم نناقش النطاق والتهيئة والتدريب المناسب لمؤسستك.\n\nاحجز عرضًا يبدأ من احتياج فريقك.\n#نرفد",
   ],
+};
+
+export const socialCaptions: Record<PlatformId, readonly string[]> = {
+  snapchat: [...originalCaptions.snapchat, ...expansionCaptions.snapchat],
+  instagram: [...originalCaptions.instagram, ...expansionCaptions.instagram],
+  x: [...originalCaptions.x, ...expansionCaptions.x],
+  facebook: [...originalCaptions.facebook, ...expansionCaptions.facebook],
 };

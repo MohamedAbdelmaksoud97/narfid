@@ -4171,6 +4171,21 @@ h2 {
 .social-library-header p { font-size: 13px; line-height: 1.9; color: var(--muted-foreground); }
 .social-post-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .social-post-card { min-width: 0; padding-top: 0; }
+.social-library-tools, .social-library-filter { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-block: 16px; }
+.social-publication-summary { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.social-publication-summary > span:last-child { font-size: 12px; color: var(--muted-foreground); }
+.social-category-tabs { min-width: 0; }
+.social-category-list[data-slot="tabs-list"] { width: 100%; height: auto; flex-wrap: wrap; justify-content: flex-start; gap: 4px; padding: 6px; }
+.social-category-list [data-slot="tabs-trigger"] { flex: 0 1 auto; height: auto; min-height: 36px; padding: 8px 12px; transition: none; }
+.social-category-list [data-active] { color: var(--primary); background: var(--background); }
+.social-category-list [data-slot="tabs-trigger"] > span { font-size: 11px; color: var(--muted-foreground); }
+.social-category-intro { display: flex; align-items: start; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-block: 4px 20px; font-size: 13px; line-height: 1.8; color: var(--muted-foreground); }
+.social-category-intro > p { max-width: 680px; }
+.social-category-intro > span { white-space: nowrap; }
+.social-publication { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid var(--border); padding-top: 16px; margin-top: 16px; }
+.social-publication label { cursor: pointer; font-size: 13px; font-weight: 600; }
+.social-publication p { margin-top: 4px; font-size: 11px; line-height: 1.7; color: var(--muted-foreground); }
+.social-publication[data-published="true"] label { color: var(--primary); }
 .social-post-thumbnail { position: relative; cursor: pointer; background: var(--background); width: 100%; }
 .social-post-thumbnail > img { display: block; width: 100%; height: auto; }
 .social-post-thumbnail > span { position: absolute; inset-inline: 12px; bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid var(--border); background: var(--background); border-radius: 7px; padding: 7px; color: var(--foreground); font-size: 11px; opacity: 0; transition: opacity .15s; }

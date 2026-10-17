@@ -242,6 +242,11 @@ async function main() {
     scene: string;
     screenshot?: string;
   }[] = [];
+  // Add new campaign posts without regenerating approved images. Existing
+  // originals/previews are verified against their recorded fingerprint first.
+  const previous: typeof manifest = process.argv.includes("--missing")
+    ? JSON.parse(await readFile(join(output, "manifest.json"), "utf8"))
+    : [];
   try {
     const page = await browser.newPage({ deviceScaleFactor: 1 });
     for (const platform of socialPlatforms) {
@@ -251,6 +256,24 @@ async function main() {
         height: platform.height,
       });
       for (const post of postsFor(platform.id)) {
+        const existing = previous.find(
+          (entry) =>
+            entry.platform === platform.id && entry.file === postFilename(post),
+        );
+        if (existing) {
+          const path = join(output, platform.id, existing.file);
+          const bytes = await readFile(path);
+          await readFile(path.replace(".png", ".preview.webp"));
+          if (
+            createHash("sha256").update(bytes).digest("hex") !== existing.sha256
+          )
+            throw new Error(
+              `Existing image changed: ${platform.id}/${existing.file}`,
+            );
+          await writeFile(path.replace(".png", ".txt"), postText(post), "utf8");
+          manifest.push(existing);
+          continue;
+        }
         await page.setContent(
           html(
             post,
@@ -367,8 +390,8 @@ async function main() {
     ],
     { stdio: "inherit" },
   );
-  if (manifest.length !== 120 || socialPosts.length !== 120)
-    throw new Error("Expected exactly 120 posts.");
+  if (manifest.length !== socialPosts.length)
+    throw new Error("Every catalogue post must have an exported image.");
   console.log(
     `Saved ${manifest.length} PNGs, previews and captions under ${basename(output)}; local ZIPs are ignored by Git.`,
   );

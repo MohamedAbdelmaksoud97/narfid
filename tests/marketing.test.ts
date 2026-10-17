@@ -5,6 +5,8 @@ import { createHash } from "node:crypto";
 import sharp from "sharp";
 import { unzipSync } from "fflate";
 import { socialCaptions } from "../lib/marketing/captions.ar";
+import { socialCategories } from "../lib/marketing/categories";
+import { validatePublication } from "../lib/marketing/publications";
 import {
   createMarketingArchive,
   marketingArchiveFiles,
@@ -18,17 +20,31 @@ import {
   trackedDestination,
 } from "../lib/marketing/social";
 
-test("four platform-specific sets have thirty unique posts with complete copy", () => {
+test("four platform-specific sets have fifty original posts covering all editorial categories", () => {
   assert.equal(socialPlatforms.length, 4);
-  assert.equal(socialPosts.length, 120);
-  assert.equal(new Set(socialPosts.map((post) => post.headline)).size, 120);
-  assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 120);
+  assert.equal(socialPosts.length, 200);
+  assert.equal(new Set(socialPosts.map((post) => post.headline)).size, 200);
+  assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 200);
   for (const platform of socialPlatforms) {
-    assert.equal(socialCaptions[platform.id].length, 30);
-    assert.equal(postsFor(platform.id).length, 30);
+    assert.equal(socialCaptions[platform.id].length, 50);
+    assert.equal(postsFor(platform.id).length, 50);
+    assert.equal(
+      new Set(postsFor(platform.id).map((post) => post.id)).size,
+      50,
+    );
+    for (const category of socialCategories) {
+      assert.ok(
+        postsFor(platform.id).some((post) => post.category === category.id),
+      );
+      assert.ok(
+        postsFor(platform.id)
+          .filter((post) => Number(post.id) >= 31)
+          .some((post) => post.category === category.id),
+      );
+    }
     assert.equal(
       postsFor(platform.id).filter((post) => post.screenshot).length,
-      20,
+      40,
     );
     assert.equal(
       new Set(postsFor(platform.id).map((post) => post.scene)).size,
@@ -58,9 +74,9 @@ test("four platform-specific sets have thirty unique posts with complete copy", 
 });
 
 test("download bundles stream original PNGs and captions without ZIP files on disk", async () => {
-  assert.equal(marketingArchiveFiles("all").length, 240);
+  assert.equal(marketingArchiveFiles("all").length, 400);
   const names = marketingArchiveFiles("x");
-  assert.equal(names.length, 60);
+  assert.equal(names.length, 100);
   const stream = await createMarketingArchive("x");
   const zip = new Uint8Array(await new Response(stream).arrayBuffer());
   const files = unzipSync(zip);
@@ -74,13 +90,13 @@ test("download bundles stream original PNGs and captions without ZIP files on di
   }
 });
 
-test("all 120 PNGs and lightweight previews match the export manifest", async () => {
+test("all 200 PNGs and lightweight previews match the export manifest", async () => {
   const dir = "content/marketing/assets";
   const manifest = JSON.parse(await readFile(`${dir}/manifest.json`, "utf8"));
-  assert.equal(manifest.length, 120);
+  assert.equal(manifest.length, 200);
   assert.equal(
     new Set(manifest.map((entry: { sha256: string }) => entry.sha256)).size,
-    120,
+    200,
   );
   for (const platform of socialPlatforms)
     for (const post of postsFor(platform.id)) {
@@ -108,5 +124,33 @@ test("all 120 PNGs and lightweight previews match the export manifest", async ()
       assert.equal(preview.width, 480);
       const caption = await readFile(path.replace(".png", ".txt"), "utf8");
       assert.ok(caption.startsWith(post.caption));
+      assert.ok(
+        caption.includes(
+          socialCategories.find((category) => category.id === post.category)!
+            .name,
+        ),
+      );
     }
+});
+
+test("publication changes require a known platform/post, a real boolean and a valid revision", () => {
+  const good = {
+    platform: "snapchat",
+    post_id: "31",
+    published: true,
+    revision: 0,
+  };
+  assert.deepEqual(validatePublication(good), good);
+  for (const invalid of [
+    { platform: "tiktok" },
+    { post_id: "51" },
+    { post_id: "1" },
+    { published: "true" },
+    { published: null },
+    { revision: -1 },
+    { revision: 0.5 },
+    { revision: Number.MAX_SAFE_INTEGER + 1 },
+    { revision: undefined },
+  ])
+    assert.throws(() => validatePublication({ ...good, ...invalid }));
 });

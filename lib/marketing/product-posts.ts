@@ -1,5 +1,6 @@
 import type { SocialPlatform, SocialPost } from "./social";
 import { socialCaptions } from "./captions.ar";
+import { existingPostCategory } from "./categories";
 
 export const productScreens = {
   overview: { file: "overview", label: "لوحة المتابعة" },
@@ -342,6 +343,7 @@ export function createProductPosts(platform: SocialPlatform): SocialPost[] {
       id: String(index + 11).padStart(2, "0"),
       platform: platform.id,
       theme: topic.theme,
+      category: existingPostCategory(index + 10),
       scene: topic.scene,
       screenshot: topic.screen,
       imageStyle: index % 3 === 0 ? "wide" : "focus",

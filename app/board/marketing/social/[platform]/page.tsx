@@ -71,7 +71,7 @@ async function Workspace({ params }: Props) {
         <h1>{platform.name}</h1>
         <p>{platform.role}</p>
         <div className="marketing-hero-actions">
-          <Badge variant="secondary">٣٠ صورة جاهزة للمراجعة</Badge>
+          <Badge variant="secondary">٥٠ صورة جاهزة للمراجعة</Badge>
           <span className="marketing-dimensions" dir="ltr">
             {platform.width} × {platform.height} px
           </span>
