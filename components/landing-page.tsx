@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { MemberAppSection } from "@/components/member-app-section";
 import dashboardImage from "@/public/images/nerved-dashboard.png";
 import { DirectionProvider } from "@base-ui/react/direction-provider";
 import { useEffect, useRef, useState, type FormEvent } from "react";
@@ -781,6 +782,8 @@ export function LandingPage() {
             </div>
           </section>
 
+          <MemberAppSection onRequest={() => openDemo("شراكة تقنية")} />
+
           <section
             className="pricing-section container section-space"
             id="pricing"
@@ -1037,7 +1040,7 @@ export function LandingPage() {
             </div>
             <div className="footer-links">
               <span>اكتشف نرفد</span>
-              {navigation.slice(0, 3).map((item) => (
+              {navigation.slice(0, 4).map((item) => (
                 <a key={item.href} href={item.href}>
                   {item.label}
                 </a>

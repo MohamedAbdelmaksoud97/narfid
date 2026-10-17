@@ -13,6 +13,7 @@ export const whatsappUrl = `https://wa.me/${salesPhone}`;
 export const navigation = [
   { label: "المنظومة", href: "#platform" },
   { label: "لماذا نرفد؟", href: "#why-nerved" },
+  { label: "تطبيق الأعضاء", href: "#member-app" },
   { label: "الباقات", href: "#pricing" },
   { label: "الأسئلة الشائعة", href: "#faq" },
   { label: "المقالات", href: "/articles" },
