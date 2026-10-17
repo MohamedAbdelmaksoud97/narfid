@@ -13,6 +13,8 @@ import {
   Home,
   Layers3,
   MessageSquareText,
+  Pause,
+  Play,
   ShieldCheck,
   Smartphone,
   UserRound,
@@ -214,6 +216,10 @@ function PhonePanels() {
 
 export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
   const [activeFeature, setActiveFeature] = useState("membership");
+  const [motionPaused, setMotionPaused] = useState(false);
+  const motionPausedRef = useRef(false);
+  const syncMotionRef = useRef<(() => void) | null>(null);
+  const entranceControlRef = useRef<((paused: boolean) => void) | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
   const deviceRef = useRef<HTMLDivElement>(null);
@@ -225,76 +231,116 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
     const section = sectionRef.current;
     const stage = stageRef.current;
     const device = deviceRef.current;
-    if (
-      !section ||
-      !stage ||
-      !device ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    )
-      return;
+    if (!section || !stage || !device) return;
 
     let disposed = false;
+    let started = false;
+    let inView = false;
+    let entranceFinished = false;
     let cleanupMotion: (() => void) | undefined;
+    const syncMotion = () => {
+      const visible = inView && !document.hidden;
+      section.dataset.motionVisible = String(visible);
+      entranceControlRef.current?.(!visible || motionPausedRef.current);
+    };
+    syncMotionRef.current = syncMotion;
+    document.addEventListener("visibilitychange", syncMotion);
     const observer = new IntersectionObserver(
       async ([entry]) => {
-        if (!entry.isIntersecting) return;
-        observer.disconnect();
+        inView = entry.isIntersecting;
+        syncMotion();
+        if (!inView || started) return;
+        started = true;
         try {
           const { gsap } = await import("gsap");
           if (disposed) return;
           const media = gsap.matchMedia();
           media.add("(prefers-reduced-motion: no-preference)", () => {
             const context = gsap.context(() => {
-              gsap.from(".member-app-copy > *", {
-                y: 18,
-                opacity: 0.4,
-                duration: 0.65,
-                stagger: 0.07,
-                ease: "power2.out",
-                clearProps: "transform,opacity",
+              entranceFinished = false;
+              const entrance = gsap.timeline({
+                defaults: { ease: "power2.out" },
+                onComplete: () => {
+                  entranceFinished = true;
+                },
               });
-              gsap.from(device, {
-                y: 46,
-                rotateY: -22,
-                rotateX: 10,
-                duration: 1.2,
-                ease: "power3.out",
-                clearProps: "transform",
-              });
-              gsap.from(".member-app-float", {
-                y: 22,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.15,
-                delay: 0.35,
-                clearProps: "transform,opacity",
-              });
+              entrance
+                .from(
+                  ".member-app-copy > *",
+                  {
+                    y: 22,
+                    opacity: 0.6,
+                    duration: 1.4,
+                    stagger: 0.12,
+                    clearProps: "transform,opacity",
+                  },
+                  0,
+                )
+                .from(
+                  device,
+                  {
+                    y: 72,
+                    rotateY: -30,
+                    rotateX: 13,
+                    scale: 0.94,
+                    duration: 3.2,
+                    clearProps: "transform",
+                  },
+                  0,
+                )
+                .from(
+                  ".member-app-float",
+                  {
+                    y: 38,
+                    opacity: 0.2,
+                    duration: 2,
+                    stagger: 0.35,
+                    clearProps: "transform,opacity",
+                  },
+                  0.6,
+                );
+              entranceControlRef.current = (paused) => {
+                entrance.paused(paused);
+              };
+              syncMotion();
             }, section);
-            return () => context.revert();
+            return () => {
+              entranceControlRef.current = null;
+              context.revert();
+            };
           });
           media.add(
             "(hover: hover) and (pointer: fine) and (min-width: 960px) and (prefers-reduced-motion: no-preference)",
             () => {
               const move = (event: PointerEvent) => {
+                if (
+                  !entranceFinished ||
+                  motionPausedRef.current ||
+                  !inView ||
+                  document.hidden
+                )
+                  return;
                 const bounds = stage.getBoundingClientRect();
                 const x = (event.clientX - bounds.left) / bounds.width - 0.5;
                 const y = (event.clientY - bounds.top) / bounds.height - 0.5;
                 gsap.to(device, {
                   rotateY: -10 + x * 9,
                   rotateX: 5 - y * 7,
-                  duration: 0.5,
+                  duration: 1.1,
                   ease: "power2.out",
                   overwrite: "auto",
                 });
               };
-              const reset = () =>
+              const reset = () => {
+                if (!entranceFinished || motionPausedRef.current) return;
                 gsap.to(device, {
                   rotateY: -10,
                   rotateX: 5,
-                  duration: 0.65,
+                  duration: 1.4,
                   overwrite: "auto",
                   clearProps: "transform",
                 });
+              };
               stage.addEventListener("pointermove", move);
               stage.addEventListener("pointerleave", reset);
               return () => {
@@ -312,11 +358,13 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
       },
       { threshold: 0.15 },
     );
-    observer.observe(section);
+    observer.observe(stage);
     return () => {
       disposed = true;
       observer.disconnect();
       cleanupMotion?.();
+      syncMotionRef.current = null;
+      document.removeEventListener("visibilitychange", syncMotion);
     };
   }, []);
 
@@ -325,6 +373,7 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
       id="member-app"
       ref={sectionRef}
       className="member-app-section"
+      data-motion-paused={motionPaused}
       aria-labelledby="member-app-heading"
     >
       <div className="container section-space">
@@ -458,6 +507,26 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
             <p className="member-app-preview-caption">
               تصور لتطبيق مؤسستك · بيانات توضيحية
             </p>
+            <div className="member-app-motion-control">
+              <Button
+                variant="ghost"
+                size="sm"
+                aria-pressed={motionPaused}
+                onClick={() => {
+                  const paused = !motionPaused;
+                  motionPausedRef.current = paused;
+                  setMotionPaused(paused);
+                  syncMotionRef.current?.();
+                }}
+              >
+                {motionPaused ? (
+                  <Play data-icon="inline-start" />
+                ) : (
+                  <Pause data-icon="inline-start" />
+                )}
+                {motionPaused ? "تشغيل الحركة" : "إيقاف الحركة"}
+              </Button>
+            </div>
           </div>
         </Tabs>
       </div>

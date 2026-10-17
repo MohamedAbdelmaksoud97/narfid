@@ -57,13 +57,26 @@ test("motion responds to reduced-motion changes and tablet navigation stays acce
   await page.setViewportSize({ width: 1366, height: 900 });
   await page.goto("/#member-app");
   const device = page.locator(".member-app-device");
-  await device.scrollIntoViewIfNeeded();
+  await page.locator(".member-app-stage").scrollIntoViewIfNeeded();
   // Allow the finite entrance animation and its lazy import to finish.
-  await page.waitForTimeout(1800);
+  await page.waitForTimeout(3500);
   await page.locator(".member-app-stage").hover({ position: { x: 30, y: 150 } });
   await expect.poll(() => device.evaluate((element) => element.style.transform)).not.toBe("");
+  await page.locator("#member-app").getByRole("button", { name: "إيقاف الحركة" }).click();
+  await expect.poll(() => device.evaluate((element) => getComputedStyle(element).animationPlayState)).toBe("paused");
+  const frozenTranslate = await device.evaluate((element) => getComputedStyle(element).translate);
+  await page.waitForTimeout(250);
+  expect(await device.evaluate((element) => getComputedStyle(element).translate)).toBe(frozenTranslate);
+  await page.locator("#member-app").getByRole("button", { name: "تشغيل الحركة" }).click();
+  await expect.poll(() => device.evaluate((element) => getComputedStyle(element).animationPlayState)).toBe("running");
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  await expect(page.locator("#member-app")).toHaveAttribute("data-motion-visible", "false");
+  await expect.poll(() => device.evaluate((element) => getComputedStyle(element).animationPlayState)).toBe("paused");
+  await page.locator(".member-app-stage").scrollIntoViewIfNeeded();
+  await expect.poll(() => device.evaluate((element) => getComputedStyle(element).animationPlayState)).toBe("running");
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect.poll(() => device.evaluate((element) => getComputedStyle(element).transform)).toBe("none");
+  await expect.poll(() => device.evaluate((element) => getComputedStyle(element).animationName)).toBe("none");
   for (const width of [960, 720]) {
     await page.setViewportSize({ width, height: 900 });
     await page.getByRole("button", { name: "افتح القائمة" }).click();
