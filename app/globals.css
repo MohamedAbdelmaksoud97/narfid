@@ -569,8 +569,22 @@
   border-bottom: 1px solid var(--border);
   height: 90px;
 }
-.article-site-header .brand {
-  width: 140px;
+.article-site-brand {
+  --article-logo-scale: 1;
+  display: block;
+  position: relative;
+  width: calc(178px * var(--article-logo-scale));
+  height: calc(56px * var(--article-logo-scale));
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.article-site-brand img {
+  position: absolute;
+  max-width: none;
+  width: calc(276px * var(--article-logo-scale));
+  height: auto;
+  left: calc(-50px * var(--article-logo-scale));
+  top: calc(-53px * var(--article-logo-scale));
 }
 .article-site-header nav {
   display: flex;
@@ -767,8 +781,8 @@
     gap: 16px;
     font-size: 13px;
   }
-  .article-site-header .brand {
-    width: 110px;
+  .article-site-brand {
+    --article-logo-scale: 0.72;
   }
   .article-list-item {
     padding: 16px;

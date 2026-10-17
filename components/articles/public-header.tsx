@@ -3,7 +3,7 @@ import Link from "next/link";
 export function PublicArticleHeader() {
   return (
     <header className="article-site-header container">
-      <Link href="/" className="brand" aria-label="نرفد — الرئيسية">
+      <Link href="/" className="article-site-brand" aria-label="نرفد — الرئيسية">
         <Image
           src="/logo.png"
           alt="نرفد"
