@@ -43,7 +43,7 @@ test("category tabs and shared publication tracking survive reloads and reject s
   expect(initialResponse.status()).toBe(200);
   expect(initialResponse.headers()["cache-control"]).toContain("no-store");
   const initial: Publication[] = (await initialResponse.json()).publications;
-  expect(initial).toHaveLength(50);
+  expect(initial).toHaveLength(58);
   const post = initial.find(
     (row) => Number(row.post_id) >= 31 && !row.published,
   )!;
@@ -85,7 +85,7 @@ test("category tabs and shared publication tracking survive reloads and reject s
     await expect(
       page.getByRole("button", { name: "تحديث سجل النشر", exact: true }),
     ).toBeEnabled();
-    await expect(page.locator(".social-post-card:visible")).toHaveCount(50);
+    await expect(page.locator(".social-post-card:visible")).toHaveCount(58);
     for (const category of socialCategories) {
       await page.getByRole("tab", { name: new RegExp(category.name) }).click();
       const count = postsFor("snapchat").filter(

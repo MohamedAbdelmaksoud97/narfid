@@ -6,7 +6,7 @@ import sharp from "sharp";
 import { unzipSync } from "fflate";
 import { socialCaptions } from "../lib/marketing/captions.ar";
 import { socialCategories } from "../lib/marketing/categories";
-import { validatePublication } from "../lib/marketing/publications";
+import { validatePublication, validatePostChange } from "../lib/marketing/publications";
 import {
   createMarketingArchive,
   marketingArchiveFiles,
@@ -20,17 +20,17 @@ import {
   trackedDestination,
 } from "../lib/marketing/social";
 
-test("four platform-specific sets have fifty original posts covering all editorial categories", () => {
+test("four platform-specific sets cover operations, member apps and access integrations", () => {
   assert.equal(socialPlatforms.length, 4);
-  assert.equal(socialPosts.length, 200);
-  assert.equal(new Set(socialPosts.map((post) => post.headline)).size, 200);
-  assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 200);
+  assert.equal(socialPosts.length, 232);
+  assert.equal(new Set(socialPosts.map((post) => post.headline)).size, 232);
+  assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 232);
   for (const platform of socialPlatforms) {
     assert.equal(socialCaptions[platform.id].length, 50);
-    assert.equal(postsFor(platform.id).length, 50);
+    assert.equal(postsFor(platform.id).length, 58);
     assert.equal(
       new Set(postsFor(platform.id).map((post) => post.id)).size,
-      50,
+      58,
     );
     for (const category of socialCategories) {
       assert.ok(
@@ -74,9 +74,12 @@ test("four platform-specific sets have fifty original posts covering all editori
 });
 
 test("download bundles stream original PNGs and captions without ZIP files on disk", async () => {
-  assert.equal(marketingArchiveFiles("all").length, 400);
+  assert.equal(marketingArchiveFiles("all").length, 464);
   const names = marketingArchiveFiles("x");
-  assert.equal(names.length, 100);
+  assert.equal(names.length, 116);
+  const filtered = marketingArchiveFiles("x", new Set(["x/51", "facebook/52"]));
+  assert.equal(filtered.length, 114);
+  assert.ok(!filtered.some((name) => name.includes("51-member-app")));
   const stream = await createMarketingArchive("x");
   const zip = new Uint8Array(await new Response(stream).arrayBuffer());
   const files = unzipSync(zip);
@@ -90,13 +93,13 @@ test("download bundles stream original PNGs and captions without ZIP files on di
   }
 });
 
-test("all 200 PNGs and lightweight previews match the export manifest", async () => {
+test("all 232 PNGs and lightweight previews match the export manifest", async () => {
   const dir = "content/marketing/assets";
   const manifest = JSON.parse(await readFile(`${dir}/manifest.json`, "utf8"));
-  assert.equal(manifest.length, 200);
+  assert.equal(manifest.length, 232);
   assert.equal(
     new Set(manifest.map((entry: { sha256: string }) => entry.sha256)).size,
-    200,
+    232,
   );
   for (const platform of socialPlatforms)
     for (const post of postsFor(platform.id)) {
@@ -143,7 +146,7 @@ test("publication changes require a known platform/post, a real boolean and a va
   assert.deepEqual(validatePublication(good), good);
   for (const invalid of [
     { platform: "tiktok" },
-    { post_id: "51" },
+    { post_id: "59" },
     { post_id: "1" },
     { published: "true" },
     { published: null },
@@ -153,4 +156,9 @@ test("publication changes require a known platform/post, a real boolean and a va
     { revision: undefined },
   ])
     assert.throws(() => validatePublication({ ...good, ...invalid }));
+});
+
+test("deletion validates stable catalogue identity and revision", () => {
+  assert.deepEqual(validatePostChange({ platform: "facebook", post_id: "58", revision: 2 }), { platform: "facebook", post_id: "58", revision: 2 });
+  for (const input of [{ platform: "other", post_id: "58", revision: 2 }, { platform: "facebook", post_id: "59", revision: 2 }, { platform: "facebook", post_id: "58", revision: -1 }]) assert.throws(() => validatePostChange(input));
 });

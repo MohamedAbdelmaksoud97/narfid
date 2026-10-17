@@ -1,5 +1,8 @@
 import { findPlatform, postsFor } from "@/lib/marketing/social";
-import { validatePublication } from "@/lib/marketing/publications";
+import {
+  validatePublication,
+  validatePostChange,
+} from "@/lib/marketing/publications";
 // Reuse the board's live-membership check, bounded JSON parser and origin check.
 import {
   taskSession,
@@ -9,7 +12,8 @@ import {
   TaskError,
 } from "@/lib/tasks-server";
 
-const fields = "platform,post_id,published,published_at,revision,updated_at";
+const fields =
+  "platform,post_id,published,published_at,deleted,revision,updated_at";
 
 export async function GET(request: Request) {
   try {
@@ -31,6 +35,49 @@ export async function GET(request: Request) {
   }
 }
 
+async function changeDeleted(request: Request, deleted: boolean) {
+  try {
+    const client = await taskSession();
+    let input;
+    try {
+      input = validatePostChange(await taskBody(request));
+    } catch (error) {
+      if (error instanceof TaskError) throw error;
+      throw new TaskError((error as Error).message);
+    }
+    const { data, error } = await client.rpc("set_social_deleted", {
+      p_platform: input.platform,
+      p_post_id: input.post_id,
+      p_deleted: deleted,
+      p_revision: input.revision,
+    });
+    if (error) {
+      if (error.code === "PT409")
+        throw new TaskError(
+          "تغيّر المنشور من حساب آخر. حدّث السجل وراجع حالته قبل إعادة المحاولة.",
+          409,
+        );
+      if (error.code === "42501")
+        throw new TaskError("حسابك لا يملك صلاحية تعديل المكتبة.", 403);
+      if (error.code === "P0002")
+        throw new TaskError("المنشور غير موجود.", 404);
+      throw new TaskError("تعذر تحديث المنشور. أعد المحاولة.", 503);
+    }
+    const { updated_by: _actor, ...publication } = data;
+    void _actor;
+    return taskJson({ publication });
+  } catch (error) {
+    return taskFailure(error);
+  }
+}
+
+export async function DELETE(request: Request) {
+  return changeDeleted(request, true);
+}
+export async function POST(request: Request) {
+  return changeDeleted(request, false);
+}
+
 export async function PATCH(request: Request) {
   try {
     const client = await taskSession();
@@ -48,6 +95,11 @@ export async function PATCH(request: Request) {
       p_revision: input.revision,
     });
     if (error) {
+      if (error.code === "22023")
+        throw new TaskError(
+          "استعد المنشور من المحذوفات قبل تغيير حالة نشره.",
+          409,
+        );
       if (error.code === "PT409")
         throw new TaskError(
           "تغيّرت حالة المنشور من حساب آخر. حُدّث السجل؛ راجع الحالة قبل المحاولة مجددًا.",

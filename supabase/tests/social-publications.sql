@@ -7,6 +7,8 @@ do $$ begin
   exception when insufficient_privilege then null; end;
   begin perform public.set_social_publication('snapchat','31',true,0); raise exception 'Anon RPC allowed';
   exception when insufficient_privilege then null; end;
+  begin perform public.set_social_deleted('snapchat','51',true,0); raise exception 'Anon delete RPC allowed';
+  exception when insufficient_privilege then null; end;
 end $$;
 reset role;
 do $$ begin
@@ -15,7 +17,7 @@ do $$ begin
 end $$;
 set local role authenticated;
 do $$ declare r public.social_post_publications; changed public.social_post_publications; begin
-  if (select count(*) from public.social_post_publications) <> 200 then raise exception 'Catalogue read incomplete'; end if;
+  if (select count(*) from public.social_post_publications) <> 232 then raise exception 'Catalogue read incomplete'; end if;
   select * into r from public.social_post_publications where platform='snapchat' and post_id='31';
   select * into changed from public.set_social_publication(r.platform,r.post_id,not r.published,r.revision);
   if changed.published = r.published or changed.revision <> r.revision+1
@@ -28,6 +30,13 @@ do $$ declare r public.social_post_publications; changed public.social_post_publ
   exception when insufficient_privilege then null; end;
   begin delete from public.social_post_publications where platform='snapchat' and post_id='31'; raise exception 'Delete allowed';
   exception when insufficient_privilege then null; end;
+  select * into r from public.social_post_publications where platform='snapchat' and post_id='51';
+  select * into changed from public.set_social_deleted(r.platform,r.post_id,not r.deleted,r.revision);
+  if changed.deleted = r.deleted or changed.revision <> r.revision+1 or changed.updated_by <> auth.uid() or changed.published_at is distinct from r.published_at then raise exception 'Delete/audit failed'; end if;
+  begin perform public.set_social_deleted(r.platform,r.post_id,r.deleted,r.revision); raise exception 'Stale delete allowed';
+  exception when sqlstate 'PT409' then null; end;
+  select * into changed from public.set_social_deleted(r.platform,r.post_id,r.deleted,changed.revision);
+  if changed.deleted is distinct from r.deleted then raise exception 'Restore failed'; end if;
 end $$;
 reset role;
 do $$ begin perform set_config('request.jwt.claims','{"sub":"00000000-0000-4000-8000-000000000000","role":"authenticated"}',true); end $$;
@@ -38,6 +47,8 @@ do $$ declare affected integer; begin
   get diagnostics affected = row_count;
   if affected <> 0 then raise exception 'Nonmember update allowed'; end if;
   begin perform public.set_social_publication('snapchat','31',true,0); raise exception 'Nonmember RPC allowed';
+  exception when insufficient_privilege then null; end;
+  begin perform public.set_social_deleted('snapchat','51',true,0); raise exception 'Nonmember deletion allowed';
   exception when insufficient_privilege then null; end;
 end $$;
 reset role;

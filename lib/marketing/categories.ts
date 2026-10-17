@@ -1,6 +1,18 @@
 // Editorial pillars, shared by the library and downloadable copy.
 export const socialCategories = [
   {
+    id: "member-app",
+    name: "تطبيق الأعضاء",
+    description:
+      "تطبيق بهوية المؤسسة للاشتراكات والتجديد والحجز والملاحظات والتنبيهات، ضمن اتفاق تطوير مخصص.",
+  },
+  {
+    id: "access",
+    name: "بوابات الدخول",
+    description:
+      "تقييم توافق الأجهزة وسياسات الدخول وسجلات المحاولات وخطة اختبار التكامل مع النظام.",
+  },
+  {
     id: "brand",
     name: "نرفد والشراكة",
     description:

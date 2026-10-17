@@ -9,14 +9,19 @@ import {
   type PlatformId,
 } from "./social";
 
-export function marketingArchiveFiles(platform: PlatformId | "all") {
+export function marketingArchiveFiles(
+  platform: PlatformId | "all",
+  excluded = new Set<string>(),
+) {
   return socialPlatforms
     .filter((item) => platform === "all" || item.id === platform)
     .flatMap((item) =>
-      postsFor(item.id).flatMap((post) => {
-        const image = `${item.id}/${postFilename(post)}`;
-        return [image, image.replace(/\.png$/, ".txt")];
-      }),
+      postsFor(item.id)
+        .filter((post) => !excluded.has(`${item.id}/${post.id}`))
+        .flatMap((post) => {
+          const image = `${item.id}/${postFilename(post)}`;
+          return [image, image.replace(/\.png$/, ".txt")];
+        }),
     );
 }
 
@@ -44,9 +49,12 @@ async function* archiveChunks(root: string, files: string[]) {
 }
 
 /** Called only after board authorization; filenames come from the content allowlist. */
-export async function createMarketingArchive(platform: PlatformId | "all") {
+export async function createMarketingArchive(
+  platform: PlatformId | "all",
+  excluded = new Set<string>(),
+) {
   const root = join(process.cwd(), "content/marketing/assets");
-  const files = marketingArchiveFiles(platform);
+  const files = marketingArchiveFiles(platform, excluded);
   // Fail before sending a successful response if an export is incomplete.
   await Promise.all(
     files.map(async (name) => {

@@ -1,7 +1,15 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
-import { Check, Copy, Download, Expand, RefreshCw } from "lucide-react";
+import {
+  Check,
+  Copy,
+  Download,
+  Expand,
+  RefreshCw,
+  Trash2,
+  Undo2,
+} from "lucide-react";
 import { socialCategories } from "@/lib/marketing/categories";
 import { usePublications } from "./use-publications";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -36,6 +44,7 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
+  DialogFooter,
   DialogTitle,
 } from "@/components/ui/dialog";
 
@@ -51,7 +60,16 @@ export function SocialLibrary({
   const [status, setStatus] = useState("");
   const [category, setCategory] = useState("all");
   const [filter, setFilter] = useState("all");
+  const [deleteTarget, setDeleteTarget] = useState<SocialPost | null>(null);
   const publication = usePublications(platform.id);
+  const activePosts = posts.filter(
+    (post) =>
+      !publication.rows?.find((row) => row.post_id === post.id)?.deleted,
+  );
+  const deletedPosts = posts.filter(
+    (post) => publication.rows?.find((row) => row.post_id === post.id)?.deleted,
+  );
+  const catalogue = filter === "deleted" ? deletedPosts : activePosts;
   const categories = [
     {
       id: "all",
@@ -62,7 +80,7 @@ export function SocialLibrary({
     ...socialCategories,
   ];
   const publishedCount = publication.rows?.filter(
-    (row) => row.published,
+    (row) => row.published && !row.deleted,
   ).length;
   const publicationFor = (id: string) =>
     publication.rows?.find((row) => row.post_id === id);
@@ -106,7 +124,10 @@ export function SocialLibrary({
           dir="ltr"
           checked={row?.published ?? false}
           disabled={
-            !row || Boolean(publication.error) || Boolean(publication.pending)
+            !row ||
+            row.deleted ||
+            Boolean(publication.error) ||
+            Boolean(publication.pending)
           }
           aria-label={`تم نشر المنشور ${post.id}`}
           onCheckedChange={(checked) => {
@@ -139,15 +160,15 @@ export function SocialLibrary({
       <header className="social-library-header">
         <div>
           <span className="section-kicker">
-            مكتبة المحتوى / {posts.length.toLocaleString("ar-SA")} منشورًا
+            مكتبة المحتوى / {activePosts.length.toLocaleString("ar-SA")} منشورًا
             مصورًا
           </span>
           <h2 id="social-library-heading">مكتبة {platform.name}</h2>
           <p>
             معاينة أصل الصورة، والنص المرافق، والوصف البديل، وترتيب أسبوعي
-            مقترح، موزّعة على سبعة تصنيفات. تشمل المكتبة ٤٠ منشورًا بلقطات من
-            واجهات النظام بهوية نرفد وبيانات عرض تجريبية. سجّل النشر بعد استخدام
-            كل منشور.
+            مقترح، موزّعة حسب موضوعات التشغيل والتطوير. تشمل المكتبة منشورات
+            بلقطات من واجهات النظام بهوية نرفد وبيانات عرض تجريبية. سجّل النشر
+            بعد استخدام كل منشور.
           </p>
         </div>
         <a
@@ -164,7 +185,7 @@ export function SocialLibrary({
           <Badge variant="secondary">
             {publishedCount === undefined
               ? "جارٍ تحميل السجل…"
-              : `${publishedCount.toLocaleString("ar-SA")} تم نشره · ${(posts.length - publishedCount).toLocaleString("ar-SA")} لم يُنشر`}
+              : `${publishedCount.toLocaleString("ar-SA")} تم نشره · ${(activePosts.length - publishedCount).toLocaleString("ar-SA")} لم يُنشر · ${deletedPosts.length.toLocaleString("ar-SA")} محذوف`}
           </Badge>
           <span>
             السجل مشترك بين أعضاء الإدارة، ويتحدّث دوريًا وعند العودة للصفحة.
@@ -210,8 +231,8 @@ export function SocialLibrary({
               {item.name}
               <span>
                 {(item.id === "all"
-                  ? posts.length
-                  : posts.filter((post) => post.category === item.id).length
+                  ? catalogue.length
+                  : catalogue.filter((post) => post.category === item.id).length
                 ).toLocaleString("ar-SA")}
               </span>
             </TabsTrigger>
@@ -231,13 +252,15 @@ export function SocialLibrary({
             <ToggleGroupItem value="all">كل الحالات</ToggleGroupItem>
             <ToggleGroupItem value="unpublished">لم يُنشر</ToggleGroupItem>
             <ToggleGroupItem value="published">تم نشره</ToggleGroupItem>
+            <ToggleGroupItem value="deleted">المحذوفات</ToggleGroupItem>
           </ToggleGroup>
         </div>
         {categories.map((item) => {
-          const visiblePosts = posts.filter(
+          const visiblePosts = catalogue.filter(
             (post) =>
               (item.id === "all" || post.category === item.id) &&
               (filter === "all" ||
+                filter === "deleted" ||
                 (filter === "published"
                   ? publicationFor(post.id)?.published === true
                   : publicationFor(post.id)?.published === false)),
@@ -316,6 +339,38 @@ export function SocialLibrary({
                       {publicationControl(post)}
                     </CardContent>
                     <CardFooter className="social-post-actions">
+                      {publicationFor(post.id)?.deleted ? (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          disabled={
+                            Boolean(publication.pending) ||
+                            Boolean(publication.error)
+                          }
+                          onClick={() => void publication.restore(post.id)}
+                        >
+                          <Undo2 data-icon="inline-start" />
+                          استعادة المنشور
+                        </Button>
+                      ) : (
+                        <Button
+                          variant="destructive"
+                          size="sm"
+                          aria-label={`حذف المنشور ${post.id}`}
+                          disabled={
+                            !publicationFor(post.id) ||
+                            Boolean(publication.pending) ||
+                            Boolean(publication.error)
+                          }
+                          onClick={() => {
+                            setDeleteTarget(post);
+                            publication.clearNotice();
+                          }}
+                        >
+                          <Trash2 data-icon="inline-start" />
+                          حذف
+                        </Button>
+                      )}
                       <a
                         href={`${postAsset(post)}?download=1`}
                         download
@@ -442,6 +497,52 @@ export function SocialLibrary({
               </div>
             </div>
           )}
+        </DialogContent>
+      </Dialog>
+      <Dialog
+        open={Boolean(deleteTarget)}
+        onOpenChange={(open) => {
+          if (!open && !publication.pending) setDeleteTarget(null);
+        }}
+      >
+        <DialogContent dir="rtl">
+          <DialogHeader>
+            <DialogTitle>
+              حذف المنشور {deleteTarget?.id} من {platform.name}؟
+            </DialogTitle>
+            <DialogDescription>
+              سيختفي من المكتبة وحزمة التحميل لدى جميع أعضاء الإدارة. يمكنك
+              استعادته من «المحذوفات». هذا الإجراء لا يحذف منشورًا من حسابات
+              التواصل.
+            </DialogDescription>
+          </DialogHeader>
+          <p>{deleteTarget?.headline.replaceAll("\n", " ")}</p>
+          <p role="status">{publication.notice}</p>
+          <DialogFooter>
+            <Button
+              variant="outline"
+              disabled={Boolean(publication.pending)}
+              onClick={() => setDeleteTarget(null)}
+            >
+              إلغاء
+            </Button>
+            <Button
+              variant="destructive"
+              disabled={Boolean(publication.pending)}
+              onClick={async () => {
+                if (
+                  deleteTarget &&
+                  (await publication.remove(deleteTarget.id))
+                ) {
+                  setSelected(null);
+                  setDeleteTarget(null);
+                }
+              }}
+            >
+              <Trash2 data-icon="inline-start" />
+              {publication.pending ? "جارٍ الحذف…" : "تأكيد الحذف"}
+            </Button>
+          </DialogFooter>
         </DialogContent>
       </Dialog>
     </section>

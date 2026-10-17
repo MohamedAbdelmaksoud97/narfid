@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { marketingAccess } from "@/lib/marketing/server";
 import { createMarketingArchive } from "@/lib/marketing/archive";
+import { createClient } from "@/lib/server";
 import {
   findPlatform,
   postFilename,
@@ -63,14 +64,27 @@ export async function GET(
           ? "all"
           : findPlatform(asset[0].replace(/-posts\.zip$/, ""))?.id
         : undefined;
-    if (archivePlatform)
-      return new Response(await createMarketingArchive(archivePlatform), {
-        headers: {
-          ...headers,
-          "Content-Type": "application/zip",
-          "Content-Disposition": `attachment; filename="narfid-${asset[0]}"`,
+    if (archivePlatform) {
+      const client = await createClient();
+      const { data, error } = await client
+        .from("social_post_publications")
+        .select("platform,post_id")
+        .eq("deleted", true);
+      if (error) throw new Error("Cannot check deleted posts");
+      const excluded = new Set(
+        data.map((row) => `${row.platform}/${row.post_id}`),
+      );
+      return new Response(
+        await createMarketingArchive(archivePlatform, excluded),
+        {
+          headers: {
+            ...headers,
+            "Content-Type": "application/zip",
+            "Content-Disposition": `attachment; filename="narfid-${asset[0]}"`,
+          },
         },
-      });
+      );
+    }
     const data = await readFile(
       join(process.cwd(), "content/marketing/assets", ...asset),
     );

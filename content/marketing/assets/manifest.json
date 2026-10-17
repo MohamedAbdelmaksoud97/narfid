@@ -490,6 +490,78 @@
     "screenshot": "services-wide"
   },
   {
+    "platform": "snapchat",
+    "file": "51-member-app.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1576654,
+    "sha256": "9d2c620c25f34883a55878fd90f3508daa9fd61951d111c33aae828fd20ec0b5",
+    "scene": "gym"
+  },
+  {
+    "platform": "snapchat",
+    "file": "52-app-renewals.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1218054,
+    "sha256": "0c77cb3bb716323dfbc00b3e0e8e8ec88cb85601e7de5eaddbf3c1db7ff33a1c",
+    "scene": "reception"
+  },
+  {
+    "platform": "snapchat",
+    "file": "53-app-court-booking.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1179671,
+    "sha256": "ae62982b328d56eb8683a75f417ebfd8f397c40a4a8b4e048e19569e5dcbc54c",
+    "scene": "court"
+  },
+  {
+    "platform": "snapchat",
+    "file": "54-app-feedback-reminders.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1114674,
+    "sha256": "a7fb2997248cdfae7a2f62aa8742f18a35e9d2ef5bdb03a344c813e721e0f6d7",
+    "scene": "workspace"
+  },
+  {
+    "platform": "snapchat",
+    "file": "55-gate-integration.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1235046,
+    "sha256": "d0c0cb3caa3e4929d2faeded57dbee06b5c23a1f58dad7dad4c28df6dce1becd",
+    "scene": "reception"
+  },
+  {
+    "platform": "snapchat",
+    "file": "56-gate-membership-policy.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1602934,
+    "sha256": "bb9f1d717b334620bfa7169fecdc8cdfcd0d8ce8a408cf544f5c1aa0db2d3134",
+    "scene": "gym"
+  },
+  {
+    "platform": "snapchat",
+    "file": "57-gate-attendance-log.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1137037,
+    "sha256": "6fdd3acdbc1121f2293ad381634ccb81cea5421211d7745a7a67b706c37ccf65",
+    "scene": "workspace"
+  },
+  {
+    "platform": "snapchat",
+    "file": "58-gate-before-purchase.png",
+    "width": 1080,
+    "height": 1920,
+    "bytes": 1239562,
+    "sha256": "8bb63536bf326cc5191f036a39e03bf80fad5ff779e2be49a61f77ef20c5432f",
+    "scene": "reception"
+  },
+  {
     "platform": "instagram",
     "file": "01-brand.png",
     "width": 1440,
@@ -978,6 +1050,78 @@
     "sha256": "6aae74c93f58a78e8b46d35ccf59ae85bb7f2b9f85bca27a5671824ce7cfe4db",
     "scene": "gym",
     "screenshot": "services-wide"
+  },
+  {
+    "platform": "instagram",
+    "file": "51-member-app.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 2054795,
+    "sha256": "e0422f250f02e4165bcf21eb4a58ae95ca3456d47fa2da5db60ae374547ff199",
+    "scene": "gym"
+  },
+  {
+    "platform": "instagram",
+    "file": "52-app-renewals.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1596194,
+    "sha256": "a38052d113e4d5d2f617b8ad275020e9caec2c354d559f891d9c23bfe908e0f0",
+    "scene": "reception"
+  },
+  {
+    "platform": "instagram",
+    "file": "53-app-court-booking.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1546359,
+    "sha256": "f1909833c4b4e9e278686bbe1d4d46865feff59b127bf53e0360c118f35149e6",
+    "scene": "court"
+  },
+  {
+    "platform": "instagram",
+    "file": "54-app-feedback-reminders.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1440520,
+    "sha256": "ef11dcfafd06e81cec0e706d5fa68fea4ed1df04207af90039b0a43675de2d72",
+    "scene": "workspace"
+  },
+  {
+    "platform": "instagram",
+    "file": "55-gate-integration.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1615409,
+    "sha256": "b18bea00108b982a9c095dd36852b0e1ac5c4063fc50f0e7fd5d159a229f7733",
+    "scene": "reception"
+  },
+  {
+    "platform": "instagram",
+    "file": "56-gate-membership-policy.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 2086668,
+    "sha256": "4143abd048b69eabc894b2b4673cc3f8afbb73e0ea11e7460b27c55a7fefcc81",
+    "scene": "gym"
+  },
+  {
+    "platform": "instagram",
+    "file": "57-gate-attendance-log.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1458239,
+    "sha256": "1f287bdece45ca3ef91c9b7b74c9f71e27c93e2c2e4a733f22141a82f94a245e",
+    "scene": "workspace"
+  },
+  {
+    "platform": "instagram",
+    "file": "58-gate-before-purchase.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1619869,
+    "sha256": "ee032fdeceb4ac89bd675cfee370c48c066ad89f77930b854ef55b6a9ba93bcc",
+    "scene": "reception"
   },
   {
     "platform": "x",
@@ -1470,6 +1614,78 @@
     "screenshot": "services-wide"
   },
   {
+    "platform": "x",
+    "file": "51-member-app.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 752963,
+    "sha256": "ed7129eba53bbe6e53ccb0f037512386cff8e1562c736c6ce4160ec1af523875",
+    "scene": "gym"
+  },
+  {
+    "platform": "x",
+    "file": "52-app-renewals.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 643668,
+    "sha256": "cf125188b14780a2fdd0e9e9ca43597c23c19d355c72de4683ac8aed1d896819",
+    "scene": "reception"
+  },
+  {
+    "platform": "x",
+    "file": "53-app-court-booking.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 584618,
+    "sha256": "ffe4f15a1b4774ec682fde0ff2d19eea16ea06655b6cc1a4830459c275bf046c",
+    "scene": "court"
+  },
+  {
+    "platform": "x",
+    "file": "54-app-feedback-reminders.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 565997,
+    "sha256": "62c9339aab97224a32ae5efeb97665fca40d4c8b253ce668cdf23f9e5f0bba99",
+    "scene": "workspace"
+  },
+  {
+    "platform": "x",
+    "file": "55-gate-integration.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 667642,
+    "sha256": "77f8c09b4cd893f23bf8350ced826fe734376b79506774481a1922ac0dea61f4",
+    "scene": "reception"
+  },
+  {
+    "platform": "x",
+    "file": "56-gate-membership-policy.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 787009,
+    "sha256": "fd0828ea1ba9f8f9441df8c0ab3c80ad41be2ab1db7f9cab2673f8640c5940d4",
+    "scene": "gym"
+  },
+  {
+    "platform": "x",
+    "file": "57-gate-attendance-log.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 582290,
+    "sha256": "11aede69bd7d9810e83829047bb7e195c715e2b5b082a59a5023a2bbb319ef35",
+    "scene": "workspace"
+  },
+  {
+    "platform": "x",
+    "file": "58-gate-before-purchase.png",
+    "width": 1200,
+    "height": 628,
+    "bytes": 667500,
+    "sha256": "7e1517db2f7eb8698bb44deb58c816de7e33248954b488e6b52578326a18a558",
+    "scene": "reception"
+  },
+  {
     "platform": "facebook",
     "file": "01-brand.png",
     "width": 1440,
@@ -1958,5 +2174,77 @@
     "sha256": "62796f032558e39ae4d8d284fd403ddcf8525e7615a41a1c69c6df35066c2cc4",
     "scene": "gym",
     "screenshot": "services-wide"
+  },
+  {
+    "platform": "facebook",
+    "file": "51-member-app.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 2058353,
+    "sha256": "6fae37cc4df8a4f86df089c020491f139e58bcc5ecba66010c6b6afb1a5e6974",
+    "scene": "gym"
+  },
+  {
+    "platform": "facebook",
+    "file": "52-app-renewals.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1598019,
+    "sha256": "c834068aac657f04df6ae0d176c5c4f4ec0636f1ee60d99f2fdffcc099b4474f",
+    "scene": "reception"
+  },
+  {
+    "platform": "facebook",
+    "file": "53-app-court-booking.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1550514,
+    "sha256": "491d75c7212a44c32b681b989da818b60748ec2ca85cce8b72f1d997cd200cb0",
+    "scene": "court"
+  },
+  {
+    "platform": "facebook",
+    "file": "54-app-feedback-reminders.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1439838,
+    "sha256": "c56906c383231e19635b5d6b77fb5c5c8f4786aba96bccfae02c8bd87cb793af",
+    "scene": "workspace"
+  },
+  {
+    "platform": "facebook",
+    "file": "55-gate-integration.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1618354,
+    "sha256": "df4b49a0042774dca29f43ea8b83ee5e0c99f90848a4eebff32b203cba986ffe",
+    "scene": "reception"
+  },
+  {
+    "platform": "facebook",
+    "file": "56-gate-membership-policy.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 2090573,
+    "sha256": "22a27ecd07be37a242d7d9764113d2f5065f46dbf4b2351bf2647b4fccb90574",
+    "scene": "gym"
+  },
+  {
+    "platform": "facebook",
+    "file": "57-gate-attendance-log.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1464351,
+    "sha256": "56f6a17eff973f5da8286a845b6a9da47e33caa3fb52d8a3497c66a72c532c60",
+    "scene": "workspace"
+  },
+  {
+    "platform": "facebook",
+    "file": "58-gate-before-purchase.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1623680,
+    "sha256": "8977407bebfa5ea8e0d5188fd68b962c0b9beccaccf2582a1ba50ddccdf0b513",
+    "scene": "reception"
   }
 ]

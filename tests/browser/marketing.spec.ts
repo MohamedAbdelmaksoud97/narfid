@@ -7,7 +7,7 @@ import {
   postAsset,
 } from "../../lib/marketing/social";
 
-test("marketing strategy, platform guides, 200 protected images and downloads work", async ({
+test("marketing strategy, platform guides, 232 protected images and downloads work", async ({
   page,
   context,
   request,
@@ -85,7 +85,7 @@ test("marketing strategy, platform guides, 200 protected images and downloads wo
     await expect(
       page.getByRole("heading", { name: platform.name, exact: true, level: 1 }),
     ).toBeVisible();
-    await expect(page.locator(".social-post-card:visible")).toHaveCount(50);
+    await expect(page.locator(".social-post-card:visible")).toHaveCount(58);
     await page
       .getByRole("button", { name: "التصور الكامل للفيديو", exact: true })
       .click();

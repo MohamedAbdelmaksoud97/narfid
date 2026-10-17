@@ -63,8 +63,15 @@ export function usePublications(platform: PlatformId) {
   }, [load, refresh]);
 
   async function toggle(postId: string, published: boolean) {
+    return mutate(postId, "PATCH", published);
+  }
+  async function mutate(
+    postId: string,
+    method: "PATCH" | "DELETE" | "POST",
+    published?: boolean,
+  ) {
     const row = rows?.find((row) => row.post_id === postId);
-    if (!row || error || writing.current) return;
+    if (!row || error || writing.current) return false;
     writing.current = true;
     const current = ++generation.current;
     setPending(postId);
@@ -73,7 +80,7 @@ export function usePublications(platform: PlatformId) {
     let failure = "";
     try {
       const response = await fetch("/api/board/marketing/publications", {
-        method: "PATCH",
+        method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           platform,
@@ -93,13 +100,19 @@ export function usePublications(platform: PlatformId) {
             ) ?? null,
         );
         setNotice(
-          published
-            ? `تم تسجيل نشر المنشور ${postId}.`
-            : `أُلغي تسجيل نشر المنشور ${postId}.`,
+          method === "DELETE"
+            ? `حُذف المنشور ${postId} من المكتبة.`
+            : method === "POST"
+              ? `استُعيد المنشور ${postId}.`
+              : published
+                ? `تم تسجيل نشر المنشور ${postId}.`
+                : `أُلغي تسجيل نشر المنشور ${postId}.`,
         );
       }
+      return true;
     } catch (error) {
       failure = error instanceof Error ? error.message : "تعذر حفظ حالة النشر.";
+      return false;
     } finally {
       writing.current = false;
       // Next can preserve this library while hiding its page during navigation.
@@ -122,6 +135,8 @@ export function usePublications(platform: PlatformId) {
     refreshing,
     refresh,
     toggle,
+    remove: (postId: string) => mutate(postId, "DELETE"),
+    restore: (postId: string) => mutate(postId, "POST"),
     clearNotice: () => setNotice(""),
   };
 }

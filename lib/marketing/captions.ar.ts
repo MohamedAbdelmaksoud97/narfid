@@ -1,5 +1,6 @@
 import type { PlatformId } from "./social";
 import { expansionCaptions } from "./expansion-copy.ar";
+import { facebookCaptions } from "./facebook-copy.ar";
 
 // Captions are edited independently of the words baked into the existing images.
 // Order follows the stable post IDs 01–30; expansion adds 31–50 below.
@@ -138,5 +139,5 @@ export const socialCaptions: Record<PlatformId, readonly string[]> = {
   snapchat: [...originalCaptions.snapchat, ...expansionCaptions.snapchat],
   instagram: [...originalCaptions.instagram, ...expansionCaptions.instagram],
   x: [...originalCaptions.x, ...expansionCaptions.x],
-  facebook: [...originalCaptions.facebook, ...expansionCaptions.facebook],
+  facebook: facebookCaptions,
 };
