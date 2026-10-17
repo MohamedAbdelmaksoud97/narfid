@@ -4446,7 +4446,6 @@ h2 {
   .member-app-membership-card { padding: 14px; }
   .member-app-preview-caption { margin-top: 10px; font-size: 10px; }
 }
-.member-app-motion-control { display: flex; justify-content: center; margin-top: 10px; }
 @keyframes member-app-hover {
   0%, 100% { translate: 0 0; }
   50% { translate: 0 -14px; }
@@ -4488,13 +4487,9 @@ h2 {
   .member-app-reminder-icon > svg { transform-origin: 50% 15%; animation: member-app-bell-ring 6s ease-in-out infinite; }
   .member-app-panel { animation: member-app-panel-enter 0.85s ease-out both; }
   .member-app-progress > i { transform-origin: right; animation: member-app-progress-fill 1.5s ease-out both; }
-  .member-app-section:not([data-motion-visible="true"]) .member-app-stage *,
-  .member-app-section[data-motion-paused="true"] .member-app-stage * { animation-play-state: paused; }
-  .member-app-section[data-motion-paused="true"] .member-app-panel,
-  .member-app-section[data-motion-paused="true"] .member-app-progress > i { animation: none; }
+  .member-app-section:not([data-motion-visible="true"]) .member-app-stage * { animation-play-state: paused; }
 }
 @media (prefers-reduced-motion: reduce) {
   .member-app-device { transform: none; }
-  .member-app-motion-control { display: none; }
   .member-app-section *, .member-app-section *::before, .member-app-section *::after { animation: none !important; transition: none !important; }
 }

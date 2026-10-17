@@ -13,8 +13,6 @@ import {
   Home,
   Layers3,
   MessageSquareText,
-  Pause,
-  Play,
   ShieldCheck,
   Smartphone,
   UserRound,
@@ -216,9 +214,6 @@ function PhonePanels() {
 
 export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
   const [activeFeature, setActiveFeature] = useState("membership");
-  const [motionPaused, setMotionPaused] = useState(false);
-  const motionPausedRef = useRef(false);
-  const syncMotionRef = useRef<(() => void) | null>(null);
   const entranceControlRef = useRef<((paused: boolean) => void) | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
@@ -241,9 +236,8 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
     const syncMotion = () => {
       const visible = inView && !document.hidden;
       section.dataset.motionVisible = String(visible);
-      entranceControlRef.current?.(!visible || motionPausedRef.current);
+      entranceControlRef.current?.(!visible);
     };
-    syncMotionRef.current = syncMotion;
     document.addEventListener("visibilitychange", syncMotion);
     const observer = new IntersectionObserver(
       async ([entry]) => {
@@ -315,7 +309,6 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
               const move = (event: PointerEvent) => {
                 if (
                   !entranceFinished ||
-                  motionPausedRef.current ||
                   !inView ||
                   document.hidden
                 )
@@ -332,7 +325,7 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
                 });
               };
               const reset = () => {
-                if (!entranceFinished || motionPausedRef.current) return;
+                if (!entranceFinished) return;
                 gsap.to(device, {
                   rotateY: -10,
                   rotateX: 5,
@@ -363,7 +356,6 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
       disposed = true;
       observer.disconnect();
       cleanupMotion?.();
-      syncMotionRef.current = null;
       document.removeEventListener("visibilitychange", syncMotion);
     };
   }, []);
@@ -373,7 +365,6 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
       id="member-app"
       ref={sectionRef}
       className="member-app-section"
-      data-motion-paused={motionPaused}
       aria-labelledby="member-app-heading"
     >
       <div className="container section-space">
@@ -507,26 +498,6 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
             <p className="member-app-preview-caption">
               تصور لتطبيق مؤسستك · بيانات توضيحية
             </p>
-            <div className="member-app-motion-control">
-              <Button
-                variant="ghost"
-                size="sm"
-                aria-pressed={motionPaused}
-                onClick={() => {
-                  const paused = !motionPaused;
-                  motionPausedRef.current = paused;
-                  setMotionPaused(paused);
-                  syncMotionRef.current?.();
-                }}
-              >
-                {motionPaused ? (
-                  <Play data-icon="inline-start" />
-                ) : (
-                  <Pause data-icon="inline-start" />
-                )}
-                {motionPaused ? "تشغيل الحركة" : "إيقاف الحركة"}
-              </Button>
-            </div>
           </div>
         </Tabs>
       </div>

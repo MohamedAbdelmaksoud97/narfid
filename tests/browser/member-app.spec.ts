@@ -62,12 +62,6 @@ test("motion responds to reduced-motion changes and tablet navigation stays acce
   await page.waitForTimeout(3500);
   await page.locator(".member-app-stage").hover({ position: { x: 30, y: 150 } });
   await expect.poll(() => device.evaluate((element) => element.style.transform)).not.toBe("");
-  await page.locator("#member-app").getByRole("button", { name: "إيقاف الحركة" }).click();
-  await expect.poll(() => device.evaluate((element) => getComputedStyle(element).animationPlayState)).toBe("paused");
-  const frozenTranslate = await device.evaluate((element) => getComputedStyle(element).translate);
-  await page.waitForTimeout(250);
-  expect(await device.evaluate((element) => getComputedStyle(element).translate)).toBe(frozenTranslate);
-  await page.locator("#member-app").getByRole("button", { name: "تشغيل الحركة" }).click();
   await expect.poll(() => device.evaluate((element) => getComputedStyle(element).animationPlayState)).toBe("running");
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await expect(page.locator("#member-app")).toHaveAttribute("data-motion-visible", "false");
