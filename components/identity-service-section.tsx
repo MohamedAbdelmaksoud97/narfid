@@ -1,6 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpLeft, Check, Palette, ScanLine, Type } from "lucide-react";
+import {
+  ArrowUpLeft,
+  Check,
+  Palette,
+  QrCode,
+  CalendarDays,
+  ArrowLeft,
+} from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { identityService } from "@/lib/identity-service";
@@ -63,47 +69,82 @@ export function IdentityServiceSection() {
       <div
         className="identity-service-preview"
         role="img"
-        aria-label="عرض لمكونات الهوية باستخدام هوية نرفد: الشعار والألوان والخطوط والتطبيقات. هوية كل مؤسسة تُصمم لها بشكل مستقل."
+        aria-label="تصور لهوية مؤسسة رياضية على بوستر وبطاقة عضوية وتطبيق، بألوان بنفسجية وعاجية."
       >
-        <div className="identity-preview-grid" aria-hidden="true">
-          <div className="identity-logo-tile">
-            <ScanLine />
-            <Image
-              src="/logo.png"
-              alt=""
-              width={1672}
-              height={941}
-              sizes="(max-width: 700px) 200px, 280px"
-            />
-            <span>وضوح في كل ظهور.</span>
-          </div>
-          <div className="identity-type-tile">
-            <Type />
-            <strong>أ ب ج</strong>
-            <span>حروف تحمل شخصيتك</span>
-            <small dir="ltr">Aa Bb Cc</small>
-          </div>
-          <div className="identity-color-tile">
-            <i />
-            <i />
-            <i />
-            <span>ألوان تصنع الانطباع</span>
-          </div>
-          <div className="identity-member-tile">
-            <span>تجربة متّسقة</span>
+        <div className="identity-mockup-scene" aria-hidden="true">
+          <div className="identity-mockup-poster">
+            <span className="identity-mockup-club">ناديك الرياضي</span>
             <strong>
-              من أول انطباع.
+              للحركة
               <br />
-              إلى كل زيارة.
+              مساحة.
             </strong>
-            <div>
-              <span>العضوية</span>
-              <span>الحجوزات</span>
-              <span>التواصل</span>
+            <div className="identity-mockup-track">
+              <i />
+              <i />
+              <i />
+            </div>
+            <span className="identity-mockup-poster-note">
+              كل يوم. بداية جديدة.
+            </span>
+          </div>
+          <div className="identity-mockup-phone">
+            <div className="identity-mockup-phone-camera" />
+            <div className="identity-mockup-phone-screen">
+              <div className="identity-mockup-app-hero">
+                <span>ناديك الرياضي</span>
+                <strong>
+                  جاهز لخطوتك
+                  <br />
+                  القادمة؟
+                </strong>
+                <div className="identity-mockup-app-track">
+                  <i />
+                  <i />
+                  <i />
+                </div>
+              </div>
+              <div className="identity-mockup-app-content">
+                <span>مساحتك، بطريقتك.</span>
+                <div className="identity-mockup-app-membership">
+                  <QrCode />
+                  <div>
+                    <small>عضويتك</small>
+                    <strong>كلّنا حركة</strong>
+                  </div>
+                </div>
+                <div className="identity-mockup-app-booking">
+                  <CalendarDays />
+                  <span>موعدك القادم</span>
+                  <ArrowLeft />
+                </div>
+                <div className="identity-mockup-app-lines">
+                  <i />
+                  <i />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="identity-mockup-card">
+            <div className="identity-mockup-card-track">
+              <i />
+              <i />
+              <i />
+            </div>
+            <div className="identity-mockup-card-top">
+              <span>ناديك الرياضي</span>
+              <QrCode />
+            </div>
+            <div className="identity-mockup-card-bottom">
+              <strong>
+                أنت جزء
+                <br />
+                من الحكاية.
+              </strong>
+              <span>بطاقة العضوية</span>
             </div>
           </div>
         </div>
-        <p>نموذج تطبيقي بهوية نرفد؛ لكل مؤسسة هوية تعبّر عنها.</p>
       </div>
     </section>
   );
