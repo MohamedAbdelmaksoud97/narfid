@@ -8,6 +8,8 @@ import {
   type AccountKind,
   type Member,
   type Resource,
+  type Plan,
+  money,
 } from "@/lib/crm/types";
 export type FieldSpec = {
   key: string;
@@ -17,6 +19,7 @@ export type FieldSpec = {
   required?: boolean;
   hint?: string;
   wide?: boolean;
+  nullable?: boolean;
 };
 const field = (
   key: string,
@@ -30,9 +33,61 @@ const owner = (members: Member[]) =>
       ...Object.fromEntries(members.map((member) => [member.id, member.name])),
     },
   });
-export function accountForm(kind: AccountKind, members: Member[]): FieldSpec[] {
+export function planOptions(plans: Plan[], current?: unknown) {
+  return {
+    "": "لم تُحدد بعد",
+    ...Object.fromEntries(
+      plans
+        .filter((plan) => plan.active || plan.id === current)
+        .map((plan) => [
+          plan.id,
+          `${plan.name} · ${plan.pricing_type === "custom" ? "حسب عرض السعر" : `${money(plan.annual_fee_cents)} سنويًا`}${plan.active ? "" : " · غير متاحة للجدد"}`,
+        ]),
+    ),
+  };
+}
+export function planContractDefaults(plan?: Plan) {
+  return plan
+    ? {
+        plan_id: plan.id,
+        title: `اشتراك ${plan.name}`,
+        annual_fee_cents: plan.annual_fee_cents,
+        setup_fee_cents: plan.setup_fee_cents,
+        scope: plan.features.join("\n"),
+      }
+    : { plan_id: "" };
+}
+export function contractPlanChange(
+  plans: Plan[],
+  key: string,
+  value: string,
+): Record<string, string> {
+  if (key !== "plan_id") return {};
+  const plan = plans.find((item) => item.id === value && item.active);
+  return plan
+    ? {
+        title: `اشتراك ${plan.name}`,
+        annual_fee_cents:
+          plan.annual_fee_cents == null
+            ? ""
+            : String(plan.annual_fee_cents / 100),
+        setup_fee_cents: String(plan.setup_fee_cents / 100),
+        scope: plan.features.join("\n"),
+      }
+    : {};
+}
+export function accountForm(
+  kind: AccountKind,
+  members: Member[],
+  plans: Plan[] = [],
+  currentPlan?: unknown,
+): FieldSpec[] {
   return [
     field("name", "اسم المؤسسة", { required: true }),
+    field("plan_id", kind === "lead" ? "الخطة المرشحة" : "خطة الاشتراك", {
+      options: planOptions(plans, currentPlan),
+      hint: "تُدار الباقات وأسعارها ومميزاتها من قسم الباقات.",
+    }),
     field("stage", kind === "lead" ? "مرحلة البيع" : "حالة العميل", {
       options: kind === "lead" ? leadStages : clientStages,
     }),
@@ -126,6 +181,8 @@ export function resourceForm(
   resource: Resource | "payments",
   members: Member[],
   contracts: { id: string; title?: unknown; status?: unknown }[] = [],
+  plans: Plan[] = [],
+  currentPlan?: unknown,
 ): FieldSpec[] {
   const title = field("title", "العنوان", { required: true }),
     body = field("body", "التفاصيل", { type: "textarea", wide: true });
@@ -169,6 +226,10 @@ export function resourceForm(
       ];
     case "contracts":
       return [
+        field("plan_id", "باقة العقد", {
+          options: planOptions(plans, currentPlan),
+          hint: "اختيار باقة يملأ سعرها ومميزاتها. راجع القيم المتفق عليها قبل الحفظ.",
+        }),
         field("title", "اسم العقد أو الباقة", { required: true }),
         field("reference", "رقم أو مرجع العقد"),
         field("starts_on", "بداية العقد", { type: "date", required: true }),

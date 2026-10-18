@@ -8,7 +8,13 @@ import {
   resourceFields,
   paymentFields,
 } from "./validation";
-import { resources, type Resource, type Account, type Profile } from "./types";
+import {
+  resources,
+  type Resource,
+  type Account,
+  type Profile,
+  type Plan,
+} from "./types";
 
 export { taskSession as crmSession, taskBody as crmBody };
 export function crmJson(data: unknown, status = 200) {
@@ -65,6 +71,8 @@ export function dbError(error: { code?: string; message?: string }) {
       CRM_CONTRACT_KEEP_HISTORY:
         "احتفظ بالعقد الموقّع في السجل، واستخدم حالة الإلغاء عند الحاجة.",
       CRM_OWNER_INACTIVE: "المسؤول المختار لم يعد عضوًا نشطًا.",
+      CRM_PLAN_UNAVAILABLE:
+        "الباقة المختارة لم تعد متاحة للاشتراكات الجديدة. حدّث القائمة واختر باقة متاحة.",
       CRM_PAYMENT_CONTRACT:
         "تسجيل الدفعة يحتاج عقدًا موقّعًا تابعًا لهذا العميل.",
       CRM_ACCOUNT_UNAVAILABLE: "استعد الملف من الأرشيف قبل تعديله.",
@@ -112,6 +120,12 @@ export async function members(client: Client) {
     name: row.display_name as string,
   }));
 }
+export async function plans(client: Client) {
+  const rows = await allRows(client, "crm_plans");
+  return (rows as Plan[]).sort(
+    (a, b) => a.sort_order - b.sort_order || a.name.localeCompare(b.name, "ar"),
+  );
+}
 export async function account(client: Client, id: string, writable = false) {
   uuid(id);
   const { data, error } = await client
@@ -138,6 +152,7 @@ export async function profile(client: Client, id: string): Promise<Profile> {
   return {
     account: acc,
     members: await members(client),
+    plans: await plans(client),
     ...Object.fromEntries(
       [...resources, "payments", "events"].map((key, i) => [key, entries[i]]),
     ),

@@ -17,6 +17,7 @@ import {
   ShieldCheck,
   UsersRound,
   UserRoundSearch,
+  Package,
   X,
 } from "lucide-react";
 import { logoutAction } from "@/app/login/actions";
@@ -48,6 +49,7 @@ const sections = [
   { label: "المهام القادمة", href: "/board/tasks", icon: ListChecks },
   { label: "العملاء المحتملون", href: "/board/leads", icon: UserRoundSearch },
   { label: "العملاء", href: "/board/clients", icon: UsersRound },
+  { label: "الباقات", href: "/board/plans", icon: Package },
   { label: "التسويق", href: "/board/marketing", icon: Megaphone },
   { label: "هوية نرفد", href: "/board/brand", icon: Palette },
   { label: "المقالات", href: "/board/articles", icon: FileText },

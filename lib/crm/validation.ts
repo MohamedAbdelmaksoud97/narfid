@@ -118,6 +118,7 @@ export function accountFields(input: Input, kind: AccountKind) {
       kind === "lead" ? "new" : "onboarding",
     ),
     owner_id: owner(input),
+    plan_id: owner(input, "plan_id"),
     priority: option(input, "priority", priorities, "normal"),
     source: option(input, "source", sources, "other"),
     city: text(input, "city", 100),
@@ -186,6 +187,7 @@ export function resourceFields(resource: Resource, input: Input) {
       return {
         ...common(),
         reference: text(input, "reference", 150),
+        plan_id: owner(input, "plan_id"),
         starts_on: starts,
         ends_on: ends,
         annual_fee_cents: number(input, "annual_fee_cents"),
@@ -309,4 +311,55 @@ export function csvCell(value: unknown) {
   let result = String(value ?? "");
   if (/^[\s]*[=+\-@\t\r]/.test(result)) result = `'${result}`;
   return `"${result.replaceAll('"', '""')}"`;
+}
+
+export function planFields(input: Input) {
+  const raw =
+    typeof input.features === "string"
+      ? input.features.split(/\r?\n/)
+      : input.features;
+  if (!Array.isArray(raw) || raw.some((value) => typeof value !== "string"))
+    throw new CrmError("أضف المميزات، كل ميزة في سطر مستقل.", 400, "features");
+  const features = [
+    ...new Set((raw as string[]).map((value) => value.trim()).filter(Boolean)),
+  ];
+  if (
+    !features.length ||
+    features.length > 50 ||
+    features.some((value) => value.length > 200)
+  )
+    throw new CrmError(
+      "أضف من ميزة إلى ٥٠ ميزة، وبحد أقصى ٢٠٠ حرف لكل ميزة.",
+      400,
+      "features",
+    );
+  const pricing_type = option(
+    input,
+    "pricing_type",
+    { fixed: 1, custom: 1 },
+    "fixed",
+  );
+  if (pricing_type === "fixed" && input.annual_fee_cents == null)
+    throw new CrmError("أدخل السعر السنوي للباقة.", 400, "annual_fee_cents");
+  if (
+    input.active !== true &&
+    input.active !== false &&
+    input.active !== "true" &&
+    input.active !== "false"
+  )
+    throw new CrmError("اختر حالة إتاحة صحيحة.", 400, "active");
+  const sort_order = number(input, "sort_order", 1, 10000);
+  if (!sort_order)
+    throw new CrmError("ترتيب العرض يبدأ من ١.", 400, "sort_order");
+  return {
+    name: text(input, "name", 150, true),
+    description: text(input, "description", 2000),
+    pricing_type,
+    annual_fee_cents:
+      pricing_type === "custom" ? null : number(input, "annual_fee_cents"),
+    setup_fee_cents: number(input, "setup_fee_cents"),
+    features,
+    sort_order,
+    active: input.active === true || input.active === "true",
+  };
 }

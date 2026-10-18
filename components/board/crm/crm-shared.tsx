@@ -136,6 +136,7 @@ export function CrmEditor({
   fields,
   initial,
   submitLabel = "حفظ",
+  onFieldChange,
   onClose,
   onSave,
 }: {
@@ -144,6 +145,7 @@ export function CrmEditor({
   fields: FieldSpec[];
   initial: Record<string, unknown>;
   submitLabel?: string;
+  onFieldChange?: (key: string, value: string) => Record<string, string>;
   onClose: () => void;
   onSave: (fields: Record<string, unknown>) => Promise<void>;
 }) {
@@ -175,7 +177,7 @@ export function CrmEditor({
           body[field.key] =
             field.type === "money"
               ? values[field.key] === "" && !field.required
-                ? field.key === "annual_budget_cents"
+                ? field.key === "annual_budget_cents" || field.nullable
                   ? null
                   : 0
                 : parseMoney(values[field.key])
@@ -233,6 +235,7 @@ export function CrmEditor({
                   ) =>
                     setValues((old) => ({
                       ...old,
+                      ...onFieldChange?.(field.key, event.target.value),
                       [field.key]: event.target.value,
                     })),
                 };

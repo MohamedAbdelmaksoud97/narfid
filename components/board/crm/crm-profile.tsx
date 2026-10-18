@@ -49,6 +49,8 @@ import {
   labels,
   resourceForm,
   resourceNames,
+  planContractDefaults,
+  contractPlanChange,
 } from "./crm-fields";
 import {
   CrmConfirm,
@@ -110,6 +112,13 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
       resource,
       row: {
         ...defaults(resource, kind),
+        ...(resource === "contracts"
+          ? planContractDefaults(
+              data?.plans.find(
+                (plan) => plan.id === acc?.plan_id && plan.active,
+              ),
+            )
+          : {}),
         id: crypto.randomUUID(),
         _new: true,
         ...(resource === "payments"
@@ -294,6 +303,11 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                     ...defaults("contracts"),
                     id: crypto.randomUUID(),
                     title: "اشتراك سنوي",
+                    ...planContractDefaults(
+                      data.plans.find(
+                        (plan) => plan.id === acc.plan_id && plan.active,
+                      ),
+                    ),
                     status: "signed",
                     _account_revision: acc.revision,
                   },
@@ -398,6 +412,11 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                 <dl className="crm-details">
                   {[
                     ["جهة الاتصال", acc.contact_name],
+                    [
+                      kind === "lead" ? "الخطة المرشحة" : "خطة الاشتراك",
+                      data.plans.find((plan) => plan.id === acc.plan_id)
+                        ?.name ?? "لم تُحدد بعد",
+                    ],
                     ["الدور", acc.contact_role],
                     ["مصدر التعارف", sources[acc.source]],
                     ["الجوال", acc.phone],
@@ -650,6 +669,10 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                     <CardContent>
                       <dl className="crm-details">
                         <div>
+                          <dt>الباقة وقت التعاقد</dt>
+                          <dd>{String(row.plan_name || "اتفاق مخصص")}</dd>
+                        </div>
+                        <div>
                           <dt>الاشتراك السنوي</dt>
                           <dd>{money(row.annual_fee_cents)}</dd>
                         </div>
@@ -667,6 +690,19 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                         </div>
                       </dl>
                       <p className="crm-long-copy">{String(row.scope)}</p>
+                      {Array.isArray(row.plan_features) &&
+                        row.plan_features.length > 0 && (
+                          <details className="crm-plan-snapshot">
+                            <summary>مميزات الباقة وقت التعاقد</summary>
+                            <ul>
+                              {(row.plan_features as string[]).map(
+                                (feature) => (
+                                  <li key={feature}>{feature}</li>
+                                ),
+                              )}
+                            </ul>
+                          </details>
+                        )}
                       {Boolean(row.document_url) && (
                         <a
                           className="crm-inline-link"
@@ -691,6 +727,12 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                               row: {
                                 ...row,
                                 ...renewalDate(String(row.ends_on)),
+                                ...planContractDefaults(
+                                  data.plans.find(
+                                    (plan) =>
+                                      plan.id === row.plan_id && plan.active,
+                                  ),
+                                ),
                                 id: crypto.randomUUID(),
                                 status: "draft",
                                 setup_fee_cents: 0,
@@ -926,7 +968,7 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
           }
           fields={
             editor.resource === "account"
-              ? accountForm(kind, data.members)
+              ? accountForm(kind, data.members, data.plans, acc.plan_id)
               : editor.resource === "void"
                 ? [
                     {
@@ -943,11 +985,18 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                       : editor.resource,
                     data.members,
                     data.contracts,
+                    data.plans,
+                    editor.row.plan_id,
                   ).filter(
                     (f) => editor.resource !== "convert" || f.key !== "status",
                   )
           }
           initial={editor.row}
+          onFieldChange={
+            editor.resource === "contracts" || editor.resource === "convert"
+              ? (key, value) => contractPlanChange(data.plans, key, value)
+              : undefined
+          }
           onClose={() => setEditor(null)}
           onSave={save}
           submitLabel={

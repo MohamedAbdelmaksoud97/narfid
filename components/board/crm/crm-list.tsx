@@ -368,6 +368,7 @@ export function CrmList({ kind }: { kind: AccountKind }) {
             <TableRow>
               <TableHead>المؤسسة</TableHead>
               <TableHead>المرحلة</TableHead>
+              <TableHead>الخطة</TableHead>
               <TableHead>التواصل</TableHead>
               <TableHead>المسؤول</TableHead>
               <TableHead>
@@ -395,6 +396,10 @@ export function CrmList({ kind }: { kind: AccountKind }) {
                     {stages[acc.stage as keyof typeof stages] ?? acc.stage}
                   </Badge>
                   {acc.archived && <Badge variant="outline">مؤرشف</Badge>}
+                </TableCell>
+                <TableCell>
+                  {state.data?.plans.find((plan) => plan.id === acc.plan_id)
+                    ?.name ?? "لم تُحدد"}
                 </TableCell>
                 <TableCell>
                   {acc.contact_name || "—"}
@@ -442,7 +447,11 @@ export function CrmList({ kind }: { kind: AccountKind }) {
       {create && (
         <CrmEditor
           title={kind === "lead" ? "إضافة عميل محتمل" : "إضافة عميل"}
-          fields={accountForm(kind, state.data?.members ?? [])}
+          fields={accountForm(
+            kind,
+            state.data?.members ?? [],
+            state.data?.plans ?? [],
+          )}
           initial={create}
           onClose={() => setCreate(null)}
           onSave={async (fields) => {

@@ -6,6 +6,7 @@ import {
   parseMoney,
   paymentFields,
   resourceFields,
+  planFields,
 } from "../lib/crm/validation";
 import { contractBalance, renewalDate } from "../lib/crm/types";
 
@@ -124,4 +125,39 @@ test("CSV protects spreadsheet formulas and escapes quoted business names", () =
   assert.equal(csvCell('نادي "اختبار"'), '"نادي ""اختبار"""');
   assert.equal(csvCell("=HYPERLINK(1)"), '"\'=HYPERLINK(1)"');
   assert.equal(csvCell("+966500000000"), '"\'+966500000000"');
+});
+
+test("plans preserve exact annual prices, normalize features and validate links", () => {
+  const plan = planFields({
+    name: "تجريبية",
+    pricing_type: "fixed",
+    annual_fee_cents: 720099,
+    features: "اشتراكات\n حجوزات \nاشتراكات\n",
+    active: true,
+    sort_order: 1,
+  });
+  assert.equal(plan.annual_fee_cents, 720099);
+  assert.deepEqual(plan.features, ["اشتراكات", "حجوزات"]);
+  assert.equal(
+    planFields({ ...plan, pricing_type: "custom" }).annual_fee_cents,
+    null,
+  );
+  for (const input of [
+    { annual_fee_cents: null },
+    { features: [] },
+    { features: ["ط".repeat(201)] },
+    { sort_order: 0 },
+    { active: "yes" },
+  ])
+    assert.throws(() => planFields({ ...plan, ...input }));
+  assert.throws(() =>
+    accountFields({ name: "نادي تجريبي", plan_id: "bad" }, "lead"),
+  );
+  assert.equal(
+    accountFields(
+      { name: "نادي تجريبي", plan_id: "00000000-0000-4000-8000-000000000001" },
+      "client",
+    ).plan_id,
+    "00000000-0000-4000-8000-000000000001",
+  );
 });

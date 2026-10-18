@@ -67,9 +67,21 @@ export type Account = Row & {
   lost_reason: string;
   archived: boolean;
   converted_at: string | null;
+  plan_id: string | null;
 };
 export type Member = { id: string; name: string };
+export type Plan = Row & {
+  name: string;
+  description: string;
+  pricing_type: "fixed" | "custom";
+  annual_fee_cents: number | null;
+  setup_fee_cents: number;
+  features: string[];
+  active: boolean;
+  sort_order: number;
+};
 export type CrmData = {
+  plans: Plan[];
   accounts: Account[];
   members: Member[];
   followups: Row[];
@@ -78,6 +90,7 @@ export type CrmData = {
   tickets: Row[];
 };
 export type Profile = {
+  plans: Plan[];
   account: Account;
   members: Member[];
   contacts: Row[];

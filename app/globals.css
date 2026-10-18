@@ -4594,6 +4594,20 @@ h2 {
 .crm-section-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px; margin-block: 12px 20px; }
 .crm-section-heading h2 { font-size: 22px; letter-spacing: 0; }
 .crm-card-grid + .crm-section-heading { margin-top: 36px; }
+.crm-plan-search { max-width: 420px; }
+.crm-plan-filter { max-width: 240px; }
+.crm-plans-grid [data-slot="card"] { min-width: 0; }
+.crm-plan-order { color: var(--muted-foreground); font-size: 12px; }
+.crm-plan-price { font-size: 25px; font-weight: 600; margin-bottom: 10px; }
+.crm-plan-price small { color: var(--muted-foreground); font-size: 13px; font-weight: 400; }
+.crm-plan-features { display: flex; flex-direction: column; gap: 12px; margin-block: 20px; }
+.crm-plan-features li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; line-height: 1.8; overflow-wrap: anywhere; }
+.crm-plan-features svg { width: 16px; height: 16px; flex-shrink: 0; margin-top: 4px; color: var(--primary); }
+.crm-plan-footer { margin-top: auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.crm-plan-footer [data-slot="field"] { width: auto; }
+.crm-plan-snapshot { margin-block: 16px; font-size: 13px; line-height: 1.8; }
+.crm-plan-snapshot summary { cursor: pointer; color: var(--primary); }
+.crm-plan-snapshot ul { list-style: disc; padding-inline-start: 20px; margin-top: 12px; }
 .crm-record-list { display: flex; flex-direction: column; gap: 16px; }
 .crm-followup-title { display: flex; align-items: center; gap: 12px; }
 .crm-followup-title [data-slot="card-title"] { flex: 1; }
