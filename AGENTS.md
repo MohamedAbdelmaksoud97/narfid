@@ -39,6 +39,17 @@ Prefer existing shadcn components before creating custom UI.
 Before creating or changing UI, read and follow
 `.agents/skills/UI-system/SKILL.md` alongside the shadcn skill.
 
+## Imagery — Saudi audience
+
+People are welcome in website, article and marketing imagery. When people are
+shown, choose an Arab appearance appropriate for the Saudi audience and modest
+clothing suited to the context. This is not a ban on people: keep human scenes
+where they help the topic, rather than replacing all of them by default.
+If no suitable human image is available, use relevant sports venues, interiors,
+equipment or objects. Check backgrounds and reflections too.
+Do not infer or claim a stock model's actual nationality from appearance, or
+present stock or generated scenes as real narfid customers.
+
 ## Delivery — commit and push
 
 The owner wants completed work in `narfid` committed and pushed to the current
