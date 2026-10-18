@@ -10,6 +10,8 @@
     "auth:bootstrap": "node --env-file=.env.local scripts/bootstrap-board-users.mjs",
     "test:auth": "node --test tests/board-access.test.mjs",
     "test:tasks": "tsx --test tests/tasks.test.ts",
+    "test:crm": "tsx --test tests/crm.test.ts",
+    "test:crm:browser": "node node_modules/@playwright/test/cli.js test tests/browser/crm.spec.ts",
     "marketing:export": "tsx scripts/render-social-posts.tsx",
     "marketing:capture": "tsx scripts/capture-marketing-screens.ts",
     "marketing:captions": "tsx scripts/export-social-captions.ts",
