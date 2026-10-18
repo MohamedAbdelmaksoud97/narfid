@@ -150,6 +150,20 @@ test("CRM follows a lead through contract, onboarding, payments, support and ren
         })
       ).status(),
     ).toBe(403);
+    await page
+      .getByRole("button", { name: "تعديل الملف", exact: true })
+      .click();
+    dialog = page.getByRole("dialog");
+    await dialog.getByLabel("المدينة", { exact: true }).fill("جدة");
+    await dialog
+      .getByLabel("مرحلة البيع", { exact: true })
+      .selectOption("contacted");
+    await dialog.getByRole("button", { name: "حفظ", exact: true }).click();
+    await expect(dialog).toHaveCount(0);
+    await page.reload();
+    const edited = await snapshot();
+    expect(edited.account.city).toBe("جدة");
+    expect(edited.account.stage).toBe("contacted");
     await page.getByRole("tab", { name: "جهات الاتصال", exact: true }).click();
     await page
       .getByRole("button", { name: "إضافة جهة اتصال", exact: true })

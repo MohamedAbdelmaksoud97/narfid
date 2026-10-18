@@ -147,7 +147,9 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
       },
     });
   }
-  const editable = Boolean(acc && !acc.archived && !busy);
+  const editable = Boolean(
+    acc && !acc.archived && !busy && !state.loading && !state.error,
+  );
   function actions(resource: Resource, row: Row) {
     return !editable ? null : (
       <div className="crm-row-actions">
@@ -320,7 +322,7 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
           )}
           <Button
             variant="ghost"
-            disabled={busy}
+            disabled={busy || state.loading || Boolean(state.error)}
             onClick={() =>
               setConfirm({
                 title: acc.archived ? "استعادة الملف؟" : "أرشفة الملف؟",
@@ -987,6 +989,7 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                     data.contracts,
                     data.plans,
                     editor.row.plan_id,
+                    editor.row._new ? "draft" : editor.row.status,
                   ).filter(
                     (f) => editor.resource !== "convert" || f.key !== "status",
                   )

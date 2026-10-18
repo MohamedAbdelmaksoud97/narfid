@@ -116,11 +116,9 @@ test("board manages plans and selects them for leads, clients and contracts with
     expect(snapshot.contracts[0].plan_id).toBe(planId);
     expect(snapshot.contracts[0].plan_features).toHaveLength(3);
     await page.goto(`${base}/board/plans`);
-    let card = page
-      .locator('[data-slot="card"]')
-      .filter({
-        has: page.getByRole("heading", { name: planName, exact: true }),
-      });
+    let card = page.locator('[data-slot="card"]').filter({
+      has: page.getByRole("heading", { name: planName, exact: true }),
+    });
     await card.getByRole("button", { name: "تعديل", exact: true }).click();
     dialog = page.getByRole("dialog");
     await dialog.getByLabel("السعر السنوي", { exact: false }).fill("6000.99");
@@ -169,12 +167,41 @@ test("board manages plans and selects them for leads, clients and contracts with
     directId = (await directResponse.json()).account.id;
     await expect(page).toHaveURL(new RegExp(`/board/clients/${directId}$`));
     expect((await profile(directId)).account.plan_id).toBe(planId);
+    await page
+      .getByRole("button", { name: "تعديل الملف", exact: true })
+      .click();
+    dialog = page.getByRole("dialog");
+    const otherPlan = (await catalog()).plans.find(
+      (row: { id: string; active: boolean }) => row.id !== planId && row.active,
+    );
+    await dialog
+      .getByLabel("اسم المؤسسة", { exact: false })
+      .fill(`${accountName}-DIRECT-EDITED`);
+    await dialog.getByLabel("المدينة", { exact: true }).fill("الدمام");
+    await dialog
+      .getByLabel("خطة الاشتراك", { exact: true })
+      .selectOption(otherPlan.id);
+    await dialog.getByRole("button", { name: "حفظ", exact: true }).click();
+    await expect(dialog).toHaveCount(0);
+    await page.reload();
+    const changedClient = await profile(directId);
+    expect(changedClient.account.name).toBe(`${accountName}-DIRECT-EDITED`);
+    expect(changedClient.account.city).toBe("الدمام");
+    expect(changedClient.account.plan_id).toBe(otherPlan.id);
+    await page
+      .getByRole("button", { name: "تعديل الملف", exact: true })
+      .click();
+    dialog = page.getByRole("dialog");
+    await dialog
+      .getByLabel("خطة الاشتراك", { exact: true })
+      .selectOption(planId);
+    await dialog.getByRole("button", { name: "حفظ", exact: true }).click();
+    await expect(dialog).toHaveCount(0);
+    expect((await profile(directId)).account.plan_id).toBe(planId);
     await page.goto(`${base}/board/plans`);
-    card = page
-      .locator('[data-slot="card"]')
-      .filter({
-        has: page.getByRole("heading", { name: planName, exact: true }),
-      });
+    card = page.locator('[data-slot="card"]').filter({
+      has: page.getByRole("heading", { name: planName, exact: true }),
+    });
     await expect(
       card.getByRole("button", { name: `حذف باقة ${planName}` }),
     ).toBeDisabled();

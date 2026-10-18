@@ -16,10 +16,11 @@ export async function POST(request: Request) {
       Array.isArray(body.contract)
     )
       throw new CrmError("أكمل بيانات العقد عند تأكيد التعاقد.");
-    const contract = resourceFields("contracts", {
+    const contract: Record<string, unknown> = resourceFields("contracts", {
       ...body.contract,
       status: "signed",
     });
+    if (!Object.hasOwn(body.contract, "plan_id")) delete contract.plan_id;
     const { data, error } = await client.rpc("convert_crm_lead", {
       p_id: uuid(body.id),
       p_revision: revision(body.revision),

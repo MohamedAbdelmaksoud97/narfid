@@ -1,21 +1,9 @@
 import "server-only";
 import { redirect } from "next/navigation";
-import { getBoardMember } from "@/lib/auth/session";
-import { createClient } from "@/lib/server";
+import { getBoardAccess } from "@/lib/auth/session";
 
 export async function marketingAccess() {
-  const member = await getBoardMember();
-  if (!member) return "unauthorized" as const;
-  const supabase = await createClient(10000);
-  const membership = await supabase
-    .from("board_members")
-    .select("active")
-    .eq("user_id", member.id)
-    .maybeSingle();
-  if (membership.error) return "unavailable" as const;
-  return membership.data?.active
-    ? ("allowed" as const)
-    : ("forbidden" as const);
+  return (await getBoardAccess()).status;
 }
 export async function requireMarketingAccess() {
   const access = await marketingAccess();

@@ -11,11 +11,26 @@ export async function articleRequest<T>(
   url: string,
   options: RequestInit,
 ): Promise<T> {
-  const response = await fetch(url, {
-    ...options,
-    credentials: "same-origin",
-    cache: "no-store",
-  });
+  let response: Response;
+  try {
+    const deadline = AbortSignal.timeout(
+      options.body instanceof FormData ? 60000 : 30000,
+    );
+    response = await fetch(url, {
+      ...options,
+      credentials: "same-origin",
+      cache: "no-store",
+      signal: options.signal
+        ? AbortSignal.any([options.signal, deadline])
+        : deadline,
+    });
+  } catch (error) {
+    if (error instanceof Error && error.name === "TimeoutError")
+      throw new Error(
+        "انتهت مهلة الاتصال. راجع حالة الحفظ ثم أعد المحاولة؛ تعديلاتك ما زالت في المحرر.",
+      );
+    throw error;
+  }
   let body;
   try {
     body = await response.json();

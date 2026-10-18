@@ -152,16 +152,27 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
     );
     expect(archive.status()).toBe(200);
     expect(archive.headers()["content-type"]).toBe("application/zip");
-    for (const post of postsFor(platform.id)) {
-      const response = await page.request.get(`${base}${postAsset(post)}`);
-      expect(response.status()).toBe(200);
-      expect(response.headers()["cache-control"]).toContain("no-store");
-      expect(response.headers()["x-robots-tag"]).toContain("noindex");
-      const png = await sharp(await response.body()).metadata();
-      expect([png.width, png.height]).toEqual([
-        platform.width,
-        platform.height,
-      ]);
+    await archive.dispose();
+    const platformPosts = postsFor(platform.id);
+    // Keep coverage of every asset while bounding concurrency and response memory.
+    for (let start = 0; start < platformPosts.length; start += 4) {
+      await Promise.all(
+        platformPosts.slice(start, start + 4).map(async (post) => {
+          const response = await page.request.get(`${base}${postAsset(post)}`);
+          try {
+            expect(response.status()).toBe(200);
+            expect(response.headers()["cache-control"]).toContain("no-store");
+            expect(response.headers()["x-robots-tag"]).toContain("noindex");
+            const png = await sharp(await response.body()).metadata();
+            expect([png.width, png.height]).toEqual([
+              platform.width,
+              platform.height,
+            ]);
+          } finally {
+            await response.dispose();
+          }
+        }),
+      );
     }
   }
   await page.goto(`${base}/board/marketing/social/instagram`);

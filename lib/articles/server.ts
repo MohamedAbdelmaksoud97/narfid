@@ -8,7 +8,7 @@ import { ArticleError } from "./validation";
 import type { Article, Category, Publication } from "./types";
 
 export async function articleSession() {
-  const supabase = await createClient();
+  const supabase = await createClient(15000);
   const { data, error } = await supabase.auth.getUser();
   if (error || !isBoardUser(data.user) || !data.user)
     throw new ArticleError("سجّل دخولك بحساب مجلس الإدارة.", 401);

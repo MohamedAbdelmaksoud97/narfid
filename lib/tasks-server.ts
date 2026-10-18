@@ -25,7 +25,7 @@ export async function taskSession() {
   if (membership.error)
     throw new TaskError("تعذر التحقق من صلاحياتك. حاول مرة أخرى.", 503);
   if (!membership.data?.active)
-    throw new TaskError("حسابك لا يملك صلاحية إدارة المهام.", 403);
+    throw new TaskError("حسابك لا يملك صلاحية الوصول إلى لوحة الإدارة.", 403);
   return supabase;
 }
 

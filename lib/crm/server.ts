@@ -144,15 +144,19 @@ export async function account(client: Client, id: string, writable = false) {
 }
 export async function profile(client: Client, id: string): Promise<Profile> {
   const acc = await account(client, id);
-  const entries = await Promise.all(
-    [...resources, "payments", "events"].map((resource) =>
-      allRows(client, `crm_${resource}`, id),
+  const [entries, team, catalog] = await Promise.all([
+    Promise.all(
+      [...resources, "payments", "events"].map((resource) =>
+        allRows(client, `crm_${resource}`, id),
+      ),
     ),
-  );
+    members(client),
+    plans(client),
+  ]);
   return {
     account: acc,
-    members: await members(client),
-    plans: await plans(client),
+    members: team,
+    plans: catalog,
     ...Object.fromEntries(
       [...resources, "payments", "events"].map((key, i) => [key, entries[i]]),
     ),
@@ -183,7 +187,10 @@ export async function changeAccount(request: Request) {
   }
   const acc = await account(client, uuid(body.id));
   let input: Record<string, unknown>;
-  if (typeof (fields as Record<string, unknown>).archived === "boolean")
+  if (
+    Object.keys(fields).length === 1 &&
+    typeof (fields as Record<string, unknown>).archived === "boolean"
+  )
     input = { archived: (fields as Record<string, unknown>).archived };
   else {
     if (acc.archived) throw new CrmError("استعد الملف قبل تعديله.", 409);

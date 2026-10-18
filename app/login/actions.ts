@@ -51,6 +51,21 @@ export async function loginAction(
     return { error: invalidCredentials, email };
   }
 
+  const membership = await supabase
+    .from("board_members")
+    .select("active")
+    .eq("user_id", data.user.id)
+    .maybeSingle();
+  if (membership.error || !membership.data?.active) {
+    await supabase.auth.signOut({ scope: "local" });
+    return {
+      error: membership.error
+        ? "تعذر التحقق من صلاحيات الحساب. حاول مرة أخرى."
+        : "حسابك غير مفعّل للوصول إلى لوحة الإدارة.",
+      email,
+    };
+  }
+
   revalidatePath("/", "layout");
   redirect("/board");
 }

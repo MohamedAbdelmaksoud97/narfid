@@ -82,6 +82,7 @@ export function CrmPlans() {
   const [editor, setEditor] = useState<Record<string, unknown> | null>(null),
     [deleting, setDeleting] = useState<Plan | null>(null);
   const plans = state.data?.plans ?? [];
+  const locked = busy || state.loading || Boolean(state.error);
   async function mutate(method: string, body: object) {
     setBusy(true);
     setError("");
@@ -111,6 +112,7 @@ export function CrmPlans() {
           </p>
         </div>
         <Button
+          disabled={locked}
           onClick={() =>
             setEditor({
               id: crypto.randomUUID(),
@@ -215,7 +217,7 @@ export function CrmPlans() {
                   <Button
                     size="sm"
                     variant="outline"
-                    disabled={busy}
+                    disabled={locked}
                     onClick={() =>
                       setEditor({ ...plan, features: plan.features.join("\n") })
                     }
@@ -226,7 +228,7 @@ export function CrmPlans() {
                   <Button
                     size="sm"
                     variant="destructive"
-                    disabled={busy || linked}
+                    disabled={locked || linked}
                     aria-label={`حذف باقة ${plan.name}`}
                     onClick={() => setDeleting(plan)}
                   >
@@ -243,7 +245,7 @@ export function CrmPlans() {
                     id={`plan-active-${plan.id}`}
                     aria-label={`إتاحة باقة ${plan.name}`}
                     checked={plan.active}
-                    disabled={busy}
+                    disabled={locked}
                     onCheckedChange={async (active) => {
                       try {
                         await mutate("PATCH", {

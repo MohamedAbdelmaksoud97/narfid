@@ -7,20 +7,12 @@ import { usePathname } from "next/navigation";
 import {
   ChevronLeft,
   ExternalLink,
-  FileText,
-  LayoutDashboard,
-  ListChecks,
   LogOut,
-  Megaphone,
-  Palette,
-  Search,
   ShieldCheck,
-  UsersRound,
-  UserRoundSearch,
-  Package,
   X,
 } from "lucide-react";
 import { logoutAction } from "@/app/login/actions";
+import { boardSections as sections } from "@/lib/board-sections";
 import { useConfirmNavigation } from "@/components/articles/navigation-guard-provider";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -44,17 +36,6 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 
-const sections = [
-  { label: "نظرة عامة", href: "/board", icon: LayoutDashboard },
-  { label: "المهام القادمة", href: "/board/tasks", icon: ListChecks },
-  { label: "العملاء المحتملون", href: "/board/leads", icon: UserRoundSearch },
-  { label: "العملاء", href: "/board/clients", icon: UsersRound },
-  { label: "الباقات", href: "/board/plans", icon: Package },
-  { label: "التسويق", href: "/board/marketing", icon: Megaphone },
-  { label: "هوية نرفد", href: "/board/brand", icon: Palette },
-  { label: "المقالات", href: "/board/articles", icon: FileText },
-  { label: "تحسين البحث", href: "/board/seo", icon: Search },
-] as const;
 type Props = {
   member: { name: string; email: string };
   children: ReactNode;

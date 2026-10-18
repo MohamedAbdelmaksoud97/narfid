@@ -183,6 +183,7 @@ export function resourceForm(
   contracts: { id: string; title?: unknown; status?: unknown }[] = [],
   plans: Plan[] = [],
   currentPlan?: unknown,
+  contractStatus?: unknown,
 ): FieldSpec[] {
   const title = field("title", "العنوان", { required: true }),
     body = field("body", "التفاصيل", { type: "textarea", wide: true });
@@ -244,7 +245,9 @@ export function resourceForm(
         }),
         field("status", "حالة العقد", {
           options: {
-            draft: labels.draft,
+            ...(contractStatus && contractStatus !== "draft"
+              ? {}
+              : { draft: labels.draft }),
             signed: labels.signed,
             cancelled: labels.cancelled,
           },

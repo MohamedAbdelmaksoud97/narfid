@@ -204,6 +204,7 @@ export function CrmList({ kind }: { kind: AccountKind }) {
         </div>
         <div className="crm-actions">
           <Button
+            disabled={state.loading || Boolean(state.error)}
             onClick={() =>
               setCreate({
                 ...defaults("account", kind),
