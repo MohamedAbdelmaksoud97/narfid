@@ -47,8 +47,13 @@ export class ApiError extends Error {
     super(message);
   }
 }
-export async function crmRequest(path: string, method = "GET", body?: object) {
-  const response = await fetch(`/api/board/crm/${path}`, {
+export async function crmRequest(
+  path: string,
+  method = "GET",
+  body?: object,
+  root = "/api/board/crm",
+) {
+  const response = await fetch(`${root}${path ? `/${path}` : ""}`, {
     method,
     cache: "no-store",
     headers: body ? { "Content-Type": "application/json" } : undefined,
@@ -60,7 +65,7 @@ export async function crmRequest(path: string, method = "GET", body?: object) {
     throw new ApiError(data.error || "تعذر إتمام الطلب.", data.field);
   return data;
 }
-export function useCrmData<T>(path: string) {
+export function useCrmData<T>(path: string, root = "/api/board/crm") {
   const [data, setData] = useState<T | null>(null),
     [error, setError] = useState(""),
     [loading, setLoading] = useState(true);
@@ -69,7 +74,7 @@ export function useCrmData<T>(path: string) {
     const current = ++generation.current;
     setLoading(true);
     try {
-      const result = await crmRequest(path);
+      const result = await crmRequest(path, "GET", undefined, root);
       if (current === generation.current) {
         setData(result);
         setError("");
@@ -80,7 +85,7 @@ export function useCrmData<T>(path: string) {
     } finally {
       if (current === generation.current) setLoading(false);
     }
-  }, [path]);
+  }, [path, root]);
   useEffect(() => {
     const timer = window.setTimeout(() => void reload(), 0);
     const active = generation;

@@ -3,6 +3,7 @@ import {
   leadStages,
   priorities,
   sources,
+  todaySaudi,
   type AccountKind,
   type Resource,
 } from "./types";
@@ -190,6 +191,7 @@ export function resourceFields(resource: Resource, input: Input) {
         plan_id: owner(input, "plan_id"),
         starts_on: starts,
         ends_on: ends,
+        payment_due_on: date(input, "payment_due_on"),
         annual_fee_cents: number(input, "annual_fee_cents"),
         setup_fee_cents: number(input, "setup_fee_cents"),
         status: option(
@@ -293,10 +295,17 @@ export function paymentFields(input: Input) {
       400,
       "amount_cents",
     );
+  const paid_on = date(input, "paid_on", true)!;
+  if (paid_on > todaySaudi())
+    throw new CrmError(
+      "تاريخ التحصيل لا يمكن أن يكون في المستقبل؛ سجّل موعد السداد في العقد.",
+      400,
+      "paid_on",
+    );
   return {
     contract_id: uuid(input.contract_id),
     amount_cents: amount,
-    paid_on: date(input, "paid_on", true),
+    paid_on,
     method: option(
       input,
       "method",

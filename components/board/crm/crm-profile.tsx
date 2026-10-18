@@ -287,6 +287,12 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
           </p>
         </div>
         <div className="crm-actions">
+          <Link
+            href={`/board/finance?account_id=${acc.id}`}
+            className={buttonVariants({ variant: "outline" })}
+          >
+            مالية المؤسسة
+          </Link>
           {editable && (
             <Button
               variant="outline"
@@ -681,6 +687,12 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
                         <div>
                           <dt>التجهيز والتطوير</dt>
                           <dd>{money(row.setup_fee_cents)}</dd>
+                        </div>
+                        <div>
+                          <dt>موعد سداد العقد</dt>
+                          <dd>
+                            {dateLabel(row.payment_due_on || row.starts_on)}
+                          </dd>
                         </div>
                         <div>
                           <dt>المحصّل</dt>

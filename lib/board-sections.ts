@@ -8,6 +8,7 @@ import {
   UsersRound,
   UserRoundSearch,
   Package,
+  Wallet,
 } from "lucide-react";
 
 // One directory drives the sidebar, breadcrumbs and overview shortcuts.
@@ -50,6 +51,14 @@ export const boardSections = [
     icon: Package,
     description:
       "المميزات والأسعار السنوية وإتاحة الباقات وربطها بملفات العملاء والعقود.",
+  },
+  {
+    label: "المالية",
+    href: "/board/finance",
+    action: "إدارة الماديات",
+    icon: Wallet,
+    description:
+      "تحصيلات العملاء والمصروفات والاستحقاقات وصافي الحركة، مع تقارير قابلة للتصدير.",
   },
   {
     label: "التسويق",

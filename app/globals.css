@@ -4534,6 +4534,24 @@ h2 {
 .landing-article-link:hover .landing-article-read > svg { translate: -3px -3px; }
 .landing-article-loading { display: flex; flex-direction: column; gap: 20px; min-height: 430px; }
 .crm-page { padding-block: 32px 48px; min-width: 0; }
+.finance-filters { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) minmax(0,2fr); gap: 16px; }
+.finance-filters [data-slot="native-select-wrapper"] { width: 100%; }
+.finance-record-filters { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 0 16px; }
+.finance-record-filters > input { flex: 1 1 240px; }
+.finance-record-filters [data-slot="native-select-wrapper"] { flex: 1 1 180px; }
+.finance-note, .finance-footnote { color: var(--muted-foreground); font-size: 13px; line-height: 1.9; }
+.finance-stats [data-slot="card"] { gap: 0; min-width: 0; }
+.finance-stats [data-slot="card-content"] { padding-top: 0; }
+.finance-breakdown { display: flex; flex-direction: column; gap: 16px; }
+.finance-breakdown li > div { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 13px; margin-bottom: 8px; }
+.finance-breakdown strong { font-weight: 500; }
+.finance-breakdown progress { width: 100%; height: 6px; accent-color: var(--primary); }
+.finance-footnote { margin-top: 24px; }
+.finance-page [data-slot="table-cell"] { overflow-wrap: anywhere; white-space: normal; max-width: 320px; }
+@media (max-width: 700px) {
+  .finance-filters { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .finance-filters > [data-slot="field"]:last-child { grid-column: 1 / -1; }
+}
 .crm-page, .crm-editor { --input: color-mix(in srgb, var(--foreground) 52%, var(--background)); }
 .crm-page :is([data-slot="input"], [data-slot="native-select"], [data-slot="textarea"]), .crm-editor :is([data-slot="input"], [data-slot="native-select"], [data-slot="textarea"]) { background-color: var(--background); color: var(--foreground); }
 .crm-page-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 24px; }

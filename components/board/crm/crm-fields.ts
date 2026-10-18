@@ -235,6 +235,10 @@ export function resourceForm(
         field("reference", "رقم أو مرجع العقد"),
         field("starts_on", "بداية العقد", { type: "date", required: true }),
         field("ends_on", "نهاية العقد", { type: "date", required: true }),
+        field("payment_due_on", "موعد سداد العقد", {
+          type: "date",
+          hint: "إذا لم تحدّده، تستخدم المالية تاريخ بداية العقد لمتابعة الاستحقاق.",
+        }),
         field("annual_fee_cents", "قيمة الاشتراك السنوي (ر.س)", {
           type: "money",
           required: true,
