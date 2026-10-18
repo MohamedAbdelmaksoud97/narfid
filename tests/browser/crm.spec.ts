@@ -42,10 +42,72 @@ test("CRM follows a lead through contract, onboarding, payments, support and ren
   }
   try {
     await page.goto(`${base}/board/leads`);
+    const directory = await (
+      await page.request.get(`${api}/accounts?kind=lead`)
+    ).json();
+    expect(directory.members.length).toBeGreaterThan(1);
+    const assignee = directory.members.find(
+      (member: { name: string }) => member.name === "الإدارة المالية",
+    );
+    expect(assignee).toBeTruthy();
     await page
       .getByRole("button", { name: "إضافة عميل محتمل", exact: true })
       .click();
     let dialog = page.getByRole("dialog");
+    const ownerSelect = dialog.getByLabel("مسؤول المتابعة في نرفد");
+    await expect(ownerSelect.locator("option")).toHaveCount(
+      directory.members.length + 1,
+    );
+    await ownerSelect.selectOption(assignee.id);
+    const hint = dialog.getByText("نادي لياقة، أكاديمية، ملاعب…", {
+      exact: true,
+    });
+    await expect(hint).toBeVisible();
+    expect(["right", "start"]).toContain(
+      await hint.evaluate((node) => getComputedStyle(node).textAlign),
+    );
+    const contrast = await dialog
+      .getByLabel("المدينة", { exact: true })
+      .evaluate((node) => {
+        const style = getComputedStyle(node),
+          panel = getComputedStyle(node.closest('[role="dialog"]')!);
+        const canvas = document.createElement("canvas");
+        canvas.width = canvas.height = 1;
+        const ctx = canvas.getContext("2d")!;
+        const luminance = (color: string) => {
+          ctx.clearRect(0, 0, 1, 1);
+          ctx.fillStyle = color;
+          ctx.fillRect(0, 0, 1, 1);
+          const channels = Array.from(ctx.getImageData(0, 0, 1, 1).data)
+            .slice(0, 3)
+            .map((v) => v / 255)
+            .map((v) =>
+              v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4,
+            );
+          return (
+            channels[0] * 0.2126 + channels[1] * 0.7152 + channels[2] * 0.0722
+          );
+        };
+        const border = luminance(style.borderTopColor);
+        return [style.backgroundColor, panel.backgroundColor].map((color) => {
+          const background = luminance(color);
+          return (
+            (Math.max(border, background) + 0.05) /
+            (Math.min(border, background) + 0.05)
+          );
+        });
+      });
+    for (const ratio of contrast) expect(ratio).toBeGreaterThanOrEqual(3);
+    await page.setViewportSize({ width: 1366, height: 768 });
+    await page.screenshot({ path: "test-results/crm-editor-desktop.png" });
+    await page.setViewportSize({ width: 390, height: 844 });
+    expect(
+      await page.evaluate(
+        () => document.documentElement.scrollWidth <= innerWidth,
+      ),
+    ).toBe(true);
+    await page.screenshot({ path: "test-results/crm-editor-mobile.png" });
+    await page.setViewportSize({ width: 1366, height: 768 });
     await dialog.getByLabel("اسم المؤسسة", { exact: false }).fill(name);
     await dialog.getByLabel("المدينة", { exact: true }).fill("الرياض");
     await dialog.getByLabel("مسؤول التواصل لدى المؤسسة").fill("مسؤول اختبار");
@@ -76,6 +138,7 @@ test("CRM follows a lead through contract, onboarding, payments, support and ren
     await page.screenshot({ path: "test-results/crm-leads-desktop.png" });
     await page.getByRole("link", { name, exact: true }).click();
     const initial = await snapshot();
+    expect(initial.account.owner_id).toBe(assignee.id);
     expect(
       (
         await page.request.patch(`${api}/accounts`, {
@@ -202,6 +265,7 @@ test("CRM follows a lead through contract, onboarding, payments, support and ren
     await add("tickets", {
       title: "طلب دعم تجريبي",
       body: "فحص الدعم",
+      owner_id: assignee.id,
       status: "open",
       priority: "high",
       category: "support",

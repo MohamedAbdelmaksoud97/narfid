@@ -4534,6 +4534,8 @@ h2 {
 .landing-article-link:hover .landing-article-read > svg { translate: -3px -3px; }
 .landing-article-loading { display: flex; flex-direction: column; gap: 20px; min-height: 430px; }
 .crm-page { padding-block: 32px 48px; min-width: 0; }
+.crm-page, .crm-editor { --input: color-mix(in srgb, var(--foreground) 52%, var(--background)); }
+.crm-page :is([data-slot="input"], [data-slot="native-select"], [data-slot="textarea"]), .crm-editor :is([data-slot="input"], [data-slot="native-select"], [data-slot="textarea"]) { background-color: var(--background); color: var(--foreground); }
 .crm-page-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; margin-bottom: 24px; }
 .crm-page-heading h1 { font-size: clamp(27px, 3vw, 38px); line-height: 1.5; letter-spacing: -0.5px; overflow-wrap: anywhere; }
 .crm-page-heading .section-kicker { margin-bottom: 8px; }
