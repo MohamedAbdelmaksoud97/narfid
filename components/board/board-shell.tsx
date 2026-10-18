@@ -102,8 +102,13 @@ function Workspace({ member, children }: Omit<Props, "defaultOpen">) {
             </Button>
           )}
         </SidebarHeader>
-        <SidebarSeparator />
-        <SidebarContent>
+        <SidebarSeparator className="board-sidebar-separator" />
+        <SidebarContent
+          className="board-sidebar-scroll"
+          tabIndex={0}
+          role="region"
+          aria-label="قائمة أقسام الإدارة القابلة للتمرير"
+        >
           <SidebarGroup>
             <SidebarGroupLabel>مساحة نرفد الداخلية</SidebarGroupLabel>
             <SidebarGroupContent>
@@ -177,7 +182,7 @@ function Workspace({ member, children }: Omit<Props, "defaultOpen">) {
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
-        <SidebarSeparator />
+        <SidebarSeparator className="board-sidebar-separator" />
         <SidebarFooter className="board-sidebar-footer">
           <div className="board-sidebar-member">
             <ShieldCheck aria-hidden="true" />

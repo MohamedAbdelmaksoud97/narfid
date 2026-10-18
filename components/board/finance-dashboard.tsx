@@ -307,6 +307,27 @@ export function FinanceDashboard() {
           label: expense ? "المورد أو الجهة المستفيدة" : "الجهة الدافعة",
         },
         {
+          key: "identity_project_id",
+          label: "مشروع الهوية المرتبط",
+          options: {
+            "": "غير مرتبط بمشروع هوية",
+            ...Object.fromEntries(
+              (data?.identity_projects ?? [])
+                .filter(
+                  (p) =>
+                    p.id === editor.row.identity_project_id ||
+                    (!p.archived &&
+                      (expense ||
+                        (p.quote_status === "accepted" &&
+                          p.status !== "cancelled"))),
+                )
+                .map((p) => [p.id, `${p.title} · ${clientName(p.account_id)}`]),
+            ),
+          },
+          hint: "اختيار المشروع يحدد مؤسسته تلقائيًا. تحصيلاته تُصنّف خدمات الهوية البصرية.",
+          wide: true,
+        },
+        {
           key: "due_on",
           label: "موعد الاستحقاق",
           type: "date",
@@ -468,7 +489,7 @@ export function FinanceDashboard() {
                 value: summary.outstanding,
                 icon: ReceiptText,
                 id: "outstanding",
-                note: `المتبقي من العقود الموقعة كما في ${dateLabel(data!.as_of)}`,
+                note: `المتبقي من العقود وعروض الهوية المعتمدة كما في ${dateLabel(data!.as_of)}`,
               },
             ].map((item) => (
               <Card key={item.id}>
@@ -919,9 +940,11 @@ export function FinanceDashboard() {
                 </Badge>
               </div>
               <p className="crm-help">
-                تشمل المتبقي من كل العقود الموقعة، بما فيها العملاء المؤرشفون،
-                كما في {dateLabel(data!.as_of)}. تعتمد على موعد سداد العقد أو
-                تاريخ بدايته إن لم يُحدد موعد؛ فلتر الفترة لا يغيّر هذا الرصيد.
+                تشمل المتبقي من العقود الموقعة وعروض الهوية المعتمدة، بما فيها
+                الملفات المؤرشفة، كما في {dateLabel(data!.as_of)}. تعتمد على
+                موعد سداد العقد أو تاريخ بدايته إن لم يُحدد موعد. عروض الهوية
+                لها موعد سداد مستقل، ولا تُصنّف متأخرة دون تحديده؛ فلتر الفترة
+                لا يغيّر الرصيد.
               </p>
               {summary.dues.length ? (
                 <Table>
@@ -1001,6 +1024,61 @@ export function FinanceDashboard() {
               ) : (
                 noRecords
               )}
+              {summary.identityDues.length > 0 && (
+                <>
+                  <div className="crm-section-heading">
+                    <h2>مستحقات مشروعات الهوية</h2>
+                  </div>
+                  <Table>
+                    <TableHeader>
+                      <TableRow>
+                        <TableHead>المؤسسة والمشروع</TableHead>
+                        <TableHead>قيمة العرض</TableHead>
+                        <TableHead>المحصّل</TableHead>
+                        <TableHead>المتبقي</TableHead>
+                        <TableHead>موعد السداد</TableHead>
+                        <TableHead>الإجراء</TableHead>
+                      </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                      {summary.identityDues.map((row) => (
+                        <TableRow key={row.project.id}>
+                          <TableCell>
+                            {clientLink(row.account_id)}
+                            <small>
+                              {row.project.title}
+                              {row.project.archived ? " · مؤرشف" : ""}
+                            </small>
+                          </TableCell>
+                          <TableCell>{money(row.total)}</TableCell>
+                          <TableCell>{money(row.received)}</TableCell>
+                          <TableCell>{money(row.remaining)}</TableCell>
+                          <TableCell>
+                            {row.due_on ? dateLabel(row.due_on) : "لم يُحدد"}
+                            <small>
+                              <Badge
+                                variant={
+                                  row.overdue ? "destructive" : "secondary"
+                                }
+                              >
+                                {row.overdue ? "متأخر" : "مستحق"}
+                              </Badge>
+                            </small>
+                          </TableCell>
+                          <TableCell>
+                            <Link
+                              className="crm-inline-link"
+                              href={`/board/identity-projects/${row.project.id}`}
+                            >
+                              متابعة وتحصيل المشروع
+                            </Link>
+                          </TableCell>
+                        </TableRow>
+                      ))}
+                    </TableBody>
+                  </Table>
+                </>
+              )}
             </TabsContent>
           </Tabs>
           <p className="finance-footnote">
@@ -1042,7 +1120,20 @@ export function FinanceDashboard() {
                         ),
                       }
                     : {}
-              : undefined
+              : (key, value): Record<string, string> => {
+                  if (key !== "identity_project_id" || !value) return {};
+                  const selected = data?.identity_projects?.find(
+                    (p) => p.id === value,
+                  );
+                  return selected
+                    ? {
+                        account_id: selected.account_id,
+                        ...(editor.mode === "income"
+                          ? { category: "visual_identity" }
+                          : {}),
+                      }
+                    : {};
+                }
           }
           onSave={async (fields) => {
             if (editor.mode === "payment") {

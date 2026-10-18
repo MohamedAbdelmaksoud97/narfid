@@ -87,6 +87,7 @@ export function PublicFooter() {
         ))}
         <Link href="/pricing">الباقات</Link>
         <Link href="/technology-partnership">الشراكة التقنية</Link>
+        <Link href="/visual-identity">الهوية البصرية</Link>
         <Link href="/about">عن نرفد</Link>
         <Link href="/contact">التواصل</Link>
         <Link href="/articles">المقالات</Link>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MemberAppSection } from "@/components/member-app-section";
+import { IdentityServiceSection } from "@/components/identity-service-section";
 import dashboardImage from "@/public/images/nerved-dashboard.png";
 import { DirectionProvider } from "@base-ui/react/direction-provider";
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
@@ -783,6 +784,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
           </section>
 
           <MemberAppSection onRequest={() => openDemo("شراكة تقنية")} />
+          <IdentityServiceSection />
 
           <section
             className="pricing-section container section-space"
@@ -1049,6 +1051,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
               ))}
               <Link href="/pricing">تفاصيل الباقات السنوية</Link>
               <Link href="/technology-partnership">الشراكة التقنية</Link>
+              <Link href="/visual-identity">الهوية البصرية لمؤسستك</Link>
               <Link href="/about">عن نرفد</Link>
               <Link href="/articles">مقالات نرفد</Link>
             </div>

@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/about",
     "/contact",
     "/technology-partnership",
+    "/visual-identity",
     "/authors/nerved-team",
     ...solutions.map((s) => `/solutions/${s.slug}`),
   ].map((path) => ({ url: absoluteUrl(path) }));

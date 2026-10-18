@@ -14,6 +14,7 @@ export const navigation = [
   { label: "المنظومة", href: "#platform" },
   { label: "لماذا نرفد؟", href: "#why-nerved" },
   { label: "تطبيق الأعضاء", href: "#member-app" },
+  { label: "الهوية البصرية", href: "#visual-identity" },
   { label: "الباقات", href: "#pricing" },
   { label: "الأسئلة الشائعة", href: "#faq" },
   { label: "المقالات", href: "/articles" },
@@ -134,6 +135,11 @@ export const plans = [
 ] as const;
 
 export const faqs = [
+  {
+    question: "هل تقدم نرفد تصميم الهوية البصرية للمؤسسة؟",
+    answer:
+      "نعم، يمكنك طلب تأسيس هوية جديدة أو تطوير هوية قائمة أو تطبيقها رقميًا. الخدمة اختيارية وبعرض سعر مستقل عن اشتراك المنصة؛ نحدد التسليمات والمدة وجولات التعديل وتطبيقات الهوية قبل الاتفاق.",
+  },
   {
     question: "هل نرفد مناسب لنوع مؤسستي الرياضية؟",
     answer:

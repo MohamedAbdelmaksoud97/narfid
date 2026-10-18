@@ -293,6 +293,12 @@ export function CrmProfile({ id, kind }: { id: string; kind: AccountKind }) {
           >
             مالية المؤسسة
           </Link>
+          <Link
+            href={`/board/identity-projects?account_id=${acc.id}`}
+            className={buttonVariants({ variant: "outline" })}
+          >
+            مشروعات الهوية
+          </Link>
           {editable && (
             <Button
               variant="outline"

@@ -1,5 +1,6 @@
 import { PublicPage, ContactCta } from "@/components/public/public-page";
 import { pageMetadata } from "@/lib/seo";
+import Link from "next/link";
 const description =
   "ناقش مع نرفد تطوير تطبيق خاص لمؤسستك الرياضية، أو ربط بوابات دخول متوافقة وتكاملات خارجية، بنطاق وتكلفة وصيانة محددة.";
 export const metadata = pageMetadata(
@@ -48,6 +49,14 @@ export default function Page() {
           </p>
         </section>
       </div>
+      <section className="public-checklist">
+        <h2>تجربة رقمية تحمل هوية مؤسستك</h2>
+        <p>
+          إذا احتجت لتأسيس الهوية أو تطويرها قبل تطبيقها على الموقع أو التطبيق،
+          يمكنك مناقشة <Link href="/visual-identity">خدمة الهوية البصرية</Link>.
+          لها عرض سعر وتسليمات مستقلة عن اشتراك المنصة وتطوير التطبيق.
+        </p>
+      </section>
       <section className="public-checklist">
         <h2>كيف نبدأ؟</h2>
         <ol>

@@ -13,6 +13,7 @@ test("all board sections share navigation, private APIs and a consistent login/l
     "/api/board/crm/accounts?kind=client",
     "/api/board/crm/plans",
     "/api/board/finance",
+    "/api/board/identity-projects",
     "/api/board/marketing/publications?platform=snapchat",
   ];
   for (const path of reads) {
@@ -36,6 +37,7 @@ test("all board sections share navigation, private APIs and a consistent login/l
     { label: "العملاء", path: "clients" },
     { label: "الباقات", path: "plans" },
     { label: "المالية", path: "finance" },
+    { label: "مشروعات الهوية", path: "identity-projects" },
     { label: "المهام القادمة", path: "tasks" },
     { label: "التسويق", path: "marketing" },
     { label: "هوية نرفد", path: "brand" },

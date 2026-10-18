@@ -1,0 +1,45 @@
+begin;
+do $$ begin perform set_config('request.jwt.claims',jsonb_build_object('sub',(select user_id from public.board_members where active limit 1),'role','authenticated')::text,true); end $$;
+set local role authenticated;
+do $$
+declare a public.crm_accounts; b public.crm_accounts; p public.identity_projects; d public.identity_deliverables; e public.finance_entries; today date:=(now() at time zone 'Asia/Riyadh')::date;
+begin
+  insert into public.crm_accounts(kind,name,stage) values('lead','IDENTITY-QA-SQL','new') returning * into a;
+  insert into public.crm_accounts(kind,name,stage) values('client','IDENTITY-QA-OTHER','onboarding') returning * into b;
+  insert into public.identity_projects(account_id,title) values(a.id,'هوية اختبار') returning * into p;
+  if (select count(*) from public.identity_deliverables where project_id=p.id)<>4 then raise exception 'Initial deliverables missing'; end if;
+  begin update public.identity_projects set status='design' where id=p.id; raise exception 'Design without approval'; exception when sqlstate '22023' then null; end;
+  begin update public.identity_projects set quote_status='sent' where id=p.id; raise exception 'Empty quote sent'; exception when sqlstate '22023' then null; end;
+  update public.identity_projects set scope='شعار ودليل هوية',quote_fee_cents=100001,quote_status='sent' where id=p.id;
+  begin update public.identity_projects set quote_status='accepted' where id=p.id; raise exception 'Accepted without evidence'; exception when sqlstate '22023' then null; end;
+  update public.identity_projects set quote_status='accepted',accepted_on=today,acceptance_note='موافقة العميل بالبريد',status='design' where id=p.id returning * into p;
+  begin update public.identity_projects set quote_fee_cents=200000 where id=p.id; raise exception 'Accepted price mutated'; exception when sqlstate '22023' then null; end;
+  begin update public.identity_projects set scope='نطاق بديل' where id=p.id; raise exception 'Accepted scope mutated'; exception when sqlstate '22023' then null; end;
+  begin insert into public.finance_entries(kind,title,category,amount_cents,account_id,identity_project_id,due_on,paid_on) values('income','حساب مختلف','visual_identity',100,b.id,p.id,today,today); raise exception 'Cross-account receipt'; exception when sqlstate '22023' then null; end;
+  insert into public.finance_entries(kind,title,category,amount_cents,account_id,identity_project_id,due_on,paid_on) values('income','دفعة هوية','visual_identity',60001,a.id,p.id,today,today) returning * into e;
+  begin insert into public.finance_entries(kind,title,category,amount_cents,account_id,identity_project_id,due_on,paid_on) values('income','زيادة تحصيل','visual_identity',40001,a.id,p.id,today,today); raise exception 'Overpayment allowed'; exception when sqlstate '22023' then null; end;
+  select * into d from public.identity_deliverables where project_id=p.id limit 1;
+  begin update public.identity_deliverables set status='approved' where id=d.id; raise exception 'Approval without files/evidence'; exception when sqlstate '22023' then null; end;
+  begin update public.identity_deliverables set revision_round=3 where id=d.id; raise exception 'Revision limit bypass'; exception when sqlstate '22023' then null; end;
+  begin update public.identity_projects set status='completed',handover_url='https://example.com/hand-off' where id=p.id; raise exception 'Incomplete project completed'; exception when sqlstate '22023' then null; end;
+  update public.identity_deliverables set status='approved',asset_url='https://example.com/private-files',approved_on=today,approval_note='اعتماد العميل للنسخة النهائية' where project_id=p.id;
+  begin delete from public.identity_deliverables where id=d.id; raise exception 'Approved delivery deleted'; exception when sqlstate '22023' then null; end;
+  update public.identity_projects set status='completed',handover_url='https://example.com/hand-off' where id=p.id;
+  begin insert into public.identity_deliverables(project_id,title) values(p.id,'تعديل بعد الإكمال'); raise exception 'Closed project changed'; exception when sqlstate '22023' then null; end;
+  update public.identity_projects set archived=true where id=p.id;
+  begin update public.identity_projects set title='تعديل الأرشيف' where id=p.id; raise exception 'Archive mutated'; exception when sqlstate '22023' then null; end;
+  update public.identity_projects set archived=false where id=p.id;
+  if not exists(select 1 from public.identity_events where project_id=p.id and title='تسجيل تحصيل للمشروع') then raise exception 'Finance history missing'; end if;
+end $$;
+reset role;
+select set_config('request.jwt.claims','{"sub":"00000000-0000-4000-8000-000000000099","role":"authenticated"}',true);
+set local role authenticated;
+do $$ begin
+  if exists(select 1 from public.identity_projects) or exists(select 1 from public.identity_deliverables) or exists(select 1 from public.identity_events) then raise exception 'Outsider read identity data'; end if;
+  begin insert into public.identity_projects(account_id,title) values(gen_random_uuid(),'محاولة خارجية'); raise exception 'Outsider wrote project'; exception when insufficient_privilege or sqlstate '22023' then null; end;
+end $$;
+reset role;
+set local role anon;
+do $$ begin begin perform 1 from public.identity_projects; raise exception 'Anonymous identity access'; exception when insufficient_privilege then null; end; end $$;
+reset role;
+rollback;

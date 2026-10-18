@@ -282,7 +282,9 @@ export function CrmEditor({
                             ? "numeric"
                             : undefined
                       }
-                      min={field.type === "number" ? 1 : undefined}
+                      min={
+                        field.type === "number" ? (field.min ?? 1) : undefined
+                      }
                       dir={
                         ["email", "url", "money", "number", "date"].includes(
                           field.type ?? "",

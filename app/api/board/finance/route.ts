@@ -17,6 +17,7 @@ import {
   matchesFinance,
   paymentMethods,
   receivables,
+  identityReceivables,
   type FinanceData,
   type FinanceEntry,
 } from "@/lib/finance";
@@ -24,18 +25,21 @@ import {
 export async function GET(request: Request) {
   try {
     const client = await crmSession();
-    const [accounts, contracts, payments, entries] = await Promise.all([
-      allRows(client, "crm_accounts"),
-      allRows(client, "crm_contracts"),
-      allRows(client, "crm_payments"),
-      allRows(client, "finance_entries"),
-    ]);
+    const [accounts, contracts, payments, entries, identity_projects] =
+      await Promise.all([
+        allRows(client, "crm_accounts"),
+        allRows(client, "crm_contracts"),
+        allRows(client, "crm_payments"),
+        allRows(client, "finance_entries"),
+        allRows(client, "identity_projects"),
+      ]);
     const data: FinanceData = {
       accounts: accounts as Account[],
       contracts: contracts as Row[],
       payments: payments as Row[],
       entries: entries as FinanceEntry[],
       as_of: todaySaudi(),
+      identity_projects: identity_projects as FinanceData["identity_projects"],
     };
     const params = new URL(request.url).searchParams;
     if (params.get("format") !== "csv") return crmJson(data);
@@ -48,9 +52,9 @@ export async function GET(request: Request) {
       rows = [
         [
           "العميل",
-          "العقد",
+          "العقد أو المشروع",
           "موعد السداد",
-          "قيمة العقد (ر.س)",
+          "قيمة الاتفاق (ر.س)",
           "المحصّل (ر.س)",
           "المتبقي (ر.س)",
           "الحالة",
@@ -62,6 +66,17 @@ export async function GET(request: Request) {
           name(row.account_id),
           row.contract.title,
           row.due_on,
+          (row.total / 100).toFixed(2),
+          (row.received / 100).toFixed(2),
+          (row.remaining / 100).toFixed(2),
+          row.overdue ? "متأخر" : "مستحق",
+          data.as_of,
+        ]);
+      for (const row of identityReceivables(data, filter.account_id))
+        rows.push([
+          name(row.account_id),
+          `هوية بصرية · ${row.project.title}`,
+          row.due_on ?? "لم يُحدد",
           (row.total / 100).toFixed(2),
           (row.received / 100).toFixed(2),
           (row.remaining / 100).toFixed(2),
@@ -226,6 +241,12 @@ async function change(request: Request) {
         FINANCE_IMMUTABLE:
           "الحركة مسددة أو ملغاة؛ حدّث البيانات. لتصحيح حركة مسددة ألغِ تسجيلها أولًا.",
         FINANCE_VOID_REASON: "اكتب سبب إلغاء التسجيل.",
+        IDENTITY_FINANCE_ACCOUNT:
+          "المؤسسة المختارة تختلف عن مؤسسة مشروع الهوية.",
+        IDENTITY_FINANCE_QUOTE:
+          "تحصيل الهوية يتطلب مشروعًا متاحًا بعرض معتمد وتصنيف خدمات الهوية البصرية.",
+        IDENTITY_OVERPAYMENT:
+          "قيمة الدفعة تتجاوز المتبقي من عرض الهوية المعتمد.",
       };
       throw new CrmError(
         messages[error.message] ?? "راجع حالة الحركة وقيمها.",

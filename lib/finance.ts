@@ -17,6 +17,7 @@ export const incomeCategories = {
   gates: "تكامل بوابات الدخول",
   consulting: "خدمات واستشارات",
   other_income: "تحصيلات أخرى",
+  visual_identity: "خدمات الهوية البصرية",
 };
 export const paymentMethods = {
   bank: "تحويل بنكي",
@@ -30,6 +31,7 @@ export type FinanceEntry = Row & {
   category: keyof typeof expenseCategories | keyof typeof incomeCategories;
   amount_cents: number;
   account_id: string | null;
+  identity_project_id?: string | null;
   counterparty: string;
   due_on: string;
   paid_on: string | null;
@@ -45,6 +47,16 @@ export type FinanceData = {
   payments: Row[];
   entries: FinanceEntry[];
   as_of: string;
+  identity_projects?: {
+    id: string;
+    title: string;
+    account_id: string;
+    quote_status: string;
+    status: string;
+    archived: boolean;
+    quote_fee_cents: number | null;
+    payment_due_on: string | null;
+  }[];
 };
 export type FinanceFilter = { from: string; to: string; account_id: string };
 export type CashMovement = {
@@ -145,6 +157,10 @@ export function financeFields(
       input.account_id == null || input.account_id === ""
         ? null
         : uuid(input.account_id),
+    identity_project_id:
+      input.identity_project_id == null || input.identity_project_id === ""
+        ? null
+        : uuid(input.identity_project_id),
     counterparty: text(input, "counterparty", 200),
     due_on: financeDate(input.due_on, "due_on")!,
     paid_on,
@@ -266,6 +282,7 @@ export function financeSummary(data: FinanceData, filter: FinanceFilter) {
         !row.paid_on &&
         matchesFinance(row, filter),
     );
+  const identityDues = identityReceivables(data, filter.account_id);
   const months = new Map<
     string,
     { month: string; income: number; expenses: number; net: number }
@@ -281,17 +298,59 @@ export function financeSummary(data: FinanceData, filter: FinanceFilter) {
     income,
     expenses,
     net: income - expenses,
-    outstanding: dues.reduce((sum, row) => sum + row.remaining, 0),
-    overdue: dues
-      .filter((row) => row.overdue)
-      .reduce((sum, row) => sum + row.remaining, 0),
+    outstanding:
+      dues.reduce((sum, row) => sum + row.remaining, 0) +
+      identityDues.reduce((sum, row) => sum + row.remaining, 0),
+    overdue:
+      dues
+        .filter((row) => row.overdue)
+        .reduce((sum, row) => sum + row.remaining, 0) +
+      identityDues
+        .filter((row) => row.overdue)
+        .reduce((sum, row) => sum + row.remaining, 0),
     payable: pending.reduce((sum, row) => sum + row.amount_cents, 0),
     payableOverdue: pending
       .filter((row) => row.due_on < data.as_of)
       .reduce((sum, row) => sum + row.amount_cents, 0),
     movements,
     dues,
+    identityDues,
     pending,
     months: [...months.values()].sort((a, b) => a.month.localeCompare(b.month)),
   };
+}
+
+export function identityReceivables(data: FinanceData, accountId = "") {
+  return (data.identity_projects ?? [])
+    .filter(
+      (p) =>
+        p.quote_status === "accepted" &&
+        p.status !== "cancelled" &&
+        (!accountId || p.account_id === accountId),
+    )
+    .map((project) => {
+      const received = data.entries
+        .filter(
+          (row) =>
+            row.identity_project_id === project.id &&
+            row.kind === "income" &&
+            !row.voided &&
+            row.paid_on &&
+            row.paid_on <= data.as_of,
+        )
+        .reduce((sum, row) => sum + Number(row.amount_cents), 0);
+      const total = Number(project.quote_fee_cents);
+      return {
+        project,
+        account_id: project.account_id,
+        received,
+        total,
+        remaining: Math.max(0, total - received),
+        due_on: project.payment_due_on,
+        overdue: Boolean(
+          project.payment_due_on && project.payment_due_on < data.as_of,
+        ),
+      };
+    })
+    .filter((row) => row.remaining > 0);
 }

@@ -83,6 +83,15 @@ export default function PricingPage() {
         </p>
       </section>
       <section className="public-checklist">
+        <h2>هوية بصرية بعرض مستقل</h2>
+        <p>
+          يمكنك طلب تأسيس هوية المؤسسة أو تطويرها أو تجهيز تطبيقاتها الرقمية.
+          الخدمة اختيارية وتُسعّر حسب النطاق والتسليمات، منفصلة عن الاشتراك
+          السنوي.{" "}
+          <Link href="/visual-identity">استكشف خدمة الهوية البصرية.</Link>
+        </p>
+      </section>
+      <section className="public-checklist">
         <h2>قبل اختيار الباقة</h2>
         <ul>
           <li>راجع عدد الفروع والخدمات التي يعمل بها فريقك اليوم.</li>

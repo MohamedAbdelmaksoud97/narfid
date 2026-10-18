@@ -9,6 +9,7 @@ import {
   UserRoundSearch,
   Package,
   Wallet,
+  PenTool,
 } from "lucide-react";
 
 // One directory drives the sidebar, breadcrumbs and overview shortcuts.
@@ -59,6 +60,14 @@ export const boardSections = [
     icon: Wallet,
     description:
       "تحصيلات العملاء والمصروفات والاستحقاقات وصافي الحركة، مع تقارير قابلة للتصدير.",
+  },
+  {
+    label: "مشروعات الهوية",
+    href: "/board/identity-projects",
+    action: "إدارة مشروعات الهوية",
+    icon: PenTool,
+    description:
+      "طلبات الهوية البصرية وعروض أسعارها والتصميم والمراجعات والاعتمادات والتسليم والتحصيل.",
   },
   {
     label: "التسويق",

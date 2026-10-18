@@ -20,6 +20,7 @@ export type FieldSpec = {
   hint?: string;
   wide?: boolean;
   nullable?: boolean;
+  min?: number;
 };
 const field = (
   key: string,

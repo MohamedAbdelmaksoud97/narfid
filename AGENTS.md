@@ -38,3 +38,13 @@ Prefer existing shadcn components before creating custom UI.
 
 Before creating or changing UI, read and follow
 `.agents/skills/UI-system/SKILL.md` alongside the shadcn skill.
+
+## Delivery — commit and push
+
+The owner wants completed work in `narfid` committed and pushed to the current
+branch's configured upstream after the relevant checks, without asking for
+confirmation again. Include related work from the ongoing session that has not
+yet been committed. Inspect the diff before staging; keep credentials, `.env*`,
+`.private`, test output and generated archives out of Git. Preserve unrelated
+user edits. Use a normal push; resolve a rejected push without force-pushing
+or discarding history, and report any unresolved blocker clearly.

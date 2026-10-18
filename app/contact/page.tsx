@@ -2,6 +2,7 @@ import { PublicPage } from "@/components/public/public-page";
 import { pageMetadata } from "@/lib/seo";
 import { whatsappUrl } from "@/lib/landing-content";
 import { buttonVariants } from "@/components/ui/button";
+import { identityService } from "@/lib/identity-service";
 const description =
   "تواصل مع نرفد لطلب عرض توضيحي ومراجعة احتياج مؤسستك الرياضية، وعدد فروعها والخدمات والتكاملات المطلوبة.";
 export const metadata = pageMetadata(
@@ -36,6 +37,22 @@ export default function Page() {
           يفتح الزر محادثة واتساب. يتطلب إرسال الطلب منك؛ فتح المحادثة وحده لا
           يؤكد إرسال الطلب أو حجز موعد.
         </p>
+      </section>
+      <section className="public-checklist">
+        <h2>تحتاج هوية بصرية لمؤسستك؟</h2>
+        <p>
+          شاركنا هويتك الحالية والجمهور والتطبيقات المطلوبة. نناقش تأسيس الهوية
+          أو تطويرها بعرض مستقل عن اشتراك المنصة.
+        </p>
+        <a
+          href={identityService.requestUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-analytics="whatsapp_click"
+          className={buttonVariants({ variant: "outline" })}
+        >
+          اطلب عرض سعر للهوية البصرية
+        </a>
       </section>
       <section className="public-checklist">
         <h2>ما الذي نراجعه في اللقاء؟</h2>
