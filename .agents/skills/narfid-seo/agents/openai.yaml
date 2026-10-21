@@ -1,0 +1,4 @@
+interface:
+  display_name: "Narfid SEO"
+  short_description: "بحث نية العملاء ومحتوى نرفد وتحسين الظهور"
+  default_prompt: "استخدم $narfid-seo لتخطيط محتوى نرفد بناءً على البحث واحتياجات أصحاب المؤسسات الرياضية في السعودية."

@@ -20,11 +20,23 @@ in the UI-system skill; for tasks involving both brand content and UI, use
 NARFID alongside the UI skills below. Verify current capabilities and proposed
 pricing against the sources linked in the skill before making specific claims.
 
+## SEO — research, content and measurement
+
+Before any narfid SEO work, read and follow
+`.agents/skills/narfid-seo/SKILL.md`. This includes search and keyword research,
+article planning, writing and editing, solution-page SEO copy, metadata,
+internal links, technical SEO, `/board/seo`, indexing and search measurement.
+Use the existing research for the relevant topic, preserve its evidence and
+limitations, and verify current article inventory before creating overlapping
+content. Historical campaign counts and research findings are dated context,
+not permanent publication status or verified Google Saudi rankings.
+
 ## Articles — writing and publishing
 
 Before writing, editing, importing, publishing, or troubleshooting narfid
-articles, read and follow `.agents/skills/narfid-articles/SKILL.md` alongside
-the NARFID brand skill when brand context is needed. Reuse the existing
+articles, read and follow `.agents/skills/narfid-articles/SKILL.md`. For article
+planning, writing and editing, also use `.agents/skills/narfid-seo/SKILL.md`,
+alongside the NARFID brand skill when brand context is needed. Reuse the existing
 editor, validation, media, and publication workflow. For ordinary content
 work, use its content-only path and focused verification; do not repeat
 the site-wide SEO setup or rebuild article infrastructure.
