@@ -30,6 +30,11 @@ Use the existing research for the relevant topic, preserve its evidence and
 limitations, and verify current article inventory before creating overlapping
 content. Historical campaign counts and research findings are dated context,
 not permanent publication status or verified Google Saudi rankings.
+When new articles are requested, let the SEO skill choose reuse versus fresh
+research, persist new findings in its linked opportunity register, and select
+topics across useful audiences and editorial categories. Educational content
+must remain useful to managers and staff independently of narfid; use product
+links when they naturally help the reader.
 
 ## Articles — writing and publishing
 

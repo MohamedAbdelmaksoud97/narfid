@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-21",
+  "baseline": {
+    "keywords": "../../../../content/seo-campaign/keywords.json",
+    "research": "../../../../content/seo-campaign/research-log.json",
+    "assessments": "../../../../content/seo-campaign/initial-assessments.json",
+    "reviewedAt": "2026-10-21"
+  },
+  "researchSessions": [],
+  "opportunities": []
+}
