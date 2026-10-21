@@ -3916,6 +3916,22 @@ h2 {
 .editorial-links code { display:block; overflow-wrap:anywhere; color:var(--muted-foreground); font-size:11px; }
 .seo-status-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:16px; margin-block:24px; }
 .seo-review-list { display:flex; flex-direction:column; gap:14px; margin-block:20px; }
+.seo-research-register, .seo-campaign-list { display:grid; gap:16px; min-width:0; margin-block:24px; }
+.seo-research-register p, .seo-campaign-list p { font-size:14px; line-height:1.9; }
+.seo-keyword { border:1px solid var(--border); border-radius:var(--radius-lg); background:var(--card); min-width:0; }
+.seo-keyword > summary { padding:18px; cursor:pointer; line-height:1.8; font-weight:600; }
+.seo-keyword summary:focus-visible { outline:2px solid var(--ring); outline-offset:3px; border-radius:var(--radius-lg); }
+.seo-keyword-badges { display:inline-flex; flex-wrap:wrap; gap:8px; margin-inline-start:12px; }
+.seo-keyword-body { padding:0 18px 18px; display:grid; gap:16px; overflow-wrap:anywhere; }
+.seo-research-facts { display:grid; gap:14px; }
+.seo-research-facts dt { font-weight:600; font-size:13px; }
+.seo-research-facts dd { margin:4px 0 0; font-size:14px; line-height:1.9; color:var(--muted-foreground); }
+.seo-keyword-body a, .seo-campaign-list a { color:var(--primary); text-decoration:underline; text-underline-offset:4px; }
+.seo-research-trail { border-top:1px solid var(--border); padding-top:16px; }
+.seo-research-trail summary { cursor:pointer; font-size:14px; }
+.seo-research-trail p { margin-top:12px; }
+.seo-campaign-list [data-slot="card-content"] { display:grid; gap:12px; }
+@media(max-width:600px) { .seo-keyword-badges { display:flex; margin:10px 0 0; } }
 @media(max-width:700px) {
   .public-feature-sections,.public-pricing-grid,.public-footer { grid-template-columns:1fr; }
   .public-contact-cta { flex-direction:column; align-items:flex-start; }

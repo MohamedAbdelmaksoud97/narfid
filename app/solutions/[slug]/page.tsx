@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import { PublicPage, ContactCta } from "@/components/public/public-page";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { RelatedArticles } from "@/components/articles/related-articles";
+import { SolutionOperatingGuides } from "@/components/articles/solution-operating-guides";
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() {
   return solutions.map((s) => ({ slug: s.slug }));
@@ -15,7 +16,7 @@ export async function generateMetadata({ params }: Props) {
   if (!s) notFound();
   return pageMetadata(s.title, s.description, `/solutions/${s.slug}`);
 }
-export default async function SolutionPage({ params }: Props) {
+async function SolutionContent({ params }: Props) {
   const s = solutionBySlug((await params).slug);
   if (!s) notFound();
   return (
@@ -42,6 +43,9 @@ export default async function SolutionPage({ params }: Props) {
           ))}
         </ul>
       </section>
+      <Suspense fallback={null}>
+        <SolutionOperatingGuides solution={s.slug} />
+      </Suspense>
       <Alert>
         <AlertTitle>نطاق واضح قبل الاتفاق</AlertTitle>
         <AlertDescription>{s.limit}</AlertDescription>
@@ -58,5 +62,13 @@ export default async function SolutionPage({ params }: Props) {
       </Suspense>
       <ContactCta />
     </PublicPage>
+  );
+}
+
+export default function SolutionPage(props: Props) {
+  return (
+    <Suspense fallback={<main className="board-loading-page"><p role="status">جارٍ تحميل الحل…</p></main>}>
+      <SolutionContent {...props} />
+    </Suspense>
   );
 }

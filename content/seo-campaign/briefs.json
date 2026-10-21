@@ -1,0 +1,294 @@
+[
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000001",
+    "slug": "annual-club-software-cost",
+    "title": "تكلفة برنامج إدارة النادي: كيف تقارن العرض السنوي؟",
+    "question": "كيف تقارن تكلفة النظام السنوية وما يدخل في عرض السعر؟",
+    "keywordIds": [
+      5
+    ],
+    "solution": "memberships",
+    "cover": "choose-sports-club-management-system",
+    "excerpt": "قارن الاشتراك والتهيئة ونقل البيانات والتكاملات في ورقة واحدة، واعرف ما تسأل عنه قبل اعتماد ميزانية نظام ناديك.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 5
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000002",
+    "slug": "academy-software-demo-checklist",
+    "title": "اختيار برنامج الأكاديمية: سيناريوهات تختبرها في العرض",
+    "question": "ما الاختبارات التي تثبت ملاءمة برنامج إدارة الأكاديمية؟",
+    "keywordIds": [
+      31
+    ],
+    "solution": "memberships",
+    "cover": "choose-sports-club-management-system",
+    "excerpt": "اختبر تسجيل لاعب وحضور حصة ودفعًا جزئيًا وصلاحية مدرب، بدل الاكتفاء بقائمة مزايا عند اختيار برنامج الأكاديمية.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 31
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000003",
+    "slug": "academy-children-guardian-records",
+    "title": "اشتراكات الأطفال: تنظيم ملف اللاعب وولي الأمر",
+    "question": "كيف تربط الأطفال وأولياء الأمور والاشتراكات دون خلط السجلات؟",
+    "keywordIds": [
+      9,
+      10,
+      32
+    ],
+    "solution": "memberships",
+    "cover": "choose-sports-club-management-system",
+    "excerpt": "دليل لإدارة ملفات الأطفال وأولياء الأمور في أكاديميات كرة القدم والسباحة، وفصل المستفيد عن الدافع ومتابعة الحضور لكل طفل.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 9
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000004",
+    "slug": "visit-based-membership-packages",
+    "title": "باقات النادي بعدد الزيارات: قواعد الرصيد والصلاحية",
+    "question": "كيف تدير باقة بعدد زيارات دون خلط الرصيد بمدة الصلاحية؟",
+    "keywordIds": [
+      33
+    ],
+    "solution": "memberships",
+    "cover": "pilates-studio",
+    "excerpt": "ضع قواعد واضحة لباقات الحصص والزيارات: متى تخصم الزيارة، وماذا يحدث عند الإلغاء أو انتهاء الصلاحية؟ مع مثال عملي.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 33
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000005",
+    "slug": "gym-reception-attendance-procedure",
+    "title": "دليل استقبال النادي: الحضور وفتح الوردية وتسليمها",
+    "question": "ما خطوات الاستقبال من فتح اليوم إلى تسليم الحالات للوردية التالية؟",
+    "keywordIds": [
+      8,
+      29,
+      50
+    ],
+    "solution": "memberships",
+    "cover": "choose-sports-club-management-system",
+    "excerpt": "إجراء يومي للاستقبال يشمل التحقق من الاشتراك وتسجيل الحضور ومعالجة الحالات الاستثنائية وتسليم الوردية بسجل واضح.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 8
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000006",
+    "slug": "gym-member-retention-followup",
+    "title": "متابعة أعضاء النادي: من غياب الزيارة إلى قرار التجديد",
+    "question": "كيف تتابع العضو قليل الحضور وتقيس التجديد الفعلي؟",
+    "keywordIds": [
+      6,
+      35
+    ],
+    "solution": "memberships",
+    "cover": "pilates-studio",
+    "excerpt": "نظّم متابعة الأعضاء بحسب الحضور وقرب انتهاء العضوية، وسجّل سبب التواصل ونتيجته لتمييز الرد عن التجديد الفعلي.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 6
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000007",
+    "slug": "womens-club-operations-system",
+    "title": "إدارة النادي النسائي: كيف تختبر النظام مع فريقك؟",
+    "question": "كيف تقيّمين نظام النادي النسائي من واقع الحصص والاستقبال؟",
+    "keywordIds": [
+      4
+    ],
+    "solution": "memberships",
+    "cover": "pilates-studio",
+    "excerpt": "سيناريوهات عملية لمديرة النادي النسائي تختبر الاستقبال والحصص والتدريب الشخصي والصلاحيات قبل اختيار نظام الإدارة.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 4
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000008",
+    "slug": "personal-training-schedule-control",
+    "title": "جدول المدربين الشخصيين: ربط الموعد بالجلسة والعضو",
+    "question": "كيف تنظم مواعيد المدربين وتمنع الخلط بين الحجز والجلسة المستخدمة؟",
+    "keywordIds": [
+      14
+    ],
+    "solution": "bookings",
+    "cover": "pilates-studio",
+    "excerpt": "اربط مواعيد المدربين بالعضو والمكان ورصيد الجلسات، وراجع التعديلات والإلغاء والبدائل في جدول يمكن للفريق الاعتماد عليه.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 14
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000009",
+    "slug": "booking-cancellation-no-show-log",
+    "title": "إلغاء الحجز وعدم الحضور: سجل واضح للحصص والملاعب",
+    "question": "كيف يفرّق الفريق بين الإلغاء وعدم الحضور وأثر كل حالة؟",
+    "keywordIds": [
+      15,
+      37
+    ],
+    "solution": "bookings",
+    "cover": "sports-bookings-capacity-guide",
+    "excerpt": "نظّم حالات إلغاء الحجوزات وعدم الحضور، وحدد ما يسجله الاستقبال وما يحتاج اعتمادًا قبل تعديل رصيد العضو أو التحصيل.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 15
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000010",
+    "slug": "padel-court-occupancy-report",
+    "title": "إشغال ملاعب البادل: احسب الساعات قبل زيادة الحجوزات",
+    "question": "كيف تقيس إشغال الملعب دون احتساب الصيانة والحجز الملغى؟",
+    "keywordIds": [
+      39
+    ],
+    "solution": "bookings",
+    "cover": "sports-bookings-capacity-guide",
+    "excerpt": "مثال لحساب ساعات الملاعب المتاحة والمحجوزة والمستخدمة، ومقارنة الذروة ببقية اليوم لاتخاذ قرار تشغيلي مبني على سجل.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 39
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000011",
+    "slug": "recurring-court-booking-control",
+    "title": "الحجز الأسبوعي للملاعب: تنظيم السلسلة والاستثناءات",
+    "question": "كيف تدير حجز فريق متكرر مع تغيير موعد واحد أو إلغائه؟",
+    "keywordIds": [
+      40
+    ],
+    "solution": "bookings",
+    "cover": "sports-bookings-capacity-guide",
+    "excerpt": "خطوات لتنظيم حجوزات الفرق الأسبوعية، وفصل الموعد المتكرر عن كل حجز فعلي مع متابعة التغييرات والتحصيل والإجازات.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 40
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000012",
+    "slug": "academy-class-groups-capacity",
+    "title": "مجموعات الأكاديمية: توزيع اللاعبين وسعة الحصص",
+    "question": "كيف تنظم مجموعات التدريب دون تجاوز السعة أو تكرار الحضور؟",
+    "keywordIds": [
+      36,
+      38
+    ],
+    "solution": "bookings",
+    "cover": "pilates-studio",
+    "excerpt": "اربط المجموعة بمدرب وموعد ومكان وسعة، وتعامل مع انتقال اللاعب والحصة التجريبية وتغيير الجدول بسجل قابل للمراجعة.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 36
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000013",
+    "slug": "gym-partial-payments-receivables",
+    "title": "دفعات اشتراك النادي: متابعة المتبقي دون تكرار التحصيل",
+    "question": "كيف تتابع الدفعات الجزئية والمبالغ المتأخرة على العضو؟",
+    "keywordIds": [
+      18,
+      41
+    ],
+    "solution": "point-of-sale",
+    "cover": "club-cash-shift-reconciliation",
+    "excerpt": "مثال لتسجيل دفعات الاشتراك وربط كل تحصيل بفاتورته، مع قائمة متابعة للمتبقي ومعالجة الدفع غير المطابق أو المكرر.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 41
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000014",
+    "slug": "gym-daily-sales-collections-report",
+    "title": "تقرير النادي اليومي: افصل المبيعات عن التحصيل",
+    "question": "ماذا يقرأ المدير في التقرير اليومي عندما تختلف المبيعات عن المقبوض؟",
+    "keywordIds": [
+      19,
+      43
+    ],
+    "solution": "point-of-sale",
+    "cover": "club-cash-shift-reconciliation",
+    "excerpt": "اقرأ مبيعات اليوم وتحصيلاته والمرتجعات كلًّا في سياقه، واستخدم مثالًا مبسطًا لتفسير الفرق قبل الحكم على أداء الفريق.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 43
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000015",
+    "slug": "gym-refund-approval-record",
+    "title": "مرتجعات اشتراكات النادي: من الطلب إلى إثبات التنفيذ",
+    "question": "كيف توثق طلب الاسترداد واعتماده وتنفيذه دون حذف البيع؟",
+    "keywordIds": [
+      42
+    ],
+    "solution": "point-of-sale",
+    "cover": "club-cash-shift-reconciliation",
+    "excerpt": "مسار تشغيلي لتوثيق طلب المرتجع ومرجعه واعتماده ومتابعة تنفيذه، مع الفصل بين إلغاء العضوية وإرجاع المبلغ.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 42
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000016",
+    "slug": "club-expense-approval-workflow",
+    "title": "مصروفات النادي: سجل واعتماد ومراجعة لكل فرع",
+    "question": "كيف تنظم مصروفات النادي وتربطها بالسبب والفرع وطريقة السداد؟",
+    "keywordIds": [
+      44
+    ],
+    "solution": "point-of-sale",
+    "cover": "choose-sports-club-management-system",
+    "excerpt": "نظّم طلب المصروف واعتماده وإثبات دفعه، وافصل عهدة الصندوق عن المصروف الفعلي لتبقى متابعة الفرع مفهومة.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 44
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000017",
+    "slug": "gym-pos-retail-sales-workflow",
+    "title": "كاشير النادي: بيع المنتجات وربطها بالمخزون والتحصيل",
+    "question": "كيف تربط بيع منتج في النادي برصيده وإيصال تحصيله؟",
+    "keywordIds": [
+      45
+    ],
+    "solution": "point-of-sale",
+    "cover": "retail-inventory-for-sports-clubs",
+    "excerpt": "تتبّع بيع منتجات النادي من تعريف الصنف إلى التحصيل والمرتجع، مع اختبار عملي يكشف الأخطاء بين الكاشير والمخزون.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 45
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000018",
+    "slug": "club-meal-production-planning",
+    "title": "مطبخ النادي: خطة الوجبات اليومية ومراجعة الصرف",
+    "question": "كيف تحوّل طلبات المشتركين إلى كميات تحضير وصرف واضحة؟",
+    "keywordIds": [
+      47,
+      46
+    ],
+    "solution": "kitchen-inventory",
+    "cover": "meal-entitlements-and-daily-kitchen",
+    "excerpt": "جهّز كشف إنتاج يومي من طلبات المشتركين، وافصل الوجبات المطلوبة والمجهزة والمصروفة والمتبقية مع مثال لتفسير الفروق.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 47
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000019",
+    "slug": "gym-stock-count-reorder",
+    "title": "جرد منتجات النادي: تفسير الفروق وتحديد إعادة الطلب",
+    "question": "كيف تراجع جرد منتجات النادي وتحدد نقطة إعادة الطلب؟",
+    "keywordIds": [
+      24,
+      48
+    ],
+    "solution": "kitchen-inventory",
+    "cover": "retail-inventory-for-sports-clubs",
+    "excerpt": "طريقة عملية لجرد متجر النادي وتفسير فرق الرصيد، مع مثال لحساب حد إعادة الطلب حسب حركة المنتج ومدة التوريد.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 24
+  },
+  {
+    "id": "6c71f284-9540-4ce7-9b30-000000000020",
+    "slug": "club-branch-performance-comparison",
+    "title": "مقارنة فروع النادي: مؤشرات عادلة وقرارات قابلة للمتابعة",
+    "question": "كيف تقارن الفروع مع اختلاف ساعات العمل والخدمات وحركة الأعضاء؟",
+    "keywordIds": [
+      49,
+      30
+    ],
+    "solution": "branches",
+    "cover": "choose-sports-club-management-system",
+    "excerpt": "قارن فروع النادي بفترة وتعريفات موحدة، وافصل فرع البيع عن فرع الاستخدام لتخرج من التقرير بقرار ومسؤول وموعد.",
+    "reviewDue": "2027-01-21",
+    "primaryKeywordId": 49
+  }
+]

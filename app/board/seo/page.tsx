@@ -17,8 +17,6 @@ import {
 } from "@/components/ui/card";
 import {
   seoAudit,
-  seoCalendar,
-  seoKeywordMap,
   seoReviewedAt,
   seoRoadmap,
   seoSections,
@@ -28,6 +26,8 @@ import {
 } from "@/lib/seo-guide";
 import { requireArticleSession } from "@/lib/articles/server";
 import { indexingEnabled } from "@/lib/seo";
+import { campaignBriefs } from "@/lib/seo-campaign";
+import { KeywordRegister, CampaignArticles } from "@/components/seo/campaign-register";
 
 export const metadata: Metadata = {
   title: "تحسين الظهور في البحث | مجلس الإدارة",
@@ -97,7 +97,7 @@ function GuideSection({
 async function SeoWorkspace() {
   await requireBoardMember();
   const { supabase } = await requireArticleSession();
-  const [published, reviews] = await Promise.all([
+  const [published, reviews, campaignDrafts, campaignPublications] = await Promise.all([
     supabase
       .from("article_publications")
       .select("id", { count: "exact", head: true }),
@@ -107,7 +107,9 @@ async function SeoWorkspace() {
       .eq("status", "published")
       .not("review_due_at", "is", null)
       .order("review_due_at")
-      .limit(12),
+      .limit(100),
+    supabase.from("articles").select("id,title,slug,revision").in("id", campaignBriefs.map((b) => b.id)),
+    supabase.from("article_publications").select("id,title,slug,revision").in("id", campaignBriefs.map((b) => b.id)),
   ]);
   return (
     <main className="seo-guide brand-guide">
@@ -148,10 +150,10 @@ async function SeoWorkspace() {
             مرحلتنا الحالية: الأساس والمحتوى مجهزان — ننتظر الإطلاق
           </AlertTitle>
           <AlertDescription>
-            تم تنفيذ التجهيز التقني وصفحات الحلول وإضافة ثمانية مقالات. الخطوة
-            التالية اختيار الدومين والنشر وربط Google، ثم اتخاذ قرارات من بيانات
-            فعلية. عدد المقالات أدناه من قاعدة البيانات، وبيانات البحث والزيارات
-            غير متاحة حتى الربط.
+            سجل بحث يضم 50 عبارة وحملة من 20 مقالًا إضافيًا، مع الحفاظ على المحتوى السابق.
+            حالات النشر والأعداد أدناه من قاعدة البيانات. نتائج بحث الويب موثقة؛
+            ترتيب Google السعودية وحجم الطلب لم يُتحقق منهما. الإطلاق وربط Google
+            والقياس الفعلي ما زالت خطوات مطلوبة.
           </AlertDescription>
         </Alert>
         <div className="seo-status-grid">
@@ -257,41 +259,10 @@ async function SeoWorkspace() {
                   </div>
                 </>
               )}
-              {section.id === "seo-topics" && (
-                <div
-                  className="seo-table-scroll"
-                  role="region"
-                  aria-label="خريطة الموضوعات ونية البحث"
-                  tabIndex={0}
-                >
-                  <table className="seo-table">
-                    <caption>
-                      خريطة أولية تحتاج إلى بحث النية قبل اعتمادها
-                    </caption>
-                    <thead>
-                      <tr>
-                        <th scope="col">النية والموضوع</th>
-                        <th scope="col">الصفحة المقصودة</th>
-                        <th scope="col">مقال يدعمها</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {seoKeywordMap.map((topic) => (
-                        <tr key={topic.topic}>
-                          <th scope="row">
-                            <span>{topic.intent}</span>
-                            {topic.topic}
-                          </th>
-                          <td>{topic.destination}</td>
-                          <td>{topic.article}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
+              {section.id === "seo-topics" && <KeywordRegister />}
               {section.id === "seo-calendar" && (
                 <>
+                  <CampaignArticles drafts={campaignDrafts.data ?? []} publications={campaignPublications.data ?? []} error={Boolean(campaignDrafts.error || campaignPublications.error)} />
                   <h3>مواعيد مراجعة المقالات المنشورة</h3>
                   {reviews.error ? (
                     <p>تعذر تحميل مواعيد المراجعة.</p>
@@ -316,17 +287,8 @@ async function SeoWorkspace() {
                   )}
                   <p>
                     راجع هذه المواعيد عند تغيير المنتج أو المعلومات، حتى لو لم
-                    يصل موعد المراجعة. الموضوعات أدناه بنك أفكار؛ راجع ما نُشر
-                    قبل إنشاء مقال جديد.
+                    يصل موعد المراجعة. راجع ما نُشر وبيانات البحث قبل إنشاء مقال جديد.
                   </p>
-                  <ol className="seo-calendar">
-                    {seoCalendar.map((topic, week) => (
-                      <li key={topic}>
-                        <span>أولوية {week + 1}</span>
-                        <p>{topic}</p>
-                      </li>
-                    ))}
-                  </ol>
                 </>
               )}
               {section.id === "seo-tools" && (

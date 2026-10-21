@@ -163,3 +163,31 @@ export const solutions = [
 export function solutionBySlug(slug: string | null | undefined) {
   return solutions.find((s) => s.slug === slug);
 }
+
+export const solutionOperatingGuides: Record<string, { question: string; text: string; articles: string[] }> = {
+  memberships: {
+    question: "هل تدير ناديًا أم أكاديمية للأطفال؟",
+    text: "ابدأ من طريقة بيع الخدمة: اشتراك زمني، أو باقة زيارات، أو تسجيل لاعب مرتبط بولي أمر. في برنامج إدارة اشتراكات وحضور النادي بالعربي، اختبر حالة الاشتراك ورصيد الخدمة وسجل اللاعب قبل اعتماد طريقة التشغيل.",
+    articles: ["academy-children-guardian-records", "visit-based-membership-packages", "gym-reception-attendance-procedure"],
+  },
+  bookings: {
+    question: "هل تبيع ساعة ملعب أم مقعدًا في حصة؟",
+    text: "إدارة حجوزات ملاعب البادل وكرة القدم تحتاج تعريف المورد والوقت؛ إدارة حصص الجيم تضيف سعة المشاركين، والتدريب الشخصي يربط المدرب بالعضو. قدّم مثالًا للإلغاء وتغيير الموعد في العرض حتى تتضح دورة الحجز والتحصيل.",
+    articles: ["padel-court-occupancy-report", "recurring-court-booking-control", "personal-training-schedule-control"],
+  },
+  "point-of-sale": {
+    question: "هل تحتاج متابعة البيع أم التحصيل أم كليهما؟",
+    text: "عند اختيار برنامج كاشير للنادي الرياضي، اختبر بيع اشتراك بدفعة جزئية ثم تحصيل المتبقي في وردية أخرى. أضف بيع منتج ومرتجعًا إلى التجربة لتراجع أثر كل حركة على المال والمخزون، وحدد مع المسؤول المالي حدود الحسابات المطلوبة.",
+    articles: ["gym-partial-payments-receivables", "gym-daily-sales-collections-report", "gym-pos-retail-sales-workflow"],
+  },
+  "kitchen-inventory": {
+    question: "هل الكمية استحقاق وجبة أم مخزون منتج؟",
+    text: "إدارة اشتراكات الوجبات الصحية في النادي تبدأ باستحقاق العضو وقائمة اليوم والصرف. أما إدارة مخزون المكملات والمنتجات فتبدأ بوحدة الصنف والاستلام والمتاح للبيع. اختبر الدورتين منفصلتين كي تكون حدود المطبخ والمخزون واضحة.",
+    articles: ["club-meal-production-planning", "gym-stock-count-reorder"],
+  },
+  branches: {
+    question: "ما الذي ينتقل مع العضو بين الفروع؟",
+    text: "برنامج إدارة فروع الجيم يحتاج تعريف نطاق العضوية والخدمة في كل فرع، إلى جانب صلاحيات الموظفين. اختبر عضوية متعددة الفروع وحساب استقبال محدود النطاق، ثم قارن التقارير بفترة وتعريفات موحدة.",
+    articles: ["club-branch-performance-comparison", "multi-branch-club-permissions"],
+  },
+};

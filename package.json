@@ -24,6 +24,8 @@
     "test:articles:http": "node --env-file=.env.local scripts/test-articles-http.mjs",
     "db:articles:inspect": "node --env-file=.env.local scripts/article-db.mjs",
     "seo:seed": "node --env-file=.env.local --import=tsx scripts/seed-seo-articles.ts",
+    "seo:campaign": "node --env-file=.env.local --import=tsx scripts/import-seo-campaign.ts",
+    "test:seo:campaign": "tsx --test tests/seo-campaign.test.tsx",
     "test:seo:http": "node --env-file=.env.local --import=tsx scripts/test-seo-http.mjs"
   },
   "dependencies": {
