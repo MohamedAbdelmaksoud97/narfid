@@ -10,6 +10,7 @@ import {
   Package,
   Wallet,
   PenTool,
+  BookOpenCheck,
 } from "lucide-react";
 
 // One directory drives the sidebar, breadcrumbs and overview shortcuts.
@@ -20,6 +21,14 @@ export const boardSections = [
     action: "نظرة عامة",
     icon: LayoutDashboard,
     description: "مساحة نرفد الداخلية.",
+  },
+  {
+    label: "قواعد نظام نرفد",
+    href: "/board/business-rules",
+    action: "استكشف قواعد النظام",
+    icon: BookOpenCheck,
+    description:
+      "دليل تشغيلي بصري يشرح كيف يتخذ النظام قراراته، بلغة واضحة تناسب كل فريق نرفد.",
   },
   {
     label: "المهام القادمة",
