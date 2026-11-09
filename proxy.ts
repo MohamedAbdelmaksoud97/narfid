@@ -1,14 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createClient } from "@supabase/supabase-js";
 import { updateSession } from "@/lib/proxy";
-import { indexingEnabled, siteOrigin } from "@/lib/seo";
+import { canonicalRedirectUrl } from "@/lib/seo";
 
 export async function proxy(request: NextRequest) {
-  if (indexingEnabled() && request.nextUrl.origin !== siteOrigin())
-    return NextResponse.redirect(
-      new URL(request.nextUrl.pathname + request.nextUrl.search, siteOrigin()),
-      308,
-    );
+  const canonicalUrl = canonicalRedirectUrl(request);
+  if (canonicalUrl) return NextResponse.redirect(canonicalUrl, 308);
   const path = request.nextUrl.pathname;
   const articlePath = path.match(/^\/articles\/([^/]+)\/?$/);
   if (articlePath) {

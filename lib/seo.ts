@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 
+const productionSiteOrigin = "https://www.narfid.com";
+
 // One origin for metadata, JSON-LD and sitemaps. Local/preview builds stay noindex.
 export function siteOrigin() {
-  const raw = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const raw =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.NODE_ENV === "production" ||
+    process.env.VERCEL_ENV === "production"
+      ? productionSiteOrigin
+      : "http://localhost:3000");
   const url = new URL(raw);
   if (
     !["http:", "https:"].includes(url.protocol) ||
@@ -19,15 +26,36 @@ export function siteOrigin() {
 }
 export function indexingEnabled() {
   const url = new URL(siteOrigin());
+  // The launched Vercel production site is public; explicit false still wins.
+  const enabled =
+    process.env.SITE_INDEXING_ENABLED ??
+    String(
+      process.env.VERCEL_ENV === "production" &&
+        url.origin === productionSiteOrigin,
+    );
   return (
-    process.env.SITE_INDEXING_ENABLED === "true" &&
+    enabled === "true" &&
     url.protocol === "https:" &&
     !["localhost", "127.0.0.1", "[::1]"].includes(url.hostname) &&
-    process.env.VERCEL_ENV !== "preview"
+    process.env.NODE_ENV !== "development" &&
+    !["preview", "development"].includes(process.env.VERCEL_ENV || "")
   );
 }
 export function absoluteUrl(path: string) {
   return new URL(path, siteOrigin()).href;
+}
+export function canonicalRedirectUrl(request: { nextUrl: URL; headers: Headers }) {
+  if (!indexingEnabled()) return null;
+  const target = new URL(siteOrigin());
+  // Behind the hosting proxy, nextUrl can contain the internal server origin.
+  const host = request.headers.get("host") || request.nextUrl.host;
+  const protocol =
+    request.headers.get("x-forwarded-proto")?.split(",")[0].trim() ||
+    request.nextUrl.protocol.slice(0, -1);
+  if (host === target.host && `${protocol}:` === target.protocol) return null;
+  target.pathname = request.nextUrl.pathname;
+  target.search = request.nextUrl.search;
+  return target;
 }
 export function pageMetadata(
   title: string,

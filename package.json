@@ -26,6 +26,7 @@
     "seo:seed": "node --env-file=.env.local --import=tsx scripts/seed-seo-articles.ts",
     "seo:campaign": "node --env-file=.env.local --import=tsx scripts/import-seo-campaign.ts",
     "test:seo:campaign": "tsx --test tests/seo-campaign.test.tsx",
+    "test:seo:domain": "tsx --test tests/seo-domain.test.ts",
     "test:seo:http": "node --env-file=.env.local --import=tsx scripts/test-seo-http.mjs"
   },
   "dependencies": {

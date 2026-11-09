@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Production website: [www.narfid.com](https://www.narfid.com/).
+
+Production builds use `https://www.narfid.com` for canonical URLs, social images,
+structured data and the sitemap unless `NEXT_PUBLIC_SITE_URL` overrides it.
+Indexing defaults to enabled only for the official domain in Vercel production.
+`SITE_INDEXING_ENABLED=false` explicitly disables it; local and preview environments
+stay excluded. See [the launch guide](docs/seo-launch.ar.md) for verification and
+Search Console setup. Run `npm run test:seo:domain` to check these defaults.
+
 ## Getting Started
 
 First, run the development server:

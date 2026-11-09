@@ -42,7 +42,7 @@ See `market-and-pricing.md` for primary vendor sources and the platform audits f
 
 Run `npm run dev` from `F:/saas/narfid`.
 
-Before production publishing, set `NEXT_PUBLIC_SITE_URL` to the actual HTTPS origin. Share metadata defaults to `http://localhost:3000` for local development. Existing Supabase configuration was preserved; no secrets or production data were used.
+The live domain is `https://www.narfid.com` (launched 9 November 2026). Production builds default to that origin for share metadata; `NEXT_PUBLIC_SITE_URL` can override it. Local development defaults to `http://localhost:3000`. Indexing defaults to enabled only for the official domain in Vercel production; previews and development stay excluded, and `SITE_INDEXING_ENABLED=false` explicitly disables indexing. See `docs/seo-launch.ar.md` for launch verification. Existing Supabase configuration was preserved; no secrets or production data were used.
 
 ## Verification boundary
 
