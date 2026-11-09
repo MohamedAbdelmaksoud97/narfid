@@ -31,7 +31,7 @@ import {
   KeywordRegister,
   CampaignArticles,
 } from "@/components/seo/campaign-register";
-import { SearchConsoleWorkspace } from "@/components/seo/search-console";
+import { SeoWorkspaceTabs } from "@/components/seo/workspace-tabs";
 
 export const metadata: Metadata = {
   title: "تحسين الظهور في البحث | مجلس الإدارة",
@@ -160,198 +160,198 @@ async function SeoWorkspace() {
           </Link>
         </div>
       </header>
-      <div className="container">
-        <Alert>
-          <Search />
-          <AlertTitle>
-            مرحلتنا الحالية: الموقع مُطلق ونبدأ قياس الظهور
-          </AlertTitle>
-          <AlertDescription>
-            سجل بحث يضم 50 عبارة وحملة من 20 مقالًا إضافيًا، مع الحفاظ على
-            المحتوى السابق. حالات النشر والأعداد أدناه من قاعدة البيانات. نتائج
-            بحث الويب موثقة؛ ترتيب Google السعودية وحجم الطلب في البحث الأساسي
-            لم يُتحقق منهما. اربط Search Console أدناه لقراءة الأداء الفعلي
-            للموقع.
-          </AlertDescription>
-        </Alert>
-        <div className="seo-status-grid">
-          <Card>
-            <CardHeader>
-              <CardDescription>المقالات المنشورة الآن</CardDescription>
-              <CardTitle>
-                {published.error
-                  ? "تعذر التحقق"
-                  : `${published.count ?? 0} مقالات`}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>قراءة مباشرة من النسخ العامة في قاعدة البيانات.</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardDescription>إعداد الفهرسة</CardDescription>
-              <CardTitle>
-                {indexingEnabled()
-                  ? "مفعّلة في الإعداد"
-                  : "محجوبة في هذه البيئة"}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>تفعيل الإعداد يسمح بالزحف؛ لا يثبت إدراج الصفحات في Google.</p>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader>
-              <CardDescription>قياس البحث</CardDescription>
-              <CardTitle>تقارير Google</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                حالة الربط والأداء والفهرسة في قسم تقارير Google أدناه. إعداد
-                GA4 لقياس التفاعل داخل الموقع مستقل عن هذا الربط.
-              </p>
-            </CardContent>
-          </Card>
+      <SeoWorkspaceTabs>
+        <div className="container">
+          <Alert>
+            <Search />
+            <AlertTitle>
+              مرحلتنا الحالية: الموقع مُطلق ونبدأ قياس الظهور
+            </AlertTitle>
+            <AlertDescription>
+              سجل بحث يضم 50 عبارة وحملة من 20 مقالًا إضافيًا، مع الحفاظ على
+              المحتوى السابق. حالات النشر والأعداد أدناه من قاعدة البيانات.
+              نتائج بحث الويب موثقة؛ ترتيب Google السعودية وحجم الطلب في البحث
+              الأساسي لم يُتحقق منهما. افتح تبويب تقارير Google لقراءة الأداء
+              الفعلي للموقع.
+            </AlertDescription>
+          </Alert>
+          <div className="seo-status-grid">
+            <Card>
+              <CardHeader>
+                <CardDescription>المقالات المنشورة الآن</CardDescription>
+                <CardTitle>
+                  {published.error
+                    ? "تعذر التحقق"
+                    : `${published.count ?? 0} مقالات`}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>قراءة مباشرة من النسخ العامة في قاعدة البيانات.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardDescription>إعداد الفهرسة</CardDescription>
+                <CardTitle>
+                  {indexingEnabled()
+                    ? "مفعّلة في الإعداد"
+                    : "محجوبة في هذه البيئة"}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  تفعيل الإعداد يسمح بالزحف؛ لا يثبت إدراج الصفحات في Google.
+                </p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardDescription>قياس البحث</CardDescription>
+                <CardTitle>تقارير Google</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  حالة الربط والأداء والفهرسة في تبويب تقارير Google. إعداد GA4
+                  لقياس التفاعل داخل الموقع مستقل عن هذا الربط.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-        <SearchConsoleWorkspace />
-      </div>
-      <div className="brand-guide-layout container">
-        <aside className="brand-guide-index">
-          <p>في هذا الدليل</p>
-          <BrandSectionNavigation
-            sections={[
-              { id: "seo-google", label: "تقارير Google" },
-              ...seoSections,
-            ]}
-            label="أقسام تحسين الظهور في البحث"
-          />
-          <span>
-            الهدف: طلبات عروض مؤهلة من المؤسسات الرياضية، ومحتوى يساعد صاحب
-            القرار فعلًا.
-          </span>
-        </aside>
-        <div className="brand-guide-content">
-          {seoSections.map((section, index) => (
-            <GuideSection section={section} index={index} key={section.id}>
-              {section.id === "seo-start" && (
-                <div className="brand-grid brand-grid-two">
-                  {seoAudit.map((finding) => (
-                    <Card key={finding.title}>
-                      <CardHeader>
-                        <CardDescription>{finding.state}</CardDescription>
-                        <CardTitle>{finding.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p>{finding.text}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              )}
-              {section.id === "seo-roadmap" && (
-                <>
-                  <h3>الخطوات القادمة بالترتيب</h3>
-                  <ol className="seo-action-list">
-                    {seoNextActions.map((action) => (
-                      <li key={action.title}>
-                        <h3>{action.title}</h3>
-                        <p>{action.text}</p>
-                      </li>
-                    ))}
-                  </ol>
+        <div className="brand-guide-layout container">
+          <aside className="brand-guide-index">
+            <p>في هذا الدليل</p>
+            <BrandSectionNavigation
+              sections={seoSections}
+              label="أقسام تحسين الظهور في البحث"
+            />
+            <span>
+              الهدف: طلبات عروض مؤهلة من المؤسسات الرياضية، ومحتوى يساعد صاحب
+              القرار فعلًا.
+            </span>
+          </aside>
+          <div className="brand-guide-content">
+            {seoSections.map((section, index) => (
+              <GuideSection section={section} index={index} key={section.id}>
+                {section.id === "seo-start" && (
                   <div className="brand-grid brand-grid-two">
-                    {seoRoadmap.map((phase) => (
-                      <Card key={phase.period}>
+                    {seoAudit.map((finding) => (
+                      <Card key={finding.title}>
                         <CardHeader>
-                          <CardDescription>{phase.period}</CardDescription>
-                          <CardTitle>{phase.title}</CardTitle>
+                          <CardDescription>{finding.state}</CardDescription>
+                          <CardTitle>{finding.title}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                          <p className="seo-owner">المسؤول: {phase.owner}</p>
-                          <ul className="seo-bullets">
-                            {phase.steps.map((step) => (
-                              <li key={step}>{step}</li>
-                            ))}
-                          </ul>
+                          <p>{finding.text}</p>
                         </CardContent>
-                        <CardFooter>
-                          <p>مخرج المرحلة: {phase.done}</p>
-                        </CardFooter>
                       </Card>
                     ))}
                   </div>
-                </>
-              )}
-              {section.id === "seo-topics" && <KeywordRegister />}
-              {section.id === "seo-calendar" && (
-                <>
-                  <CampaignArticles
-                    drafts={campaignDrafts.data ?? []}
-                    publications={campaignPublications.data ?? []}
-                    error={Boolean(
-                      campaignDrafts.error || campaignPublications.error,
-                    )}
-                  />
-                  <h3>مواعيد مراجعة المقالات المنشورة</h3>
-                  {reviews.error ? (
-                    <p>تعذر تحميل مواعيد المراجعة.</p>
-                  ) : (
-                    <ul className="seo-review-list">
-                      {reviews.data?.map((article) => (
-                        <li key={article.id}>
-                          <Link href={`/board/articles/${article.id}/edit`}>
-                            {article.title}
-                          </Link>{" "}
-                          ·{" "}
-                          <time dateTime={article.review_due_at}>
-                            {new Intl.DateTimeFormat("ar-SA", {
-                              dateStyle: "medium",
-                            }).format(
-                              new Date(article.review_due_at + "T12:00:00Z"),
-                            )}
-                          </time>
+                )}
+                {section.id === "seo-roadmap" && (
+                  <>
+                    <h3>الخطوات القادمة بالترتيب</h3>
+                    <ol className="seo-action-list">
+                      {seoNextActions.map((action) => (
+                        <li key={action.title}>
+                          <h3>{action.title}</h3>
+                          <p>{action.text}</p>
                         </li>
                       ))}
-                    </ul>
-                  )}
-                  <p>
-                    راجع هذه المواعيد عند تغيير المنتج أو المعلومات، حتى لو لم
-                    يصل موعد المراجعة. راجع ما نُشر وبيانات البحث قبل إنشاء مقال
-                    جديد.
-                  </p>
-                </>
-              )}
-              {section.id === "seo-tools" && (
-                <div className="seo-tool-links">
-                  {seoTools.map((tool) => (
-                    <a
-                      key={tool.href}
-                      href={tool.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={buttonVariants({
-                        variant: "outline",
-                        size: "navigation",
-                      })}
-                    >
-                      {tool.title} <ArrowUpLeft data-icon="inline-end" />
-                    </a>
-                  ))}
-                </div>
-              )}
-            </GuideSection>
-          ))}
+                    </ol>
+                    <div className="brand-grid brand-grid-two">
+                      {seoRoadmap.map((phase) => (
+                        <Card key={phase.period}>
+                          <CardHeader>
+                            <CardDescription>{phase.period}</CardDescription>
+                            <CardTitle>{phase.title}</CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <p className="seo-owner">المسؤول: {phase.owner}</p>
+                            <ul className="seo-bullets">
+                              {phase.steps.map((step) => (
+                                <li key={step}>{step}</li>
+                              ))}
+                            </ul>
+                          </CardContent>
+                          <CardFooter>
+                            <p>مخرج المرحلة: {phase.done}</p>
+                          </CardFooter>
+                        </Card>
+                      ))}
+                    </div>
+                  </>
+                )}
+                {section.id === "seo-topics" && <KeywordRegister />}
+                {section.id === "seo-calendar" && (
+                  <>
+                    <CampaignArticles
+                      drafts={campaignDrafts.data ?? []}
+                      publications={campaignPublications.data ?? []}
+                      error={Boolean(
+                        campaignDrafts.error || campaignPublications.error,
+                      )}
+                    />
+                    <h3>مواعيد مراجعة المقالات المنشورة</h3>
+                    {reviews.error ? (
+                      <p>تعذر تحميل مواعيد المراجعة.</p>
+                    ) : (
+                      <ul className="seo-review-list">
+                        {reviews.data?.map((article) => (
+                          <li key={article.id}>
+                            <Link href={`/board/articles/${article.id}/edit`}>
+                              {article.title}
+                            </Link>{" "}
+                            ·{" "}
+                            <time dateTime={article.review_due_at}>
+                              {new Intl.DateTimeFormat("ar-SA", {
+                                dateStyle: "medium",
+                              }).format(
+                                new Date(article.review_due_at + "T12:00:00Z"),
+                              )}
+                            </time>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <p>
+                      راجع هذه المواعيد عند تغيير المنتج أو المعلومات، حتى لو لم
+                      يصل موعد المراجعة. راجع ما نُشر وبيانات البحث قبل إنشاء
+                      مقال جديد.
+                    </p>
+                  </>
+                )}
+                {section.id === "seo-tools" && (
+                  <div className="seo-tool-links">
+                    {seoTools.map((tool) => (
+                      <a
+                        key={tool.href}
+                        href={tool.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={buttonVariants({
+                          variant: "outline",
+                          size: "navigation",
+                        })}
+                      >
+                        {tool.title} <ArrowUpLeft data-icon="inline-end" />
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </GuideSection>
+            ))}
+          </div>
         </div>
-      </div>
-      <footer className="brand-guide-footer container">
-        <span>
-          مرجع نرفد — تُراجع الأولويات بعد الإطلاق وبناء خط أساس حقيقي.
-        </span>
-        <Link href="/board/articles">
-          <BookOpen aria-hidden="true" /> ابدأ من مقالات نرفد
-        </Link>
-      </footer>
+        <footer className="brand-guide-footer container">
+          <span>
+            مرجع نرفد — تُراجع الأولويات بعد الإطلاق وبناء خط أساس حقيقي.
+          </span>
+          <Link href="/board/articles">
+            <BookOpen aria-hidden="true" /> ابدأ من مقالات نرفد
+          </Link>
+        </footer>
+      </SeoWorkspaceTabs>
     </main>
   );
 }

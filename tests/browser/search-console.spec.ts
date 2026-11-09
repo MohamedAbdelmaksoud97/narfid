@@ -119,8 +119,11 @@ test("Google endpoints authorize live board members, protect secrets and reject 
   );
   const after = await (await page.request.get(endpoint)).json();
   expect(after.connected).toBe(data.connected);
-  await page.goto("/board/seo");
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute("content", /noindex/);
+  await page.goto("/board/seo?tab=google");
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+    "content",
+    /noindex/,
+  );
   await expect(page.locator("#seo-google")).toContainText(
     "تقارير Google Search Console",
   );
@@ -207,6 +210,22 @@ test("Google report UI handles measured zero, country filters, inspection and mo
   });
   await page.goto("/board/seo");
   const panel = page.locator("#seo-google");
+  const googleTab = page.getByRole("tab", {
+    name: "تقارير Google",
+    exact: true,
+  });
+  await expect(
+    page.getByRole("tab", { name: "الدليل والخطة", exact: true }),
+  ).toHaveAttribute("aria-selected", "true");
+  await expect(panel).toBeHidden();
+  await googleTab.click();
+  await expect(googleTab).toHaveAttribute("aria-selected", "true");
+  await expect(page.locator("#seo-topics")).toBeHidden();
+  await expect(page).toHaveURL(/tab=google/);
+  await page.goBack();
+  await expect(page.locator("#seo-topics")).toBeVisible();
+  await expect(panel).toBeHidden();
+  await page.goForward();
   await expect(panel).toContainText("حساب مرتبط");
   const clicks = panel
     .locator('[data-slot="card"]')
@@ -245,4 +264,8 @@ test("Google report UI handles measured zero, country filters, inspection and mo
   // Unrecognized callback parameters must never become React elements or messages.
   await page.goto("/board/seo?google=__proto__");
   await expect(panel).toContainText("تقارير Google Search Console");
+  await expect(googleTab).toHaveAttribute("aria-selected", "true");
+  await page.goto("/board/seo#seo-google");
+  await expect(panel).toBeVisible();
+  await expect(googleTab).toHaveAttribute("aria-selected", "true");
 });
