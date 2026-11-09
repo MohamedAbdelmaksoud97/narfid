@@ -67,6 +67,14 @@ equipment or objects. Check backgrounds and reflections too.
 Do not infer or claim a stock model's actual nationality from appearance, or
 present stock or generated scenes as real narfid customers.
 
+## Board access for verification
+
+Use the chairman account (رئيس مجلس الإدارة), `chairman@nerfed.example`,
+when a task requires signing in to inspect or verify the board. The owner has
+authorized using this account for that purpose. Read its password locally from
+`.private/board-accounts.md`; account definitions are in
+`lib/auth/board-accounts.ts`. Keep passwords out of tracked files and tool output.
+
 ## Delivery — commit and push
 
 The owner wants completed work in `narfid` committed and pushed to the current
