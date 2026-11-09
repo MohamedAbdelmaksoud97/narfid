@@ -27,6 +27,8 @@
     "seo:campaign": "node --env-file=.env.local --import=tsx scripts/import-seo-campaign.ts",
     "test:seo:campaign": "tsx --test tests/seo-campaign.test.tsx",
     "test:seo:domain": "tsx --test tests/seo-domain.test.ts",
+    "test:seo:google": "tsx --test tests/search-console.test.ts",
+    "seo:google:configure": "node --env-file=.env.local --import=tsx scripts/configure-search-console.ts",
     "test:seo:http": "node --env-file=.env.local --import=tsx scripts/test-seo-http.mjs"
   },
   "dependencies": {

@@ -27,7 +27,11 @@ import {
 import { requireArticleSession } from "@/lib/articles/server";
 import { indexingEnabled } from "@/lib/seo";
 import { campaignBriefs } from "@/lib/seo-campaign";
-import { KeywordRegister, CampaignArticles } from "@/components/seo/campaign-register";
+import {
+  KeywordRegister,
+  CampaignArticles,
+} from "@/components/seo/campaign-register";
+import { SearchConsoleWorkspace } from "@/components/seo/search-console";
 
 export const metadata: Metadata = {
   title: "تحسين الظهور في البحث | مجلس الإدارة",
@@ -97,20 +101,33 @@ function GuideSection({
 async function SeoWorkspace() {
   await requireBoardMember();
   const { supabase } = await requireArticleSession();
-  const [published, reviews, campaignDrafts, campaignPublications] = await Promise.all([
-    supabase
-      .from("article_publications")
-      .select("id", { count: "exact", head: true }),
-    supabase
-      .from("articles")
-      .select("id,title,review_due_at")
-      .eq("status", "published")
-      .not("review_due_at", "is", null)
-      .order("review_due_at")
-      .limit(100),
-    supabase.from("articles").select("id,title,slug,revision").in("id", campaignBriefs.map((b) => b.id)),
-    supabase.from("article_publications").select("id,title,slug,revision").in("id", campaignBriefs.map((b) => b.id)),
-  ]);
+  const [published, reviews, campaignDrafts, campaignPublications] =
+    await Promise.all([
+      supabase
+        .from("article_publications")
+        .select("id", { count: "exact", head: true }),
+      supabase
+        .from("articles")
+        .select("id,title,review_due_at")
+        .eq("status", "published")
+        .not("review_due_at", "is", null)
+        .order("review_due_at")
+        .limit(100),
+      supabase
+        .from("articles")
+        .select("id,title,slug,revision")
+        .in(
+          "id",
+          campaignBriefs.map((b) => b.id),
+        ),
+      supabase
+        .from("article_publications")
+        .select("id,title,slug,revision")
+        .in(
+          "id",
+          campaignBriefs.map((b) => b.id),
+        ),
+    ]);
   return (
     <main className="seo-guide brand-guide">
       <header className="brand-guide-hero container">
@@ -147,13 +164,14 @@ async function SeoWorkspace() {
         <Alert>
           <Search />
           <AlertTitle>
-            مرحلتنا الحالية: الأساس والمحتوى مجهزان — ننتظر الإطلاق
+            مرحلتنا الحالية: الموقع مُطلق ونبدأ قياس الظهور
           </AlertTitle>
           <AlertDescription>
-            سجل بحث يضم 50 عبارة وحملة من 20 مقالًا إضافيًا، مع الحفاظ على المحتوى السابق.
-            حالات النشر والأعداد أدناه من قاعدة البيانات. نتائج بحث الويب موثقة؛
-            ترتيب Google السعودية وحجم الطلب لم يُتحقق منهما. الإطلاق وربط Google
-            والقياس الفعلي ما زالت خطوات مطلوبة.
+            سجل بحث يضم 50 عبارة وحملة من 20 مقالًا إضافيًا، مع الحفاظ على
+            المحتوى السابق. حالات النشر والأعداد أدناه من قاعدة البيانات. نتائج
+            بحث الويب موثقة؛ ترتيب Google السعودية وحجم الطلب في البحث الأساسي
+            لم يُتحقق منهما. اربط Search Console أدناه لقراءة الأداء الفعلي
+            للموقع.
           </AlertDescription>
         </Alert>
         <div className="seo-status-grid">
@@ -174,7 +192,9 @@ async function SeoWorkspace() {
             <CardHeader>
               <CardDescription>إعداد الفهرسة</CardDescription>
               <CardTitle>
-                {indexingEnabled() ? "مفعّلة في الإعداد" : "محجوبة قبل الإطلاق"}
+                {indexingEnabled()
+                  ? "مفعّلة في الإعداد"
+                  : "محجوبة في هذه البيئة"}
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -183,23 +203,27 @@ async function SeoWorkspace() {
           </Card>
           <Card>
             <CardHeader>
-              <CardDescription>Search Console وGA4</CardDescription>
-              <CardTitle>البيانات غير متاحة</CardTitle>
+              <CardDescription>قياس البحث</CardDescription>
+              <CardTitle>تقارير Google</CardTitle>
             </CardHeader>
             <CardContent>
               <p>
-                لا حسابات مربوطة بتقارير حية. نحتاج الدومين وإثبات الملكية
-                ومعرّف القياس.
+                حالة الربط والأداء والفهرسة في قسم تقارير Google أدناه. إعداد
+                GA4 لقياس التفاعل داخل الموقع مستقل عن هذا الربط.
               </p>
             </CardContent>
           </Card>
         </div>
+        <SearchConsoleWorkspace />
       </div>
       <div className="brand-guide-layout container">
         <aside className="brand-guide-index">
           <p>في هذا الدليل</p>
           <BrandSectionNavigation
-            sections={seoSections}
+            sections={[
+              { id: "seo-google", label: "تقارير Google" },
+              ...seoSections,
+            ]}
             label="أقسام تحسين الظهور في البحث"
           />
           <span>
@@ -262,7 +286,13 @@ async function SeoWorkspace() {
               {section.id === "seo-topics" && <KeywordRegister />}
               {section.id === "seo-calendar" && (
                 <>
-                  <CampaignArticles drafts={campaignDrafts.data ?? []} publications={campaignPublications.data ?? []} error={Boolean(campaignDrafts.error || campaignPublications.error)} />
+                  <CampaignArticles
+                    drafts={campaignDrafts.data ?? []}
+                    publications={campaignPublications.data ?? []}
+                    error={Boolean(
+                      campaignDrafts.error || campaignPublications.error,
+                    )}
+                  />
                   <h3>مواعيد مراجعة المقالات المنشورة</h3>
                   {reviews.error ? (
                     <p>تعذر تحميل مواعيد المراجعة.</p>
@@ -287,7 +317,8 @@ async function SeoWorkspace() {
                   )}
                   <p>
                     راجع هذه المواعيد عند تغيير المنتج أو المعلومات، حتى لو لم
-                    يصل موعد المراجعة. راجع ما نُشر وبيانات البحث قبل إنشاء مقال جديد.
+                    يصل موعد المراجعة. راجع ما نُشر وبيانات البحث قبل إنشاء مقال
+                    جديد.
                   </p>
                 </>
               )}
