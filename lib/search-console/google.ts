@@ -1,5 +1,6 @@
 import {
   SEARCH_CALLBACK,
+  ANALYTICS_SCOPE,
   SEARCH_SCOPE,
   SEARCH_SITE,
   SearchConsoleError,
@@ -22,7 +23,11 @@ type TokenResponse = {
   scope?: string;
 };
 
-async function googleJson(url: string, init: RequestInit, fetcher: Fetcher) {
+export async function googleJson(
+  url: string,
+  init: RequestInit,
+  fetcher: Fetcher = fetch,
+) {
   let response: Response;
   try {
     response = await fetcher(url, {
@@ -50,7 +55,7 @@ async function googleJson(url: string, init: RequestInit, fetcher: Fetcher) {
       );
     if (response.status === 403)
       throw new SearchConsoleError(
-        "لم يسمح Google بالطلب. تحقق من تفعيل Search Console API وصلاحية الحساب للموقع.",
+        "لم يسمح Google بالطلب. تحقق من تفعيل API المطلوبة وصلاحية الحساب للموقع أو خاصية Analytics.",
         403,
         "google_forbidden",
       );
@@ -82,6 +87,7 @@ export async function exchangeCode(
   code: string,
   verifier: string,
   fetcher: Fetcher = fetch,
+  analytics = false,
 ): Promise<TokenResponse> {
   const token = await googleJson(
     "https://oauth2.googleapis.com/token",
@@ -103,10 +109,13 @@ export async function exchangeCode(
     typeof token.access_token !== "string" ||
     typeof token.refresh_token !== "string" ||
     !token.refresh_token ||
-    (token.scope && !token.scope.split(" ").includes(SEARCH_SCOPE))
+    (token.scope && !token.scope.split(" ").includes(SEARCH_SCOPE)) ||
+    (analytics &&
+      (!token.scope?.split(" ").includes(ANALYTICS_SCOPE) ||
+        !token.scope.split(" ").includes(SEARCH_SCOPE)))
   )
     throw new SearchConsoleError(
-      "لم يكتمل تفويض القراءة. أعد الربط ووافق على قراءة Search Console.",
+      "لم يكتمل تفويض القراءة. أعد الربط ووافق على الصلاحيات المطلوبة.",
       409,
       "reconnect_required",
     );

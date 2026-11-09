@@ -19,6 +19,7 @@ export type StoredConnection = {
   refresh_token: string | null;
   generation: string;
   connected_at: string | null;
+  granted_scopes: string[];
 };
 
 export function encryptionKey() {
@@ -93,7 +94,9 @@ export async function searchBody(request: Request) {
 export async function loadConnection(): Promise<StoredConnection | null> {
   const { data, error } = await searchAdmin()
     .from("seo_google_connections")
-    .select("site_url,client_credentials,refresh_token,generation,connected_at")
+    .select(
+      "site_url,client_credentials,refresh_token,generation,connected_at,granted_scopes",
+    )
     .eq("site_url", SEARCH_SITE)
     .maybeSingle();
   if (error)

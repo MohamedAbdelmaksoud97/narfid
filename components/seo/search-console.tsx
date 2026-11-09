@@ -64,7 +64,7 @@ const callbackMessages: Record<string, string> = {
   invalid_state: "انتهت محاولة الربط أو لم تطابق الجلسة. ابدأ الربط من جديد.",
   unauthorized: "سجّل الدخول بحساب مجلس الإدارة ثم أعد الربط.",
   google_forbidden:
-    "تحقق من تفعيل Search Console API، ومن صلاحية حساب Google لموقع نرفد.",
+    "تحقق من تفعيل API المطلوبة وصلاحية حساب Google للموقع وخاصية Analytics عند ربطها.",
   reconnect_required: "لم يكتمل تفويض القراءة. أعد ربط حساب Google.",
   not_configured: "إعداد اتصال Google على الخادم غير مكتمل.",
   connection_changed: "تغيّر الاتصال أثناء الربط. حدّث الصفحة وأعد المحاولة.",
@@ -498,6 +498,10 @@ export function SearchConsoleWorkspace() {
               </Button>
             </div>
           </div>
+          <p className="text-sm text-muted-foreground">
+            فصل الربط يلغي تفويض Google المشترك لـSearch Console وAnalytics إذا
+            كانا مرتبطين.
+          </p>
           {report ? (
             <>
               <div className="flex flex-col gap-1 text-sm text-muted-foreground">

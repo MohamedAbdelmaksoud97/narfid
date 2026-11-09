@@ -9,6 +9,7 @@ import {
   type OAuthState,
 } from "@/lib/search-console/core";
 import { exchangeCode, verifyProperty } from "@/lib/search-console/google";
+import { verifyAnalyticsProperty } from "@/lib/analytics/google";
 import {
   credentials,
   encryptionKey,
@@ -29,6 +30,7 @@ export async function GET(request: Request) {
     path: "/api/board/seo/google",
   });
   let result = "connected";
+  let analytics = false;
   try {
     const member = await searchSession();
     const connection = await loadConnection();
@@ -55,6 +57,7 @@ export async function GET(request: Request) {
       member.id,
       connection.generation,
     );
+    analytics = state.analytics === true;
     if (params.has("error"))
       throw new SearchConsoleError(
         "لم تكتمل موافقة Google.",
@@ -68,8 +71,12 @@ export async function GET(request: Request) {
       credentials(connection),
       code,
       state.verifier,
+      undefined,
+      analytics,
     );
     await verifyProperty(token.access_token);
+    // A denied/missing Analytics permission leaves the existing token untouched.
+    if (analytics) await verifyAnalyticsProperty(token.access_token);
     await saveConnection(
       connection,
       token.refresh_token!,
@@ -81,7 +88,8 @@ export async function GET(request: Request) {
   }
   const target = new URL("/board/seo", siteOrigin());
   target.searchParams.set("google", result);
-  target.hash = "seo-google";
+  if (analytics) target.searchParams.set("tab", "analytics");
+  else target.hash = "seo-google";
   return new Response(null, {
     status: 303,
     headers: { ...privateHeaders, Location: target.href },

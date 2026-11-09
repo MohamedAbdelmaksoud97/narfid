@@ -86,9 +86,18 @@ test("Google endpoints authorize live board members, protect secrets and reject 
   expect(connect.ok()).toBe(true);
   const authUrl = new URL((await connect.json()).url);
   expect(authUrl.origin).toBe("https://accounts.google.com");
-  expect(authUrl.searchParams.get("scope")).toBe(
+  const scopes = authUrl.searchParams.get("scope")!.split(" ");
+  expect(scopes).toContain(
     "https://www.googleapis.com/auth/webmasters.readonly",
   );
+  expect(
+    scopes.every((scope) =>
+      [
+        "https://www.googleapis.com/auth/webmasters.readonly",
+        "https://www.googleapis.com/auth/analytics.readonly",
+      ].includes(scope),
+    ),
+  ).toBe(true);
   expect(authUrl.searchParams.get("redirect_uri")).toBe(
     "https://www.narfid.com/api/board/seo/google/callback",
   );

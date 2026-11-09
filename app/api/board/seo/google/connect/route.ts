@@ -1,6 +1,7 @@
 import { cookies } from "next/headers";
 import {
   authorizationUrl,
+  ANALYTICS_SCOPE,
   createOAuthState,
   seal,
   STATE_COOKIE,
@@ -19,7 +20,9 @@ import {
 export async function POST(request: Request) {
   try {
     const member = await searchSession();
-    await searchBody(request);
+    const body = await searchBody(request);
+    if (body.analytics !== undefined && typeof body.analytics !== "boolean")
+      throw new SearchConsoleError("نوع الربط غير صالح.");
     const connection = await loadConnection();
     if (!connection)
       throw new SearchConsoleError(
@@ -28,6 +31,10 @@ export async function POST(request: Request) {
         "not_configured",
       );
     const state = createOAuthState(member.id, connection.generation);
+    // Never downgrade an existing combined authorization when reconnecting GSC.
+    state.analytics =
+      body.analytics === true ||
+      connection.granted_scopes.includes(ANALYTICS_SCOPE);
     (await cookies()).set(STATE_COOKIE, seal(state, encryptionKey(), "state"), {
       httpOnly: true,
       sameSite: "lax",

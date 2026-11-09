@@ -14,6 +14,8 @@ export const SEARCH_SCOPE =
 export const SEARCH_CALLBACK =
   "https://www.narfid.com/api/board/seo/google/callback";
 export const STATE_COOKIE = "narfid_gsc_oauth";
+export const ANALYTICS_SCOPE =
+  "https://www.googleapis.com/auth/analytics.readonly";
 
 export class SearchConsoleError extends Error {
   constructor(
@@ -77,6 +79,7 @@ export type OAuthState = {
   memberId: string;
   generation: string;
   createdAt: number;
+  analytics?: boolean;
 };
 
 export function createOAuthState(
@@ -137,7 +140,9 @@ export function authorizationUrl(clientId: string, state: OAuthState) {
     client_id: clientId,
     redirect_uri: SEARCH_CALLBACK,
     response_type: "code",
-    scope: SEARCH_SCOPE,
+    scope: state.analytics
+      ? `${SEARCH_SCOPE} ${ANALYTICS_SCOPE}`
+      : SEARCH_SCOPE,
     access_type: "offline",
     prompt: "consent",
     state: state.nonce,

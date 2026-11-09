@@ -4,6 +4,7 @@ import { useEffect, useSyncExternalStore, type ReactNode } from "react";
 import { useSearchParams } from "next/navigation";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SearchConsoleWorkspace } from "@/components/seo/search-console";
+import { AnalyticsWorkspace } from "@/components/seo/analytics";
 
 function subscribeToHash(change: () => void) {
   window.addEventListener("hashchange", change);
@@ -23,10 +24,13 @@ export function SeoWorkspaceTabs({ children }: { children: ReactNode }) {
   );
   const selected = params.get("tab");
   const tab =
-    selected === "google" ||
-    (selected !== "guide" && (params.has("google") || hash === "#seo-google"))
-      ? "google"
-      : "guide";
+    selected === "analytics"
+      ? "analytics"
+      : selected === "google" ||
+          (selected !== "guide" &&
+            (params.has("google") || hash === "#seo-google"))
+        ? "google"
+        : "guide";
 
   useEffect(() => {
     if (tab !== "google" || hash !== "#seo-google") return;
@@ -37,7 +41,8 @@ export function SeoWorkspaceTabs({ children }: { children: ReactNode }) {
   }, [tab, hash]);
 
   function changeTab(value: unknown) {
-    if (value !== "guide" && value !== "google") return;
+    if (value !== "guide" && value !== "google" && value !== "analytics")
+      return;
     const url = new URL(window.location.href);
     url.searchParams.set("tab", value);
     url.searchParams.delete("google");
@@ -55,10 +60,16 @@ export function SeoWorkspaceTabs({ children }: { children: ReactNode }) {
         >
           <TabsTrigger value="guide">الدليل والخطة</TabsTrigger>
           <TabsTrigger value="google">تقارير Google</TabsTrigger>
+          <TabsTrigger value="analytics">زيارات الموقع GA4</TabsTrigger>
         </TabsList>
       </div>
       <TabsContent value="guide" className="min-w-0">
         {children}
+      </TabsContent>
+      <TabsContent value="analytics" className="min-w-0">
+        <div className="container">
+          <AnalyticsWorkspace />
+        </div>
       </TabsContent>
       <TabsContent value="google" className="min-w-0">
         <div className="container">
