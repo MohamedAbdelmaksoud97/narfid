@@ -88,7 +88,7 @@ function Brand({ symbol = false }: { symbol?: boolean }) {
         alt={symbol ? "" : "نرفد — السند التقني للمؤسسات الرياضية"}
         width={symbol ? 1254 : 1672}
         height={symbol ? 1254 : 941}
-        priority={!symbol}
+        loading={symbol ? "lazy" : "eager"}
         sizes={symbol ? "80px" : "280px"}
       />
     </span>
@@ -110,7 +110,8 @@ function SystemScreenshot() {
           <Image
             src={dashboardImage}
             alt="لوحة التحكم الفعلية للنظام بهوية نرفد: الأعضاء والاشتراكات والحضور والإيرادات، بأرقام توضيحية"
-            preload
+            loading="eager"
+            fetchPriority="high"
             placeholder="blur"
             sizes="(max-width: 719px) calc(100vw - 40px), (max-width: 959px) 630px, (max-width: 1199px) 48vw, 660px"
             className="system-shot-image"

@@ -810,7 +810,7 @@
   --secondary: #2e2e2e;
   --secondary-foreground: #3ecf8e;
   --muted: #2e2e2e;
-  --muted-foreground: #888888;
+  --muted-foreground: #a0a0a0;
   --accent: #333333;
   --accent-foreground: #ededed;
   --destructive: #f66061;
@@ -820,7 +820,7 @@
   --radius: 8px;
   --surface-subtle: #1c1c1c;
   --surface-deep: #1c1c1c;
-  --text-subtle: #888888;
+  --text-subtle: #a0a0a0;
   --brand-halo: color-mix(in srgb, var(--primary) 10%, transparent);
 }
 
@@ -4757,8 +4757,9 @@ h2 {
   50% { scale: 1.4; opacity: 1; }
 }
 @keyframes member-app-panel-enter {
-  from { translate: 0 18px; opacity: 0.35; }
-  to { translate: 0 0; opacity: 1; }
+  /* Offscreen animations pause, so text must stay readable at every frame. */
+  from { translate: 0 18px; }
+  to { translate: 0 0; }
 }
 @keyframes member-app-progress-fill {
   from { scale: 0.15 1; }

@@ -263,10 +263,9 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
                   ".member-app-copy > *",
                   {
                     y: 22,
-                    opacity: 0.6,
                     duration: 1.4,
                     stagger: 0.12,
-                    clearProps: "transform,opacity",
+                    clearProps: "transform",
                   },
                   0,
                 )
@@ -286,10 +285,9 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
                   ".member-app-float",
                   {
                     y: 38,
-                    opacity: 0.2,
                     duration: 2,
                     stagger: 0.35,
-                    clearProps: "transform,opacity",
+                    clearProps: "transform",
                   },
                   0.6,
                 );

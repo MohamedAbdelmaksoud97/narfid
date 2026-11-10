@@ -1,5 +1,27 @@
 import { expect, test } from "@playwright/test";
 
+test("preview text stays fully opaque while offscreen motion is paused", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto("/");
+  const section = page.locator("#member-app");
+  const text = section.locator(".member-app-panel h3, .member-app-copy h2, .member-app-float");
+  const opacity = () => text.evaluateAll((elements) => elements.map((element) => {
+    let value = 1;
+    for (let node: Element | null = element; node; node = node.parentElement) {
+      value *= Number(getComputedStyle(node).opacity);
+    }
+    return value;
+  }));
+  // The panel's CSS entrance starts paused before it reaches the viewport.
+  expect(await opacity()).toEqual([1, 1, 1, 1]);
+  await page.locator(".member-app-stage").scrollIntoViewIfNeeded();
+  await expect(section).toHaveAttribute("data-motion-visible", "true");
+  await expect.poll(() => page.locator(".member-app-device").evaluate((element) => element.style.transform)).not.toBe("");
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  await expect(section).toHaveAttribute("data-motion-visible", "false");
+  expect(await opacity()).toEqual([1, 1, 1, 1]);
+});
+
 test("member app preview changes screens and requests the technology partnership", async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));
