@@ -17,8 +17,9 @@ do $$ begin
 end $$;
 set local role authenticated;
 do $$ declare r public.social_post_publications; changed public.social_post_publications; begin
-  if (select count(*) from public.social_post_publications) <> 232 then raise exception 'Catalogue read incomplete'; end if;
-  select * into r from public.social_post_publications where platform='snapchat' and post_id='31';
+  if (select count(*) from public.social_post_publications) <> 242 then raise exception 'Catalogue read incomplete'; end if;
+  if (select count(*) from public.social_post_publications where platform='linkedin') <> 10 then raise exception 'LinkedIn catalogue read incomplete'; end if;
+  select * into strict r from public.social_post_publications where platform='linkedin' and post_id='10';
   select * into changed from public.set_social_publication(r.platform,r.post_id,not r.published,r.revision);
   if changed.published = r.published or changed.revision <> r.revision+1
     or changed.updated_by <> auth.uid() then raise exception 'Toggle/audit failed'; end if;

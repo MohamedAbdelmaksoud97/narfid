@@ -1,8 +1,8 @@
-import type { PlatformId } from "./social";
+import type { LaunchPlatformId } from "./social";
 
 // Stable IDs 31–50; Facebook is maintained in facebook-copy.ar.ts.
 export const expansionCaptions: Record<
-  Exclude<PlatformId, "facebook">,
+  Exclude<LaunchPlatformId, "facebook">,
   readonly string[]
 > = {
   snapchat: [

@@ -33,7 +33,7 @@ async function main() {
     );
   }
   console.log(
-    `Updated ${socialPosts.length} captions and 5 local bundles; PNGs, previews and their manifest were not changed.`,
+    `Updated ${socialPosts.length} captions and ${socialPlatforms.length + 1} local bundles; PNGs, previews and their manifest were not changed.`,
   );
 }
 main().catch((error) => {

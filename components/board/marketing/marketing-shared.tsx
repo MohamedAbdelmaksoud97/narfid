@@ -9,7 +9,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { socialPlatforms, type PlatformId } from "@/lib/marketing/social";
+import {
+  postsFor,
+  socialPlatforms,
+  socialPosts,
+  type PlatformId,
+} from "@/lib/marketing/social";
 import { marketingSources } from "@/lib/marketing/strategy";
 
 export function MarketingNavigation({
@@ -49,32 +54,37 @@ export function MarketingNavigation({
 export function PlatformCards() {
   return (
     <div className="marketing-platform-grid">
-      {socialPlatforms.map((platform) => (
-        <Card key={platform.id}>
-          <CardHeader>
-            <CardDescription>{platform.english}</CardDescription>
-            <CardTitle as="h2">{platform.name}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>{platform.role}</p>
-            <span className="marketing-dimensions" dir="ltr">
-              {platform.width} × {platform.height} px
-            </span>
-            <p className="text-muted-foreground">
-              ٥٨ صورة + ٩ تصنيفات + سجل النشر
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Link
-              href={`/board/marketing/social/${platform.id}`}
-              className={buttonVariants({ variant: "outline", size: "sm" })}
-            >
-              افتح خطة {platform.name}
-              <ArrowUpLeft data-icon="inline-end" />
-            </Link>
-          </CardFooter>
-        </Card>
-      ))}
+      {socialPlatforms.map((platform) => {
+        const posts = postsFor(platform.id);
+        const categoryCount = new Set(posts.map((post) => post.category)).size;
+        return (
+          <Card key={platform.id}>
+            <CardHeader>
+              <CardDescription>{platform.english}</CardDescription>
+              <CardTitle as="h2">{platform.name}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>{platform.role}</p>
+              <span className="marketing-dimensions" dir="ltr">
+                {platform.width} × {platform.height} px
+              </span>
+              <p className="text-muted-foreground">
+                {posts.length.toLocaleString("ar-SA")} صورة ·{" "}
+                {categoryCount.toLocaleString("ar-SA")} تصنيفات · سجل النشر
+              </p>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href={`/board/marketing/social/${platform.id}`}
+                className={buttonVariants({ variant: "outline", size: "sm" })}
+              >
+                افتح خطة {platform.name}
+                <ArrowUpLeft data-icon="inline-end" />
+              </Link>
+            </CardFooter>
+          </Card>
+        );
+      })}
     </div>
   );
 }
@@ -114,7 +124,7 @@ export function AllPostsDownload() {
       className={buttonVariants({ size: "navigation" })}
     >
       <Download data-icon="inline-start" />
-      تحميل الحزمة كاملة — ٢٣٢ صورة
+      تحميل الحزمة كاملة — {socialPosts.length.toLocaleString("ar-SA")} صورة
     </a>
   );
 }

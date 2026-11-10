@@ -1,4 +1,4 @@
-import type { PlatformId } from "./social";
+import type { LaunchPlatformId } from "./social";
 import { expansionCaptions } from "./expansion-copy.ar";
 import { facebookCaptions } from "./facebook-copy.ar";
 
@@ -102,7 +102,7 @@ const originalCaptions = {
   ],
 };
 
-export const socialCaptions: Record<PlatformId, readonly string[]> = {
+export const socialCaptions: Record<LaunchPlatformId, readonly string[]> = {
   snapchat: [...originalCaptions.snapchat, ...expansionCaptions.snapchat],
   instagram: [...originalCaptions.instagram, ...expansionCaptions.instagram],
   x: [...originalCaptions.x, ...expansionCaptions.x],

@@ -117,11 +117,16 @@ function diagram(post: SocialPost, dashboard: string) {
     migration: [6, 6, 0],
     partnership: [7, 5, 6],
     demo: [0, 8, 6],
+    "membership-renewal": [0, 1, 6],
+    "class-capacity": [1, 0, 6],
+    "shift-reconciliation": [2, 2, 6],
+    "meal-handoff": [3, 3, 6],
+    "second-branch": [5, 0, 8],
   };
   const points = post.points
     .map(
       (point, index) =>
-        `<div class="point"><span class="point-icon">${icon(topicIcons[post.theme][index], 48)}</span><div><span class="micro">${String(index + 1).padStart(2, "0")}</span><strong>${escape(point)}</strong></div></div>`,
+        `<div class="point"><span class="point-icon">${icon(topicIcons[post.theme]?.[index] ?? 6, 48)}</span><div><span class="micro">${String(index + 1).padStart(2, "0")}</span><strong>${escape(point)}</strong></div></div>`,
     )
     .join("");
   if (post.layout === "hero")
@@ -385,7 +390,7 @@ async function main() {
   );
   // Optional local convenience copies, ignored by Git. Production streams these
   // bundles from the original files and does not need Python or prebuilt ZIPs.
-  const zipScript = `import pathlib,zipfile,sys\nroot=pathlib.Path(sys.argv[1])\nplatforms=sys.argv[2:]\nfor name in platforms+['all']:\n files=sorted([p for s in (platforms if name=='all' else [name]) for p in (root/s).iterdir() if p.suffix in ['.png','.txt']])\n with zipfile.ZipFile(root/(name+'-posts.zip'),'w',zipfile.ZIP_DEFLATED) as z:\n  for p in files: z.write(p,str(p.relative_to(root)))\n with zipfile.ZipFile(root/(name+'-posts.zip'),'r') as z:\n  assert z.testzip() is None\nprint('Created and verified 5 ZIP archives')`;
+  const zipScript = `import pathlib,zipfile,sys\nroot=pathlib.Path(sys.argv[1])\nplatforms=sys.argv[2:]\nfor name in platforms+['all']:\n files=sorted([p for s in (platforms if name=='all' else [name]) for p in (root/s).iterdir() if p.suffix in ['.png','.txt']])\n with zipfile.ZipFile(root/(name+'-posts.zip'),'w',zipfile.ZIP_DEFLATED) as z:\n  for p in files: z.write(p,str(p.relative_to(root)))\n with zipfile.ZipFile(root/(name+'-posts.zip'),'r') as z:\n  assert z.testzip() is None\nprint(f'Created and verified {len(platforms) + 1} ZIP archives')`;
   execFileSync(
     process.platform === "win32" ? "python" : "python3",
     [

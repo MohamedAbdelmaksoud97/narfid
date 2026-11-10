@@ -2246,5 +2246,95 @@
     "bytes": 1623680,
     "sha256": "8977407bebfa5ea8e0d5188fd68b962c0b9beccaccf2582a1ba50ddccdf0b513",
     "scene": "reception"
+  },
+  {
+    "platform": "linkedin",
+    "file": "01-connected-operations.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 2099179,
+    "sha256": "5e7608f9117d48432aeec71346795e00ad7d15df19b5d0b1311ad87acd65fa1d",
+    "scene": "gym"
+  },
+  {
+    "platform": "linkedin",
+    "file": "02-membership-renewal.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1168504,
+    "sha256": "aa21f44275b2d0c790a464b7c6f26bb1dac5f39a959fce27ee60c92f5d900643",
+    "scene": "reception"
+  },
+  {
+    "platform": "linkedin",
+    "file": "03-class-capacity.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1454195,
+    "sha256": "606d1f2dc3b8819349c3ea40f78cb978d7dc33ac8a005e6419b563d7424b915d",
+    "scene": "court"
+  },
+  {
+    "platform": "linkedin",
+    "file": "04-shift-reconciliation.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1291501,
+    "sha256": "eceffbf58da58a0405b2f056e8dabcfb8a60885d44894161f4192d18d2a9d58e",
+    "scene": "reception"
+  },
+  {
+    "platform": "linkedin",
+    "file": "05-meal-handoff.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1186117,
+    "sha256": "a543178c69b8a4c169f33cade9274b4ed34660dd41cc5e89e3fb147fc42afdb6",
+    "scene": "kitchen"
+  },
+  {
+    "platform": "linkedin",
+    "file": "06-second-branch.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1305526,
+    "sha256": "1877d8a540a2ba6bd6b552f6d489400681aafeb589cc8807d7dd6d31a7d6f7fd",
+    "scene": "workspace"
+  },
+  {
+    "platform": "linkedin",
+    "file": "07-migration-sample.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1147233,
+    "sha256": "99d9e635a5342cc24d158219fa6f40c1fa1f9bd1a2d2ba3eb92a29f9e15da5fc",
+    "scene": "workspace"
+  },
+  {
+    "platform": "linkedin",
+    "file": "08-member-app-scope.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 2051707,
+    "sha256": "4f0cbb0ad68e83c980a7aa95a64d6a841577619b5c9bdcab2e1f41e91d8b9422",
+    "scene": "gym"
+  },
+  {
+    "platform": "linkedin",
+    "file": "09-gate-exceptions.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1617713,
+    "sha256": "04570d7087e15f3c5a3e9b3f0e0f346cabddb4e17720fe183c724d124a0c3cdb",
+    "scene": "reception"
+  },
+  {
+    "platform": "linkedin",
+    "file": "10-demo-scenario.png",
+    "width": 1440,
+    "height": 1800,
+    "bytes": 1291459,
+    "sha256": "1d79fefdc07c06b4241a9ed6e9ca67fe7ee474f9959bfedc7fd4ceb6d552fe0e",
+    "scene": "inventory"
   }
 ]

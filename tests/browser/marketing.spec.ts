@@ -7,7 +7,7 @@ import {
   postAsset,
 } from "../../lib/marketing/social";
 
-test("marketing strategy, platform guides, 232 protected images and downloads work", async ({
+test("marketing strategy, platform guides, 242 protected images and downloads work", async ({
   page,
   context,
   request,
@@ -20,6 +20,7 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
     "/board/marketing",
     "/board/marketing/social",
     "/board/marketing/social/snapchat",
+    "/board/marketing/social/linkedin",
   ]) {
     const response = await request.get(`${base}${path}`);
     expect(response.url()).toContain("/login");
@@ -32,16 +33,15 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
     expect(response.status()).toBe(401);
     expect(response.headers()["cache-control"]).toContain("no-store");
   }
-  const credentials = JSON.parse(
-    await readFile(".private/board-accounts.json", "utf8"),
-  );
-  const account = credentials.accounts.find(
-    (value: { status: string }) => value.status === "verified",
-  );
+  const chairman = "chairman@nerfed.example";
+  const credentials = await readFile(".private/board-accounts.md", "utf8");
+  const password = credentials.match(/chairman@nerfed\.example\s*\|\s*`([^`]+)`/)?.[1];
+  if (!password)
+    throw new Error("Chairman password is missing from the local board accounts file");
   await page.setViewportSize({ width: 1366, height: 768 });
   await page.goto(`${base}/login`);
-  await page.getByLabel("البريد الإلكتروني").fill(account.email);
-  await page.getByLabel("كلمة المرور", { exact: true }).fill(account.password);
+  await page.getByLabel("البريد الإلكتروني").fill(chairman);
+  await page.getByLabel("كلمة المرور", { exact: true }).fill(password);
   await page.getByRole("button", { name: "تسجيل الدخول", exact: true }).click();
   await expect(page).toHaveURL(/\/board$/);
   const nav = page.getByRole("navigation", {
@@ -72,20 +72,31 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
     .getByRole("link", { name: "السوشيال ميديا", exact: true })
     .click();
   await expect(page.getByRole("heading", { level: 1 })).toContainText(
-    "أربع منصات",
+    "مكتبة منشورات نرفد",
   );
   await expect(
     page.locator(
       ".marketing-social:visible .marketing-platform-grid > [data-slot=card]",
     ),
-  ).toHaveCount(4);
+  ).toHaveCount(5);
+  await page.getByRole("link", { name: "افتح خطة لينكدإن", exact: true }).click();
+  await expect(page).toHaveURL(/\/board\/marketing\/social\/linkedin$/);
+  const linkedInRegister = await page.request.get(
+    `${base}/api/board/marketing/publications?platform=linkedin`,
+  );
+  expect(linkedInRegister.ok()).toBe(true);
+  const { publications } = await linkedInRegister.json();
+  expect(publications.map((post: { post_id: string }) => post.post_id).sort()).toEqual(
+    postsFor("linkedin").map((post) => post.id),
+  );
   await context.grantPermissions(["clipboard-read", "clipboard-write"]);
   for (const platform of socialPlatforms) {
     await page.goto(`${base}/board/marketing/social/${platform.id}`);
     await expect(
       page.getByRole("heading", { name: platform.name, exact: true, level: 1 }),
     ).toBeVisible();
-    await expect(page.locator(".social-post-card:visible")).toHaveCount(58);
+    const platformPosts = postsFor(platform.id);
+    await expect(page.locator(".social-post-card:visible")).toHaveCount(platformPosts.length);
     await page
       .getByRole("button", { name: "التصور الكامل للفيديو", exact: true })
       .click();
@@ -93,7 +104,7 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
       page.getByText(platform.videoDirection, { exact: false }),
     ).toBeVisible();
     await page.locator("#posts").scrollIntoViewIfNeeded();
-    const first = postsFor(platform.id)[10];
+    const first = platformPosts[platform.id === "linkedin" ? 0 : 10];
     await page
       .getByRole("button", {
         name: `معاينة المنشور ${first.id}: ${first.headline.replaceAll("\n", " ")}`,
@@ -153,7 +164,6 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
     expect(archive.status()).toBe(200);
     expect(archive.headers()["content-type"]).toBe("application/zip");
     await archive.dispose();
-    const platformPosts = postsFor(platform.id);
     // Keep coverage of every asset while bounding concurrency and response memory.
     for (let start = 0; start < platformPosts.length; start += 4) {
       await Promise.all(
@@ -175,7 +185,7 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
       );
     }
   }
-  await page.goto(`${base}/board/marketing/social/instagram`);
+  await page.goto(`${base}/board/marketing/social/linkedin`);
   await page.setViewportSize({ width: 390, height: 844 });
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await expect
@@ -187,7 +197,7 @@ test("marketing strategy, platform guides, 232 protected images and downloads wo
     path: ".private/marketing-qa/platform-mobile.png",
     fullPage: false,
   });
-  await page.locator(".social-post-thumbnail").nth(18).click();
+  await page.locator(".social-post-thumbnail").nth(4).click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect
     .poll(() =>

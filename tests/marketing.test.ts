@@ -20,37 +20,32 @@ import {
   trackedDestination,
 } from "../lib/marketing/social";
 
-test("four platform-specific sets cover operations, member apps and access integrations", () => {
-  assert.equal(socialPlatforms.length, 4);
-  assert.equal(socialPosts.length, 232);
-  assert.equal(new Set(socialPosts.map((post) => post.headline)).size, 232);
-  assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 232);
+test("five platform-specific sets cover operations, member apps and access integrations", () => {
+  assert.equal(socialPlatforms.length, 5);
+  assert.equal(socialPosts.length, 242);
+  assert.equal(new Set(socialPosts.map((post) => post.headline)).size, 242);
+  assert.equal(new Set(socialPosts.map((post) => post.caption)).size, 242);
   for (const platform of socialPlatforms) {
-    assert.equal(socialCaptions[platform.id].length, 50);
-    assert.equal(postsFor(platform.id).length, 58);
-    assert.equal(
-      new Set(postsFor(platform.id).map((post) => post.id)).size,
-      58,
+    const posts = postsFor(platform.id);
+    const expected = platform.id === "linkedin" ? 10 : 58;
+    assert.deepEqual(
+      posts.map((post) => post.id),
+      Array.from({ length: expected }, (_, index) => String(index + 1).padStart(2, "0")),
     );
-    for (const category of socialCategories) {
-      assert.ok(
-        postsFor(platform.id).some((post) => post.category === category.id),
-      );
-      assert.ok(
-        postsFor(platform.id)
-          .filter((post) => Number(post.id) >= 31)
-          .some((post) => post.category === category.id),
-      );
+    if (platform.id !== "linkedin") {
+      assert.equal(socialCaptions[platform.id].length, 50);
+      for (const category of socialCategories)
+        assert.ok(posts.some((post) => Number(post.id) >= 31 && post.category === category.id));
     }
     assert.equal(
-      postsFor(platform.id).filter((post) => post.screenshot).length,
-      40,
+      posts.filter((post) => post.screenshot).length,
+      platform.id === "linkedin" ? 0 : 40,
     );
-    assert.equal(
-      new Set(postsFor(platform.id).map((post) => post.scene)).size,
-      6,
-    );
-    for (const post of postsFor(platform.id)) {
+    for (const category of socialCategories) {
+      assert.ok(posts.some((post) => post.category === category.id));
+    }
+    assert.equal(new Set(posts.map((post) => post.scene)).size, 6);
+    for (const post of posts) {
       assert.ok(post.caption.length > 50);
       assert.ok(post.alt.length > 30);
       assert.ok(
@@ -74,7 +69,8 @@ test("four platform-specific sets cover operations, member apps and access integ
 });
 
 test("download bundles stream original PNGs and captions without ZIP files on disk", async () => {
-  assert.equal(marketingArchiveFiles("all").length, 464);
+  assert.equal(marketingArchiveFiles("all").length, 484);
+  assert.equal(marketingArchiveFiles("linkedin").length, 20);
   const names = marketingArchiveFiles("x");
   assert.equal(names.length, 116);
   const filtered = marketingArchiveFiles("x", new Set(["x/51", "facebook/52"]));
@@ -93,13 +89,13 @@ test("download bundles stream original PNGs and captions without ZIP files on di
   }
 });
 
-test("all 232 PNGs and lightweight previews match the export manifest", async () => {
+test("all 242 PNGs and lightweight previews match the export manifest", async () => {
   const dir = "content/marketing/assets";
   const manifest = JSON.parse(await readFile(`${dir}/manifest.json`, "utf8"));
-  assert.equal(manifest.length, 232);
+  assert.equal(manifest.length, 242);
   assert.equal(
     new Set(manifest.map((entry: { sha256: string }) => entry.sha256)).size,
-    232,
+    242,
   );
   for (const platform of socialPlatforms)
     for (const post of postsFor(platform.id)) {
@@ -144,6 +140,9 @@ test("publication changes require a known platform/post, a real boolean and a va
     revision: 0,
   };
   assert.deepEqual(validatePublication(good), good);
+  const linkedIn = { ...good, platform: "linkedin", post_id: "10" };
+  assert.deepEqual(validatePublication(linkedIn), linkedIn);
+  assert.throws(() => validatePublication({ ...linkedIn, post_id: "11" }));
   for (const invalid of [
     { platform: "tiktok" },
     { post_id: "59" },

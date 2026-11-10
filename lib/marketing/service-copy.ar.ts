@@ -1,7 +1,7 @@
-import type { PlatformId } from "./social";
+import type { LaunchPlatformId } from "./social";
 
 // Platform-specific captions for stable IDs 51–58, separate from approved image text.
-export const serviceCaptions: Record<PlatformId, readonly string[]> = {
+export const serviceCaptions: Record<LaunchPlatformId, readonly string[]> = {
   snapchat: [
     "اسم ناديك في جوال العضو.\nنطوّر لك تطبيقًا بهويتك يرتبط بنرفد، بخدمات تختارها ونطاق نتفق عليه.\nوش أول خدمة تتمنى أعضاؤك يلقونها فيه؟",
     "«كم باقي في اشتراكي؟»\nممكن تكون الإجابة في تطبيق مؤسستك، ومعها بداية التجديد.\nنطوّر الرحلة معك حسب سياسة النادي وربط الدفع المطلوب.",

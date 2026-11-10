@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowUpLeft } from "lucide-react";
 import { requireMarketingAccess } from "@/lib/marketing/server";
+import { socialPlatforms, socialPosts } from "@/lib/marketing/social";
 import {
   marketingReviewedAt,
   marketingSections,
@@ -67,11 +68,11 @@ async function Workspace() {
             <span>خطة إطلاق وتعلّم مقترحة</span>
           </div>
           <div>
-            <strong>٤ منصات</strong>
+            <strong>{socialPlatforms.length.toLocaleString("ar-SA")} منصات</strong>
             <span>دور ومحتوى مستقل لكل منصة</span>
           </div>
           <div>
-            <strong>٢٣٢ صورة</strong>
+            <strong>{socialPosts.length.toLocaleString("ar-SA")} صورة</strong>
             <span>بمقاسات فعلية ونصوص مرافقة</span>
           </div>
           <div>

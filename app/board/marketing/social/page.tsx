@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { requireMarketingAccess } from "@/lib/marketing/server";
+import { socialPosts } from "@/lib/marketing/social";
 import {
   AllPostsDownload,
   MarketingNavigation,
@@ -18,14 +19,10 @@ async function Workspace() {
     <main className="marketing-social container">
       <header className="marketing-page-heading">
         <span className="section-kicker">المحتوى الاجتماعي لنرفد</span>
-        <h1>
-          أربع منصات.
-          <br />
-          وصوت نرفد واحد.
-        </h1>
+        <h1>مكتبة منشورات نرفد</h1>
         <p>
-          لكل منصة دور وجمهور وإيقاع وصياغة. هنا خطة الصور والفيديو، و٥٨ منشورًا
-          مصورًا لكل منصة، مع النص والوصف البديل والوجهة المقترحة.
+          {socialPosts.length.toLocaleString("ar-SA")} منشورًا مصورًا مع النص
+          والوصف البديل والوجهة المقترحة، ودليل محتوى مستقل لكل منصة.
         </p>
         <AllPostsDownload />
       </header>
@@ -34,10 +31,9 @@ async function Workspace() {
       <Alert>
         <AlertTitle>حزمة للمراجعة والنشر اليدوي</AlertTitle>
         <AlertDescription>
-          الصور المائتان مصممة ومصدّرة بالفعل، ومنها ١٦٠ منشورًا بلقطات
-          واجهات النظام بهوية نرفد وبيانات عرض تجريبية. لم تُنشر خارجيًا،
-          والفيديوهات تصورات للتصوير لاحقًا. اربط الحسابات بوسائل التواصل
-          والدومين المعتمد، ثم عاين القص والنص والروابط قبل النشر.
+          تتضمن المكتبة تصاميم مصورة ولقطات من واجهات النظام ببيانات عرض
+          تجريبية. الفيديوهات تصورات للتصوير لاحقًا. راجع سجل النشر، وعاين
+          قص الصورة والنص والرابط داخل المنصة قبل النشر.
         </AlertDescription>
       </Alert>
       <section className="marketing-chapter">
@@ -47,7 +43,7 @@ async function Workspace() {
         <ol className="marketing-use-steps">
           <li>
             <strong>اختر المنصة.</strong> اقرأ دليلها والجمهور والتصور الإبداعي،
-            ثم اختر من التصنيفات السبعة وراجع حالة نشر المنشور وترتيبه المقترح.
+            ثم اختر من التصنيفات وراجع حالة نشر المنشور وترتيبه المقترح.
           </li>
           <li>
             <strong>حمّل الصورة وانسخ النص.</strong> أضف الوصف البديل داخل

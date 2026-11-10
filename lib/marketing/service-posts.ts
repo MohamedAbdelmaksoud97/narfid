@@ -1,4 +1,4 @@
-import type { SocialPlatform, SocialPost } from "./social";
+import type { LaunchPlatformId, SocialPlatform, SocialPost } from "./social";
 import { serviceCaptions } from "./service-copy.ar";
 
 const topics = [
@@ -116,7 +116,7 @@ const topics = [
   },
 ] as const;
 
-export function createServicePosts(platform: SocialPlatform): SocialPost[] {
+export function createServicePosts(platform: SocialPlatform<LaunchPlatformId>): SocialPost[] {
   const position = { snapchat: 0, instagram: 1, x: 2, facebook: 3 }[
     platform.id
   ];

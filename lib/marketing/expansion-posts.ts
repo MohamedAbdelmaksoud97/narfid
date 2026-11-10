@@ -1,4 +1,4 @@
-import type { SocialPlatform, SocialPost } from "./social";
+import type { LaunchPlatformId, SocialPlatform, SocialPost } from "./social";
 import { socialCaptions } from "./captions.ar";
 import { productScreens } from "./product-posts";
 
@@ -337,7 +337,7 @@ const topics: Topic[] = [
   },
 ];
 
-export function createExpansionPosts(platform: SocialPlatform): SocialPost[] {
+export function createExpansionPosts(platform: SocialPlatform<LaunchPlatformId>): SocialPost[] {
   const position = { snapchat: 0, instagram: 1, x: 2, facebook: 3 }[
     platform.id
   ];

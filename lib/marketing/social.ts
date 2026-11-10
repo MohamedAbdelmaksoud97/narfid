@@ -7,7 +7,10 @@ import {
 } from "./categories";
 import { createExpansionPosts } from "./expansion-posts";
 import { createServicePosts } from "./service-posts";
-export type PlatformId = "snapchat" | "instagram" | "x" | "facebook";
+import { linkedInPlatform, linkedInPosts } from "./linkedin";
+
+export type LaunchPlatformId = "snapchat" | "instagram" | "x" | "facebook";
+export type PlatformId = LaunchPlatformId | "linkedin";
 export const socialScenes = {
   gym: { file: "gym-concept.png", description: "صالة تدريب" },
   reception: { file: "reception-concept.png", description: "استقبال نادٍ" },
@@ -23,7 +26,7 @@ export const socialScenes = {
   },
 } as const;
 type SocialScene = keyof typeof socialScenes;
-const backgrounds: Record<PlatformId, SocialScene[]> = {
+const backgrounds: Record<LaunchPlatformId, SocialScene[]> = {
   snapchat: [
     "gym",
     "reception",
@@ -107,8 +110,8 @@ export type SocialPost = {
     | "access-gate";
 };
 type Scene = { time: string; visual: string; voice: string };
-export type SocialPlatform = {
-  id: PlatformId;
+export type SocialPlatform<Id extends PlatformId = PlatformId> = {
+  id: Id;
   name: string;
   english: string;
   width: number;
@@ -130,7 +133,7 @@ export type SocialPlatform = {
   scenes: Scene[];
 };
 
-export const socialPlatforms: SocialPlatform[] = [
+const launchPlatforms: SocialPlatform<LaunchPlatformId>[] = [
   {
     id: "snapchat",
     name: "سنابشات",
@@ -371,6 +374,8 @@ export const socialPlatforms: SocialPlatform[] = [
   },
 ];
 
+export const socialPlatforms: SocialPlatform[] = [...launchPlatforms, linkedInPlatform];
+
 const themes = [
   "brand",
   "memberships",
@@ -432,7 +437,7 @@ const goals: SocialPost["goal"][] = [
   "طلب عرض",
 ];
 type Copy = [headline: string, subline: string, points: string[]];
-const copies: Record<PlatformId, Copy[]> = {
+const copies: Record<LaunchPlatformId, Copy[]> = {
   snapchat: [
     [
       "ناديك يكبر.\nخلّ التشغيل أوضح.",
@@ -643,7 +648,7 @@ const copies: Record<PlatformId, Copy[]> = {
   ],
 };
 
-const launchPosts: SocialPost[] = socialPlatforms.flatMap((platform) =>
+const launchPosts: SocialPost[] = launchPlatforms.flatMap((platform) =>
   copies[platform.id].map(([headline, subline, points], index) => ({
     id: String(index + 1).padStart(2, "0"),
     platform: platform.id,
@@ -680,12 +685,15 @@ const launchPosts: SocialPost[] = socialPlatforms.flatMap((platform) =>
   })),
 );
 
-export const socialPosts: SocialPost[] = socialPlatforms.flatMap((platform) => [
-  ...launchPosts.filter((post) => post.platform === platform.id),
-  ...createProductPosts(platform),
-  ...createExpansionPosts(platform),
-  ...createServicePosts(platform),
-]);
+export const socialPosts: SocialPost[] = [
+  ...launchPlatforms.flatMap((platform) => [
+    ...launchPosts.filter((post) => post.platform === platform.id),
+    ...createProductPosts(platform),
+    ...createExpansionPosts(platform),
+    ...createServicePosts(platform),
+  ]),
+  ...linkedInPosts,
+];
 
 export function findPlatform(value: string) {
   return socialPlatforms.find((platform) => platform.id === value);
