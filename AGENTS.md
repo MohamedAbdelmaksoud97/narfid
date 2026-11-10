@@ -26,6 +26,10 @@ Before any narfid SEO work, read and follow
 `.agents/skills/narfid-seo/SKILL.md`. This includes search and keyword research,
 article planning, writing and editing, solution-page SEO copy, metadata,
 internal links, technical SEO, `/board/seo`, indexing and search measurement.
+For requests about site traffic, acquisition, contact events or SEO performance,
+use the skill's live GA4/Search Console workflow and existing authorized board
+access before asking the owner for manual reports. Dated snapshots are context,
+not a substitute for reading the requested period from the connected services.
 Use the existing research for the relevant topic, preserve its evidence and
 limitations, and verify current article inventory before creating overlapping
 content. Historical campaign counts and research findings are dated context,

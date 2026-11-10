@@ -41,6 +41,8 @@
 
 تفسير الأعداد والحالات: [تقرير Sitemaps](https://support.google.com/webmasters/answer/7451001)، [أسباب عدم الفهرسة](https://support.google.com/webmasters/answer/7440203)، [فحص الرابط وطلب الفهرسة](https://support.google.com/webmasters/answer/9012289). هذه المراجع تفسر الحالة؛ أدلة حالة نرفد هي الفحوص واللقطات أعلاه.
 
+**تصحيح لاحق من المالك:** أكد أن Enhanced measurement مغلق بالفعل. تبقى ملاحظة تكرار `page_view` بحاجة لتحديد المصدر؛ لا نعتمد الإعداد سببًا مثبتًا أو نعيد طلب إغلاقه. لم تُقرأ حالة المفتاح عبر Admin API. مرجع التحقق الأحدث في [دليل الربط](search-console.md#فحص-فعلي-بعد-التفويض--10-نوفمبر-2026).
+
 ## ملف إثبات الملكية في Search Console
 
 أُضيف ملف Google الأصلي دون تعديل في `public/googleab4f843951ea48b1.html` ليُتاح بعد النشر على `https://www.narfid.com/googleab4f843951ea48b1.html` دون تسجيل دخول. هذه طريقة إثبات ملكية URL-prefix على `https://www.narfid.com/`؛ ملكية Domain الكاملة تتطلب طريقة DNS.
