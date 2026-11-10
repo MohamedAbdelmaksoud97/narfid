@@ -35,8 +35,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
-# Local board-account credentials; never publish or commit.
+# Local account credentials and the local social publishing skill.
 /.private/
+/.agents/skills/narfid-social-publishing/
 
 # Local Supabase CLI cache and linked-project metadata.
 /supabase/.temp/
