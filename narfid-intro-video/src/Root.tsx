@@ -17,6 +17,18 @@ import { ShiftClosing } from "./nv001/Closing";
 export const RemotionRoot = () => (
   <>
     <Composition
+      id="NV001-NarratedReview"
+      component={ShiftFilm}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={1110}
+      defaultProps={{
+        narration: true,
+        signatureFile: "nv001/sonic-instrumental-candidate.wav",
+      }}
+    />
+    <Composition
       id="NV001-VisualPreview"
       component={ShiftFilm}
       width={1080}
@@ -32,7 +44,7 @@ export const RemotionRoot = () => (
         width={1080}
         height={1920}
         fps={30}
-        durationInFrames={120}
+        durationInFrames={165}
       />
       <Composition
         id="NV001-Handoff"
@@ -40,7 +52,7 @@ export const RemotionRoot = () => (
         width={1080}
         height={1920}
         fps={30}
-        durationInFrames={300}
+        durationInFrames={315}
       />
       <Composition
         id="NV001-Cases"
@@ -56,7 +68,7 @@ export const RemotionRoot = () => (
         width={1080}
         height={1920}
         fps={30}
-        durationInFrames={210}
+        durationInFrames={150}
       />
       <Composition
         id="NV001-Closing"

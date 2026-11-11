@@ -12,7 +12,7 @@ import { ShiftCases } from "./Cases";
 import { ShiftChallenge } from "./Challenge";
 import { ShiftClosing } from "./Closing";
 
-// Preview is deliberately incomplete until the voice and first sonic master are approved.
+// Review uses the actual candidate; final delivery still requires its first approval and audio review.
 export const ShiftFilm = ({
   narration = false,
   signatureFile = "",
@@ -26,14 +26,14 @@ export const ShiftFilm = ({
       <Series>
         <Series.Sequence
           name="الوردية تنتهي والحالة تبقى"
-          durationInFrames={4 * fps}
+          durationInFrames={5.5 * fps}
           premountFor={fps}
         >
           <ShiftOpening />
         </Series.Sequence>
         <Series.Sequence
           name="الحالة والمسؤول والخطوة التالية"
-          durationInFrames={10 * fps}
+          durationInFrames={10.5 * fps}
           premountFor={fps}
         >
           <ShiftHandoff />
@@ -47,7 +47,7 @@ export const ShiftFilm = ({
         </Series.Sequence>
         <Series.Sequence
           name="تحدي ثلاث حالات"
-          durationInFrames={7 * fps}
+          durationInFrames={5 * fps}
           premountFor={fps}
         >
           <ShiftChallenge />
@@ -71,33 +71,37 @@ export const ShiftFilm = ({
         <Track name="Arabic narration · individually editable scenes">
           <Audio
             src={staticFile("nv001/voice-01.wav")}
+            volume={0.585498338276811}
             from={0}
-            durationInFrames={4 * fps}
+            durationInFrames={5.5 * fps}
             premountFor={fps}
           />
           <Audio
             src={staticFile("nv001/voice-02.wav")}
-            from={4 * fps}
-            durationInFrames={10 * fps}
+            volume={0.5503896801934963}
+            from={5.5 * fps}
+            durationInFrames={10.5 * fps}
             premountFor={fps}
           />
           <Audio
             src={staticFile("nv001/voice-03.wav")}
-            from={14 * fps}
+            volume={0.5604049801614448}
+            from={16 * fps}
             durationInFrames={13 * fps}
             premountFor={fps}
           />
           <Audio
             src={staticFile("nv001/voice-04.wav")}
-            from={27 * fps}
-            durationInFrames={7 * fps}
+            volume={0.5893525179856115}
+            from={29 * fps}
+            durationInFrames={5 * fps}
             premountFor={fps}
           />
         </Track>
       )}
       {signatureFile && (
         <Audio
-          name="Approved unchanged NARFID sonic master"
+          name="NARFID instrumental signature · pending first approval"
           src={staticFile(signatureFile)}
           from={34 * fps}
           durationInFrames={3 * fps}

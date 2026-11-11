@@ -1,0 +1,49 @@
+{
+  "videoId": "NV-001",
+  "createdAt": "2026-11-11",
+  "narration": {
+    "provider": "Higgsfield",
+    "model": "text2speech_v2",
+    "variant": "elevenlabs",
+    "voiceName": "Cillian",
+    "voiceId": "d8ba9f14-8a24-44db-932b-99e16c45bd32",
+    "voiceType": "preset",
+    "settings": "Provider defaults; no pitch or tempo changes",
+    "rightsSource": "https://higgsfield.ai/terms-of-use-agreement",
+    "rightsSection": "4.4",
+    "rightsCheckedAt": "2026-11-11",
+    "clips": [
+      {
+        "file": "voice-01.wav",
+        "jobId": "5eb11c47-3fb4-4bf4-b4dc-48954d2669c8",
+        "duration": 5.36
+      },
+      {
+        "file": "voice-02.wav",
+        "jobId": "3050914f-25ab-40a5-a08f-9e6e2192017c",
+        "duration": 10.32
+      },
+      {
+        "file": "voice-03.wav",
+        "jobId": "4d13157b-2ccd-4280-ac45-9a7838c82d7b",
+        "duration": 12.32
+      },
+      {
+        "file": "voice-04.wav",
+        "jobId": "0e170873-e848-4586-a43f-1e4da225f61c",
+        "duration": 4.16
+      }
+    ]
+  },
+  "signature": {
+    "kind": "instrumental",
+    "file": "sonic-instrumental-candidate.wav",
+    "sha256": "4f5e7668642301d83e629bd63364aa05f34360558119907503875b80a6d26c5c",
+    "duration": 3,
+    "approved": false,
+    "provider": "original-synthesis",
+    "generator": "scripts/make-sonic-instrumental.mjs",
+    "rights": "Original musical composition and synthesis created for narfid; no third-party samples or voices"
+  },
+  "audioListened": false
+}

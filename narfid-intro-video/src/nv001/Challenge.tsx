@@ -22,7 +22,7 @@ export const ShiftChallenge = () => {
             <Check
               progress={interpolate(
                 frame,
-                [1.3 * fps, 1.7 * fps],
+                [0.9 * fps, 1.3 * fps],
                 [0, 1],
                 clamp,
               )}
@@ -35,7 +35,7 @@ export const ShiftChallenge = () => {
             <Check
               progress={interpolate(
                 frame,
-                [2.2 * fps, 2.6 * fps],
+                [1.5 * fps, 1.9 * fps],
                 [0, 1],
                 clamp,
               )}
@@ -48,7 +48,7 @@ export const ShiftChallenge = () => {
             <Check
               progress={interpolate(
                 frame,
-                [3.1 * fps, 3.5 * fps],
+                [2.1 * fps, 2.5 * fps],
                 [0, 1],
                 clamp,
               )}
@@ -58,7 +58,7 @@ export const ShiftChallenge = () => {
         </Reveal>
       </div>
       <Reveal
-        delay={3.7}
+        delay={2.6}
         style={{ position: "absolute", top: 1330, right: 105, left: 105 }}
       >
         <p className="nv-note">

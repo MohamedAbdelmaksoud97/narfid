@@ -31,27 +31,48 @@ const probe = (file: string) =>
       { encoding: "utf8", maxBuffer: 1024 * 1024 },
     ),
   );
+export function pcmFromWav(bytes: Buffer) {
+  if (
+    bytes.toString("ascii", 0, 4) !== "RIFF" ||
+    bytes.toString("ascii", 8, 12) !== "WAVE"
+  )
+    throw new Error("Expected decoded PCM WAV audio.");
+  for (let offset = 12; offset + 8 <= bytes.length; ) {
+    const length = bytes.readUInt32LE(offset + 4);
+    if (bytes.toString("ascii", offset, offset + 4) === "data")
+      return bytes.subarray(
+        offset + 8,
+        Math.min(bytes.length, offset + 8 + length),
+      );
+    offset += 8 + length + (length % 2);
+  }
+  throw new Error("Decoded WAV has no PCM data chunk.");
+}
 function audio(file: string, start?: number) {
-  return execFileSync(
-    resolve(bin, "ffmpeg.exe"),
-    [
-      "-v",
-      "error",
-      "-i",
-      file,
-      ...(start === undefined ? [] : ["-ss", String(start)]),
-      "-t",
-      "3",
-      "-vn",
-      "-ac",
-      "1",
-      "-ar",
-      "16000",
-      "-f",
-      "s16le",
-      "pipe:1",
-    ],
-    { maxBuffer: 1024 * 1024 },
+  return pcmFromWav(
+    execFileSync(
+      resolve(bin, "ffmpeg.exe"),
+      [
+        "-v",
+        "error",
+        "-i",
+        file,
+        ...(start === undefined ? [] : ["-ss", String(start)]),
+        "-t",
+        "3",
+        "-vn",
+        "-ac",
+        "1",
+        "-ar",
+        "16000",
+        "-c:a",
+        "pcm_s16le",
+        "-f",
+        "wav",
+        "pipe:1",
+      ],
+      { maxBuffer: 1024 * 1024 },
+    ),
   );
 }
 export function signatureCorrelation(actual: Buffer, reference: Buffer) {
@@ -81,6 +102,25 @@ export function signatureCorrelation(actual: Buffer, reference: Buffer) {
   }
   return best;
 }
+export function validateSignatureManifest(signature: Record<string, unknown>) {
+  const nonempty = (value: unknown) =>
+    typeof value === "string" && value.trim().length > 0;
+  const provenance =
+    signature.kind === "instrumental"
+      ? nonempty(signature.generator)
+      : (signature.kind === undefined || signature.kind === "voice") &&
+        nonempty(signature.voiceId);
+  if (
+    signature.id !== sonicSignature.id ||
+    signature.approved !== true ||
+    !nonempty(signature.provider) ||
+    !nonempty(signature.rights) ||
+    !provenance
+  )
+    throw new Error(
+      "An approved signature manifest with audio provenance and usage rights is required.",
+    );
+}
 export async function verifyVideo(
   file: string,
   signatureManifest: string,
@@ -93,16 +133,7 @@ export async function verifyVideo(
       "Video exceeds the private bucket limit of 50 MiB; compress the export first.",
     );
   const signature = JSON.parse(await readFile(signatureManifest, "utf8"));
-  if (
-    signature.id !== sonicSignature.id ||
-    signature.approved !== true ||
-    !signature.voiceId ||
-    !signature.provider ||
-    !signature.rights
-  )
-    throw new Error(
-      "An approved signature manifest with voice provenance and usage rights is required.",
-    );
+  validateSignatureManifest(signature);
   const signaturePath = resolve(
     dirname(signatureManifest),
     signature.audioFile,

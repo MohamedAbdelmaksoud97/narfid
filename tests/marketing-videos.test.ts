@@ -10,7 +10,11 @@ import {
   videoScript,
 } from "../lib/marketing/video-plan";
 import { validateVideoChange } from "../lib/marketing/video-validation";
-import { signatureCorrelation } from "../scripts/marketing-video";
+import {
+  signatureCorrelation,
+  validateSignatureManifest,
+  pcmFromWav,
+} from "../scripts/marketing-video";
 
 test("the approved campaign has fifty new distinct, fully timed production briefs", () => {
   assert.equal(videoBriefs.length, 50);
@@ -30,11 +34,15 @@ test("the approved campaign has fifty new distinct, fully timed production brief
       video.id,
     );
     assert.ok(video.scenes.length >= 5, video.id);
-    assert.equal(video.scenes.at(-1)?.voiceover, sonicSignature.phrase);
+    assert.equal(video.scenes.at(-1)?.onScreen, sonicSignature.phrase);
+    assert.equal(video.scenes.at(-1)?.voiceover, "");
     assert.equal(video.scenes.at(-1)?.seconds, 3);
-    for (const scene of video.scenes) {
+    for (const [index, scene] of video.scenes.entries()) {
       assert.ok(
-        scene.onScreen && scene.voiceover && scene.visual && scene.sound,
+        scene.onScreen &&
+          (scene.voiceover || index === video.scenes.length - 1) &&
+          scene.visual &&
+          scene.sound,
         video.id,
       );
       // A spoken scene needs space for Arabic delivery, not just a text slot.
@@ -50,6 +58,57 @@ test("the approved campaign has fifty new distinct, fully timed production brief
     assert.ok(videoScript(video).includes(video.caption));
     assert.ok(!/NarfidIntro|NarfidMembersApp/.test(video.id));
   }
+});
+
+test("instrumental signature provenance does not require an invented voice identity or bypass approval", () => {
+  const instrumental = {
+    id: sonicSignature.id,
+    kind: "instrumental",
+    approved: true,
+    provider: "original-synthesis",
+    generator: "make-sonic-instrumental.mjs",
+    rights: "Original score without external samples",
+  };
+  assert.doesNotThrow(() => validateSignatureManifest(instrumental));
+  assert.throws(() =>
+    validateSignatureManifest({ ...instrumental, approved: false }),
+  );
+  assert.throws(() =>
+    validateSignatureManifest({ ...instrumental, generator: "" }),
+  );
+  assert.throws(() =>
+    validateSignatureManifest({ ...instrumental, rights: "" }),
+  );
+  assert.throws(() =>
+    validateSignatureManifest({ ...instrumental, kind: "unknown" }),
+  );
+  assert.throws(() =>
+    validateSignatureManifest({ ...instrumental, kind: "voice" }),
+  );
+  assert.doesNotThrow(() =>
+    validateSignatureManifest({
+      ...instrumental,
+      kind: "voice",
+      voiceId: "selected-preset",
+    }),
+  );
+});
+test("audio verification reads streamed WAV output with metadata before an unknown-size data chunk", () => {
+  const bytes = Buffer.alloc(42);
+  bytes.write("RIFF", 0);
+  bytes.writeUInt32LE(0xffffffff, 4);
+  bytes.write("WAVE", 8);
+  bytes.write("JUNK", 12);
+  bytes.writeUInt32LE(3, 16);
+  bytes.write("abc", 20);
+  bytes.write("data", 24);
+  bytes.writeUInt32LE(0xffffffff, 28);
+  Buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]).copy(bytes, 32);
+  assert.deepEqual(
+    pcmFromWav(bytes),
+    Buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
+  );
+  assert.throws(() => pcmFromWav(Buffer.alloc(44)));
 });
 test("board mutations reject unknown identities, stale revision formats and unverified ready states", () => {
   const change = {

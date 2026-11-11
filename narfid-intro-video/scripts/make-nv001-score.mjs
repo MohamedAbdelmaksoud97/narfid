@@ -66,10 +66,10 @@ for (let bar = 0; bar < 8; bar++) {
   });
 }
 // A real musical change at the practical challenge; modest lift, then resolve.
-add(27.1, 2.7, felt(74, 0.025, 1.8), -0.3);
-add(28.2, 2.4, felt(72, 0.02, 1.8), 0.3);
-add(30.4, 3.1, felt(69, 0.025, 1.45), -0.15);
-add(31.5, 2.4, felt(65, 0.023, 1.3), 0.15);
+add(29.1, 2.7, felt(74, 0.025, 1.8), -0.3);
+add(30.2, 2.4, felt(72, 0.02, 1.8), 0.3);
+add(31.4, 2.1, felt(69, 0.025, 1.45), -0.15);
+add(32.5, 1.4, felt(65, 0.023, 1.3), 0.15);
 // Clock pressure: three dry mechanical ticks, then a deliberate quiet hold.
 for (const start of [0.2, 1.2, 2.2])
   add(
@@ -83,13 +83,13 @@ for (const start of [0.2, 1.2, 2.2])
   );
 // Subtle paper contacts tied to form reveals and each physical transfer.
 for (const [start, pan] of [
-  [4.5, 0.25],
-  [6.5, 0.05],
-  [8.6, -0.25],
-  [14.6, 0.2],
-  [16.8, -0.2],
-  [21, 0.25],
-  [22, -0.25],
+  [6, 0.25],
+  [8, 0.05],
+  [10.1, -0.25],
+  [16.6, 0.2],
+  [18.8, -0.2],
+  [23, 0.25],
+  [24, -0.25],
 ]) {
   let smooth = 0;
   add(
@@ -113,11 +113,11 @@ for (const [start, pan] of [
   );
 }
 // Three individual review confirmations: softer and more resolved each time.
-add(28.3, 0.65, felt(77, 0.042, 6), 0.2);
-add(29.2, 0.65, felt(79, 0.038, 6), 0);
-add(30.1, 0.9, felt(81, 0.035, 5), -0.2);
+add(29.9, 0.65, felt(77, 0.042, 6), 0.2);
+add(30.5, 0.65, felt(79, 0.038, 6), 0);
+add(31.1, 0.9, felt(81, 0.035, 5), -0.2);
 // Lightweight transition movement, only at the three editorial chapter changes.
-for (const start of [3.82, 13.82, 26.82])
+for (const start of [5.32, 15.82, 28.82])
   add(start, 0.3, (t) => {
     const e = Math.sin((Math.PI * t) / 0.3) ** 2;
     return (
