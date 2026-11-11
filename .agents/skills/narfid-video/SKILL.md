@@ -32,10 +32,23 @@ Define the video's goal in one sentence before storyboarding. For a short produc
 - **Keep a dark mood throughout every video.** Use charcoal/near-black backgrounds, dark surfaces and restrained brand-green accents in every scene, transition and end card. Use dark-mode product captures and dark information cards, with readable light text. A dark outer frame around a large white card does not meet this direction. Earlier reference scenes with white or full mint backgrounds do not override this newer preference.
 - **Identify the category in every video.** Show a readable on-screen descriptor such as **«نرفد — نظام لإدارة الأندية والمنشآت الرياضية»** in the opening and closing. Keep the body grounded in recognizable sports-management workflows, such as memberships, class/court bookings, collection or branches, using verified system views when useful. The logo or a generic shift/administration scenario alone is insufficient to identify the product. Preserve the practical value of educational content while making its sports-institution context explicit.
 - Use visual progression: kinetic Arabic phrases, purposeful close-ups, workflow connections, depth, changes in scale or light, and a clear final invitation. Avoid one repeated screenshot-and-text layout. Motion must clarify the message and leave time to read.
-- For short product demos, use the owner-approved [reservation handoff direction](../../../narfid-intro-video/NV001.md#reservation-handoff-direction-test) as the reference. Open on one practical question from club operations. Follow the action in the interface through to the result, keeping the relevant field, record or status visually connected as the framing changes. End with the decision the viewer can make from that result.
+- For short product demos, use **«رحلة داخل النظام»** by default. Follow its description in [Video styles](#video-styles) and adapt the workflow to the brief.
 - Showcase actual behavior and coherent local screenshots. Illustrative mobile cards can complement them; document their provenance instead of claiming they are app captures. Never invent features, customer results, live counts, integrations or testimonials.
 - Keep Arabic words joined, set RTL direction and bundle Arabic fonts. Use generous safe areas, readable type and deliberate contrast. Animate with frame-based Remotion APIs; keep scenes and meaningful cues separately authored/editable.
 - Open Studio as soon as the project can run, before editing the composition. Keep it running for steering. Review transitions as motion, not only isolated stills.
+
+## Video styles
+
+### رحلة داخل النظام
+
+Use this name when the owner asks for **«رحلة داخل النظام»** or **Journey Inside the System**. The owner approved the [reservation handoff direction](../../../narfid-intro-video/NV001.md#reservation-handoff-direction-test) as its creative reference. The finished `NarfidReservationFilm` composition builds on that reference.
+
+- **Goal and story:** Start with one practical question from a sports club or facility, follow a specific action in the system, and finish with the result and a useful decision.
+- **Picture and motion:** Use dark product screens, short readable Arabic text and deliberate camera movement. Keep the relevant field, record or status visually connected as the framing moves through the workflow.
+- **Sound:** Synchronize restrained effects with actions such as focusing, typing and revealing a result. Use the shared three-second instrumental signature at the end. Follow the owner's standing no-voiceover preference.
+- **Context:** Identify narfid as a system for managing clubs and sports facilities, and use fictional data in system views.
+
+Add other named styles under this section as the owner approves them. Apply the shared brand, dark mood, capture and delivery requirements to each style.
 
 ## Design the sound
 
