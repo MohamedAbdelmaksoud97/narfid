@@ -37,7 +37,7 @@ export function pcmFromWav(bytes: Buffer) {
     bytes.toString("ascii", 8, 12) !== "WAVE"
   )
     throw new Error("Expected decoded PCM WAV audio.");
-  for (let offset = 12; offset + 8 <= bytes.length; ) {
+  for (let offset = 12; offset + 8 <= bytes.length;) {
     const length = bytes.readUInt32LE(offset + 4);
     if (bytes.toString("ascii", offset, offset + 4) === "data")
       return bytes.subarray(
@@ -131,7 +131,7 @@ export function hasAuthorizedAudioReview(qa: Record<string, unknown>) {
 }
 export async function verifyVideo(
   file: string,
-  signatureManifest: string,
+  signatureManifest: string | undefined,
   qaFile: string,
   expectedSeconds: number,
 ): Promise<{ bytes: Buffer; metadata: VideoOutput }> {
@@ -140,18 +140,20 @@ export async function verifyVideo(
     throw new Error(
       "Video exceeds the private bucket limit of 50 MiB; compress the export first.",
     );
-  const signature = JSON.parse(await readFile(signatureManifest, "utf8"));
-  validateSignatureManifest(signature);
-  const signaturePath = resolve(
-    dirname(signatureManifest),
-    signature.audioFile,
-  );
-  const signatureBytes = await readFile(signaturePath);
-  if (hash(signatureBytes) !== signature.sha256)
-    throw new Error("Signature file changed after approval.");
-  const signatureMeta = probe(signaturePath);
-  if (Math.abs(Number(signatureMeta.format.duration) - 3) > 0.05)
-    throw new Error("Signature master must be exactly three seconds.");
+  let signature: { audioFile: string; sha256: string; id: string } | undefined;
+  let signaturePath: string | undefined;
+  if (signatureManifest) {
+    const manifest = JSON.parse(await readFile(signatureManifest, "utf8"));
+    validateSignatureManifest(manifest);
+    signature = manifest;
+    signaturePath = resolve(dirname(signatureManifest), manifest.audioFile);
+    const signatureBytes = await readFile(signaturePath);
+    if (hash(signatureBytes) !== manifest.sha256)
+      throw new Error("Signature file changed after approval.");
+    const signatureMeta = probe(signaturePath);
+    if (Math.abs(Number(signatureMeta.format.duration) - 3) > 0.05)
+      throw new Error("Signature master must be exactly three seconds.");
+  }
   const data = probe(file),
     video = data.streams.find(
       (stream: { codec_type: string }) => stream.codec_type === "video",
@@ -198,6 +200,7 @@ export async function verifyVideo(
     { stdio: "pipe", maxBuffer: 1024 * 1024 },
   );
   if (
+    signaturePath &&
     signatureCorrelation(audio(file, duration - 3), audio(signaturePath)) < 0.97
   )
     throw new Error(
@@ -206,7 +209,7 @@ export async function verifyVideo(
   const qa = JSON.parse(await readFile(qaFile, "utf8"));
   if (
     qa.videoSha256 !== hash(bytes) ||
-    qa.signatureSha256 !== signature.sha256 ||
+    (signature && qa.signatureSha256 !== signature.sha256) ||
     qa.visualReviewed !== true ||
     !hasAuthorizedAudioReview(qa)
   )
@@ -223,7 +226,7 @@ export async function verifyVideo(
       bytes: bytes.length,
       sha256: hash(bytes),
       audio: true,
-      signature_id: sonicSignature.id,
+      ...(signature ? { signature_id: signature.id } : {}),
     },
   };
 }
@@ -249,11 +252,11 @@ async function main() {
     const file = arg("--file"),
       signature = arg("--signature"),
       qa = arg("--qa");
-    if (!file || !signature || !qa)
-      throw new Error("--file, --signature and --qa are required.");
+    if (!file || !qa)
+      throw new Error("--file and --qa are required; --signature is optional.");
     verified = await verifyVideo(
       resolve(file),
-      resolve(signature),
+      signature ? resolve(signature) : undefined,
       resolve(qa),
       video.durationSeconds,
     );

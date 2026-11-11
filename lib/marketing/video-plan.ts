@@ -27,11 +27,11 @@ export const sonicSignature = {
   phrase: "نرفد… سندك التقني",
   durationSeconds: 3,
   direction:
-    "نغمة موسيقية أصلية فقط، قصيرة تتصاعد ثم تستقر، دون تعليق صوتي في التوقيع. يُستخدم ملف الخاتمة نفسه في كل فيديو، وفق تعديل المالك في ١١ نوفمبر ٢٠٢٦.",
+    "نغمة موسيقية أصلية متاحة عند مناسبتها للفيديو. يُختار الصوت والختام لكل فيديو بحسب فكرته، دون تعليق صوتي.",
   soundSource:
     "موسيقى ومؤثرات أصلية فقط، دون تعليق صوتي في الفيديو كله. تنقل النصوص والحركة الرسالة.",
   assetStatus:
-    "التوقيع الموسيقي narfid-sonic-v1 جاهز، ومصرّح باستخدامه وفق توجيه المالك بالإكمال والنشر. يُعاد استخدام الملف نفسه دون كلام أو تغيير السرعة.",
+    "التوقيع الموسيقي narfid-sonic-v1 متاح للاستخدام عند الحاجة، وتُصمم خاتمة الصوت حسب كل فيديو.",
 } as const;
 
 export type VideoScene = {
@@ -72,7 +72,7 @@ export function brief(input: Omit<VideoBrief, "durationSeconds">): VideoBrief {
       sonicSignature.phrase,
       "",
       "ظهور الشعار العربي الأصلي بهدوء، ثم استقرار على خلفية نرفد؛ مساحة آمنة حول الشعار.",
-      "تشغيل ملف narfid-sonic-v1 الموسيقي المعتمد نفسه، دون تعليق صوتي؛ لا إعادة توليد للصوت أو تغيير لسرعته.",
+      "خاتمة صوتية مناسبة لفكرة الفيديو، بمؤثرات أو موسيقى، دون تعليق صوتي.",
     ),
   ];
   return {
@@ -111,7 +111,7 @@ export type VideoOutput = {
   bytes: number;
   sha256: string;
   audio: true;
-  signature_id: string;
+  signature_id?: string;
 };
 export type VideoPublication = {
   video_id: string;

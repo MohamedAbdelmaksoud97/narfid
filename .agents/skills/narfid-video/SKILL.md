@@ -45,7 +45,7 @@ Use this name when the owner asks for **«رحلة داخل النظام»** or 
 
 - **Goal and story:** Start with one practical question from a sports club or facility, follow a specific action in the system, and finish with the result and a useful decision.
 - **Picture and motion:** Use dark product screens, short readable Arabic text and deliberate camera movement. Keep the relevant field, record or status visually connected as the framing moves through the workflow.
-- **Sound:** Synchronize restrained effects with actions such as focusing, typing and revealing a result. Use the shared three-second instrumental signature at the end. Follow the owner's standing no-voiceover preference.
+- **Sound:** Synchronize restrained effects with actions such as focusing, typing and revealing a result. Follow the owner's standing no-voiceover preference.
 - **Context:** Identify narfid as a system for managing clubs and sports facilities, and use fictional data in system views.
 
 ### هوية نرفد المتحركة
@@ -53,7 +53,7 @@ Use this name when the owner asks for **«رحلة داخل النظام»** or 
 Use **«هوية نرفد المتحركة»** when the owner requests the identity-film direction. The owner liked the `BrandMotionStudy` sample on 11 November 2026. Use its editable composition in `narfid-intro-video/src/DirectionStudies.tsx` as a reference, and develop the message around the requested subject.
 
 - Introduce a focused brand or product message through animated Arabic typography and brand elements, with clear visual progression and readable pacing.
-- Keep the dark Narfid palette and synchronized effects, and end with the shared instrumental signature.
+- Keep the dark Narfid palette and synchronized effects, with an ending suited to the film.
 
 ### حكاية من النادي
 
@@ -66,9 +66,9 @@ Add other named styles under this section as the owner approves them. Apply the 
 
 ## Design the sound
 
-Use **synchronized sound effects as the starting point**. In the approved reservation handoff direction, the key sounds mark focus, typing and the result. Let visible actions determine where a cue belongs and leave space between them. Reserve music for the signature unless the brief or owner calls for a score. Communicate through readable Arabic text and purposeful motion. Treat brief `message` fields as visual editorial guidance. Add narration or a spoken brand line only if the owner explicitly changes that preference.
+Use **synchronized sound effects as the starting point**. In the approved reservation handoff direction, the key sounds mark focus, typing and the result. Let visible actions determine where a cue belongs and leave space between them. Select the sound and ending for the particular film; music is optional. Communicate through readable Arabic text and purposeful motion. Treat brief `message` fields as visual editorial guidance. Add narration or a spoken brand line only if the owner explicitly changes that preference.
 
-Every new narfid video ends with the same three-second **instrumental-only sonic signature**: an original resolving musical cue, with no spoken phrase. «نرفد… سندك التقني» may remain on screen. Document the master's original composition/provenance and commercial usage rights, then reuse the identical local file without retiming or regenerating it. See [board-production.md](references/board-production.md) for its manifest and verification. The owner's explicit instruction to finish and publish after reviewing a version authorizes the requested revision and delivery; do not demand another sample approval. Record that editorial authorization accurately rather than claiming an auditory review. Keep the last three seconds free of another music bed or voice.
+The owner clarified on 11 November 2026 that the Narfid visual end card stays consistent across videos, while its sound is chosen for each film. Use the Arabic logo and sports-management descriptor in the closing. The existing instrumental `narfid-sonic-v1` is available when specifically appropriate; its earlier use remains historical context. A signature, when used, is instrumental unless the owner explicitly requests speech. Document audio provenance and usage rights.
 
 Bundle audio locally, record provenance/usage rights and verify licensing for the intended use. A downloadable sample is not automatically commercially licensed. Existing generators and cue tracks in `narfid-intro-video` are starting points, not a quality ceiling. Follow applicable tool authorization rules for paid services.
 

@@ -4,6 +4,8 @@
 
 `OrbitStudy` is a 13-second Narfid experiment based on [OpenAI's LifeVal post](https://x.com/OpenAI/status/2117307611338997846). The reference places a central title on a fine grid while colorful objects orbit around it. This experiment uses a dark grid and AI-generated sports objects as a four-object sprite. The final three seconds use the existing instrumental signature. It is an initial visual approximation; the reference audio was muted during inspection.
 
+`OrbitFilm` extends the treatment to 15 seconds. It retains the Narfid visual end card and uses a different, effects-only mix authored from original `booking-study/effects.wav` cues. The owner clarified that each video's sound can differ while the visual ending remains consistent. The reference and final mix were not reviewed by ear in this environment.
+
 | Original | Observed in the release |
 | --- | --- |
 | [Businesses in ChatGPT on @OpenAI](https://x.com/OpenAI/status/2120216592395174382) · 0:49 | Around 0:07, a single centered confirmation card fills the scene, with a blue check and the pointer beside the next action. Around 0:11 the frame isolates the business description and contact form. The viewer sees one step per framing. |

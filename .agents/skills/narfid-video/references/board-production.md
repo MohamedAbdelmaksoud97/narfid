@@ -24,22 +24,22 @@ Preserve the last attached export; **يحتاج تعديل** does not erase it. 
 
 ## Establish the sonic master once
 
-Follow the [main skill's sound direction](../SKILL.md#design-the-sound) and use the existing instrumental signature. The phrase **«نرفد… سندك التقني»** may appear on screen. For NV-001's original release, the owner rejected voiceover after reviewing the narrated version and explicitly directed completion and publication. Keep the exact instruction in the QA record for the export it authorized.
+Follow the [main skill's sound direction](../SKILL.md#design-the-sound) and choose the ending for each film. The phrase **«نرفد… سندك التقني»** may appear on screen. For NV-001's original release, the owner rejected voiceover after reviewing the narrated version and explicitly directed completion and publication. Keep the exact instruction in the QA record for the export it authorized.
 
 Store the authorized master and manifest together: `content/marketing/audio/narfid-sonic-v1.wav` and `signature.json`. The instrumental manifest contains `id: "narfid-sonic-v1"`, `kind: "instrumental"`, relative `audioFile`, its `sha256`, `approved: true`, `provider`, `generator`, and usage `rights`. Record the owner's actual approval or explicit publication authorization and date as its approval basis. Do not invent a voice identity or claim that the owner heard an unreviewed final export. Do not create a placeholder master. The verifier retains compatibility with historical voiced manifests.
 
-Use this same master as the final three seconds in every composition, at its original speed, with the signature as the sole audio in that window.
+The existing master is optional. The owner clarified that a fixed sound is not required across videos. Pass `--signature` only when a film uses that master; the verifier then checks the manifest, hash and ending correlation.
 
 ## Verify, attach, and finish
 
-Render and perform the main skill's media review first. Local QA records `videoSha256`, `signatureSha256` and `visualReviewed: true` after frame/playback review. Set `audioListened: true` only after actual listening to that exact export. If unavailable, keep it false and disclose the limitation. An explicit owner instruction to finish/publish after that disclosure can instead be recorded as `audioReviewWaivedByOwner: true` with their nonempty exact `ownerAuthorization`; the verifier accepts that documented exception while preserving all media/hash/ending checks. Silence or an inferred preference is not a waiver. QA reports and exports stay ignored.
+Render and perform the main skill's media review first. Local QA records `videoSha256` and `visualReviewed: true` after frame/playback review. Record `signatureSha256` when using the optional master. Set `audioListened: true` only after actual listening to that exact export. If unavailable, keep it false and disclose the limitation. An explicit owner instruction to finish/publish after that disclosure can instead be recorded as `audioReviewWaivedByOwner: true` with their nonempty exact `ownerAuthorization`; the verifier accepts that documented exception while preserving all applicable media and hash checks. Silence or an inferred preference is not a waiver. QA reports and exports stay ignored.
 
 ```powershell
-npm run marketing:video -- verify NV-001 --file "absolute/video.mp4" --signature "content/marketing/audio/signature.json" --qa ".private/video-runs/NV-001-qa.json"
-npm run marketing:video -- finish NV-001 --file "absolute/video.mp4" --signature "content/marketing/audio/signature.json" --qa ".private/video-runs/NV-001-qa.json"
+npm run marketing:video -- verify NV-001 --file "absolute/video.mp4" --qa ".private/video-runs/NV-001-qa.json"
+npm run marketing:video -- finish NV-001 --file "absolute/video.mp4" --qa ".private/video-runs/NV-001-qa.json"
 ```
 
-`verify` works locally without signing in. It checks the brief's dimensions/duration/fps, H.264/AAC streams, full decode, signature master hash, final-audio correlation, and matching QA hashes. `finish` repeats verification, uploads to the private `marketing-videos` bucket, downloads and hashes the uploaded bytes, then records **جاهز** for the same attempt/revision and reads it back. The bucket limit is 50 MiB; compress while preserving verified quality if necessary. Files stay outside Git and the Next build.
+`verify` works locally without signing in. It checks the brief's dimensions/duration/fps, H.264/AAC streams, full decode and matching QA hashes. If `--signature` is supplied, it also checks the master and final-audio correlation. `finish` repeats verification, uploads to the private `marketing-videos` bucket, downloads and hashes the uploaded bytes, then records **جاهز** for the same attempt/revision and reads it back. The bucket limit is 50 MiB; compress while preserving verified quality if necessary. Files stay outside Git and the Next build.
 
 An uncertain upload is recovered by comparing existing bytes; it never overwrites an object. An uncertain completion is checked against the stored output hash; rerunning finish for the same completed output does not duplicate it. If the board changed meanwhile, stop the write and review the current state. Deliver the local MP4 plus the board link and confirm protected playback/download. A failed board update remains unfinished even if the local MP4 is valid.
 

@@ -84,3 +84,69 @@ export const OrbitStudy = () => {
     </AbsoluteFill>
   );
 };
+
+export const OrbitFilm = () => {
+  const { fps } = useVideoConfig();
+  return (
+    <AbsoluteFill className="orbit-background">
+      <Sequence
+        name="نرفد وحياة النادي"
+        durationInFrames={12 * fps}
+        premountFor={fps}
+      >
+        <Orbit />
+      </Sequence>
+      <Sequence
+        name="نرفد"
+        from={12 * fps}
+        durationInFrames={3 * fps}
+        premountFor={fps}
+      >
+        <Closing />
+      </Sequence>
+      <Audio
+        name="Opening"
+        src={staticFile("booking-study/effects.wav")}
+        durationInFrames={18}
+        volume={0.65}
+        premountFor={fps}
+      />
+      <Audio
+        name="First movement"
+        src={staticFile("booking-study/effects.wav")}
+        from={2.4 * fps}
+        trimBefore={116}
+        durationInFrames={6}
+        volume={0.45}
+        premountFor={fps}
+      />
+      <Audio
+        name="Second movement"
+        src={staticFile("booking-study/effects.wav")}
+        from={5 * fps}
+        trimBefore={159}
+        durationInFrames={30}
+        volume={0.55}
+        premountFor={fps}
+      />
+      <Audio
+        name="Third movement"
+        src={staticFile("booking-study/effects.wav")}
+        from={7.7 * fps}
+        trimBefore={116}
+        durationInFrames={6}
+        volume={0.5}
+        premountFor={fps}
+      />
+      <Audio
+        name="Closing accent"
+        src={staticFile("booking-study/effects.wav")}
+        from={12 * fps}
+        trimBefore={159}
+        durationInFrames={30}
+        volume={0.6}
+        premountFor={fps}
+      />
+    </AbsoluteFill>
+  );
+};
