@@ -148,7 +148,7 @@ async function Workspace({ params }: Props) {
               <div>
                 <h3>{scene.visual}</h3>
                 <p>
-                  <strong>التعليق المقترح:</strong> {scene.voice}
+                  <strong>النص الظاهر:</strong> {scene.screenText}
                 </p>
               </div>
             </li>

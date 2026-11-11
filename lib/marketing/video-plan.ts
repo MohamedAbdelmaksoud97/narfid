@@ -28,16 +28,16 @@ export const sonicSignature = {
   durationSeconds: 3,
   direction:
     "نغمة موسيقية أصلية فقط، قصيرة تتصاعد ثم تستقر، دون تعليق صوتي في التوقيع. يُستخدم ملف الخاتمة نفسه في كل فيديو، وفق تعديل المالك في ١١ نوفمبر ٢٠٢٦.",
-  narrationSource:
-    "ElevenLabs عبر Higgsfield — مصدر مقترح، ويُختار الصوت بعد مراجعة عينة عربية عند أول إنتاج.",
+  soundSource:
+    "موسيقى ومؤثرات أصلية فقط، دون تعليق صوتي في الفيديو كله. تنقل النصوص والحركة الرسالة.",
   assetStatus:
-    "أُنتجت عينة موسيقية أولية دون كلام، وتنتظر الاستماع والاعتماد؛ اعتماد الاتجاه لا يعني اعتماد الملف النهائي.",
+    "التوقيع الموسيقي narfid-sonic-v1 جاهز، ومصرّح باستخدامه وفق توجيه المالك بالإكمال والنشر. يُعاد استخدام الملف نفسه دون كلام أو تغيير السرعة.",
 } as const;
 
 export type VideoScene = {
   seconds: number;
   onScreen: string;
-  voiceover: string;
+  message: string;
   visual: string;
   sound: string;
 };
@@ -58,11 +58,11 @@ export type VideoBrief = {
 export function scene(
   seconds: number,
   onScreen: string,
-  voiceover: string,
+  message: string,
   visual: string,
-  sound = "إشارة خفيفة مرتبطة بالحركة، مع خفض الموسيقى تحت الكلام.",
+  sound = "موسيقى متدرجة وإشارة خفيفة مرتبطة بالحركة؛ دون تعليق صوتي.",
 ): VideoScene {
-  return { seconds, onScreen, voiceover, visual, sound };
+  return { seconds, onScreen, message, visual, sound };
 }
 export function brief(input: Omit<VideoBrief, "durationSeconds">): VideoBrief {
   const scenes = [
@@ -87,10 +87,10 @@ export function videoScript(video: VideoBrief) {
     .map((item, index) => {
       const from = at;
       at += item.seconds;
-      return `${index + 1}. ${from}–${at} ثانية\nالشاشة: ${item.onScreen}\nالتعليق: ${item.voiceover}\nالصورة والحركة: ${item.visual}\nالصوت: ${item.sound}`;
+      return `${index + 1}. ${from}–${at} ثانية\nالشاشة: ${item.onScreen}\nالمعنى المطلوب بصريًا: ${item.message}\nالصورة والحركة: ${item.visual}\nالصوت: ${item.sound}`;
     })
     .join("\n\n");
-  return `${video.id} — ${video.title}\nالجمهور: ${video.audience}\nالهدف: ${video.goal}\nالمعالجة: ${video.treatment}\n1080×1920 / 30fps / ${video.durationSeconds} ثانية\n\n${scenes}\n\nوصف المنشور:\n${video.caption}\n\nالدعوة: ${video.cta}`;
+  return `${video.id} — ${video.title}\nالجمهور: ${video.audience}\nالهدف: ${video.goal}\nالمعالجة: ${video.treatment}\nالصوت: موسيقى ومؤثرات فقط؛ دون تعليق صوتي\n1080×1920 / 30fps / ${video.durationSeconds} ثانية\n\n${scenes}\n\nوصف المنشور:\n${video.caption}\n\nالدعوة: ${video.cta}`;
 }
 
 export type VideoProduction = {

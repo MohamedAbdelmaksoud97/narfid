@@ -1,0 +1,14 @@
+{
+  "id": "narfid-sonic-v1",
+  "kind": "instrumental",
+  "audioFile": "narfid-sonic-v1.wav",
+  "sha256": "4f5e7668642301d83e629bd63364aa05f34360558119907503875b80a6d26c5c",
+  "approved": true,
+  "approvedAt": "2026-11-11",
+  "approvalMode": "owner-directed-publication",
+  "ownerAuthorization": "المطلوب الفيديو يكون احترافى بموسيقى ومؤثرات فقط — خلص وانشر الفيديو ذى مقولتلك",
+  "auditoryReviewClaimed": false,
+  "provider": "original-synthesis",
+  "generator": "narfid-intro-video/scripts/make-sonic-instrumental.mjs",
+  "rights": "Original musical composition and synthesis created for narfid; no third-party samples, recordings or voices"
+}

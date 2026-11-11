@@ -165,7 +165,10 @@ export function VideoLibrary() {
             <CardDescription>التوقيع الصوتي الثابت</CardDescription>
             <CardTitle>{sonicSignature.phrase}</CardTitle>
           </CardHeader>
-          <CardContent>{sonicSignature.direction}</CardContent>
+          <CardContent>
+            <p>{sonicSignature.direction}</p>
+            <p>{sonicSignature.soundSource}</p>
+          </CardContent>
           <CardFooter>{sonicSignature.assetStatus}</CardFooter>
         </Card>
       </div>
@@ -173,9 +176,9 @@ export function VideoLibrary() {
         <Film />
         <AlertTitle>نصوص جاهزة للإنتاج لاحقًا</AlertTitle>
         <AlertDescription>
-          لكل فكرة افتتاحية وسيناريو بتوقيت المشاهد ونص الشاشة والتعليق الصوتي
-          ووصف منشور. مصدر الصوت المقترح: ElevenLabs عبر Higgsfield؛ تُراجع
-          العينة عند أول إنتاج. اكتمال الإنتاج لا يغيّر حالة النشر.
+          لكل فكرة افتتاحية وسيناريو بتوقيت المشاهد ونص الشاشة والموسيقى
+          والمؤثرات ووصف منشور. مصدر الصوت المقترح: ElevenLabs عبر Higgsfield؛
+          تُراجع العينة عند أول إنتاج. اكتمال الإنتاج لا يغيّر حالة النشر.
         </AlertDescription>
       </Alert>
       <FieldGroup className="video-filters">
@@ -302,7 +305,7 @@ export function VideoLibrary() {
                   <Badge variant="outline">{video.durationSeconds} ثانية</Badge>
                   <Badge variant="outline">{video.topic}</Badge>
                 </div>
-                <p>{video.scenes[0].voiceover}</p>
+                <p>{video.scenes[0].message}</p>
                 <p className="text-muted-foreground">{video.audience}</p>
                 {publicationControl(video, platform)}
               </CardContent>
@@ -374,11 +377,11 @@ export function VideoLibrary() {
                   variant="outline"
                   onClick={() =>
                     void copy(
-                      current.scenes.map((item) => item.voiceover).join("\n"),
+                      current.scenes.map((item) => item.onScreen).join("\n"),
                     )
                   }
                 >
-                  نسخ التعليق الصوتي
+                  نسخ نصوص الشاشة
                 </Button>
               </div>
               <p role="status">{copyNotice}</p>
@@ -462,7 +465,7 @@ export function VideoLibrary() {
                         <h3>{item.onScreen}</h3>
                       </header>
                       <p>
-                        <strong>التعليق الصوتي:</strong> {item.voiceover}
+                        <strong>المعنى المطلوب بصريًا:</strong> {item.message}
                       </p>
                       <p>
                         <strong>المشهد والحركة:</strong> {item.visual}

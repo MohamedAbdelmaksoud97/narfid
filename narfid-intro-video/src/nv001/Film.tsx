@@ -12,12 +12,10 @@ import { ShiftCases } from "./Cases";
 import { ShiftChallenge } from "./Challenge";
 import { ShiftClosing } from "./Closing";
 
-// Review uses the actual candidate; final delivery still requires its first approval and audio review.
+// Music and effects only. The owner explicitly rejected all narration.
 export const ShiftFilm = ({
-  narration = false,
   signatureFile = "",
 }: {
-  narration?: boolean;
   signatureFile?: string;
 }) => {
   const { fps } = useVideoConfig();
@@ -62,46 +60,14 @@ export const ShiftFilm = ({
       </Series>
       <Track name="Original score and synchronized tactile sound design">
         <Audio
-          src={staticFile("nv001/score.wav")}
+          src={staticFile("nv001/music-only.wav")}
           durationInFrames={34 * fps}
           premountFor={fps}
         />
       </Track>
-      {narration && (
-        <Track name="Arabic narration · individually editable scenes">
-          <Audio
-            src={staticFile("nv001/voice-01.wav")}
-            volume={0.585498338276811}
-            from={0}
-            durationInFrames={5.5 * fps}
-            premountFor={fps}
-          />
-          <Audio
-            src={staticFile("nv001/voice-02.wav")}
-            volume={0.5503896801934963}
-            from={5.5 * fps}
-            durationInFrames={10.5 * fps}
-            premountFor={fps}
-          />
-          <Audio
-            src={staticFile("nv001/voice-03.wav")}
-            volume={0.5604049801614448}
-            from={16 * fps}
-            durationInFrames={13 * fps}
-            premountFor={fps}
-          />
-          <Audio
-            src={staticFile("nv001/voice-04.wav")}
-            volume={0.5893525179856115}
-            from={29 * fps}
-            durationInFrames={5 * fps}
-            premountFor={fps}
-          />
-        </Track>
-      )}
       {signatureFile && (
         <Audio
-          name="NARFID instrumental signature · pending first approval"
+          name="NARFID instrumental signature"
           src={staticFile(signatureFile)}
           from={34 * fps}
           durationInFrames={3 * fps}

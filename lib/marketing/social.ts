@@ -111,7 +111,7 @@ export type SocialPost = {
     | "mobile-app"
     | "access-gate";
 };
-type Scene = { time: string; visual: string; voice: string };
+type Scene = { time: string; visual: string; screenText: string };
 export type SocialPlatform<Id extends PlatformId = PlatformId> = {
   id: Id;
   name: string;
@@ -178,22 +178,23 @@ const launchPlatforms: SocialPlatform<LaunchPlatformId>[] = [
       {
         time: "٠–٣ ث",
         visual: "مسؤول أمام قائمة مواعيد تجريبية؛ عنوان: الحصة ممتلئة؟",
-        voice: "كيف يعرف الاستقبال أن الحصة وصلت سعتها؟",
+        screenText: "كيف يعرف الاستقبال أن الحصة وصلت سعتها؟",
       },
       {
         time: "٣–١١ ث",
         visual: "تسجيل عمودي مقصوص بعناية يوضح الموعد والسعة في بيئة تجريبية",
-        voice: "ابدأ بموعد واضح، وسعة، وحالة حجز يمكن للفريق مراجعتها.",
+        screenText: "ابدأ بموعد واضح، وسعة، وحالة حجز يمكن للفريق مراجعتها.",
       },
       {
         time: "١١–٢٠ ث",
         visual: "انتقال بسيط بين تأكيد الحجز وظهوره للفريق؛ بلا بيانات شخصية",
-        voice: "في نرفد ترتبط الحجوزات بالإتاحة والسعة وفق إعدادات الخدمة.",
+        screenText:
+          "في نرفد ترتبط الحجوزات بالإتاحة والسعة وفق إعدادات الخدمة.",
       },
       {
         time: "٢٠–٢٧ ث",
         visual: "الشعار ودعوة واحدة: أرسل لنا نوع نشاطك",
-        voice: "نادي أو أكاديمية أو ملعب؟ ناقش معنا احتياج مؤسستك.",
+        screenText: "نادي أو أكاديمية أو ملعب؟ ناقش معنا احتياج مؤسستك.",
       },
     ],
   },
@@ -213,7 +214,7 @@ const launchPlatforms: SocialPlatform<LaunchPlatformId>[] = [
     imageDirection:
       "خلاصة 4:5 بحجم 1440×1800؛ عنوان كبير، مساحات هادئة، رسم واحد أو ثلاث نقاط، وتوقيع نرفد. الحزمة الحالية صور مستقلة؛ يمكن لاحقًا تحويل الشرح الطويل إلى كاروسيل ٤–٦ شرائح بنفس النسبة مع فائدة مكتملة بكل شريحة.",
     videoDirection:
-      "ريلز عمودي 9:16 بحجم إنتاج مقترح 1080×1920: خطّاف خلال أول ثانيتين، عرض دورة واحدة من النظام، تعليق بشري وترجمة ثابتة واضحة، ثم سؤال أو دعوة عرض. استخدم لقطات شاشة من بيئة تجريبية مع تقريب للمعلومة بدل تمرير لوحة كاملة بسرعة.",
+      "ريلز عمودي 9:16 بحجم إنتاج مقترح 1080×1920: خطّاف خلال أول ثانيتين، عرض دورة واحدة من النظام، موسيقى ومؤثرات ونصوص شاشة واضحة، دون تعليق صوتي، ثم سؤال أو دعوة عرض. استخدم لقطات شاشة من بيئة تجريبية مع تقريب للمعلومة بدل تمرير لوحة كاملة بسرعة.",
     videoLength:
       "تصور إبداعي: ريلز ٢٠–٣٥ ثانية؛ وفيديو شرح أطول عند وجود سؤال يستحقه.",
     safeArea:
@@ -235,23 +236,24 @@ const launchPlatforms: SocialPlatform<LaunchPlatformId>[] = [
       {
         time: "٠–٢ ث",
         visual: "عنوان كبير فوق مشهد استقبال: متى يتجدد الاشتراك؟",
-        voice: "قبل ما ينتهي اشتراك العضو، هل الخطوة التالية واضحة؟",
+        screenText: "قبل ما ينتهي اشتراك العضو، هل الخطوة التالية واضحة؟",
       },
       {
         time: "٢–١٢ ث",
         visual: "ثلاث لقطات تجريبية: ملف عضو، مدة الاشتراك، حالة التجديد",
-        voice:
+        screenText:
           "راجع الحالة والمدة والسياسة من ملف العضو، ثم نفّذ الإجراء المناسب.",
       },
       {
         time: "١٢–٢٤ ث",
         visual: "رسم يربط الملف بالتجديد والتجميد حسب السياسة",
-        voice: "نرفد تربط دورة الاشتراك بالتشغيل، مع صلاحيات مناسبة للفريق.",
+        screenText:
+          "نرفد تربط دورة الاشتراك بالتشغيل، مع صلاحيات مناسبة للفريق.",
       },
       {
         time: "٢٤–٣٠ ث",
         visual: "هوية نرفد وسؤال: ما أكثر خطوة تستهلك وقت فريقك؟",
-        voice: "احجز عرضًا نبدأ فيه بأهم احتياج في مؤسستك.",
+        screenText: "احجز عرضًا نبدأ فيه بأهم احتياج في مؤسستك.",
       },
     ],
   },
@@ -293,24 +295,24 @@ const launchPlatforms: SocialPlatform<LaunchPlatformId>[] = [
       {
         time: "٠–٤ ث",
         visual: "متحدث أو عنوان: الفاتورة ليست نهاية المتابعة",
-        voice: "كيف تربط مبيعات الوردية بتحصيلها الفعلي؟",
+        screenText: "كيف تربط مبيعات الوردية بتحصيلها الفعلي؟",
       },
       {
         time: "٤–١٨ ث",
         visual: "بيانات تجريبية توضّح العملية والتحصيل ووسيلة الدفع",
-        voice:
+        screenText:
           "ابدأ بالعملية، ثم راجع سجل التحصيل وطريقة الدفع والتعديلات المرتبطة.",
       },
       {
         time: "١٨–٣٢ ث",
         visual: "رسم ثلاثة عناصر: بيع، تحصيل، تسوية",
-        voice:
+        screenText:
           "نرفد تدعم متابعة المبيعات والورديات والتسوية؛ نطاق المالية يحتاج شرحًا عمليًا يناسب مؤسستك.",
       },
       {
         time: "٣٢–٤٠ ث",
         visual: "سؤال للمدير مع شعار هادئ",
-        voice: "ما الجزء الذي يصعب على فريقك مراجعته اليوم؟",
+        screenText: "ما الجزء الذي يصعب على فريقك مراجعته اليوم؟",
       },
     ],
   },
@@ -352,31 +354,34 @@ const launchPlatforms: SocialPlatform<LaunchPlatformId>[] = [
       {
         time: "٠–٦ ث",
         visual: "عنوان ومشهد استقبال تجريبي: فريقك يستعد للانتقال؟",
-        voice:
+        screenText:
           "الانتقال إلى نظام جديد يبدأ بفهم البيانات وطريقة العمل الحالية.",
       },
       {
         time: "٦–٢٥ ث",
         visual: "قائمة تجريبية: أعضاء، اشتراكات، أرصدة، خدمات",
-        voice:
+        screenText:
           "نحدد البيانات المطلوبة، نراجع جودتها، ونتفق على ما سيُنقل وكيف نتحقق منه.",
       },
       {
         time: "٢٥–٤٧ ث",
         visual: "بيئة اختبار وفريق يراجع دورة تسجيل وتجديد",
-        voice:
+        screenText:
           "بعد التهيئة نختبر دورة العمل ونراجع الصلاحيات وندرب الفريق، حسب النطاق المتفق عليه.",
       },
       {
         time: "٤٧–٦٠ ث",
         visual: "خلاصة: بيانات، اختبار، تدريب — ثم شعار نرفد",
-        voice: "ناقش معنا احتياج مؤسستك لنحدد خطة انتقال قابلة للمراجعة.",
+        screenText: "ناقش معنا احتياج مؤسستك لنحدد خطة انتقال قابلة للمراجعة.",
       },
     ],
   },
 ];
 
-export const socialPlatforms: SocialPlatform[] = [...launchPlatforms, linkedInPlatform];
+export const socialPlatforms: SocialPlatform[] = [
+  ...launchPlatforms,
+  linkedInPlatform,
+];
 
 const themes = [
   "brand",
@@ -687,15 +692,18 @@ const launchPosts: SocialPost[] = launchPlatforms.flatMap((platform) =>
   })),
 );
 
-export const socialPosts = refreshMarketingPosts([
-  ...launchPlatforms.flatMap((platform) => [
-    ...launchPosts.filter((post) => post.platform === platform.id),
-    ...createProductPosts(platform),
-    ...createExpansionPosts(platform),
-    ...createServicePosts(platform),
-  ]),
-  ...linkedInPosts,
-], socialScenes);
+export const socialPosts = refreshMarketingPosts(
+  [
+    ...launchPlatforms.flatMap((platform) => [
+      ...launchPosts.filter((post) => post.platform === platform.id),
+      ...createProductPosts(platform),
+      ...createExpansionPosts(platform),
+      ...createServicePosts(platform),
+    ]),
+    ...linkedInPosts,
+  ],
+  socialScenes,
+);
 
 export function findPlatform(value: string) {
   return socialPlatforms.find((platform) => platform.id === value);

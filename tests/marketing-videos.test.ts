@@ -14,6 +14,7 @@ import {
   signatureCorrelation,
   validateSignatureManifest,
   pcmFromWav,
+  hasAuthorizedAudioReview,
 } from "../scripts/marketing-video";
 
 test("the approved campaign has fifty new distinct, fully timed production briefs", () => {
@@ -35,21 +36,17 @@ test("the approved campaign has fifty new distinct, fully timed production brief
     );
     assert.ok(video.scenes.length >= 5, video.id);
     assert.equal(video.scenes.at(-1)?.onScreen, sonicSignature.phrase);
-    assert.equal(video.scenes.at(-1)?.voiceover, "");
+    assert.equal(video.scenes.at(-1)?.message, "");
     assert.equal(video.scenes.at(-1)?.seconds, 3);
     for (const [index, scene] of video.scenes.entries()) {
       assert.ok(
         scene.onScreen &&
-          (scene.voiceover || index === video.scenes.length - 1) &&
+          (scene.message || index === video.scenes.length - 1) &&
           scene.visual &&
           scene.sound,
         video.id,
       );
-      // A spoken scene needs space for Arabic delivery, not just a text slot.
-      assert.ok(
-        scene.voiceover.split(/\s+/).length / scene.seconds <= 3.5,
-        `${video.id}: narration too dense`,
-      );
+      assert.equal("voiceover" in scene, false);
     }
     assert.ok(
       video.audience && video.goal && video.treatment && video.cta,
@@ -58,6 +55,31 @@ test("the approved campaign has fifty new distinct, fully timed production brief
     assert.ok(videoScript(video).includes(video.caption));
     assert.ok(!/NarfidIntro|NarfidMembersApp/.test(video.id));
   }
+});
+test("listening cannot be silently claimed or waived without explicit owner authorization", () => {
+  assert.equal(hasAuthorizedAudioReview({}), false);
+  assert.equal(hasAuthorizedAudioReview({ audioListened: false }), false);
+  assert.equal(hasAuthorizedAudioReview({ audioListened: true }), true);
+  assert.equal(
+    hasAuthorizedAudioReview({ audioReviewWaivedByOwner: true }),
+    false,
+  );
+  assert.equal(
+    hasAuthorizedAudioReview({
+      audioReviewWaivedByOwner: true,
+      ownerAuthorization: " ",
+    }),
+    false,
+  );
+  assert.equal(
+    hasAuthorizedAudioReview({
+      audioListened: false,
+      audioReviewWaivedByOwner: true,
+      ownerAuthorization:
+        "Owner explicitly instructed completion and publication without another review.",
+    }),
+    true,
+  );
 });
 
 test("instrumental signature provenance does not require an invented voice identity or bypass approval", () => {

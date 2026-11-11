@@ -17,15 +17,14 @@ import { ShiftClosing } from "./nv001/Closing";
 export const RemotionRoot = () => (
   <>
     <Composition
-      id="NV001-NarratedReview"
+      id="NV001-MusicOnly"
       component={ShiftFilm}
       width={1080}
       height={1920}
       fps={30}
       durationInFrames={1110}
       defaultProps={{
-        narration: true,
-        signatureFile: "nv001/sonic-instrumental-candidate.wav",
+        signatureFile: "nv001/narfid-sonic-v1.wav",
       }}
     />
     <Composition
@@ -35,7 +34,7 @@ export const RemotionRoot = () => (
       height={1920}
       fps={30}
       durationInFrames={1110}
-      defaultProps={{ narration: false, signatureFile: "" }}
+      defaultProps={{ signatureFile: "" }}
     />
     <Folder name="NV001-Scenes">
       <Composition

@@ -121,6 +121,14 @@ export function validateSignatureManifest(signature: Record<string, unknown>) {
       "An approved signature manifest with audio provenance and usage rights is required.",
     );
 }
+export function hasAuthorizedAudioReview(qa: Record<string, unknown>) {
+  return (
+    qa.audioListened === true ||
+    (qa.audioReviewWaivedByOwner === true &&
+      typeof qa.ownerAuthorization === "string" &&
+      qa.ownerAuthorization.trim().length > 0)
+  );
+}
 export async function verifyVideo(
   file: string,
   signatureManifest: string,
@@ -200,10 +208,10 @@ export async function verifyVideo(
     qa.videoSha256 !== hash(bytes) ||
     qa.signatureSha256 !== signature.sha256 ||
     qa.visualReviewed !== true ||
-    qa.audioListened !== true
+    !hasAuthorizedAudioReview(qa)
   )
     throw new Error(
-      "A QA report for this exact export must confirm frame review and actual listening.",
+      "Exact-export QA must confirm frame review and actual listening, or document the owner's explicit instruction to publish without an additional listening review.",
     );
   return {
     bytes,

@@ -1,7 +1,9 @@
 {
   "videoId": "NV-001",
   "createdAt": "2026-11-11",
-  "narration": {
+  "audioMode": "music-and-effects-only",
+  "unusedHistoricalNarration": {
+    "status": "rejected-by-owner-and-not-used",
     "provider": "Higgsfield",
     "model": "text2speech_v2",
     "variant": "elevenlabs",
@@ -40,7 +42,9 @@
     "file": "sonic-instrumental-candidate.wav",
     "sha256": "4f5e7668642301d83e629bd63364aa05f34360558119907503875b80a6d26c5c",
     "duration": 3,
-    "approved": false,
+    "approved": true,
+    "approvalMode": "owner-directed-publication",
+    "masterFile": "narfid-sonic-v1.wav",
     "provider": "original-synthesis",
     "generator": "scripts/make-sonic-instrumental.mjs",
     "rights": "Original musical composition and synthesis created for narfid; no third-party samples or voices"
