@@ -1,0 +1,388 @@
+@import "./fonts.css";
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-weight: 800;
+}
+em {
+  font-style: normal;
+  color: #3ecf8e;
+}
+.masthead {
+  position: absolute;
+  left: 140px;
+  right: 140px;
+  top: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+}
+.masthead > span {
+  font-size: 25px;
+  color: #abbab1;
+}
+.footer {
+  position: absolute;
+  right: 150px;
+  left: 150px;
+  bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 21px;
+  color: #8d9c94;
+}
+.chapter {
+  direction: ltr;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #c9d7cf;
+  font-size: 21px;
+}
+.chapter-line {
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: #3ecf8e;
+}
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #91e4bb;
+  font-size: 29px;
+  font-weight: 500;
+}
+.eyebrow > span,
+.status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #3ecf8e;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #3ecf8e55;
+}
+.intro-copy {
+  position: absolute;
+  top: 245px;
+  right: 160px;
+  left: 160px;
+  text-align: center;
+}
+.intro-copy .eyebrow {
+  justify-content: center;
+}
+.hero-title {
+  font-size: 147px;
+  line-height: 1.2;
+  margin-top: 35px;
+  letter-spacing: 0;
+}
+.hero-title span,
+.section-title span,
+.closing h1 span {
+  color: #3ecf8e;
+}
+.intro-sub {
+  font-size: 42px;
+  color: #b6c3bb;
+  margin-top: 30px;
+}
+.orbit-labels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  font-size: 31px;
+}
+.orbit-labels span {
+  border-bottom: 1px solid #3ecf8e66;
+  padding: 16px 35px;
+}
+.orbit-labels b {
+  font-weight: 400;
+  color: #3ecf8e;
+}
+.feature-copy {
+  position: absolute;
+  right: 145px;
+  top: 250px;
+  width: 615px;
+}
+.feature-copy h1,
+.mobile-copy h1 {
+  font-size: 92px;
+  line-height: 1.3;
+  margin: 28px 0 22px;
+}
+.feature-copy p,
+.mobile-copy p {
+  font-size: 34px;
+  line-height: 1.65;
+  color: #b6c3bb;
+  max-width: 570px;
+}
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  margin-top: 40px;
+  font-size: 31px;
+}
+.steps > div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.steps > div > span {
+  font-size: 25px;
+  color: #3ecf8e;
+}
+.feature-product {
+  position: absolute;
+  left: -45px;
+  top: 240px;
+  width: 1100px;
+  perspective: 1600px;
+}
+.product-window {
+  border: 1px solid #4e6b5b;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #1c1c1c;
+  box-shadow:
+    0 45px 100px #0009,
+    0 0 100px #3ecf8e0c;
+  transform-origin: center;
+}
+.window-bar {
+  height: 48px;
+  background: #29372f;
+  display: flex;
+  direction: ltr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 23px;
+  font-size: 17px;
+  color: #b6c7bd;
+}
+.window-dots {
+  display: flex;
+  gap: 7px;
+}
+.window-dots i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #6b7e71;
+}
+.section-title {
+  font-size: 89px;
+  line-height: 1.4;
+}
+.section-sub {
+  font-size: 35px;
+  color: #b6c3bb;
+  margin-top: 18px;
+}
+.dual-label {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  font-size: 30px;
+  margin-bottom: 22px;
+  color: #dce8e0;
+}
+.shot-crop {
+  height: 455px;
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px solid #3c5546;
+  box-shadow: 0 25px 70px #0007;
+}
+.mobile-copy {
+  position: absolute;
+  right: 150px;
+  top: 260px;
+  width: 750px;
+}
+.mobile-copy h1 {
+  font-size: 112px;
+}
+.phone {
+  position: relative;
+  width: 400px;
+  height: 760px;
+  border: 9px solid #3a4540;
+  border-radius: 56px;
+  background: #1c1c1c;
+  box-shadow:
+    0 40px 100px #000a,
+    0 0 140px #3ecf8e1c;
+  overflow: hidden;
+}
+.phone-island {
+  position: absolute;
+  width: 123px;
+  height: 27px;
+  border-radius: 18px;
+  background: #080d0a;
+  top: 12px;
+  left: 130px;
+}
+.phone-status {
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 24px;
+  font-size: 17px;
+  direction: ltr;
+}
+.phone-body {
+  padding: 8px 25px;
+}
+.phone-body > div:first-child {
+  margin-right: -12px;
+  scale: 0.7;
+  transform-origin: right center;
+  margin-bottom: -16px;
+}
+.phone-greeting {
+  font-size: 20px;
+  color: #afc0b5;
+  margin-top: 4px;
+}
+.phone h2 {
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 4px 0 15px;
+}
+.member-pass {
+  background: linear-gradient(135deg, #287e56, #173b2a);
+  padding: 23px;
+  border: 1px solid #3ecf8e77;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.member-pass > span {
+  font-size: 21px;
+  color: #c0ebd4;
+}
+.member-pass > b {
+  font-size: 31px;
+  font-weight: 700;
+  color: #effff4;
+}
+.pass-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  margin-top: 6px;
+}
+.phone h3 {
+  font-size: 24px;
+  margin: 25px 0 15px;
+}
+.phone-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.phone-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #26352c;
+  padding: 16px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.phone-grid span {
+  color: #3ecf8e;
+  font-size: 28px;
+}
+.next-session {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #253029;
+  padding: 17px 12px;
+  font-size: 18px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+.next-session .status-dot {
+  width: 7px;
+  height: 7px;
+}
+.phone-nav {
+  position: absolute;
+  bottom: 28px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  color: #99ada0;
+  border-top: 1px solid #35483b;
+  padding-top: 18px;
+}
+.phone-home {
+  position: absolute;
+  bottom: 8px;
+  width: 110px;
+  height: 4px;
+  background: #d2ddd6;
+  border-radius: 4px;
+  left: 136px;
+}
+.closing {
+  position: absolute;
+  top: 155px;
+  right: 150px;
+  left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.closing h1 {
+  font-size: 112px;
+  line-height: 1.3;
+  margin-top: 28px;
+}
+.closing-cta {
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  background: #3ecf8e;
+  color: #11271b;
+  font-weight: 700;
+  font-size: 35px;
+  border-radius: 12px;
+  padding: 21px 38px;
+  margin-top: 39px;
+}
+.domain {
+  font-size: 32px;
+  color: #b6c3bb;
+  margin-top: 28px;
+}
+
+.feature-copy h1 {
+  font-size: 82px;
+  white-space: nowrap;
+}
