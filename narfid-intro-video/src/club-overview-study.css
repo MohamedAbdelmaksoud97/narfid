@@ -1,0 +1,82 @@
+.overview-study {
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #1a2b22, #0b100e 67%);
+  color: #eff7f2;
+  text-align: center;
+  font-family: Tajawal, sans-serif;
+}
+.overview-study h1,
+.overview-study p {
+  margin: 0;
+}
+.overview-heading {
+  position: absolute;
+  top: 300px;
+  left: 85px;
+  right: 85px;
+}
+.overview-heading p {
+  color: #b4c9bf;
+  font-size: 41px;
+  font-weight: 700;
+}
+.overview-heading h1 {
+  margin-top: 32px;
+  font-size: 108px;
+  line-height: 1.12;
+  font-weight: 800;
+}
+.overview-shot {
+  position: absolute;
+  width: 790px;
+  height: 190px;
+  overflow: hidden;
+  border: 2px solid #4b6958;
+  border-radius: 26px;
+  background: #1c1c1c;
+  box-shadow: 0 24px 80px #0009;
+}
+.overview-shot-image {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.8;
+}
+.overview-shot-image img {
+  width: 100%;
+  display: block;
+  transform: translateY(-26%);
+}
+.overview-shot-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #0b100e55, #0b100ed9 70%);
+}
+.overview-shot-label {
+  position: absolute;
+  right: 48px;
+  top: 56px;
+  color: #e8f7ed;
+  font-size: 64px;
+  font-weight: 800;
+}
+.overview-conclusion {
+  position: absolute;
+  top: 1470px;
+  left: 80px;
+  right: 80px;
+  color: #bde9cd;
+  font-size: 55px;
+  font-weight: 700;
+}
+.overview-closing {
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+.overview-closing p {
+  color: #d6e4db;
+  font-size: 52px;
+  font-weight: 700;
+}
