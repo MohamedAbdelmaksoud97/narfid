@@ -1,0 +1,9 @@
+{
+  "creator": "Original procedural synthesis for Narfid",
+  "generator": "scripts/make-kitchen-audio.mjs",
+  "sampleRate": 48000,
+  "channels": 2,
+  "samples": "None; no external recordings, models, or paid services",
+  "rights": "Original project assets; no third-party sample license required",
+  "voiceover": false
+}

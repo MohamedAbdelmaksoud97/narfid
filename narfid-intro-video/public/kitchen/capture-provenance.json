@@ -1,0 +1,26 @@
+{
+  "film": "NarfidKitchenJourney",
+  "captureDateUTC": "2026-11-11",
+  "businessDateRiyadh": "2026-11-12",
+  "frontendRevision": "d3efa7e870e143539e35a4c86cdd1f8b0b7e0d87",
+  "backendRevision": "80ec3c75d13bdcae26c2cee9d27b4a6423b8f546",
+  "captureMode": "Actual Next UI and BFF, real Express business services and repositories, disposable in-memory PGlite with versioned migrations",
+  "authentication": "Local test-only random token verifier; no production accounts",
+  "network": "Loopback-only socket/fetch guards; local-only browser CSP; workers disabled; locally bundled fonts and assets",
+  "productionAccessed": false,
+  "data": "Fictional club, branch, member and meal-plan redemption; three capture runs, final film follows one order",
+  "orderDisplayReference": "01A1CC93",
+  "fictionalMember": "سلمان الحربي",
+  "fictionalMeal": "دجاج مشوي مع الأرز",
+  "viewport": { "width": 3200, "height": 2200, "presentationScale": 2 },
+  "images": [
+    { "path": "01-new.jpg", "state": "CONFIRMED", "width": 3190, "height": 4400 },
+    { "path": "02-preparing.jpg", "state": "PREPARING", "width": 3190, "height": 4400 },
+    { "path": "03-ready.jpg", "state": "READY", "width": 3190, "height": 4400 },
+    { "path": "04-completed.jpg", "state": "COMPLETED; removed from active queue", "width": 3190, "height": 4400 }
+  ],
+  "verification": { "finalOrderStatusFromLocalAPI": "COMPLETED", "consumedMealEntitlementsAfterThreeRuns": 3 },
+  "presentationChanges": ["Narfid identity in disposable copy", "Local Tajawal", "Omitted legacy member-number prefix in display only", "2x capture scaling"],
+  "editorialMotion": ["Camera movement", "Pointer and click rings", "Focus outline", "Crossfades between actual states", "Narrative elapsed preparation time"],
+  "limitations": ["Still captures with authored motion, not a continuous screencast", "Test authentication does not verify hosted Auth", "No real cooking time or physical handover measured", "No customer data or customer performance claims"]
+}

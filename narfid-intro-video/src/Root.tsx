@@ -28,8 +28,122 @@ import { BrandDetails } from "./brand-motion/Details";
 import { BrandTogether } from "./brand-motion/Together";
 import { BrandPromise } from "./brand-motion/Promise";
 import { BrandClosing } from "./brand-motion/Closing";
+import { KitchenFilm } from "./kitchen/Film";
+import { KitchenProduct } from "./kitchen/Product";
+import { KitchenCaption } from "./kitchen/Caption";
+import { KitchenClosing } from "./kitchen/Closing";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NarfidKitchenJourney"
+      component={KitchenFilm}
+      width={1920}
+      height={1080}
+      fps={30}
+      durationInFrames={900}
+    />
+    <Folder name="Kitchen-Journey-Scenes">
+      <Composition
+        id="KitchenProductJourney"
+        component={KitchenProduct}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={780}
+      />
+      <Composition
+        id="KitchenQuestion"
+        component={KitchenCaption}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={120}
+        defaultProps={{
+          title: "طلب العضو… وصل لأي مرحلة؟",
+          note: "رحلة داخل المطبخ",
+        }}
+      />
+      <Composition
+        id="KitchenOrderDetails"
+        component={KitchenCaption}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={150}
+        defaultProps={{
+          title: "الوجبة واضحة. والكمية محدّدة.",
+          note: "نراجع الطلب نفسه قبل بدء التحضير",
+        }}
+      />
+      <Composition
+        id="KitchenPreparing"
+        component={KitchenCaption}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={180}
+        defaultProps={{
+          title: "ابدأ التحضير.",
+          note: "وتابع انتقال الطلب إلى «قيد التحضير»",
+        }}
+      />
+      <Composition
+        id="KitchenTimePassage"
+        component={KitchenCaption}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={60}
+        defaultProps={{
+          title: "بعد انتهاء التحضير…",
+          note: "يحدّث موظف المطبخ حالة الطلب",
+        }}
+      />
+      <Composition
+        id="KitchenReady"
+        component={KitchenCaption}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={120}
+        defaultProps={{
+          title: "الطلب جاهز للتسليم.",
+          note: "نفس الطلب. والخطوة التالية واضحة.",
+        }}
+      />
+      <Composition
+        id="KitchenDelivery"
+        component={KitchenCaption}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={69}
+        defaultProps={{
+          title: "بعد تسليم الوجبة…",
+          note: "نضغط «تسليم وإكمال»",
+        }}
+      />
+      <Composition
+        id="KitchenCompleted"
+        component={KitchenCaption}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={81}
+        defaultProps={{
+          title: "تم التسليم. واكتمل الطلب.",
+          note: "يخرج الطلب من قائمة الطلبات النشطة",
+        }}
+      />
+      <Composition
+        id="KitchenClosing"
+        component={KitchenClosing}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={120}
+      />
+    </Folder>
     <Composition id="NarfidBrandMotion" component={BrandMotionFilm} width={1080} height={1920} fps={30} durationInFrames={900} />
     <Folder name="Brand-Motion-Scenes">
       <Composition id="BrandOpening" component={BrandOpening} width={1080} height={1920} fps={30} durationInFrames={150} />
