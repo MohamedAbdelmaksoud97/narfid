@@ -1,0 +1,179 @@
+.booking-study {
+  overflow: hidden;
+  color: #f2f6f3;
+  background: radial-gradient(
+    ellipse at 52% 51%,
+    #14221d,
+    #0b100e 65%,
+    #090c0b
+  );
+  font-family: Tajawal, sans-serif;
+  text-align: center;
+}
+
+.booking-study h1,
+.booking-study h2,
+.booking-study p {
+  margin: 0;
+}
+
+.booking-study-opening,
+.booking-study-heading {
+  position: absolute;
+  inset: 440px 96px auto;
+}
+
+.booking-study-brand {
+  color: #adc6b9;
+  font-size: 39px;
+  font-weight: 700;
+}
+
+.booking-study h1 {
+  margin-top: 38px;
+  font-size: 130px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.booking-study h2 {
+  font-size: 83px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.booking-study-screen {
+  display: block;
+  width: 100%;
+}
+
+.booking-study-teaser,
+.booking-study-table {
+  position: absolute;
+  overflow: hidden;
+  border: 2px solid #44534b;
+  border-radius: 32px;
+  box-shadow: 0 34px 130px #0009;
+}
+
+.booking-study-teaser {
+  top: 788px;
+  left: 81px;
+  width: 916px;
+  mask-image: linear-gradient(#000 38%, #0000 98%);
+  transform: perspective(1500px) rotateX(17deg) scale(1.13);
+}
+
+.booking-study-table {
+  top: 629px;
+  left: 73px;
+  width: 930px;
+}
+
+.booking-study-scrim {
+  position: absolute;
+  inset: 0;
+  background: #0b100eb8;
+}
+
+.booking-study-row {
+  position: absolute;
+  inset: 357px 11px auto;
+  height: 55px;
+  overflow: hidden;
+  border-radius: 9px;
+  outline: 2px solid #3ecf8e;
+  box-shadow: 0 0 35px #3ecf8e3b;
+}
+
+.booking-study-row .booking-study-screen {
+  position: absolute;
+  top: -357px;
+  left: -11px;
+  width: 930px;
+}
+
+.booking-study-pointer {
+  position: absolute;
+  width: 32px;
+  height: 38px;
+  transform-origin: 3px 3px;
+  filter: drop-shadow(0 3px 6px #000c);
+}
+
+.booking-study-pointer::before,
+.booking-study-pointer::after {
+  position: absolute;
+  content: "";
+  clip-path: polygon(
+    0 0,
+    100% 62%,
+    61% 65%,
+    78% 91%,
+    60% 100%,
+    44% 72%,
+    22% 95%
+  );
+}
+
+.booking-study-pointer::before {
+  inset: 0;
+  background: #f2f6f3;
+}
+
+.booking-study-pointer::after {
+  inset: 5px 6px 5px 4px;
+  background: #14221d;
+}
+
+.booking-study-result,
+.booking-study-end {
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.booking-study-result h2,
+.booking-study-status {
+  position: relative;
+}
+
+.booking-study-halo {
+  position: absolute;
+  width: 760px;
+  height: 760px;
+  border-radius: 50%;
+  background: radial-gradient(#2cb27726, #2cb27700 69%);
+}
+
+.booking-study-status {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 25px 64px 17px;
+  border: 2px solid #3ecf8e82;
+  border-radius: 110px;
+  color: #75efb0;
+  background: #18392c;
+  box-shadow: 0 10px 70px #0005;
+  font-size: 132px;
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.booking-study-status span {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 9px;
+  border: 4px solid currentColor;
+  border-radius: 50%;
+  font: 46px/1 sans-serif;
+}
+
+.booking-study-end p {
+  font-size: 52px;
+  font-weight: 700;
+  color: #d6e4db;
+}

@@ -14,8 +14,17 @@ import { ShiftHandoff } from "./nv001/Handoff";
 import { ShiftCases } from "./nv001/Cases";
 import { ShiftChallenge } from "./nv001/Challenge";
 import { ShiftClosing } from "./nv001/Closing";
+import { BookingStudy } from "./booking-study/Film";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NarfidBookingStudy"
+      component={BookingStudy}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={315}
+    />
     <Composition
       id="NV001-MusicOnly"
       component={ShiftFilm}
