@@ -1,0 +1,336 @@
+.members-film {
+  --mint: #3ecf8e;
+  --ink: #1c1c1c;
+  --paper: #f2f5f2;
+  overflow: hidden;
+  font-family: Tajawal, sans-serif;
+  color: #ededed;
+  background: radial-gradient(
+    ellipse at 27% 62%,
+    #25443a 0%,
+    #192822 29%,
+    #151715 69%
+  );
+}
+.members-film::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#d7ffeb0a 1px, transparent 1px),
+    linear-gradient(90deg, #d7ffeb0a 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(105deg, black, transparent 74%);
+  pointer-events: none;
+}
+.members-paper {
+  color: var(--ink);
+  background: radial-gradient(ellipse at 26% 62%, #c5f3db, var(--paper) 55%);
+}
+.members-paper::before {
+  background-image:
+    linear-gradient(#19392a12 1px, transparent 1px),
+    linear-gradient(90deg, #19392a12 1px, transparent 1px);
+}
+.members-mint {
+  color: #14281f;
+  background: radial-gradient(
+    ellipse at 55% 15%,
+    #acffcf 0%,
+    #6fe7a9 46%,
+    #3ecf8e 100%
+  );
+}
+.members-corner {
+  position: absolute;
+  top: 105px;
+  right: 155px;
+}
+.members-logo {
+  position: relative;
+  width: 192px;
+  height: 62px;
+}
+.members-logo img {
+  position: absolute;
+  width: 164.5%;
+  left: 50%;
+  top: 50%;
+  translate: -50% -52.3%;
+}
+.members-copy {
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  width: 940px;
+  transform: translateY(-47%);
+}
+.members-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #8ce9b8;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.members-label::before {
+  content: "";
+  width: 43px;
+  height: 5px;
+  border-radius: 6px;
+  background: currentColor;
+}
+.members-paper .members-label,
+.members-mint .members-label {
+  color: #12583c;
+}
+.members-film h1 {
+  margin: 32px 0 26px;
+  font-size: 106px;
+  line-height: 1.04;
+  font-weight: 900;
+}
+.members-film p {
+  max-width: 785px;
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.32;
+  color: #d0d9d3;
+  font-weight: 500;
+}
+.members-paper p,
+.members-mint p {
+  color: #315344;
+}
+.members-phone-wrap {
+  position: absolute;
+  top: 91px;
+  left: 270px;
+  width: 451px;
+  height: 898px;
+}
+.members-halo {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 710px;
+  height: 710px;
+  translate: -50% -50%;
+  border: 1px solid #3ecf8e6e;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 42px #3ecf8e15,
+    0 0 0 91px #3ecf8e0d,
+    0 0 0 140px #3ecf8e0a;
+}
+.members-phone {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  padding: 10px;
+  border: 2px solid #839b8d;
+  border-radius: 48px;
+  background: linear-gradient(
+    130deg,
+    #54675d 0%,
+    #252f2a 21%,
+    #101511 82%,
+    #465b50
+  );
+  box-shadow:
+    0 40px 75px #111a1577,
+    0 8px 22px #0004;
+  box-sizing: border-box;
+}
+.members-phone-screen {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 37px;
+}
+.members-phone-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.members-phone img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.members-touch {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  translate: -50% -50%;
+  border: 3px solid #ddffec;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #3ecf8eaa;
+}
+.members-package {
+  position: absolute;
+  top: 286px;
+  left: 146px;
+  width: 655px;
+  height: 420px;
+  overflow: hidden;
+  border: 8px solid #19362a;
+  border-radius: 31px;
+  background: #122319;
+  box-shadow: 0 35px 72px #0e382744;
+}
+.members-package-window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.members-package img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+}
+.members-float-card {
+  position: absolute;
+  left: 96px;
+  bottom: 162px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 25px 17px;
+  border: 1px solid #d7e5dc;
+  border-radius: 22px;
+  background: #f6f9f6;
+  color: #192e22;
+  box-shadow: 0 14px 36px #111b193f;
+}
+.members-float-card strong,
+.members-float-card span {
+  display: block;
+}
+.members-float-card strong {
+  font-size: 32px;
+}
+.members-float-card span {
+  color: #375545;
+  font-size: 25px;
+}
+.members-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 67px;
+  height: 67px;
+  color: #11613f;
+  background: #d5f8e6;
+  border-radius: 16px;
+}
+.members-icon svg {
+  width: 38px;
+  height: 38px;
+}
+.members-payment {
+  position: absolute;
+  inset: 110px 150px;
+  text-align: center;
+}
+.members-payment .members-label {
+  justify-content: center;
+}
+.members-payment h1 {
+  margin: 28px 0 48px;
+  font-size: 105px;
+}
+.members-payment-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  max-width: 1380px;
+  margin: auto;
+}
+.members-payment-card {
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+  padding: 42px 46px 40px;
+  border: 1px solid #fff;
+  border-radius: 29px;
+  background: #f6fff9;
+  text-align: right;
+  box-shadow: 0 20px 50px #1b734726;
+}
+.members-payment-card .members-icon {
+  width: 85px;
+  height: 85px;
+  margin-bottom: 9px;
+}
+.members-payment-card h2 {
+  font-size: 61px;
+  line-height: 1.15;
+  margin: 0;
+}
+.members-payment-card p {
+  font-size: 41px;
+}
+.members-payment-connection {
+  display: block;
+  width: 1380px;
+  height: 68px;
+  margin: 0 auto;
+  fill: none;
+  stroke: #276448;
+  stroke-width: 3px;
+}
+.members-payment-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 28px;
+  border-radius: 100px;
+  background: #173b2b;
+  color: #e5fff0;
+  font-size: 40px;
+  font-weight: 700;
+}
+.members-payment-result span {
+  display: flex;
+}
+.members-payment-result svg {
+  width: 37px;
+  color: #8ce9b8;
+}
+.members-closing {
+  position: absolute;
+  inset: 126px 150px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+}
+.members-closing .members-logo {
+  width: 250px;
+  height: 80px;
+  margin-bottom: 45px;
+}
+.members-closing h1 {
+  margin: 0 0 39px;
+  font-size: 126px;
+}
+.members-cta {
+  display: grid;
+  gap: 22px;
+  justify-items: center;
+  font-size: 41px;
+}
+.members-cta strong {
+  padding: 19px 37px 13px;
+  border-radius: 100px;
+  color: #0b3422;
+  background: var(--mint);
+}
+.members-cta span {
+  color: #cde6d6;
+  font-size: 36px;
+}
