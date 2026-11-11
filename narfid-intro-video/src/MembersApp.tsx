@@ -72,15 +72,14 @@ export function MembersApp() {
             [
               0,
               fps,
-              13.7 * fps,
-              14.3 * fps,
-              18.2 * fps,
-              19 * fps,
-              39.3 * fps,
-              40.5 * fps,
+              16.5 * fps,
+              16.9 * fps,
+              17.25 * fps,
+              17.7 * fps,
+              42.1 * fps,
               durationInFrames - 1,
             ],
-            [0, 0.84, 0.84, 0.52, 0.52, 0.86, 0.86, 0.48, 0],
+            [0, 0.82, 0.82, 0.72, 0.72, 0.82, 0.82, 0],
             {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
@@ -90,52 +89,27 @@ export function MembersApp() {
         }}
       />
       <Audio
-        name="دخول شاشة العضوية"
-        src={staticFile("members/sound/reveal.wav")}
-        from={0}
-        volume={0.54}
-        premountFor={fps}
-      />
-      <Audio
         name="لمسة اختيار الباقة"
-        src={staticFile("members/sound/tap.wav")}
-        from={Math.round(8.75 * fps)}
-        volume={0.74}
-        premountFor={fps}
-      />
-      <Audio
-        name="عرض خيارَي الدفع"
-        src={staticFile("members/sound/payment.wav")}
-        from={Math.round(14.35 * fps)}
-        volume={0.66}
+        src={staticFile("members/sound/package-touch.wav")}
+        from={Math.round(8.73 * fps)}
         premountFor={fps}
       />
       <Audio
         name="ظهور الفاتورة في النظام"
-        src={staticFile("members/sound/invoice.wav")}
-        from={Math.round(17.05 * fps)}
-        volume={0.8}
+        src={staticFile("members/sound/invoice-paper.wav")}
+        from={Math.round(16.86 * fps)}
         premountFor={fps}
       />
       <Audio
         name="لمسة طلب التجديد"
-        src={staticFile("members/sound/tap.wav")}
-        from={Math.round(25.8 * fps)}
-        volume={0.7}
+        src={staticFile("members/sound/renewal-touch.wav")}
+        from={Math.round(25.78 * fps)}
         premountFor={fps}
       />
       <Audio
         name="تحديد مدة التجميد"
-        src={staticFile("members/sound/freeze.wav")}
-        from={Math.round(33.65 * fps)}
-        volume={0.69}
-        premountFor={fps}
-      />
-      <Audio
-        name="توقيع نرفد"
-        src={staticFile("sfx/signature.wav")}
-        from={Math.round(40.35 * fps)}
-        volume={0.72}
+        src={staticFile("members/sound/freeze-touch.wav")}
+        from={Math.round(33.63 * fps)}
         premountFor={fps}
       />
     </AbsoluteFill>
