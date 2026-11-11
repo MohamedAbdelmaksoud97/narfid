@@ -8,8 +8,65 @@ import { Payment } from "./members/Payment";
 import { Renew } from "./members/Renew";
 import { Freeze } from "./members/Freeze";
 import { Closing } from "./members/Closing";
+import { ShiftFilm } from "./nv001/Film";
+import { ShiftOpening } from "./nv001/Opening";
+import { ShiftHandoff } from "./nv001/Handoff";
+import { ShiftCases } from "./nv001/Cases";
+import { ShiftChallenge } from "./nv001/Challenge";
+import { ShiftClosing } from "./nv001/Closing";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NV001-VisualPreview"
+      component={ShiftFilm}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={1110}
+      defaultProps={{ narration: false, signatureFile: "" }}
+    />
+    <Folder name="NV001-Scenes">
+      <Composition
+        id="NV001-Opening"
+        component={ShiftOpening}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={120}
+      />
+      <Composition
+        id="NV001-Handoff"
+        component={ShiftHandoff}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={300}
+      />
+      <Composition
+        id="NV001-Cases"
+        component={ShiftCases}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={390}
+      />
+      <Composition
+        id="NV001-Challenge"
+        component={ShiftChallenge}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={210}
+      />
+      <Composition
+        id="NV001-Closing"
+        component={ShiftClosing}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={90}
+      />
+    </Folder>
     <Composition
       id="NarfidIntro"
       component={DirectorCut}

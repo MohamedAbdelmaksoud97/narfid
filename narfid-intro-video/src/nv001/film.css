@@ -1,0 +1,264 @@
+.nv-film {
+  font-family: Tajawal, sans-serif;
+  background: #1c1c1c;
+  color: #ededed;
+  overflow: hidden;
+}
+.nv-film * {
+  box-sizing: border-box;
+}
+.nv-film h1 {
+  font-size: 96px;
+  line-height: 1.32;
+  font-weight: 800;
+  margin: 24px 0 0;
+}
+.nv-film em {
+  color: #3ecf8e;
+  font-style: normal;
+}
+.nv-film .nv-grid {
+  position: absolute;
+  inset: -100px;
+  opacity: 0.16;
+  background-image:
+    linear-gradient(#88888825 1px, transparent 1px),
+    linear-gradient(90deg, #88888825 1px, transparent 1px);
+  background-size: 110px 110px;
+}
+.nv-halo {
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  left: -620px;
+  top: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #3ecf8e16, transparent 66%);
+}
+.nv-film header {
+  position: absolute;
+  top: 155px;
+  left: 105px;
+  right: 105px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nv-film header > div {
+  scale: 0.7;
+  transform-origin: right;
+  margin-left: -70px;
+}
+.nv-film header > span {
+  font-size: 32px;
+  color: #a4ada7;
+}
+.nv-film footer {
+  position: absolute;
+  bottom: 220px;
+  left: 105px;
+  right: 105px;
+  display: flex;
+  justify-content: space-between;
+  color: #a4ada7;
+  font-size: 28px;
+}
+.nv-copy {
+  position: absolute;
+  top: 330px;
+  right: 105px;
+  left: 105px;
+}
+.nv-kicker {
+  color: #3ecf8e;
+  font-size: 36px;
+  font-weight: 500;
+}
+.nv-clock {
+  position: absolute;
+  top: 670px;
+  left: 245px;
+  width: 590px;
+  height: 590px;
+}
+.nv-clock-time {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  text-align: center;
+  font-size: 53px;
+  color: #a4ada7;
+}
+.nv-case {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: #2e2e2e;
+  border: 1px solid #f4bd5088;
+  border-radius: 24px;
+  padding: 40px 32px;
+  box-shadow: 0 32px 100px #0006;
+  font-size: 42px;
+}
+.nv-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #f4bd50;
+  box-shadow: 0 0 35px #f4bd5088;
+}
+.nv-tag {
+  margin-right: auto;
+  color: #f4bd50;
+  font-size: 31px;
+}
+.nv-question {
+  text-align: center;
+  font-size: 80px;
+  color: #3ecf8e;
+  font-weight: 700;
+}
+.nv-light {
+  background: #ededed;
+  color: #1c1c1c;
+}
+.nv-light .nv-kicker,
+.nv-light em {
+  color: #147348;
+}
+.nv-light header > span,
+.nv-light footer {
+  color: #626b65;
+}
+.nv-light header > div {
+  background: #1c1c1c;
+  border-radius: 10px;
+}
+.nv-paper {
+  position: absolute;
+  top: 690px;
+  right: 105px;
+  left: 105px;
+  background: #fafbf9;
+  border: 1px solid #d1d9d3;
+  padding: 40px 45px;
+  box-shadow: 0 35px 85px #1c1c1c17;
+  border-radius: 14px;
+}
+.nv-paper-top {
+  display: flex;
+  justify-content: space-between;
+  color: #747c76;
+  font-size: 31px;
+  margin-bottom: 15px;
+}
+.nv-field {
+  padding: 20px 0 15px;
+  position: relative;
+}
+.nv-field > span {
+  display: block;
+  font-size: 34px;
+  color: #626b65;
+  margin-bottom: 8px;
+}
+.nv-field strong {
+  font-size: 47px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+.nv-underline {
+  height: 2px;
+  background: #3ecf8e;
+  margin-top: 20px;
+  transform-origin: right;
+}
+.nv-paper-end {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 37px;
+  margin-top: 22px;
+}
+.nv-note {
+  text-align: center;
+  font-size: 57px;
+  line-height: 1.55;
+  font-weight: 700;
+}
+.nv-route {
+  border: 1px solid #555;
+  border-right-width: 7px;
+  border-radius: 17px;
+  background: #2e2e2e;
+  box-shadow: 0 25px 80px #0003;
+  padding: 34px;
+}
+.nv-route-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32px;
+  color: #b6beb8;
+}
+.nv-route strong {
+  display: block;
+  font-size: 54px;
+  margin: 24px 0 25px;
+}
+.nv-route-bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #555;
+  padding-top: 24px;
+  color: #c5cdc7;
+  font-size: 32px;
+}
+.nv-shift-line {
+  position: absolute;
+  left: 125px;
+  right: 125px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #a4ada7;
+  font-size: 30px;
+}
+.nv-shift-line i {
+  height: 2px;
+  flex: 1;
+  background: #3ecf8e;
+}
+.nv-checklist {
+  position: absolute;
+  top: 750px;
+  left: 105px;
+  right: 105px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.nv-checklist > div > div {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 34px;
+  background: #fafbf9;
+  border-bottom: 2px solid #d1d9d3;
+  font-size: 52px;
+}
+.nv-closing {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+.nv-end-ring {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border: 1px solid #3ecf8e25;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 90px #3ecf8e05,
+    0 0 0 180px #3ecf8e03;
+}
