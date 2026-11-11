@@ -142,6 +142,10 @@ function Workspace({ member, children }: Omit<Props, "defaultOpen">) {
                                 href: "/board/marketing/social",
                               },
                               {
+                                label: "الفيديوهات",
+                                href: "/board/marketing/videos",
+                              },
+                              {
                                 label: "سنابشات",
                                 href: "/board/marketing/social/snapchat",
                               },

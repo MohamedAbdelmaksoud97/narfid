@@ -18,6 +18,8 @@
     "marketing:capture": "tsx scripts/capture-marketing-screens.ts",
     "marketing:captions": "tsx scripts/export-social-captions.ts",
     "test:marketing": "tsx --test tests/marketing.test.ts",
+    "test:marketing:videos": "tsx --test tests/marketing-videos.test.ts",
+    "marketing:video": "node --env-file=.env.local --import=tsx scripts/marketing-video.ts",
     "test:auth:http": "node --env-file=.env.local scripts/test-board-auth-http.mjs",
     "test:articles": "tsx --test tests/article-validation.test.tsx",
     "test:articles:browser": "node --env-file=.env.local node_modules/@playwright/test/cli.js test",
