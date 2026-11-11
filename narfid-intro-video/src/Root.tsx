@@ -19,8 +19,10 @@ import { ShiftEffectsCut } from "./nv001/EffectsCut";
 import { ReservationHandoff, reservationHandoffFrames } from "./nv001/ReservationHandoff";
 import { ReservationFilm } from "./nv001/ReservationFilm";
 import { ClubOverviewStudy } from "./ClubOverviewStudy";
+import { ClubStoryStudy } from "./ClubStoryStudy";
 export const RemotionRoot = () => (
   <>
+    <Composition id="ClubStoryStudy" component={ClubStoryStudy} width={1080} height={1920} fps={30} durationInFrames={390} />
     <Composition id="ClubOverviewStudy" component={ClubOverviewStudy} width={1080} height={1920} fps={30} durationInFrames={390} />
     <Composition
       id="NarfidReservationFilm"
