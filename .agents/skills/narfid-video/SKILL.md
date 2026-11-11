@@ -26,7 +26,7 @@ Read [local-capture.md](references/local-capture.md) **before starting reference
 
 ## Direct the film
 
-Write a short storyboard linking each scene to one message, its visual action, sound cue and verified capability. Choose a treatment for the specific brief, such as daily operational complexity becoming a connected system.
+Define the video's goal in one sentence before storyboarding. For a short product demo, establish a concrete situation in the opening, show the action that addresses it, and end on a visible result or a decision the viewer can use. Link each scene to a message, visual action, sound cue and verified capability.
 
 - **Follow the first intro's product-led direction.** Build around the sports-management system: purposeful product close-ups, connected club workflows, clear Arabic typography, depth and synchronized sound. Adapt the treatment to each topic and delivery format; the later NV-001 card treatment is not the owner's preferred benchmark. Reference footage remains subject to the capture and provenance rules above.
 - **Keep a dark mood throughout every video.** Use charcoal/near-black backgrounds, dark surfaces and restrained brand-green accents in every scene, transition and end card. Use dark-mode product captures and dark information cards, with readable light text. A dark outer frame around a large white card does not meet this direction. Earlier reference scenes with white or full mint backgrounds do not override this newer preference.

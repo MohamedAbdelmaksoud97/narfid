@@ -16,8 +16,17 @@ import { ShiftChallenge } from "./nv001/Challenge";
 import { ShiftClosing } from "./nv001/Closing";
 import { BookingStudy } from "./booking-study/Film";
 import { ShiftEffectsCut } from "./nv001/EffectsCut";
+import { ReservationHandoff, reservationHandoffFrames } from "./nv001/ReservationHandoff";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NV001-ReservationHandoff"
+      component={ReservationHandoff}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={reservationHandoffFrames}
+    />
     <Composition
       id="NV001-EffectsCut"
       component={ShiftEffectsCut}
