@@ -21,8 +21,10 @@ import { ReservationFilm } from "./nv001/ReservationFilm";
 import { ClubOverviewStudy } from "./ClubOverviewStudy";
 import { ClubStoryStudy } from "./ClubStoryStudy";
 import { BrandMotionStudy, ClubMomentStudy } from "./DirectionStudies";
+import { OrbitStudy } from "./OrbitStudy";
 export const RemotionRoot = () => (
   <>
+    <Composition id="OrbitStudy" component={OrbitStudy} width={1080} height={1920} fps={30} durationInFrames={390} />
     <Composition id="BrandMotionStudy" component={BrandMotionStudy} width={1080} height={1920} fps={30} durationInFrames={360} />
     <Composition id="ClubMomentStudy" component={ClubMomentStudy} width={1080} height={1920} fps={30} durationInFrames={reservationHandoffFrames + 90} />
     <Composition id="ClubStoryStudy" component={ClubStoryStudy} width={1080} height={1920} fps={30} durationInFrames={390} />

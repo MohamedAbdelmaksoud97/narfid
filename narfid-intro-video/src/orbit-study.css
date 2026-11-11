@@ -1,0 +1,73 @@
+.orbit-background {
+  overflow: hidden;
+  background: #101612;
+  color: #f2f7f3;
+  font-family: Tajawal, sans-serif;
+  text-align: center;
+}
+.orbit-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#c4e1ce0c 1px, transparent 1px),
+    linear-gradient(90deg, #c4e1ce0c 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+.orbit-track {
+  position: absolute;
+  width: 1320px;
+  height: 1320px;
+  left: -120px;
+  top: 300px;
+}
+.orbit-object {
+  position: absolute;
+  width: 280px;
+  height: 373px;
+  background-image: url("../public/orbit-sports-objects.png");
+  background-size: 400% 100%;
+  background-repeat: no-repeat;
+  filter: brightness(1.65);
+}
+.object-ball {
+  top: -80px;
+  left: 180px;
+  background-position: 0% center;
+}
+.object-racket {
+  top: 90px;
+  right: -25px;
+  background-position: 33.333% center;
+}
+.object-card {
+  bottom: -30px;
+  right: 140px;
+  background-position: 66.666% center;
+}
+.object-bag {
+  bottom: 120px;
+  left: -35px;
+  background-position: 100% center;
+}
+.orbit-center {
+  position: absolute;
+  top: 795px;
+  left: 100px;
+  right: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+.orbit-center p,
+.orbit-closing p {
+  margin: 0;
+  font-size: 49px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.orbit-closing {
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
