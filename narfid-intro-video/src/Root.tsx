@@ -15,8 +15,17 @@ import { ShiftCases } from "./nv001/Cases";
 import { ShiftChallenge } from "./nv001/Challenge";
 import { ShiftClosing } from "./nv001/Closing";
 import { BookingStudy } from "./booking-study/Film";
+import { ShiftEffectsCut } from "./nv001/EffectsCut";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NV001-EffectsCut"
+      component={ShiftEffectsCut}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={1110}
+    />
     <Composition
       id="NarfidBookingStudy"
       component={BookingStudy}

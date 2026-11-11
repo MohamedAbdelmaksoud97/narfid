@@ -1,0 +1,200 @@
+.shift-effects {
+  overflow: hidden;
+  background: radial-gradient(ellipse at center, #14231d, #0b100e 63%, #090c0b);
+  background-size: 180% 100%;
+  color: #f2f6f3;
+  font-family: Tajawal, sans-serif;
+  text-align: center;
+}
+
+.shift-effects * {
+  box-sizing: border-box;
+}
+
+.shift-effects h1,
+.shift-effects h2,
+.shift-effects p {
+  margin: 0;
+}
+
+.shift-effects h1 {
+  margin-top: 28px;
+  font-size: 122px;
+  line-height: 1.07;
+  font-weight: 800;
+}
+
+.shift-effects h2 {
+  font-size: 94px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.shift-effects-header {
+  position: absolute;
+  inset: 338px 96px auto;
+}
+
+.shift-effects-brand,
+.shift-effects-caption {
+  color: #b4c9bf;
+  font-size: 43px;
+  font-weight: 700;
+}
+
+.shift-effects-screen {
+  position: absolute;
+  inset: 725px 74px auto;
+  height: 382px;
+  border: 2px solid #435b50;
+  border-radius: 32px;
+  overflow: hidden;
+  mask-image: linear-gradient(black 72%, transparent);
+  box-shadow: 0 16px 72px #0009;
+  transform: perspective(1600px) rotateX(12deg);
+}
+
+.shift-effects-screen img {
+  display: block;
+  width: 100%;
+}
+
+.shift-effects-hook {
+  position: absolute;
+  top: 1150px;
+  inset-inline: 80px;
+  color: #f6ce84;
+  font-size: 59px;
+  font-weight: 800;
+}
+
+.shift-effects-dot {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  margin-inline-end: 19px;
+  border-radius: 50%;
+  vertical-align: 5px;
+  background: currentColor;
+  box-shadow: 0 0 26px #f4bd5077;
+}
+
+.shift-effects-detail,
+.shift-effects-case,
+.shift-effects-recap,
+.shift-effects-end {
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  gap: 39px;
+}
+
+.shift-effects-detail h2 {
+  color: #bfcec5;
+  font-size: 68px;
+}
+
+.shift-effects-focus {
+  padding: 34px 54px 23px;
+  border: 2px solid #57b88770;
+  border-radius: 38px;
+  background: #183429;
+  color: #80edb5;
+  box-shadow: 0 16px 95px #0006;
+  font-size: 84px;
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+.shift-effects-detail p,
+.shift-effects-recap p,
+.shift-effects-end p {
+  color: #d6e4db;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.shift-effects-case {
+  gap: 25px;
+}
+
+.shift-effects-card {
+  width: 100%;
+  margin-top: 12px;
+  padding: 42px;
+  border: 2px solid #3b5146;
+  border-radius: 40px;
+  background: linear-gradient(150deg, #1b2721, #111a16);
+  box-shadow: 0 20px 100px #0008;
+  text-align: start;
+}
+
+.shift-effects-badge {
+  display: inline-block;
+  padding: 13px 27px 7px;
+  border: 2px solid #55bf8999;
+  border-radius: 99px;
+  color: #8de6b6;
+  background: #1b382d;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.shift-effects-badge.renewal {
+  border-color: #f4bd5066;
+  color: #f6ce84;
+  background: #352b1d;
+}
+
+.shift-effects-field,
+.shift-effects-time {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 29px 0 21px;
+  border-bottom: 2px solid #394b42;
+  color: #bfcfc5;
+  font-size: 39px;
+}
+
+.shift-effects-field strong {
+  color: #f2f6f3;
+  font-size: 47px;
+}
+
+.shift-effects-time {
+  border: 0;
+  padding-bottom: 0;
+}
+
+.shift-effects-time b {
+  color: #80edb5;
+  font-size: 73px;
+  line-height: 1;
+}
+
+.shift-effects-recap ul {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  padding: 0;
+  margin: 7px 0;
+  text-align: start;
+  list-style: none;
+}
+
+.shift-effects-recap li > div > div {
+  padding: 19px 34px 11px;
+  border: 2px solid #385144;
+  border-radius: 21px;
+  background: #162720;
+  font-size: 58px;
+  font-weight: 700;
+}
+
+.shift-effects-recap li span {
+  margin-inline-end: 23px;
+  color: #80edb5;
+  font-family: sans-serif;
+}

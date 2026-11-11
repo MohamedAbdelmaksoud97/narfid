@@ -24,11 +24,11 @@ Preserve the last attached export; **يحتاج تعديل** does not erase it. 
 
 ## Establish the sonic master once
 
-The owner's revised direction on 11 November 2026 is **professional music and effects only throughout the film**, with a three-second musical signature and no spoken words. It replaces the earlier narrated direction; historical Cillian clips must not be used. The phrase **«نرفد… سندك التقني»** may remain on screen. Create an original rising/resolving cue and retain its generator/composition provenance. No voice picker or speech generation is needed. The owner reviewed the narrated version, rejected all voiceover, and explicitly directed completion and publication; that instruction authorizes this revision without another approval request. Retain its exact wording and distinguish editorial authorization from actual listening.
+Follow the [main skill's sound direction](../SKILL.md#design-the-sound) and use the existing instrumental signature. The phrase **«نرفد… سندك التقني»** may appear on screen. For NV-001's original release, the owner rejected voiceover after reviewing the narrated version and explicitly directed completion and publication. Keep the exact instruction in the QA record for the export it authorized.
 
 Store the authorized master and manifest together: `content/marketing/audio/narfid-sonic-v1.wav` and `signature.json`. The instrumental manifest contains `id: "narfid-sonic-v1"`, `kind: "instrumental"`, relative `audioFile`, its `sha256`, `approved: true`, `provider`, `generator`, and usage `rights`. Record the owner's actual approval or explicit publication authorization and date as its approval basis. Do not invent a voice identity or claim that the owner heard an unreviewed final export. Do not create a placeholder master. The verifier retains compatibility with historical voiced manifests.
 
-Use this same master as the final three seconds in every composition, at its original speed, with no other music or voice over it. Different films may have different music and effects before that ending. Brief messages are visual editorial guidance, never narration.
+Use this same master as the final three seconds in every composition, at its original speed, with the signature as the sole audio in that window.
 
 ## Verify, attach, and finish
 
