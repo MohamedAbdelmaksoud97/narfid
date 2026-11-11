@@ -1,6 +1,6 @@
 # Campaign production and board synchronization
 
-Use for `NV-001`–`NV-050` in [the video library](https://www.narfid.com/board/marketing/videos). The library is a shared production plan, not a hosted rendering service. Read the selected brief and current state before starting; the owner may have changed its status. Keep earlier experimental films outside the fifty records.
+Use for `NV-001`–`NV-050` in [the video library](https://www.narfid.com/board/marketing/videos). The library is a shared production plan, not a hosted rendering service. Read the selected brief and current state before starting; the owner may have changed its status. Keep earlier films outside the fifty records while applying the [main skill's directing requirements](../SKILL.md#direct-the-film): the first `narfid-intro` is the preferred creative reference, every video keeps a dark mood, and its sports-management purpose is explicit. An existing brief's older treatment does not override the owner's newer direction.
 
 ## Read, start, and recover
 
