@@ -566,8 +566,8 @@
     "file": "01-brand.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1622693,
-    "sha256": "c52472c45164486c0fca66fcd8a66d45d486e74986494ae8914d4a1cf5b234bd",
+    "bytes": 1623509,
+    "sha256": "b87b3130505811f5c922401d7f060b5267f45942cc9f8fd4caac59aaf3e37e22",
     "scene": "reception"
   },
   {
@@ -575,8 +575,8 @@
     "file": "02-memberships.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1562477,
-    "sha256": "b08e91577f5d01cea6348e02511e724b8ab5f6572db4b9d4a2f9aa2859771b5a",
+    "bytes": 1559029,
+    "sha256": "2ffbc8e4eddf50d67c9561a9ceb5bfe0e8e16d555505332eb325f36582e94d16",
     "scene": "gym"
   },
   {
@@ -584,8 +584,8 @@
     "file": "03-bookings.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1452036,
-    "sha256": "f637817d8d082f338aa126711103fb4c5b46a84e9752cfc4d91799505b513025",
+    "bytes": 1438622,
+    "sha256": "c200e8bfeb7248131a97872a003120ab1f6ae88305c0f6c21a56292c59bee190",
     "scene": "court"
   },
   {
@@ -593,17 +593,17 @@
     "file": "04-cash-shifts.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1286067,
-    "sha256": "b48089553bc3032f9886869a52824e156ac75a464eb07c2adf67e562aafc8ae7",
-    "scene": "reception"
+    "bytes": 1405526,
+    "sha256": "0abaf62a95cde8ec177f8c8a076ccc253e3d1384cd4d23e7c3d0612919bf7640",
+    "scene": "terminal"
   },
   {
     "platform": "instagram",
     "file": "05-meal-entitlements.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1188487,
-    "sha256": "8a794852efa7a005450095d1fb69066fc732ffd23076e36aa0cc4722bac3f16e",
+    "bytes": 1176590,
+    "sha256": "bd94caf70b46856f0906b0024ad3e14c158122b473a1f828071cc17afbbaea3b",
     "scene": "kitchen"
   },
   {
@@ -611,8 +611,8 @@
     "file": "06-retail-inventory.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1344034,
-    "sha256": "5534ff851dcea190ec348ff013f44d8bed7b4a8aa18c4677b83d2df3be6a06af",
+    "bytes": 1333826,
+    "sha256": "db2b88e64e13ac13c0de05e2a64d1a4c0a8505e2358eba8aa8650c65ef53f621",
     "scene": "inventory"
   },
   {
@@ -620,8 +620,8 @@
     "file": "07-branches.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1304473,
-    "sha256": "925aa5db2d93818bb97557cc8b6547f9b2121dc630ef0095aadf94a59edc9906",
+    "bytes": 1299075,
+    "sha256": "13a9dda7e952d30e9e11be20e021e1f7ea7472b73380e5f93342cb35773c5c77",
     "scene": "workspace"
   },
   {
@@ -629,35 +629,36 @@
     "file": "08-migration.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1146112,
-    "sha256": "90658121ae22a1d9457e7f0db658fe42b002efbaed1a1be2d01202da9bbb1310",
-    "scene": "workspace"
+    "bytes": 1270219,
+    "sha256": "57cfc9f6988f6010b4c2ae771c644846544c5a62a59bab1a32cf47d7dee0f97b",
+    "scene": "desk"
   },
   {
     "platform": "instagram",
     "file": "09-partnership.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1305884,
-    "sha256": "12346f90a060c4c4d5a287b49b2b5ef626ae0b8ca3db70e51396c281305eda5c",
-    "scene": "workspace"
+    "bytes": 924515,
+    "sha256": "e3f45f126fe21d91fa7c8fa623b38e7cabd909306a593bc7f100295a67fa5747",
+    "scene": "meeting"
   },
   {
     "platform": "instagram",
     "file": "10-demo.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1688664,
-    "sha256": "d0b1185b550a622823dd68e5ceb5860227dc408085127d587f9eeeb953251ea9",
-    "scene": "gym"
+    "bytes": 1691364,
+    "sha256": "a9fceea3a42b9a39d2d044d7329ab38d9f466fdbb27c518b4c908d77b75a76f8",
+    "scene": "gym",
+    "screenshot": "members-wide"
   },
   {
     "platform": "instagram",
     "file": "11-member-file.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 874338,
-    "sha256": "2a0ccb5d08d4911668ee56b1f1e93cd06d774873f1c10e0773bf581b45918df8",
+    "bytes": 829465,
+    "sha256": "27712cc0c5435002c4717174463905eb94592a40f779741e06972a1f02b51cca",
     "scene": "reception",
     "screenshot": "members-wide"
   },
@@ -666,9 +667,9 @@
     "file": "12-subscription-status.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1069061,
-    "sha256": "5e097f016b5545ce7bc862dde6bb44da35c9ba2426c192ef628cbe40596c2a77",
-    "scene": "gym",
+    "bytes": 1097630,
+    "sha256": "06f7305944dc4a98067bd0a096a04458fa6e28919df4bdaf067984577c9a1efe",
+    "scene": "studio",
     "screenshot": "subscriptions-focus"
   },
   {
@@ -676,9 +677,9 @@
     "file": "13-freeze-policy.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1069018,
-    "sha256": "3028425283ad9abd899c38f7246cccd9a9c6c39489576df1d8f87749756de6f6",
-    "scene": "gym",
+    "bytes": 1024854,
+    "sha256": "fe58343a12a1c959639ecc7c605c7ad86e4b22540e22a42bcb3d3991dc15944c",
+    "scene": "training",
     "screenshot": "subscriptions-focus"
   },
   {
@@ -686,9 +687,9 @@
     "file": "14-renewal-review.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 863209,
-    "sha256": "0e71d477b68e8ddce0d83308c0f346021301a91d8974766df2627b7e7579fc74",
-    "scene": "reception",
+    "bytes": 944758,
+    "sha256": "0e715ae2c22ea68d59bce85337fa6b10765b54eb03aebdc87ad37210936dfbd7",
+    "scene": "terminal",
     "screenshot": "subscriptions-wide"
   },
   {
@@ -696,9 +697,9 @@
     "file": "15-attendance-review.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 850706,
-    "sha256": "6d69bd1892eff6299e9d203af7cdd0e599e4954d074f784c112e7ea1d81da193",
-    "scene": "reception",
+    "bytes": 774647,
+    "sha256": "9b7e572df6e3bf4d27dd7fa6250c39c681bb03771ffd8d586080ee91b0bb2703",
+    "scene": "workspace",
     "screenshot": "attendance-focus"
   },
   {
@@ -706,8 +707,8 @@
     "file": "16-booking-capacity.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 848335,
-    "sha256": "1919786e48e0c02b3d2cff735cf7fc7690e7cfdaf3f94f06927f31ac67c66752",
+    "bytes": 808090,
+    "sha256": "ce12c7fcedcea5c3734a4e17f109a10f1bdda3972f6fecb278fc249cf840fa04",
     "scene": "court",
     "screenshot": "bookings-focus"
   },
@@ -716,9 +717,9 @@
     "file": "17-booking-followup.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 864279,
-    "sha256": "77fb91eba3c7e8b6e21f6db147b51d478e1ba066f68c5426bc2d1261df2acef3",
-    "scene": "court",
+    "bytes": 782179,
+    "sha256": "11eca45cc94aedd1c5dda2fe0b9c38e87f160a7567e3d524fa1663c03cc5d551",
+    "scene": "arena",
     "screenshot": "bookings-wide"
   },
   {
@@ -726,8 +727,8 @@
     "file": "18-daily-menu.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 927587,
-    "sha256": "c8f1827c7a8df52b037c95d2945461f4cf2d2d71cdbf017433ab36d9ce8ab3ac",
+    "bytes": 878414,
+    "sha256": "f9f0a6ae964e5d4773bc4010d41371025b9b61c08aa6745bf482c70c588a0463",
     "scene": "kitchen",
     "screenshot": "restaurant-focus"
   },
@@ -736,9 +737,9 @@
     "file": "19-kitchen-queue.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 927605,
-    "sha256": "9869ce79ac389fc48cdf4342686412de9f61d6dd4d7c61bae58ec7dfc5ed2896",
-    "scene": "kitchen",
+    "bytes": 944991,
+    "sha256": "9dbbf9c903ce3d6bc3566ee3f817d3541898fc64fd50f93ba2b99f6b632a107e",
+    "scene": "prep",
     "screenshot": "kitchen-focus"
   },
   {
@@ -746,9 +747,9 @@
     "file": "20-meal-catalog.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 950583,
-    "sha256": "a355762b5e3f9723ce4bd8d06e530717a23f8b9ff93ef19d01d0f850ead58936",
-    "scene": "kitchen",
+    "bytes": 1384487,
+    "sha256": "55f707c7ced1e74289c7866eaff622fbbad426da87c861a516af6b4f4d67b9be",
+    "scene": "meals",
     "screenshot": "meals-wide"
   },
   {
@@ -756,8 +757,8 @@
     "file": "21-stock-available.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 870790,
-    "sha256": "6b3eb1c377ff60a04b78c1aab807e0b3ed5fd3657ff45cf30bb4d98181060eec",
+    "bytes": 834532,
+    "sha256": "3901dfb99e22d32a05c754e8c323e572bd88f7c06c8f8ae47df0608780137ce1",
     "scene": "inventory",
     "screenshot": "inventory-focus"
   },
@@ -766,9 +767,9 @@
     "file": "22-reorder-level.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 873380,
-    "sha256": "d19a7a59e23681bd28e0ac897f3c8ba15e6b7454fa974d14835bb7cef060c79f",
-    "scene": "inventory",
+    "bytes": 1422170,
+    "sha256": "00ea8ff1293c81fed091d6b542cac53d605a8180a3638576923f2d112e11f090",
+    "scene": "towels",
     "screenshot": "inventory-focus"
   },
   {
@@ -776,9 +777,9 @@
     "file": "23-invoice-collection.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 841954,
-    "sha256": "795c4400a9bb462d23b64d7ef2ab45133f8f6429dc7b8265e147bdef05370672",
-    "scene": "workspace",
+    "bytes": 880145,
+    "sha256": "0dc7756759e5cc192dac2444069adafa172f16494ed7e8a7e360d0d4f311ca68",
+    "scene": "desk",
     "screenshot": "finance-wide"
   },
   {
@@ -786,8 +787,8 @@
     "file": "24-financial-review.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 824941,
-    "sha256": "4b9298f5e99405244155c47aa746f38ed34b003bdafa62a2b4b47fc1e110d5d1",
+    "bytes": 774532,
+    "sha256": "d473680ab16b47e4131b0c90395c7b9ac6edef91ae852fbf657870e27fd925d2",
     "scene": "workspace",
     "screenshot": "finance-focus"
   },
@@ -796,9 +797,9 @@
     "file": "25-branch-context.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 804563,
-    "sha256": "c95ce5cac86fa455e8a1a30f842fca1162d294d55e28d364557e131b80f00a67",
-    "scene": "workspace",
+    "bytes": 561706,
+    "sha256": "9c29c7172cda9dc6ddb1b6cf9016a6c659ca587091379978eea0caf0d4c146f3",
+    "scene": "meeting",
     "screenshot": "branches-focus"
   },
   {
@@ -806,9 +807,9 @@
     "file": "26-permission-scope.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 848207,
-    "sha256": "8685ae762a9c691ff5cda3ddad47cbb7a128bdb0764d8b80612333f6d4bf5ba8",
-    "scene": "workspace",
+    "bytes": 762852,
+    "sha256": "3dc27aa6568f938bd7ffb11943c0a6a9f23beb64dd34030123f49d3bad952d46",
+    "scene": "reception",
     "screenshot": "roles-wide"
   },
   {
@@ -816,8 +817,8 @@
     "file": "27-team-records.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1091657,
-    "sha256": "1b91ad8accadcd46d63efeddb3c7f128c59d4ec909912a5e7ea54a77b9cb9510",
+    "bytes": 1025869,
+    "sha256": "54f23875df51e57ccfe45dc998b55d303f6306c0fe6b807b8c9a26342470b715",
     "scene": "gym",
     "screenshot": "staff-focus"
   },
@@ -826,9 +827,9 @@
     "file": "28-daily-overview.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 854920,
-    "sha256": "dfc86fd0e27f41aeedc4e2cc5882e5be0db6e8a12e316160e3b44e274f550adf",
-    "scene": "workspace",
+    "bytes": 1127755,
+    "sha256": "adcb1ad250d5410d4a82b3f06848777e677d2ac762c2ca8edb58a6feef4fc1d6",
+    "scene": "studio",
     "screenshot": "overview-focus"
   },
   {
@@ -836,9 +837,9 @@
     "file": "29-service-catalog.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1082187,
-    "sha256": "37a93a052d908b3492d1f7ec0ab0e357594c3e722b750edc6228a25b908f41b5",
-    "scene": "gym",
+    "bytes": 1294918,
+    "sha256": "b446183e32a19cf557f67aedd9623327df6f2d6dc3107129a95e245cf60183e7",
+    "scene": "pool",
     "screenshot": "services-wide"
   },
   {
@@ -846,19 +847,18 @@
     "file": "30-guided-demo.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 873600,
-    "sha256": "47722a0af7833a7e99a10d63f66f4a331aa7d2f8a3157e196b744bc3786d008f",
-    "scene": "reception",
-    "screenshot": "overview-focus"
+    "bytes": 1492194,
+    "sha256": "e0396b67f9e2be19ca9ef9587e5ab00b3c7ecc2cfa87723f1b90418a65209d27",
+    "scene": "training"
   },
   {
     "platform": "instagram",
     "file": "31-first-visit.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 860998,
-    "sha256": "c5d712eaf2db46fd9da2292a751ce0ba1b547b27bac6d18a34a45e570ef01d20",
-    "scene": "reception",
+    "bytes": 937791,
+    "sha256": "d4f90eaf81877d368b8a2f3b7a9fe43d1a252b02e15517dfe40996ce341449b3",
+    "scene": "terminal",
     "screenshot": "members-focus"
   },
   {
@@ -866,9 +866,9 @@
     "file": "32-package-fit.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1086841,
-    "sha256": "7ff35eb980f85bab6eec20b27e6519fbc9ec59159c25ad722e74db06b41d7885",
-    "scene": "gym",
+    "bytes": 776901,
+    "sha256": "ebb441e51515a08b9813c63e8b2691e47beff1d8aab1d06877838f7c5c62792b",
+    "scene": "arena",
     "screenshot": "services-wide"
   },
   {
@@ -876,8 +876,8 @@
     "file": "33-reception-handoff.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 851280,
-    "sha256": "1b4a17a87809ec30f3002717e522083767821f861c6454f0e225e90d2c95e735",
+    "bytes": 802351,
+    "sha256": "0e2fc0adf84db1f5760b8802f2c023baea78fff377e6e7ba9978d83d31d86a3d",
     "scene": "reception",
     "screenshot": "attendance-focus"
   },
@@ -886,8 +886,8 @@
     "file": "34-academy-groups.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 859694,
-    "sha256": "50e9477ee88debcdb2fff9d7a1d05164a9e3ece29af4ad8ba8e7891cfac535ce",
+    "bytes": 820368,
+    "sha256": "0d9ec058c5809a02085df50d77517a8ae4aad0d523bbebf8ec0852ceba9cbed5",
     "scene": "court",
     "screenshot": "bookings-focus"
   },
@@ -896,29 +896,28 @@
     "file": "35-personal-training.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1097909,
-    "sha256": "a99a3721494a73ed38e15eb48985ab8996eacd66854f0fd7f3d7b523c29f2780",
+    "bytes": 1051988,
+    "sha256": "ab205eca0be9663524b8e02edf2c6c55dbd64c2a78bf154b518ebd863f27f37b",
     "scene": "gym",
-    "screenshot": "bookings-wide"
+    "screenshot": "staff-wide"
   },
   {
     "platform": "instagram",
     "file": "36-booking-policy.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 855005,
-    "sha256": "46b1aa851d6477a701a9be1564b62e4c6e4472eba88c88707421facf30d5a759",
-    "scene": "court",
-    "screenshot": "bookings-focus"
+    "bytes": 1591304,
+    "sha256": "77b92aa058011c87b56e5ed0d061431891c4374c73842440357adf77b63f6e82",
+    "scene": "studio"
   },
   {
     "platform": "instagram",
     "file": "37-shift-difference.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 822744,
-    "sha256": "bdcf514699e720d47c801025232abcc6860ea2c1e095a5e329778b051a0ef7d9",
-    "scene": "workspace",
+    "bytes": 863718,
+    "sha256": "ef8ba654a3535814cd18f44bf218514ee9d1abc656bf1b32ef75dce115b6eee9",
+    "scene": "desk",
     "screenshot": "finance-focus"
   },
   {
@@ -926,28 +925,27 @@
     "file": "38-refund-review.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 867861,
-    "sha256": "a9b24821f3bb73b34aea5db62a184c1d89dc9666cfcb931a1e4442799b9c8871",
-    "scene": "reception",
-    "screenshot": "finance-wide"
+    "bytes": 1354248,
+    "sha256": "bfccc6686d8227bbcf0c0aaef2ecb799006679495fb841eec87edcae1acc30a9",
+    "scene": "terminal"
   },
   {
     "platform": "instagram",
     "file": "39-retail-service.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 869938,
-    "sha256": "e792bf9ad4b4104501a79744143962422ed560f4d3b784df70714302d2dc952b",
+    "bytes": 837413,
+    "sha256": "b1290e9bd6810e8ff8a43549b7e24eb397bf8aa5d6a2da06faafaed040f01b63",
     "scene": "inventory",
-    "screenshot": "finance-focus"
+    "screenshot": "inventory-focus"
   },
   {
     "platform": "instagram",
     "file": "40-kitchen-handoff.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 937253,
-    "sha256": "00b1f2a174b96e65740214bc33072fb2b3cce093f089884610fb455b8517ad04",
+    "bytes": 873336,
+    "sha256": "c410c3445bddbd68893ddc74ea809a9e0d3c1e735e9eb2be6e0c042001ed5425",
     "scene": "kitchen",
     "screenshot": "kitchen-focus"
   },
@@ -956,9 +954,9 @@
     "file": "41-menu-preparation.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 938767,
-    "sha256": "4c62ab64f87fb3c0190a6758285de05848494378abdd200e9a119f405c04571d",
-    "scene": "kitchen",
+    "bytes": 970495,
+    "sha256": "4ef40329106b2fd615671b7430b18d485d8aa5291eeda3645a755d11a357411b",
+    "scene": "prep",
     "screenshot": "restaurant-wide"
   },
   {
@@ -966,9 +964,9 @@
     "file": "42-stock-count.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 882954,
-    "sha256": "888a966969c77d61f573c964f93438fe79384c9331c417341389f201930d7360",
-    "scene": "inventory",
+    "bytes": 1426704,
+    "sha256": "faea45a65115f7e7164f40318948bd2935843d25b27fda85674fdb67d5384461",
+    "scene": "towels",
     "screenshot": "inventory-focus"
   },
   {
@@ -976,8 +974,8 @@
     "file": "43-branch-readiness.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 808324,
-    "sha256": "cd9eb77f8717a9a691756d114e1cfb9ce8a80456692981bd9155b129cbba861f",
+    "bytes": 763727,
+    "sha256": "59e0baa37ac085b5f71fa6d74685608b3eaaf1496139a26b1fb79ad013291514",
     "scene": "workspace",
     "screenshot": "branches-focus"
   },
@@ -986,8 +984,8 @@
     "file": "44-team-practice.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1101512,
-    "sha256": "322d0b18f2d325c26aa5d66a3864c28ced14d49102d6ba4d26e5e1f5f277f9ac",
+    "bytes": 1059747,
+    "sha256": "a5b92bb82b70702171e915519c69f397b98bd2645e41c98bd2b9a09e2fe4e520",
     "scene": "gym",
     "screenshot": "staff-wide"
   },
@@ -996,8 +994,8 @@
     "file": "45-access-review.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 867098,
-    "sha256": "57ee58ce79c05da19c01baafc4b099a2cadc4362329df312acf675b78f1d094c",
+    "bytes": 821335,
+    "sha256": "e1cf71578bb345096486aa320dfba6dd4de6e78e2cdcf24389f4f2099597dfca",
     "scene": "reception",
     "screenshot": "roles-focus"
   },
@@ -1006,8 +1004,8 @@
     "file": "46-season-readiness.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 878607,
-    "sha256": "6f900c077d4b13ad15567e6e617bc6cd7f89f48ee2b00957523d3deceb8e1a68",
+    "bytes": 843888,
+    "sha256": "e71c48973a5678ca0854cc4ecca2d557ec967800e9d2c78547e62c26c75e4ac1",
     "scene": "court",
     "screenshot": "overview-focus"
   },
@@ -1016,28 +1014,27 @@
     "file": "47-software-questions.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 874241,
-    "sha256": "ab79e8d0e632d1f985a066702240ffdd10edf8e4dddfaf8b837b22182a2bbc71",
-    "scene": "workspace",
-    "screenshot": "overview-wide"
+    "bytes": 799072,
+    "sha256": "9c46c5910344dbea88db89094000e8fe2c2c7ac674cfc733d57c2b772202b299",
+    "scene": "meeting"
   },
   {
     "platform": "instagram",
     "file": "48-weekly-review.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 853917,
-    "sha256": "a19eac76a218367a976a220782303257c8e929665cb1f8024a7500d5f644851d",
-    "scene": "workspace",
-    "screenshot": "overview-focus"
+    "bytes": 1078844,
+    "sha256": "a5826a0256fdba9a96d3c4ee57009dbe55a097f1b14f1f44a725e1deea62cdaf",
+    "scene": "studio",
+    "screenshot": "branches-focus"
   },
   {
     "platform": "instagram",
     "file": "49-integration-brief.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 824147,
-    "sha256": "372c9b2200d214bc7b763888369c2e0b531d059c98985ed163b7154ccabe460d",
+    "bytes": 773014,
+    "sha256": "350f55a68ad2016d253250671efd2086a4c198fdc02002e9ef1e6156218a8ca0",
     "scene": "workspace",
     "screenshot": "services-focus"
   },
@@ -1046,8 +1043,8 @@
     "file": "50-annual-scope.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1094366,
-    "sha256": "6aae74c93f58a78e8b46d35ccf59ae85bb7f2b9f85bca27a5671824ce7cfe4db",
+    "bytes": 1042214,
+    "sha256": "532ad5beb975e066810975ca5a696ea18f495ba95815cfefd93674f92f69a630",
     "scene": "gym",
     "screenshot": "services-wide"
   },
@@ -1056,17 +1053,17 @@
     "file": "51-member-app.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 2054795,
-    "sha256": "e0422f250f02e4165bcf21eb4a58ae95ca3456d47fa2da5db60ae374547ff199",
-    "scene": "gym"
+    "bytes": 1834895,
+    "sha256": "b8a62d66e3e9f60684dd84bfcd0a93160c0182c3333020e5b57d4b517c642747",
+    "scene": "training"
   },
   {
     "platform": "instagram",
     "file": "52-app-renewals.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1596194,
-    "sha256": "a38052d113e4d5d2f617b8ad275020e9caec2c354d559f891d9c23bfe908e0f0",
+    "bytes": 1588352,
+    "sha256": "da7d8b88a62829ca8356d6c2faac2573968c9ef8cabb9401a736fdfeb39d13b6",
     "scene": "reception"
   },
   {
@@ -1074,8 +1071,8 @@
     "file": "53-app-court-booking.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1546359,
-    "sha256": "f1909833c4b4e9e278686bbe1d4d46865feff59b127bf53e0360c118f35149e6",
+    "bytes": 1542201,
+    "sha256": "357b34d398df4da4b48b3d196396d1d563ac9b7ea7ea2b3d08c4545db76b40c6",
     "scene": "court"
   },
   {
@@ -1083,44 +1080,44 @@
     "file": "54-app-feedback-reminders.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1440520,
-    "sha256": "ef11dcfafd06e81cec0e706d5fa68fea4ed1df04207af90039b0a43675de2d72",
-    "scene": "workspace"
+    "bytes": 1591749,
+    "sha256": "5d3338e7b642778af5bc3bcebbc058eee34f57779a82dbf2d974efdbf89dbc08",
+    "scene": "desk"
   },
   {
     "platform": "instagram",
     "file": "55-gate-integration.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1615409,
-    "sha256": "b18bea00108b982a9c095dd36852b0e1ac5c4063fc50f0e7fd5d159a229f7733",
-    "scene": "reception"
+    "bytes": 2027093,
+    "sha256": "069186013f89e7fee86371cf1be8ed6db04b34ca35a097c4d697d4b86a195f76",
+    "scene": "studio"
   },
   {
     "platform": "instagram",
     "file": "56-gate-membership-policy.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 2086668,
-    "sha256": "4143abd048b69eabc894b2b4673cc3f8afbb73e0ea11e7460b27c55a7fefcc81",
-    "scene": "gym"
+    "bytes": 1453292,
+    "sha256": "2848d15812f913c994e5bea5af3198eec9006031491a9cd9eb6e96035a795e7b",
+    "scene": "workspace"
   },
   {
     "platform": "instagram",
     "file": "57-gate-attendance-log.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1458239,
-    "sha256": "1f287bdece45ca3ef91c9b7b74c9f71e27c93e2c2e4a733f22141a82f94a245e",
-    "scene": "workspace"
+    "bytes": 1074881,
+    "sha256": "ee66529dd4bebffd14f2fc35ef7cff8ee449f33baf261308723bb394040a4034",
+    "scene": "meeting"
   },
   {
     "platform": "instagram",
     "file": "58-gate-before-purchase.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1619869,
-    "sha256": "ee032fdeceb4ac89bd675cfee370c48c066ad89f77930b854ef55b6a9ba93bcc",
+    "bytes": 1605916,
+    "sha256": "3aa3b722a23daafe4ddcb685d75402b06d55181d0a879d5a88af21538941cd42",
     "scene": "reception"
   },
   {
@@ -1128,17 +1125,17 @@
     "file": "01-brand.png",
     "width": 1200,
     "height": 628,
-    "bytes": 583499,
-    "sha256": "87e8f839b5570c24ce752ab896de942849180b13a912c4e7794d9067c168b679",
-    "scene": "workspace"
+    "bytes": 541810,
+    "sha256": "77e439ff17a57bcb094430e7540902f3bc5bf2d17ee6e7bae2601da8bcde060b",
+    "scene": "desk"
   },
   {
     "platform": "x",
     "file": "02-memberships.png",
     "width": 1200,
     "height": 628,
-    "bytes": 638462,
-    "sha256": "655be1e2fb3abac899e6dbbe35f264d2c8e944c04d3f9934c47cde003fa8f9bf",
+    "bytes": 633336,
+    "sha256": "b1b6d4d800ffbb087005dd20504016a3059ef516bef90b4bef521496c45f1850",
     "scene": "gym"
   },
   {
@@ -1146,8 +1143,8 @@
     "file": "03-bookings.png",
     "width": 1200,
     "height": 628,
-    "bytes": 573128,
-    "sha256": "727601d8a9068204741d6560cafdaba35430c4a96f6348a1883d1a53e833fa63",
+    "bytes": 569564,
+    "sha256": "7d3fb871887205c755bce2dacfce58932e01f97282d473c1d7543494a917a137",
     "scene": "court"
   },
   {
@@ -1155,17 +1152,17 @@
     "file": "04-cash-shifts.png",
     "width": 1200,
     "height": 628,
-    "bytes": 524841,
-    "sha256": "02702ac29db6863c3a650a13852c9e6c0d996b88734802130459d7a944aaad56",
-    "scene": "reception"
+    "bytes": 494018,
+    "sha256": "87dd0b3ac4862e7325712c8140d26dc2707a1568ca056ee1347fd517ff5122e7",
+    "scene": "terminal"
   },
   {
     "platform": "x",
     "file": "05-meal-entitlements.png",
     "width": 1200,
     "height": 628,
-    "bytes": 549980,
-    "sha256": "86f2fed9f99cb3703b0187b76e30617dd1fc57b5c40c9e897d10bb9d06526421",
+    "bytes": 546591,
+    "sha256": "52a44f81fd05fd4fc58c1dbabbbbe94d4d6f8f41ac2a278db8b3291af868dfb4",
     "scene": "kitchen"
   },
   {
@@ -1173,8 +1170,8 @@
     "file": "06-retail-inventory.png",
     "width": 1200,
     "height": 628,
-    "bytes": 551481,
-    "sha256": "56a567cc1868d015fd12e7230e2acf27300813530a9a5d6909ffd6deb0cef12f",
+    "bytes": 547393,
+    "sha256": "dd0147af405b71c5e2d986b5c2d791bfd12c1ba9c6f5fc6281944de40f2f670d",
     "scene": "inventory"
   },
   {
@@ -1182,8 +1179,8 @@
     "file": "07-branches.png",
     "width": 1200,
     "height": 628,
-    "bytes": 540211,
-    "sha256": "fc65250e87c8aa863d7cf4270985379dd1b4264bc44cf818c412c33d39dda45c",
+    "bytes": 532396,
+    "sha256": "0a2045c01ee7fd38d2b7b68668e65296a2faa326e8e3b35be7052556d22a3b5f",
     "scene": "workspace"
   },
   {
@@ -1191,17 +1188,17 @@
     "file": "08-migration.png",
     "width": 1200,
     "height": 628,
-    "bytes": 491170,
-    "sha256": "3487e32ade88cd2c6d59f210f7f7403c561be8ab10369fab74d744daca64521a",
-    "scene": "workspace"
+    "bytes": 666068,
+    "sha256": "1ab5389003aa88a28d197f9d1ba47576d0e37e89ad26eb711e0b628e35d69589",
+    "scene": "studio"
   },
   {
     "platform": "x",
     "file": "09-partnership.png",
     "width": 1200,
     "height": 628,
-    "bytes": 722280,
-    "sha256": "a6ed1d5890ffb428474c5b72ea2ae1f244b3d0e081a3de10fd4248507bde3290",
+    "bytes": 720671,
+    "sha256": "2a24fda9bc0c1e8792f4bd9b9c7774343c73c1615acb0922fb045d071ebd451e",
     "scene": "gym"
   },
   {
@@ -1209,18 +1206,19 @@
     "file": "10-demo.png",
     "width": 1200,
     "height": 628,
-    "bytes": 578532,
-    "sha256": "82f4682827627686d839f919268886a48e422f699fb900de7e560c7d33a48db3",
-    "scene": "reception"
+    "bytes": 573964,
+    "sha256": "b4c6c73dc208ed88280ef598d974b693a751fe091d8894de3adfcb79f621ce78",
+    "scene": "reception",
+    "screenshot": "members-wide"
   },
   {
     "platform": "x",
     "file": "11-member-file.png",
     "width": 1200,
     "height": 628,
-    "bytes": 561198,
-    "sha256": "f2b867f7a12cbc2d9c670891edea5bbfa1c9e8106a17660cbd5168302f5987f6",
-    "scene": "reception",
+    "bytes": 609746,
+    "sha256": "21b883f29507fbed2dd2239dfcd4f67a3be52aae9d070ea31e557454343c078b",
+    "scene": "training",
     "screenshot": "members-wide"
   },
   {
@@ -1228,9 +1226,9 @@
     "file": "12-subscription-status.png",
     "width": 1200,
     "height": 628,
-    "bytes": 636671,
-    "sha256": "2bc2d32b2e536a51875c1ee929fc5ddc0ac56bdb8d480768ba698d7c84f4d4aa",
-    "scene": "gym",
+    "bytes": 503155,
+    "sha256": "b65bda48289d3e18e00e596936a85a8874406c2172906fd772c9ccef661396a7",
+    "scene": "arena",
     "screenshot": "subscriptions-focus"
   },
   {
@@ -1238,9 +1236,9 @@
     "file": "13-freeze-policy.png",
     "width": 1200,
     "height": 628,
-    "bytes": 638132,
-    "sha256": "7c1e39628424f1fc2df447eaecb0fe2e87c838fcfb164288e87dc9d4fd9cedea",
-    "scene": "gym",
+    "bytes": 653726,
+    "sha256": "48d83a850d60f2e99dbbc3123f3d7a32c0ea99d3cdb215ab7f4ebec28302c5a9",
+    "scene": "pool",
     "screenshot": "subscriptions-focus"
   },
   {
@@ -1248,9 +1246,9 @@
     "file": "14-renewal-review.png",
     "width": 1200,
     "height": 628,
-    "bytes": 560717,
-    "sha256": "b8e91f9b85783f874ba5b910a580f1fe93407675b344d8be1243089e2068001a",
-    "scene": "reception",
+    "bytes": 462591,
+    "sha256": "51b7c9a5cbe31fa0a874422021ae62957b653faa5dab93ad1ae0d61e64474ba5",
+    "scene": "desk",
     "screenshot": "subscriptions-wide"
   },
   {
@@ -1258,9 +1256,9 @@
     "file": "15-attendance-review.png",
     "width": 1200,
     "height": 628,
-    "bytes": 551620,
-    "sha256": "da6540735c5bbaa59b2e6aabe4cf429f4cf662b2adfa35d7ff0786672c481ac3",
-    "scene": "reception",
+    "bytes": 517234,
+    "sha256": "1ef7994b525f39b78b57ba52f45f3c77d0503dfb40916247337e0ad6a0057835",
+    "scene": "terminal",
     "screenshot": "attendance-focus"
   },
   {
@@ -1268,8 +1266,8 @@
     "file": "16-booking-capacity.png",
     "width": 1200,
     "height": 628,
-    "bytes": 518853,
-    "sha256": "9bc3214e7e338a94432ee4391b574731a55fd3657fb4093ea7f5d541dafae3c8",
+    "bytes": 513082,
+    "sha256": "64c3eece67ccd9b59462efa34a5e2e4d4581f9fe0f3f179ae86e59b8ffeab4b1",
     "scene": "court",
     "screenshot": "bookings-focus"
   },
@@ -1278,9 +1276,9 @@
     "file": "17-booking-followup.png",
     "width": 1200,
     "height": 628,
-    "bytes": 527823,
-    "sha256": "5cb1b94ca202b114503fc2ccb5bcc8b8e0239f8ef48822dcd0fff304fe640f31",
-    "scene": "court",
+    "bytes": 664723,
+    "sha256": "209ede36dc28c4ec24386f3dafe0aaa655f68f1c4424a7d52490facac6b83b39",
+    "scene": "studio",
     "screenshot": "bookings-wide"
   },
   {
@@ -1288,8 +1286,8 @@
     "file": "18-daily-menu.png",
     "width": 1200,
     "height": 628,
-    "bytes": 565992,
-    "sha256": "34cff569b6aef6bdc4b2e60a699b80437bd19f98a97295f1861e6fb4d27e0fe5",
+    "bytes": 560157,
+    "sha256": "8d646ec8c3289a666520b49a122d4e720cada31be58d0cd7140d6e6457a53a04",
     "scene": "kitchen",
     "screenshot": "restaurant-focus"
   },
@@ -1298,9 +1296,9 @@
     "file": "19-kitchen-queue.png",
     "width": 1200,
     "height": 628,
-    "bytes": 567170,
-    "sha256": "32eb2ddf606e0ed11acdd4a17a2c4e5fc02ac34a8db3bad5eea05e5e5770d1c3",
-    "scene": "kitchen",
+    "bytes": 559523,
+    "sha256": "bd78e7d5f28784a38f6a6c1d8348270e02a3a50780fe2830ec79c904b568a8bc",
+    "scene": "prep",
     "screenshot": "kitchen-focus"
   },
   {
@@ -1308,9 +1306,9 @@
     "file": "20-meal-catalog.png",
     "width": 1200,
     "height": 628,
-    "bytes": 574091,
-    "sha256": "1b370fde052270993b32e1ac093b20397ed110116924d5d07a4e43f657e5c7c4",
-    "scene": "kitchen",
+    "bytes": 642945,
+    "sha256": "90204984a1bd4561667adcf39d12f187196cac90246eb2e98090461ab7a1f907",
+    "scene": "meals",
     "screenshot": "meals-wide"
   },
   {
@@ -1318,8 +1316,8 @@
     "file": "21-stock-available.png",
     "width": 1200,
     "height": 628,
-    "bytes": 521923,
-    "sha256": "c022e9b00cab15af6897d91ba73034862c75f88b68a49cd7579f4294d824c89d",
+    "bytes": 516782,
+    "sha256": "ed557c480fe7592356fc00b6c80f4364c7c68b249cde1ddedc4d956c17fb1671",
     "scene": "inventory",
     "screenshot": "inventory-focus"
   },
@@ -1328,9 +1326,9 @@
     "file": "22-reorder-level.png",
     "width": 1200,
     "height": 628,
-    "bytes": 519816,
-    "sha256": "9c4211dc282a8f195135add3e8556074f3078cc0778deaa18dc99b8f188ca382",
-    "scene": "inventory",
+    "bytes": 720907,
+    "sha256": "21e42bfe8e3c70eab20c9201751c834257be65a1830a20b8eec720fc798c6897",
+    "scene": "towels",
     "screenshot": "inventory-focus"
   },
   {
@@ -1338,9 +1336,9 @@
     "file": "23-invoice-collection.png",
     "width": 1200,
     "height": 628,
-    "bytes": 502985,
-    "sha256": "bef4c25f93b2f386a0d53acff0d1e2276e0f04d52be694516f4f7550dfab066e",
-    "scene": "workspace",
+    "bytes": 553238,
+    "sha256": "5ba33a85046b6e269713dbf51b461ada0a31bbf95f95d927b145c9b7137ecd07",
+    "scene": "reception",
     "screenshot": "finance-wide"
   },
   {
@@ -1348,8 +1346,8 @@
     "file": "24-financial-review.png",
     "width": 1200,
     "height": 628,
-    "bytes": 494709,
-    "sha256": "cf604c8688f86df524386a7650a448898d213b3e1f286492d3cec47975b68ac8",
+    "bytes": 489653,
+    "sha256": "e710f829984c3d54f5ef8fb9952747f4c1221513d949f45fc345bc06a1a104fd",
     "scene": "workspace",
     "screenshot": "finance-focus"
   },
@@ -1358,9 +1356,9 @@
     "file": "25-branch-context.png",
     "width": 1200,
     "height": 628,
-    "bytes": 489957,
-    "sha256": "b78b02bea0753c368d9d3878978913b8f8e0d1e0855a888edc108a716e454c31",
-    "scene": "workspace",
+    "bytes": 364039,
+    "sha256": "9daf32a408e63647f7205c1a5b683b0bb0f785bc425c7fce24ba88f03cd11099",
+    "scene": "meeting",
     "screenshot": "branches-focus"
   },
   {
@@ -1368,9 +1366,9 @@
     "file": "26-permission-scope.png",
     "width": 1200,
     "height": 628,
-    "bytes": 508171,
-    "sha256": "3efe6d905098041d305e3b364324a6847a664a829702fdd85a2da4f74cd8eeb6",
-    "scene": "workspace",
+    "bytes": 464529,
+    "sha256": "0eb2af90afd8e7a35bf7caf3893faafb8b6c8a37068c00bce80923500374c8cb",
+    "scene": "desk",
     "screenshot": "roles-wide"
   },
   {
@@ -1378,8 +1376,8 @@
     "file": "27-team-records.png",
     "width": 1200,
     "height": 628,
-    "bytes": 642087,
-    "sha256": "91e23542bf0b4c27d32e0724d144c2fbca4973079b55a2791d30a08cd971518c",
+    "bytes": 633071,
+    "sha256": "ad9b38d67bd072a6a82b2c3ec0bbdc03291ceafd844a1dcf4b8a556de613b93b",
     "scene": "gym",
     "screenshot": "staff-focus"
   },
@@ -1388,9 +1386,9 @@
     "file": "28-daily-overview.png",
     "width": 1200,
     "height": 628,
-    "bytes": 499194,
-    "sha256": "ecb3bbe3ff0aaa5f2ea6646b3c8868fbb4705c4e1bb821489519bca5f5d72e70",
-    "scene": "workspace",
+    "bytes": 660303,
+    "sha256": "571e2e4692a56705e7301d34342651bf1f231e43101c5a304f59b87537ae10ca",
+    "scene": "studio",
     "screenshot": "overview-focus"
   },
   {
@@ -1398,9 +1396,9 @@
     "file": "29-service-catalog.png",
     "width": 1200,
     "height": 628,
-    "bytes": 640040,
-    "sha256": "eb3652542ed7e00c4f0b46b186267d93baaac27b9e379a783742419afc563457",
-    "scene": "gym",
+    "bytes": 608215,
+    "sha256": "03efbd231870ebfde2d5ef58ab50fb86eac465e081458be8095cf8c92633825a",
+    "scene": "training",
     "screenshot": "services-wide"
   },
   {
@@ -1408,19 +1406,18 @@
     "file": "30-guided-demo.png",
     "width": 1200,
     "height": 628,
-    "bytes": 558378,
-    "sha256": "f99a064a1facd496458a0666a0095012d0b0b71cb86132b14f28e12f877c2e5c",
-    "scene": "reception",
-    "screenshot": "overview-focus"
+    "bytes": 551285,
+    "sha256": "a5869c383c17832b2ce7cb747fbe0f07de1182135e67959b36c816f2d30fa433",
+    "scene": "reception"
   },
   {
     "platform": "x",
     "file": "31-first-visit.png",
     "width": 1200,
     "height": 628,
-    "bytes": 555507,
-    "sha256": "38589e526ffd15548673d0697405d1c704ff44a6cdfe22d70b036696478b445a",
-    "scene": "reception",
+    "bytes": 517565,
+    "sha256": "ed262816047707b08516e40292722e57810ec8433fe4a3559971750b2c3c9b31",
+    "scene": "terminal",
     "screenshot": "members-focus"
   },
   {
@@ -1428,9 +1425,9 @@
     "file": "32-package-fit.png",
     "width": 1200,
     "height": 628,
-    "bytes": 640609,
-    "sha256": "b6e7436c76db6fa13e38797f86885a574676c136426a6777cb5ee7b02c3a52ff",
-    "scene": "gym",
+    "bytes": 510307,
+    "sha256": "8279cd4afa7cfbd2ea63c5c4fa35163daf62d9b3557f6b773280504d239335bb",
+    "scene": "arena",
     "screenshot": "services-wide"
   },
   {
@@ -1438,9 +1435,9 @@
     "file": "33-reception-handoff.png",
     "width": 1200,
     "height": 628,
-    "bytes": 552601,
-    "sha256": "5a4945e4e62ec29ee0a45075a680182e4f4bda26663fba436e682e2182b9d37b",
-    "scene": "reception",
+    "bytes": 487378,
+    "sha256": "5554bcd0dea58ec7db12729cd355fdfe4b7e76ecd71a0eeb181769adc9d0098e",
+    "scene": "workspace",
     "screenshot": "attendance-focus"
   },
   {
@@ -1448,8 +1445,8 @@
     "file": "34-academy-groups.png",
     "width": 1200,
     "height": 628,
-    "bytes": 522344,
-    "sha256": "b462e6670873bcddc6658278e5d364106e4dfc3c0a926682aa549bffc7256c45",
+    "bytes": 514485,
+    "sha256": "a008503fb97d4b601f3581e7d02309ba4bd2f82525957880b90fe34731cda46e",
     "scene": "court",
     "screenshot": "bookings-focus"
   },
@@ -1458,29 +1455,28 @@
     "file": "35-personal-training.png",
     "width": 1200,
     "height": 628,
-    "bytes": 641965,
-    "sha256": "ad81d53d125df785ae214838103aeb1af278597ddb35abc5b9755b83d4e9b99a",
+    "bytes": 639757,
+    "sha256": "0bdb83c1c16b6a423b9d027bec9f126d370852180107158be776c415224720a7",
     "scene": "gym",
-    "screenshot": "bookings-wide"
+    "screenshot": "staff-wide"
   },
   {
     "platform": "x",
     "file": "36-booking-policy.png",
     "width": 1200,
     "height": 628,
-    "bytes": 523263,
-    "sha256": "e3a288fa720a9600d61d4eacbb85ee1e90a69cbc2b39135d9da1c87299af751e",
-    "scene": "court",
-    "screenshot": "bookings-focus"
+    "bytes": 665088,
+    "sha256": "ed93b60333e889ea0cd142d973d45aaf0416af9d71fa5b8b440c5780c76a14dc",
+    "scene": "pool"
   },
   {
     "platform": "x",
     "file": "37-shift-difference.png",
     "width": 1200,
     "height": 628,
-    "bytes": 495173,
-    "sha256": "e533c0f1efaad892aeebe484f953e0191bb9f87996b92c14ad2a6830166ec548",
-    "scene": "workspace",
+    "bytes": 453743,
+    "sha256": "e9f566fcc734314d95c87cd2ac6a377a4694d29325e69176cefca6ea7b6af1a3",
+    "scene": "desk",
     "screenshot": "finance-focus"
   },
   {
@@ -1488,28 +1484,27 @@
     "file": "38-refund-review.png",
     "width": 1200,
     "height": 628,
-    "bytes": 560373,
-    "sha256": "3497e094a26a4b5b8c6a84607fc25b24c88064b1404415f774552d4676f22ebc",
-    "scene": "reception",
-    "screenshot": "finance-wide"
+    "bytes": 552605,
+    "sha256": "260aee1d378a4c8b0189de242b24f041163347dc2093a4554594b0deb6a3a201",
+    "scene": "reception"
   },
   {
     "platform": "x",
     "file": "39-retail-service.png",
     "width": 1200,
     "height": 628,
-    "bytes": 521302,
-    "sha256": "e00ccc1725bdf2c9ba23b79be5d8d897cf95a141bb6bfddfacfd9ccb88d06ac3",
+    "bytes": 517364,
+    "sha256": "d107850b35a035f965698886f87fee95da4e1ca49088554502fda18791e276f4",
     "scene": "inventory",
-    "screenshot": "finance-focus"
+    "screenshot": "inventory-focus"
   },
   {
     "platform": "x",
     "file": "40-kitchen-handoff.png",
     "width": 1200,
     "height": 628,
-    "bytes": 565272,
-    "sha256": "737d8e0dc3f3fbce2fb233562807919837a2497817fa76c759326ce214dda417",
+    "bytes": 560703,
+    "sha256": "8683bb37045e182111257bbc923da41ec686a9ccf42fb8fd85fbc137095fc085",
     "scene": "kitchen",
     "screenshot": "kitchen-focus"
   },
@@ -1518,9 +1513,9 @@
     "file": "41-menu-preparation.png",
     "width": 1200,
     "height": 628,
-    "bytes": 574409,
-    "sha256": "dde6040397bc027a9675af115399ca04ee619e558b44f4ae16e4c409c92a9201",
-    "scene": "kitchen",
+    "bytes": 569649,
+    "sha256": "170e023ab2310fea166014c4fcd019682556334d503956bef93e33bc0f7dc688",
+    "scene": "prep",
     "screenshot": "restaurant-wide"
   },
   {
@@ -1528,9 +1523,9 @@
     "file": "42-stock-count.png",
     "width": 1200,
     "height": 628,
-    "bytes": 522786,
-    "sha256": "6cae8486e6bb93c6e85da4dcbb3f1b7ee36a3abb6dfaa4e2ee03e0d95d910d5c",
-    "scene": "inventory",
+    "bytes": 720379,
+    "sha256": "e5889f3464588b80b13c48f9f9896252add3080340bd9d015e0c46d8900a6d04",
+    "scene": "towels",
     "screenshot": "inventory-focus"
   },
   {
@@ -1538,8 +1533,8 @@
     "file": "43-branch-readiness.png",
     "width": 1200,
     "height": 628,
-    "bytes": 492639,
-    "sha256": "4af38aeeb55b937cf06c420061cd34d773d1da70a6f6ac317df7f7b418ba1415",
+    "bytes": 486344,
+    "sha256": "923e8bf4bb621cb63b2190437ce961b303800e70ddc23d35bc08f162762c8c05",
     "scene": "workspace",
     "screenshot": "branches-focus"
   },
@@ -1548,8 +1543,8 @@
     "file": "44-team-practice.png",
     "width": 1200,
     "height": 628,
-    "bytes": 643701,
-    "sha256": "58b411e52f0f8e75114e1235902d5d81374b01b3891dbf045afc466965135a18",
+    "bytes": 639533,
+    "sha256": "8a28a28cd219667c4d20aab53a0808a149fbef745c2aa87fb14fd75686beccaa",
     "scene": "gym",
     "screenshot": "staff-wide"
   },
@@ -1558,8 +1553,8 @@
     "file": "45-access-review.png",
     "width": 1200,
     "height": 628,
-    "bytes": 557622,
-    "sha256": "7b357301db8fc91992077d1aee2322da6608c475719bd4d6763e7066f04b5d95",
+    "bytes": 550517,
+    "sha256": "aa6ede7502173f12eac3524da0f0682f8ad783e88cff77ff27476c08d2378771",
     "scene": "reception",
     "screenshot": "roles-focus"
   },
@@ -1568,8 +1563,8 @@
     "file": "46-season-readiness.png",
     "width": 1200,
     "height": 628,
-    "bytes": 524601,
-    "sha256": "6959d84b9820cd1b1ccc0c5b1b8a50aa051ea8b2152857afb95dcad09c4b63e2",
+    "bytes": 521366,
+    "sha256": "635f8f3abcc5c70c8874fd3b51d1cc9b74d67e98ad223f59b73ae62a6d402f5e",
     "scene": "court",
     "screenshot": "overview-focus"
   },
@@ -1578,28 +1573,27 @@
     "file": "47-software-questions.png",
     "width": 1200,
     "height": 628,
-    "bytes": 511690,
-    "sha256": "4a185c6be2aabaf7f2935383582f57fff4010abc719f3811ab706acad6722429",
-    "scene": "workspace",
-    "screenshot": "overview-wide"
+    "bytes": 359381,
+    "sha256": "08e16e1888d6951ca4d90a976889cd1fce3e7a491d08c8da3cbf43a5b08f5d35",
+    "scene": "meeting"
   },
   {
     "platform": "x",
     "file": "48-weekly-review.png",
     "width": 1200,
     "height": 628,
-    "bytes": 504724,
-    "sha256": "c051b4f384f790288445fb2fd2b0c2674bcbd5335e9624d399fbea23699f10b8",
-    "scene": "workspace",
-    "screenshot": "overview-focus"
+    "bytes": 655535,
+    "sha256": "b2e3cd0623d10ed4058c5f77cfb0e6073205c8edf16b09c3e5946c55eaeb41bd",
+    "scene": "studio",
+    "screenshot": "branches-focus"
   },
   {
     "platform": "x",
     "file": "49-integration-brief.png",
     "width": 1200,
     "height": 628,
-    "bytes": 495473,
-    "sha256": "cf742dcbbc495475e5e8b82681b25dd985ffe3a8a34d13ad27c763e37cd676ac",
+    "bytes": 489448,
+    "sha256": "4e6294b31767580e16c479e316d7f13201bcff08e73a89f0fdac2ce7f25d3cbb",
     "scene": "workspace",
     "screenshot": "services-focus"
   },
@@ -1608,8 +1602,8 @@
     "file": "50-annual-scope.png",
     "width": 1200,
     "height": 628,
-    "bytes": 644489,
-    "sha256": "c4181f8fe5c2782136d1d7047a356b7642177bd19041569762f865706b5d99d7",
+    "bytes": 639037,
+    "sha256": "6c81330acbc8cbb56c6d9d46cbc264d02c0152a7a5a8dc2b8539bbc9d0a53577",
     "scene": "gym",
     "screenshot": "services-wide"
   },
@@ -1618,17 +1612,17 @@
     "file": "51-member-app.png",
     "width": 1200,
     "height": 628,
-    "bytes": 752963,
-    "sha256": "ed7129eba53bbe6e53ccb0f037512386cff8e1562c736c6ce4160ec1af523875",
-    "scene": "gym"
+    "bytes": 691629,
+    "sha256": "7b99ef9122bd355dc0a63f157483f2a9d5a5850c5320bf2a4e6f64fe35fda2dd",
+    "scene": "training"
   },
   {
     "platform": "x",
     "file": "52-app-renewals.png",
     "width": 1200,
     "height": 628,
-    "bytes": 643668,
-    "sha256": "cf125188b14780a2fdd0e9e9ca43597c23c19d355c72de4683ac8aed1d896819",
+    "bytes": 635584,
+    "sha256": "830094b2b37a7edcdb4d8afadffb5153864ffc14f0121236281d4455b5f4c711",
     "scene": "reception"
   },
   {
@@ -1636,8 +1630,8 @@
     "file": "53-app-court-booking.png",
     "width": 1200,
     "height": 628,
-    "bytes": 584618,
-    "sha256": "ffe4f15a1b4774ec682fde0ff2d19eea16ea06655b6cc1a4830459c275bf046c",
+    "bytes": 579893,
+    "sha256": "1626eb007302670a2584b1f22d53564dfb21e72f814295d8c4ee4d18f8b48c69",
     "scene": "court"
   },
   {
@@ -1645,44 +1639,44 @@
     "file": "54-app-feedback-reminders.png",
     "width": 1200,
     "height": 628,
-    "bytes": 565997,
-    "sha256": "62c9339aab97224a32ae5efeb97665fca40d4c8b253ce668cdf23f9e5f0bba99",
-    "scene": "workspace"
+    "bytes": 524828,
+    "sha256": "b6f839e98c8c745d5501bd2050d30f527e17e49d0921ba3d1a6e1976f0e019ee",
+    "scene": "desk"
   },
   {
     "platform": "x",
     "file": "55-gate-integration.png",
     "width": 1200,
     "height": 628,
-    "bytes": 667642,
-    "sha256": "77f8c09b4cd893f23bf8350ced826fe734376b79506774481a1922ac0dea61f4",
-    "scene": "reception"
+    "bytes": 788167,
+    "sha256": "0ebc4809c9a638e2b6ad7409423f2f219ee550246fc86f355adfadd4e90daa23",
+    "scene": "studio"
   },
   {
     "platform": "x",
     "file": "56-gate-membership-policy.png",
     "width": 1200,
     "height": 628,
-    "bytes": 787009,
-    "sha256": "fd0828ea1ba9f8f9441df8c0ab3c80ad41be2ab1db7f9cab2673f8640c5940d4",
-    "scene": "gym"
+    "bytes": 575365,
+    "sha256": "74d114403ab180ac24ab14ed56f860f3a944bebf54c9a710fca653ed286d612d",
+    "scene": "workspace"
   },
   {
     "platform": "x",
     "file": "57-gate-attendance-log.png",
     "width": 1200,
     "height": 628,
-    "bytes": 582290,
-    "sha256": "11aede69bd7d9810e83829047bb7e195c715e2b5b082a59a5023a2bbb319ef35",
-    "scene": "workspace"
+    "bytes": 419942,
+    "sha256": "21681b9e84cf4044830cff524e306081488383368494ce5ee424c713c758daab",
+    "scene": "meeting"
   },
   {
     "platform": "x",
     "file": "58-gate-before-purchase.png",
     "width": 1200,
     "height": 628,
-    "bytes": 667500,
-    "sha256": "7e1517db2f7eb8698bb44deb58c816de7e33248954b488e6b52578326a18a558",
+    "bytes": 660404,
+    "sha256": "2a5c0b3a8aab4e18c1ec1e8fb6ed69de0669a57c78d7c29dd371f6d68cd8ba39",
     "scene": "reception"
   },
   {
@@ -2252,8 +2246,8 @@
     "file": "01-connected-operations.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 2099179,
-    "sha256": "5e7608f9117d48432aeec71346795e00ad7d15df19b5d0b1311ad87acd65fa1d",
+    "bytes": 2095597,
+    "sha256": "6a7d2b699f328b5de1848f52a4f3127366dbe3bd936fe9b2a432a81524da116d",
     "scene": "gym"
   },
   {
@@ -2261,17 +2255,17 @@
     "file": "02-membership-renewal.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1168504,
-    "sha256": "aa21f44275b2d0c790a464b7c6f26bb1dac5f39a959fce27ee60c92f5d900643",
-    "scene": "reception"
+    "bytes": 1283815,
+    "sha256": "1b4bf6189510e3fca81f9b301dfc87bdbee1a4df697eb407d23ff2fc1196d6e2",
+    "scene": "terminal"
   },
   {
     "platform": "linkedin",
     "file": "03-class-capacity.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1454195,
-    "sha256": "606d1f2dc3b8819349c3ea40f78cb978d7dc33ac8a005e6419b563d7424b915d",
+    "bytes": 1433816,
+    "sha256": "8d2ecc6a03e6cec143eefded748748c4d0f16f5a8b99e2a3230f38e87788a08b",
     "scene": "court"
   },
   {
@@ -2279,17 +2273,17 @@
     "file": "04-shift-reconciliation.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1291501,
-    "sha256": "eceffbf58da58a0405b2f056e8dabcfb8a60885d44894161f4192d18d2a9d58e",
-    "scene": "reception"
+    "bytes": 1336268,
+    "sha256": "373dcc9c80a5cd0e186d7e8f4b91545e01c84a7113360673bab74a408ddec554",
+    "scene": "desk"
   },
   {
     "platform": "linkedin",
     "file": "05-meal-handoff.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1186117,
-    "sha256": "a543178c69b8a4c169f33cade9274b4ed34660dd41cc5e89e3fb147fc42afdb6",
+    "bytes": 1180937,
+    "sha256": "21926f430b2d99c6c0eeefffddc0fcee2c7f2fd837e88f2f585051e85e234fea",
     "scene": "kitchen"
   },
   {
@@ -2297,8 +2291,8 @@
     "file": "06-second-branch.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1305526,
-    "sha256": "1877d8a540a2ba6bd6b552f6d489400681aafeb589cc8807d7dd6d31a7d6f7fd",
+    "bytes": 1307948,
+    "sha256": "3f4a35d11936b88c63b33bed961630012f391bcb5b34577c43e31a75913b9247",
     "scene": "workspace"
   },
   {
@@ -2306,17 +2300,17 @@
     "file": "07-migration-sample.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1147233,
-    "sha256": "99d9e635a5342cc24d158219fa6f40c1fa1f9bd1a2d2ba3eb92a29f9e15da5fc",
-    "scene": "workspace"
+    "bytes": 1588157,
+    "sha256": "430ea466290dcfd914ea24e340ca7d0f2a1e9a154fd5e96f489bd0b7596f3dac",
+    "scene": "studio"
   },
   {
     "platform": "linkedin",
     "file": "08-member-app-scope.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 2051707,
-    "sha256": "4f0cbb0ad68e83c980a7aa95a64d6a841577619b5c9bdcab2e1f41e91d8b9422",
+    "bytes": 2042806,
+    "sha256": "d37a3a2afa8a734d80502128b1cc62d431c861fa512e4595cc43aba8bfe33998",
     "scene": "gym"
   },
   {
@@ -2324,8 +2318,8 @@
     "file": "09-gate-exceptions.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1617713,
-    "sha256": "04570d7087e15f3c5a3e9b3f0e0f346cabddb4e17720fe183c724d124a0c3cdb",
+    "bytes": 1610610,
+    "sha256": "cdeb0d4b2c846ab2df9e28ab90c1187e1e782b97a89e011fa75e01344f41a786",
     "scene": "reception"
   },
   {
@@ -2333,8 +2327,8 @@
     "file": "10-demo-scenario.png",
     "width": 1440,
     "height": 1800,
-    "bytes": 1291459,
-    "sha256": "1d79fefdc07c06b4241a9ed6e9ca67fe7ee474f9959bfedc7fd4ceb6d552fe0e",
+    "bytes": 1279346,
+    "sha256": "29869218d6cd81e96f5dc023a7fede38e9b71f7b45bb69789047b22c53241df7",
     "scene": "inventory"
   }
 ]

@@ -39,12 +39,12 @@ test("five platform-specific sets cover operations, member apps and access integ
     }
     assert.equal(
       posts.filter((post) => post.screenshot).length,
-      platform.id === "linkedin" ? 0 : 40,
+      { snapchat: 40, facebook: 40, instagram: 37, x: 37, linkedin: 0 }[platform.id],
     );
     for (const category of socialCategories) {
       assert.ok(posts.some((post) => post.category === category.id));
     }
-    assert.equal(new Set(posts.map((post) => post.scene)).size, 6);
+    assert.ok(new Set(posts.map((post) => post.scene)).size >= 6);
     for (const post of posts) {
       assert.ok(post.caption.length > 50);
       assert.ok(post.alt.length > 30);
@@ -65,6 +65,28 @@ test("five platform-specific sets cover operations, member apps and access integ
           `X post ${post.id} is too long`,
         );
     }
+  }
+});
+
+test("refreshed posts use an image at most three times in any twenty consecutive posts", () => {
+  const refreshed = socialPosts.filter(
+    (post) => post.platform === "instagram" || post.platform === "x" || post.platform === "linkedin",
+  );
+  assert.equal(refreshed.length, 126);
+  for (const [index, post] of refreshed.entries()) {
+    const window = refreshed.slice(Math.max(0, index - 19), index + 1);
+    const background = socialScenes[post.scene].file;
+    assert.ok(
+      window.filter((entry) => socialScenes[entry.scene].file === background).length <= 3,
+      `${post.platform}/${post.id} repeats background ${background}`,
+    );
+    if (post.screenshot) {
+      assert.ok(
+        window.filter((entry) => entry.screenshot === post.screenshot).length <= 3,
+        `${post.platform}/${post.id} repeats screenshot ${post.screenshot}`,
+      );
+    }
+    if (post.cta === "احجز عرضًا توضيحيًا") assert.equal(post.goal, "طلب عرض");
   }
 });
 

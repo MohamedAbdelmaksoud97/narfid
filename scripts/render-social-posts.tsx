@@ -212,6 +212,7 @@ async function main() {
                 await readFile(
                   join(root, "content/marketing/source", scene.file),
                 ),
+                scene.file.endsWith(".jpg") ? "image/jpeg" : "image/png",
               ),
             ] as const,
         ),
@@ -255,7 +256,15 @@ async function main() {
   }[] = [];
   // Add new campaign posts without regenerating approved images. Existing
   // originals/previews are verified against their recorded fingerprint first.
-  const previous: typeof manifest = process.argv.includes("--missing")
+  const selectedPlatforms = process.argv
+    .find((argument) => argument.startsWith("--platforms="))
+    ?.slice("--platforms=".length)
+    .split(",");
+  if (selectedPlatforms?.some((id) => !socialPlatforms.some((platform) => platform.id === id))) {
+    throw new Error("Unknown platform in --platforms");
+  }
+  const missingOnly = process.argv.includes("--missing");
+  const previous: typeof manifest = missingOnly || selectedPlatforms
     ? JSON.parse(await readFile(join(output, "manifest.json"), "utf8"))
     : [];
   try {
@@ -267,10 +276,15 @@ async function main() {
         height: platform.height,
       });
       for (const post of postsFor(platform.id)) {
-        const existing = previous.find(
-          (entry) =>
-            entry.platform === platform.id && entry.file === postFilename(post),
-        );
+        const preservePlatform = selectedPlatforms && !selectedPlatforms.includes(platform.id);
+        const existing = preservePlatform || missingOnly
+          ? previous.find(
+              (entry) => entry.platform === platform.id && entry.file === postFilename(post),
+            )
+          : undefined;
+        if (preservePlatform && !existing) {
+          throw new Error(`No previous export for ${platform.id}/${post.id}`);
+        }
         if (existing) {
           const path = join(output, platform.id, existing.file);
           const bytes = await readFile(path);
@@ -281,7 +295,9 @@ async function main() {
             throw new Error(
               `Existing image changed: ${platform.id}/${existing.file}`,
             );
-          await writeFile(path.replace(".png", ".txt"), postText(post), "utf8");
+          if (!preservePlatform) {
+            await writeFile(path.replace(".png", ".txt"), postText(post), "utf8");
+          }
           manifest.push(existing);
           continue;
         }

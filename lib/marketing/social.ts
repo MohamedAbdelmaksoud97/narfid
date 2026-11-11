@@ -8,6 +8,7 @@ import {
 import { createExpansionPosts } from "./expansion-posts";
 import { createServicePosts } from "./service-posts";
 import { linkedInPlatform, linkedInPosts } from "./linkedin";
+import { refreshMarketingPosts, stockScenes } from "./refresh-posts";
 
 export type LaunchPlatformId = "snapchat" | "instagram" | "x" | "facebook";
 export type PlatformId = LaunchPlatformId | "linkedin";
@@ -24,6 +25,7 @@ export const socialScenes = {
     file: "workspace-concept.png",
     description: "مساحة إدارة مؤسسة رياضية",
   },
+  ...stockScenes,
 } as const;
 type SocialScene = keyof typeof socialScenes;
 const backgrounds: Record<LaunchPlatformId, SocialScene[]> = {
@@ -685,7 +687,7 @@ const launchPosts: SocialPost[] = launchPlatforms.flatMap((platform) =>
   })),
 );
 
-export const socialPosts: SocialPost[] = [
+export const socialPosts = refreshMarketingPosts([
   ...launchPlatforms.flatMap((platform) => [
     ...launchPosts.filter((post) => post.platform === platform.id),
     ...createProductPosts(platform),
@@ -693,7 +695,7 @@ export const socialPosts: SocialPost[] = [
     ...createServicePosts(platform),
   ]),
   ...linkedInPosts,
-];
+], socialScenes);
 
 export function findPlatform(value: string) {
   return socialPlatforms.find((platform) => platform.id === value);
