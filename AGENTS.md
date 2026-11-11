@@ -52,7 +52,7 @@ the site-wide SEO setup or rebuild article infrastructure.
 
 ## Social media — publishing
 
-Before publishing or verifying a batch of narfid posts on Instagram or X, read
+Before publishing or verifying a batch of narfid posts on Instagram, X, or LinkedIn, read
 `.agents/skills/narfid-social-publishing/SKILL.md` for the local Computer Use
 workflow and the steps to verify and record each live post in the marketing
 board. This skill and its credentials are local to the owner's workspace.
