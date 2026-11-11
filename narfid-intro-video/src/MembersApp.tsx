@@ -1,11 +1,5 @@
 import { Audio } from "@remotion/media";
-import {
-  AbsoluteFill,
-  Series,
-  interpolate,
-  staticFile,
-  useVideoConfig,
-} from "remotion";
+import { AbsoluteFill, Series, staticFile, useVideoConfig } from "remotion";
 import { Closing } from "./members/Closing";
 import { Freeze } from "./members/Freeze";
 import { Opening } from "./members/Opening";
@@ -14,7 +8,7 @@ import { Renew } from "./members/Renew";
 import { Subscribe } from "./members/Subscribe";
 
 export function MembersApp() {
-  const { fps, durationInFrames } = useVideoConfig();
+  const { fps } = useVideoConfig();
   return (
     <AbsoluteFill>
       <Series>
@@ -62,54 +56,50 @@ export function MembersApp() {
         </Series.Sequence>
       </Series>
       <Audio
-        name="موسيقى نرفد"
-        src={staticFile("director-score.mp3")}
-        trimBefore={4 * fps}
-        premountFor={fps}
-        volume={(frame) => {
-          const level = interpolate(
-            frame,
-            [
-              0,
-              fps,
-              16.5 * fps,
-              16.9 * fps,
-              17.25 * fps,
-              17.7 * fps,
-              42.1 * fps,
-              durationInFrames - 1,
-            ],
-            [0, 0.82, 0.82, 0.72, 0.72, 0.82, 0.82, 0],
-            {
-              extrapolateLeft: "clamp",
-              extrapolateRight: "clamp",
-            },
-          );
-          return level;
-        }}
-      />
-      <Audio
-        name="لمسة اختيار الباقة"
-        src={staticFile("members/sound/package-touch.wav")}
-        from={Math.round(8.73 * fps)}
+        name="Brain Dance · music edit"
+        src={staticFile("members/sound/brain-dance-edit.mp3")}
         premountFor={fps}
       />
       <Audio
-        name="ظهور الفاتورة في النظام"
-        src={staticFile("members/sound/invoice-paper.wav")}
-        from={Math.round(16.86 * fps)}
+        name="Opening texture"
+        src={staticFile("members/sound/opening-hit.wav")}
+        from={Math.round((1 / 30) * fps)}
         premountFor={fps}
       />
       <Audio
-        name="لمسة طلب التجديد"
-        src={staticFile("members/sound/renewal-touch.wav")}
-        from={Math.round(25.78 * fps)}
+        name="Package selection"
+        src={staticFile("members/sound/selection-hit.wav")}
+        from={Math.round((260 / 30) * fps)}
         premountFor={fps}
       />
       <Audio
-        name="تحديد مدة التجميد"
-        src={staticFile("members/sound/freeze-touch.wav")}
-        from={Math.round(33.63 * fps)}
+        name="Payment reveal"
+        src={staticFile("members/sound/payment-sweep.wav")}
+        from={Math.round((409 / 30) * fps)}
+        premountFor={fps}
+      />
+      <Audio
+        name="Invoice confirmation"
+        src={staticFile("members/sound/invoice-hit.wav")}
+        from={Math.round((508 / 30) * fps)}
+        premountFor={fps}
+      />
+      <Audio
+        name="Renewal scene"
+        src={staticFile("members/sound/renewal-sweep.wav")}
+        from={Math.round((681 / 30) * fps)}
+        premountFor={fps}
+      />
+      <Audio
+        name="Freeze scene"
+        src={staticFile("members/sound/freeze-sweep.wav")}
+        from={Math.round((927 / 30) * fps)}
+        premountFor={fps}
+      />
+      <Audio
+        name="Closing card"
+        src={staticFile("members/sound/closing-sweep.wav")}
+        from={Math.round((1190 / 30) * fps)}
         premountFor={fps}
       />
     </AbsoluteFill>
