@@ -1,15 +1,15 @@
 # NARFID members app
 
-Arabic product film for club owners and operators. 46 seconds, 1920 × 1080, 30 fps, stereo synthwave and transition effects.
+Arabic product film for club owners and operators. 46 seconds, 1920 × 1080, 30 fps, with an original electric-piano and brushed percussion score.
 
 | Time | Message | Picture and sound |
 | --- | --- | --- |
-| 00–06 | Members can manage their club subscription from their phones | The real membership screen enters over the first drumbeat and a short impact |
-| 06–14 | Choose a package and review it before placing the order | A close-up of the catalog, a soft percussive accent, then the order callout |
-| 14–23 | Pay online or at reception | The beat opens up as the payment choices enter. A short accent marks the invoice |
-| 23–31 | Renew from the membership screen | A fast sweep leads into the renewal preview |
-| 31–40 | Freeze or resume under club policy | The score moves to its final phrase with the cut to the freeze form |
-| 40–46 | See the app in a demo | A short sweep introduces the logo and invitation. The track resolves and its tail fades |
+| 00–06 | Members can manage their club subscription from their phones | Electric piano and bass introduce the membership screen |
+| 06–14 | Choose a package and review it before placing the order | A lightly syncopated percussion groove supports the catalog |
+| 14–23 | Pay online or at reception | The piano phrase returns with the payment options. The drums step back for a short two-note invoice cue |
+| 23–31 | Renew from the membership screen | The groove resumes under the renewal preview |
+| 31–40 | Freeze or resume under club policy | A brief percussion lift leads into the last chord |
+| 40–46 | See the app in a demo | A three-note electric-piano motif resolves over the logo |
 
 ## Preview and export
 
@@ -21,9 +21,9 @@ npm run build
 npx remotion render NarfidMembersApp out/narfid-members-app.mp4 --codec=h264 --crf=18 --concurrency=2
 ```
 
-The delivery master uses a two-pass loudness adjustment targeting −15.5 LUFS and −1.5 dBTP, with the H.264 stream copied through and stereo AAC at 48 kHz. For an audio revision, render the composition with `--codec=wav` and remux that mix with the picture master.
+The delivery master uses a two-pass loudness adjustment targeting −17.5 LUFS and −2 dBTP, with the H.264 stream copied through and stereo AAC at 48 kHz. For an audio revision, render the composition with `--codec=wav` and remux that mix with the picture master.
 
-The active soundtrack export measured −15.55 LUFS integrated and −1.23 dBTP after AAC encoding. It passed full decode, all seven cue placements matched the render, and all 1,380 video packet hashes matched the picture master.
+The electric-piano edition measured −17.52 LUFS integrated and −2.53 dBTP after AAC encoding. It passed full decode. The two spot cues matched their intended frames in the render, and all 1,380 video packets matched the picture master.
 
 ## Capture and audio provenance
 
@@ -32,5 +32,5 @@ The active soundtrack export measured −15.55 LUFS integrated and −1.23 dBTP 
 - Local service checks created both subscription and renewal invoices and confirmed the active, frozen, and resumed subscription states.
 - The owner confirmed both payment options for NARFID. The payment cards are illustrations. The reference app's documented reception flow creates the order and invoice for collection at the club. Online checkout was not executed in the isolated reference environment.
 - The original logo and local Tajawal fonts come from the existing NARFID project.
-- Music is [Brain Dance by Kevin MacLeod](https://incompetech.com/music/royalty-free/index.html?isrc=USUAN2300006), licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The edit adjusts the tempo from 124 to 120 BPM and crossfades from the opening groove to the track's final phrase at 31 seconds. The music credit is in the export metadata. Include the same credit in the description when publishing.
-- The three percussive cues adapt [Transition (hit and whoosh) by xkeril](https://freesound.org/people/xkeril/sounds/736852/), CC0. The four sweeps adapt [Short Whoosh, 13x by Kinoton](https://freesound.org/people/Kinoton/sounds/427979/), CC0. The edits use the public high-quality previews and apply trims, fades, filtering and gain changes.
+- The original 100 BPM arrangement uses a sampled Hohner Pianet T for the keyboard, bass and two spot cues. The instrument samples are from [Hohner Pianet T by tarane468](https://freesound.org/people/tarane468/packs/26137/), CC0.
+- The percussion uses [Acoustic Drum Kick by Sound_Bar_KK](https://freesound.org/people/Sound_Bar_KK/sounds/424662/), [Brushes on Drum Kit Sample Set by Srirachasocks](https://freesound.org/people/Srirachasocks/sounds/843460/) and [Improv Shaker, Hit 6 by quatricise](https://freesound.org/people/quatricise/sounds/734467/), all CC0. The arrangement uses trimmed, filtered and gain-matched clips from the published high-quality previews.

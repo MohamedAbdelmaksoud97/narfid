@@ -56,50 +56,20 @@ export function MembersApp() {
         </Series.Sequence>
       </Series>
       <Audio
-        name="Brain Dance · music edit"
-        src={staticFile("members/sound/brain-dance-edit.mp3")}
-        premountFor={fps}
-      />
-      <Audio
-        name="Opening texture"
-        src={staticFile("members/sound/opening-hit.wav")}
-        from={Math.round((1 / 30) * fps)}
-        premountFor={fps}
-      />
-      <Audio
-        name="Package selection"
-        src={staticFile("members/sound/selection-hit.wav")}
-        from={Math.round((260 / 30) * fps)}
-        premountFor={fps}
-      />
-      <Audio
-        name="Payment reveal"
-        src={staticFile("members/sound/payment-sweep.wav")}
-        from={Math.round((409 / 30) * fps)}
+        name="Pianet and brushed percussion"
+        src={staticFile("members/sound/pianet-score.mp3")}
         premountFor={fps}
       />
       <Audio
         name="Invoice confirmation"
-        src={staticFile("members/sound/invoice-hit.wav")}
-        from={Math.round((508 / 30) * fps)}
+        src={staticFile("members/sound/invoice-note.wav")}
+        from={Math.round(17.03 * fps)}
         premountFor={fps}
       />
       <Audio
-        name="Renewal scene"
-        src={staticFile("members/sound/renewal-sweep.wav")}
-        from={Math.round((681 / 30) * fps)}
-        premountFor={fps}
-      />
-      <Audio
-        name="Freeze scene"
-        src={staticFile("members/sound/freeze-sweep.wav")}
-        from={Math.round((927 / 30) * fps)}
-        premountFor={fps}
-      />
-      <Audio
-        name="Closing card"
-        src={staticFile("members/sound/closing-sweep.wav")}
-        from={Math.round((1190 / 30) * fps)}
+        name="NARFID logo"
+        src={staticFile("members/sound/logo-resolve.wav")}
+        from={Math.round(40.27 * fps)}
         premountFor={fps}
       />
     </AbsoluteFill>
