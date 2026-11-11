@@ -17,7 +17,7 @@ import "./style.css";
 const green = "#3ECF8E";
 const ease = Easing.bezier(0.16, 1, 0.3, 1);
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
-const Logo = ({ large = false }: { large?: boolean }) => (
+export const Logo = ({ large = false }: { large?: boolean }) => (
   <div
     style={{
       position: "relative",
@@ -350,7 +350,7 @@ const Operations = () => {
     </SceneFrame>
   );
 };
-const Phone = () => {
+export const Phone = () => {
   const f = useCurrentFrame();
   const { fps } = useVideoConfig();
   return (

@@ -1,28 +1,34 @@
-# نرفد — كل تفاصيل ناديك، في منظومة واحدة
+# Director cut — من التفاصيل إلى المنظومة
 
-60 seconds · 1920×1080 · 30 fps · Arabic · original instrumental soundtrack.
+60 seconds · 1920 × 1080 · 30 fps · Arabic · stereo instrumental + synchronized sound design.
 
-| Time  | Message                             | Visual                                                        |
-| ----- | ----------------------------------- | ------------------------------------------------------------- |
-| 00–07 | كل تفاصيل ناديك. في منظومة واحدة.   | NARFID identity, connected operational labels                 |
-| 07–14 | رؤية أوضح ليوم ناديك                | Real dashboard, framed as a desktop application               |
-| 14–22 | من أول اشتراك إلى كل تجديد          | Membership screenshot, register / renew / freeze / attendance |
-| 22–30 | حجوزات منظّمة. تجربة أسهل.          | Booking interface and schedule accents                        |
-| 30–38 | مبيعاتك وتحصيلك، في سياق واحد       | Finance screenshot and collection workflow                    |
-| 38–45 | وراء كل خدمة، تشغيل مترابط          | Kitchen and inventory screenshots                             |
-| 45–53 | ناديك معك، أينما كنت                | Conceptual mobile visualization of verified member workflows  |
-| 53–60 | تفرّغ لتطوير ناديك. نرفدك بالتقنية. | Arabic logo, demo invitation, www.narfid.com                  |
+## Direction
 
-## Evidence and asset provenance
+The club's daily activity becomes a connected system. The opening scatters operational words around a central statement, then draws them inward. Scale, pace and light change throughout the film: kinetic type, close product views, a mint booking scene, a financial flow, paired operational screens, an orbital mobile scene, a pullback to the ecosystem, and a calm brand close.
 
-- Backend: `F:/newproject/go front-back/gosystem/README.md` and NARFID backend audit.
-- Web: NARFID frontend audit, reference source in `F:/newproject/go front-back/go`.
-- Mobile: `F:/newproject/go front-back/gomobileapp/README.md` and `lib/main.dart`.
-- Product screenshots: existing NARFID marketing captures from 15 October 2026. Actual reference web UI, fictional API fixtures, browser-only NARFID styling; see `../content/marketing/source/screens/provenance.json`.
-- Mobile cards are a motion-design representation of capabilities, not a captured mobile screen. No customer data, credentials, customer identity, or performance claims appear.
-- Original logo and locally bundled Tajawal fonts are reused from the NARFID site. Brand colors follow `../lib/brand.ts`. The referenced UI-system skill is absent from this checkout; existing brand assets and tokens provide the visual source.
-- Music is synthesized by `scripts/make-soundtrack.mjs`; it contains no licensed samples. No voiceover is included.
+| Time  | Scene               | Picture / sound                                                                  |
+| ----- | ------------------- | -------------------------------------------------------------------------------- |
+| 00–06 | ناديك لا يتوقف      | Floating labels converge; sparse musical introduction and rising air             |
+| 06–11 | خلّ التفاصيل تتصل   | Expanding rings and large type; low impact on the reveal                         |
+| 11–19 | العلاقة تبدأ بعضوية | Tilted subscription UI and changing lifecycle callout; switch / click            |
+| 19–26 | لكل حجز مكانه       | Mint background, staggered booking types, UI tilt; restrained confirmation tone  |
+| 26–34 | كل حركة، لها سياق   | Sale → invoice → collection motion; synchronized clicks                          |
+| 34–41 | تشغيل يتكامل        | Inventory / kitchen mosaic with a connecting node; soft impact                   |
+| 41–50 | النادي معك          | Phone with staggered service satellites; music drops in density                  |
+| 50–55 | منظومة واحدة        | Camera pulls away from the product ecosystem; riser and impact                   |
+| 55–60 | نرفدك بالتقنية      | Logo, demo invitation and URL; original three-note signature and musical resolve |
 
-## Review
+## Audio
 
-Open `npm run dev`, select `NarfidIntro`, and play the timeline. Each scene has an authored timeline entry. Do not use production credentials for video previews.
+23 authored audio items across music, transition and action tracks. Original stereo score at 44.1 kHz, encoded at 256 kbps after loudness processing. Pads, sparse keys, bass and percussion enter in stages; the score makes space at scene boundaries. The full mix was measured at approximately -20.6 LUFS integrated / -4.6 dBTP true peak, with no clipping.
+
+- `scripts/make-director-audio.mjs` generates the score, low impact, air riser and three-note signature. Uses the Remotion-bundled Windows FFmpeg executable; set FFMPEG_PATH on another platform.
+- Intermediate `public/director-score.wav` is ignored; `public/director-score.mp3` is the mastered playback asset.
+- Local whoosh, switch, ding and click files come from the sound-effect URLs supplied in the installed Remotion skill: https://remotion.media/whoosh.wav, https://remotion.media/switch.wav, https://remotion.media/ding.wav, https://remotion.media/mouse-click.wav.
+- No voiceover is included.
+
+## Evidence and provenance
+
+The same verified capabilities, NARFID branding and fictional-data web captures documented in STORYBOARD-ORIGINAL.md are reused. The phone and booking cards illustrate workflows; they are not new live captures. No customer records, credentials, unsupported performance claims or customer identity appear.
+
+`NarfidIntro` opens this cut; `NarfidIntroOriginal` preserves the first version for comparison.
