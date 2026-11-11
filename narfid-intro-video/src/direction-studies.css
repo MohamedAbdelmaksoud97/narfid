@@ -1,0 +1,70 @@
+.direction-base {
+  overflow: hidden;
+  color: #eff7f2;
+  background: radial-gradient(ellipse at center, #192b21, #090d0b 70%);
+  font-family: Tajawal, sans-serif;
+  text-align: center;
+}
+.direction-descriptor {
+  position: absolute;
+  top: 285px;
+  left: 75px;
+  right: 75px;
+  margin: 0;
+  color: #b8d1c2;
+  font-size: 41px;
+  font-weight: 700;
+}
+.direction-ring {
+  position: absolute;
+  left: 140px;
+  top: 560px;
+  width: 800px;
+  height: 800px;
+  border: 3px solid #3ecf8e42;
+  border-radius: 50%;
+  box-shadow:
+    0 0 100px #3ecf8e18,
+    inset 0 0 90px #3ecf8e13;
+}
+.direction-word {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  top: 845px;
+  font-size: 155px;
+  font-weight: 800;
+  color: #eaf5ed;
+}
+.direction-final {
+  top: 800px;
+  font-size: 103px;
+  line-height: 1.35;
+}
+.direction-final span {
+  color: #74e7a9;
+}
+.direction-closing {
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+.direction-closing p {
+  font-size: 52px;
+  font-weight: 700;
+}
+.moment-copy {
+  position: absolute;
+  top: 250px;
+  right: 80px;
+  left: 80px;
+  text-shadow: 0 4px 25px #000;
+}
+.moment-copy p {
+  font-size: 40px;
+  font-weight: 700;
+}
+.moment-copy h1 {
+  font-size: 90px;
+  line-height: 1.2;
+}
