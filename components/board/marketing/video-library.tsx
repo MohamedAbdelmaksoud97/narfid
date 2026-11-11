@@ -177,8 +177,8 @@ export function VideoLibrary() {
         <AlertTitle>نصوص جاهزة للإنتاج لاحقًا</AlertTitle>
         <AlertDescription>
           لكل فكرة افتتاحية وسيناريو بتوقيت المشاهد ونص الشاشة والموسيقى
-          والمؤثرات ووصف منشور. مصدر الصوت المقترح: ElevenLabs عبر Higgsfield؛
-          تُراجع العينة عند أول إنتاج. اكتمال الإنتاج لا يغيّر حالة النشر.
+          والمؤثرات ووصف منشور. تنقل النصوص والحركة الرسالة دون تعليق صوتي.
+          اكتمال الإنتاج لا يغيّر حالة النشر.
         </AlertDescription>
       </Alert>
       <FieldGroup className="video-filters">
