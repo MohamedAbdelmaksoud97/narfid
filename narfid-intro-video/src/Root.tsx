@@ -22,8 +22,22 @@ import { ClubOverviewStudy } from "./ClubOverviewStudy";
 import { ClubStoryStudy } from "./ClubStoryStudy";
 import { BrandMotionStudy, ClubMomentStudy } from "./DirectionStudies";
 import { OrbitFilm, OrbitStudy } from "./OrbitStudy";
+import { BrandMotionFilm } from "./brand-motion/Film";
+import { BrandOpening } from "./brand-motion/Opening";
+import { BrandDetails } from "./brand-motion/Details";
+import { BrandTogether } from "./brand-motion/Together";
+import { BrandPromise } from "./brand-motion/Promise";
+import { BrandClosing } from "./brand-motion/Closing";
 export const RemotionRoot = () => (
   <>
+    <Composition id="NarfidBrandMotion" component={BrandMotionFilm} width={1080} height={1920} fps={30} durationInFrames={900} />
+    <Folder name="Brand-Motion-Scenes">
+      <Composition id="BrandOpening" component={BrandOpening} width={1080} height={1920} fps={30} durationInFrames={150} />
+      <Composition id="BrandDetails" component={BrandDetails} width={1080} height={1920} fps={30} durationInFrames={225} />
+      <Composition id="BrandTogether" component={BrandTogether} width={1080} height={1920} fps={30} durationInFrames={195} />
+      <Composition id="BrandPromise" component={BrandPromise} width={1080} height={1920} fps={30} durationInFrames={180} />
+      <Composition id="BrandClosing" component={BrandClosing} width={1080} height={1920} fps={30} durationInFrames={150} />
+    </Folder>
     <Composition id="OrbitFilm" component={OrbitFilm} width={1080} height={1920} fps={30} durationInFrames={450} />
     <Composition id="OrbitStudy" component={OrbitStudy} width={1080} height={1920} fps={30} durationInFrames={390} />
     <Composition id="BrandMotionStudy" component={BrandMotionStudy} width={1080} height={1920} fps={30} durationInFrames={360} />
