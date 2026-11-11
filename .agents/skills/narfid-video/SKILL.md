@@ -48,6 +48,20 @@ Use this name when the owner asks for **«رحلة داخل النظام»** or 
 - **Sound:** Synchronize restrained effects with actions such as focusing, typing and revealing a result. Use the shared three-second instrumental signature at the end. Follow the owner's standing no-voiceover preference.
 - **Context:** Identify narfid as a system for managing clubs and sports facilities, and use fictional data in system views.
 
+### هوية نرفد المتحركة
+
+Use **«هوية نرفد المتحركة»** when the owner requests the identity-film direction. The owner liked the `BrandMotionStudy` sample on 11 November 2026. Use its editable composition in `narfid-intro-video/src/DirectionStudies.tsx` as a reference, and develop the message around the requested subject.
+
+- Introduce a focused brand or product message through animated Arabic typography and brand elements, with clear visual progression and readable pacing.
+- Keep the dark Narfid palette and synchronized effects, and end with the shared instrumental signature.
+
+### حكاية من النادي
+
+Use **«حكاية من النادي»** when the owner requests the use-story direction. The owner liked the `ClubMomentStudy` sample on 11 November 2026. Use its editable composition in `narfid-intro-video/src/DirectionStudies.tsx` as a reference.
+
+- Begin with a specific situation involving club staff or a member. Show how the relevant Narfid workflow leads to a result the viewer can act on.
+- Use appropriate Saudi-audience imagery and disclose generated or illustrative scenes in provenance. Do not represent fictional people as customers. The sample combines an AI-generated still with an animated camera move and the fictional reservation sequence.
+
 Add other named styles under this section as the owner approves them. Apply the shared brand, dark mood, capture and delivery requirements to each style.
 
 ## Design the sound
