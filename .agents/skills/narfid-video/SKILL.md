@@ -29,12 +29,12 @@ Read [local-capture.md](references/local-capture.md) **before starting reference
 Define the video's goal in one sentence before storyboarding. For a short product demo, establish a concrete situation in the opening, show the action that addresses it, and end on a visible result or a decision the viewer can use. Link each scene to a message, visual action, sound cue and verified capability.
 
 - **Follow the first intro's product-led direction.** Build around the sports-management system: purposeful product close-ups, connected club workflows, clear Arabic typography, depth and synchronized sound. Adapt the treatment to each topic and delivery format; the later NV-001 card treatment is not the owner's preferred benchmark. Reference footage remains subject to the capture and provenance rules above.
-- **Keep a dark mood throughout every video.** Use charcoal/near-black backgrounds, dark surfaces and restrained brand-green accents in every scene, transition and end card. Use dark-mode product captures and dark information cards, with readable light text. A dark outer frame around a large white card does not meet this direction. Earlier reference scenes with white or full mint backgrounds do not override this newer preference.
+- **Choose the visual mood for each film.** Light, dark and mixed backgrounds are available. Select colors, lighting and product-screen treatment to suit the idea and maintain readable contrast and Narfid identity.
 - **Identify the category in every video.** Show a readable on-screen descriptor such as **«نرفد — نظام لإدارة الأندية والمنشآت الرياضية»** in the opening and closing. Keep the body grounded in recognizable sports-management workflows, such as memberships, class/court bookings, collection or branches, using verified system views when useful. The logo or a generic shift/administration scenario alone is insufficient to identify the product. Preserve the practical value of educational content while making its sports-institution context explicit.
 - Use visual progression: kinetic Arabic phrases, purposeful close-ups, workflow connections, depth, changes in scale or light, and a clear final invitation. Avoid one repeated screenshot-and-text layout. Motion must clarify the message and leave time to read.
 - For short product demos, use **«رحلة داخل النظام»** by default. Follow its description in [Video styles](#video-styles) and adapt the workflow to the brief.
 - Showcase actual behavior and coherent local screenshots. Illustrative mobile cards can complement them; document their provenance instead of claiming they are app captures. Never invent features, customer results, live counts, integrations or testimonials.
-- Keep Arabic words joined, set RTL direction and bundle Arabic fonts. Use generous safe areas, readable type and deliberate contrast. Animate with frame-based Remotion APIs; keep scenes and meaningful cues separately authored/editable.
+- Use **Tajawal (تجول)** for video text. Bundle the required weights locally; the existing Remotion project defines them in `narfid-intro-video/src/fonts.css`. Keep Arabic words joined and set RTL direction. Use generous safe areas, readable type and deliberate contrast. Animate with frame-based Remotion APIs; keep scenes and meaningful cues separately authored/editable.
 - Open Studio as soon as the project can run, before editing the composition. Keep it running for steering. Review transitions as motion, not only isolated stills.
 
 ## Video styles
@@ -44,7 +44,7 @@ Define the video's goal in one sentence before storyboarding. For a short produc
 Use this name when the owner asks for **«رحلة داخل النظام»** or **Journey Inside the System**. The owner approved the [reservation handoff direction](../../../narfid-intro-video/NV001.md#reservation-handoff-direction-test) as its creative reference. The finished `NarfidReservationFilm` composition builds on that reference.
 
 - **Goal and story:** Start with one practical question from a sports club or facility, follow a specific action in the system, and finish with the result and a useful decision.
-- **Picture and motion:** Use dark product screens, short readable Arabic text and deliberate camera movement. Keep the relevant field, record or status visually connected as the framing moves through the workflow.
+- **Picture and motion:** Use product screens, short readable Arabic text and deliberate camera movement. Keep the relevant field, record or status visually connected as the framing moves through the workflow.
 - **Sound:** Synchronize restrained effects with actions such as focusing, typing and revealing a result. Follow the owner's standing no-voiceover preference.
 - **Context:** Identify narfid as a system for managing clubs and sports facilities, and use fictional data in system views.
 
@@ -53,7 +53,7 @@ Use this name when the owner asks for **«رحلة داخل النظام»** or 
 Use **«هوية نرفد المتحركة»** when the owner requests the identity-film direction. The owner liked the `BrandMotionStudy` sample on 11 November 2026. Use its editable composition in `narfid-intro-video/src/DirectionStudies.tsx` as a reference, and develop the message around the requested subject.
 
 - Introduce a focused brand or product message through animated Arabic typography and brand elements, with clear visual progression and readable pacing.
-- Keep the dark Narfid palette and synchronized effects, with an ending suited to the film.
+- Use Narfid identity and synchronized effects, with an ending suited to the film.
 
 ### حكاية من النادي
 
@@ -62,7 +62,7 @@ Use **«حكاية من النادي»** when the owner requests the use-story d
 - Begin with a specific situation involving club staff or a member. Show how the relevant Narfid workflow leads to a result the viewer can act on.
 - Use appropriate Saudi-audience imagery and disclose generated or illustrative scenes in provenance. Do not represent fictional people as customers. The sample combines an AI-generated still with an animated camera move and the fictional reservation sequence.
 
-Add other named styles under this section as the owner approves them. Apply the shared brand, dark mood, capture and delivery requirements to each style.
+Add other named styles under this section as the owner approves them. Apply the shared brand, Tajawal typography, capture and delivery requirements to each style.
 
 ## Design the sound
 
@@ -76,7 +76,7 @@ Listen to the actual mix when possible and always check it numerically. If liste
 
 ## Export and finish
 
-1. Run video lint/type checks and bundle/build. Review complete Studio playback and representative scenes at delivery size against the directing requirements above, including dark surfaces throughout and a readable sports-management descriptor. Fix missing assets/fonts, RTL errors, clipping, timeline overlaps, bad transitions and audio problems. Keep standalone video dependencies excluded from website checks where needed.
+1. Run video lint/type checks and bundle/build. Review complete Studio playback and representative scenes at delivery size against the directing requirements above, including Tajawal typography, readable contrast and a readable sports-management descriptor. Fix missing assets/fonts, RTL errors, clipping, timeline overlaps, bad transitions and audio problems. Keep standalone video dependencies excluded from website checks where needed.
 2. Load the Remotion render skill. Export the **requested cut** as H.264 MP4 with AAC stereo audio when audio is present, 1080p / 30 fps by default. From the existing video folder:
 
    ```powershell
