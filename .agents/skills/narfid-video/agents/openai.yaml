@@ -1,0 +1,4 @@
+interface:
+  display_name: "NARFID Video"
+  short_description: "Create polished NARFID videos and verified MP4 exports"
+  default_prompt: "Use $narfid-video to create a professional Arabic NARFID video with isolated local system captures and deliver a verified MP4."

@@ -57,6 +57,17 @@ Before publishing or verifying a batch of narfid posts on Instagram, X, or Linke
 workflow and the steps to verify and record each live post in the marketing
 board. This skill and its credentials are local to the owner's workspace.
 
+## Video — Remotion and MP4 delivery
+
+Before creating, revising or exporting a narfid video, read and follow
+`.agents/skills/narfid-video/SKILL.md`. Use the Remotion plugin and the reference
+system at `F:\newproject\go front-back`; capture it only with realistic fictional
+data in an isolated local database environment. Never connect video work to its
+remote production Supabase, including for login or read-only inspection.
+Read optional capture credentials only from `.private/video-reference-accounts.json`.
+A video request includes rendering and verifying the finished MP4 by default;
+a Studio preview alone is not delivery unless the user explicitly requests it.
+
 ## UI components
 
 Before adding, editing, styling, or composing UI components,
