@@ -1,0 +1,127 @@
+{
+  "checkedAt": "2026-11-12T11:44:45.699Z",
+  "sourceCommit": "d51ba3b",
+  "githubState": "success",
+  "deployment": "https://vercel.com/mohamed-bbc2/narfid/9GotJo6QhGUNwid82joer5NqS7KX",
+  "results": [
+    {
+      "url": "https://www.narfid.com/solutions/memberships",
+      "status": 200,
+      "canonical": "https://www.narfid.com/solutions/memberships",
+      "robots": "index, follow",
+      "missing": [],
+      "targets": [
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/bookings",
+      "status": 200,
+      "canonical": "https://www.narfid.com/solutions/bookings",
+      "robots": "index, follow",
+      "missing": [],
+      "targets": [
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/branches",
+      "status": 200,
+      "canonical": "https://www.narfid.com/solutions/branches",
+      "robots": "index, follow",
+      "missing": [],
+      "targets": [
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer"
+      ]
+    }
+  ],
+  "linkOutcomes": [
+    {
+      "source": "https://www.narfid.com/solutions/memberships",
+      "target": "https://www.narfid.com/articles/annual-club-software-cost",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/memberships",
+      "target": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/memberships",
+      "target": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 3
+    },
+    {
+      "source": "https://www.narfid.com/solutions/bookings",
+      "target": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/bookings",
+      "target": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/bookings",
+      "target": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/branches",
+      "target": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/branches",
+      "target": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "verifiedDepth": 2,
+      "verifiedInboundUrls": 3
+    }
+  ],
+  "targetStatus": [
+    {
+      "url": "https://www.narfid.com/articles/annual-club-software-cost",
+      "status": 200
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "status": 200
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "status": 200
+    },
+    {
+      "url": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "status": 200
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "status": 200
+    },
+    {
+      "url": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "status": 200
+    },
+    {
+      "url": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "status": 200
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "status": 200
+    }
+  ]
+}
