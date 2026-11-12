@@ -1,5 +1,9 @@
 # تكامل بوابات الدخول — التصميم الصوتي
 
+## Music-only cut
+
+The soundtrack uses the existing 132 BPM score at 0.042 gain. All nine sound effects were removed from the timeline.
+
 ## Synchronization cue revision
 
 A 150 ms confirmation at 13.4 seconds matches the end of the connection animation. The existing score and remaining effects keep their levels and timing.

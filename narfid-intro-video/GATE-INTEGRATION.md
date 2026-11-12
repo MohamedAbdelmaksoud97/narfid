@@ -1,6 +1,6 @@
 # نرفد — اشتراكه انتهى… وش يصير عند البوابة؟
 
-45 seconds · 1920 × 1080 · 30 fps · Arabic RTL · locally bundled Tajawal · timed sound effects with very quiet background music.
+45 seconds · 1920 × 1080 · 30 fps · Arabic RTL · locally bundled Tajawal · very quiet background music.
 
 Purpose: show a club manager the connection between subscription eligibility, a compatible gate's synchronized controller permissions, and the recorded access event.
 
@@ -10,12 +10,12 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 
 | Time | Picture | Message / sound |
 | --- | --- | --- |
-| 0–5 | Fictional member approaches a closed gate; restrained camera move on generated scene. Original Arabic logo and sports-management descriptor. | «اشتراكه انتهى… وش يصير عند البوابة؟» A short soft tap as the title appears. |
-| 5–11 | Real local membership UI, focused on the active facility-access subscription, dates and usage. | «قرار الدخول يبدأ من حالة الاشتراك.» Soft cue as the membership details appear. |
-| 11–18 | Real registered controller panel connects to a motion-design gate representation. | «اربط صلاحية الدخول بسياسة ناديك.» A soft, short confirmation as the connection line reaches its end. |
-| 18–26 | Two explicitly fictional member cases: eligible, then expired. Gate representation opens, then remains closed. | Eligibility follows the synchronized policy. A latch and rising confirmation mark the gate opening. A low pulse marks the refusal. |
-| 26–34 | Real local event log, showing the same two fictional members and the persisted controller/system results. | «ولفريقك… سجل يوضح ما حدث.» Short click as the log details appear. |
-| 34–40 | Gate and three staged steps. | A short tap marks each step: check compatibility, define policy, test the integration. |
+| 0–5 | Fictional member approaches a closed gate; restrained camera move on generated scene. Original Arabic logo and sports-management descriptor. | «اشتراكه انتهى… وش يصير عند البوابة؟» |
+| 5–11 | Real local membership UI, focused on the active facility-access subscription, dates and usage. | «قرار الدخول يبدأ من حالة الاشتراك.» |
+| 11–18 | Real registered controller panel connects to a motion-design gate representation. | «اربط صلاحية الدخول بسياسة ناديك.» |
+| 18–26 | Two explicitly fictional member cases: eligible, then expired. Gate representation opens, then remains closed. | Eligibility follows the synchronized policy. |
+| 26–34 | Real local event log, showing the same two fictional members and the persisted controller/system results. | «ولفريقك… سجل يوضح ما حدث.» |
+| 34–40 | Gate and three staged steps. | Check compatibility, define policy and test the integration. |
 | 40–45 | Established Arabic Narfid end card, sports-management descriptor, official domain and scope note. | «شاركنا موديل جهازك لتقييم التوافق.» The background music fades out. |
 
 ## Evidence and media provenance
@@ -35,7 +35,7 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 
 The integration is offered after compatibility assessment, with separately agreed scope and cost. Existing evidence concerns the ZKTeco ACP-260 implementation; this film does not promise all-vendor support, immediate synchronization or inclusion in standard subscriptions. It distinguishes the controller's decision from the system's attendance result.
 
-Remotion plays nine short, locally synthesized effects. The 132 BPM score plays at 0.042 gain (about 5 dB quieter than the previous mix). The cue timing and music level are editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the audio sources and earlier cuts.
+The soundtrack consists of the 132 BPM score at 0.042 gain. The music level is editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the audio sources and earlier cuts.
 
 Direct listening is unavailable in this agent session and was disclosed to the owner. **audioListened is false**; numerical checks do not replace listening, and no waiver is inferred.
 
@@ -44,8 +44,7 @@ Direct listening is unavailable in this agent session and was disclosed to the o
 ```powershell
 npm run lint
 npm run build
-node scripts/make-gate-interface-effects.mjs
-node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-sync-fix --picture out/narfid-gate-integration.mp4 --min-lufs -42
+node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-music-only --picture out/narfid-gate-integration.mp4 --min-lufs -52
 ```
 
 QA images, the rendered MP4, compiled bundles, test sessions and connection logs stay in ignored output/private folders. Editable source, approved fictional imagery, original sounds and this documentation belong in Git.
