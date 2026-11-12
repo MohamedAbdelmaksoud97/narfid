@@ -1,4 +1,11 @@
 import { Composition, Folder } from "remotion";
+import { ProductLaunchFilm } from "./product-launch/Film";
+import { ProductOpening } from "./product-launch/Opening";
+import { ProductMembership } from "./product-launch/Membership";
+import { ProductHandoff } from "./product-launch/Handoff";
+import { ProductKitchen } from "./product-launch/Kitchen";
+import { ProductTogether } from "./product-launch/Together";
+import { ProductClosing } from "./product-launch/Closing";
 import { NarfidIntro } from "./Composition";
 import { DirectorCut } from "./DirectorCut";
 import { MembersApp } from "./MembersApp";
@@ -42,6 +49,64 @@ import { GateAssessment } from "./gates/Assessment";
 import { GateClosing } from "./gates/Closing";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NarfidProductLaunch"
+      component={ProductLaunchFilm}
+      width={1920}
+      height={1080}
+      fps={30}
+      durationInFrames={1440}
+    />
+    <Folder name="Product-Launch-Scenes">
+      <Composition
+        id="ProductOpening"
+        component={ProductOpening}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={180}
+      />
+      <Composition
+        id="ProductMembership"
+        component={ProductMembership}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={282}
+      />
+      <Composition
+        id="ProductHandoff"
+        component={ProductHandoff}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={192}
+      />
+      <Composition
+        id="ProductKitchen"
+        component={ProductKitchen}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={492}
+      />
+      <Composition
+        id="ProductTogether"
+        component={ProductTogether}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={192}
+      />
+      <Composition
+        id="ProductClosing"
+        component={ProductClosing}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={162}
+      />
+    </Folder>
     <Composition
       id="NarfidGateIntegration"
       component={GateFilm}
