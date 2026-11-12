@@ -4,7 +4,7 @@ import { staticFile, useVideoConfig } from "remotion";
 const effects = [
   { name: "لمسة ظهور العنوان", file: "title", seconds: 0.27 },
   { name: "ظهور بيانات العضوية", file: "membership", seconds: 6.2 },
-  { name: "اكتمال المزامنة", file: "sync", seconds: 13 },
+  { name: "اكتمال المزامنة", file: "sync-complete", seconds: 13.4 },
   { name: "السماح بالدخول", file: "allow", seconds: 18.8 },
   { name: "رفض الدخول", file: "deny", seconds: 22.13 },
   { name: "ظهور تفاصيل السجل", file: "log", seconds: 26.53 },

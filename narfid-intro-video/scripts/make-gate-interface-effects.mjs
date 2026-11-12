@@ -138,6 +138,11 @@ for (const [step, frequency, peak] of [
   ]);
 }
 
+// A single soft confirmation for the frame where the connection line finishes.
+writeEffect("sync-complete", 0.15, -18, [
+  { duration: 0.15, voice: tone(392, 38), attack: 0.009 },
+]);
+
 writeFileSync(
   new URL("provenance.json", output),
   JSON.stringify(

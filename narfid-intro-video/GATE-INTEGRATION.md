@@ -12,7 +12,7 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 | --- | --- | --- |
 | 0–5 | Fictional member approaches a closed gate; restrained camera move on generated scene. Original Arabic logo and sports-management descriptor. | «اشتراكه انتهى… وش يصير عند البوابة؟» A short soft tap as the title appears. |
 | 5–11 | Real local membership UI, focused on the active facility-access subscription, dates and usage. | «قرار الدخول يبدأ من حالة الاشتراك.» Soft cue as the membership details appear. |
-| 11–18 | Real registered controller panel connects to a motion-design gate representation. | «اربط صلاحية الدخول بسياسة ناديك.» Short sweep and note as the connection completes. |
+| 11–18 | Real registered controller panel connects to a motion-design gate representation. | «اربط صلاحية الدخول بسياسة ناديك.» A soft, short confirmation as the connection line reaches its end. |
 | 18–26 | Two explicitly fictional member cases: eligible, then expired. Gate representation opens, then remains closed. | Eligibility follows the synchronized policy. A latch and rising confirmation mark the gate opening. A low pulse marks the refusal. |
 | 26–34 | Real local event log, showing the same two fictional members and the persisted controller/system results. | «ولفريقك… سجل يوضح ما حدث.» Short click as the log details appear. |
 | 34–40 | Gate and three staged steps. | A short tap marks each step: check compatibility, define policy, test the integration. |
@@ -45,7 +45,7 @@ Direct listening is unavailable in this agent session and was disclosed to the o
 npm run lint
 npm run build
 node scripts/make-gate-interface-effects.mjs
-node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-refined-effects --picture out/narfid-gate-integration.mp4 --min-lufs -42
+node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-sync-fix --picture out/narfid-gate-integration.mp4 --min-lufs -42
 ```
 
 QA images, the rendered MP4, compiled bundles, test sessions and connection logs stay in ignored output/private folders. Editable source, approved fictional imagery, original sounds and this documentation belong in Git.

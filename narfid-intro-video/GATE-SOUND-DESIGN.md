@@ -1,5 +1,9 @@
 # تكامل بوابات الدخول — التصميم الصوتي
 
+## Synchronization cue revision
+
+A 150 ms confirmation at 13.4 seconds matches the end of the connection animation. The existing score and remaining effects keep their levels and timing.
+
 ## Refined interface effects
 
 The 132 BPM background score plays at 0.042 gain, about 5 dB below the preceding cut. Nine new locally synthesized effects mark the title, membership details, synchronization, opening, refusal, access log, and three assessment steps. The gate opening combines a latch with a rising confirmation. The refusal uses a short descending pulse. Each effect lasts under 0.65 seconds.
