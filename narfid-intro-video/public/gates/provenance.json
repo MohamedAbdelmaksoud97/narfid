@@ -40,7 +40,7 @@
   "persistedResults": ["SYSTEM_ACCEPTED", "DEVICE_DENIED"],
   "identityTreatment": "Original Arabic Narfid logo and local Tajawal fonts in disposable UI; customer brand text and legacy display prefixes replaced only in that copy",
   "limitations": "Device messages are simulated through the actual local gateway. SVG gate motion is explanatory, not a hardware recording or remote door-opening capability. No biometric templates are collected. Compatibility and scope need assessment.",
-  "audioProvenance": "quiet-v3/provenance.json",
+  "audioProvenance": "studio-v4/provenance.json",
   "previousMusicProvenance": "sound-design-v2/provenance.json",
   "originalEffectsProvenance": "audio-provenance.json"
 }

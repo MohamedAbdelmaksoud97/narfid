@@ -1,0 +1,137 @@
+{
+  "version": 4,
+  "generator": "scripts/make-gate-studio-audio.mjs",
+  "voice": "New original low-register felt-key composition and fresh tactile cues",
+  "durationSeconds": 45,
+  "musicNotes": [
+    [
+      0.8,
+      57
+    ],
+    [
+      2.4,
+      60
+    ],
+    [
+      4,
+      64
+    ],
+    [
+      5.8,
+      62
+    ],
+    [
+      7.4,
+      65
+    ],
+    [
+      9,
+      60
+    ],
+    [
+      10.6,
+      57
+    ],
+    [
+      12,
+      59
+    ],
+    [
+      14.3,
+      62
+    ],
+    [
+      15.9,
+      65
+    ],
+    [
+      17.5,
+      64
+    ],
+    [
+      19.8,
+      60
+    ],
+    [
+      21.4,
+      57
+    ],
+    [
+      23.7,
+      59
+    ],
+    [
+      25.3,
+      62
+    ],
+    [
+      26.9,
+      64
+    ],
+    [
+      28.5,
+      67
+    ],
+    [
+      30.1,
+      65
+    ],
+    [
+      31.7,
+      62
+    ],
+    [
+      33.3,
+      60
+    ],
+    [
+      34.9,
+      59
+    ],
+    [
+      36.5,
+      62
+    ],
+    [
+      38.1,
+      65
+    ],
+    [
+      40.2,
+      64
+    ],
+    [
+      41.8,
+      60
+    ],
+    [
+      43.4,
+      57
+    ]
+  ],
+  "musicalVoiceMaximumConcurrency": 1,
+  "noteDurationSeconds": 0.72,
+  "effectsAtSeconds": [
+    13.3,
+    18.8,
+    22.6
+  ],
+  "effectDurationSeconds": 0.12,
+  "musicAndEffectOverlap": false,
+  "effectsPeakDbfs": -25,
+  "musicMaster": "-25 LUFS target / -13 dBTP ceiling",
+  "percussion": false,
+  "pads": false,
+  "bassDrone": false,
+  "motor": false,
+  "footsteps": false,
+  "ambience": false,
+  "reverb": false,
+  "reference": "https://x.com/claudeai/status/2120206365759094857",
+  "referenceUsedAs": "User's requested minimal product-film direction; no reference samples or melody copied",
+  "referenceAccess": "Post and video controls inspected; audio obtained privately for numerical comparison only. Direct listening unavailable.",
+  "externalMusicGeneration": "Attempt not submitted: insufficient credits. No external generated music used.",
+  "externalSamples": false,
+  "rights": "Original project synthesis; no third-party media embedded",
+  "audioListened": false
+}

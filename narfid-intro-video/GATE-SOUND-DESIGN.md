@@ -1,4 +1,14 @@
-# تكامل بوابات الدخول — المراجعة الصوتية الهادئة
+# تكامل بوابات الدخول — التصميم الصوتي
+
+## New original sound — version 4
+
+The owner requested a brand-new sound after the quiet revision. The current soundtrack has a newly composed lower-register melody, a softer key attack and newly synthesized tactile cues, with one musical voice and separate silent windows around each cue. It is original procedural synthesis, without third-party samples, voice or external generation. Source: `scripts/make-gate-studio-audio.mjs`; assets and provenance: `public/gates/studio-v4`; timeline: `src/gates/Soundtrack.tsx`. The quiet-v3 cut documented below remains available as an earlier revision.
+
+Reproduce with `node scripts/make-gate-studio-audio.mjs`, then `node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-new-sound`. The latter renders the full composition by default. For this audio revision, the original verified picture was copied using `--picture out/narfid-gate-integration.mp4`. Deliverables: `out/narfid-gate-integration-new-sound.mp4` and the matching `.mp3`.
+
+The MP4 is 45 seconds, 1920 × 1080 / 30 fps, H.264 with AAC stereo, 6,950,385 bytes. Full audio/video decode, typecheck/lint and bundle passed; no browser render errors. Measured integrated loudness −27.18 LUFS and true peak −17.01 dBTP. Audio listening is unavailable and **audioListened is false**; the owner explicitly requested “ACT AS A SDENIOR SOUND DESIGNER AND GENERATE BRAND NEW SOUND FOR THE VIDEO” after this limitation was disclosed. Technical measurements are not a listening review. SHA-256: `9b8c84e58e0bae01377b4498bb8fb92b7b41c8cef91e084447920478e6b745ea`.
+
+## Previous quiet-v3 revision
 
 Current composition: `NarfidGateIntegration`. 45 seconds, 1920 × 1080, 30 fps, stereo, no speech. This revision follows the owner's report of overlapping, noisy audio and the supplied reference: https://x.com/claudeai/status/2120206365759094857.
 
