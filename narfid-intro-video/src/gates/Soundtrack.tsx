@@ -53,10 +53,10 @@ export const GateSoundtrack = () => {
   return (
     <>
       <Audio
-        name="موسيقى خلفية خافتة"
-        src={staticFile("gates/ambient-v5/music.mp3")}
+        name="إيقاع خلفية خافت · 132 BPM"
+        src={staticFile("gates/rhythm-v6/score.mp3")}
         durationInFrames={45 * fps}
-        volume={0.2}
+        volume={0.15}
         premountFor={fps}
       />
       {effects.map(({ name, file, seconds, gain }) => (
