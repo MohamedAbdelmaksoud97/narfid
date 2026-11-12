@@ -1,6 +1,6 @@
 # نرفد — اشتراكه انتهى… وش يصير عند البوابة؟
 
-45 seconds · 1920 × 1080 · 30 fps · Arabic RTL · locally bundled Tajawal · original 96 BPM music and stereo effects · no voiceover.
+45 seconds · 1920 × 1080 · 30 fps · Arabic RTL · locally bundled Tajawal · quiet single-voice music and three tactile cues · no voiceover.
 
 Purpose: show a club manager the connection between subscription eligibility, a compatible gate's synchronized controller permissions, and the recorded access event.
 
@@ -35,7 +35,7 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 
 The integration is offered after compatibility assessment, with separately agreed scope and cost. Existing evidence concerns the ZKTeco ACP-260 implementation; this film does not promise all-vendor support, immediate synchronization or inclusion in standard subscriptions. It distinguishes the controller's decision from the system's attendance result.
 
-The current soundtrack uses `scripts/make-gate-sound-design.mjs`: an original 96 BPM score and twelve original synthesized stereo effects, without samples, speech or external services. Each timed instance is separately editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the musical direction, timing and current delivery checks. Current audio provenance is `public/gates/sound-design-v2/provenance.json`; the original effects-only cut and its assets remain available.
+The current soundtrack uses `scripts/make-gate-quiet-audio.mjs`: one original musical voice, explicit silence between notes and three isolated 120 ms tactile cues. Percussion, pads, bass drone, ambience, footsteps, motor effects and the separate signature were removed following the owner's crowding feedback. Each timed instance is separately editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for current direction, timing and checks. Current provenance is `public/gates/quiet-v3/provenance.json`; previous cuts and their assets remain available.
 
 Direct listening is unavailable in this agent session and was disclosed to the owner. **audioListened is false**; numerical checks do not replace listening, and no waiver is inferred.
 
@@ -44,8 +44,8 @@ Direct listening is unavailable in this agent session and was disclosed to the o
 ```powershell
 npm run lint
 npm run build
-node scripts/make-gate-sound-design.mjs
-node scripts/render-gate-sound-design.mjs
+node scripts/make-gate-quiet-audio.mjs
+node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-quiet
 ```
 
 QA images, the rendered MP4, compiled bundles, test sessions and connection logs stay in ignored output/private folders. Editable source, approved fictional imagery, original sounds and this documentation belong in Git.

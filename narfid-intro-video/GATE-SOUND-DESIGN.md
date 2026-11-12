@@ -1,59 +1,41 @@
-# تكامل بوابات الدخول — الموسيقى والتصميم الصوتي
+# تكامل بوابات الدخول — المراجعة الصوتية الهادئة
 
-Current composition: `NarfidGateIntegration`. 45 seconds, 1920 × 1080, 30 fps, stereo, no speech. This implements the owner's approved preliminary sound treatment without changing the film's picture or editorial timing.
+Current composition: `NarfidGateIntegration`. 45 seconds, 1920 × 1080, 30 fps, stereo, no speech. This revision follows the owner's report of overlapping, noisy audio and the supplied reference: https://x.com/claudeai/status/2120206365759094857.
 
-## Musical direction
+## Direction and changes
 
-Original electronic underscore at **96 BPM**. A warm stereo pad, soft harmonic plucks and a centered bass pulse establish the opening. Restrained kick, dry rim and filtered shaker arrive with the synchronization sequence. The rejected-access case has a short rhythmic pause; the log sequence is quieter. The compatibility steps lift the phrase, then percussion stops at 40 seconds and a separate three-note F–C–F instrumental signature settles under the Narfid end card.
+The previous 19 timed audio instances combined pads, bass, drums, shaker, room tone, footsteps, motor Foley, musical notifications and a closing signature. The current timeline has **four audio instances**: one sparse musical track and three short tactile cues. The percussion, pads, bass drone, footsteps, reception atmosphere, motor effects, movement effects, repetitive confirmations and independent logo cue were removed.
 
-Harmony moves through D minor/add9, Bb major9, F major9 and C add9, resolving in F. The score ducks approximately **4 dB** around the eleven key focus, synchronization, decision, review and closing cues; the ducks are authored in the generated music source with smooth attacks and releases. The independent sound effects remain editable in the Remotion timeline.
+`scripts/make-gate-quiet-audio.mjs` synthesizes one original rounded felt-key voice. Its 26 notes last at most 720 ms each, with silence between every note. There is no reverb, delay or simultaneous second note. The closing uses the same voice instead of another layer. Music plays at 0.63 gain in the composition. Three dry 120 ms taps at 13.3, 18.8 and 22.6 seconds mark synchronization, allowed access and expired access. Their asset peak is −25 dBFS. The score reserves a silent window around each tap, avoiding masking rather than stacking effects over it.
 
-All musical material and Foley are deterministic synthesis in `scripts/make-gate-sound-design.mjs`. There are no imported samples, stock recordings, generated voices, external services or third-party musical references. The room, footsteps and gate motor are designed representations rather than field recordings or evidence of physical hardware operation. Rights/provenance: `public/gates/sound-design-v2/provenance.json`.
+Each musical note and its timing are editable in the generator; each audio timeline instance has its own JSX node in `src/gates/Soundtrack.tsx`. The earlier cuts, sources and assets remain available in their existing locations/history.
 
-## Cue sheet
+## Reference and provenance
 
-| Start | Sound | Purpose |
-| --- | --- | --- |
-| 0.00 | Original 45-second music bed | Arc from curiosity to connection and resolution |
-| 0.15 | Soft stereo movement | Question reveal |
-| 0.20 | Quiet reception atmosphere | Club context, fades into the system scene |
-| 0.80 / 1.57 | Two restrained footsteps | Fictional approach to the gate |
-| 5.00 | Low tactile focus | Subscription state |
-| 7.20 | Soft touch | Validity period |
-| 10.80 | Stereo movement | Transition to the compatible controller |
-| 13.30 | Three rising, gently panned notes | Eligibility synchronization |
-| 18.80 | Two ascending notes | Allowed access |
-| 19.00 | Short motor and latch | Gate-opening animation |
-| 22.00 | Softer motor and latch | Gate closes after the first member |
-| 22.60 | Two lower, descending notes | Expired access, without an alarm |
-| 26.00 | Tactile focus | Event-log reveal |
-| 30.00 | Soft touch | Reviewing the result |
-| 34.50 / 35.70 | Two distinct confirmation instances | Compatibility and policy steps |
-| 37.00 | Resolved confirmation | Integration test step |
-| 40.40 | Original three-note signature with finite reflections | Narfid closing, fades out by 44.8 seconds |
+The X post, video frames and playback controls were inspected. Its 57.9-second audio was retrieved to an ignored private folder for numerical comparison; no reference audio, melody, visuals or samples are embedded in this film. The user's reference supplies the requested uncluttered product-film direction. Direct listening is unavailable in this environment, so an audible style match has **not** been verified and `audioListened` remains false.
 
-Frame quantization follows the composition's 30 fps. Every clip has its own JSX node in `src/gates/Soundtrack.tsx`. The score and twelve effect assets are bundled locally under `public/gates/sound-design-v2`.
+An external ElevenLabs Music generation through Higgsfield was attempted but not submitted because the workspace had insufficient credits. No generated external music is used. The delivered music and taps are original deterministic project synthesis, without third-party recordings. Asset-level provenance: `public/gates/quiet-v3/provenance.json`.
 
-## Build and delivery
+## Reproduce
 
 ```powershell
-node scripts/make-gate-sound-design.mjs
+node scripts/make-gate-quiet-audio.mjs
 npm run lint
-node scripts/render-gate-sound-design.mjs
+node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-quiet
 ```
 
-The renderer bundles the updated composition, renders its actual audio timeline to PCM and exports the new MP4 and a separate MP3 mix. Without `--picture` it renders the full film. For this sound-only revision, `--picture out/narfid-gate-integration.mp4` copied the verified original H.264 picture stream and replaced the audio. The original export is preserved. SHA-256 hashes match for all 1,350 old and new video packets, verifying identical picture frames.
+For this audio-only revision, `--picture out/narfid-gate-integration.mp4` preserved the verified original H.264 picture and replaced only the audio. All 1,350 video packet SHA-256 hashes match the original. Without `--picture`, the script renders the current complete composition. `--name` chooses a separate output folder/basename and does not replace earlier exports.
 
-Current deliverables:
+## Verified delivery
 
-- `out/narfid-gate-integration-sound-design.mp4`: 45.000 seconds, H.264 1920 × 1080 / 30 fps, 1,350 video frames, AAC stereo at 256 kb/s, 7,775,799 bytes.
-- `out/narfid-gate-sound-design.mp3`: the complete music/effects mix at 320 kb/s.
-- `out/gate-sound-design/gate-final-mix.wav`: 48 kHz stereo PCM source mix.
+- `out/narfid-gate-integration-quiet.mp4`: 45.000 seconds, 1920 × 1080, 30 fps, 1,350 H.264 frames, AAC stereo at 256 kb/s, 6,940,057 bytes.
+- `out/narfid-gate-integration-quiet.mp3`: the complete quiet mix at 320 kb/s.
+- PCM source mix and QA records: `out/narfid-gate-integration-quiet`.
 
-Lint/type checking and the updated production bundle passed. The renderer reported no composition browser errors. Full decode of the final video/audio passed. Measured mix: **−19.75 LUFS integrated**, **−7.22 dBTP true peak**, **2.5 LU loudness range**. Stereo correlation is 0.897, DC is below 0.000006 on both channels and the final 150 ms measure −95.34 dBFS RMS. There is no measured clipping; space remains for the focused effects. The score and final cue fade before the end rather than being cut mid-tail.
+The mix measures **−26.68 LUFS integrated** and **−16.99 dBTP true peak**, compared with −19.75 LUFS and −7.22 dBTP in the rejected version. The integrated level is 6.93 LU lower. These are measured technical differences, not a claimed listening assessment.
 
-Direct listening remains unavailable; **audioListened is false**. The limitation was disclosed before the owner explicitly instructed «نفذ» to execute the written sound plan. This authorizes delivery with technical verification; it does not turn it into a completed listening review. Studio loaded the new music/effect assets and its playback controls were exercised. No external publication is performed.
+Decoded music is exactly silent in all three cue windows (250 ms before each tap to 350 ms after). The generator also rejects overlapping note events and any note intersecting the reserved cue windows. The actual final audio timeline was rendered through Remotion. Full video/audio decode, frame count, duration, stream checks, lint/type checking and the production bundle passed; no browser composition errors were reported. Studio loaded the four new audio instances and stayed paused during final review to avoid simultaneous browser playback.
 
-MP4 SHA-256: `8d92ea9ab6c1c7303bb535282c7e451afa2667cc18e5e8ccda56d050f373a84b`.
+MP4 SHA-256: `0bb834076abb7911d6cb278116091f81d06d138b8bb9c6320fd1afc4324f4757`.
 
-Exports, source PCM intermediates and measurement/QA output remain ignored. Editable score/sound generators, the timeline and local production assets are versioned.
+The MP4/MP3, PCM intermediates, reference media and QA logs remain ignored. Editable generators, the audio timeline, original production assets and documentation are versioned. No social publication is performed.

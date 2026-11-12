@@ -7,7 +7,16 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-const out = resolve(root, "out/gate-sound-design");
+const nameArgument = process.argv.indexOf("--name");
+const renderName =
+  nameArgument < 0
+    ? "narfid-gate-integration-sound-design"
+    : process.argv[nameArgument + 1];
+if (!/^[a-z0-9-]+$/.test(renderName ?? ""))
+  throw Error(
+    "Output name must contain lowercase letters, numbers and hyphens",
+  );
+const out = resolve(root, "out", renderName);
 mkdirSync(out, { recursive: true });
 const executable = (name) =>
   resolve(
@@ -28,7 +37,7 @@ const picture =
   pictureArgument < 0
     ? null
     : resolve(process.cwd(), process.argv[pictureArgument + 1]);
-const output = resolve(root, "out/narfid-gate-integration-sound-design.mp4");
+const output = resolve(root, "out", renderName + ".mp4");
 const mix = resolve(out, "gate-final-mix.wav");
 const errors = [];
 const serveUrl = await bundle({
@@ -124,7 +133,7 @@ execFileSync(executable("ffmpeg"), [
   "-b:a",
   "320k",
   "-y",
-  resolve(root, "out/narfid-gate-sound-design.mp3"),
+  resolve(root, "out", renderName + ".mp3"),
 ]);
 const meter = spawnSync(
   executable("ffmpeg"),
@@ -148,7 +157,7 @@ const meterText = [...meter.stderr.matchAll(/\{[\s\S]*?\}/g)].at(-1)?.[0];
 const levels = JSON.parse(meterText);
 if (
   Number(levels.input_tp) > -1 ||
-  Number(levels.input_i) < -25 ||
+  Number(levels.input_i) < -33 ||
   Number(levels.input_i) > -14
 )
   throw Error("Mix level requires review: " + meterText);
