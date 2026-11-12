@@ -4,7 +4,16 @@
 
 Purpose: show a club manager the connection between subscription eligibility, a compatible gate's synchronized controller permissions, and the recorded access event.
 
-Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`. Every substantial scene is authored separately and registered as a connected composition under `Gate-Integration-Scenes`. The standalone registrations use the same dimensions, frame rate and scene durations as the parent. Earlier films remain intact. This is the standalone scenario requested in chat; it has no marketing campaign ID and does not publish to social accounts.
+Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`. Every substantial scene is authored separately and registered as a connected composition under `Gate-Integration-Scenes`. The standalone registrations use the same dimensions, frame rate and scene durations as the parent. This standalone scenario has no marketing campaign ID.
+
+## Publication
+
+The owner authorized publication of the final music-only cut on X and Instagram. Both posts were verified on 13 November 2026 (Africa/Cairo) under `@narfidtech`.
+
+- X: https://x.com/narfidtech/status/2121010245761970407
+- Instagram: https://www.instagram.com/narfidtech/reel/DfqJxqoMqjf/
+
+Uploaded file: `out/narfid-gate-integration-music-only.mp4`, SHA-256 `6767229f0338d2e93994e21269dfa6f7ad01541a6e39caabc7cfeeaab80cd2a2`. The Instagram reel uses Original framing and the AI content label for the generated opening image. Publication proof is saved in ignored `out/publication-proof/`. The board video library was checked and contains the separate fifty-video campaign; this film has no matching record.
 
 ## Storyboard
 
