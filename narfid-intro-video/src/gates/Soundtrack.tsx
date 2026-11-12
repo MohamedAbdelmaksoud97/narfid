@@ -3,10 +3,10 @@ import { staticFile, useVideoConfig } from "remotion";
 
 const effects = [
   {
-    name: "ظهور عنوان الفيديو",
-    file: "sound-design-v2/move",
-    seconds: 0.1,
-    gain: 0.9,
+    name: "لمسة ظهور العنوان",
+    file: "studio-v4/sync",
+    seconds: 0.27,
+    gain: 1,
   },
   {
     name: "ظهور بيانات العضوية",
@@ -50,14 +50,25 @@ const effects = [
 
 export const GateSoundtrack = () => {
   const { fps } = useVideoConfig();
-  return effects.map(({ name, file, seconds, gain }) => (
-    <Audio
-      key={name}
-      name={name}
-      from={Math.round(seconds * fps)}
-      src={staticFile(`gates/${file}.wav`)}
-      volume={gain}
-      premountFor={fps}
-    />
-  ));
+  return (
+    <>
+      <Audio
+        name="موسيقى خلفية خافتة"
+        src={staticFile("gates/ambient-v5/music.mp3")}
+        durationInFrames={45 * fps}
+        volume={0.2}
+        premountFor={fps}
+      />
+      {effects.map(({ name, file, seconds, gain }) => (
+        <Audio
+          key={name}
+          name={name}
+          from={Math.round(seconds * fps)}
+          src={staticFile(`gates/${file}.wav`)}
+          volume={gain}
+          premountFor={fps}
+        />
+      ))}
+    </>
+  );
 };

@@ -1,6 +1,10 @@
 # تكامل بوابات الدخول — التصميم الصوتي
 
-## Effects-only cut
+## Effects with quiet background music
+
+The ambient track from `public/gates/ambient-v5` plays at 0.2 gain under the effects. A 120 ms soft tap from `public/gates/studio-v4` replaces the opening sweep and starts at 0.27 seconds. The other cues retain their levels and timing.
+
+## Previous effects-only cut
 
 The Remotion timeline uses four decision and interface cues from `public/gates/rhythm-v6`, plus the existing sweep, focus and tap sounds from `public/gates/sound-design-v2`. The timeline leaves silence between cues and through the end card. The original picture is reused. Timing and gain are editable in `src/gates/Soundtrack.tsx`.
 

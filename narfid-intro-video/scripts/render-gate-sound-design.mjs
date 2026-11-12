@@ -8,6 +8,14 @@ import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
 const nameArgument = process.argv.indexOf("--name");
+const minimumLoudnessArgument = process.argv.indexOf("--min-lufs");
+const minimumLoudness =
+  minimumLoudnessArgument < 0
+    ? -33
+    : Number(process.argv[minimumLoudnessArgument + 1]);
+if (!Number.isFinite(minimumLoudness) || minimumLoudness >= -14) {
+  throw Error("--min-lufs must be a finite value below -14");
+}
 const renderName =
   nameArgument < 0
     ? "narfid-gate-integration-sound-design"
@@ -157,7 +165,8 @@ const meterText = [...meter.stderr.matchAll(/\{[\s\S]*?\}/g)].at(-1)?.[0];
 const levels = JSON.parse(meterText);
 if (
   Number(levels.input_tp) > -1 ||
-  Number(levels.input_i) < -33 ||
+  !Number.isFinite(Number(levels.input_i)) ||
+  Number(levels.input_i) < minimumLoudness ||
   Number(levels.input_i) > -14
 )
   throw Error("Mix level requires review: " + meterText);
