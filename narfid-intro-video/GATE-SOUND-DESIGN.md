@@ -1,6 +1,12 @@
 # تكامل بوابات الدخول — التصميم الصوتي
 
-## Effects with quiet, fast background music
+## Refined interface effects
+
+The 132 BPM background score plays at 0.042 gain, about 5 dB below the preceding cut. Nine new locally synthesized effects mark the title, membership details, synchronization, opening, refusal, access log, and three assessment steps. The gate opening combines a latch with a rising confirmation. The refusal uses a short descending pulse. Each effect lasts under 0.65 seconds.
+
+The source is `scripts/make-gate-interface-effects.mjs`. The timeline in `src/gates/Soundtrack.tsx` references the generated WAVs in `public/gates/interface-effects`.
+
+## Previous effects with quiet, fast background music
 
 The existing 132 BPM score from `public/gates/rhythm-v6` plays at 0.075 gain, down 6 dB from the preceding cut. The opening tap and other eight cues use the same timing and levels.
 

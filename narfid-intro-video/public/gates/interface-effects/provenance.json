@@ -1,0 +1,6 @@
+{
+  "generator": "scripts/make-gate-interface-effects.mjs",
+  "source": "Original local synthesis for the gate film",
+  "sampleRate": 48000,
+  "externalSamples": false
+}

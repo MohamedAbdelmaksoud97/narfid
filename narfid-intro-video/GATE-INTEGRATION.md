@@ -13,7 +13,7 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 | 0–5 | Fictional member approaches a closed gate; restrained camera move on generated scene. Original Arabic logo and sports-management descriptor. | «اشتراكه انتهى… وش يصير عند البوابة؟» A short soft tap as the title appears. |
 | 5–11 | Real local membership UI, focused on the active facility-access subscription, dates and usage. | «قرار الدخول يبدأ من حالة الاشتراك.» Soft cue as the membership details appear. |
 | 11–18 | Real registered controller panel connects to a motion-design gate representation. | «اربط صلاحية الدخول بسياسة ناديك.» Short sweep and note as the connection completes. |
-| 18–26 | Two explicitly fictional member cases: eligible, then expired. Gate representation opens, then remains closed. | Eligibility follows the synchronized policy. Rising confirmation as the gate starts opening, then a lower cue for the refusal. |
+| 18–26 | Two explicitly fictional member cases: eligible, then expired. Gate representation opens, then remains closed. | Eligibility follows the synchronized policy. A latch and rising confirmation mark the gate opening. A low pulse marks the refusal. |
 | 26–34 | Real local event log, showing the same two fictional members and the persisted controller/system results. | «ولفريقك… سجل يوضح ما حدث.» Short click as the log details appear. |
 | 34–40 | Gate and three staged steps. | A short tap marks each step: check compatibility, define policy, test the integration. |
 | 40–45 | Established Arabic Narfid end card, sports-management descriptor, official domain and scope note. | «شاركنا موديل جهازك لتقييم التوافق.» The background music fades out. |
@@ -35,7 +35,7 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 
 The integration is offered after compatibility assessment, with separately agreed scope and cost. Existing evidence concerns the ZKTeco ACP-260 implementation; this film does not promise all-vendor support, immediate synchronization or inclusion in standard subscriptions. It distinguishes the controller's decision from the system's attendance result.
 
-Remotion plays nine short effects from the project's locally synthesized assets. The 132 BPM score plays at 0.075 gain (6 dB quieter than the previous mix). The timing and gain are editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the audio sources and earlier cuts.
+Remotion plays nine short, locally synthesized effects. The 132 BPM score plays at 0.042 gain (about 5 dB quieter than the previous mix). The cue timing and music level are editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the audio sources and earlier cuts.
 
 Direct listening is unavailable in this agent session and was disclosed to the owner. **audioListened is false**; numerical checks do not replace listening, and no waiver is inferred.
 
@@ -44,7 +44,8 @@ Direct listening is unavailable in this agent session and was disclosed to the o
 ```powershell
 npm run lint
 npm run build
-node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-lower-background --picture out/narfid-gate-integration.mp4 --min-lufs -38
+node scripts/make-gate-interface-effects.mjs
+node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-refined-effects --picture out/narfid-gate-integration.mp4 --min-lufs -42
 ```
 
 QA images, the rendered MP4, compiled bundles, test sessions and connection logs stay in ignored output/private folders. Editable source, approved fictional imagery, original sounds and this documentation belong in Git.
