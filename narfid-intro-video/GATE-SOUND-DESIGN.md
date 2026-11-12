@@ -1,6 +1,12 @@
 # تكامل بوابات الدخول — التصميم الصوتي
 
-## Ambient version 5
+## Rhythm version 6
+
+The 132 BPM score uses short plucks, bass and light percussion. The four original cues mark synchronization at 13.10 s, the gate opening at 18.80 s, access refused at 22.13 s, and the log details at 26.53 s. Remotion lowers music gain by about 7 dB during each cue. The same melodic motif resolves over the end card.
+
+Generate the tracks with `node scripts/make-gate-rhythm-audio.mjs`. Their editable timing and levels are in `src/gates/Soundtrack.tsx`. The audio-only render uses the original 45-second picture. Direct listening was unavailable.
+
+## Previous ambient version 5
 
 Following the owner's request to use Remotion, a new original synthesized ambient track replaces the earlier music and three cues. It uses slowly changing chords without percussion, speech, samples or separately layered effects. Generate it with `node scripts/make-gate-ambient-v5.mjs`; `src/gates/Soundtrack.tsx` places the track in the Remotion composition. Render with `node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-ambient-v5 --picture out/narfid-gate-integration.mp4`. Direct listening was unavailable; numerical checks do not establish audible quality.
 

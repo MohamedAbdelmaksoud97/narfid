@@ -1,0 +1,6 @@
+{
+  "generator": "scripts/make-gate-rhythm-audio.mjs",
+  "bpm": 132,
+  "durationSeconds": 45,
+  "source": "Original local synthesis; no third-party samples or speech"
+}
