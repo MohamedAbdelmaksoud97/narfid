@@ -1,6 +1,6 @@
 # نرفد — اشتراكه انتهى… وش يصير عند البوابة؟
 
-45 seconds · 1920 × 1080 · 30 fps · Arabic RTL · locally bundled Tajawal · stereo effects · no voiceover.
+45 seconds · 1920 × 1080 · 30 fps · Arabic RTL · locally bundled Tajawal · original 96 BPM music and stereo effects · no voiceover.
 
 Purpose: show a club manager the connection between subscription eligibility, a compatible gate's synchronized controller permissions, and the recorded access event.
 
@@ -35,7 +35,7 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 
 The integration is offered after compatibility assessment, with separately agreed scope and cost. Existing evidence concerns the ZKTeco ACP-260 implementation; this film does not promise all-vendor support, immediate synchronization or inclusion in standard subscriptions. It distinguishes the controller's decision from the system's attendance result.
 
-`scripts/make-gate-audio.mjs` synthesizes the four new stereo cues without samples, speech or external paid services. Focus, movement, click, readiness and closing cues reuse the original kitchen project's sample-free assets. Audio provenance is recorded in `public/gates/audio-provenance.json`.
+The current soundtrack uses `scripts/make-gate-sound-design.mjs`: an original 96 BPM score and twelve original synthesized stereo effects, without samples, speech or external services. Each timed instance is separately editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the musical direction, timing and current delivery checks. Current audio provenance is `public/gates/sound-design-v2/provenance.json`; the original effects-only cut and its assets remain available.
 
 Direct listening is unavailable in this agent session and was disclosed to the owner. **audioListened is false**; numerical checks do not replace listening, and no waiver is inferred.
 
@@ -44,13 +44,13 @@ Direct listening is unavailable in this agent session and was disclosed to the o
 ```powershell
 npm run lint
 npm run build
-node scripts/make-gate-audio.mjs
-npx remotion render NarfidGateIntegration out/narfid-gate-integration.mp4 --codec=h264 --crf=18 --concurrency=2
+node scripts/make-gate-sound-design.mjs
+node scripts/render-gate-sound-design.mjs
 ```
 
 QA images, the rendered MP4, compiled bundles, test sessions and connection logs stay in ignored output/private folders. Editable source, approved fictional imagery, original sounds and this documentation belong in Git.
 
-## Verified delivery
+## Original effects-only delivery
 
 `out/narfid-gate-integration.mp4` contains 1,350 H.264 8-bit 4:2:0 frames at 1920 × 1080 / 30 fps, plus AAC stereo at 192 kb/s. Container duration including AAC padding: 45.013 seconds. Size: 7,406,128 bytes. Full FFmpeg video/audio decode passed; render browser errors were empty. Lint/type checking and the production bundle passed. Ten delivery-size frames and four frames extracted from the final MP4 were reviewed for Arabic shaping, text, framing and states.
 
