@@ -1,0 +1,6 @@
+{
+  "generator": "scripts/make-gate-ambient-v5.mjs",
+  "description": "Original slowly changing synthesized ambient chords; no speech, percussion or external samples",
+  "durationSeconds": 45,
+  "audioListened": false
+}

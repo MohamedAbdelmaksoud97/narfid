@@ -1,5 +1,9 @@
 # تكامل بوابات الدخول — التصميم الصوتي
 
+## Ambient version 5
+
+Following the owner's request to use Remotion, a new original synthesized ambient track replaces the earlier music and three cues. It uses slowly changing chords without percussion, speech, samples or separately layered effects. Generate it with `node scripts/make-gate-ambient-v5.mjs`; `src/gates/Soundtrack.tsx` places the track in the Remotion composition. Render with `node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-ambient-v5 --picture out/narfid-gate-integration.mp4`. Direct listening was unavailable; numerical checks do not establish audible quality.
+
 ## New original sound — version 4
 
 The owner requested a brand-new sound after the quiet revision. The current soundtrack has a newly composed lower-register melody, a softer key attack and newly synthesized tactile cues, with one musical voice and separate silent windows around each cue. It is original procedural synthesis, without third-party samples, voice or external generation. Source: `scripts/make-gate-studio-audio.mjs`; assets and provenance: `public/gates/studio-v4`; timeline: `src/gates/Soundtrack.tsx`. The quiet-v3 cut documented below remains available as an earlier revision.
