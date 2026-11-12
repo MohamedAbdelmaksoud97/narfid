@@ -26,9 +26,9 @@ Read [local-capture.md](references/local-capture.md) **before starting reference
 
 ## Direct the film
 
-Define the video's goal in one sentence before storyboarding. For a short product demo, establish a concrete situation in the opening, show the action that addresses it, and end on a visible result or a decision the viewer can use. Link each scene to a message, visual action, sound cue and verified capability.
+Define the video's goal in one sentence before storyboarding. For a short product demo, establish a concrete situation in the opening, show the action that addresses it, and end on a visible result or a decision the viewer can use. Link each scene to a message, visual action and verified capability.
 
-- **Follow the first intro's product-led direction.** Build around the sports-management system: purposeful product close-ups, connected club workflows, clear Arabic typography, depth and synchronized sound. Adapt the treatment to each topic and delivery format; the later NV-001 card treatment is not the owner's preferred benchmark. Reference footage remains subject to the capture and provenance rules above.
+- **Follow the first intro's product-led direction.** Build around the sports-management system: purposeful product close-ups, connected club workflows, clear Arabic typography and depth. Adapt the treatment to each topic and delivery format; the later NV-001 card treatment is not the owner's preferred benchmark. Reference footage remains subject to the capture and provenance rules above.
 - **Choose the visual mood for each film.** Light, dark and mixed backgrounds are available. Select colors, lighting and product-screen treatment to suit the idea and maintain readable contrast and Narfid identity.
 - **Identify the category in every video.** Show a readable on-screen descriptor such as **«نرفد — نظام لإدارة الأندية والمنشآت الرياضية»** in the opening and closing. Keep the body grounded in recognizable sports-management workflows, such as memberships, class/court bookings, collection or branches, using verified system views when useful. The logo or a generic shift/administration scenario alone is insufficient to identify the product. Preserve the practical value of educational content while making its sports-institution context explicit.
 - Use visual progression: kinetic Arabic phrases, purposeful close-ups, workflow connections, depth, changes in scale or light, and a clear final invitation. Avoid one repeated screenshot-and-text layout. Motion must clarify the message and leave time to read.
@@ -45,7 +45,6 @@ Use this name when the owner asks for **«رحلة داخل النظام»** or 
 
 - **Goal and story:** Start with one practical question from a sports club or facility, follow a specific action in the system, and finish with the result and a useful decision.
 - **Picture and motion:** Use product screens, short readable Arabic text and deliberate camera movement. Keep the relevant field, record or status visually connected as the framing moves through the workflow.
-- **Sound:** Synchronize restrained effects with actions such as focusing, typing and revealing a result. Follow the owner's standing no-voiceover preference.
 - **Context:** Identify narfid as a system for managing clubs and sports facilities, and use fictional data in system views.
 
 ### هوية نرفد المتحركة
@@ -53,7 +52,7 @@ Use this name when the owner asks for **«رحلة داخل النظام»** or 
 Use **«هوية نرفد المتحركة»** when the owner requests the identity-film direction. The owner liked the `BrandMotionStudy` sample on 11 November 2026. Use its editable composition in `narfid-intro-video/src/DirectionStudies.tsx` as a reference, and develop the message around the requested subject.
 
 - Introduce a focused brand or product message through animated Arabic typography and brand elements, with clear visual progression and readable pacing.
-- Use Narfid identity and synchronized effects, with an ending suited to the film.
+- Use Narfid identity and an ending suited to the film.
 
 ### حكاية من النادي
 
@@ -64,15 +63,9 @@ Use **«حكاية من النادي»** when the owner requests the use-story d
 
 Add other named styles under this section as the owner approves them. Apply the shared brand, Tajawal typography, capture and delivery requirements to each style.
 
-## Design the sound
+## Unified closing
 
-Use **synchronized sound effects as the starting point**. In the approved reservation handoff direction, the key sounds mark focus, typing and the result. Let visible actions determine where a cue belongs and leave space between them. Select the sound and ending for the particular film; music is optional. Communicate through readable Arabic text and purposeful motion. Treat brief `message` fields as visual editorial guidance. Add narration or a spoken brand line only if the owner explicitly changes that preference.
-
-The owner clarified on 11 November 2026 that the Narfid visual end card stays consistent across videos, while its sound is chosen for each film. Use the Arabic logo and sports-management descriptor in the closing. The existing instrumental `narfid-sonic-v1` is available when specifically appropriate; its earlier use remains historical context. A signature, when used, is instrumental unless the owner explicitly requests speech. Document audio provenance and usage rights.
-
-Bundle audio locally, record provenance/usage rights and verify licensing for the intended use. A downloadable sample is not automatically commercially licensed. Existing generators and cue tracks in `narfid-intro-video` are starting points, not a quality ceiling. Follow applicable tool authorization rules for paid services.
-
-Listen to the actual mix when possible and always check it numerically. If listening is unavailable, disclose the limitation; never mark `audioListened: true`. If the owner explicitly directs completion/publication after that disclosure, record their exact instruction as the listening-review waiver and proceed with the other checks. Do not infer a waiver from silence or generate one yourself. Preserve useful stereo, smooth cuts and tails, allow headroom and prevent clipping. Choose loudness for the destination rather than imposing one target on every film.
+Keep the visual end card consistent across narfid videos, using the Arabic logo and sports-management descriptor.
 
 ## Export and finish
 
