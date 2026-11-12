@@ -1,0 +1,263 @@
+{
+  "fetchedAt": "2026-11-12T11:23:49.435Z",
+  "sources": {
+    "searchConsole": "https://www.narfid.com/api/board/seo/google?country=all|sau",
+    "analytics": "https://www.narfid.com/api/board/seo/analytics?country=all|sau",
+    "inspection": "https://www.narfid.com/api/board/seo/google (action inspect)"
+  },
+  "reports": {
+    "google_all": {
+      "status": 200,
+      "report": {
+        "pages": [
+          {
+            "ctr": 0.5,
+            "key": "https://www.narfid.com/articles/academy-makeup-session-policy",
+            "clicks": 1,
+            "position": 6.5,
+            "impressions": 2
+          },
+          {
+            "ctr": 0,
+            "key": "https://www.narfid.com/articles/gym-lost-property-register",
+            "clicks": 0,
+            "position": 7,
+            "impressions": 1
+          }
+        ],
+        "trend": [
+          {
+            "ctr": 0,
+            "key": "2026-11-09",
+            "clicks": 0,
+            "position": 0,
+            "impressions": 0
+          },
+          {
+            "ctr": 0.3333333333333333,
+            "key": "2026-11-10",
+            "clicks": 1,
+            "position": 6.666666666666667,
+            "impressions": 3
+          }
+        ],
+        "country": "all",
+        "current": {
+          "ctr": 0.3333333333333333,
+          "clicks": 1,
+          "position": 6.666666666666667,
+          "impressions": 3
+        },
+        "devices": [
+          {
+            "ctr": 0.3333333333333333,
+            "key": "MOBILE",
+            "clicks": 1,
+            "position": 6.666666666666667,
+            "impressions": 3
+          }
+        ],
+        "queries": [],
+        "previous": null,
+        "fetchedAt": "2026-11-12T10:15:18.162Z",
+        "lastDataDate": "2026-11-10",
+        "currentPeriod": {
+          "endDate": "2026-11-11",
+          "startDate": "2026-10-15"
+        },
+        "previousPeriod": {
+          "endDate": "2026-10-14",
+          "startDate": "2026-09-17"
+        }
+      },
+      "error": null
+    },
+    "google_sau": {
+      "status": 200,
+      "report": {
+        "pages": [],
+        "trend": [
+          {
+            "ctr": 0,
+            "key": "2026-11-09",
+            "clicks": 0,
+            "position": 0,
+            "impressions": 0
+          },
+          {
+            "ctr": 0,
+            "key": "2026-11-10",
+            "clicks": 0,
+            "position": 7,
+            "impressions": 1
+          }
+        ],
+        "country": "sau",
+        "current": {
+          "ctr": 0,
+          "clicks": 0,
+          "position": 7,
+          "impressions": 1
+        },
+        "devices": [
+          {
+            "ctr": 0,
+            "key": "MOBILE",
+            "clicks": 0,
+            "position": 7,
+            "impressions": 1
+          }
+        ],
+        "queries": [],
+        "previous": null,
+        "fetchedAt": "2026-11-12T10:15:24.325Z",
+        "lastDataDate": "2026-11-10",
+        "currentPeriod": {
+          "endDate": "2026-11-11",
+          "startDate": "2026-10-15"
+        },
+        "previousPeriod": {
+          "endDate": "2026-10-14",
+          "startDate": "2026-09-17"
+        }
+      },
+      "error": null
+    },
+    "analytics_all": {
+      "status": 200,
+      "report": {
+        "country": "all",
+        "timeZone": "Asia/Riyadh",
+        "currentPeriod": {
+          "startDate": "2026-10-15",
+          "endDate": "2026-11-11"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-17",
+          "endDate": "2026-10-14"
+        },
+        "current": {
+          "users": 2,
+          "sessions": 7,
+          "views": 43
+        },
+        "previous": null,
+        "pages": [
+          {
+            "key": "/",
+            "value": 32
+          },
+          {
+            "key": "/articles",
+            "value": 6
+          },
+          {
+            "key": "/articles/club-employee-access-offboarding",
+            "value": 2
+          },
+          {
+            "key": "/articles/club-meal-pickup-handover",
+            "value": 2
+          },
+          {
+            "key": "/articles/club-data-export-exit-checklist",
+            "value": 1
+          }
+        ],
+        "channels": [
+          {
+            "key": "Direct",
+            "value": 7
+          }
+        ],
+        "events": [
+          {
+            "key": "page_view",
+            "value": 43
+          },
+          {
+            "key": "demo_request_start",
+            "value": 4
+          }
+        ],
+        "warnings": [],
+        "fetchedAt": "2026-11-12T11:23:53.395Z"
+      },
+      "error": null
+    },
+    "analytics_sau": {
+      "status": 200,
+      "report": {
+        "country": "sau",
+        "timeZone": "Asia/Riyadh",
+        "currentPeriod": {
+          "startDate": "2026-10-15",
+          "endDate": "2026-11-11"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-17",
+          "endDate": "2026-10-14"
+        },
+        "current": null,
+        "previous": null,
+        "pages": [],
+        "channels": [],
+        "events": [],
+        "warnings": [],
+        "fetchedAt": "2026-11-12T11:23:55.467Z"
+      },
+      "error": null
+    }
+  },
+  "inspections": [
+    {
+      "status": 200,
+      "url": "https://www.narfid.com/",
+      "verdict": "PASS",
+      "coverage": "تم إرسال الصفحة وتمت فهرستها",
+      "indexingState": "INDEXING_ALLOWED",
+      "robotsState": "ALLOWED",
+      "lastCrawlTime": "2026-11-11T22:30:33Z",
+      "googleCanonical": "https://www.narfid.com/",
+      "userCanonical": "https://www.narfid.com/",
+      "inspectedAt": "2026-11-12T11:25:12.057Z"
+    },
+    {
+      "status": 200,
+      "url": "https://www.narfid.com/solutions/memberships",
+      "verdict": "NEUTRAL",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "googleCanonical": null,
+      "userCanonical": null,
+      "inspectedAt": "2026-11-12T11:25:19.612Z"
+    },
+    {
+      "status": 200,
+      "url": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "verdict": "PASS",
+      "coverage": "تم إرسال الصفحة وتمت فهرستها",
+      "indexingState": "INDEXING_ALLOWED",
+      "robotsState": "ALLOWED",
+      "lastCrawlTime": "2026-11-09T23:31:49Z",
+      "googleCanonical": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "userCanonical": null,
+      "inspectedAt": "2026-11-12T11:25:27.114Z"
+    },
+    {
+      "status": 200,
+      "url": "https://www.narfid.com/articles/annual-club-software-cost",
+      "verdict": "NEUTRAL",
+      "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن",
+      "indexingState": "INDEXING_STATE_UNSPECIFIED",
+      "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+      "lastCrawlTime": null,
+      "googleCanonical": null,
+      "userCanonical": null,
+      "inspectedAt": "2026-11-12T11:25:34.687Z"
+    }
+  ],
+  "interpretation": "Search Console query rows unavailable; page positions are not keyword ranks. GA4 all traffic is Direct and may include owner/test activity. Contact event counts do not establish qualified leads. Previous period unavailable, not zero. Metrics cover 28 days excluding today, not weekly deltas."
+}

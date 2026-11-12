@@ -168,12 +168,26 @@ export const solutionOperatingGuides: Record<string, { question: string; text: s
   memberships: {
     question: "هل تدير ناديًا أم أكاديمية للأطفال؟",
     text: "ابدأ من طريقة بيع الخدمة: اشتراك زمني، أو باقة زيارات، أو تسجيل لاعب مرتبط بولي أمر. في برنامج إدارة اشتراكات وحضور النادي بالعربي، اختبر حالة الاشتراك ورصيد الخدمة وسجل اللاعب قبل اعتماد طريقة التشغيل.",
-    articles: ["academy-children-guardian-records", "visit-based-membership-packages", "gym-reception-attendance-procedure"],
+    articles: [
+      "academy-children-guardian-records",
+      "visit-based-membership-packages",
+      "gym-reception-attendance-procedure",
+      "academy-midterm-enrollment",
+      "gym-first-week-member-onboarding",
+      "annual-club-software-cost",
+    ],
   },
   bookings: {
     question: "هل تبيع ساعة ملعب أم مقعدًا في حصة؟",
     text: "إدارة حجوزات ملاعب البادل وكرة القدم تحتاج تعريف المورد والوقت؛ إدارة حصص الجيم تضيف سعة المشاركين، والتدريب الشخصي يربط المدرب بالعضو. قدّم مثالًا للإلغاء وتغيير الموعد في العرض حتى تتضح دورة الحجز والتحصيل.",
-    articles: ["padel-court-occupancy-report", "recurring-court-booking-control", "personal-training-schedule-control"],
+    articles: [
+      "padel-court-occupancy-report",
+      "recurring-court-booking-control",
+      "personal-training-schedule-control",
+      "sports-class-waitlist-procedure",
+      "academy-makeup-session-policy",
+      "court-maintenance-booking-disruption",
+    ],
   },
   "point-of-sale": {
     question: "هل تحتاج متابعة البيع أم التحصيل أم كليهما؟",
@@ -188,6 +202,11 @@ export const solutionOperatingGuides: Record<string, { question: string; text: s
   branches: {
     question: "ما الذي ينتقل مع العضو بين الفروع؟",
     text: "برنامج إدارة فروع الجيم يحتاج تعريف نطاق العضوية والخدمة في كل فرع، إلى جانب صلاحيات الموظفين. اختبر عضوية متعددة الفروع وحساب استقبال محدود النطاق، ثم قارن التقارير بفترة وتعريفات موحدة.",
-    articles: ["club-branch-performance-comparison", "multi-branch-club-permissions"],
+    articles: [
+      "club-branch-performance-comparison",
+      "multi-branch-club-permissions",
+      "weekly-club-operations-meeting",
+      "gym-interbranch-stock-transfer",
+    ],
   },
 };

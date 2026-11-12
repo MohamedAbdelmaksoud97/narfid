@@ -14,6 +14,8 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Local credentials and temporary QA helpers are not application source.
     ".private/**",
+    // Skill packages contain reference examples, not application source.
+    ".agents/skills/**",
     // Standalone Remotion project has its own dependencies and lint config.
     "narfid-intro-video/**",
   ]),

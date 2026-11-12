@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-21",
+  "updatedAt": "2026-11-12",
   "baseline": {
     "keywords": "../../../../content/seo-campaign/keywords.json",
     "research": "../../../../content/seo-campaign/research-log.json",
@@ -8773,6 +8773,170 @@
       "dominantFormat": "دليل عملي أو توثيق أو قالب",
       "observations": "توثيق Microsoft يربط منع الدخول بحفظ بيانات العمل وتغيير الوصول للأدوات.",
       "limitations": "مصدر عام قوي وليس خدمة موارد بشرية للأندية؛ لا ننقل واجهاته كخطوات لكل نظام."
+    },
+    {
+      "id": "research-20261112-autopilot-setup",
+      "researchedAt": "2026-11-12",
+      "provider": "web.run search_query + open",
+      "market": "السعودية سوق مقصود؛ بحث ويب عام دون تثبيت Google السعودية أو الجهاز",
+      "googleSaudiVerified": false,
+      "queries": [
+        {
+          "query": "برنامج إدارة نادي رياضي متعدد الخدمات السعودية",
+          "searchedAt": "2026-11-12",
+          "results": [
+            {
+              "title": "إنياد — برنامج إدارة النوادي الرياضية",
+              "url": "https://www.inyad.com/ar/gym-management",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-12",
+                "summary": "صفحة منتج تربط العضوية والتحصيل والحضور ونقاط البيع؛ تركيزها العام لا يثبت ملاءمة كل متطلبات السعودية."
+              }
+            },
+            {
+              "title": "IDS Fitness — برنامج إدارة الجيم في السعودية",
+              "url": "https://idsfitness.com/ar/",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-12",
+                "summary": "صفحة بيع سعودية تعرض العضويات والحصص والمدفوعات وأسعارًا وبوابات؛ ادعاءات البائع ليست تحققًا مستقلًا ولا تُنقل إلى نرفد."
+              }
+            },
+            {
+              "title": "AskFlow — برنامج إدارة نادي رياضي",
+              "url": "https://askflow.sa/ar/gym-software",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-12",
+                "summary": "صفحة منتج تعرض العضويات وباقات الجلسات وقوائم الانتظار وتطبيقًا للأعضاء؛ ليست دليلًا تشغيليًا مستقلًا عن المنتج."
+              }
+            },
+            {
+              "title": "Sektura — إدارة نادي رياضي",
+              "url": "https://sektura.com/ar/solutions/sports_club_mgmt",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-12",
+                "summary": "صفحة تستهدف أندية وجمعيات وأقسام الناشئين وتذكر SEPA والعمل التطوعي؛ الملاءمة للسعودية أضعف من النتائج المتخصصة."
+              }
+            },
+            {
+              "title": "Gymtrics — نظام إدارة الأندية الرياضية في السعودية",
+              "url": "https://gymtrics.com/",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-12",
+                "summary": "صفحة منتج سعودية تربط الباقات والدخول والحصص والمتجر وتوصل إلى أدلة تكلفة وتجهيز؛ لا تثبت أحجام البحث أو ترتيب Google."
+              }
+            }
+          ]
+        },
+        {
+          "query": "برنامج إدارة اشتراكات وحضور النادي بالعربي",
+          "searchedAt": "2026-11-12",
+          "results": [
+            {
+              "title": "ActiveFlow — برنامج إدارة الأندية الرياضية في السعودية",
+              "url": "https://activeflowapp.com/ar/gym-management-software-saudi-arabia-ar/",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "سوفت — منصة إدارة الأكاديميات الرياضية",
+              "url": "https://academy.sooftit.com/ar",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "ActiveFlow — منصة إدارة الأندية والاستوديوهات والأكاديميات الرياضية",
+              "url": "https://activeflowapp.com/ar/",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "سوليك — برنامج إدارة جيم واشتراكات وحضور",
+              "url": "https://soliq.net/systems/gym",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "سيستم اتش — إدارة اشتراكات وحضور بالكارت ومدربين",
+              "url": "https://hsys.io/systems/gym/fitness",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            }
+          ]
+        },
+        {
+          "query": "نظام إدارة حجوزات الملاعب والحصص",
+          "searchedAt": "2026-11-12",
+          "results": [
+            {
+              "title": "SDS — نظام إدارة الأنظمة الرياضية",
+              "url": "https://sds.sa/language/ar/نظام-إدارة-الأنظمة-الرياضية",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "AskFlow — نظام حجوزات للأندية والاستوديوهات والعيادات",
+              "url": "https://askflow.sa/ar",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "ماتشنا — احجز ملعبك في مصر",
+              "url": "https://matchena.com/ar",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "ماتشنا — مركز مساعدة حجز وإدارة الملاعب",
+              "url": "https://matchena.com/ar/help",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            },
+            {
+              "title": "أمانة عمان — بطاقة الخدمة",
+              "url": "https://www.amman.jo/ar/gameservices/docs/daleeldepts/62.pdf?23332=",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "رُصد في إعادة بحث منفردة للاستعلام يوم 2026-11-12؛ مقتطف فقط، لا دليل ميزة أو ملاءمة سعوديّة معتمد. لم يُعتمد محتوى جديد لهذا الاستعلام."
+              }
+            }
+          ]
+        }
+      ],
+      "decision": "تحسين الربط إلى محتوى منشور بدل إنشاء صفحات شراء أو مقالات متداخلة؛ النية التجارية مغطاة بالحلول والمكتبة الحالية.",
+      "limitations": "هذه عينة استكشافية وليست رصد Google السعودية أو قياس طلب. لا كلمات جديدة معتمدة؛ لا تعديل لوجهات الخمسين أو فرص التوسعة."
     }
   ],
   "opportunities": [

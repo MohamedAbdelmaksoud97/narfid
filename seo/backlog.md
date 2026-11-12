@@ -1,0 +1,20 @@
+# Backlog — 2026-11-12
+
+Ordered by expected buyer value per effort, using qualitative evidence; signups/hour cannot yet be estimated from this small baseline. No numeric search volume or ranking assumptions.
+
+| Priority | Query / owner | Action | Evidence and completion condition |
+| --- | --- | --- | --- |
+| Done 1 | تكلفة برنامج إدارة نادي رياضي سنويا → `/articles/annual-club-software-cost`; membership onboarding → `/solutions/memberships` | Add the cost, mid-cycle enrollment and first-week guides to the existing published-only solution guide list | Cost guide was six clicks from home and linked only by page 5. Three added links verified locally and on deployment; see dated link report. |
+| Done 2 | برنامج إدارة حصص الجيم → `/solutions/bookings` | Link the waitlist, makeup-session and court-maintenance procedures from the booking solution | Three articles had only paginated library inbound links; makeup article has the first Search Console click. No automatic waitlist/refund feature claimed. |
+| Done 3 | برنامج إدارة فروع الجيم → `/solutions/branches` | Link weekly operations meeting and interbranch stock-transfer procedures | Both lacked contextual inbound links; weekly meeting was four clicks from home. |
+| P0 engineering | All landing routes | Review and upgrade the Next.js security advisory using the existing release workflow | `next build` emitted a known-vulnerability warning on 2026-11-12; retry passed with warning. Dependency/security upgrade is a separate change, not performed as a link edit. |
+| P1 | نفس الصفحات الثماني أعلاه | Recheck crawl/indexing and query impressions after Google recrawls; retain the link baseline | Do not promise an indexing date. Membership solution and annual cost guide are discovered/not indexed; no evidence of a technical block. Inspect a bounded rotating sample. |
+| P1 | طلب عرض نرفد → `/contact`, `/pricing` | Resolve duplicate page-view collection and establish which contact starts become qualified requests | Do not repeat the Enhanced measurement Off request; preserve the owner's confirmation. Current GA4 Direct visits/event starts are not qualified leads. No test events for read-only reporting. |
+| P2 | تدريب الاستقبال / خدمة الأعضاء → existing articles | Review the remaining 12 library-only articles for useful contextual links, without long unrelated lists | Before-change graph has 19 library-only articles; seven of those gain a contextual link in this run. Each new link must follow a reader's next task. |
+| P2 | برنامج إدارة نادي رياضي متعدد الخدمات → `/` | Reassess title/intro against buyer queries once meaningful query rows arrive | Current query rows unavailable. Do not make a Page-2 claim from page averages or create another category landing page. |
+| P2 | مقالات إدارة المؤسسات الرياضية → `/articles` | Consider CollectionPage/ItemList JSON-LD for the library, only if useful to its existing semantics | Library has metadata/canonical and server-rendered content but no JSON-LD. This is an enhancement, not a proven indexing error. |
+| P2 weekly | Relevant terms in positions 8–20 | Compare real query rows with three current result pages and improve the owning page | No query rows returned on first run. Review due 2026-11-19; no invented opportunities. |
+| P3 | AI category questions → `ai-prompts.md` | Obtain actual assistant-answer/citation samples through an authorized connected provider | All 25 questions are unchecked. Web snippets do not substitute for assistant answers. |
+| P3 monthly | Comparisons, calculators and link prospects | Reuse existing intent research; build only a distinctive page/tool and draft named outreach after verifying demand and sources | Map due 2026-12-12. No comparison matrix, calculator, directory submission or mail generated merely to fill a quota. |
+
+No page deleted, redirected, unpublished, or repriced. The initial five inspected commercial search results are existing category product pages; this run uses the already-published operational examples instead of creating overlapping content.

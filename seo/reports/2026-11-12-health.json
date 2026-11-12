@@ -1,0 +1,1102 @@
+{
+  "checkedAt": "2026-11-12T11:23:48.435Z",
+  "site": "https://www.narfid.com",
+  "sitemapSource": "https://www.narfid.com/sitemap.xml",
+  "sitemapUrls": 71,
+  "discoveredPages": 76,
+  "publishedArticles": 58,
+  "draftArticles": 3,
+  "robots": "User-Agent: *\nAllow: /\nDisallow: /board\nDisallow: /login\nDisallow: /api/\n\nSitemap: https://www.narfid.com/sitemap.xml\n",
+  "checks": {
+    "allSitemap200": true,
+    "allDiscovered200": true,
+    "allSitemapCanonicalSelf": true,
+    "allSitemapTitlesUnique": true,
+    "allDescriptionsUnique": true,
+    "allSitemapSingleH1": true,
+    "allSitemapIndexable": true,
+    "allSitemapLinked": true,
+    "allExistingSchemasValid": true
+  },
+  "timing": {
+    "unit": "ms",
+    "max": 2286,
+    "note": "Single HTTP fetch wall time; not Core Web Vitals or an SLO."
+  },
+  "pages": [
+    {
+      "url": "https://www.narfid.com/",
+      "status": 200,
+      "location": null,
+      "ms": 2151,
+      "title": "نرفد — السند التقني للمؤسسات الرياضية | نرفد",
+      "description": "منظومة لإدارة الأعضاء والاشتراكات والحجوزات ونقاط البيع والمطبخ ومخزون المنتجات والفروع. اكتشف حلول نرفد وباقات الاشتراك السنوية.",
+      "canonical": "https://www.narfid.com",
+      "robots": "index, follow",
+      "h1": [
+        "كل تفاصيل ناديك.في منظومة واحدة."
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/about",
+      "status": 200,
+      "location": null,
+      "ms": 1605,
+      "title": "عن نرفد — السند التقني للمؤسسات الرياضية | نرفد",
+      "description": "نرفد، narfid، مزوّد تقني للمؤسسات الرياضية يستهدف السوق السعودي. تعرّف إلى رؤيتنا ودور منصة الإدارة في مساندة تشغيل المؤسسة ونموها.",
+      "canonical": "https://www.narfid.com/about",
+      "robots": "index, follow",
+      "h1": [
+        "نرفد مؤسستك بالتقنية."
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/articles",
+      "status": 200,
+      "location": null,
+      "ms": 2286,
+      "title": "مقالات إدارة المؤسسات الرياضية | نرفد",
+      "description": "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+      "canonical": "https://www.narfid.com/articles",
+      "robots": "index, follow",
+      "h1": [
+        "معرفة تدعمخطوتك القادمة."
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-children-guardian-records",
+      "status": 200,
+      "location": null,
+      "ms": 1046,
+      "title": "اشتراكات الأطفال: تنظيم ملف اللاعب وولي الأمر | نرفد",
+      "description": "دليل لإدارة ملفات الأطفال وأولياء الأمور في أكاديميات كرة القدم والسباحة، وفصل المستفيد عن الدافع ومتابعة الحضور لكل طفل.",
+      "canonical": "https://www.narfid.com/articles/academy-children-guardian-records",
+      "robots": "index, follow",
+      "h1": [
+        "اشتراكات الأطفال: تنظيم ملف اللاعب وولي الأمر"
+      ],
+      "inbound": 8
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-class-groups-capacity",
+      "status": 200,
+      "location": null,
+      "ms": 972,
+      "title": "مجموعات الأكاديمية: توزيع اللاعبين وسعة الحصص | نرفد",
+      "description": "اربط المجموعة بمدرب وموعد ومكان وسعة، وتعامل مع انتقال اللاعب والحصة التجريبية وتغيير الجدول بسجل قابل للمراجعة.",
+      "canonical": "https://www.narfid.com/articles/academy-class-groups-capacity",
+      "robots": "index, follow",
+      "h1": [
+        "مجموعات الأكاديمية: توزيع اللاعبين وسعة الحصص"
+      ],
+      "inbound": 11
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "status": 200,
+      "location": null,
+      "ms": 700,
+      "title": "حصص التعويض في الأكاديمية: كيف توثق الطلب والرصيد؟ | نرفد",
+      "description": "افصل طلب التعويض عن اعتماده وحجزه وحضوره، وحدد أثره على السعة والرصيد، مع مثال يمنع احتساب الغياب والتعويض مرتين.",
+      "canonical": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "robots": "index, follow",
+      "h1": [
+        "حصص التعويض في الأكاديمية: كيف توثق الطلب والرصيد؟"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "status": 200,
+      "location": null,
+      "ms": 925,
+      "title": "التسجيل في منتصف دورة الأكاديمية: وضّح المتبقي قبل الدفع | نرفد",
+      "description": "راجع الجاهزية والسعة والحصص المتبقية والرسوم عند الانضمام أثناء الدورة، مع مثال حسابي يوضح نطاق الخدمة وتاريخ البداية.",
+      "canonical": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "robots": "index, follow",
+      "h1": [
+        "التسجيل في منتصف دورة الأكاديمية: وضّح المتبقي قبل الدفع"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-parent-progress-update",
+      "status": 200,
+      "location": null,
+      "ms": 546,
+      "title": "تقرير ولي الأمر في الأكاديمية: ملاحظة واضحة وخطوة تالية | نرفد",
+      "description": "اكتب تحديثًا لولي الأمر يربط فترة الحضور بملاحظة المدرب وخطوة المتابعة، دون أحكام عامة أو وعود احتراف أو مشاركة بيانات لاعبين آخرين.",
+      "canonical": "https://www.narfid.com/articles/academy-parent-progress-update",
+      "robots": "index, follow",
+      "h1": [
+        "تقرير ولي الأمر في الأكاديمية: ملاحظة واضحة وخطوة تالية"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-player-group-transfer",
+      "status": 200,
+      "location": null,
+      "ms": 628,
+      "title": "نقل لاعب بين مجموعات الأكاديمية: إجراء يحفظ الجدول والسجل | نرفد",
+      "description": "وثّق قرار نقل اللاعب وموعد سريانه والسعة والاشتراك والتواصل، مع قائمة تحقق تمنع ظهور اسمه في مجموعتين أو ضياع تاريخه.",
+      "canonical": "https://www.narfid.com/articles/academy-player-group-transfer",
+      "robots": "index, follow",
+      "h1": [
+        "نقل لاعب بين مجموعات الأكاديمية: إجراء يحفظ الجدول والسجل"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-software-demo-checklist",
+      "status": 200,
+      "location": null,
+      "ms": 978,
+      "title": "اختيار برنامج الأكاديمية: سيناريوهات تختبرها في العرض | نرفد",
+      "description": "اختبر تسجيل لاعب وحضور حصة ودفعًا جزئيًا وصلاحية مدرب، بدل الاكتفاء بقائمة مزايا عند اختيار برنامج الأكاديمية.",
+      "canonical": "https://www.narfid.com/articles/academy-software-demo-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "اختيار برنامج الأكاديمية: سيناريوهات تختبرها في العرض"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+      "status": 200,
+      "location": null,
+      "ms": 697,
+      "title": "غياب مدرب الأكاديمية: تسليم المجموعة لبديل دون ارتباك | نرفد",
+      "description": "جهّز بطاقة تسليم للمدرب البديل تشمل المجموعة والموقع وخطة الحصة والمسؤوليات، مع مراجعة للحضور والتواصل بعد التنفيذ.",
+      "canonical": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+      "robots": "index, follow",
+      "h1": [
+        "غياب مدرب الأكاديمية: تسليم المجموعة لبديل دون ارتباك"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/annual-club-software-cost",
+      "status": 200,
+      "location": null,
+      "ms": 1038,
+      "title": "تكلفة برنامج إدارة النادي: كيف تقارن العرض السنوي؟ | نرفد",
+      "description": "قارن الاشتراك والتهيئة ونقل البيانات والتكاملات في ورقة واحدة، واعرف ما تسأل عنه قبل اعتماد ميزانية نظام ناديك.",
+      "canonical": "https://www.narfid.com/articles/annual-club-software-cost",
+      "robots": "index, follow",
+      "h1": [
+        "تكلفة برنامج إدارة النادي: كيف تقارن العرض السنوي؟"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+      "status": 200,
+      "location": null,
+      "ms": 827,
+      "title": "إلغاء الحجز وعدم الحضور: سجل واضح للحصص والملاعب | نرفد",
+      "description": "نظّم حالات إلغاء الحجوزات وعدم الحضور، وحدد ما يسجله الاستقبال وما يحتاج اعتمادًا قبل تعديل رصيد العضو أو التحصيل.",
+      "canonical": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+      "robots": "index, follow",
+      "h1": [
+        "إلغاء الحجز وعدم الحضور: سجل واضح للحصص والملاعب"
+      ],
+      "inbound": 7
+    },
+    {
+      "url": "https://www.narfid.com/articles/choose-sports-club-management-system",
+      "status": 200,
+      "location": null,
+      "ms": 1058,
+      "title": "كيف تختار نظام إدارة نادي رياضي يناسب تشغيلك؟ | نرفد",
+      "description": "دليل عملي لمالك النادي ومدير العمليات: اختبر رحلة العضو والحجز والتحصيل، وراجع نقل البيانات والصلاحيات والنطاق السنوي قبل اختيار نظام الإدارة.",
+      "canonical": "https://www.narfid.com/articles/choose-sports-club-management-system",
+      "robots": "index, follow",
+      "h1": [
+        "كيف تختار نظام إدارة نادي رياضي يناسب تشغيلك؟"
+      ],
+      "inbound": 5
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-branch-performance-comparison",
+      "status": 200,
+      "location": null,
+      "ms": 931,
+      "title": "مقارنة فروع النادي: مؤشرات عادلة وقرارات قابلة للمتابعة | نرفد",
+      "description": "قارن فروع النادي بفترة وتعريفات موحدة، وافصل فرع البيع عن فرع الاستخدام لتخرج من التقرير بقرار ومسؤول وموعد.",
+      "canonical": "https://www.narfid.com/articles/club-branch-performance-comparison",
+      "robots": "index, follow",
+      "h1": [
+        "مقارنة فروع النادي: مؤشرات عادلة وقرارات قابلة للمتابعة"
+      ],
+      "inbound": 7
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+      "status": 200,
+      "location": null,
+      "ms": 978,
+      "title": "إغلاق وردية الصندوق في النادي: كيف تراجع البيع والتحصيل؟ | نرفد",
+      "description": "خطوات عملية للمسؤول المالي ومدير الفرع لمراجعة الوردية: الرصيد الافتتاحي، والتحصيل والمرتجعات والمصروفات، والفروق وتوثيق أسبابها.",
+      "canonical": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+      "robots": "index, follow",
+      "h1": [
+        "إغلاق وردية الصندوق في النادي: كيف تراجع البيع والتحصيل؟"
+      ],
+      "inbound": 6
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+      "status": 200,
+      "location": null,
+      "ms": 686,
+      "title": "تصدير بيانات النادي قبل تغيير النظام: ماذا تختبر في الملف؟ | نرفد",
+      "description": "حدد نطاق تصدير البيانات وروابطها، وافتح عينة فعلية وراجع الأعداد والتواريخ والأرصدة قبل انتهاء الوصول للنظام القديم.",
+      "canonical": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "تصدير بيانات النادي قبل تغيير النظام: ماذا تختبر في الملف؟"
+      ],
+      "inbound": 33
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-data-migration-checklist",
+      "status": 200,
+      "location": null,
+      "ms": 1050,
+      "title": "نقل بيانات النادي إلى نظام جديد: قائمة مراجعة قبل التشغيل | نرفد",
+      "description": "خطوات لتنظيف ملفات الأعضاء وربط الباقات والاشتراكات والأرصدة، واختبار عينة وخطة انتقال وتدريب قبل اعتماد نظام إدارة جديد للنادي.",
+      "canonical": "https://www.narfid.com/articles/club-data-migration-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "نقل بيانات النادي إلى نظام جديد: قائمة مراجعة قبل التشغيل"
+      ],
+      "inbound": 6
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-employee-access-offboarding",
+      "status": 200,
+      "location": null,
+      "ms": 769,
+      "title": "مغادرة موظف النادي: تسليم المهام وإيقاف الوصول الرقمي | نرفد",
+      "description": "راجع حسابات الموظف والأجهزة والمهام المعلقة، ثم سلّم المسؤوليات وأوقف الوصول باعتماد واضح دون حذف السجلات التي يحتاجها العمل.",
+      "canonical": "https://www.narfid.com/articles/club-employee-access-offboarding",
+      "robots": "index, follow",
+      "h1": [
+        "مغادرة موظف النادي: تسليم المهام وإيقاف الوصول الرقمي"
+      ],
+      "inbound": 33
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-expense-approval-workflow",
+      "status": 200,
+      "location": null,
+      "ms": 591,
+      "title": "مصروفات النادي: سجل واعتماد ومراجعة لكل فرع | نرفد",
+      "description": "نظّم طلب المصروف واعتماده وإثبات دفعه، وافصل عهدة الصندوق عن المصروف الفعلي لتبقى متابعة الفرع مفهومة.",
+      "canonical": "https://www.narfid.com/articles/club-expense-approval-workflow",
+      "robots": "index, follow",
+      "h1": [
+        "مصروفات النادي: سجل واعتماد ومراجعة لكل فرع"
+      ],
+      "inbound": 7
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "status": 200,
+      "location": null,
+      "ms": 574,
+      "title": "خطأ طلب الوجبة: توثيق التصحيح دون خصم استحقاق مرتين | نرفد",
+      "description": "اربط شكوى الوجبة بالطلب الأصلي وقرار التصحيح والتنفيذ، وافصل الاستبدال عن طلب جديد، مع قائمة مراجعة للاستحقاق والكمية.",
+      "canonical": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "robots": "index, follow",
+      "h1": [
+        "خطأ طلب الوجبة: توثيق التصحيح دون خصم استحقاق مرتين"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-pickup-handover",
+      "status": 200,
+      "location": null,
+      "ms": 621,
+      "title": "تسليم وجبات المشتركين: افصل الجاهز عن المستلم فعليًا | نرفد",
+      "description": "نظم نقطة تسليم الوجبات بمرجع طلب وحالة واضحة، وراجع هوية المستلم والكمية قبل إغلاق الطلب، مع نموذج لحالات نهاية اليوم.",
+      "canonical": "https://www.narfid.com/articles/club-meal-pickup-handover",
+      "robots": "index, follow",
+      "h1": [
+        "تسليم وجبات المشتركين: افصل الجاهز عن المستلم فعليًا"
+      ],
+      "inbound": 3
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-production-planning",
+      "status": 200,
+      "location": null,
+      "ms": 557,
+      "title": "مطبخ النادي: خطة الوجبات اليومية ومراجعة الصرف | نرفد",
+      "description": "جهّز كشف إنتاج يومي من طلبات المشتركين، وافصل الوجبات المطلوبة والمجهزة والمصروفة والمتبقية مع مثال لتفسير الفروق.",
+      "canonical": "https://www.narfid.com/articles/club-meal-production-planning",
+      "robots": "index, follow",
+      "h1": [
+        "مطبخ النادي: خطة الوجبات اليومية ومراجعة الصرف"
+      ],
+      "inbound": 6
+    },
+    {
+      "url": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "status": 200,
+      "location": null,
+      "ms": 743,
+      "title": "إغلاق ملعب للصيانة: كيف تعالج الحجوزات المتأثرة؟ | نرفد",
+      "description": "حدد نطاق الإغلاق وأوقف الحجوزات الجديدة وراجع المؤكدة، ثم تواصل بخيارات معتمدة وسجّل النتيجة قبل إعادة فتح الإتاحة.",
+      "canonical": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "robots": "index, follow",
+      "h1": [
+        "إغلاق ملعب للصيانة: كيف تعالج الحجوزات المتأثرة؟"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+      "status": 200,
+      "location": null,
+      "ms": 938,
+      "title": "تقرير النادي اليومي: افصل المبيعات عن التحصيل | نرفد",
+      "description": "اقرأ مبيعات اليوم وتحصيلاته والمرتجعات كلًّا في سياقه، واستخدم مثالًا مبسطًا لتفسير الفرق قبل الحكم على أداء الفريق.",
+      "canonical": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+      "robots": "index, follow",
+      "h1": [
+        "تقرير النادي اليومي: افصل المبيعات عن التحصيل"
+      ],
+      "inbound": 11
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "status": 200,
+      "location": null,
+      "ms": 605,
+      "title": "منتج تالف في متجر النادي: اعزله ووثّق قرار الرصيد | نرفد",
+      "description": "افصل اكتشاف المنتج المتضرر عن قرار إعادته أو تسوية رصيده، مع نموذج يتتبع الكمية والمكان والسبب والاعتماد دون حذف الحركة.",
+      "canonical": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "robots": "index, follow",
+      "h1": [
+        "منتج تالف في متجر النادي: اعزله ووثّق قرار الرصيد"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-discount-approval-controls",
+      "status": 200,
+      "location": null,
+      "ms": 734,
+      "title": "خصومات النادي: اعتماد واضح وأثر يمكن مراجعته | نرفد",
+      "description": "حدد من يمنح الخصم ومتى يحتاج موافقة، وسجّل السبب والسعر قبل الخصم وبعده، مع مثال يكشف تراكب العروض دون قصد.",
+      "canonical": "https://www.narfid.com/articles/gym-discount-approval-controls",
+      "robots": "index, follow",
+      "h1": [
+        "خصومات النادي: اعتماد واضح وأثر يمكن مراجعته"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "status": 200,
+      "location": null,
+      "ms": 683,
+      "title": "أول أسبوع للعضو الجديد: خطة استقبال تساعده على البدء | نرفد",
+      "description": "رتّب تسليم العضو من البيع إلى أول زيارة، وحدد معلومات الوصول والحجز ونقطة المساعدة، مع قائمة متابعة تكشف العوائق العملية.",
+      "canonical": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "robots": "index, follow",
+      "h1": [
+        "أول أسبوع للعضو الجديد: خطة استقبال تساعده على البدء"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+      "status": 200,
+      "location": null,
+      "ms": 759,
+      "title": "مكالمة الاستفسار عن النادي: أسئلة تساعد على اختيار الخدمة | نرفد",
+      "description": "استخدم مسار مكالمة يفهم احتياج المستفسر ويوضح الخدمة والسعر والخطوة التالية، مع نموذج توثيق يمنع تكرار الأسئلة والوعود المتعارضة.",
+      "canonical": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "مكالمة الاستفسار عن النادي: أسئلة تساعد على اختيار الخدمة"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "status": 200,
+      "location": null,
+      "ms": 819,
+      "title": "نقل منتجات بين فروع النادي: مرجع واحد للإرسال والاستلام | نرفد",
+      "description": "تابع المنتج من الفرع المرسل إلى المستلم، وافصل المرسل عن المقبول والكمية قيد النقل، مع مثال لمراجعة نقص الشحنة دون مضاعفة الرصيد.",
+      "canonical": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "robots": "index, follow",
+      "h1": [
+        "نقل منتجات بين فروع النادي: مرجع واحد للإرسال والاستلام"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-lead-source-conversion",
+      "status": 200,
+      "location": null,
+      "ms": 788,
+      "title": "مصادر استفسارات النادي: قارن القنوات بالعضويات الفعلية | نرفد",
+      "description": "اربط مصدر الاستفسار بنتيجة المتابعة والزيارة والاشتراك، مع مثال يوضح لماذا لا تكفي تكلفة الرسالة أو عدد النقرات لتقييم التسويق.",
+      "canonical": "https://www.narfid.com/articles/gym-lead-source-conversion",
+      "robots": "index, follow",
+      "h1": [
+        "مصادر استفسارات النادي: قارن القنوات بالعضويات الفعلية"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-locker-assignment-log",
+      "status": 200,
+      "location": null,
+      "ms": 650,
+      "title": "خزائن النادي: سجل تخصيص وتسليم يمنع ازدواج الاستخدام | نرفد",
+      "description": "نظّم حالة الخزانة من الإتاحة إلى التخصيص والإرجاع والصيانة، مع نموذج يربط رقمها بالمستخدم والمدة ومرجع التسليم.",
+      "canonical": "https://www.narfid.com/articles/gym-locker-assignment-log",
+      "robots": "index, follow",
+      "h1": [
+        "خزائن النادي: سجل تخصيص وتسليم يمنع ازدواج الاستخدام"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-lost-property-register",
+      "status": 200,
+      "location": null,
+      "ms": 954,
+      "title": "مفقودات النادي: نموذج استلام ومطابقة وتسليم لصاحبها | نرفد",
+      "description": "جهّز سجلًا للموجودات يحفظ مكان العثور والوصف والحيازة والتحقق من المطالبة، مع إجراء يمنع إعلان التفاصيل التي تثبت الملكية.",
+      "canonical": "https://www.narfid.com/articles/gym-lost-property-register",
+      "robots": "index, follow",
+      "h1": [
+        "مفقودات النادي: نموذج استلام ومطابقة وتسليم لصاحبها"
+      ],
+      "inbound": 3
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+      "status": 200,
+      "location": null,
+      "ms": 1015,
+      "title": "شكاوى أعضاء النادي: سجل متابعة من الاستماع إلى الإغلاق | نرفد",
+      "description": "أنشئ مسارًا لشكاوى الأعضاء يفرّق بين تسجيل الطلب والتحقق وتنفيذ الحل، مع نموذج رد ومؤشرات تكشف إعادة فتح الحالات.",
+      "canonical": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+      "robots": "index, follow",
+      "h1": [
+        "شكاوى أعضاء النادي: سجل متابعة من الاستماع إلى الإغلاق"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-record-deduplication",
+      "status": 200,
+      "location": null,
+      "ms": 836,
+      "title": "تكرار ملف العضو: كيف تتحقق قبل الدمج أو التعديل؟ | نرفد",
+      "description": "ضع إجراءً للبحث قبل إنشاء عضو، ومراجعة السجلات المشتبه بتكرارها دون دمج أشخاص مختلفين أو فقد اشتراكاتهم وحركاتهم.",
+      "canonical": "https://www.narfid.com/articles/gym-member-record-deduplication",
+      "robots": "index, follow",
+      "h1": [
+        "تكرار ملف العضو: كيف تتحقق قبل الدمج أو التعديل؟"
+      ],
+      "inbound": 5
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-retention-followup",
+      "status": 200,
+      "location": null,
+      "ms": 764,
+      "title": "متابعة أعضاء النادي: من غياب الزيارة إلى قرار التجديد | نرفد",
+      "description": "نظّم متابعة الأعضاء بحسب الحضور وقرب انتهاء العضوية، وسجّل سبب التواصل ونتيجته لتمييز الرد عن التجديد الفعلي.",
+      "canonical": "https://www.narfid.com/articles/gym-member-retention-followup",
+      "robots": "index, follow",
+      "h1": [
+        "متابعة أعضاء النادي: من غياب الزيارة إلى قرار التجديد"
+      ],
+      "inbound": 12
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+      "status": 200,
+      "location": null,
+      "ms": 558,
+      "title": "عروض النادي خارج الذروة: اختبر الإشغال قبل تعميم الخصم | نرفد",
+      "description": "قيّم عرض أوقات الهدوء بتكلفته وسعته والاستخدام الإضافي، مع مثال يفرق بين جذب حضور جديد ونقل الأعضاء من السعر المعتاد.",
+      "canonical": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+      "robots": "index, follow",
+      "h1": [
+        "عروض النادي خارج الذروة: اختبر الإشغال قبل تعميم الخصم"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+      "status": 200,
+      "location": null,
+      "ms": 655,
+      "title": "دفعات اشتراك النادي: متابعة المتبقي دون تكرار التحصيل | نرفد",
+      "description": "مثال لتسجيل دفعات الاشتراك وربط كل تحصيل بفاتورته، مع قائمة متابعة للمتبقي ومعالجة الدفع غير المطابق أو المكرر.",
+      "canonical": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+      "robots": "index, follow",
+      "h1": [
+        "دفعات اشتراك النادي: متابعة المتبقي دون تكرار التحصيل"
+      ],
+      "inbound": 4
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+      "status": 200,
+      "location": null,
+      "ms": 915,
+      "title": "كاشير النادي: بيع المنتجات وربطها بالمخزون والتحصيل | نرفد",
+      "description": "تتبّع بيع منتجات النادي من تعريف الصنف إلى التحصيل والمرتجع، مع اختبار عملي يكشف الأخطاء بين الكاشير والمخزون.",
+      "canonical": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+      "robots": "index, follow",
+      "h1": [
+        "كاشير النادي: بيع المنتجات وربطها بالمخزون والتحصيل"
+      ],
+      "inbound": 10
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+      "status": 200,
+      "location": null,
+      "ms": 999,
+      "title": "دليل استقبال النادي: الحضور وفتح الوردية وتسليمها | نرفد",
+      "description": "إجراء يومي للاستقبال يشمل التحقق من الاشتراك وتسجيل الحضور ومعالجة الحالات الاستثنائية وتسليم الوردية بسجل واضح.",
+      "canonical": "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+      "robots": "index, follow",
+      "h1": [
+        "دليل استقبال النادي: الحضور وفتح الوردية وتسليمها"
+      ],
+      "inbound": 12
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-referral-program-tracking",
+      "status": 200,
+      "location": null,
+      "ms": 912,
+      "title": "إحالات أعضاء النادي: قواعد واضحة وقياس دون تكرار المكافآت | نرفد",
+      "description": "صمّم برنامج إحالة قابلًا للمراجعة، يحدد صاحب الإحالة وشرط الاستحقاق وآلية المتابعة، مع مثال لحساب التكلفة والعضويات الناتجة.",
+      "canonical": "https://www.narfid.com/articles/gym-referral-program-tracking",
+      "robots": "index, follow",
+      "h1": [
+        "إحالات أعضاء النادي: قواعد واضحة وقياس دون تكرار المكافآت"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-refund-approval-record",
+      "status": 200,
+      "location": null,
+      "ms": 1027,
+      "title": "مرتجعات اشتراكات النادي: من الطلب إلى إثبات التنفيذ | نرفد",
+      "description": "مسار تشغيلي لتوثيق طلب المرتجع ومرجعه واعتماده ومتابعة تنفيذه، مع الفصل بين إلغاء العضوية وإرجاع المبلغ.",
+      "canonical": "https://www.narfid.com/articles/gym-refund-approval-record",
+      "robots": "index, follow",
+      "h1": [
+        "مرتجعات اشتراكات النادي: من الطلب إلى إثبات التنفيذ"
+      ],
+      "inbound": 9
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-software-team-adoption",
+      "status": 200,
+      "location": null,
+      "ms": 966,
+      "title": "تدريب فريق النادي على النظام الجديد: اختبر المهمة لا الحضور | نرفد",
+      "description": "نظّم تدريب النظام حسب الأدوار والمهام، مع سيناريوهات قبول وسجل عوائق ومثال يفرق بين إكمال التدريب والقدرة على العمل.",
+      "canonical": "https://www.narfid.com/articles/gym-software-team-adoption",
+      "robots": "index, follow",
+      "h1": [
+        "تدريب فريق النادي على النظام الجديد: اختبر المهمة لا الحضور"
+      ],
+      "inbound": 33
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-stock-count-reorder",
+      "status": 200,
+      "location": null,
+      "ms": 947,
+      "title": "جرد منتجات النادي: تفسير الفروق وتحديد إعادة الطلب | نرفد",
+      "description": "طريقة عملية لجرد متجر النادي وتفسير فرق الرصيد، مع مثال لحساب حد إعادة الطلب حسب حركة المنتج ومدة التوريد.",
+      "canonical": "https://www.narfid.com/articles/gym-stock-count-reorder",
+      "robots": "index, follow",
+      "h1": [
+        "جرد منتجات النادي: تفسير الفروق وتحديد إعادة الطلب"
+      ],
+      "inbound": 8
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+      "status": 200,
+      "location": null,
+      "ms": 1089,
+      "title": "استلام منتجات متجر النادي: محضر يوضح النقص والاختلاف | نرفد",
+      "description": "قارن المطلوب بالمستلم والمقبول عند وصول منتجات النادي، وسجل الفروق والمرفقات ومسؤول المتابعة قبل تحديث الرصيد المتاح للبيع.",
+      "canonical": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+      "robots": "index, follow",
+      "h1": [
+        "استلام منتجات متجر النادي: محضر يوضح النقص والاختلاف"
+      ],
+      "inbound": 4
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+      "status": 200,
+      "location": null,
+      "ms": 763,
+      "title": "الزيارة التجريبية للنادي: من الحجز إلى قرار العضوية | نرفد",
+      "description": "صمّم تجربة توضح ملاءمة النادي للزائر، وسجّل نتيجة الزيارة والخطوة التالية، ثم احسب التحويل من التجارب المكتملة بدل الطلبات.",
+      "canonical": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+      "robots": "index, follow",
+      "h1": [
+        "الزيارة التجريبية للنادي: من الحجز إلى قرار العضوية"
+      ],
+      "inbound": 3
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+      "status": 200,
+      "location": null,
+      "ms": 919,
+      "title": "دفعة غير مطابقة لاشتراك: سجل استثناء قبل تأكيد السداد | نرفد",
+      "description": "راجع الدفعة مجهولة المرجع بمصادرها الفعلية، ووثق البحث وقرار المطابقة دون ربط المبلغ بأول فاتورة مشابهة أو تسجيله مرتين.",
+      "canonical": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+      "robots": "index, follow",
+      "h1": [
+        "دفعة غير مطابقة لاشتراك: سجل استثناء قبل تأكيد السداد"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+      "status": 200,
+      "location": null,
+      "ms": 673,
+      "title": "اشتراكات الوجبات في النادي: من الاستحقاق إلى الصرف | نرفد",
+      "description": "كيف تربط اشتراك الوجبات بقائمة اليوم والكميات وحالات التحضير والتسليم، وتفصل استحقاق العضو عن مخزون المنتجات والمكونات.",
+      "canonical": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+      "robots": "index, follow",
+      "h1": [
+        "اشتراكات الوجبات في النادي: من الاستحقاق إلى الصرف"
+      ],
+      "inbound": 5
+    },
+    {
+      "url": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+      "status": 200,
+      "location": null,
+      "ms": 809,
+      "title": "تجديد وتجميد اشتراكات النادي: سياسة واضحة للاستقبال | نرفد",
+      "description": "كيف تفرق بين التجديد والتجميد والتمديد، وتوثق سياسة يفهمها فريق الاستقبال والعضو، مع مراجعة التواريخ والتحصيل والحالات الاستثنائية.",
+      "canonical": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+      "robots": "index, follow",
+      "h1": [
+        "تجديد وتجميد اشتراكات النادي: سياسة واضحة للاستقبال"
+      ],
+      "inbound": 6
+    },
+    {
+      "url": "https://www.narfid.com/articles/multi-branch-club-permissions",
+      "status": 200,
+      "location": null,
+      "ms": 716,
+      "title": "إدارة فروع النادي: توزيع الصلاحيات دون فقدان المتابعة | نرفد",
+      "description": "كيف توازن بين متابعة الإدارة المركزية وتشغيل كل فرع، وتحدد صلاحيات الاستقبال والمالية والمطبخ والمدربين، مع تقارير يمكن تفسيرها.",
+      "canonical": "https://www.narfid.com/articles/multi-branch-club-permissions",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة فروع النادي: توزيع الصلاحيات دون فقدان المتابعة"
+      ],
+      "inbound": 8
+    },
+    {
+      "url": "https://www.narfid.com/articles/new-reception-staff-training",
+      "status": 200,
+      "location": null,
+      "ms": 777,
+      "title": "تدريب موظف استقبال النادي: خطة تطبيق واختبار جاهزية | نرفد",
+      "description": "جهّز موظف الاستقبال الجديد بمواقف عملية وحدود صلاحيات واضحة، ثم اختبر قدرته على خدمة العضو وتسليم الحالات قبل العمل منفردًا.",
+      "canonical": "https://www.narfid.com/articles/new-reception-staff-training",
+      "robots": "index, follow",
+      "h1": [
+        "تدريب موظف استقبال النادي: خطة تطبيق واختبار جاهزية"
+      ],
+      "inbound": 2
+    },
+    {
+      "url": "https://www.narfid.com/articles/padel-court-occupancy-report",
+      "status": 200,
+      "location": null,
+      "ms": 1123,
+      "title": "إشغال ملاعب البادل: احسب الساعات قبل زيادة الحجوزات | نرفد",
+      "description": "مثال لحساب ساعات الملاعب المتاحة والمحجوزة والمستخدمة، ومقارنة الذروة ببقية اليوم لاتخاذ قرار تشغيلي مبني على سجل.",
+      "canonical": "https://www.narfid.com/articles/padel-court-occupancy-report",
+      "robots": "index, follow",
+      "h1": [
+        "إشغال ملاعب البادل: احسب الساعات قبل زيادة الحجوزات"
+      ],
+      "inbound": 10
+    },
+    {
+      "url": "https://www.narfid.com/articles/personal-training-schedule-control",
+      "status": 200,
+      "location": null,
+      "ms": 976,
+      "title": "جدول المدربين الشخصيين: ربط الموعد بالجلسة والعضو | نرفد",
+      "description": "اربط مواعيد المدربين بالعضو والمكان ورصيد الجلسات، وراجع التعديلات والإلغاء والبدائل في جدول يمكن للفريق الاعتماد عليه.",
+      "canonical": "https://www.narfid.com/articles/personal-training-schedule-control",
+      "robots": "index, follow",
+      "h1": [
+        "جدول المدربين الشخصيين: ربط الموعد بالجلسة والعضو"
+      ],
+      "inbound": 4
+    },
+    {
+      "url": "https://www.narfid.com/articles/recurring-court-booking-control",
+      "status": 200,
+      "location": null,
+      "ms": 726,
+      "title": "الحجز الأسبوعي للملاعب: تنظيم السلسلة والاستثناءات | نرفد",
+      "description": "خطوات لتنظيم حجوزات الفرق الأسبوعية، وفصل الموعد المتكرر عن كل حجز فعلي مع متابعة التغييرات والتحصيل والإجازات.",
+      "canonical": "https://www.narfid.com/articles/recurring-court-booking-control",
+      "robots": "index, follow",
+      "h1": [
+        "الحجز الأسبوعي للملاعب: تنظيم السلسلة والاستثناءات"
+      ],
+      "inbound": 7
+    },
+    {
+      "url": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+      "status": 200,
+      "location": null,
+      "ms": 1477,
+      "title": "مخزون منتجات النادي: الرصيد الفعلي والمحجوز والمتاح للبيع | نرفد",
+      "description": "دليل لتنظيم استلام المنتجات والبيع والمرتجعات والجرد وحدود إعادة الطلب لكل فرع، وفهم الفرق بين مخزون المتجر وإدارة مكونات المطبخ.",
+      "canonical": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+      "robots": "index, follow",
+      "h1": [
+        "مخزون منتجات النادي: الرصيد الفعلي والمحجوز والمتاح للبيع"
+      ],
+      "inbound": 8
+    },
+    {
+      "url": "https://www.narfid.com/articles/shift-handover-pending-cases",
+      "status": 200,
+      "location": null,
+      "ms": 804,
+      "title": "تسليم وردية النادي: نموذج للحالات المعلقة ومسؤوليتها | نرفد",
+      "description": "حوّل تسليم الوردية من رسائل متفرقة إلى سجل يحدد الحالة وآخر إجراء والمسؤول والموعد التالي، مع مثال لحجز يحتاج مراجعة تحصيل.",
+      "canonical": "https://www.narfid.com/articles/shift-handover-pending-cases",
+      "robots": "index, follow",
+      "h1": [
+        "تسليم وردية النادي: نموذج للحالات المعلقة ومسؤوليتها"
+      ],
+      "inbound": 3
+    },
+    {
+      "url": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+      "status": 200,
+      "location": null,
+      "ms": 880,
+      "title": "تنظيم حجوزات الملاعب والحصص: الإتاحة والسعة والإلغاء | نرفد",
+      "description": "دليل لمدير العمليات لتحديد مورد الحجز وسعته، وضبط المواعيد وحالات التأكيد والإلغاء والتحصيل، قبل فتح الحجوزات أمام الفريق والأعضاء.",
+      "canonical": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+      "robots": "index, follow",
+      "h1": [
+        "تنظيم حجوزات الملاعب والحصص: الإتاحة والسعة والإلغاء"
+      ],
+      "inbound": 3
+    },
+    {
+      "url": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "status": 200,
+      "location": null,
+      "ms": 627,
+      "title": "قائمة انتظار الحصص: كيف تعرض المقعد وتؤكد قبوله؟ | نرفد",
+      "description": "ضع إجراءً لقائمة انتظار الحصص يوضح ترتيب العرض ومهلة الرد وتأكيد المقعد، مع مثال يمنع وعد عضوين بالمكان نفسه.",
+      "canonical": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "robots": "index, follow",
+      "h1": [
+        "قائمة انتظار الحصص: كيف تعرض المقعد وتؤكد قبوله؟"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/visit-based-membership-packages",
+      "status": 200,
+      "location": null,
+      "ms": 874,
+      "title": "باقات النادي بعدد الزيارات: قواعد الرصيد والصلاحية | نرفد",
+      "description": "ضع قواعد واضحة لباقات الحصص والزيارات: متى تخصم الزيارة، وماذا يحدث عند الإلغاء أو انتهاء الصلاحية؟ مع مثال عملي.",
+      "canonical": "https://www.narfid.com/articles/visit-based-membership-packages",
+      "robots": "index, follow",
+      "h1": [
+        "باقات النادي بعدد الزيارات: قواعد الرصيد والصلاحية"
+      ],
+      "inbound": 7
+    },
+    {
+      "url": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "status": 200,
+      "location": null,
+      "ms": 784,
+      "title": "اجتماع تشغيل النادي الأسبوعي: من الأرقام إلى قرارات محددة | نرفد",
+      "description": "نظم اجتماع التشغيل حول قرارات تحتاج اعتمادًا، مع نموذج لمتابعة المهام ومثال يربط ملاحظة الاستقبال بإجراء وموعد ودليل إنجاز.",
+      "canonical": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "robots": "index, follow",
+      "h1": [
+        "اجتماع تشغيل النادي الأسبوعي: من الأرقام إلى قرارات محددة"
+      ],
+      "inbound": 1
+    },
+    {
+      "url": "https://www.narfid.com/articles/womens-club-operations-system",
+      "status": 200,
+      "location": null,
+      "ms": 888,
+      "title": "إدارة النادي النسائي: كيف تختبر النظام مع فريقك؟ | نرفد",
+      "description": "سيناريوهات عملية لمديرة النادي النسائي تختبر الاستقبال والحصص والتدريب الشخصي والصلاحيات قبل اختيار نظام الإدارة.",
+      "canonical": "https://www.narfid.com/articles/womens-club-operations-system",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة النادي النسائي: كيف تختبر النظام مع فريقك؟"
+      ],
+      "inbound": 11
+    },
+    {
+      "url": "https://www.narfid.com/authors/nerved-team",
+      "status": 200,
+      "location": null,
+      "ms": 1517,
+      "title": "فريق نرفد | نرفد",
+      "description": "فريق بناء نرفد، مزوّد تقني للمؤسسات الرياضية. نشارك خبرتنا في بناء نظام يربط الاشتراكات والحجوزات ونقاط البيع والمطبخ والمخزون والفروع، ونوضح حدود كل وظيفة قبل اقتراحها.",
+      "canonical": "https://www.narfid.com/authors/nerved-team",
+      "robots": "index, follow",
+      "h1": [
+        "فريق نرفد"
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/contact",
+      "status": 200,
+      "location": null,
+      "ms": 548,
+      "title": "تواصل مع نرفد واحجز عرضًا توضيحيًا | نرفد",
+      "description": "تواصل مع نرفد لطلب عرض توضيحي ومراجعة احتياج مؤسستك الرياضية، وعدد فروعها والخدمات والتكاملات المطلوبة.",
+      "canonical": "https://www.narfid.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "خلّنا نبدأ من مؤسستك."
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/pricing",
+      "status": 200,
+      "location": null,
+      "ms": 555,
+      "title": "باقات إدارة المؤسسات الرياضية السنوية | نرفد",
+      "description": "قارن باقات نرفد السنوية لإدارة المؤسسات الرياضية، من العضويات إلى المطبخ والمخزون والحجوزات والفروع، مع نطاق واضح قبل الاتفاق.",
+      "canonical": "https://www.narfid.com/pricing",
+      "robots": "index, follow",
+      "h1": [
+        "اشتراك سنوي يناسب تشغيل مؤسستك."
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/solutions/bookings",
+      "status": 200,
+      "location": null,
+      "ms": 1312,
+      "title": "إدارة حجوزات الملاعب والحصص والتدريب | نرفد",
+      "description": "اربط مورد الحجز وموعده وسعته والمشاركين والتحصيل في منظومة لإدارة حجوزات المؤسسات الرياضية.",
+      "canonical": "https://www.narfid.com/solutions/bookings",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة حجوزات الملاعب والحصص والتدريب"
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/solutions/branches",
+      "status": 200,
+      "location": null,
+      "ms": 1276,
+      "title": "إدارة فروع المؤسسة الرياضية وصلاحيات الفريق | نرفد",
+      "description": "وحّد متابعة فروع النادي، مع نطاق وصول يناسب أدوار الفريق وبيانات تشغيل يمكن الرجوع إليها.",
+      "canonical": "https://www.narfid.com/solutions/branches",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة فروع المؤسسة الرياضية وصلاحيات الفريق"
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/solutions/kitchen-inventory",
+      "status": 200,
+      "location": null,
+      "ms": 1190,
+      "title": "إدارة المطبخ والوجبات ومخزون المنتجات | نرفد",
+      "description": "نظّم قائمة الوجبات والكميات اليومية واستحقاقات الأعضاء، وتابع مخزون منتجات النادي لكل فرع مع البيع والمرتجعات.",
+      "canonical": "https://www.narfid.com/solutions/kitchen-inventory",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة المطبخ والوجبات ومخزون المنتجات"
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/solutions/memberships",
+      "status": 200,
+      "location": null,
+      "ms": 818,
+      "title": "إدارة أعضاء واشتراكات النادي | نرفد",
+      "description": "نظّم رحلة العضو من التسجيل إلى الحضور والتجديد والتجميد، واربط سياسة الاشتراك بتشغيل الاستقبال في مؤسستك الرياضية.",
+      "canonical": "https://www.narfid.com/solutions/memberships",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة أعضاء واشتراكات النادي"
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/solutions/point-of-sale",
+      "status": 200,
+      "location": null,
+      "ms": 1252,
+      "title": "نقاط البيع والورديات للمؤسسات الرياضية | نرفد",
+      "description": "تابع الفواتير والتحصيل والمرتجعات والمصروفات وورديات الصندوق، وافهم العملية وراء الرقم في ناديك.",
+      "canonical": "https://www.narfid.com/solutions/point-of-sale",
+      "robots": "index, follow",
+      "h1": [
+        "نقاط البيع والورديات للمؤسسات الرياضية"
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/technology-partnership",
+      "status": 200,
+      "location": null,
+      "ms": 1490,
+      "title": "الشراكة التقنية للمؤسسات الرياضية | نرفد",
+      "description": "ناقش مع نرفد تطوير تطبيق خاص لمؤسستك الرياضية، أو ربط بوابات دخول متوافقة وتكاملات خارجية، بنطاق وتكلفة وصيانة محددة.",
+      "canonical": "https://www.narfid.com/technology-partnership",
+      "robots": "index, follow",
+      "h1": [
+        "تقنية تنمو مع احتياج مؤسستك."
+      ],
+      "inbound": null
+    },
+    {
+      "url": "https://www.narfid.com/visual-identity",
+      "status": 200,
+      "location": null,
+      "ms": 254,
+      "title": "تأسيس وتطوير الهوية البصرية للمؤسسات الرياضية | نرفد",
+      "description": "هوية تعبّر عن مؤسستك الرياضية وتظهر باتساق في شعارها ومطبوعاتها وتطبيقها وموقعها. خدمة اختيارية بعرض سعر مستقل عن اشتراك منصة نرفد.",
+      "canonical": "https://www.narfid.com/visual-identity",
+      "robots": "index, follow",
+      "h1": [
+        "هوية تعبّر عن مؤسستك الرياضية."
+      ],
+      "inbound": null
+    }
+  ],
+  "linkChanges": [
+    {
+      "source": "https://www.narfid.com/solutions/memberships",
+      "target": "https://www.narfid.com/articles/annual-club-software-cost",
+      "beforeDepth": 6,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 1,
+      "expectedAfterInbound": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/memberships",
+      "target": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "beforeDepth": 3,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 1,
+      "expectedAfterInbound": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/memberships",
+      "target": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "beforeDepth": 4,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 2,
+      "expectedAfterInbound": 3
+    },
+    {
+      "source": "https://www.narfid.com/solutions/bookings",
+      "target": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "beforeDepth": 3,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 1,
+      "expectedAfterInbound": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/bookings",
+      "target": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "beforeDepth": 3,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 1,
+      "expectedAfterInbound": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/bookings",
+      "target": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "beforeDepth": 3,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 1,
+      "expectedAfterInbound": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/branches",
+      "target": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "beforeDepth": 4,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 1,
+      "expectedAfterInbound": 2
+    },
+    {
+      "source": "https://www.narfid.com/solutions/branches",
+      "target": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "beforeDepth": 2,
+      "expectedAfterDepth": 2,
+      "beforeInbound": 2,
+      "expectedAfterInbound": 3
+    }
+  ],
+  "limitations": [
+    "Internal HTML anchors and same-origin navigable destinations checked; external destinations, fragment IDs and every image variant were not audited.",
+    "Pagination is part of graph: library-only articles are not orphaned.",
+    "Indexing is a four-URL sample; remaining 67 sitemap URLs not verified.",
+    "Sitemap does not contain board, login or draft URLs; protection also reviewed in existing implementation."
+  ],
+  "schemaCoverage": {
+    "withSchema": 70,
+    "total": 71,
+    "withoutSchema": [
+      "https://www.narfid.com/articles"
+    ],
+    "note": "CollectionPage schema is an optional library enhancement; all existing JSON-LD parsed successfully."
+  }
+}
