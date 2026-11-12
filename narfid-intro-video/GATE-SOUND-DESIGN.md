@@ -1,6 +1,10 @@
 # تكامل بوابات الدخول — التصميم الصوتي
 
-## Rhythm version 6
+## Effects-only cut
+
+The Remotion timeline uses four decision and interface cues from `public/gates/rhythm-v6`, plus the existing sweep, focus and tap sounds from `public/gates/sound-design-v2`. The timeline leaves silence between cues and through the end card. The original picture is reused. Timing and gain are editable in `src/gates/Soundtrack.tsx`.
+
+## Previous rhythm version 6
 
 The 132 BPM score uses short plucks, bass and light percussion. The four original cues mark synchronization at 13.10 s, the gate opening at 18.80 s, access refused at 22.13 s, and the log details at 26.53 s. Remotion lowers music gain by about 7 dB during each cue. The same melodic motif resolves over the end card.
 
