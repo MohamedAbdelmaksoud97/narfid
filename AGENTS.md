@@ -67,6 +67,9 @@ remote production Supabase, including for login or read-only inspection.
 Read optional capture credentials only from `.private/video-reference-accounts.json`.
 A video request includes rendering and verifying the finished MP4 by default;
 a Studio preview alone is not delivery unless the user explicitly requests it.
+Video production, editing and MP4 delivery stay on the local computer. Do not
+upload videos to the narfid website or board or maintain a board video section.
+Publish to social platforms only when the owner requests publication.
 
 ## UI components
 

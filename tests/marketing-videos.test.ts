@@ -9,7 +9,6 @@ import {
   videoPillars,
   videoScript,
 } from "../lib/marketing/video-plan";
-import { validateVideoChange } from "../lib/marketing/video-validation";
 import {
   signatureCorrelation,
   validateSignatureManifest,
@@ -131,43 +130,6 @@ test("audio verification reads streamed WAV output with metadata before an unkno
     Buffer.from([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
   );
   assert.throws(() => pcmFromWav(Buffer.alloc(44)));
-});
-test("board mutations reject unknown identities, stale revision formats and unverified ready states", () => {
-  const change = {
-    video_id: "NV-001",
-    revision: 0,
-    kind: "publication",
-    platform: "instagram",
-    published: true,
-  };
-  assert.equal(validateVideoChange(change).kind, "publication");
-  for (const patch of [
-    { video_id: "NV-000" },
-    { video_id: "NV-051" },
-    { platform: "tiktok" },
-    { published: "true" },
-    { revision: -1 },
-    { revision: 1.5 },
-    { revision: "0" },
-  ])
-    assert.throws(() => validateVideoChange({ ...change, ...patch }));
-  assert.throws(() =>
-    validateVideoChange({
-      video_id: "NV-001",
-      revision: 0,
-      kind: "production",
-      status: "ready",
-    }),
-  );
-  assert.equal(
-    validateVideoChange({
-      video_id: "NV-001",
-      revision: 0,
-      kind: "production",
-      status: "needs_revision",
-    }).kind,
-    "production",
-  );
 });
 test("signature verification accepts the same master after gain change and rejects silence or another cue", () => {
   const make = (fn: (i: number) => number) => {

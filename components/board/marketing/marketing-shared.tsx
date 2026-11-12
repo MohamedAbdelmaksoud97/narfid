@@ -1,11 +1,5 @@
 import Link from "next/link";
-import {
-  ArrowUpLeft,
-  Download,
-  LayoutGrid,
-  Megaphone,
-  Film,
-} from "lucide-react";
+import { ArrowUpLeft, Download, LayoutGrid, Megaphone } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
@@ -26,7 +20,7 @@ import { marketingSources } from "@/lib/marketing/strategy";
 export function MarketingNavigation({
   active,
 }: {
-  active: "strategy" | "social" | "videos" | PlatformId;
+  active: "strategy" | "social" | PlatformId;
 }) {
   return (
     <nav className="marketing-navigation" aria-label="أقسام التسويق">
@@ -43,12 +37,6 @@ export function MarketingNavigation({
       >
         <LayoutGrid aria-hidden="true" />
         السوشيال ميديا
-      </Link>
-      <Link
-        href="/board/marketing/videos"
-        aria-current={active === "videos" ? "page" : undefined}
-      >
-        <Film aria-hidden="true" /> الفيديوهات
       </Link>
       {socialPlatforms.map((platform) => (
         <Link

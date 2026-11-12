@@ -18,14 +18,6 @@ import {
 } from "@/components/board/marketing/marketing-shared";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "التسويق | مجلس إدارة نرفد",
@@ -91,30 +83,6 @@ async function Workspace() {
           </div>
         </div>
         <PlatformCards />
-        <Card className="video-entry">
-          <CardHeader>
-            <CardDescription>مكتبة إنتاج جديدة</CardDescription>
-            <CardTitle as="h2">خطة الفيديو: ٥٠ فكرة جديدة</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p>
-              سيناريوهات بتوقيت المشاهد ونصوص الشاشة والموسيقى والمؤثرات ووصف
-              المنشور، مع متابعة الإنتاج وسجل نشر مستقل لكل منصة. التجارب
-              السابقة خارج الخطة.
-            </p>
-          </CardContent>
-          <CardFooter>
-            <Link
-              href="/board/marketing/videos"
-              className={buttonVariants({
-                variant: "outline",
-                size: "navigation",
-              })}
-            >
-              افتح قسم الفيديو <ArrowUpLeft data-icon="inline-end" />
-            </Link>
-          </CardFooter>
-        </Card>
       </div>
       <div className="marketing-guide-layout container">
         <aside className="brand-guide-index marketing-guide-index">
