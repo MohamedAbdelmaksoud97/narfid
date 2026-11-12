@@ -25,7 +25,7 @@ Go Fitness is the reference system/customer, not the public product name. No cus
 
 ## Existing publishing and SEO architecture
 
-- Next.js 16.4.0 App Router with Cache Components; read local `node_modules/next/dist/docs/` before code changes. Supabase holds editorial records and separate public publication snapshots. Articles must use the existing editor/API and `publish_article` RPC; source JSON is historical, not the live inventory.
+- Next.js 16.4.6 App Router with Cache Components, upgraded from 16.4.0 on 2026-11-12 after the owner's instruction; read local `node_modules/next/dist/docs/` before code changes. Supabase holds editorial records and separate public publication snapshots. Articles must use the existing editor/API and `publish_article` RPC; source JSON is historical, not the live inventory.
 - Live authenticated inventory: 58 publications and 3 drafts. Sitemap: 71 public URLs. Pagination expands the navigable HTML graph to 76 URLs. Sources: `seo/reports/2026-11-12-health.json`, board/publication read on 2026-11-12.
 - Metadata/canonicals/JSON-LD: `lib/seo.ts`, route metadata, `app/articles/[slug]/page.tsx`; sitemap: `app/sitemap.ts`; robots: `app/robots.ts`. Existing published-only guide lists in `lib/solutions.ts` and `components/articles/solution-operating-guides.tsx`.
 - Credentials stay in `.private` and environment files, never in SEO state. Use the authorized chairman for board inspection. No schema changes, article reimports, or publishing test records in this run.
