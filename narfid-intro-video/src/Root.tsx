@@ -32,8 +32,82 @@ import { KitchenFilm } from "./kitchen/Film";
 import { KitchenProduct } from "./kitchen/Product";
 import { KitchenCaption } from "./kitchen/Caption";
 import { KitchenClosing } from "./kitchen/Closing";
+import { GateFilm } from "./gates/Film";
+import { GateOpening } from "./gates/Opening";
+import { GateMembership } from "./gates/Membership";
+import { GateSync } from "./gates/Sync";
+import { GateDecisions } from "./gates/Decisions";
+import { GateLog } from "./gates/Log";
+import { GateAssessment } from "./gates/Assessment";
+import { GateClosing } from "./gates/Closing";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NarfidGateIntegration"
+      component={GateFilm}
+      width={1920}
+      height={1080}
+      fps={30}
+      durationInFrames={1350}
+    />
+    <Folder name="Gate-Integration-Scenes">
+      <Composition
+        id="GateOpening"
+        component={GateOpening}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={150}
+      />
+      <Composition
+        id="GateMembership"
+        component={GateMembership}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={180}
+      />
+      <Composition
+        id="GateSync"
+        component={GateSync}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={210}
+      />
+      <Composition
+        id="GateDecisions"
+        component={GateDecisions}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={240}
+      />
+      <Composition
+        id="GateLog"
+        component={GateLog}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={240}
+      />
+      <Composition
+        id="GateAssessment"
+        component={GateAssessment}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={180}
+      />
+      <Composition
+        id="GateClosing"
+        component={GateClosing}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={150}
+      />
+    </Folder>
     <Composition
       id="NarfidKitchenJourney"
       component={KitchenFilm}

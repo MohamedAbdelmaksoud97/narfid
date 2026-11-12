@@ -1,0 +1,11 @@
+{
+  "creator": "Original procedural synthesis for Narfid",
+  "generator": "scripts/make-gate-audio.mjs",
+  "sampleRate": 48000,
+  "channels": 2,
+  "externalSamples": false,
+  "voiceover": false,
+  "rights": "Original project assets; no third-party recordings",
+  "reusedCues": "Original kitchen focus, click, move, ready and instrumental closing",
+  "audioListened": false
+}

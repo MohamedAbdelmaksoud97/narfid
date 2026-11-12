@@ -1,0 +1,44 @@
+{
+  "createdOn": "2026-11-12",
+  "project": "NarfidGateIntegration",
+  "assets": [
+    {
+      "file": "entrance.png",
+      "source": "Built-in ImageGen tool",
+      "type": "Generated fictional illustration",
+      "customerPhotograph": false,
+      "prompt": "Use case: photorealistic-natural. Asset type: cinematic opening still for an Arabic sports club management video, landscape 16:9. A premium contemporary fitness club entrance in Saudi visual context. One fictional adult Arab-looking male member in a modest charcoal long-sleeved athletic top, loose full-length black track pants and clean trainers, shown from behind in three-quarter profile, approaching a realistic stainless steel speed gate with closed transparent glass leaves and a small plain card reader. Subject and gate occupy LEFT half and middle of the wide image, right half has dark architectural negative space for Arabic headings added later. High-end architectural editorial cinematography, natural skin, tactile brushed metal, warm timber, charcoal stone, subtle emerald accent light, soft overhead strips, 35mm lens, nuanced low-key exposure with legible entrance, no exaggerated neon, no sci-fi. Right foreground dark unobstructed. No text, logos, numbers, watermarks, fingerprint graphics or customer branding anywhere. No other people or revealing clothing in backgrounds/reflections. Fictional illustrative scene, not a customer photograph."
+    },
+    {
+      "file": "membership.png",
+      "type": "Actual local database-backed reference UI capture",
+      "route": "/members/[fictional-member-id] — subscriptions tab",
+      "scenario": "Active facility-access subscription for fictional member سلمان الحربي",
+      "captureDensity": "2x CSS capture density; 1600px minimum logical canvas; full-page capture",
+      "renderedImageWidth": 1600,
+      "editorialTreatment": "Framed close-up of the actual active subscription, dates and usage"
+    },
+    {
+      "file": "control.png",
+      "type": "Actual local database-backed reference UI capture",
+      "route": "/access-control",
+      "scenario": "Fictional ACP-260 registration, active/expired sync eligibility and two persisted gateway events",
+      "captureDensity": "2x CSS capture density; 1600px minimum logical canvas; full-page capture",
+      "renderedImageWidth": 1600,
+      "editorialTreatment": "Independent camera crops of controller panel and event log"
+    }
+  ],
+  "webRevision": "d3efa7e870e143539e35a4c86cdd1f8b0b7e0d87",
+  "backendRevision": "80ec3c75d13bdcae26c2cee9d27b4a6423b8f546",
+  "database": "Disposable in-memory PGlite with local versioned migrations, real business services, repositories, HTTP API and Next BFF",
+  "authentication": "Test-only local random-token verifier",
+  "network": "Loopback-only backend socket/fetch guard and local-only frontend CSP; service workers disabled",
+  "productionAccess": false,
+  "physicalDeviceConnected": false,
+  "simulatedControllerEvents": true,
+  "eligibilityVerified": {"activeEnabled": true, "expiredEnabled": false},
+  "persistedResults": ["SYSTEM_ACCEPTED", "DEVICE_DENIED"],
+  "identityTreatment": "Original Arabic Narfid logo and local Tajawal fonts in disposable UI; customer brand text and legacy display prefixes replaced only in that copy",
+  "limitations": "Device messages are simulated through the actual local gateway. SVG gate motion is explanatory, not a hardware recording or remote door-opening capability. No biometric templates are collected. Compatibility and scope need assessment.",
+  "audioProvenance": "audio-provenance.json"
+}
