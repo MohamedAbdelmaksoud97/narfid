@@ -35,7 +35,7 @@ Main composition: `NarfidGateIntegration`. Parent timeline: `src/gates/Film.tsx`
 
 The integration is offered after compatibility assessment, with separately agreed scope and cost. Existing evidence concerns the ZKTeco ACP-260 implementation; this film does not promise all-vendor support, immediate synchronization or inclusion in standard subscriptions. It distinguishes the controller's decision from the system's attendance result.
 
-Remotion plays nine short effects from the project's locally synthesized assets. The 132 BPM score plays at 0.15 gain (about 16.5 dB below its source level). The timing and gain are editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the audio sources and earlier cuts.
+Remotion plays nine short effects from the project's locally synthesized assets. The 132 BPM score plays at 0.075 gain (6 dB quieter than the previous mix). The timing and gain are editable in `src/gates/Soundtrack.tsx`. See [GATE-SOUND-DESIGN.md](GATE-SOUND-DESIGN.md) for the audio sources and earlier cuts.
 
 Direct listening is unavailable in this agent session and was disclosed to the owner. **audioListened is false**; numerical checks do not replace listening, and no waiver is inferred.
 
@@ -44,7 +44,7 @@ Direct listening is unavailable in this agent session and was disclosed to the o
 ```powershell
 npm run lint
 npm run build
-node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-quiet-rhythm --picture out/narfid-gate-integration.mp4 --min-lufs -38
+node scripts/render-gate-sound-design.mjs --name narfid-gate-integration-lower-background --picture out/narfid-gate-integration.mp4 --min-lufs -38
 ```
 
 QA images, the rendered MP4, compiled bundles, test sessions and connection logs stay in ignored output/private folders. Editable source, approved fictional imagery, original sounds and this documentation belong in Git.

@@ -2,7 +2,7 @@
 
 ## Effects with quiet, fast background music
 
-The existing 132 BPM score from `public/gates/rhythm-v6` plays at 0.15 gain. The opening tap and other eight cues use the timing and levels from the preceding cut.
+The existing 132 BPM score from `public/gates/rhythm-v6` plays at 0.075 gain, down 6 dB from the preceding cut. The opening tap and other eight cues use the same timing and levels.
 
 ## Previous effects with quiet ambient music
 
