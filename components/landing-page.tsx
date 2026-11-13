@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { MemberAppSection } from "@/components/member-app-section";
 import { IdentityServiceSection } from "@/components/identity-service-section";
-import dashboardImage from "@/public/images/nerved-dashboard.png";
 import { DirectionProvider } from "@base-ui/react/direction-provider";
 import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import {
@@ -84,12 +83,12 @@ function Brand({ symbol = false }: { symbol?: boolean }) {
   return (
     <span className={cn("brand", symbol && "brand-symbol")}>
       <Image
-        src={symbol ? "/logo%20symbol.png" : "/logo.png"}
+        src={symbol ? "/images/narfid-symbol-192.webp" : "/images/narfid-logo-640.webp"}
         alt={symbol ? "" : "نرفد — السند التقني للمؤسسات الرياضية"}
-        width={symbol ? 1254 : 1672}
-        height={symbol ? 1254 : 941}
+        width={symbol ? 192 : 640}
+        height={symbol ? 192 : 360}
         loading={symbol ? "lazy" : "eager"}
-        sizes={symbol ? "80px" : "280px"}
+        unoptimized
       />
     </span>
   );
@@ -107,12 +106,16 @@ function SystemScreenshot() {
           className="system-shot-link"
           aria-label="عرض لقطة لوحة التحكم بالحجم الكامل"
         >
-          <Image
-            src={dashboardImage}
+          {/* The source files are pre-sized so the browser can pick one directly. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/nerved-dashboard-768.webp"
+            srcSet="/images/nerved-dashboard-480.webp 480w, /images/nerved-dashboard-768.webp 768w, /images/nerved-dashboard-1320.webp 1320w"
             alt="لوحة التحكم الفعلية للنظام بهوية نرفد: الأعضاء والاشتراكات والحضور والإيرادات، بأرقام توضيحية"
+            width={1586}
+            height={992}
             loading="eager"
             fetchPriority="high"
-            placeholder="blur"
             sizes="(max-width: 719px) calc(100vw - 40px), (max-width: 959px) 630px, (max-width: 1199px) 48vw, 660px"
             className="system-shot-image"
           />
