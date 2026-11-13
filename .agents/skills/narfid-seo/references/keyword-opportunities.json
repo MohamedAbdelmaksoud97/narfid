@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-13",
   "baseline": {
     "keywords": "../../../../content/seo-campaign/keywords.json",
     "research": "../../../../content/seo-campaign/research-log.json",
@@ -8974,6 +8974,93 @@
           "summary": "صفحة منتج سعودية تربط الباقات والدخول والحصص والمتجر وتوصل إلى أدلة تكلفة وتجهيز؛ لا تثبت أحجام البحث أو ترتيب Google."
         }
       ]
+    },
+    {
+      "id": "research-20261113-class-occupancy-01",
+      "researchedAt": "2026-11-13",
+      "provider": "OpenAI web search",
+      "market": "السعودية هي السوق المقصود في الاستعلام العربي؛ شملت العينة توثيقًا دوليًا بالإنجليزية، ولم تُضبط نتائج Google السعودية أو جهاز البحث.",
+      "googleSaudiVerified": false,
+      "queries": [
+        {
+          "query": "قياس إشغال الحصص الجماعية النادي الرياضي نسبة الحضور الحجوزات إدارة حصص",
+          "searchedAt": "2026-11-13",
+          "results": [
+            {
+              "title": "نظام نقاط بيع وإدارة العضويات للصالات الرياضية في السعودية",
+              "url": "https://safha.sa/kasheerpos/ar/solutions/services/gyms-and-fitness/",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-13",
+                "summary": "صفحة منتج للسوق السعودي تذكر السعة ومقارنة الحجوزات بالحضور وتقارير الإشغال. لا تقدم طريقة لحساب المؤشر أو مقارنة مواعيد الحصص."
+              }
+            },
+            {
+              "title": "حجز الحصص الجماعية والباقات والاشتراكات في أنظمة الحجز",
+              "url": "https://www.damatech.sy/articles/booking-group-classes-packages-memberships",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-13",
+                "summary": "دليل عام لإعداد الحجز الجماعي يربط الإشغال المحجوز والفعلي بقرارات الجدول، ويذكر الانتظار دون نموذج متابعة أو مثال حسابي مفصل."
+              }
+            }
+          ]
+        },
+        {
+          "query": "group fitness class utilization attendance capacity report Mindbody ABC Glofox Wodify class attendance report",
+          "searchedAt": "2026-11-13",
+          "results": [
+            {
+              "title": "How to use the Class Performance Report",
+              "url": "https://support.glofox.com/hc/en-us/articles/46458067660436-How-to-use-the-Class-Performance-Report",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-13",
+                "summary": "توثيق تقرير للمشغّلين يعرّف نسبتي الحجوزات والحضور إلى السعة، ويشرح تصفية الحصص حسب اليوم والموعد ومراجعة سجلات الحضور."
+              }
+            },
+            {
+              "title": "How to Use Mindbody Reports to Optimize Your Schedule & Reduce Staffing Costs",
+              "url": "https://www.mindbodyonline.com/en-au/business/education/blog/optimize-staffing",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-13",
+                "summary": "دليل لمستخدمي Mindbody يقارن الحضور بين الأيام والساعات ويربط الاتجاهات بقرارات الجدول والطاقم. يركز على تقارير المنتج."
+              }
+            }
+          ]
+        }
+      ],
+      "pageChecks": [
+        {
+          "title": "نظام نقاط بيع وإدارة العضويات للصالات الرياضية في السعودية",
+          "url": "https://safha.sa/kasheerpos/ar/solutions/services/gyms-and-fitness/",
+          "status": "opened",
+          "checkedAt": "2026-11-13",
+          "summary": "صفحة منتج للسوق السعودي تذكر السعة ومقارنة الحجوزات بالحضور وتقارير الإشغال. لا تقدم طريقة لحساب المؤشر أو مقارنة مواعيد الحصص."
+        },
+        {
+          "title": "حجز الحصص الجماعية والباقات والاشتراكات في أنظمة الحجز",
+          "url": "https://www.damatech.sy/articles/booking-group-classes-packages-memberships",
+          "status": "opened",
+          "checkedAt": "2026-11-13",
+          "summary": "دليل عام لإعداد الحجز الجماعي يربط الإشغال المحجوز والفعلي بقرارات الجدول، ويذكر الانتظار دون نموذج متابعة أو مثال حسابي مفصل."
+        },
+        {
+          "title": "How to use the Class Performance Report",
+          "url": "https://support.glofox.com/hc/en-us/articles/46458067660436-How-to-use-the-Class-Performance-Report",
+          "status": "opened",
+          "checkedAt": "2026-11-13",
+          "summary": "توثيق تقرير للمشغّلين يعرّف نسبتي الحجوزات والحضور إلى السعة، ويشرح تصفية الحصص حسب اليوم والموعد ومراجعة سجلات الحضور."
+        },
+        {
+          "title": "How to Use Mindbody Reports to Optimize Your Schedule & Reduce Staffing Costs",
+          "url": "https://www.mindbodyonline.com/en-au/business/education/blog/optimize-staffing",
+          "status": "opened",
+          "checkedAt": "2026-11-13",
+          "summary": "دليل لمستخدمي Mindbody يقارن الحضور بين الأيام والساعات ويربط الاتجاهات بقرارات الجدول والطاقم. يركز على تقارير المنتج."
+        }
+      ]
     }
   ],
   "opportunities": [
@@ -9796,6 +9883,38 @@
       "decision": "new-article",
       "reason": "توسيع بحث جديد لأن النية الأساسية في خريطة الخمسين لها وجهة قائمة؛ السؤال هنا مستقل بعد مراجعة 31 سجلًا فعليًا منها 28 منشورًا.",
       "reviewedAt": "2026-10-21",
+      "history": []
+    },
+    {
+      "id": "opportunity-20261113-class-occupancy-01",
+      "phrase": "قياس إشغال الحصص الجماعية",
+      "variants": [
+        "نسبة إشغال الحصص الجماعية",
+        "group fitness class utilization"
+      ],
+      "audience": "مدير النادي ومسؤول جدول الحصص الجماعية",
+      "intent": "informational",
+      "categoryKey": "academy-bookings",
+      "researchIds": [
+        "research-20261113-class-occupancy-01"
+      ],
+      "demandEvidence": "تذكر صفحة منتج للسوق السعودي الحضور مقارنة بالحجوزات، وتشرح وثائق دولية رسمية تقارير الإشغال واستخدامها. هذا دليل نوعي على وجود المشكلة؛ حجم البحث المحلي غير متاح.",
+      "competitionRationale": "تطابق النتائج الدولية سؤال القياس، وتغطي نتائج عربية جانبًا من الحجز والتقارير. يضيف الدليل نموذج قرار مستقلًا عن أي برنامج، مع معالجة الإلغاء المتأخر والحضور المباشر واختلاف سعة الحصص.",
+      "confidence": "متوسطة لملاءمة النية وفائدة الإجراء؛ الطلب المحلي وترتيب Google السعودية غير متحققين.",
+      "volume": null,
+      "difficulty": null,
+      "target": "/articles/gym-class-occupancy-report",
+      "relatedExistingTargets": [
+        "/articles/sports-bookings-capacity-guide",
+        "/articles/sports-class-waitlist-procedure",
+        "/articles/padel-court-occupancy-report",
+        "/articles/booking-cancellation-no-show-log"
+      ],
+      "distinctValue": "حساب الإشغال الفعلي لمقاعد الحصص ومقارنته بالحجوزات عند وقت ثابت، ثم تجربة تعديل واحد ومراجعته. المقالات الأقرب تغطي قواعد السعة أو معالجة انتظار وإلغاء حجز أو قياس ساعات ملعب.",
+      "status": "assigned",
+      "decision": "new-article",
+      "reason": "الجرد الحي شمل 58 منشورًا وثلاث مسودات. ظهرت فجوة في قياس الحضور الفعلي للحصص لا تغطيها خريطة العبارات الأساسية، فأُجري بحث جديد. التصنيف الفعلي هو إدارة المؤسسات الرياضية.",
+      "reviewedAt": "2026-11-13",
       "history": []
     }
   ]

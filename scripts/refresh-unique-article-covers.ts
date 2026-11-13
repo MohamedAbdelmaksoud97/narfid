@@ -7,7 +7,11 @@ import sharp from "sharp";
 import type { JSONContent } from "@tiptap/core";
 import { articleFields, type Article, type ArticleFields } from "../lib/articles/types";
 import { validateFields, validatePublication } from "../lib/articles/validation";
-import manifest from "../content/article-covers/unique/manifest.json";
+import coverCatalog from "../content/article-covers/unique/manifest.json";
+
+// This migration only applies to the original stock-photo refresh.
+const manifest = coverCatalog.filter((entry) => entry.action !== "add");
+const laterArticleIds = new Set(coverCatalog.filter((entry) => entry.action === "add").map((entry) => entry.id));
 
 const root = ".private/unique-article-covers";
 const statePath = `${root}/state.json`;
@@ -42,6 +46,7 @@ function pending(fields: ArticleFields, publication: Record<string, unknown>) {
 async function main() {
   const ids = new Set<string>(), photos = new Set<number>(), hashes = new Set<string>(), pixels = new Set<string>();
   for (const entry of manifest) {
+    if (typeof entry.photoId !== "number") throw Error(`Missing stock photo ID: ${entry.slug}`);
     if (ids.has(entry.id) || photos.has(entry.photoId) || hashes.has(entry.sha256)) throw Error(`Duplicate cover identity: ${entry.slug}`);
     ids.add(entry.id); photos.add(entry.photoId); hashes.add(entry.sha256);
     const bytes = await readFile(entry.file);
@@ -71,7 +76,10 @@ async function main() {
     const inventory = async () => {
       const [a,p] = await Promise.all([client.from("articles").select("*").order("id"), client.from("article_publications").select("*").order("id")]);
       if (a.error || p.error || !a.data || !p.data) throw Error("Cannot read article inventory");
-      return { articles: a.data as Article[], publications: p.data as Record<string, unknown>[] };
+      return {
+        articles: (a.data as Article[]).filter((article) => !laterArticleIds.has(article.id)),
+        publications: (p.data as Record<string, unknown>[]).filter((publication) => !laterArticleIds.has(String(publication.id))),
+      };
     };
     const current = await inventory();
     if (current.publications.length !== manifest.length || current.publications.some(p => !ids.has(String(p.id)))) throw Error("Published inventory changed; review the cover catalog before applying");

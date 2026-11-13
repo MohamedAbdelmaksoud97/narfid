@@ -984,5 +984,21 @@
     "sha256": "00d0ac70676a2ba0b2f78bab3f859394f8c39a83ae9068334d772a4d91b7cc3f",
     "reviewedAt": "2026-10-21",
     "rationale": "صورة مناسبة لموضوع المقال ومختلفة عن بقية أغلفة المكتبة"
+  },
+  {
+    "id": "24df02b2-483c-4cf2-99bb-4bcb513221c6",
+    "slug": "gym-class-occupancy-report",
+    "title": "إشغال الحصص الجماعية: كيف تقيس الحضور وتضبط الجدول؟",
+    "action": "add",
+    "file": "content/article-covers/unique/gym-class-occupancy-report.webp",
+    "source": "OpenAI ImageGen",
+    "generatedImageId": "exec-8ccf1da0-31d9-4c0a-89e5-c06d302f3393",
+    "prompt": "Photorealistic editorial photograph for an Arabic article about measuring actual attendance in group fitness classes at a Saudi sports club. Landscape composition 16:10. At the start of a well-lit contemporary group fitness studio class, a modestly dressed adult Arab male instructor wearing a plain dark olive long-sleeved athletic top and full-length track pants stands slightly to the left of center in profile, glancing at a small dark clipboard as he counts the participants. A few adult Arab men in modest long track pants and athletic tops prepare next to evenly spaced gray exercise mats. Several clearly empty mat stations in the middle ground visually communicate unused capacity, no one exercising in a way that blocks the mats. Wide interior framing, muted olive, sand and warm gray tones, matte flooring, natural daylight, balanced composition, authentic ordinary gym rather than luxury or staged corporate stock. Keep the instructor and empty mats legible in a center crop on mobile. No readable text, no branding, no numbers, no logos, no overlays, no mirror, no collage.",
+    "alt": "صورة توضيحية لمدرب يراجع الحضور في قاعة تمارين جماعية تتوزع فيها حصائر فارغة",
+    "width": 1536,
+    "height": 960,
+    "sha256": "9fcb9b56533d405f0440342e1e740d2d7741702521fadf5f3886e993286deb82",
+    "reviewedAt": "2026-11-13",
+    "rationale": "مشهد توضيحي لحصة جماعية مع أماكن مشغولة وأخرى شاغرة، يوضح الفرق بين السعة والحضور."
   }
 ]
