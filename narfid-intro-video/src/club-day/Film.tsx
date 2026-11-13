@@ -19,6 +19,7 @@ import { ClubDayClosing } from "./Closing";
 import { clamp } from "./Stage";
 
 const backgroundMusic = "club-day/audio/local-background.mp3";
+const backgroundMusicGain = 10 ** (-50 / 20);
 
 export const ClubDayFilm = () => {
   const { fps } = useVideoConfig();
@@ -97,7 +98,7 @@ export const ClubDayFilm = () => {
             interpolate(
               frame,
               [0, 1.25 * fps, 57 * fps, 60 * fps],
-              [0, 0.027, 0.027, 0],
+              [0, backgroundMusicGain, backgroundMusicGain, 0],
               clamp,
             )
           }
