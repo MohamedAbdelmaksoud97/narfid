@@ -19,7 +19,7 @@ import {
   Wifi,
 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { DemoButton } from "@/components/landing-demo";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const appFeatures = [
@@ -212,7 +212,7 @@ function PhonePanels() {
   );
 }
 
-export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
+export function MemberAppSection() {
   const [activeFeature, setActiveFeature] = useState("membership");
   const entranceControlRef = useRef<((paused: boolean) => void) | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -403,10 +403,10 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
               </p>
             </div>
             <div className="member-app-conversation">
-              <Button size="marketing" onClick={onRequest}>
+              <DemoButton size="marketing" plan="شراكة تقنية">
                 ناقش تطبيق مؤسستك
                 <ArrowLeft data-icon="inline-end" />
-              </Button>
+              </DemoButton>
               <span>
                 <Smartphone aria-hidden="true" />
                 بهوية مؤسستك، لأعضائك
@@ -453,11 +453,11 @@ export function MemberAppSection({ onRequest }: { onRequest: () => void }) {
                     </div>
                     <span className="member-app-logo">
                       <Image
-                        src="/logo.png"
+                        src="/images/narfid-logo-640.webp"
                         alt="نرفد"
-                        width={1672}
-                        height={941}
-                        sizes="80px"
+                        width={640}
+                        height={360}
+                        unoptimized
                       />
                     </span>
                   </div>

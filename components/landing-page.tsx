@@ -1,25 +1,21 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { MemberAppSection } from "@/components/member-app-section";
 import { IdentityServiceSection } from "@/components/identity-service-section";
-import { DirectionProvider } from "@base-ui/react/direction-provider";
-import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import type { ReactNode } from "react";
+import { DemoButton, LandingDemo } from "@/components/landing-demo";
+import { LandingHeader } from "@/components/landing-header";
 import {
   ArrowDownLeft,
-  ArrowLeft,
   ArrowUpLeft,
   ArrowUpRight,
   CalendarDays,
   Check,
   ChefHat,
   ChevronLeft,
-  Copy,
   Fingerprint,
   GitBranch,
   Layers3,
-  Menu,
   MessageCircle,
   Package,
   Play,
@@ -28,9 +24,8 @@ import {
   Smartphone,
   Sparkles,
   UsersRound,
-  X,
 } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -46,34 +41,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import {
-  Field,
-  FieldDescription,
-  FieldError,
-  FieldGroup,
-  FieldLabel,
-} from "@/components/ui/field";
-import { Input } from "@/components/ui/input";
-import {
-  NativeSelect,
-  NativeSelectOption,
-} from "@/components/ui/native-select";
 import { Separator } from "@/components/ui/separator";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
 import {
   faqs,
   features,
   navigation,
   plans,
-  salesPhone,
   whatsappUrl,
 } from "@/lib/landing-content";
 
@@ -238,332 +212,14 @@ function FeatureVisual({ kind }: { kind: (typeof features)[number]["kind"] }) {
 
 const featurePaths = { members: "memberships", finance: "point-of-sale", kitchen: "kitchen-inventory", inventory: "kitchen-inventory", bookings: "bookings", branches: "branches" };
 
-type DemoDraft = { name: string; club: string; branches: string; plan: string };
-
-function DemoDialog({
-  open,
-  onOpenChange,
-  initialPlan,
-}: {
-  open: boolean;
-  onOpenChange: (open: boolean) => void;
-  initialPlan: string;
-}) {
-  const [draft, setDraft] = useState<DemoDraft | null>(null);
-  const [editingDraft, setEditingDraft] = useState<DemoDraft | null>(null);
-  const [errors, setErrors] = useState<{ name?: string; club?: string }>({});
-  const [copyStatus, setCopyStatus] = useState("");
-  const formRef = useRef<HTMLFormElement>(null);
-
-  function changeOpen(nextOpen: boolean) {
-    onOpenChange(nextOpen);
-    if (!nextOpen) {
-      setDraft(null);
-      setEditingDraft(null);
-      setErrors({});
-      setCopyStatus("");
-    }
-  }
-
-  function submit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const form = new FormData(event.currentTarget);
-    const nextDraft = {
-      name: String(form.get("name") ?? "").trim(),
-      club: String(form.get("club") ?? "").trim(),
-      branches: String(form.get("branches") ?? "فرع واحد"),
-      plan: String(form.get("plan") ?? "أحتاج مساعدة في الاختيار"),
-    };
-    const nextErrors = {
-      ...(nextDraft.name.length < 2
-        ? { name: "اكتب اسمك من حرفين على الأقل." }
-        : {}),
-      ...(nextDraft.club.length < 2
-        ? { club: "اكتب اسم المؤسسة من حرفين على الأقل." }
-        : {}),
-    };
-    setErrors(nextErrors);
-    if (Object.keys(nextErrors).length) {
-      formRef.current
-        ?.querySelector<HTMLInputElement>(
-          nextErrors.name ? "#demo-name" : "#demo-club",
-        )
-        ?.focus();
-      return;
-    }
-    setDraft(nextDraft);
-  }
-
-  const message = draft
-    ? [
-        "مرحبًا نرفد، أرغب في حجز عرض توضيحي للمنصة.",
-        "الاسم: " + draft.name,
-        "المؤسسة: " + draft.club,
-        "عدد الفروع: " + draft.branches,
-        "الباقة محل الاهتمام: " + draft.plan,
-        "أرجو التواصل لترتيب الموعد ومناقشة احتياجات المؤسسة.",
-      ].join("\n")
-    : "";
-
-  async function copyRequest() {
-    try {
-      await navigator.clipboard.writeText(message);
-      setCopyStatus("تم نسخ تفاصيل الطلب.");
-    } catch {
-      setCopyStatus("تعذّر النسخ. يمكنك فتح الطلب مباشرةً في واتساب.");
-    }
-  }
-
-  return (
-    <Dialog open={open} onOpenChange={changeOpen}>
-      <DialogContent className="demo-dialog" dir="rtl">
-        <DialogHeader>
-          <span className="dialog-eyebrow">
-            <MessageCircle /> لنتعرّف على ناديك
-          </span>
-          <DialogTitle>
-            {draft ? "طلبك جاهز. نكمل على واتساب؟" : "خطوتك الأولى مع نرفد"}
-          </DialogTitle>
-          <DialogDescription>
-            {draft
-              ? "راجع التفاصيل، ثم افتح واتساب لإرسال الطلب وترتيب العرض."
-              : "أخبرنا قليلًا عن مؤسستك، لنرتّب عرضًا يناسب احتياجك."}
-          </DialogDescription>
-        </DialogHeader>
-        {draft ? (
-          <div className="request-review">
-            <dl>
-              <div>
-                <dt>الاسم</dt>
-                <dd>{draft.name}</dd>
-              </div>
-              <div>
-                <dt>المؤسسة</dt>
-                <dd>{draft.club}</dd>
-              </div>
-              <div>
-                <dt>الفروع</dt>
-                <dd>{draft.branches}</dd>
-              </div>
-              <div>
-                <dt>الباقة</dt>
-                <dd>{draft.plan}</dd>
-              </div>
-            </dl>
-            <a
-              href={
-                "https://wa.me/" +
-                salesPhone +
-                "?text=" +
-                encodeURIComponent(message)
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonVariants({ size: "marketing" })}
-            >
-              <MessageCircle data-icon="inline-start" /> متابعة عبر واتساب{" "}
-              <ArrowUpLeft data-icon="inline-end" />
-            </a>
-            <div className="review-actions">
-              <Button
-                variant="ghost"
-                onClick={() => {
-                  setEditingDraft(draft);
-                  setDraft(null);
-                  setCopyStatus("");
-                }}
-              >
-                تعديل التفاصيل
-              </Button>
-              <Button variant="outline" onClick={copyRequest}>
-                <Copy data-icon="inline-start" />
-                نسخ الطلب
-              </Button>
-            </div>
-            {copyStatus && (
-              <Alert>
-                <AlertDescription>{copyStatus}</AlertDescription>
-              </Alert>
-            )}
-            <p className="form-note">الطلب يُرسل عندما تضغط إرسال في واتساب.</p>
-          </div>
-        ) : (
-          <form onSubmit={submit} noValidate ref={formRef}>
-            <FieldGroup>
-              <Field data-invalid={Boolean(errors.name)}>
-                <FieldLabel htmlFor="demo-name">اسمك</FieldLabel>
-                <Input
-                  id="demo-name"
-                  name="name"
-                  defaultValue={editingDraft?.name}
-                  autoComplete="name"
-                  placeholder="كيف نناديك؟"
-                  required
-                  maxLength={80}
-                  aria-invalid={Boolean(errors.name)}
-                  aria-describedby={errors.name ? "name-error" : undefined}
-                />
-                {errors.name && (
-                  <FieldError id="name-error">{errors.name}</FieldError>
-                )}
-              </Field>
-              <Field data-invalid={Boolean(errors.club)}>
-                <FieldLabel htmlFor="demo-club">
-                  اسم المؤسسة الرياضية
-                </FieldLabel>
-                <Input
-                  id="demo-club"
-                  name="club"
-                  defaultValue={editingDraft?.club}
-                  autoComplete="organization"
-                  placeholder="اسم النادي أو المركز"
-                  required
-                  maxLength={120}
-                  aria-invalid={Boolean(errors.club)}
-                  aria-describedby={errors.club ? "club-error" : undefined}
-                />
-                {errors.club && (
-                  <FieldError id="club-error">{errors.club}</FieldError>
-                )}
-              </Field>
-              <FieldGroup className="form-columns">
-                <Field>
-                  <FieldLabel htmlFor="demo-branches">عدد الفروع</FieldLabel>
-                  <NativeSelect
-                    id="demo-branches"
-                    name="branches"
-                    defaultValue={editingDraft?.branches}
-                  >
-                    <NativeSelectOption>فرع واحد</NativeSelectOption>
-                    <NativeSelectOption>فرعان</NativeSelectOption>
-                    <NativeSelectOption>٣ فروع</NativeSelectOption>
-                    <NativeSelectOption>أكثر من ٣ فروع</NativeSelectOption>
-                    <NativeSelectOption>أخطط لافتتاح مؤسسة</NativeSelectOption>
-                  </NativeSelect>
-                </Field>
-                <Field>
-                  <FieldLabel htmlFor="demo-plan">
-                    الباقة محل الاهتمام
-                  </FieldLabel>
-                  <NativeSelect
-                    id="demo-plan"
-                    name="plan"
-                    defaultValue={editingDraft?.plan ?? initialPlan}
-                  >
-                    <NativeSelectOption>
-                      أحتاج مساعدة في الاختيار
-                    </NativeSelectOption>
-                    {plans.map((plan) => (
-                      <NativeSelectOption key={plan.name}>
-                        {plan.name}
-                      </NativeSelectOption>
-                    ))}
-                    <NativeSelectOption>شراكة تقنية</NativeSelectOption>
-                  </NativeSelect>
-                </Field>
-              </FieldGroup>
-              <Field>
-                <Button type="submit" size="marketing" className="w-full">
-                  راجع طلب العرض <ArrowLeft data-icon="inline-end" />
-                </Button>
-                <FieldDescription>
-                  التفاصيل التي تدخلها تُشارك معنا عبر واتساب عند إرسال الطلب.
-                </FieldDescription>
-              </Field>
-            </FieldGroup>
-          </form>
-        )}
-      </DialogContent>
-    </Dialog>
-  );
-}
-
 export function LandingPage({ articles }: { articles: ReactNode }) {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [demoOpen, setDemoOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState("أحتاج مساعدة في الاختيار");
-  const menuToggleRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    if (!menuOpen) return;
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMenuOpen(false);
-        menuToggleRef.current?.focus();
-      }
-    };
-    document.addEventListener("keydown", closeOnEscape);
-    return () => document.removeEventListener("keydown", closeOnEscape);
-  }, [menuOpen]);
-
-  function openDemo(plan = "أحتاج مساعدة في الاختيار") {
-    setSelectedPlan(plan);
-    setDemoOpen(true);
-    setMenuOpen(false);
-  }
-
   return (
-    <DirectionProvider direction="rtl">
+    <LandingDemo>
       <div className="landing">
         <a className="skip-link" href="#main">
           انتقل إلى المحتوى
         </a>
-        <header className="site-header">
-          <div className="container header-inner">
-            <a href="#home" className="brand-link" aria-label="نرفد — الرئيسية">
-              <Brand />
-            </a>
-            <nav className="desktop-nav" aria-label="القائمة الرئيسية">
-              {navigation.map((item) => (
-                <a key={item.href} href={item.href}>
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-            <div className="header-actions">
-              <Link href="/login" className="board-login-link">
-                دخول الإدارة
-              </Link>
-              <Button size="navigation" data-analytics="demo_request_start" onClick={() => openDemo()}>
-                احجز عرضًا توضيحيًا <ArrowUpLeft data-icon="inline-end" />
-              </Button>
-              <Button
-                ref={menuToggleRef}
-                variant="ghost"
-                size="icon-lg"
-                className="menu-toggle"
-                aria-label={menuOpen ? "أغلق القائمة" : "افتح القائمة"}
-                aria-expanded={menuOpen}
-                aria-controls="mobile-nav"
-                onClick={() => setMenuOpen(!menuOpen)}
-              >
-                {menuOpen ? <X /> : <Menu />}
-              </Button>
-            </div>
-          </div>
-          {menuOpen && (
-            <nav
-              className="mobile-nav container"
-              id="mobile-nav"
-              aria-label="قائمة الجوال"
-            >
-              {navigation.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                  <ArrowUpLeft />
-                </a>
-              ))}
-              <Link href="/login" onClick={() => setMenuOpen(false)}>
-                دخول الإدارة
-                <ArrowUpLeft />
-              </Link>
-            </nav>
-          )}
-        </header>
+        <LandingHeader brand={<Brand />} />
 
         <main id="main">
           <section className="hero container" id="home">
@@ -581,9 +237,9 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                 وحجوزاتك ومبيعاتك وتشغيلك اليومي. لتمنح ناديك وقتًا أكبر للنمو.
               </p>
               <div className="hero-actions">
-                <Button size="marketing" data-analytics="demo_request_start" onClick={() => openDemo()}>
+                <DemoButton size="marketing" data-analytics="demo_request_start">
                   خلّنا نرفد ناديك <ArrowUpLeft data-icon="inline-end" />
-                </Button>
+                </DemoButton>
                 <a
                   href="#platform"
                   className={buttonVariants({
@@ -787,7 +443,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
             </div>
           </section>
 
-          <MemberAppSection onRequest={() => openDemo("شراكة تقنية")} />
+          <MemberAppSection />
           <IdentityServiceSection />
 
           <section
@@ -866,15 +522,15 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                       </ul>
                     </CardContent>
                     <CardFooter>
-                      <Button
+                      <DemoButton
                         size="marketing"
                         variant={plan.recommended ? "default" : "outline"}
                         className="w-full"
-                        onClick={() => openDemo(plan.name)}
+                        plan={plan.name}
                       >
                         {plan.cta}
                         <ArrowUpLeft data-icon="inline-end" />
-                      </Button>
+                      </DemoButton>
                     </CardFooter>
                   </Card>
                 </div>
@@ -920,14 +576,14 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
               <div className="enterprise-action">
                 <strong>حسب نطاق المشروع</strong>
                 <span>خدمات مخصصة تضاف إلى اشتراك المنصة</span>
-                <Button
+                <DemoButton
                   variant="outline"
                   size="marketing"
-                  onClick={() => openDemo("شراكة تقنية")}
+                  plan="شراكة تقنية"
                 >
                   ناقش مشروعك معنا
                   <ArrowUpLeft data-icon="inline-end" />
-                </Button>
+                </DemoButton>
               </div>
             </div>
           </section>
@@ -1027,10 +683,10 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
               </h2>
               <p>خلّنا نريك كيف يمكن لنرفد أن يخدم مؤسستك.</p>
             </div>
-            <Button size="marketing" data-analytics="demo_request_start" onClick={() => openDemo()}>
+            <DemoButton size="marketing" data-analytics="demo_request_start">
               احجز عرضًا توضيحيًا
               <ArrowUpLeft data-icon="inline-end" />
-            </Button>
+            </DemoButton>
           </section>
         </main>
 
@@ -1066,9 +722,9 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                 واتساب
                 <ArrowUpLeft />
               </a>
-              <Button variant="link" onClick={() => openDemo()}>
+              <DemoButton variant="link">
                 احجز عرضًا توضيحيًا
-              </Button>
+              </DemoButton>
             </div>
             <div className="footer-statement">
               <span dir="ltr">narfid</span>
@@ -1090,12 +746,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
             </a>
           </div>
         </footer>
-        <DemoDialog
-          open={demoOpen}
-          onOpenChange={setDemoOpen}
-          initialPlan={selectedPlan}
-        />
       </div>
-    </DirectionProvider>
+    </LandingDemo>
   );
 }
