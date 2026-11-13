@@ -1,5 +1,4 @@
-import { readFile, stat } from "node:fs/promises";
-import { join } from "node:path";
+import { readServerAsset, serverAssetExists } from "@/lib/server-assets";
 import { Readable } from "node:stream";
 import { Zip, ZipPassThrough } from "fflate";
 import {
@@ -25,7 +24,7 @@ export function marketingArchiveFiles(
     );
 }
 
-async function* archiveChunks(root: string, files: string[]) {
+async function* archiveChunks(files: string[]) {
   const pending: Uint8Array[] = [];
   const zip = new Zip((error, bytes) => {
     if (error) throw error;
@@ -35,7 +34,7 @@ async function* archiveChunks(root: string, files: string[]) {
     // PNGs are already compressed. Store them verbatim; read only one file at
     // a time and yield before proceeding so a slow download applies backpressure.
     for (const name of files) {
-      const bytes = await readFile(join(root, name));
+      const bytes = await readServerAsset(`content/marketing/assets/${name}`);
       const entry = new ZipPassThrough(name);
       zip.add(entry);
       entry.push(bytes, true);
@@ -53,16 +52,16 @@ export async function createMarketingArchive(
   platform: PlatformId | "all",
   excluded = new Set<string>(),
 ) {
-  const root = join(process.cwd(), "content/marketing/assets");
   const files = marketingArchiveFiles(platform, excluded);
   // Fail before sending a successful response if an export is incomplete.
-  await Promise.all(
-    files.map(async (name) => {
-      if (!(await stat(join(root, name))).isFile())
-        throw new Error("Missing marketing asset");
-    }),
-  );
-  const source = Readable.from(archiveChunks(root, files), {
+  // Bound concurrent binding requests as well as open file descriptors.
+  for (let index = 0; index < files.length; index += 4) {
+    await Promise.all(files.slice(index, index + 4).map(async (name) => {
+      if (!(await serverAssetExists(`content/marketing/assets/${name}`)))
+        throw new Error(`Missing marketing asset: ${name}`);
+    }));
+  }
+  const source = Readable.from(archiveChunks(files), {
     objectMode: false,
     highWaterMark: 64 * 1024,
   });

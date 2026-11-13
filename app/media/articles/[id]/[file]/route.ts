@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/server";
 import { UUID_RE } from "@/lib/articles/types";
-import sharp from "sharp";
+import { resizeArticleImage } from "@/lib/articles/image-processing";
 type Context = { params: Promise<{ id: string; file: string }> };
 export async function GET(request: Request, context: Context) {
   const { id, file } = await context.params;
@@ -33,7 +33,7 @@ export async function GET(request: Request, context: Context) {
   let contentType = types[file.split(".")[1]];
   if (width && !file.endsWith(".gif")) {
     try {
-      body = new Uint8Array(await sharp(await data.arrayBuffer(), { limitInputPixels: 40000000 }).rotate().resize({ width: Number(width), withoutEnlargement: true }).webp({ quality: 82 }).toBuffer());
+      body = await resizeArticleImage(new Uint8Array(await data.arrayBuffer()), Number(width));
       contentType = "image/webp";
     } catch { return new Response(null, { status: 422, headers: { "Cache-Control": "private, no-store" } }); }
   }

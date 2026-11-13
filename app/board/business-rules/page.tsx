@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { readServerAsset } from "@/lib/server-assets";
 import { Suspense } from "react";
 import { requireBoardMember } from "@/lib/auth/session";
 import { BusinessRulesGuide } from "@/components/board/business-rules-guide";
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 
 async function BusinessRulesPage() {
   await requireBoardMember();
-  const sourceText = await readFile(path.join(process.cwd(), "BUSINESS_LOGIC.md"), "utf8");
+  const sourceText = (await readServerAsset("BUSINESS_LOGIC.md")).toString("utf8");
   return <BusinessRulesGuide sourceText={sourceText} />;
 }
 

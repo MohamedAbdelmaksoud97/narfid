@@ -1,5 +1,4 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
+import { readServerAsset } from "@/lib/server-assets";
 import { marketingAccess } from "@/lib/marketing/server";
 import { createMarketingArchive } from "@/lib/marketing/archive";
 import { createClient } from "@/lib/server";
@@ -85,9 +84,7 @@ export async function GET(
         },
       );
     }
-    const data = await readFile(
-      join(process.cwd(), "content/marketing/assets", ...asset),
-    );
+    const data = await readServerAsset(`content/marketing/assets/${asset.join("/")}`);
     const name = asset.at(-1)!;
     const type = name.endsWith(".zip")
       ? "application/zip"
@@ -112,7 +109,11 @@ export async function GET(
           : {}),
       },
     });
-  } catch {
+  } catch (error) {
+    console.error(JSON.stringify({
+      message: "marketing_asset_failed",
+      error: error instanceof Error ? error.message : "Unknown error",
+    }));
     return Response.json(
       { error: "تعذر تحميل الملف. حاول مرة أخرى." },
       { status: 503, headers },

@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import sharp from "sharp";
+import { inspectArticleImage } from "@/lib/articles/image-processing";
 import { articleSession, loadArticle } from "@/lib/articles/server";
 import {
   failure,
@@ -32,19 +32,7 @@ export async function POST(request: Request, context: Context) {
       throw new ArticleError("ارفع صورة PNG أو JPG أو WebP أو GIF صالحة.");
     let width: number; let height: number;
     try {
-      const decoder = sharp(body, { limitInputPixels: 40000000, pages: 1 });
-      const metadata = await decoder.metadata();
-      if (
-        !metadata.width ||
-        !metadata.height ||
-        metadata.width > 10000 ||
-        metadata.height > 10000
-      )
-        throw new Error("Image dimensions");
-      await decoder.stats(); // Decode pixels too; a valid-looking header is insufficient.
-      const rotated = [5, 6, 7, 8].includes(metadata.orientation ?? 1);
-      width = rotated ? metadata.height : metadata.width;
-      height = rotated ? metadata.width : metadata.height;
+      ({ width, height } = await inspectArticleImage(body));
     } catch {
       throw new ArticleError("ملف الصورة تالف أو أبعاده أكبر من المسموح.");
     }
