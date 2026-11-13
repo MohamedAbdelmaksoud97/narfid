@@ -43,6 +43,17 @@ Go Fitness is the reference system/customer, not the public product name. No cus
 - Credentials stay in `.private` and environment files, never in SEO state. Use the authorized chairman for board inspection. No schema changes, article reimports, or publishing test records in this run.
 - The referenced `UI-system/SKILL.md` could not be found in repository or local skill roots. This run changes existing guide data only and reuses the existing rendering/styles; no new UI components or visual rules.
 
+### Workers Free publication model — 2026-11-13
+
+The owner explicitly accepts a few minutes for public changes after an automatic
+build, while unpublishing must block article access immediately. Current public
+HTML/Flight snapshots and responsive image variants are built from publications
+only. Article requests retain the live slug/publication gate; image requests
+retain storage RLS. The editor queues a server-only deploy hook and offers a
+build-only retry without repeating publication. Direct RPC batch importers must
+queue a build after their authorized batch. Board/API routes stay dynamic and
+private. See `docs/workers-free-rendering.md` and the dated follow-up report.
+
 ## Research, mapping and interpretation
 
 - Preserve `content/seo-campaign/{keywords,research-log,initial-assessments,briefs}.json` and the opportunity register `.agents/skills/narfid-seo/references/keyword-opportunities.json` as the research sources. Existing campaign dates remain 2026-10-21. New focused competitor research is registered as `research-20261112-autopilot-setup`.

@@ -20,7 +20,9 @@ alone was insufficient.
   binding. Production prerenders retain the official canonical host and indexing
   policy; preview builds remain noindex.
 - `/articles?page=n` is internally rewritten to a prerenderable page parameter.
-  Existing public URLs, pagination links and canonical URLs remain the same.
+  The production Worker resolves that alias before vinext's rewrite cache-key
+  namespacing, allowing the generated HTML/Flight entry to be reused. Existing
+  public URLs, pagination links and canonical URLs remain the same.
 - Publishing commits through the existing validated RPC, then queues a production
   deploy hook. The editor reports queued/failed status and can retry only the
   build. A build failure leaves the previous deployment serving. Check Workers
