@@ -18,6 +18,7 @@ import type {
 const history = new Map<string, AnalyticsReport>();
 const realtime = new Map<string, AnalyticsRealtime>();
 const pending = new Map<string, Promise<AnalyticsReport | AnalyticsRealtime>>();
+const historyFailures = new Map<string, { retryAt: number; message: string }>();
 
 async function context(country: SearchCountry) {
   const connection = await loadConnection();
@@ -67,12 +68,20 @@ export async function loadAnalytics(
   };
   if (!connected || !connection) return dashboard;
   dashboard.report = history.get(key) || null;
+  // Both countries share the property's Core quota. Realtime has its own quota.
+  const failureKey = `${connection.generation}:${ANALYTICS_PROPERTY}`;
+  const recentFailure = historyFailures.get(failureKey);
+  const ttl = force ? 60000 : 300000;
   try {
     dashboard.report = await cached(
       history,
       key,
-      force ? 60000 : 300000,
+      ttl,
       async () => {
+        if (recentFailure && recentFailure.retryAt > Date.now()) {
+          throw new SearchConsoleError(recentFailure.message, 503, "analytics_backoff");
+        }
+        historyFailures.delete(failureKey);
         const report = await fetchAnalyticsReport(
           await accessToken(connection),
           country,
@@ -94,6 +103,17 @@ export async function loadAnalytics(
     dashboard.reconnectRequired =
       error instanceof SearchConsoleError &&
       error.code === "reconnect_required";
+    if (error instanceof SearchConsoleError &&
+        (error.code === "google_unavailable" || error.code === "google_quota")) {
+      dashboard.error = error.code === "google_quota"
+        ? "بلغت التقارير التاريخية حد طلبات Google مؤقتًا. حاول التحديث بعد دقيقة."
+        : "تعذر تحميل التقرير التاريخي من Google. حاول التحديث بعد دقيقة.";
+      if (historyFailures.size >= 8) historyFailures.clear();
+      historyFailures.set(failureKey, {
+        retryAt: Date.now() + 60000,
+        message: dashboard.error,
+      });
+    }
   }
   return dashboard;
 }
