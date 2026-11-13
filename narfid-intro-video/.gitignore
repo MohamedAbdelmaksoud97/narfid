@@ -9,3 +9,4 @@ out
 build
 # Intermediate PCM file; the mastered stereo MP3 is the composition asset.
 public/director-score.wav
+public/club-day/audio/score.wav

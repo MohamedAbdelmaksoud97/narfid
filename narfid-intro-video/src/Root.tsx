@@ -47,8 +47,91 @@ import { GateDecisions } from "./gates/Decisions";
 import { GateLog } from "./gates/Log";
 import { GateAssessment } from "./gates/Assessment";
 import { GateClosing } from "./gates/Closing";
+import { ClubDayFilm } from "./club-day/Film";
+import { ClubDayOpening } from "./club-day/Opening";
+import { ClubDayEnter } from "./club-day/Enter";
+import { ClubDayMembership } from "./club-day/Membership";
+import { ClubDayBooking } from "./club-day/Booking";
+import { ClubDayCollection } from "./club-day/Collection";
+import { ClubDayTogether } from "./club-day/Together";
+import { ClubDayPromise } from "./club-day/Promise";
+import { ClubDayClosing } from "./club-day/Closing";
 export const RemotionRoot = () => (
   <>
+    <Composition
+      id="NarfidClubDay"
+      component={ClubDayFilm}
+      width={1920}
+      height={1080}
+      fps={30}
+      durationInFrames={1800}
+    />
+    <Folder name="Club-Day-Scenes">
+      <Composition
+        id="ClubDayOpening"
+        component={ClubDayOpening}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={180}
+      />
+      <Composition
+        id="ClubDayEnter"
+        component={ClubDayEnter}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={180}
+      />
+      <Composition
+        id="ClubDayMembership"
+        component={ClubDayMembership}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={270}
+      />
+      <Composition
+        id="ClubDayBooking"
+        component={ClubDayBooking}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={270}
+      />
+      <Composition
+        id="ClubDayCollection"
+        component={ClubDayCollection}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={270}
+      />
+      <Composition
+        id="ClubDayTogether"
+        component={ClubDayTogether}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={240}
+      />
+      <Composition
+        id="ClubDayPromise"
+        component={ClubDayPromise}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={210}
+      />
+      <Composition
+        id="ClubDayClosing"
+        component={ClubDayClosing}
+        width={1920}
+        height={1080}
+        fps={30}
+        durationInFrames={180}
+      />
+    </Folder>
     <Composition
       id="NarfidProductLaunch"
       component={ProductLaunchFilm}

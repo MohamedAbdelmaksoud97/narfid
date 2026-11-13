@@ -1,0 +1,49 @@
+{
+  "createdOn": "2026-11-14",
+  "composition": "NarfidClubDay",
+  "webRevision": "d3efa7e870e143539e35a4c86cdd1f8b0b7e0d87",
+  "backendRevision": "80ec3c75d13bdcae26c2cee9d27b4a6423b8f546",
+  "database": "Disposable in-memory PGlite, versioned local migrations, real services, repositories, HTTP API and Next BFF",
+  "authentication": "Random test-only local token verifier",
+  "network": "Loopback socket and fetch guard; local-only CSP; Playwright interception; service workers blocked",
+  "remoteRequestsBlocked": [
+    "https://bugs.remotion.dev"
+  ],
+  "productionAccess": false,
+  "people": "Fictional members سلمان الحربي and خالد القحطاني; fictional staff عبدالله العتيبي; فرع العليا",
+  "assets": [
+    {
+      "file": "member-before.jpg",
+      "route": "/subscriptions",
+      "state": "Active original subscription, before renewal"
+    },
+    {
+      "file": "member-renew.jpg",
+      "route": "/subscriptions",
+      "state": "Real renewal confirmation dialog"
+    },
+    {
+      "file": "member-after.jpg",
+      "route": "/members/[fictional-member]/renewals tab",
+      "state": "Persisted renewal after full invoice payment; scheduled future term"
+    },
+    {
+      "file": "booking-form.jpg",
+      "route": "/bookings",
+      "state": "Operational complimentary class booking, actual slot and available capacity"
+    },
+    {
+      "file": "booking-confirmed.jpg",
+      "route": "/bookings",
+      "state": "Same fictional member booking persisted as CONFIRMED"
+    },
+    {
+      "file": "invoice.jpg",
+      "route": "/finance/invoices/[fictional-invoice]",
+      "state": "Membership invoice SAR 1000; allocated collection SAR 650; remaining SAR 350"
+    }
+  ],
+  "editorial": "Camera pans, crossfades, pointer and highlights overlay real captured UI; condensed actions, not an uninterrupted screencast. Renewal payment occurs between captures. Complimentary reservation and membership invoice are separate transactions, not one billed booking.",
+  "identity": "Original Narfid Arabic logo; Tajawal bundled locally. GO prefixes removed from displayed demo member numbers only; no underlying business record altered by browser styling.",
+  "audio": "audio/provenance.json"
+}

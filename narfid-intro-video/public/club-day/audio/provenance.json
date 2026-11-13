@@ -1,0 +1,11 @@
+{
+  "createdOn": "2026-11-13",
+  "generator": "scripts/make-club-day-audio.mjs",
+  "originalComposition": true,
+  "bpm": 90,
+  "sampleRate": 48000,
+  "channels": 2,
+  "externalSamples": false,
+  "voiceover": false,
+  "description": "Original warm electric-piano arrangement, restrained bass/percussion, interface accents and three-note sonic ending."
+}
