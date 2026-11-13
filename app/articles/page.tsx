@@ -20,6 +20,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { pageMetadata } from "@/lib/seo";
 import { imageSrcSet, imageVariant } from "@/lib/articles/media";
 import { PublicFooter } from "@/components/public/public-page";
+import { publicationDate } from "@/lib/articles/dates";
 type Props = { searchParams: Promise<{ page?: string | string[] }> };
 export async function generateMetadata({
   searchParams,
@@ -90,9 +91,7 @@ async function Library({ searchParams }: Props) {
                 )}
                 <div>
                   <span>
-                    {new Intl.DateTimeFormat("ar-SA", {
-                      dateStyle: "medium",
-                    }).format(new Date(article.published_at))}
+                    {publicationDate(article.published_at)}
                   </span>
                   <h2>{article.title}</h2>
                   <p>{article.excerpt}</p>

@@ -1,7 +1,6 @@
 import { createElement } from "react";
-import { renderToReactElement } from "@tiptap/static-renderer/pm/react";
 import type { JSONContent } from "@tiptap/core";
-import { articleExtensions } from "@/lib/articles/extensions";
+import { renderArticleContent } from "@/lib/articles/static-renderer";
 import { articleHeadings } from "@/lib/articles/editorial";
 import { imageSrcSet, imageVariant } from "@/lib/articles/media";
 import {
@@ -25,10 +24,8 @@ export function ArticleRenderer({
   }
   const headings = articleHeadings(safe);
   let headingIndex = 0;
-  const element = renderToReactElement({
+  const element = renderArticleContent({
     content: safe,
-    extensions: articleExtensions(),
-    staticEditorOptions: { textDirection: "auto" },
     options: {
       nodeMapping: {
         heading: ({ node, children }) =>

@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import { landingPublicationDate } from "@/lib/articles/dates";
 import { ArrowUpLeft, BookOpen } from "lucide-react";
 import { publicClient } from "@/lib/articles/server";
 import { imageSrcSet, imageVariant } from "@/lib/articles/media";
@@ -115,10 +116,7 @@ async function LatestArticleCards() {
               <CardHeader>
                 <CardDescription className="landing-article-meta">
                   <time dateTime={article.published_at}>
-                    {new Intl.DateTimeFormat("ar-SA", {
-                      dateStyle: "medium",
-                      timeZone: "Asia/Riyadh",
-                    }).format(new Date(article.published_at))}
+                    {landingPublicationDate(article.published_at)}
                   </time>
                   {article.tags?.[0] && (
                     <Badge variant="secondary">{article.tags[0]}</Badge>

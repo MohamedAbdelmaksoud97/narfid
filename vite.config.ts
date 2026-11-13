@@ -1,5 +1,6 @@
 import { defineConfig, type UserConfig } from "vite";
 import vinext from "vinext";
+import { staticAssetsAdapter } from "@vinext/cloudflare/cache/static-assets-adapter";
 import { cloudflare } from "@cloudflare/vite-plugin";
 import tailwindcss from "@tailwindcss/vite";
 import { cp, mkdir } from "node:fs/promises";
@@ -29,7 +30,10 @@ export default defineConfig(({ command, isPreview }): UserConfig => {
     },
     plugins: [
       tailwindcss(),
-      vinext(),
+      vinext({
+        prerender: true,
+        cache: { cdn: staticAssetsAdapter() },
+      }),
       ...(workers
         ? cloudflare({
             // Keep workerd's global DOM declarations out of the browser typecheck.

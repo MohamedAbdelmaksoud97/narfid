@@ -3,6 +3,13 @@ import { articleExtensions } from "./extensions";
 import { UUID_RE, documentText, youtubeId, type ArticleFields } from "./types";
 import { solutions } from "@/lib/solutions";
 
+// The editor schema is immutable; rebuilding it on every read wastes the
+// Workers Free request budget. Documents are still checked on every call.
+let schema: ReturnType<typeof getSchema> | undefined;
+function documentSchema() {
+  return (schema ??= getSchema(articleExtensions()));
+}
+
 export class ArticleError extends Error {
   constructor(
     message: string,
@@ -221,7 +228,7 @@ export function validateDocument(
   if (new TextEncoder().encode(JSON.stringify(doc)).length > 800000)
     throw new ArticleError("المقال أكبر من الحد المسموح.");
   try {
-    getSchema(articleExtensions()).nodeFromJSON(doc).check();
+    documentSchema().nodeFromJSON(doc).check();
   } catch {
     throw new ArticleError("ترتيب عناصر المقال غير صالح.");
   }

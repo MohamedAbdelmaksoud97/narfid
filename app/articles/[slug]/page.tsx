@@ -19,6 +19,7 @@ import { imageSrcSet, imageVariant } from "@/lib/articles/media";
 import { RelatedArticles } from "@/components/articles/related-articles";
 import { ContactCta, PublicFooter } from "@/components/public/public-page";
 import { solutionBySlug } from "@/lib/solutions";
+import { publicationDate } from "@/lib/articles/dates";
 const getArticle = cache(getPublication);
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -107,10 +108,7 @@ async function PublishedArticle({ params }: Props) {
             <div className="article-public-meta">
               <Link href={publicAuthor.path}>{publicAuthor.name}</Link>
               <time dateTime={article.published_at}>
-                {new Intl.DateTimeFormat(
-                  article.direction === "rtl" ? "ar-SA" : "en",
-                  { dateStyle: "long" },
-                ).format(new Date(article.published_at))}
+                {publicationDate(article.published_at, "long", article.direction)}
               </time>
               <span>
                 {reading}{" "}
