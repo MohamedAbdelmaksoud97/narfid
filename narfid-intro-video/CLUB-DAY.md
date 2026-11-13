@@ -61,13 +61,13 @@ Delivery stays local. This film is outside NV-001–NV-050; no board record, web
 
 ## Quiet music revision
 
-The local cut uses the first minute of Liborio Conti’s “Baila Conmigo” instrumental at a Remotion volume of 0.054. The source is 5.14 LU quieter than the previous track over the first minute, so this gain keeps the music at approximately the same quiet background level. The music fades in over 1.25 seconds and out over the last three seconds. The original sound effects retain their timing and gain. Studio and renders play the effects alone when the local music file is absent.
+The local cut uses the first minute of Liborio Conti’s “Baila Conmigo” instrumental at a Remotion volume of 0.027, 6 dB lower than the previous mix. The music fades in over 1.25 seconds and out over the last three seconds. The original sound effects retain their timing and gain. Studio and renders play the effects alone when the local music file is absent.
 
 ```powershell
 Copy-Item -LiteralPath 'F:/saas/Baila-Conmigo-Free-No-Copyright-Music-by-Liborio-Conti-02-Baila-Conmigo-Instrumental.mp3' -Destination 'public/club-day/audio/local-background.mp3'
 npm run build
-npx remotion render build NarfidClubDay out/club-day-qa/baila-conmigo-mix.wav --codec=wav --timeout=120000
-& node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe -y -i out/narfid-club-day-master.mp4 -i out/club-day-qa/baila-conmigo-mix.wav -map 0:v:0 -map 1:a:0 -c:v copy -af 'volume=7.87dB' -c:a aac -b:a 192k -ar 48000 -t 60 -movflags +faststart out/narfid-club-day-baila-conmigo.mp4
+npx remotion render build NarfidClubDay out/club-day-qa/baila-conmigo-softer-mix.wav --codec=wav --timeout=120000
+& node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe -y -i out/narfid-club-day-master.mp4 -i out/club-day-qa/baila-conmigo-softer-mix.wav -map 0:v:0 -map 1:a:0 -c:v copy -af 'volume=7.87dB' -c:a aac -b:a 192k -ar 48000 -t 60 -movflags +faststart out/narfid-club-day-baila-conmigo-softer.mp4
 ```
 
-The export uses the same 7.87 dB mastering gain as the original cut to preserve the level of the effects. All 1,800 video packet hashes matched the original master. The 60-second MP4 passed a full decode at 1920×1080 and 30 fps with 48 kHz stereo AAC. The mix measured −29.60 LUFS integrated and −11.42 dBTP.
+The export uses the same 7.87 dB mastering gain as the original cut to preserve the level of the effects. All 1,800 video packet hashes matched the original master, and the 60-second MP4 passed a full decode at 1920×1080 and 30 fps. In the sample from seconds 30–32, the mix measured −36.59 LUFS, compared with −31.78 LUFS in the previous export.

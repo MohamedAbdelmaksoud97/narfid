@@ -97,7 +97,7 @@ export const ClubDayFilm = () => {
             interpolate(
               frame,
               [0, 1.25 * fps, 57 * fps, 60 * fps],
-              [0, 0.054, 0.054, 0],
+              [0, 0.027, 0.027, 0],
               clamp,
             )
           }
