@@ -33,7 +33,9 @@ export async function googleJson(
     response = await fetcher(url, {
       ...init,
       cache: "no-store",
-      redirect: "error",
+      // Workers supports manual redirects; non-2xx responses below still fail
+      // without forwarding OAuth credentials or bearer tokens to another URL.
+      redirect: "manual",
       signal: AbortSignal.timeout(15000),
     });
   } catch {

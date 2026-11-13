@@ -1,6 +1,17 @@
 # SEO autopilot — narfid
 
-Last verified: 2026-11-12. First setup run; no earlier autopilot baseline.
+Last daily run: 2026-11-13. Setup baseline: 2026-11-12.
+
+## Daily update — 2026-11-13
+
+- Production moved to Cloudflare Workers/vinext; `cloudflare.config.ts` and `README.md` now own deployment facts. Normal pushes to `master` trigger Workers Builds. Prior Vercel deployment references below describe the dated setup baseline.
+- Current crawl: 71 sitemap URLs, 76 discovered pages. Seventeen pages encountered HTTP 503; two still failed after three attempts. Workers logs identify `exceededCpu`, not missing metadata, as the observed runtime failure. Do not declare the site healthy or these failed pages orphaned/thin. See `reports/2026-11-13-health.json` and `reports/2026-11-13-runtime.json`.
+- Local system DNS still returned old Vercel IPs (HTTP 402), while 1.1.1.1, 8.8.8.8 and authoritative Cloudflare DNS returned Cloudflare IPs. Verification retained TLS hostname and scoped resolution to those site hosts; no DNS records or machine configuration changed. This sample does not establish worldwide propagation.
+- Fixed the Google report transport: Workers rejects `redirect: "error"`; use `manual`, with existing non-2xx rejection preventing redirects or credential forwarding. No Google settings or scopes changed.
+- Existing authorized Google connection read directly using repository functions: GSC 2026-10-16–2026-11-12, latest returned day 2026-11-10; global 3 impressions/1 click, Saudi 1 impression/0 clicks; no query rows or previous-period totals. GA4 direct requests unavailable. See `reports/2026-11-13-metrics.json`; do not reuse yesterday's GA4 as today's measurement.
+- `cf accounts subscriptions get` returned no account subscriptions; current Worker reports `usage_model: standard` without a custom limit. CPU-limit mitigation remains P0. Do not silently upgrade billing, cache private board responses, or loosen authentication to address it.
+- Commits since setup changed hosting, images, JavaScript delivery and video handling; `lib/landing-content.ts`, `lib/solutions.ts` and `lib/identity-service.ts` have no intervening product/price/scope changes. No fact correction needed.
+- Weekly and monthly work remain due on 2026-11-19 and 2026-12-12. No automation created.
 
 Site: https://www.narfid.com
 Product: مزوّد تقني للمؤسسات الرياضية في السعودية، بمنصة تربط العضويات والاشتراكات والحجوزات والتحصيل والمبيعات والوجبات ومخزون المنتجات والفروع.

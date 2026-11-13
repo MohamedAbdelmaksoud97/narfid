@@ -1,0 +1,127 @@
+{
+  "retrievedAt": "2026-11-13T12:39:11.009Z",
+  "source": "Existing authorized Google connection; direct read-only APIs using repository reporting functions while deployed endpoint is broken",
+  "reports": {
+    "google_all": {
+      "status": 200,
+      "report": {
+        "country": "all",
+        "currentPeriod": {
+          "startDate": "2026-10-16",
+          "endDate": "2026-11-12"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-18",
+          "endDate": "2026-10-15"
+        },
+        "current": {
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 6.666666666666667
+        },
+        "previous": null,
+        "trend": [
+          {
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0,
+            "position": 0,
+            "key": "2026-11-09"
+          },
+          {
+            "clicks": 1,
+            "impressions": 3,
+            "ctr": 0.3333333333333333,
+            "position": 6.666666666666667,
+            "key": "2026-11-10"
+          }
+        ],
+        "queries": [],
+        "pages": [
+          {
+            "clicks": 1,
+            "impressions": 2,
+            "ctr": 0.5,
+            "position": 6.5,
+            "key": "https://www.narfid.com/articles/academy-makeup-session-policy"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 7,
+            "key": "https://www.narfid.com/articles/gym-lost-property-register"
+          }
+        ],
+        "devices": [
+          {
+            "clicks": 1,
+            "impressions": 3,
+            "ctr": 0.3333333333333333,
+            "position": 6.666666666666667,
+            "key": "MOBILE"
+          }
+        ],
+        "fetchedAt": "2026-11-13T12:39:11.010Z",
+        "lastDataDate": "2026-11-10"
+      }
+    },
+    "analytics_all": {
+      "error": "تعذر الاتصال بـGoogle الآن. حاول لاحقًا."
+    },
+    "google_sau": {
+      "status": 200,
+      "report": {
+        "country": "sau",
+        "currentPeriod": {
+          "startDate": "2026-10-16",
+          "endDate": "2026-11-12"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-18",
+          "endDate": "2026-10-15"
+        },
+        "current": {
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        "previous": null,
+        "trend": [
+          {
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0,
+            "position": 0,
+            "key": "2026-11-09"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 7,
+            "key": "2026-11-10"
+          }
+        ],
+        "queries": [],
+        "pages": [],
+        "devices": [
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 7,
+            "key": "MOBILE"
+          }
+        ],
+        "fetchedAt": "2026-11-13T12:39:27.526Z",
+        "lastDataDate": "2026-11-10"
+      }
+    },
+    "analytics_sau": {
+      "error": "تعذر الاتصال بـGoogle الآن. حاول لاحقًا."
+    }
+  }
+}

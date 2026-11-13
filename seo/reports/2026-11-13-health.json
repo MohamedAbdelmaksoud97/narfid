@@ -1,0 +1,3814 @@
+{
+  "checkedAt": "2026-11-13T12:40:57.287Z",
+  "site": "https://www.narfid.com",
+  "sitemapStatus": 200,
+  "sitemapUrls": 71,
+  "discoveredPages": 76,
+  "robots": "User-Agent: *\nAllow: /\nDisallow: /board\nDisallow: /login\nDisallow: /api/\n\nSitemap: https://www.narfid.com/sitemap.xml\n",
+  "dns": {
+    "systemResolver": "Vercel IPs; HTTP 402 DEPLOYMENT_DISABLED",
+    "publicResolvers": "1.1.1.1, 8.8.8.8 and authoritative Cloudflare: 172.67.195.64 / 104.21.12.186",
+    "verification": "TLS hostname retained; Node lookup scoped to site hosts and authoritative Cloudflare IPv4; system DNS unchanged"
+  },
+  "checks": {
+    "allFinal200": false,
+    "allFirstAttempt200": false,
+    "allSitemapCanonicalSelf": false,
+    "allIndexable": true,
+    "allExistingSchemasValid": true,
+    "allSitemapLinked": true
+  },
+  "transientFailures": [
+    {
+      "url": "https://www.narfid.com/",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 394,
+          "at": "2026-11-13T12:40:41.784Z",
+          "ray": "a59dd8a64db70d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 1862,
+          "at": "2026-11-13T12:40:43.647Z",
+          "ray": "a59dd8b1fa0ce46e-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/memberships",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 159,
+          "at": "2026-11-13T12:40:44.380Z",
+          "ray": "a59dd8b7ac16e181-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 160,
+          "at": "2026-11-13T12:40:44.541Z",
+          "ray": "a59dd8b8ba2de46e-ZRH"
+        },
+        {
+          "status": 200,
+          "ms": 271,
+          "at": "2026-11-13T12:40:44.812Z",
+          "ray": "a59dd8b9abac1ece-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/bookings",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 563,
+          "at": "2026-11-13T12:40:45.823Z",
+          "ray": "a59dd8be1a2e0d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 244,
+          "at": "2026-11-13T12:40:46.067Z",
+          "ray": "a59dd8c1a8471ece-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/choose-sports-club-management-system",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 401,
+          "at": "2026-11-13T12:40:46.469Z",
+          "ray": "a59dd8c33e46e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 620,
+          "at": "2026-11-13T12:40:47.089Z",
+          "ray": "a59dd8c5ba7fe46e-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/visit-based-membership-packages",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 304,
+          "at": "2026-11-13T12:40:48.615Z",
+          "ray": "a59dd8d13b360d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 270,
+          "at": "2026-11-13T12:40:48.885Z",
+          "ray": "a59dd8d319991ece-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 343,
+          "at": "2026-11-13T12:40:50.320Z",
+          "ray": "a59dd8db8ad60d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 310,
+          "at": "2026-11-13T12:40:50.630Z",
+          "ray": "a59dd8ddcd76e46e-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 350,
+          "at": "2026-11-13T12:40:50.327Z",
+          "ray": "a59dd8db9a551ece-ZRH"
+        },
+        {
+          "status": 503,
+          "ms": 170,
+          "at": "2026-11-13T12:40:50.497Z",
+          "ray": "a59dd8ddc816e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 277,
+          "at": "2026-11-13T12:40:50.774Z",
+          "ray": "a59dd8dedc4d0d4b-MRS"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-refund-approval-record",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 344,
+          "at": "2026-11-13T12:40:50.321Z",
+          "ray": "a59dd8dba9d2e181-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 162,
+          "at": "2026-11-13T12:40:50.483Z",
+          "ray": "a59dd8ddb8ea0d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 244,
+          "at": "2026-11-13T12:40:50.727Z",
+          "ray": "a59dd8decbdb1ece-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 172,
+          "at": "2026-11-13T12:40:51.525Z",
+          "ray": "a59dd8e43b23e181-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 172,
+          "at": "2026-11-13T12:40:51.697Z",
+          "ray": "a59dd8e54941e46e-ZRH"
+        },
+        {
+          "status": 200,
+          "ms": 468,
+          "at": "2026-11-13T12:40:52.165Z",
+          "ray": "a59dd8e659dc0d4b-MRS"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 208,
+          "at": "2026-11-13T12:40:52.935Z",
+          "ray": "a59dd8eccc891ece-ZRH"
+        },
+        {
+          "status": 200,
+          "ms": 238,
+          "at": "2026-11-13T12:40:53.173Z",
+          "ray": "a59dd8ee1ec8e181-MRS"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-parent-progress-update",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 196,
+          "at": "2026-11-13T12:40:52.923Z",
+          "ray": "a59dd8ecbad5e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 246,
+          "at": "2026-11-13T12:40:53.169Z",
+          "ray": "a59dd8ee08b6e46e-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 185,
+          "at": "2026-11-13T12:40:54.184Z",
+          "ray": "a59dd8f4dba00d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 308,
+          "at": "2026-11-13T12:40:54.492Z",
+          "ray": "a59dd8f5fbf3e46e-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 214,
+          "at": "2026-11-13T12:40:54.214Z",
+          "ray": "a59dd8f4c938e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 300,
+          "at": "2026-11-13T12:40:54.514Z",
+          "ray": "a59dd8f62f3b0d4b-MRS"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 227,
+          "at": "2026-11-13T12:40:54.742Z",
+          "ray": "a59dd8f80e361ece-ZRH"
+        },
+        {
+          "status": 503,
+          "ms": 189,
+          "at": "2026-11-13T12:40:54.931Z",
+          "ray": "a59dd8f95fa80d4b-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 167,
+          "at": "2026-11-13T12:40:55.098Z",
+          "ray": "a59dd8fa9d1e1ece-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 164,
+          "at": "2026-11-13T12:40:55.520Z",
+          "ray": "a59dd8fd4a000d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 295,
+          "at": "2026-11-13T12:40:55.815Z",
+          "ray": "a59dd8fe48abe46e-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-employee-access-offboarding",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 210,
+          "at": "2026-11-13T12:40:55.567Z",
+          "ray": "a59dd8fd4c981ece-ZRH"
+        },
+        {
+          "status": 503,
+          "ms": 161,
+          "at": "2026-11-13T12:40:55.728Z",
+          "ray": "a59dd8fe8dac0d4b-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 187,
+          "at": "2026-11-13T12:40:55.915Z",
+          "ray": "a59dd8ff9aca1ece-ZRH"
+        }
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=1",
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 124,
+          "at": "2026-11-13T12:40:56.603Z",
+          "ray": "a59dd9043d1f0d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 235,
+          "at": "2026-11-13T12:40:56.838Z",
+          "ray": "a59dd904f8efe181-MRS"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://www.narfid.com/",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 394,
+          "at": "2026-11-13T12:40:41.784Z",
+          "ray": "a59dd8a64db70d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 1862,
+          "at": "2026-11-13T12:40:43.647Z",
+          "ray": "a59dd8b1fa0ce46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "نرفد — السند التقني للمؤسسات الرياضية | نرفد",
+      "description": "منظومة لإدارة الأعضاء والاشتراكات والحجوزات ونقاط البيع والمطبخ ومخزون المنتجات والفروع. اكتشف حلول نرفد وباقات الاشتراك السنوية.",
+      "canonical": "https://www.narfid.com",
+      "robots": "index, follow",
+      "h1": [
+        "كل تفاصيل ناديك.في منظومة واحدة."
+      ],
+      "mainTextLength": 5744,
+      "schemaCount": [
+        true
+      ],
+      "depth": 0,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 1601,
+          "at": "2026-11-13T12:40:42.992Z",
+          "ray": "a59dd8a779661ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "مقالات إدارة المؤسسات الرياضية | نرفد",
+      "description": "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+      "canonical": "https://www.narfid.com/articles",
+      "robots": "index, follow",
+      "h1": [
+        "معرفة تدعمخطوتك القادمة."
+      ],
+      "mainTextLength": 20,
+      "schemaCount": [],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/pricing",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 2068,
+          "at": "2026-11-13T12:40:43.462Z",
+          "ray": "a59dd8aa6c0de181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "باقات إدارة المؤسسات الرياضية السنوية | نرفد",
+      "description": "قارن باقات نرفد السنوية لإدارة المؤسسات الرياضية، من العضويات إلى المطبخ والمخزون والحجوزات والفروع، مع نطاق واضح قبل الاتفاق.",
+      "canonical": "https://www.narfid.com/pricing",
+      "robots": "index, follow",
+      "h1": [
+        "اشتراك سنوي يناسب تشغيل مؤسستك."
+      ],
+      "mainTextLength": 2145,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/about",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 240,
+          "at": "2026-11-13T12:40:43.891Z",
+          "ray": "a59dd8b41e750d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "عن نرفد — السند التقني للمؤسسات الرياضية | نرفد",
+      "description": "نرفد، narfid، مزوّد تقني للمؤسسات الرياضية يستهدف السوق السعودي. تعرّف إلى رؤيتنا ودور منصة الإدارة في مساندة تشغيل المؤسسة ونموها.",
+      "canonical": "https://www.narfid.com/about",
+      "robots": "index, follow",
+      "h1": [
+        "نرفد مؤسستك بالتقنية."
+      ],
+      "mainTextLength": 2319,
+      "schemaCount": [
+        true,
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/contact",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 332,
+          "at": "2026-11-13T12:40:43.984Z",
+          "ray": "a59dd8b42c761ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "تواصل مع نرفد واحجز عرضًا توضيحيًا | نرفد",
+      "description": "تواصل مع نرفد لطلب عرض توضيحي ومراجعة احتياج مؤسستك الرياضية، وعدد فروعها والخدمات والتكاملات المطلوبة.",
+      "canonical": "https://www.narfid.com/contact",
+      "robots": "index, follow",
+      "h1": [
+        "خلّنا نبدأ من مؤسستك."
+      ],
+      "mainTextLength": 1398,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/technology-partnership",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 566,
+          "at": "2026-11-13T12:40:44.219Z",
+          "ray": "a59dd8b419aae181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "الشراكة التقنية للمؤسسات الرياضية | نرفد",
+      "description": "ناقش مع نرفد تطوير تطبيق خاص لمؤسستك الرياضية، أو ربط بوابات دخول متوافقة وتكاملات خارجية، بنطاق وتكلفة وصيانة محددة.",
+      "canonical": "https://www.narfid.com/technology-partnership",
+      "robots": "index, follow",
+      "h1": [
+        "تقنية تنمو مع احتياج مؤسستك."
+      ],
+      "mainTextLength": 1865,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/visual-identity",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 1039,
+          "at": "2026-11-13T12:40:45.259Z",
+          "ray": "a59dd8b7a85e0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تأسيس وتطوير الهوية البصرية للمؤسسات الرياضية | نرفد",
+      "description": "هوية تعبّر عن مؤسستك الرياضية وتظهر باتساق في شعارها ومطبوعاتها وتطبيقها وموقعها. خدمة اختيارية بعرض سعر مستقل عن اشتراك منصة نرفد.",
+      "canonical": "https://www.narfid.com/visual-identity",
+      "robots": "index, follow",
+      "h1": [
+        "هوية تعبّر عن مؤسستك الرياضية."
+      ],
+      "mainTextLength": 3188,
+      "schemaCount": [
+        true,
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/authors/nerved-team",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 251,
+          "at": "2026-11-13T12:40:44.471Z",
+          "ray": "a59dd8b7ae5b1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "فريق نرفد | نرفد",
+      "description": "فريق بناء نرفد، مزوّد تقني للمؤسسات الرياضية. نشارك خبرتنا في بناء نظام يربط الاشتراكات والحجوزات ونقاط البيع والمطبخ والمخزون والفروع، ونوضح حدود كل وظيفة قبل اقتراحها.",
+      "canonical": "https://www.narfid.com/authors/nerved-team",
+      "robots": "index, follow",
+      "h1": [
+        "فريق نرفد"
+      ],
+      "mainTextLength": 1438,
+      "schemaCount": [
+        true,
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/memberships",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 159,
+          "at": "2026-11-13T12:40:44.380Z",
+          "ray": "a59dd8b7ac16e181-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 160,
+          "at": "2026-11-13T12:40:44.541Z",
+          "ray": "a59dd8b8ba2de46e-ZRH"
+        },
+        {
+          "status": 200,
+          "ms": 271,
+          "at": "2026-11-13T12:40:44.812Z",
+          "ray": "a59dd8b9abac1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "إدارة أعضاء واشتراكات النادي | نرفد",
+      "description": "نظّم رحلة العضو من التسجيل إلى الحضور والتجديد والتجميد، واربط سياسة الاشتراك بتشغيل الاستقبال في مؤسستك الرياضية.",
+      "canonical": "https://www.narfid.com/solutions/memberships",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة أعضاء واشتراكات النادي"
+      ],
+      "mainTextLength": 1886,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/bookings",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 563,
+          "at": "2026-11-13T12:40:45.823Z",
+          "ray": "a59dd8be1a2e0d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 244,
+          "at": "2026-11-13T12:40:46.067Z",
+          "ray": "a59dd8c1a8471ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "إدارة حجوزات الملاعب والحصص والتدريب | نرفد",
+      "description": "اربط مورد الحجز وموعده وسعته والمشاركين والتحصيل في منظومة لإدارة حجوزات المؤسسات الرياضية.",
+      "canonical": "https://www.narfid.com/solutions/bookings",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة حجوزات الملاعب والحصص والتدريب"
+      ],
+      "mainTextLength": 1808,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/point-of-sale",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 286,
+          "at": "2026-11-13T12:40:45.546Z",
+          "ray": "a59dd8be2fbb1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "نقاط البيع والورديات للمؤسسات الرياضية | نرفد",
+      "description": "تابع الفواتير والتحصيل والمرتجعات والمصروفات وورديات الصندوق، وافهم العملية وراء الرقم في ناديك.",
+      "canonical": "https://www.narfid.com/solutions/point-of-sale",
+      "robots": "index, follow",
+      "h1": [
+        "نقاط البيع والورديات للمؤسسات الرياضية"
+      ],
+      "mainTextLength": 1826,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/kitchen-inventory",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 594,
+          "at": "2026-11-13T12:40:45.854Z",
+          "ray": "a59dd8be1f75e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إدارة المطبخ والوجبات ومخزون المنتجات | نرفد",
+      "description": "نظّم قائمة الوجبات والكميات اليومية واستحقاقات الأعضاء، وتابع مخزون منتجات النادي لكل فرع مع البيع والمرتجعات.",
+      "canonical": "https://www.narfid.com/solutions/kitchen-inventory",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة المطبخ والوجبات ومخزون المنتجات"
+      ],
+      "mainTextLength": 1841,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/solutions/branches",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 1120,
+          "at": "2026-11-13T12:40:47.187Z",
+          "ray": "a59dd8c328650d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إدارة فروع المؤسسة الرياضية وصلاحيات الفريق | نرفد",
+      "description": "وحّد متابعة فروع النادي، مع نطاق وصول يناسب أدوار الفريق وبيانات تشغيل يمكن الرجوع إليها.",
+      "canonical": "https://www.narfid.com/solutions/branches",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة فروع المؤسسة الرياضية وصلاحيات الفريق"
+      ],
+      "mainTextLength": 1854,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/pricing",
+        "https://www.narfid.com/about",
+        "https://www.narfid.com/contact",
+        "https://www.narfid.com/technology-partnership",
+        "https://www.narfid.com/visual-identity",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 1041,
+          "at": "2026-11-13T12:40:47.108Z",
+          "ray": "a59dd8c33c8f1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "مخزون منتجات النادي: الرصيد الفعلي والمحجوز والمتاح للبيع | نرفد",
+      "description": "دليل لتنظيم استلام المنتجات والبيع والمرتجعات والجرد وحدود إعادة الطلب لكل فرع، وفهم الفرق بين مخزون المتجر وإدارة مكونات المطبخ.",
+      "canonical": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+      "robots": "index, follow",
+      "h1": [
+        "مخزون منتجات النادي: الرصيد الفعلي والمحجوز والمتاح للبيع"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/choose-sports-club-management-system",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 401,
+          "at": "2026-11-13T12:40:46.469Z",
+          "ray": "a59dd8c33e46e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 620,
+          "at": "2026-11-13T12:40:47.089Z",
+          "ray": "a59dd8c5ba7fe46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "كيف تختار نظام إدارة نادي رياضي يناسب تشغيلك؟ | نرفد",
+      "description": "دليل عملي لمالك النادي ومدير العمليات: اختبر رحلة العضو والحجز والتحصيل، وراجع نقل البيانات والصلاحيات والنطاق السنوي قبل اختيار نظام الإدارة.",
+      "canonical": "https://www.narfid.com/articles/choose-sports-club-management-system",
+      "robots": "index, follow",
+      "h1": [
+        "كيف تختار نظام إدارة نادي رياضي يناسب تشغيلك؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 613,
+          "at": "2026-11-13T12:40:47.801Z",
+          "ray": "a59dd8ca6dc40d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إغلاق وردية الصندوق في النادي: كيف تراجع البيع والتحصيل؟ | نرفد",
+      "description": "خطوات عملية للمسؤول المالي ومدير الفرع لمراجعة الوردية: الرصيد الافتتاحي، والتحصيل والمرتجعات والمصروفات، والفروق وتوثيق أسبابها.",
+      "canonical": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+      "robots": "index, follow",
+      "h1": [
+        "إغلاق وردية الصندوق في النادي: كيف تراجع البيع والتحصيل؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 384,
+          "at": "2026-11-13T12:40:47.572Z",
+          "ray": "a59dd8ca48191ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "تنظيم حجوزات الملاعب والحصص: الإتاحة والسعة والإلغاء | نرفد",
+      "description": "دليل لمدير العمليات لتحديد مورد الحجز وسعته، وضبط المواعيد وحالات التأكيد والإلغاء والتحصيل، قبل فتح الحجوزات أمام الفريق والأعضاء.",
+      "canonical": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+      "robots": "index, follow",
+      "h1": [
+        "تنظيم حجوزات الملاعب والحصص: الإتاحة والسعة والإلغاء"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-data-migration-checklist",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 536,
+          "at": "2026-11-13T12:40:47.725Z",
+          "ray": "a59dd8ca398fe181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "نقل بيانات النادي إلى نظام جديد: قائمة مراجعة قبل التشغيل | نرفد",
+      "description": "خطوات لتنظيف ملفات الأعضاء وربط الباقات والاشتراكات والأرصدة، واختبار عينة وخطة انتقال وتدريب قبل اعتماد نظام إدارة جديد للنادي.",
+      "canonical": "https://www.narfid.com/articles/club-data-migration-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "نقل بيانات النادي إلى نظام جديد: قائمة مراجعة قبل التشغيل"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/annual-club-software-cost",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 427,
+          "at": "2026-11-13T12:40:48.229Z",
+          "ray": "a59dd8cdf8cf0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تكلفة برنامج إدارة النادي: كيف تقارن العرض السنوي؟ | نرفد",
+      "description": "قارن الاشتراك والتهيئة ونقل البيانات والتكاملات في ورقة واحدة، واعرف ما تسأل عنه قبل اعتماد ميزانية نظام ناديك.",
+      "canonical": "https://www.narfid.com/articles/annual-club-software-cost",
+      "robots": "index, follow",
+      "h1": [
+        "تكلفة برنامج إدارة النادي: كيف تقارن العرض السنوي؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-software-demo-checklist",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 425,
+          "at": "2026-11-13T12:40:48.227Z",
+          "ray": "a59dd8ce09f51ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "اختيار برنامج الأكاديمية: سيناريوهات تختبرها في العرض | نرفد",
+      "description": "اختبر تسجيل لاعب وحضور حصة ودفعًا جزئيًا وصلاحية مدرب، بدل الاكتفاء بقائمة مزايا عند اختيار برنامج الأكاديمية.",
+      "canonical": "https://www.narfid.com/articles/academy-software-demo-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "اختيار برنامج الأكاديمية: سيناريوهات تختبرها في العرض"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-children-guardian-records",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 508,
+          "at": "2026-11-13T12:40:48.310Z",
+          "ray": "a59dd8cdfbb5e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "اشتراكات الأطفال: تنظيم ملف اللاعب وولي الأمر | نرفد",
+      "description": "دليل لإدارة ملفات الأطفال وأولياء الأمور في أكاديميات كرة القدم والسباحة، وفصل المستفيد عن الدافع ومتابعة الحضور لكل طفل.",
+      "canonical": "https://www.narfid.com/articles/academy-children-guardian-records",
+      "robots": "index, follow",
+      "h1": [
+        "اشتراكات الأطفال: تنظيم ملف اللاعب وولي الأمر"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/visit-based-membership-packages",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 304,
+          "at": "2026-11-13T12:40:48.615Z",
+          "ray": "a59dd8d13b360d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 270,
+          "at": "2026-11-13T12:40:48.885Z",
+          "ray": "a59dd8d319991ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "باقات النادي بعدد الزيارات: قواعد الرصيد والصلاحية | نرفد",
+      "description": "ضع قواعد واضحة لباقات الحصص والزيارات: متى تخصم الزيارة، وماذا يحدث عند الإلغاء أو انتهاء الصلاحية؟ مع مثال عملي.",
+      "canonical": "https://www.narfid.com/articles/visit-based-membership-packages",
+      "robots": "index, follow",
+      "h1": [
+        "باقات النادي بعدد الزيارات: قواعد الرصيد والصلاحية"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 293,
+          "at": "2026-11-13T12:40:48.604Z",
+          "ray": "a59dd8d14af21ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "دليل استقبال النادي: الحضور وفتح الوردية وتسليمها | نرفد",
+      "description": "إجراء يومي للاستقبال يشمل التحقق من الاشتراك وتسجيل الحضور ومعالجة الحالات الاستثنائية وتسليم الوردية بسجل واضح.",
+      "canonical": "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+      "robots": "index, follow",
+      "h1": [
+        "دليل استقبال النادي: الحضور وفتح الوردية وتسليمها"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-retention-followup",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 448,
+          "at": "2026-11-13T12:40:48.759Z",
+          "ray": "a59dd8d13c5ee181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "متابعة أعضاء النادي: من غياب الزيارة إلى قرار التجديد | نرفد",
+      "description": "نظّم متابعة الأعضاء بحسب الحضور وقرب انتهاء العضوية، وسجّل سبب التواصل ونتيجته لتمييز الرد عن التجديد الفعلي.",
+      "canonical": "https://www.narfid.com/articles/gym-member-retention-followup",
+      "robots": "index, follow",
+      "h1": [
+        "متابعة أعضاء النادي: من غياب الزيارة إلى قرار التجديد"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/womens-club-operations-system",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 423,
+          "at": "2026-11-13T12:40:49.309Z",
+          "ray": "a59dd8d4ceef0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إدارة النادي النسائي: كيف تختبر النظام مع فريقك؟ | نرفد",
+      "description": "سيناريوهات عملية لمديرة النادي النسائي تختبر الاستقبال والحصص والتدريب الشخصي والصلاحيات قبل اختيار نظام الإدارة.",
+      "canonical": "https://www.narfid.com/articles/womens-club-operations-system",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة النادي النسائي: كيف تختبر النظام مع فريقك؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/annual-club-software-cost",
+        "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/personal-training-schedule-control",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 307,
+          "at": "2026-11-13T12:40:49.193Z",
+          "ray": "a59dd8d4de571ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "جدول المدربين الشخصيين: ربط الموعد بالجلسة والعضو | نرفد",
+      "description": "اربط مواعيد المدربين بالعضو والمكان ورصيد الجلسات، وراجع التعديلات والإلغاء والبدائل في جدول يمكن للفريق الاعتماد عليه.",
+      "canonical": "https://www.narfid.com/articles/personal-training-schedule-control",
+      "robots": "index, follow",
+      "h1": [
+        "جدول المدربين الشخصيين: ربط الموعد بالجلسة والعضو"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 339,
+          "at": "2026-11-13T12:40:49.225Z",
+          "ray": "a59dd8d4cebde181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إلغاء الحجز وعدم الحضور: سجل واضح للحصص والملاعب | نرفد",
+      "description": "نظّم حالات إلغاء الحجوزات وعدم الحضور، وحدد ما يسجله الاستقبال وما يحتاج اعتمادًا قبل تعديل رصيد العضو أو التحصيل.",
+      "canonical": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+      "robots": "index, follow",
+      "h1": [
+        "إلغاء الحجز وعدم الحضور: سجل واضح للحصص والملاعب"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/padel-court-occupancy-report",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 283,
+          "at": "2026-11-13T12:40:49.593Z",
+          "ray": "a59dd8d77ed00d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إشغال ملاعب البادل: احسب الساعات قبل زيادة الحجوزات | نرفد",
+      "description": "مثال لحساب ساعات الملاعب المتاحة والمحجوزة والمستخدمة، ومقارنة الذروة ببقية اليوم لاتخاذ قرار تشغيلي مبني على سجل.",
+      "canonical": "https://www.narfid.com/articles/padel-court-occupancy-report",
+      "robots": "index, follow",
+      "h1": [
+        "إشغال ملاعب البادل: احسب الساعات قبل زيادة الحجوزات"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/recurring-court-booking-control",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 412,
+          "at": "2026-11-13T12:40:49.723Z",
+          "ray": "a59dd8d78e001ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "الحجز الأسبوعي للملاعب: تنظيم السلسلة والاستثناءات | نرفد",
+      "description": "خطوات لتنظيم حجوزات الفرق الأسبوعية، وفصل الموعد المتكرر عن كل حجز فعلي مع متابعة التغييرات والتحصيل والإجازات.",
+      "canonical": "https://www.narfid.com/articles/recurring-court-booking-control",
+      "robots": "index, follow",
+      "h1": [
+        "الحجز الأسبوعي للملاعب: تنظيم السلسلة والاستثناءات"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-class-groups-capacity",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 664,
+          "at": "2026-11-13T12:40:49.975Z",
+          "ray": "a59dd8d77e77e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مجموعات الأكاديمية: توزيع اللاعبين وسعة الحصص | نرفد",
+      "description": "اربط المجموعة بمدرب وموعد ومكان وسعة، وتعامل مع انتقال اللاعب والحصة التجريبية وتغيير الجدول بسجل قابل للمراجعة.",
+      "canonical": "https://www.narfid.com/articles/academy-class-groups-capacity",
+      "robots": "index, follow",
+      "h1": [
+        "مجموعات الأكاديمية: توزيع اللاعبين وسعة الحصص"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/academy-children-guardian-records",
+        "https://www.narfid.com/articles/personal-training-schedule-control",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/recurring-court-booking-control",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 343,
+          "at": "2026-11-13T12:40:50.320Z",
+          "ray": "a59dd8db8ad60d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 310,
+          "at": "2026-11-13T12:40:50.630Z",
+          "ray": "a59dd8ddcd76e46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "دفعات اشتراك النادي: متابعة المتبقي دون تكرار التحصيل | نرفد",
+      "description": "مثال لتسجيل دفعات الاشتراك وربط كل تحصيل بفاتورته، مع قائمة متابعة للمتبقي ومعالجة الدفع غير المطابق أو المكرر.",
+      "canonical": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+      "robots": "index, follow",
+      "h1": [
+        "دفعات اشتراك النادي: متابعة المتبقي دون تكرار التحصيل"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 350,
+          "at": "2026-11-13T12:40:50.327Z",
+          "ray": "a59dd8db9a551ece-ZRH"
+        },
+        {
+          "status": 503,
+          "ms": 170,
+          "at": "2026-11-13T12:40:50.497Z",
+          "ray": "a59dd8ddc816e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 277,
+          "at": "2026-11-13T12:40:50.774Z",
+          "ray": "a59dd8dedc4d0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تقرير النادي اليومي: افصل المبيعات عن التحصيل | نرفد",
+      "description": "اقرأ مبيعات اليوم وتحصيلاته والمرتجعات كلًّا في سياقه، واستخدم مثالًا مبسطًا لتفسير الفرق قبل الحكم على أداء الفريق.",
+      "canonical": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+      "robots": "index, follow",
+      "h1": [
+        "تقرير النادي اليومي: افصل المبيعات عن التحصيل"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-refund-approval-record",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 344,
+          "at": "2026-11-13T12:40:50.321Z",
+          "ray": "a59dd8dba9d2e181-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 162,
+          "at": "2026-11-13T12:40:50.483Z",
+          "ray": "a59dd8ddb8ea0d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 244,
+          "at": "2026-11-13T12:40:50.727Z",
+          "ray": "a59dd8decbdb1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "مرتجعات اشتراكات النادي: من الطلب إلى إثبات التنفيذ | نرفد",
+      "description": "مسار تشغيلي لتوثيق طلب المرتجع ومرجعه واعتماده ومتابعة تنفيذه، مع الفصل بين إلغاء العضوية وإرجاع المبلغ.",
+      "canonical": "https://www.narfid.com/articles/gym-refund-approval-record",
+      "robots": "index, follow",
+      "h1": [
+        "مرتجعات اشتراكات النادي: من الطلب إلى إثبات التنفيذ"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-expense-approval-workflow",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 253,
+          "at": "2026-11-13T12:40:51.028Z",
+          "ray": "a59dd8e089870d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مصروفات النادي: سجل واعتماد ومراجعة لكل فرع | نرفد",
+      "description": "نظّم طلب المصروف واعتماده وإثبات دفعه، وافصل عهدة الصندوق عن المصروف الفعلي لتبقى متابعة الفرع مفهومة.",
+      "canonical": "https://www.narfid.com/articles/club-expense-approval-workflow",
+      "robots": "index, follow",
+      "h1": [
+        "مصروفات النادي: سجل واعتماد ومراجعة لكل فرع"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 251,
+          "at": "2026-11-13T12:40:51.026Z",
+          "ray": "a59dd8e0889d1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "كاشير النادي: بيع المنتجات وربطها بالمخزون والتحصيل | نرفد",
+      "description": "تتبّع بيع منتجات النادي من تعريف الصنف إلى التحصيل والمرتجع، مع اختبار عملي يكشف الأخطاء بين الكاشير والمخزون.",
+      "canonical": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+      "robots": "index, follow",
+      "h1": [
+        "كاشير النادي: بيع المنتجات وربطها بالمخزون والتحصيل"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/point-of-sale",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/gym-refund-approval-record",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-production-planning",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 271,
+          "at": "2026-11-13T12:40:51.046Z",
+          "ray": "a59dd8e0980be181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مطبخ النادي: خطة الوجبات اليومية ومراجعة الصرف | نرفد",
+      "description": "جهّز كشف إنتاج يومي من طلبات المشتركين، وافصل الوجبات المطلوبة والمجهزة والمصروفة والمتبقية مع مثال لتفسير الفروق.",
+      "canonical": "https://www.narfid.com/articles/club-meal-production-planning",
+      "robots": "index, follow",
+      "h1": [
+        "مطبخ النادي: خطة الوجبات اليومية ومراجعة الصرف"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-stock-count-reorder",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 218,
+          "at": "2026-11-13T12:40:51.265Z",
+          "ray": "a59dd8e25efc0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "جرد منتجات النادي: تفسير الفروق وتحديد إعادة الطلب | نرفد",
+      "description": "طريقة عملية لجرد متجر النادي وتفسير فرق الرصيد، مع مثال لحساب حد إعادة الطلب حسب حركة المنتج ومدة التوريد.",
+      "canonical": "https://www.narfid.com/articles/gym-stock-count-reorder",
+      "robots": "index, follow",
+      "h1": [
+        "جرد منتجات النادي: تفسير الفروق وتحديد إعادة الطلب"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/kitchen-inventory",
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-branch-performance-comparison",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 304,
+          "at": "2026-11-13T12:40:51.351Z",
+          "ray": "a59dd8e25e761ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "مقارنة فروع النادي: مؤشرات عادلة وقرارات قابلة للمتابعة | نرفد",
+      "description": "قارن فروع النادي بفترة وتعريفات موحدة، وافصل فرع البيع عن فرع الاستخدام لتخرج من التقرير بقرار ومسؤول وموعد.",
+      "canonical": "https://www.narfid.com/articles/club-branch-performance-comparison",
+      "robots": "index, follow",
+      "h1": [
+        "مقارنة فروع النادي: مؤشرات عادلة وقرارات قابلة للمتابعة"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/new-reception-staff-training",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 287,
+          "at": "2026-11-13T12:40:51.335Z",
+          "ray": "a59dd8e24d51e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تدريب موظف استقبال النادي: خطة تطبيق واختبار جاهزية | نرفد",
+      "description": "جهّز موظف الاستقبال الجديد بمواقف عملية وحدود صلاحيات واضحة، ثم اختبر قدرته على خدمة العضو وتسليم الحالات قبل العمل منفردًا.",
+      "canonical": "https://www.narfid.com/articles/new-reception-staff-training",
+      "robots": "index, follow",
+      "h1": [
+        "تدريب موظف استقبال النادي: خطة تطبيق واختبار جاهزية"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/shift-handover-pending-cases",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 305,
+          "at": "2026-11-13T12:40:51.657Z",
+          "ray": "a59dd8e42bfd0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تسليم وردية النادي: نموذج للحالات المعلقة ومسؤوليتها | نرفد",
+      "description": "حوّل تسليم الوردية من رسائل متفرقة إلى سجل يحدد الحالة وآخر إجراء والمسؤول والموعد التالي، مع مثال لحجز يحتاج مراجعة تحصيل.",
+      "canonical": "https://www.narfid.com/articles/shift-handover-pending-cases",
+      "robots": "index, follow",
+      "h1": [
+        "تسليم وردية النادي: نموذج للحالات المعلقة ومسؤوليتها"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 310,
+          "at": "2026-11-13T12:40:51.662Z",
+          "ray": "a59dd8e43c2d1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "اجتماع تشغيل النادي الأسبوعي: من الأرقام إلى قرارات محددة | نرفد",
+      "description": "نظم اجتماع التشغيل حول قرارات تحتاج اعتمادًا، مع نموذج لمتابعة المهام ومثال يربط ملاحظة الاستقبال بإجراء وموعد ودليل إنجاز.",
+      "canonical": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "robots": "index, follow",
+      "h1": [
+        "اجتماع تشغيل النادي الأسبوعي: من الأرقام إلى قرارات محددة"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 172,
+          "at": "2026-11-13T12:40:51.525Z",
+          "ray": "a59dd8e43b23e181-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 172,
+          "at": "2026-11-13T12:40:51.697Z",
+          "ray": "a59dd8e54941e46e-ZRH"
+        },
+        {
+          "status": 200,
+          "ms": 468,
+          "at": "2026-11-13T12:40:52.165Z",
+          "ray": "a59dd8e659dc0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "شكاوى أعضاء النادي: سجل متابعة من الاستماع إلى الإغلاق | نرفد",
+      "description": "أنشئ مسارًا لشكاوى الأعضاء يفرّق بين تسجيل الطلب والتحقق وتنفيذ الحل، مع نموذج رد ومؤشرات تكشف إعادة فتح الحالات.",
+      "canonical": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+      "robots": "index, follow",
+      "h1": [
+        "شكاوى أعضاء النادي: سجل متابعة من الاستماع إلى الإغلاق"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 4,
+      "inbound": [
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 284,
+          "at": "2026-11-13T12:40:52.450Z",
+          "ray": "a59dd8e94a870d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "أول أسبوع للعضو الجديد: خطة استقبال تساعده على البدء | نرفد",
+      "description": "رتّب تسليم العضو من البيع إلى أول زيارة، وحدد معلومات الوصول والحجز ونقطة المساعدة، مع قائمة متابعة تكشف العوائق العملية.",
+      "canonical": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "robots": "index, follow",
+      "h1": [
+        "أول أسبوع للعضو الجديد: خطة استقبال تساعده على البدء"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 239,
+          "at": "2026-11-13T12:40:52.406Z",
+          "ray": "a59dd8e95a6a1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "مكالمة الاستفسار عن النادي: أسئلة تساعد على اختيار الخدمة | نرفد",
+      "description": "استخدم مسار مكالمة يفهم احتياج المستفسر ويوضح الخدمة والسعر والخطوة التالية، مع نموذج توثيق يمنع تكرار الأسئلة والوعود المتعارضة.",
+      "canonical": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "مكالمة الاستفسار عن النادي: أسئلة تساعد على اختيار الخدمة"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 4,
+      "inbound": [
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 228,
+          "at": "2026-11-13T12:40:52.395Z",
+          "ray": "a59dd8e9490fe181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "الزيارة التجريبية للنادي: من الحجز إلى قرار العضوية | نرفد",
+      "description": "صمّم تجربة توضح ملاءمة النادي للزائر، وسجّل نتيجة الزيارة والخطوة التالية، ثم احسب التحويل من التجارب المكتملة بدل الطلبات.",
+      "canonical": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+      "robots": "index, follow",
+      "h1": [
+        "الزيارة التجريبية للنادي: من الحجز إلى قرار العضوية"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-lead-source-conversion",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 267,
+          "at": "2026-11-13T12:40:52.719Z",
+          "ray": "a59dd8eb18260d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مصادر استفسارات النادي: قارن القنوات بالعضويات الفعلية | نرفد",
+      "description": "اربط مصدر الاستفسار بنتيجة المتابعة والزيارة والاشتراك، مع مثال يوضح لماذا لا تكفي تكلفة الرسالة أو عدد النقرات لتقييم التسويق.",
+      "canonical": "https://www.narfid.com/articles/gym-lead-source-conversion",
+      "robots": "index, follow",
+      "h1": [
+        "مصادر استفسارات النادي: قارن القنوات بالعضويات الفعلية"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-referral-program-tracking",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 267,
+          "at": "2026-11-13T12:40:52.720Z",
+          "ray": "a59dd8eb2f821ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "إحالات أعضاء النادي: قواعد واضحة وقياس دون تكرار المكافآت | نرفد",
+      "description": "صمّم برنامج إحالة قابلًا للمراجعة، يحدد صاحب الإحالة وشرط الاستحقاق وآلية المتابعة، مع مثال لحساب التكلفة والعضويات الناتجة.",
+      "canonical": "https://www.narfid.com/articles/gym-referral-program-tracking",
+      "robots": "index, follow",
+      "h1": [
+        "إحالات أعضاء النادي: قواعد واضحة وقياس دون تكرار المكافآت"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 273,
+          "at": "2026-11-13T12:40:52.726Z",
+          "ray": "a59dd8eb1e3be181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "عروض النادي خارج الذروة: اختبر الإشغال قبل تعميم الخصم | نرفد",
+      "description": "قيّم عرض أوقات الهدوء بتكلفته وسعته والاستخدام الإضافي، مع مثال يفرق بين جذب حضور جديد ونقل الأعضاء من السعر المعتاد.",
+      "canonical": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+      "robots": "index, follow",
+      "h1": [
+        "عروض النادي خارج الذروة: اختبر الإشغال قبل تعميم الخصم"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 335,
+          "at": "2026-11-13T12:40:53.061Z",
+          "ray": "a59dd8ecbd1b0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "قائمة انتظار الحصص: كيف تعرض المقعد وتؤكد قبوله؟ | نرفد",
+      "description": "ضع إجراءً لقائمة انتظار الحصص يوضح ترتيب العرض ومهلة الرد وتأكيد المقعد، مع مثال يمنع وعد عضوين بالمكان نفسه.",
+      "canonical": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "robots": "index, follow",
+      "h1": [
+        "قائمة انتظار الحصص: كيف تعرض المقعد وتؤكد قبوله؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 208,
+          "at": "2026-11-13T12:40:52.935Z",
+          "ray": "a59dd8eccc891ece-ZRH"
+        },
+        {
+          "status": 200,
+          "ms": 238,
+          "at": "2026-11-13T12:40:53.173Z",
+          "ray": "a59dd8ee1ec8e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "غياب مدرب الأكاديمية: تسليم المجموعة لبديل دون ارتباك | نرفد",
+      "description": "جهّز بطاقة تسليم للمدرب البديل تشمل المجموعة والموقع وخطة الحصة والمسؤوليات، مع مراجعة للحضور والتواصل بعد التنفيذ.",
+      "canonical": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+      "robots": "index, follow",
+      "h1": [
+        "غياب مدرب الأكاديمية: تسليم المجموعة لبديل دون ارتباك"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-parent-progress-update",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 196,
+          "at": "2026-11-13T12:40:52.923Z",
+          "ray": "a59dd8ecbad5e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 246,
+          "at": "2026-11-13T12:40:53.169Z",
+          "ray": "a59dd8ee08b6e46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "تقرير ولي الأمر في الأكاديمية: ملاحظة واضحة وخطوة تالية | نرفد",
+      "description": "اكتب تحديثًا لولي الأمر يربط فترة الحضور بملاحظة المدرب وخطوة المتابعة، دون أحكام عامة أو وعود احتراف أو مشاركة بيانات لاعبين آخرين.",
+      "canonical": "https://www.narfid.com/articles/academy-parent-progress-update",
+      "robots": "index, follow",
+      "h1": [
+        "تقرير ولي الأمر في الأكاديمية: ملاحظة واضحة وخطوة تالية"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 300,
+          "at": "2026-11-13T12:40:53.475Z",
+          "ray": "a59dd8ef8d500d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "حصص التعويض في الأكاديمية: كيف توثق الطلب والرصيد؟ | نرفد",
+      "description": "افصل طلب التعويض عن اعتماده وحجزه وحضوره، وحدد أثره على السعة والرصيد، مع مثال يمنع احتساب الغياب والتعويض مرتين.",
+      "canonical": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "robots": "index, follow",
+      "h1": [
+        "حصص التعويض في الأكاديمية: كيف توثق الطلب والرصيد؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-player-group-transfer",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 571,
+          "at": "2026-11-13T12:40:53.746Z",
+          "ray": "a59dd8efac331ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "نقل لاعب بين مجموعات الأكاديمية: إجراء يحفظ الجدول والسجل | نرفد",
+      "description": "وثّق قرار نقل اللاعب وموعد سريانه والسعة والاشتراك والتواصل، مع قائمة تحقق تمنع ظهور اسمه في مجموعتين أو ضياع تاريخه.",
+      "canonical": "https://www.narfid.com/articles/academy-player-group-transfer",
+      "robots": "index, follow",
+      "h1": [
+        "نقل لاعب بين مجموعات الأكاديمية: إجراء يحفظ الجدول والسجل"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 243,
+          "at": "2026-11-13T12:40:53.418Z",
+          "ray": "a59dd8ef9b35e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "التسجيل في منتصف دورة الأكاديمية: وضّح المتبقي قبل الدفع | نرفد",
+      "description": "راجع الجاهزية والسعة والحصص المتبقية والرسوم عند الانضمام أثناء الدورة، مع مثال حسابي يوضح نطاق الخدمة وتاريخ البداية.",
+      "canonical": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "robots": "index, follow",
+      "h1": [
+        "التسجيل في منتصف دورة الأكاديمية: وضّح المتبقي قبل الدفع"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 218,
+          "at": "2026-11-13T12:40:53.965Z",
+          "ray": "a59dd8f32f360d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إغلاق ملعب للصيانة: كيف تعالج الحجوزات المتأثرة؟ | نرفد",
+      "description": "حدد نطاق الإغلاق وأوقف الحجوزات الجديدة وراجع المؤكدة، ثم تواصل بخيارات معتمدة وسجّل النتيجة قبل إعادة فتح الإتاحة.",
+      "canonical": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "robots": "index, follow",
+      "h1": [
+        "إغلاق ملعب للصيانة: كيف تعالج الحجوزات المتأثرة؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/bookings",
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-locker-assignment-log",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 233,
+          "at": "2026-11-13T12:40:53.981Z",
+          "ray": "a59dd8f33f571ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "خزائن النادي: سجل تخصيص وتسليم يمنع ازدواج الاستخدام | نرفد",
+      "description": "نظّم حالة الخزانة من الإتاحة إلى التخصيص والإرجاع والصيانة، مع نموذج يربط رقمها بالمستخدم والمدة ومرجع التسليم.",
+      "canonical": "https://www.narfid.com/articles/gym-locker-assignment-log",
+      "robots": "index, follow",
+      "h1": [
+        "خزائن النادي: سجل تخصيص وتسليم يمنع ازدواج الاستخدام"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-lost-property-register",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 249,
+          "at": "2026-11-13T12:40:53.997Z",
+          "ray": "a59dd8f32d2ee181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مفقودات النادي: نموذج استلام ومطابقة وتسليم لصاحبها | نرفد",
+      "description": "جهّز سجلًا للموجودات يحفظ مكان العثور والوصف والحيازة والتحقق من المطالبة، مع إجراء يمنع إعلان التفاصيل التي تثبت الملكية.",
+      "canonical": "https://www.narfid.com/articles/gym-lost-property-register",
+      "robots": "index, follow",
+      "h1": [
+        "مفقودات النادي: نموذج استلام ومطابقة وتسليم لصاحبها"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 185,
+          "at": "2026-11-13T12:40:54.184Z",
+          "ray": "a59dd8f4dba00d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 308,
+          "at": "2026-11-13T12:40:54.492Z",
+          "ray": "a59dd8f5fbf3e46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "استلام منتجات متجر النادي: محضر يوضح النقص والاختلاف | نرفد",
+      "description": "قارن المطلوب بالمستلم والمقبول عند وصول منتجات النادي، وسجل الفروق والمرفقات ومسؤول المتابعة قبل تحديث الرصيد المتاح للبيع.",
+      "canonical": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+      "robots": "index, follow",
+      "h1": [
+        "استلام منتجات متجر النادي: محضر يوضح النقص والاختلاف"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 244,
+          "at": "2026-11-13T12:40:54.244Z",
+          "ray": "a59dd8f4dceb1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "منتج تالف في متجر النادي: اعزله ووثّق قرار الرصيد | نرفد",
+      "description": "افصل اكتشاف المنتج المتضرر عن قرار إعادته أو تسوية رصيده، مع نموذج يتتبع الكمية والمكان والسبب والاعتماد دون حذف الحركة.",
+      "canonical": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "robots": "index, follow",
+      "h1": [
+        "منتج تالف في متجر النادي: اعزله ووثّق قرار الرصيد"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 214,
+          "at": "2026-11-13T12:40:54.214Z",
+          "ray": "a59dd8f4c938e181-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 300,
+          "at": "2026-11-13T12:40:54.514Z",
+          "ray": "a59dd8f62f3b0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "نقل منتجات بين فروع النادي: مرجع واحد للإرسال والاستلام | نرفد",
+      "description": "تابع المنتج من الفرع المرسل إلى المستلم، وافصل المرسل عن المقبول والكمية قيد النقل، مع مثال لمراجعة نقص الشحنة دون مضاعفة الرصيد.",
+      "canonical": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "robots": "index, follow",
+      "h1": [
+        "نقل منتجات بين فروع النادي: مرجع واحد للإرسال والاستلام"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-pickup-handover",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 215,
+          "at": "2026-11-13T12:40:54.729Z",
+          "ray": "a59dd8f7fbdc0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تسليم وجبات المشتركين: افصل الجاهز عن المستلم فعليًا | نرفد",
+      "description": "نظم نقطة تسليم الوجبات بمرجع طلب وحالة واضحة، وراجع هوية المستلم والكمية قبل إغلاق الطلب، مع نموذج لحالات نهاية اليوم.",
+      "canonical": "https://www.narfid.com/articles/club-meal-pickup-handover",
+      "robots": "index, follow",
+      "h1": [
+        "تسليم وجبات المشتركين: افصل الجاهز عن المستلم فعليًا"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "status": 503,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 227,
+          "at": "2026-11-13T12:40:54.742Z",
+          "ray": "a59dd8f80e361ece-ZRH"
+        },
+        {
+          "status": 503,
+          "ms": 189,
+          "at": "2026-11-13T12:40:54.931Z",
+          "ray": "a59dd8f95fa80d4b-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 167,
+          "at": "2026-11-13T12:40:55.098Z",
+          "ray": "a59dd8fa9d1e1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "h1": [],
+      "mainTextLength": 0,
+      "schemaCount": [],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 351,
+          "at": "2026-11-13T12:40:54.866Z",
+          "ray": "a59dd8f83b16e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "دفعة غير مطابقة لاشتراك: سجل استثناء قبل تأكيد السداد | نرفد",
+      "description": "راجع الدفعة مجهولة المرجع بمصادرها الفعلية، ووثق البحث وقرار المطابقة دون ربط المبلغ بأول فاتورة مشابهة أو تسجيله مرتين.",
+      "canonical": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+      "robots": "index, follow",
+      "h1": [
+        "دفعة غير مطابقة لاشتراك: سجل استثناء قبل تأكيد السداد"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-discount-approval-controls",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 238,
+          "at": "2026-11-13T12:40:55.338Z",
+          "ray": "a59dd8fbadc80d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "خصومات النادي: اعتماد واضح وأثر يمكن مراجعته | نرفد",
+      "description": "حدد من يمنح الخصم ومتى يحتاج موافقة، وسجّل السبب والسعر قبل الخصم وبعده، مع مثال يكشف تراكب العروض دون قصد.",
+      "canonical": "https://www.narfid.com/articles/gym-discount-approval-controls",
+      "robots": "index, follow",
+      "h1": [
+        "خصومات النادي: اعتماد واضح وأثر يمكن مراجعته"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-record-deduplication",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 254,
+          "at": "2026-11-13T12:40:55.354Z",
+          "ray": "a59dd8fb9c4ae181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تكرار ملف العضو: كيف تتحقق قبل الدمج أو التعديل؟ | نرفد",
+      "description": "ضع إجراءً للبحث قبل إنشاء عضو، ومراجعة السجلات المشتبه بتكرارها دون دمج أشخاص مختلفين أو فقد اشتراكاتهم وحركاتهم.",
+      "canonical": "https://www.narfid.com/articles/gym-member-record-deduplication",
+      "robots": "index, follow",
+      "h1": [
+        "تكرار ملف العضو: كيف تتحقق قبل الدمج أو التعديل؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-software-team-adoption",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 240,
+          "at": "2026-11-13T12:40:55.341Z",
+          "ray": "a59dd8fbaa41e46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "تدريب فريق النادي على النظام الجديد: اختبر المهمة لا الحضور | نرفد",
+      "description": "نظّم تدريب النظام حسب الأدوار والمهام، مع سيناريوهات قبول وسجل عوائق ومثال يفرق بين إكمال التدريب والقدرة على العمل.",
+      "canonical": "https://www.narfid.com/articles/gym-software-team-adoption",
+      "robots": "index, follow",
+      "h1": [
+        "تدريب فريق النادي على النظام الجديد: اختبر المهمة لا الحضور"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 164,
+          "at": "2026-11-13T12:40:55.520Z",
+          "ray": "a59dd8fd4a000d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 295,
+          "at": "2026-11-13T12:40:55.815Z",
+          "ray": "a59dd8fe48abe46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "تصدير بيانات النادي قبل تغيير النظام: ماذا تختبر في الملف؟ | نرفد",
+      "description": "حدد نطاق تصدير البيانات وروابطها، وافتح عينة فعلية وراجع الأعداد والتواريخ والأرصدة قبل انتهاء الوصول للنظام القديم.",
+      "canonical": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+      "robots": "index, follow",
+      "h1": [
+        "تصدير بيانات النادي قبل تغيير النظام: ماذا تختبر في الملف؟"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-employee-access-offboarding",
+      "status": 503,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 210,
+          "at": "2026-11-13T12:40:55.567Z",
+          "ray": "a59dd8fd4c981ece-ZRH"
+        },
+        {
+          "status": 503,
+          "ms": 161,
+          "at": "2026-11-13T12:40:55.728Z",
+          "ray": "a59dd8fe8dac0d4b-MRS"
+        },
+        {
+          "status": 503,
+          "ms": 187,
+          "at": "2026-11-13T12:40:55.915Z",
+          "ray": "a59dd8ff9aca1ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": null,
+      "description": null,
+      "canonical": null,
+      "robots": null,
+      "h1": [],
+      "mainTextLength": 0,
+      "schemaCount": [],
+      "depth": 1,
+      "inbound": [
+        "https://www.narfid.com/",
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/authors/nerved-team",
+        "https://www.narfid.com/articles/new-reception-staff-training",
+        "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "https://www.narfid.com/articles/academy-parent-progress-update",
+        "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "https://www.narfid.com/articles/academy-player-group-transfer",
+        "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "https://www.narfid.com/articles/gym-lost-property-register",
+        "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 257,
+          "at": "2026-11-13T12:40:55.614Z",
+          "ray": "a59dd8fd3906e181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "اشتراكات الوجبات في النادي: من الاستحقاق إلى الصرف | نرفد",
+      "description": "كيف تربط اشتراك الوجبات بقائمة اليوم والكميات وحالات التحضير والتسليم، وتفصل استحقاق العضو عن مخزون المنتجات والمكونات.",
+      "canonical": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+      "robots": "index, follow",
+      "h1": [
+        "اشتراكات الوجبات في النادي: من الاستحقاق إلى الصرف"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "https://www.narfid.com/articles/club-meal-production-planning",
+        "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 289,
+          "at": "2026-11-13T12:40:56.205Z",
+          "ray": "a59dd900bbc90d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "تجديد وتجميد اشتراكات النادي: سياسة واضحة للاستقبال | نرفد",
+      "description": "كيف تفرق بين التجديد والتجميد والتمديد، وتوثق سياسة يفهمها فريق الاستقبال والعضو، مع مراجعة التواريخ والتحصيل والحالات الاستثنائية.",
+      "canonical": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+      "robots": "index, follow",
+      "h1": [
+        "تجديد وتجميد اشتراكات النادي: سياسة واضحة للاستقبال"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "https://www.narfid.com/articles/club-data-migration-checklist",
+        "https://www.narfid.com/articles/visit-based-membership-packages",
+        "https://www.narfid.com/articles/gym-member-retention-followup",
+        "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles/multi-branch-club-permissions",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 242,
+          "at": "2026-11-13T12:40:56.158Z",
+          "ray": "a59dd900babee181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "إدارة فروع النادي: توزيع الصلاحيات دون فقدان المتابعة | نرفد",
+      "description": "كيف توازن بين متابعة الإدارة المركزية وتشغيل كل فرع، وتحدد صلاحيات الاستقبال والمالية والمطبخ والمدربين، مع تقارير يمكن تفسيرها.",
+      "canonical": "https://www.narfid.com/articles/multi-branch-club-permissions",
+      "robots": "index, follow",
+      "h1": [
+        "إدارة فروع النادي: توزيع الصلاحيات دون فقدان المتابعة"
+      ],
+      "mainTextLength": 18,
+      "schemaCount": [
+        true
+      ],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/solutions/branches",
+        "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "https://www.narfid.com/articles/womens-club-operations-system",
+        "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "https://www.narfid.com/articles/gym-software-team-adoption",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=2",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 560,
+          "at": "2026-11-13T12:40:56.476Z",
+          "ray": "a59dd900cef5e46e-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "مقالات إدارة المؤسسات الرياضية — صفحة 2 | نرفد",
+      "description": "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+      "canonical": "https://www.narfid.com/articles?page=2",
+      "robots": "index, follow",
+      "h1": [
+        "معرفة تدعمخطوتك القادمة."
+      ],
+      "mainTextLength": 20,
+      "schemaCount": [],
+      "depth": 2,
+      "inbound": [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=1",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 503,
+          "ms": 124,
+          "at": "2026-11-13T12:40:56.603Z",
+          "ray": "a59dd9043d1f0d4b-MRS"
+        },
+        {
+          "status": 200,
+          "ms": 235,
+          "at": "2026-11-13T12:40:56.838Z",
+          "ray": "a59dd904f8efe181-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مقالات إدارة المؤسسات الرياضية | نرفد",
+      "description": "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+      "canonical": "https://www.narfid.com/articles",
+      "robots": "index, follow",
+      "h1": [
+        "معرفة تدعمخطوتك القادمة."
+      ],
+      "mainTextLength": 20,
+      "schemaCount": [],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=3",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 195,
+          "at": "2026-11-13T12:40:56.674Z",
+          "ray": "a59dd90438601ece-ZRH"
+        }
+      ],
+      "location": null,
+      "title": "مقالات إدارة المؤسسات الرياضية — صفحة 3 | نرفد",
+      "description": "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+      "canonical": "https://www.narfid.com/articles?page=3",
+      "robots": "index, follow",
+      "h1": [
+        "معرفة تدعمخطوتك القادمة."
+      ],
+      "mainTextLength": 20,
+      "schemaCount": [],
+      "depth": 3,
+      "inbound": [
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=4"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=4",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 168,
+          "at": "2026-11-13T12:40:57.007Z",
+          "ray": "a59dd9067b240d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مقالات إدارة المؤسسات الرياضية — صفحة 4 | نرفد",
+      "description": "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+      "canonical": "https://www.narfid.com/articles?page=4",
+      "robots": "index, follow",
+      "h1": [
+        "معرفة تدعمخطوتك القادمة."
+      ],
+      "mainTextLength": 20,
+      "schemaCount": [],
+      "depth": 4,
+      "inbound": [
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=5",
+      "status": 200,
+      "attempts": [
+        {
+          "status": 200,
+          "ms": 181,
+          "at": "2026-11-13T12:40:57.189Z",
+          "ray": "a59dd9077dde0d4b-MRS"
+        }
+      ],
+      "location": null,
+      "title": "مقالات إدارة المؤسسات الرياضية — صفحة 5 | نرفد",
+      "description": "أدلة عملية من فريق نرفد لإدارة الاشتراكات والحجوزات ونقاط البيع والوجبات والمخزون والفروع واختيار النظام المناسب.",
+      "canonical": "https://www.narfid.com/articles?page=5",
+      "robots": "index, follow",
+      "h1": [
+        "معرفة تدعمخطوتك القادمة."
+      ],
+      "mainTextLength": 20,
+      "schemaCount": [],
+      "depth": 5,
+      "inbound": [
+        "https://www.narfid.com/articles?page=4"
+      ]
+    }
+  ]
+}

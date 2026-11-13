@@ -1,0 +1,256 @@
+{
+  "checkedAt": "2026-11-13T12:43:51.660Z",
+  "source": "cf o11y telemetry query (live Workers logs)",
+  "timeframe": {
+    "from": 1794571523410,
+    "to": 1794573323410
+  },
+  "events": [
+    {
+      "at": "2026-11-13T12:35:00.048Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles?page=2"
+    },
+    {
+      "at": "2026-11-13T12:35:00.048Z",
+      "path": "/articles",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:35:00.048Z",
+      "path": "/articles",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:34:13.542Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/contact"
+    },
+    {
+      "at": "2026-11-13T12:34:13.542Z",
+      "path": "/contact",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:34:13.542Z",
+      "path": "/contact",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:37.867Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/api/board/seo/analytics?country=sau"
+    },
+    {
+      "at": "2026-11-13T12:33:37.867Z",
+      "path": "/api/board/seo/analytics",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:37.604Z",
+      "path": "/api/board/seo/analytics",
+      "outcome": null,
+      "message": "Invalid redirect value, must be one of \"follow\" or \"manual\" (\"error\" won't be implemented since it does not make sense at the edge; use \"manual\" and check the response status code)."
+    },
+    {
+      "at": "2026-11-13T12:33:37.283Z",
+      "path": "/api/board/seo/google",
+      "outcome": null,
+      "message": "Invalid redirect value, must be one of \"follow\" or \"manual\" (\"error\" won't be implemented since it does not make sense at the edge; use \"manual\" and check the response status code)."
+    },
+    {
+      "at": "2026-11-13T12:33:36.840Z",
+      "path": "/api/board/seo/google",
+      "outcome": null,
+      "message": "Invalid redirect value, must be one of \"follow\" or \"manual\" (\"error\" won't be implemented since it does not make sense at the edge; use \"manual\" and check the response status code)."
+    },
+    {
+      "at": "2026-11-13T12:33:34.321Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/club-meal-order-error-resolution"
+    },
+    {
+      "at": "2026-11-13T12:33:34.321Z",
+      "path": "/articles/club-meal-order-error-resolution",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.924Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/gym-damaged-retail-stock"
+    },
+    {
+      "at": "2026-11-13T12:33:33.924Z",
+      "path": "/articles/gym-damaged-retail-stock",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.475Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/academy-parent-progress-update"
+    },
+    {
+      "at": "2026-11-13T12:33:33.475Z",
+      "path": "/articles/academy-parent-progress-update",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.475Z",
+      "path": "/articles/academy-parent-progress-update",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.475Z",
+      "path": "/articles/academy-parent-progress-update",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.212Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/sports-class-waitlist-procedure"
+    },
+    {
+      "at": "2026-11-13T12:33:33.212Z",
+      "path": "/articles/sports-class-waitlist-procedure",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.212Z",
+      "path": "/articles/sports-class-waitlist-procedure",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.212Z",
+      "path": "/articles/sports-class-waitlist-procedure",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.212Z",
+      "path": "/articles/sports-class-waitlist-procedure",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:33.212Z",
+      "path": "/articles/sports-class-waitlist-procedure",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:32.465Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/weekly-club-operations-meeting"
+    },
+    {
+      "at": "2026-11-13T12:33:32.465Z",
+      "path": "/articles/weekly-club-operations-meeting",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:32.100Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/gym-stock-count-reorder"
+    },
+    {
+      "at": "2026-11-13T12:33:32.100Z",
+      "path": "/articles/gym-stock-count-reorder",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:31.946Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/club-expense-approval-workflow"
+    },
+    {
+      "at": "2026-11-13T12:33:31.946Z",
+      "path": "/articles/club-expense-approval-workflow",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:31.946Z",
+      "path": "/articles/club-expense-approval-workflow",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:31.946Z",
+      "path": "/articles/club-expense-approval-workflow",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:31.835Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/gym-daily-sales-collections-report"
+    },
+    {
+      "at": "2026-11-13T12:33:31.835Z",
+      "path": "/articles/gym-daily-sales-collections-report",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:31.835Z",
+      "path": "/articles/gym-daily-sales-collections-report",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:31.835Z",
+      "path": "/articles/gym-daily-sales-collections-report",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:30.998Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/womens-club-operations-system"
+    },
+    {
+      "at": "2026-11-13T12:33:30.998Z",
+      "path": "/articles/womens-club-operations-system",
+      "outcome": null,
+      "message": "Worker exceeded CPU time limit."
+    },
+    {
+      "at": "2026-11-13T12:33:30.094Z",
+      "path": null,
+      "outcome": "exceededCpu",
+      "message": "GET https://www.narfid.com/articles/club-data-migration-checklist"
+    }
+  ],
+  "subscriptions": {
+    "checkedAt": "2026-11-13T12:43:51.661Z",
+    "source": "cf accounts subscriptions get",
+    "returnedSubscriptions": 0,
+    "note": "No paid account subscriptions returned; do not change billing without owner authorization."
+  }
+}

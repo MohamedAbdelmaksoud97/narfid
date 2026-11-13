@@ -11,6 +11,10 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+    // Generated Workers bundles and vinext build output are not source.
+    ".cloudflare/**",
+    ".vinext/**",
+    "dist/**",
     "next-env.d.ts",
     // Local credentials and temporary QA helpers are not application source.
     ".private/**",
