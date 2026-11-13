@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-13T12:50:25.976Z",
+  "sourceCommit": "a334fd30ed9dc60a1c16e0ca4e0f76fb81fd851c",
+  "build": {
+    "id": "173c9623-2bc5-462a-abe6-7e9161242b85",
+    "status": "stopped",
+    "outcome": "success",
+    "stoppedOn": "2026-11-13T12:48:33.449Z"
+  },
+  "workerVersion": {
+    "id": "38d394af-5fbe-425f-8a89-df8d9a1ab792",
+    "number": 10,
+    "createdOn": "2026-11-13T12:48:24.303517Z"
+  },
+  "requests": [
+    {
+      "kind": "google",
+      "country": "all",
+      "attempt": 1,
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "fetchedAt": "2026-11-13T12:50:26.638Z",
+      "current": {
+        "clicks": 1,
+        "impressions": 3,
+        "ctr": 0.3333333333333333,
+        "position": 6.666666666666667
+      },
+      "period": {
+        "startDate": "2026-10-16",
+        "endDate": "2026-11-12"
+      }
+    },
+    {
+      "kind": "google",
+      "country": "sau",
+      "attempt": 1,
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "fetchedAt": "2026-11-13T12:43:40.616Z",
+      "current": {
+        "ctr": 0,
+        "clicks": 0,
+        "position": 7,
+        "impressions": 1
+      },
+      "period": {
+        "endDate": "2026-11-12",
+        "startDate": "2026-10-16"
+      }
+    },
+    {
+      "kind": "analytics",
+      "country": "all",
+      "attempt": 1,
+      "status": 200,
+      "connected": true,
+      "error": "تعذر الاتصال بـGoogle الآن. حاول لاحقًا.",
+      "code": null,
+      "fetchedAt": null,
+      "current": null,
+      "period": null
+    },
+    {
+      "kind": "analytics",
+      "country": "sau",
+      "attempt": 1,
+      "status": 200,
+      "connected": true,
+      "error": "تعذر الاتصال بـGoogle الآن. حاول لاحقًا.",
+      "code": null,
+      "fetchedAt": null,
+      "current": null,
+      "period": null
+    }
+  ],
+  "notes": [
+    "All four authenticated board API requests returned HTTP 200 on first attempt. HTTP success alone is not report success.",
+    "GSC all-country fetch is fresh after deployment; Saudi report is cached from this same day. Both have no provider error.",
+    "GA4 all/Saudi still unavailable; post-deploy Workers logs show timeout, not the prior unsupported redirect exception.",
+    "CPU exhaustion remains unresolved; deployment success is not an all-site availability claim."
+  ]
+}

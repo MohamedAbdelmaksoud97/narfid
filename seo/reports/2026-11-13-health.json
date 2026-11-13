@@ -14,9 +14,12 @@
     "allFinal200": false,
     "allFirstAttempt200": false,
     "allSitemapCanonicalSelf": false,
-    "allIndexable": true,
     "allExistingSchemasValid": true,
-    "allSitemapLinked": true
+    "allSitemapLinked": true,
+    "successfulHtmlHasNoNoindex": true,
+    "successfulHtmlHasSingleH1": true,
+    "successfulHtmlHasMainText": true,
+    "successfulHtmlHasTitleDescription": true
   },
   "transientFailures": [
     {
@@ -3810,5 +3813,25 @@
         "https://www.narfid.com/articles?page=4"
       ]
     }
+  ],
+  "duplicates": {
+    "titles": [
+      "https://www.narfid.com/articles",
+      "https://www.narfid.com/articles?page=1"
+    ],
+    "descriptions": [
+      "https://www.narfid.com/articles",
+      "https://www.narfid.com/articles?page=2",
+      "https://www.narfid.com/articles?page=1",
+      "https://www.narfid.com/articles?page=3",
+      "https://www.narfid.com/articles?page=4",
+      "https://www.narfid.com/articles?page=5"
+    ],
+    "note": "Archive pagination shares its library description; failed responses excluded from metadata analysis."
+  },
+  "limitations": [
+    "CPU failures prevent confirming metadata/content on all URLs; no whole-site indexing claim.",
+    "Single fetch wall time is not Core Web Vitals.",
+    "HTML link graph includes paginated archives. Draft/publication inventory was not queried in this daily run."
   ]
 }
