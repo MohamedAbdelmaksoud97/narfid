@@ -2,6 +2,7 @@ import { Audio } from "@remotion/media";
 import {
   AbsoluteFill,
   Sequence,
+  getStaticFiles,
   staticFile,
   useVideoConfig,
   interpolate,
@@ -16,6 +17,9 @@ import { ClubDayTogether } from "./Together";
 import { ClubDayPromise } from "./Promise";
 import { ClubDayClosing } from "./Closing";
 import { clamp } from "./Stage";
+
+const backgroundMusic = "club-day/audio/local-background.mp3";
+
 export const ClubDayFilm = () => {
   const { fps } = useVideoConfig();
   const f = useCurrentFrame();
@@ -84,12 +88,21 @@ export const ClubDayFilm = () => {
       >
         <ClubDayClosing />
       </Sequence>
-      <Audio
-        name="موسيقى أصلية — 90 BPM"
-        src={staticFile("club-day/audio/score.mp3")}
-        premountFor={fps}
-        volume={0.68}
-      />
+      {getStaticFiles().some((file) => file.name === backgroundMusic) && (
+        <Audio
+          name="Milo My — موسيقى خلفية خافتة"
+          src={staticFile(backgroundMusic)}
+          premountFor={fps}
+          volume={(frame) =>
+            interpolate(
+              frame,
+              [0, 1.25 * fps, 57 * fps, 60 * fps],
+              [0, 0.03, 0.03, 0],
+              clamp,
+            )
+          }
+        />
+      )}
       <Audio
         name="أجواء البداية"
         src={staticFile("club-day/audio/room.wav")}
