@@ -34,7 +34,7 @@
     "seo:google:configure": "node --env-file=.env.local --import=tsx scripts/configure-search-console.ts",
     "test:seo:http": "node --env-file=.env.local --import=tsx scripts/test-seo-http.mjs",
     "dev:vinext": "vite dev --port 3001",
-    "build:vinext": "vite build",
+    "build:vinext": "vite build && node --import=tsx scripts/build-public-image-variants.ts && node scripts/verify-public-prerender.mjs",
     "start:vinext": "vite preview",
     "deploy:vinext": "vinext-cloudflare deploy",
     "deploy:cloudflare": "cf deploy",

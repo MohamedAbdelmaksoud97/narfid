@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense, cache } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPublication } from "@/lib/articles/server";
+import { getPublication, publishedArticleSlugs } from "@/lib/articles/server";
 import { documentText } from "@/lib/articles/types";
 import { safeMedia } from "@/lib/articles/validation";
 import { PublicArticleHeader } from "@/components/articles/public-header";
@@ -21,6 +21,9 @@ import { ContactCta, PublicFooter } from "@/components/public/public-page";
 import { solutionBySlug } from "@/lib/solutions";
 import { publicationDate } from "@/lib/articles/dates";
 const getArticle = cache(getPublication);
+export async function generateStaticParams() {
+  return (await publishedArticleSlugs()).map((slug) => ({ slug }));
+}
 type Props = { params: Promise<{ slug: string }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

@@ -11,8 +11,13 @@ import type { PackedManifest } from "./lib/marketing/packed-archive";
 let packs: PackedManifest = {};
 let preparation: Promise<PackedManifest> | undefined;
 
-export default defineConfig(({ command, isPreview }): UserConfig => {
+export default defineConfig(({ command, isPreview, mode }): UserConfig => {
   const workers = command === "build" || isPreview;
+  if (command === "build") {
+    // Prerendering uses the build process, not the deployed Worker's bindings.
+    process.env.SITE_INDEXING_ENABLED = String(mode === "production");
+    process.env.NARFID_PRERENDER_PUBLIC = "true";
+  }
   return {
     resolve: {
       alias: workers
@@ -20,6 +25,9 @@ export default defineConfig(({ command, isPreview }): UserConfig => {
             "@/lib/server-assets": resolve("lib/server-assets.cloudflare.ts"),
             "@/lib/articles/image-processing": resolve(
               "lib/articles/image-processing.wasm.ts",
+            ),
+            "@/lib/articles/image-variants": resolve(
+              "lib/articles/image-variants.cloudflare.ts",
             ),
             "@cf-wasm/photon": "@cf-wasm/photon/workerd",
             "@/lib/marketing/archive": resolve(

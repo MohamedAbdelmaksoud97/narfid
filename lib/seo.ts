@@ -45,6 +45,9 @@ export function absoluteUrl(path: string) {
   return new URL(path, siteOrigin()).href;
 }
 export function canonicalRedirectUrl(request: { nextUrl: URL; headers: Headers }) {
+  // Build-only local prerender requests retain production metadata but do not
+  // redirect to the previous deployment. This flag is not a Worker binding.
+  if (process.env.NARFID_PRERENDER_PUBLIC === "true") return null;
   if (!indexingEnabled()) return null;
   const target = new URL(siteOrigin());
   // Behind the hosting proxy, nextUrl can contain the internal server origin.

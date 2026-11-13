@@ -7,7 +7,7 @@ export default defineConfig(({ isPreview, mode }) => ({
     workersDev: mode === "migration",
     previewUrls: false,
     domains: ["narfid.com", "www.narfid.com"],
-    entrypoint: "vinext/server/fetch-handler",
+    entrypoint: "./worker.ts",
     compatibilityDate: "2026-11-13",
     compatibilityFlags: ["nodejs_compat"],
     placement: { region: "aws:eu-west-1" },
@@ -25,6 +25,7 @@ export default defineConfig(({ isPreview, mode }) => ({
       NEXT_PUBLIC_SUPABASE_URL: bindings.secret(),
       NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: bindings.secret(),
       SUPABASE_SECRET_KEY: bindings.secret(),
+      NARFID_PUBLIC_REBUILD_HOOK: bindings.secret(),
       NEXT_PUBLIC_SITE_URL: bindings.text("https://www.narfid.com"),
       NEXT_PUBLIC_GA_MEASUREMENT_ID: bindings.text("G-YRR3C0L5X9"),
       SITE_INDEXING_ENABLED: bindings.text(

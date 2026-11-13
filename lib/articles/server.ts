@@ -59,7 +59,11 @@ export async function loadArticle(
 }
 // Public reads always use the publishable key and published snapshots only.
 export async function publicClient() {
-  await connection();
+  // Only the build process sets this flag. It is never a Worker binding.
+  if (process.env.NARFID_PRERENDER_PUBLIC !== "true") await connection();
+  return publicationClient();
+}
+function publicationClient() {
   return createSupabaseClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!,
@@ -70,10 +74,24 @@ export async function publicClient() {
         detectSessionInUrl: false,
       },
       global: {
-        fetch: (input, init) => fetch(input, { ...init, cache: "no-store" }),
+        fetch: (input, init) => fetch(input, {
+          ...init,
+          cache: process.env.NARFID_PRERENDER_PUBLIC === "true" ? "force-cache" : "no-store",
+        }),
       },
     },
   );
+}
+export async function publishedArticleSlugs() {
+  const client = publicationClient();
+  const slugs: string[] = [];
+  for (let start = 0; ; start += 1000) {
+    const { data, error } = await client.from("article_publications")
+      .select("slug").order("slug").range(start, start + 999);
+    if (error) throw new ArticleError("تعذر تجهيز قائمة المقالات المنشورة.", 503);
+    slugs.push(...data.map((article) => article.slug));
+    if (data.length < 1000) return slugs;
+  }
 }
 export async function getPublication(slug: string) {
   const supabase = await publicClient();

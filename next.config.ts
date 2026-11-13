@@ -5,6 +5,18 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   allowedDevOrigins: ["127.0.0.1"],
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/articles",
+          has: [{ type: "query", key: "page", value: "(?<page>[1-9]\\d*)" }],
+          destination: "/articles/page/:page",
+        },
+        { source: "/articles", destination: "/articles/page/1" },
+      ],
+    };
+  },
   outputFileTracingIncludes: {
     "/api/board/marketing/assets/**": [
       "./content/marketing/assets/**/*.png",

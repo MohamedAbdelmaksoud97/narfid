@@ -1,54 +1,62 @@
 # Rendering within Workers Free
 
-The owner requires the Cloudflare Free plan. No billing or subscription change is
-authorized or made. Keep the existing authentication, article publication workflow,
-SEO metadata and user interface.
+The owner requires Cloudflare Free and accepts a few minutes between publication
+and the refreshed public site. No subscription or billing setting was changed.
 
-## Evidence on 2026-11-13
+## Diagnosis, 2026-11-13
 
-The original live invocation logs show `exceededCpu` at 10 CPU ms. A sequential
-24-request reproduction across contact, archive page 2 and the employee-offboarding
-article failed 9 times. An active 63-sample production CPU profile identified React
-HTML rendering in `ssr/index.js` as the main inclusive stack. Minified frames limit
-function-level attribution; profile totals are not per-request measurements.
+Original invocation logs show `exceededCpu` at 10 CPU ms. A sequential 24-request
+reproduction across contact, archive page 2 and the offboarding article failed
+nine times. A production CPU profile identified React SSR as the dominant stack.
+Reusing immutable Tiptap definitions and date formatters helped, but a later
+automatic deployment still failed 26 of 304 requests. That first optimization
+alone was insufficient.
 
-## Changes
+## Public build and publishing
 
-- vinext prerenders routes that prove static and packages HTML/Flight artifacts
-  with its existing Static Assets adapter. No external cache resource is added.
-  Five live marketing routes returned cache HIT: about, contact, pricing,
-  technology partnership and visual identity. The unavailable/404 outputs are also
-  static. The article lists, articles, solutions, author and authenticated routes
-  remain dynamic: database updates and publication checks still happen at request
-  time. Do not force these routes static without designing invalidation first.
-- The article validator reuses its immutable schema while validating every input.
-  The renderer compiles Tiptap extension mappings/schema once, reusing only those
-  definitions. Document nodes, React elements, heading counters and overrides stay
-  local to a render. This is not a content or permission cache.
-- Publication date formatters are reused, retaining existing locale, date style
-  and the homepage's explicit Riyadh timezone.
+- Vite prerenders current public publication snapshots, archive pages, solutions,
+  author and marketing pages. vinext's Static Assets adapter packages HTML and
+  Flight artifacts. The build-only `NARFID_PRERENDER_PUBLIC` flag is never a Worker
+  binding. Production prerenders retain the official canonical host and indexing
+  policy; preview builds remain noindex.
+- `/articles?page=n` is internally rewritten to a prerenderable page parameter.
+  Existing public URLs, pagination links and canonical URLs remain the same.
+- Publishing commits through the existing validated RPC, then queues a production
+  deploy hook. The editor reports queued/failed status and can retry only the
+  build. A build failure leaves the previous deployment serving. Check Workers
+  Builds if an update has not appeared; queued does not mean completed.
+- Unpublishing is immediate: every article HTML/Flight request still resolves its
+  slug against the live database before serving its cached body. Unknown and
+  unpublished slugs return 404/noindex; renamed slugs retain 308 redirects. Lists
+  may retain a removed card until the build, but its article cannot be opened.
+- Responsive WebP variants are prepared with Sharp at build time from public
+  images only. The media route still performs the private storage RLS read before
+  serving a prebuilt variant. Draft/new image previews use their original raster
+  until the next build on Workers. Node deployments keep their existing resizer.
+- Generated `/_vinext/` assets cannot be fetched directly over HTTP, including
+  encoded paths. They are read only through the internal ASSETS binding after
+  routing or media permission checks. Board/API routes are not prerendered.
 
-## Verification and limits
+`scripts/verify-public-prerender.mjs` fails the build if a current article or
+required public route lacks packaged HTML, body, one H1, metadata, canonical,
+Article schema or the expected indexing policy. It rejects private routes in the
+rendered manifest. Image generation must succeed before deployment.
 
-Lint, TypeScript, Next production build, Workers production build and the 11
-article tests pass. All 58 current public articles produce byte-identical body HTML
-against the previous renderer. A five-pass local Node comparison shows a clear
-reduction in render wall time; it is not a Workers CPU benchmark. Desktop/mobile
-checks cover contact, archive pagination and the affected article without overflow
-or browser errors.
+## Verification
 
-Manual deployment `4cf90a84-850c-4628-9e42-e5383d98a0d6` returned 200 for all 76
-public pages, then 24/24 repeated reproduction requests. All 13 inspected board
-routes returned 200 with private/no-store and noindex; anonymous board access
-redirected to login, and an unknown article returned 404. No test records were
-published and no contact events were sent.
+The Workers build checks 58 publications and 75 public canonical pages and
+prepares 290 responsive variants from 58 published image sources. The existing
+11 article and five domain SEO checks pass. All 58 article body outputs match the
+previous renderer byte for byte. Lint, type checking and production build checks
+are recorded with final live verification in the dated SEO report. Profiles,
+credentials and detailed QA output stay in ignored `.private/`.
 
-Some successful post-deployment invocations still report CPU above 10 ms. HTTP
-success in one warm sample therefore does not prove a strict 10 ms worst case.
-Verify the automatic deployment, repeated cold and warm requests and subsequent
-invocation outcomes before declaring the Free-plan issue resolved. Account
-subscription reads before and after deployment returned no subscriptions.
+Live checks cover every publication, metadata/schema, sitemap, robots, images and
+internal links, plus repeated requests, desktop/mobile navigation and privacy.
+Manual deployment success alone does not establish a strict CPU bound: repeat
+public checks after Workers Builds deployment.
 
-Operational assets and profiles stay in ignored `.private/free-worker-*` files.
-The static cache index contains public prerender outputs only. New public dynamic
-content must not be placed in that read-only cache without an update policy.
+This removes expensive public SSR and per-request image resizing. Authenticated
+APIs, the live publication gate, storage access and Free account request/build
+quotas still apply. Google indexing and rankings are separate from technical
+eligibility.

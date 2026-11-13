@@ -12,6 +12,7 @@ import {
   validateFields,
   validatePublication,
 } from "@/lib/articles/validation";
+import { refreshPublicSite } from "@/lib/articles/public-refresh";
 type Context = { params: Promise<{ id: string }> };
 export async function POST(request: Request, context: Context) {
   try {
@@ -34,7 +35,10 @@ export async function POST(request: Request, context: Context) {
       { article_id: id, expected_revision: revision },
     );
     if (error) dbFailure(error);
-    return json({ article: data });
+    // Publishing is already committed. A failed refresh must not make the
+    // browser repeat that mutation or lose its new revision.
+    const publicRefresh = await refreshPublicSite();
+    return json({ article: data, publicRefresh });
   } catch (error) {
     return failure(error);
   }

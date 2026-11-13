@@ -51,7 +51,7 @@ export function ArticleEditor({
 }) {
   const formId = useId();
   const fieldId = (name: string) => `${formId}-${name}`;
-  const { fields, article, status, error, busy, change, save, publish } =
+  const { fields, article, status, error, busy, change, save, publish, publicRefresh, retryPublicRefresh } =
     useArticleDraft(initial);
   const [preview, setPreview] = useState(false);
   const [uploading, setUploading] = useState(false);
@@ -164,6 +164,14 @@ export function ArticleEditor({
       </header>
       <div className="article-editor-layout">
         <section className="article-writing-column">
+          {publicRefresh && <Alert variant={publicRefresh.status === "failed" ? "destructive" : "default"}>
+            <AlertDescription>
+              {publicRefresh.status === "queued"
+                ? "تم حفظ إجراء النشر. تظهر تحديثات النسخة العامة بعد اكتمال التجهيز، وقد يستغرق ذلك بضع دقائق. إلغاء النشر يمنع فتح المقال فورًا."
+                : "تم حفظ إجراء النشر، لكن تعذّر تحديث النسخة العامة. أعد المحاولة دون إعادة نشر المقال."}
+              {publicRefresh.status === "failed" && <Button variant="outline" size="sm" disabled={busy} onClick={() => void retryPublicRefresh()}>إعادة تحديث الموقع</Button>}
+            </AlertDescription>
+          </Alert>}
           {error && (
             <Alert variant="destructive">
               <AlertDescription>

@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/server";
 import { UUID_RE } from "@/lib/articles/types";
 import { resizeArticleImage } from "@/lib/articles/image-processing";
+import { prebuiltArticleImage, prebuiltArticleImagesOnly } from "@/lib/articles/image-variants";
 type Context = { params: Promise<{ id: string; file: string }> };
 export async function GET(request: Request, context: Context) {
   const { id, file } = await context.params;
@@ -32,10 +33,25 @@ export async function GET(request: Request, context: Context) {
   let body: Blob | Uint8Array = data;
   let contentType = types[file.split(".")[1]];
   if (width && !file.endsWith(".gif")) {
-    try {
-      body = await resizeArticleImage(new Uint8Array(await data.arrayBuffer()), Number(width));
-      contentType = "image/webp";
-    } catch { return new Response(null, { status: 422, headers: { "Cache-Control": "private, no-store" } }); }
+    // Storage RLS above remains authoritative, including after unpublishing.
+    // Only the pixels are reused; the private cache asset is never public.
+    const variant = await prebuiltArticleImage(id, file, Number(width));
+    if (variant) return new Response(variant.body, {
+      headers: {
+        "Content-Type": "image/webp",
+        "Cache-Control": "private, no-store",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Security-Policy": "default-src 'none'; sandbox",
+      },
+    });
+    // Drafts and newly uploaded files still display their original raster until
+    // the next build. Never spend the Free request budget resizing pixels.
+    if (!prebuiltArticleImagesOnly) {
+      try {
+        body = await resizeArticleImage(new Uint8Array(await data.arrayBuffer()), Number(width));
+        contentType = "image/webp";
+      } catch { return new Response(null, { status: 422, headers: { "Cache-Control": "private, no-store" } }); }
+    }
   }
   return new Response(body as BodyInit, {
     headers: {

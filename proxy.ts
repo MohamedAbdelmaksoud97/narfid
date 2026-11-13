@@ -9,6 +9,10 @@ export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const articlePath = path.match(/^\/articles\/([^/]+)\/?$/);
   if (articlePath) {
+    // The build renders only publication slugs and must be allowed to capture
+    // the public body. Every deployed request still performs the live gate.
+    if (process.env.NARFID_PRERENDER_PUBLIC === "true")
+      return NextResponse.next();
     const headers = {
       "Cache-Control": "private, no-store",
       "X-Robots-Tag": "noindex",

@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { articleRequest, ArticleRequestError } from "@/lib/articles/browser";
 import { useNavigationGuard } from "@/components/articles/navigation-guard-provider";
+import type { PublicRefresh } from "@/lib/articles/public-refresh";
 import {
   articleFields,
   type Article,
@@ -17,6 +18,7 @@ export function useArticleDraft(initial: Article) {
   );
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [publicRefresh, setPublicRefresh] = useState<PublicRefresh | null>(null);
   const latest = useRef(articleFields(initial));
   const saved = useRef(JSON.stringify(articleFields(initial)));
   const record = useRef(initial);
@@ -147,7 +149,7 @@ export function useArticleDraft(initial: Article) {
       setError("");
       try {
         const current = await save();
-        const result = await articleRequest<{ article: Article }>(
+        const result = await articleRequest<{ article: Article; publicRefresh: PublicRefresh }>(
           `/api/board/articles/${initial.id}/publish`,
           {
             method: "POST",
@@ -157,6 +159,7 @@ export function useArticleDraft(initial: Article) {
         );
         record.current = result.article;
         setArticle(result.article);
+        setPublicRefresh(result.publicRefresh);
       } catch (error) {
         setError(error instanceof Error ? error.message : "تعذر النشر.");
       } finally {
@@ -165,5 +168,18 @@ export function useArticleDraft(initial: Article) {
     },
     [initial.id, save],
   );
-  return { fields, article, status, error, busy, change, save, publish };
+  const retryPublicRefresh = useCallback(async () => {
+    setBusy(true);
+    try {
+      const result = await articleRequest<{ publicRefresh: PublicRefresh }>(
+        "/api/board/articles/rebuild", { method: "POST" },
+      );
+      setPublicRefresh(result.publicRefresh);
+    } catch {
+      setPublicRefresh({ status: "failed" });
+    } finally {
+      setBusy(false);
+    }
+  }, []);
+  return { fields, article, status, error, busy, change, save, publish, publicRefresh, retryPublicRefresh };
 }
