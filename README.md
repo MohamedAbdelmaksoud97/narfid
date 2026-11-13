@@ -41,6 +41,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ## Deploy to Cloudflare Workers
 
 Production uses vinext on Workers. `npm run dev` still runs Next.js locally.
+Cloudflare Workers Builds deploys production on pushes to GitHub's `master`
+branch. Check the build result in the `narfid` Worker's Deployments tab.
+
+For a manual deployment, use the commands below.
 Use a Node version supported by the pinned `cf` CLI. For the first deployment,
 sign in with `npx cf auth login` and provide a local JSON file containing the
 three Supabase bindings declared in `cloudflare.config.ts`. Keep it in `.private/`.
