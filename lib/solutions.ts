@@ -191,8 +191,14 @@ export const solutionOperatingGuides: Record<string, { question: string; text: s
   },
   "point-of-sale": {
     question: "هل تحتاج متابعة البيع أم التحصيل أم كليهما؟",
-    text: "عند اختيار برنامج كاشير للنادي الرياضي، اختبر بيع اشتراك بدفعة جزئية ثم تحصيل المتبقي في وردية أخرى. أضف بيع منتج ومرتجعًا إلى التجربة لتراجع أثر كل حركة على المال والمخزون، وحدد مع المسؤول المالي حدود الحسابات المطلوبة.",
-    articles: ["gym-partial-payments-receivables", "gym-daily-sales-collections-report", "gym-pos-retail-sales-workflow"],
+    text: "عند اختيار برنامج كاشير للنادي الرياضي، اختبر بيع اشتراك بدفعة جزئية ثم تحصيل المتبقي في وردية أخرى. جرّب بيع منتج وإرجاعه لتراجع أثر كل حركة على التحصيل والمخزون. اتفق مع المسؤول المالي على من يعتمد الخصم وما الذي يراجعه الفريق إذا تعذّرت مطابقة دفعة بفاتورة.",
+    articles: [
+      "gym-partial-payments-receivables",
+      "gym-daily-sales-collections-report",
+      "gym-pos-retail-sales-workflow",
+      "gym-unidentified-payment-review",
+      "gym-discount-approval-controls",
+    ],
   },
   "kitchen-inventory": {
     question: "هل الكمية استحقاق وجبة أم مخزون منتج؟",

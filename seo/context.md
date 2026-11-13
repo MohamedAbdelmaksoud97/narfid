@@ -2,6 +2,12 @@
 
 Last daily run: 2026-11-13. Setup baseline: 2026-11-12.
 
+## Daily follow-up — 2026-11-13
+
+- Two fresh Cloudflare crawl samples returned 200 for all 76 public pages (71 sitemap URLs). The local router resolver still returned Vercel addresses and HTTP 402 while Cloudflare, Google Public DNS and the authoritative server returned Cloudflare addresses. See [follow-up report](reports/2026-11-13-autopilot.md).
+- Added two contextual links from the point-of-sale solution to published guides on unmatched payments and discount approvals. Search Console URL Inspection confirmed both guides and the solution were already indexed before the update.
+- The board returned current-window Search Console totals of 3 impressions/1 click globally and 1 impression/0 clicks in Saudi Arabia, with final data through 2026-11-10. Historical GA4 returned a quota error. No new price, feature or scope changes were found in the intervening commits.
+
 ## Daily update — 2026-11-13
 
 - Production moved to Cloudflare Workers/vinext; `cloudflare.config.ts` and `README.md` now own deployment facts. Normal pushes to `master` trigger Workers Builds. Prior Vercel deployment references below describe the dated setup baseline.
