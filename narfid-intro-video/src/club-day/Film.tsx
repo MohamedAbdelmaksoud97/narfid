@@ -90,14 +90,14 @@ export const ClubDayFilm = () => {
       </Sequence>
       {getStaticFiles().some((file) => file.name === backgroundMusic) && (
         <Audio
-          name="Milo My — موسيقى خلفية خافتة"
+          name="Baila Conmigo — موسيقى خلفية خافتة"
           src={staticFile(backgroundMusic)}
           premountFor={fps}
           volume={(frame) =>
             interpolate(
               frame,
               [0, 1.25 * fps, 57 * fps, 60 * fps],
-              [0, 0.03, 0.03, 0],
+              [0, 0.054, 0.054, 0],
               clamp,
             )
           }
