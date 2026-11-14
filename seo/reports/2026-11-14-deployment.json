@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-11-14T17:26:46.433Z",
+  "sourceCommit": "23060bb948e087096ca3bf6e44773057c3fdc893",
+  "deployment": {
+    "provider": "Cloudflare Workers Builds, read with cf CLI",
+    "buildUuid": "09580bb9-e77a-4750-bf8e-7eb1f355cc79",
+    "outcome": "success",
+    "startedAt": "2026-11-14T17:22:53.403Z",
+    "stoppedAt": "2026-11-14T17:26:07.586Z"
+  },
+  "checks": {
+    "lint": "passed",
+    "typescriptNoIncremental": "passed",
+    "nextProductionBuild": "passed",
+    "workerProductionBuild": "passed; 59 published articles and 295 image variants",
+    "existingResearchTests": "2 passed",
+    "localBrowser": "1440px and 390px; both new links visible, no overflow or page errors",
+    "liveBrowser": "1440px and 390px; both links visible, targets 200, no overflow or page errors; screenshots inspected"
+  },
+  "results": [
+    {
+      "url": "https://www.narfid.com/solutions/kitchen-inventory",
+      "status": 200,
+      "title": "إدارة المطبخ والوجبات ومخزون المنتجات | نرفد",
+      "canonical": "https://www.narfid.com/solutions/kitchen-inventory",
+      "robots": "index, follow",
+      "links": [
+        {
+          "target": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+          "present": true
+        },
+        {
+          "target": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+          "present": true
+        }
+      ],
+      "reviewScenarioPresent": true,
+      "checkedAt": "2026-11-14T17:26:45.880Z"
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "status": 200,
+      "title": "خطأ طلب الوجبة: توثيق التصحيح دون خصم استحقاق مرتين | نرفد",
+      "canonical": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "robots": "index, follow",
+      "checkedAt": "2026-11-14T17:26:46.204Z"
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "status": 200,
+      "title": "منتج تالف في متجر النادي: اعزله ووثّق قرار الرصيد | نرفد",
+      "canonical": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "robots": "index, follow",
+      "checkedAt": "2026-11-14T17:26:46.433Z"
+    }
+  ]
+}

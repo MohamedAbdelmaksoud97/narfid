@@ -3486,5 +3486,32 @@
       }
     ],
     "interpretation": "Library pagination repeats the library title and description; queued for a focused metadata review, not evidence of an indexing failure."
+  },
+  "hostRedirects": {
+    "checkedAt": "2026-11-14T17:25:27.832Z",
+    "checks": [
+      {
+        "url": "http://narfid.com/",
+        "status": 308,
+        "location": "https://www.narfid.com/",
+        "destinationStatus": 200,
+        "redirectHops": 1
+      },
+      {
+        "url": "https://narfid.com/",
+        "status": 308,
+        "location": "https://www.narfid.com/",
+        "destinationStatus": 200,
+        "redirectHops": 1
+      },
+      {
+        "url": "http://www.narfid.com/",
+        "status": 308,
+        "location": "https://www.narfid.com/",
+        "destinationStatus": 200,
+        "redirectHops": 1
+      }
+    ],
+    "source": "Live native-DNS fetch, redirect manual; exact Location followed"
   }
 }
