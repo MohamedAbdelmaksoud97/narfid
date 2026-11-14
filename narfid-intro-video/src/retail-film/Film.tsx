@@ -381,12 +381,6 @@ export function RetailFilm() {
         durationInFrames={18}
       />
       <Audio
-        name="فتح شريط الكرتون"
-        src={staticFile("retail-film/audio/tape.wav")}
-        from={147}
-        durationInFrames={27}
-      />
-      <Audio
         name="رص العبوات"
         src={staticFile("retail-film/audio/pack.wav")}
         from={203}
@@ -417,16 +411,10 @@ export function RetailFilm() {
         durationInFrames={22}
       />
       <Audio
-        name="الموسيقى الأصلية"
-        src={staticFile("retail-film/audio/score.mp3")}
-        from={172}
-        durationInFrames={998}
-      />
-      <Audio
-        name="القفلة الصوتية"
+        name="نقرة ظهور الشعار"
         src={staticFile("retail-film/audio/end.wav")}
         from={1191}
-        durationInFrames={129}
+        durationInFrames={15}
       />
     </AbsoluteFill>
   );
