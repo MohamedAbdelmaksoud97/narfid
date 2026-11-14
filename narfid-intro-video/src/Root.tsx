@@ -63,8 +63,26 @@ import { FreezeSchedule } from "./freeze-policy/Schedule";
 import { FreezeTimeline } from "./freeze-policy/Timeline";
 import { FreezeResume } from "./freeze-policy/Resume";
 import { FreezeClosing } from "./freeze-policy/Closing";
+import {
+  RetailFilm,
+  RetailOpening,
+  RetailReceipt,
+  RetailCheckout,
+  RetailBalance,
+  RetailThreshold,
+  RetailClosing,
+} from "./retail-film/Film";
 export const RemotionRoot = () => (
   <>
+    <Composition id="NarfidRetailFilm" component={RetailFilm} width={1080} height={1920} fps={30} durationInFrames={1350} />
+    <Folder name="Retail-Film-Scenes">
+      <Composition id="RetailOpening" component={RetailOpening} width={1080} height={1920} fps={30} durationInFrames={150} />
+      <Composition id="RetailReceipt" component={RetailReceipt} width={1080} height={1920} fps={30} durationInFrames={210} />
+      <Composition id="RetailCheckout" component={RetailCheckout} width={1080} height={1920} fps={30} durationInFrames={300} />
+      <Composition id="RetailBalance" component={RetailBalance} width={1080} height={1920} fps={30} durationInFrames={270} />
+      <Composition id="RetailThreshold" component={RetailThreshold} width={1080} height={1920} fps={30} durationInFrames={240} />
+      <Composition id="RetailClosing" component={RetailClosing} width={1080} height={1920} fps={30} durationInFrames={180} />
+    </Folder>
     <Composition id="NarfidFreezePolicy" component={FreezePolicyFilm} width={1920} height={1080} fps={30} durationInFrames={1440} />
     <Folder name="Freeze-Policy-Scenes">
       <Composition id="FreezeRequest" component={FreezeRequest} width={1920} height={1080} fps={30} durationInFrames={135} />
