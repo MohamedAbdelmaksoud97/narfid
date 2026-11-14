@@ -5,6 +5,7 @@ import {
   Img,
   Interactive,
   Sequence,
+  getStaticFiles,
   staticFile,
   useCurrentFrame,
   interpolate,
@@ -14,6 +15,7 @@ import { Logo } from "../Composition";
 import "./film.css";
 
 const assets = "retail-film";
+const backgroundMusic = "retail-film/audio/local-mandolin.mp3";
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const ease = { ...clamp, easing: Easing.out(Easing.cubic) };
 const counter = staticFile(assets + "/counter.jpg");
@@ -374,6 +376,14 @@ export function RetailFilm() {
         <RetailClosing />
       </Sequence>
 
+      {getStaticFiles().some((file) => file.name === backgroundMusic) && (
+        <Audio
+          name="Mandolin (1) · موسيقى الخلفية"
+          src={staticFile(backgroundMusic)}
+          durationInFrames={1350}
+          volume={10 ** (-40 / 20)}
+        />
+      )}
       <Audio
         name="ملامسة العبوة للكاونتر"
         src={staticFile("retail-film/audio/bottle.wav")}
