@@ -56,8 +56,24 @@ import { ClubDayCollection } from "./club-day/Collection";
 import { ClubDayTogether } from "./club-day/Together";
 import { ClubDayPromise } from "./club-day/Promise";
 import { ClubDayClosing } from "./club-day/Closing";
+import { FreezePolicyFilm } from "./freeze-policy/Film";
+import { FreezeRequest } from "./freeze-policy/Request";
+import { FreezePolicy } from "./freeze-policy/Policy";
+import { FreezeSchedule } from "./freeze-policy/Schedule";
+import { FreezeTimeline } from "./freeze-policy/Timeline";
+import { FreezeResume } from "./freeze-policy/Resume";
+import { FreezeClosing } from "./freeze-policy/Closing";
 export const RemotionRoot = () => (
   <>
+    <Composition id="NarfidFreezePolicy" component={FreezePolicyFilm} width={1920} height={1080} fps={30} durationInFrames={1140} />
+    <Folder name="Freeze-Policy-Scenes">
+      <Composition id="FreezeRequest" component={FreezeRequest} width={1920} height={1080} fps={30} durationInFrames={105} />
+      <Composition id="FreezePolicy" component={FreezePolicy} width={1920} height={1080} fps={30} durationInFrames={210} />
+      <Composition id="FreezeSchedule" component={FreezeSchedule} width={1920} height={1080} fps={30} durationInFrames={195} />
+      <Composition id="FreezeTimeline" component={FreezeTimeline} width={1920} height={1080} fps={30} durationInFrames={180} />
+      <Composition id="FreezeResume" component={FreezeResume} width={1920} height={1080} fps={30} durationInFrames={330} />
+      <Composition id="FreezeClosing" component={FreezeClosing} width={1920} height={1080} fps={30} durationInFrames={120} />
+    </Folder>
     <Composition
       id="NarfidClubDay"
       component={ClubDayFilm}

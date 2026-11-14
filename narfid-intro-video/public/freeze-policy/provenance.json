@@ -1,0 +1,41 @@
+{
+  "createdOn": "2026-11-14",
+  "composition": "NarfidFreezePolicy",
+  "webRevision": "d3efa7e870e143539e35a4c86cdd1f8b0b7e0d87",
+  "backendRevision": "80ec3c75d13bdcae26c2cee9d27b4a6423b8f546",
+  "database": "Disposable in-memory PGlite with the reference application's real services, repositories, API and Next BFF",
+  "authentication": "Disposable local test token verifier",
+  "network": "Loopback-only server and socket guard, local-only CSP, intercepted browser requests and disabled service workers",
+  "productionAccess": false,
+  "fictionalMember": "سلمان الحربي",
+  "freezePolicy": {
+    "maxDaysPerFreeze": 7,
+    "maxFreezesPerTerm": 2,
+    "minimumActiveDaysBeforeFreeze": 14,
+    "maxTotalFreezeDays": 12
+  },
+  "timeZone": "Asia/Riyadh",
+  "scheduledStart": "2026-12-10T09:00:00+03:00",
+  "plannedReturn": "2026-12-17T09:00:00+03:00",
+  "earlyReturn": "2026-12-14T09:00:00+03:00",
+  "verifiedTermEndDates": ["2026-12-31", "2027-01-07", "2027-01-04"],
+  "verifiedRemainingFreezeDays": 5,
+  "captures": {
+    "subscription.jpg": "Active subscription row before scheduling",
+    "policy.jpg": "Actual captured policy metrics before scheduling",
+    "schedule.jpg": "Filled freeze scheduling dialog before submission",
+    "scheduled.jpg": "Persisted pending schedule",
+    "resume.jpg": "Actual early resumption preview with both term end dates"
+  },
+  "editorial": "Remotion typography, cursor, annotations and calendar are explanatory overlays. The timeline jumps to the scheduled instant and then to the early return. Both Schedule and Resume actions were submitted through the reference UI, and lifecycle processing applied the due schedule through the backend service.",
+  "audio": {
+    "generator": "scripts/make-freeze-effects.mjs",
+    "source": "Original local synthesis of short tactile effects, revised for stronger attacks and longer bodies",
+    "timedCues": 54,
+    "sampleRate": 48000,
+    "externalSamples": false,
+    "music": false,
+    "voiceover": false,
+    "sweeps": false
+  }
+}
