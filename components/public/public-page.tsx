@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { PublicArticleHeader } from "@/components/articles/public-header";
+import { SocialLinks } from "@/components/public/social-links";
 import { buttonVariants } from "@/components/ui/button";
 import { breadcrumbSchema, structuredJson } from "@/lib/seo";
 import { solutions } from "@/lib/solutions";
@@ -78,6 +79,7 @@ export function PublicFooter() {
       <div>
         <strong>نرفد · narfid</strong>
         <p>السند التقني للمؤسسات الرياضية.</p>
+        <SocialLinks />
       </div>
       <nav aria-label="روابط نرفد">
         {solutions.map((s) => (

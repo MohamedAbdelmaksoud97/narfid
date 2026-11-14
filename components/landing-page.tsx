@@ -5,6 +5,7 @@ import { IdentityServiceSection } from "@/components/identity-service-section";
 import type { ReactNode } from "react";
 import { DemoButton, LandingDemo } from "@/components/landing-demo";
 import { LandingHeader } from "@/components/landing-header";
+import { SocialLinks } from "@/components/public/social-links";
 import {
   ArrowDownLeft,
   ArrowUpLeft,
@@ -701,6 +702,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                 <br />
                 نرفد تشغيلك، لتتفرّغ لنموّه.
               </p>
+              <SocialLinks />
             </div>
             <div className="footer-links">
               <span>اكتشف نرفد</span>
