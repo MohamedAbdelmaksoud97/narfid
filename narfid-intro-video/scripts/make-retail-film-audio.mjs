@@ -135,15 +135,6 @@ function key(midi, duration, level, attack = 0.035) {
   };
 }
 
-const room = track(5.36);
-room.add(0, 5.36, texture(19, 5.36, 0.1, 0.003, 0.03), -0.28);
-room.add(0, 5.36, texture(72, 5.36, 0.09, 0.004, 0.04), 0.27);
-room.output("room", (t) => (t < 1.25 ? 1 : 0.55), true);
-
-const shelf = track(0.59);
-shelf.add(0, 0.51, texture(53, 0.51, 0.2, 0.19, 0.48), 0.24);
-shelf.output("shelf");
-
 const bottle = track(0.58);
 bottle.add(0.006, 0.42, impact(268, 0.59, 1, 24), 0.07);
 bottle.add(0.077, 0.32, impact(100, 0.16, 1.64, 45), 0.17);

@@ -375,18 +375,6 @@ export function RetailFilm() {
       </Sequence>
 
       <Audio
-        name="خلفية المتجر"
-        src={staticFile("retail-film/audio/room.mp3")}
-        from={0}
-        durationInFrames={161}
-      />
-      <Audio
-        name="احتكاك العبوة بالرف"
-        src={staticFile("retail-film/audio/shelf.wav")}
-        from={12}
-        durationInFrames={18}
-      />
-      <Audio
         name="ملامسة العبوة للكاونتر"
         src={staticFile("retail-film/audio/bottle.wav")}
         from={36}
