@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-14",
   "baseline": {
     "keywords": "../../../../content/seo-campaign/keywords.json",
     "research": "../../../../content/seo-campaign/research-log.json",
@@ -9061,6 +9061,125 @@
           "summary": "دليل لمستخدمي Mindbody يقارن الحضور بين الأيام والساعات ويربط الاتجاهات بقرارات الجدول والطاقم. يركز على تقارير المنتج."
         }
       ]
+    },
+    {
+      "id": "research-20261114-autopilot-kitchen-links",
+      "researchedAt": "2026-11-14",
+      "provider": "web.run search_query + open",
+      "market": "السعودية سوق مقصود؛ بحث ويب عام دون تثبيت بلد Google أو الجهاز",
+      "googleSaudiVerified": false,
+      "queries": [
+        {
+          "query": "إجراءات تسليم الشيفت استقبال نادي رياضي",
+          "searchedAt": "2026-11-14",
+          "results": [],
+          "note": "بحث استكشافي أعاد لوائح وتشغيل منشآت وأخبارًا؛ لم يُعتمد موضوع جديد من هذه الصياغة. لم نفحص نتائج هذا الاستعلام أو نعتمد عليها."
+        },
+        {
+          "query": "تدريب موظف استقبال نادي رياضي تسليم الوردية",
+          "searchedAt": "2026-11-14",
+          "results": [
+            {
+              "title": "إدارة موظفي الملاعب والخزنة في السعودية",
+              "url": "https://matchena.com/ar/blog/sports-venue-staff-cash-management-saudi-arabia",
+              "inspection": {
+                "status": "not-opened",
+                "checkedAt": null,
+                "summary": "مقتطف عن الصلاحيات والورديات والخزنة؛ لم يُعتمد محتوى من المقتطف ولم يُحرر مقال استقبال."
+              }
+            }
+          ]
+        },
+        {
+          "query": "إدارة مخزون منتجات النادي الوجبات التالف أخطاء الطلبات",
+          "searchedAt": "2026-11-14",
+          "results": [
+            {
+              "title": "المؤسسة العامة للتدريب التقني والمهني — إدارة المخزون",
+              "url": "https://tvtc.gov.sa/ar/Departments/tvtcdepartments/cdd/DocLib1/المعاهد%20الصناعية/الخياطة/حقيبة%20إدارة%20المخزون.pdf",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-14",
+                "summary": "مرجع عام للتخزين والجرد والفروق والأصناف التالفة والراكدة؛ لا يغطي استحقاق وجبة عضو نادٍ."
+              }
+            },
+            {
+              "title": "غرفة جدة — متاجر التموينات",
+              "url": "https://www.jcci.org.sa/documents/44210/0/متاجر%2Bالتموينات.pdf/f1524e1a-664d-3ac2-7cc8-644b6c70658e?t=1715675045289",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-14",
+                "summary": "دليل منشآت غذائية يتناول الشكاوى وعزل المنتجات غير المطابقة؛ لا يُحوّل إلى وعد امتثال لنرفد أو دليل معالجة استحقاق عضوية."
+              }
+            },
+            {
+              "title": "AurPOS — تقارير انتهاء صلاحية وتلف المخزون",
+              "url": "https://help.aurpos.com/ar/article/151-تقارير-انتهاء-صلاحية-وتلف-المخزون",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-14",
+                "summary": "وثائق المنتج تعرض تاريخ الإتلاف والمرجع والفرع والسبب والقيمة والمستخدم. ليست خطوات مستقلة لتصحيح طلب وجبة مرتبط بعضوية."
+              }
+            },
+            {
+              "title": "FlexiLearnHub — Food Date Labelling and Stock Rotation",
+              "url": "https://flexilearnhub.com/FLH25/wp-content/uploads/2026/09/Resource-080-Food-Date-Labelling-and-Stock-Rotation-in-Care-Catering-A-Practical-Guide-for-Catering-Staff.pdf",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-14",
+                "summary": "مورد مهني عام لتدوير مخزون الأغذية والتوقف والفصل والتحقق والإبلاغ عند الشك؛ جمهوره الرعاية والضيافة وليس تشغيل عضويات النادي."
+              }
+            },
+            {
+              "title": "غرفة جدة — الأغذية والمشروبات",
+              "url": "https://www.jcci.org.sa/documents/44210/0/للاغذية%2Bوالمشروبات.pdf/f8705795-ed7f-05c3-72ff-e7220187f34a?t=1715674894906",
+              "inspection": {
+                "status": "opened",
+                "checkedAt": "2026-11-14",
+                "summary": "مرجع لتتبع المورد والتدوير والتخزين والمسؤوليات؛ لا يشرح ربط تصحيح طلب عضو باستحقاقه."
+              }
+            }
+          ]
+        }
+      ],
+      "pageChecks": [
+        {
+          "title": "المؤسسة العامة للتدريب التقني والمهني — إدارة المخزون",
+          "url": "https://tvtc.gov.sa/ar/Departments/tvtcdepartments/cdd/DocLib1/المعاهد%20الصناعية/الخياطة/حقيبة%20إدارة%20المخزون.pdf",
+          "summary": "مرجع عام للتخزين والجرد والفروق والأصناف التالفة والراكدة؛ لا يغطي استحقاق وجبة عضو نادٍ.",
+          "status": "opened",
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "title": "غرفة جدة — متاجر التموينات",
+          "url": "https://www.jcci.org.sa/documents/44210/0/متاجر%2Bالتموينات.pdf/f1524e1a-664d-3ac2-7cc8-644b6c70658e?t=1715675045289",
+          "summary": "دليل منشآت غذائية يتناول الشكاوى وعزل المنتجات غير المطابقة؛ لا يُحوّل إلى وعد امتثال لنرفد أو دليل معالجة استحقاق عضوية.",
+          "status": "opened",
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "title": "AurPOS — تقارير انتهاء صلاحية وتلف المخزون",
+          "url": "https://help.aurpos.com/ar/article/151-تقارير-انتهاء-صلاحية-وتلف-المخزون",
+          "summary": "وثائق المنتج تعرض تاريخ الإتلاف والمرجع والفرع والسبب والقيمة والمستخدم. ليست خطوات مستقلة لتصحيح طلب وجبة مرتبط بعضوية.",
+          "status": "opened",
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "title": "FlexiLearnHub — Food Date Labelling and Stock Rotation",
+          "url": "https://flexilearnhub.com/FLH25/wp-content/uploads/2026/09/Resource-080-Food-Date-Labelling-and-Stock-Rotation-in-Care-Catering-A-Practical-Guide-for-Catering-Staff.pdf",
+          "summary": "مورد مهني عام لتدوير مخزون الأغذية والتوقف والفصل والتحقق والإبلاغ عند الشك؛ جمهوره الرعاية والضيافة وليس تشغيل عضويات النادي.",
+          "status": "opened",
+          "checkedAt": "2026-11-14"
+        },
+        {
+          "title": "غرفة جدة — الأغذية والمشروبات",
+          "url": "https://www.jcci.org.sa/documents/44210/0/للاغذية%2Bوالمشروبات.pdf/f8705795-ed7f-05c3-72ff-e7220187f34a?t=1715674894906",
+          "summary": "مرجع لتتبع المورد والتدوير والتخزين والمسؤوليات؛ لا يشرح ربط تصحيح طلب عضو باستحقاقه.",
+          "status": "opened",
+          "checkedAt": "2026-11-14"
+        }
+      ],
+      "decision": "تحسين الوجهة القائمة /solutions/kitchen-inventory برابطين إلى دليلين منشورين؛ لا مقال جديد ولا تغيير ملكية الكلمات. الإضافة المميزة هي الفصل العملي بين تعديل رصيد المنتج وتصحيح استحقاق الوجبة. أحجام البحث والصعوبة غير متاحة، وترتيب الاسترجاع ليس ترتيب Google السعودية."
     }
   ],
   "opportunities": [

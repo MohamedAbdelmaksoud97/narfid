@@ -89,3 +89,4 @@ query,intent,monthly_volume,difficulty,target_url,status,current_position,last_c
 "برنامج مخزون الجيم تنبيه نقص المنتجات","تجاري","","","https://www.narfid.com/articles/gym-stock-count-reorder","live","","2026-11-12","supporting","2026-10-21","content/seo-campaign/keywords.json#48"
 "برنامج تقارير مقارنة فروع الجيم","تجاري","","","https://www.narfid.com/articles/club-branch-performance-comparison","live","","2026-11-12","supporting","2026-10-21","content/seo-campaign/keywords.json#49"
 "إجراءات فتح وإغلاق استقبال الجيم","معلوماتي","","","https://www.narfid.com/articles/gym-reception-attendance-procedure","live","","2026-11-12","supporting","2026-10-21","content/seo-campaign/keywords.json#50"
+"قياس إشغال الحصص الجماعية","معلوماتي","","","https://www.narfid.com/articles/gym-class-occupancy-report","live","","2026-11-14","primary","2026-11-13",".agents/skills/narfid-seo/references/keyword-opportunities.json#opportunity-20261113-class-occupancy-01"

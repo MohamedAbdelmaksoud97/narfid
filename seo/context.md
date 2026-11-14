@@ -1,6 +1,15 @@
 # SEO autopilot — narfid
 
-Last daily run: 2026-11-13. Setup baseline: 2026-11-12.
+Last daily run: 2026-11-14. Setup baseline: 2026-11-12.
+
+## Daily update — 2026-11-14
+
+- Fresh native-DNS crawl: 72 sitemap URLs, 77 discovered pages, all first responses 200. Both the system resolver and 1.1.1.1 now return Cloudflare IPv4. A separate HTML audit checked 78 internal targets and 291 fragments with no failures; request p95 was 369 ms from this probe, not a Core Web Vitals measurement. Pagination repeats the library title/description and remains a focused backlog item. See [health evidence](reports/2026-11-14-health.json).
+- Added contextual links from `/solutions/kitchen-inventory` to the already-published damaged-stock and meal-order-correction procedures, with a review scenario separating stock balance from meal entitlement. Ten articles had library-only inbound links before this change; these two already had depth two through the library. The benefit is a relevant commercial entry point, not a shorter click path.
+- Existing Google connection read on 2026-11-14 at 17:15–17:20 UTC: GSC 2026-10-17–2026-11-13, final data through November 11: 8 impressions/1 click globally, 4/0 in Saudi Arabia. No query rows or previous totals; page averages do not establish query positions. GA4 historical reporting worked: 2 users, 7 sessions, 43 views, all sessions Direct, 4 `demo_request_start` events; Saudi totals and previous-period values unavailable. No qualified leads established. [Current measurements and inspection sample](reports/2026-11-14-metrics.json).
+- URL Inspection still does not confirm indexing of the memberships solution or annual-cost guide. The former currently returns unknown URL, the latter discovered/not indexed. No technical block found in the public crawl; do not infer a cause or sitewide indexing count from this sample.
+- Since the previous run, commits added a class-occupancy guide and local videos/audio changes; no product, pricing or scope source changed. The incremental keyword map now covers the new live guide using its existing November 13 research, with 72 primary owners. Map rebuild date remains November 12.
+- Weekly remains due November 19 and monthly December 12. No recurring automation, Google setting, paid service, submission, outreach or social post created.
 
 ## Daily follow-up — 2026-11-13
 
