@@ -15,7 +15,7 @@ import { Logo } from "../Composition";
 import "./film.css";
 
 const assets = "retail-film";
-const backgroundMusic = "retail-film/audio/local-mandolin.mp3";
+const backgroundMusic = "retail-film/audio/local-snap-crackle.mp3";
 const clamp = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const ease = { ...clamp, easing: Easing.out(Easing.cubic) };
 const counter = staticFile(assets + "/counter.jpg");
@@ -378,7 +378,7 @@ export function RetailFilm() {
 
       {getStaticFiles().some((file) => file.name === backgroundMusic) && (
         <Audio
-          name="Mandolin (1) · موسيقى الخلفية"
+          name="Aetheric – Snap Crackle · موسيقى الخلفية"
           src={staticFile(backgroundMusic)}
           durationInFrames={1350}
           volume={10 ** (-40 / 20)}

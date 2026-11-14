@@ -22,10 +22,10 @@
 
 ## تشغيل وإعادة تصدير
 
-يستخدم الفيديو أول ٤٥ ثانية من `Mandolin (1).mp3` بخفض ثابت قدره ‎−40 dB‎ من مستوى المصدر. يمزج Remotion الموسيقى عند وجود النسخة المحلية من الملف.
+يستخدم الفيديو أول ٤٥ ثانية من `Aetheric - Snap Crackle (freetouse.com).mp3` بخفض ثابت قدره ‎−40 dB‎ من مستوى المصدر. يمزج Remotion الموسيقى عند وجود النسخة المحلية من الملف.
 
 ```powershell
-Copy-Item -LiteralPath 'F:/saas/Mandolin (1).mp3' -Destination 'public/retail-film/audio/local-mandolin.mp3'
+Copy-Item -LiteralPath 'F:/saas/Aetheric - Snap Crackle (freetouse.com).mp3' -Destination 'public/retail-film/audio/local-snap-crackle.mp3'
 node scripts/make-retail-film-audio.mjs
 npm run dev
 npx remotion render NarfidRetailFilm out/narfid-retail-film.mp4 --codec=h264 --crf=18 --audio-bitrate=256k --jpeg-quality=94 --concurrency=4
@@ -33,4 +33,4 @@ npx remotion render NarfidRetailFilm out/narfid-retail-film.mp4 --codec=h264 --c
 
 ## التحقق من التصدير
 
-ملف `out/narfid-retail-film.mp4` مدته ٤٥ ثانية ويحتوي على ١٣٥٠ إطارًا H.264 بدقة ١٠٨٠ × ١٩٢٠ وصوت AAC ستيريو. تطابقت بيانات الصورة مع النسخة التي فُحصت بصريًا، واجتاز الملف فك الترميز الكامل. أظهر قياس ثلاث فترات بين المؤثرات انخفاض موسيقى الماندولين بنحو ‎40.1 dB‎ عن المصدر. بلغت الذروة الحقيقية للمزيج ‎−4.86 dBTP‎. تم التحقق بالقياس.
+ملف `out/narfid-retail-film-snap-crackle.mp4` مدته ٤٥ ثانية ويحتوي على ١٣٥٠ إطارًا H.264 بدقة ١٠٨٠ × ١٩٢٠ وصوت AAC ستيريو. تطابقت بيانات الصورة مع النسخة التي فُحصت بصريًا، واجتاز الملف فك الترميز الكامل. أظهر قياس ثلاث فترات بين المؤثرات أن مستوى موسيقى Snap Crackle أقل بنحو ‎40.1 dB‎ من المصدر. بلغت الذروة الحقيقية للمزيج ‎−4.88 dBTP‎.
