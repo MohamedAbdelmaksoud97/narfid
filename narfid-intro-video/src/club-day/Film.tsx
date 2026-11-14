@@ -138,7 +138,7 @@ export const ClubDayFilm = () => {
       />
       <Audio
         name="دخول النظام"
-        src={staticFile("club-day/audio/sweep.wav")}
+        src={staticFile("club-day/audio/click.wav")}
         from={6 * fps}
         premountFor={fps}
         volume={0.7}
@@ -180,7 +180,7 @@ export const ClubDayFilm = () => {
       />
       <Audio
         name="فتح الحجوزات"
-        src={staticFile("club-day/audio/sweep.wav")}
+        src={staticFile("club-day/audio/click.wav")}
         from={21 * fps}
         premountFor={fps}
         volume={0.35}
@@ -222,7 +222,7 @@ export const ClubDayFilm = () => {
       />
       <Audio
         name="ظهور الوعد"
-        src={staticFile("club-day/audio/sweep.wav")}
+        src={staticFile("club-day/audio/click.wav")}
         from={49.5 * fps}
         premountFor={fps}
         volume={0.3}
