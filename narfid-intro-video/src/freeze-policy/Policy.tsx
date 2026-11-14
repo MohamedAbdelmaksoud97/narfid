@@ -1,11 +1,11 @@
 import { interpolate, useCurrentFrame } from "remotion";
 import { clamp, Cue, Reveal, Screen, Stage } from "./Stage";
 
-const maximum = { label: 14, value: 22 };
-const occurrences = { label: 50, value: 58 };
-const activity = { label: 86, value: 94 };
-const completed = 107;
-const balance = { label: 134, value: 142 };
+const maximum = { label: 34, value: 44 };
+const occurrences = { label: 86, value: 96 };
+const activity = { label: 143, value: 153 };
+const completed = 181;
+const balance = { label: 222, value: 232 };
 
 const Metric = ({
   label,
@@ -25,21 +25,16 @@ const Metric = ({
       style={{
         opacity: interpolate(
           frame,
-          [timing.label - 5, timing.label],
+          [timing.label - 10, timing.label],
           [0, 1],
           clamp,
         ),
       }}
     >
-      <Reveal
-        className="freeze-metric-label"
-        at={timing.label}
-        frames={5}
-        axis="x"
-      >
+      <Reveal className="freeze-metric-label" at={timing.label} axis="x">
         {label}
       </Reveal>
-      <Reveal className="freeze-metric-value" at={timing.value} frames={8}>
+      <Reveal className="freeze-metric-value" at={timing.value}>
         {value}
       </Reveal>
       {children}
@@ -67,19 +62,10 @@ export const FreezePolicy = () => (
       <Metric label="رصيد التجميد" value="١٢ يومًا" timing={balance} />
     </div>
     <Cue at={0} effect="felt" name="فتح السياسة" />
-    <Cue at={maximum.label} effect="wood" name="الحد الأقصى" />
     <Cue at={maximum.value} effect="rubber" name="سبعة أيام" />
-    <Cue at={occurrences.label} effect="wood-soft" name="المرات المتبقية" />
     <Cue at={occurrences.value} effect="rubber" name="مرتان" gain={0.84} />
-    <Cue
-      at={activity.label}
-      effect="wood"
-      name="الحد الأدنى للنشاط"
-      gain={0.88}
-    />
     <Cue at={activity.value} effect="rubber" name="أربعة عشر يومًا" />
     <Cue at={completed} effect="key" name="تحقق شرط النشاط" />
-    <Cue at={balance.label} effect="wood-soft" name="رصيد التجميد" />
     <Cue at={balance.value} effect="rubber" name="اثنا عشر يومًا" gain={1.12} />
   </Stage>
 );

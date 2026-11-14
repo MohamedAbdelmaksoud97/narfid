@@ -4,9 +4,9 @@ import { clamp, Cue, Reveal, Stage } from "./Stage";
 
 export const FreezeClosing = () => {
   const frame = useCurrentFrame();
-  const logo = 8;
-  const invitation = 20;
-  const site = 35;
+  const logo = 13;
+  const invitation = 37;
+  const site = 63;
   return (
     <Stage>
       <div className="freeze-end-card">

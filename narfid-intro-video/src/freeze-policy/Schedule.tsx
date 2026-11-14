@@ -1,15 +1,14 @@
 import { interpolate, useCurrentFrame } from "remotion";
 import { clamp, Cue, Cursor, Reveal, Screen, Stage } from "./Stage";
 
-const select = 21;
-const date = 40;
-const time = 50;
-const duration = 61;
-const reason = 72;
-const saveEntrance = 83;
-const save = 99;
-const saved = 111;
-const status = 128;
+const select = 32;
+const date = 62;
+const duration = 92;
+const reason = 115;
+const saveEntrance = 142;
+const save = 165;
+const saved = 184;
+const status = 202;
 
 export const FreezeSchedule = () => {
   const frame = useCurrentFrame();
@@ -30,7 +29,7 @@ export const FreezeSchedule = () => {
             <Reveal className="freeze-big-date" at={date} axis="x">
               ١٠ ديسمبر
             </Reveal>
-            <Reveal className="freeze-time" at={time}>
+            <Reveal className="freeze-time" at={date}>
               <bdi>٩:٠٠</bdi> ص
             </Reveal>
             <Reveal className="freeze-duration" at={duration}>
@@ -66,7 +65,7 @@ export const FreezeSchedule = () => {
             style={{
               opacity: interpolate(
                 frame,
-                [0, select, select + 6, saved - 1, saved + 6],
+                [0, select, select + 10, saved - 1, saved + 10],
                 [0.36, 0.36, 1, 1, 0],
                 clamp,
               ),
@@ -78,7 +77,7 @@ export const FreezeSchedule = () => {
             style={{
               opacity: interpolate(
                 frame,
-                [saved - 1, saved + 6],
+                [saved - 1, saved + 10],
                 [0, 1],
                 clamp,
               ),
@@ -86,14 +85,12 @@ export const FreezeSchedule = () => {
           />
         </div>
       </div>
-      <Cursor from={87} at={save} x={86} y={67} />
+      <Cursor from={save - 20} at={save} x={86} y={67} />
       <Cue at={0} effect="toggle" name="خيارات بدء التجميد" />
       <Cue at={select} effect="button" name="اختيار الجدولة" gain={0.76} />
-      <Cue at={date} effect="date" name="تاريخ البدء" />
-      <Cue at={time} effect="date" name="ساعة البدء" gain={0.73} />
+      <Cue at={date} effect="date" name="تاريخ ووقت البدء" />
       <Cue at={duration} effect="key" name="مدة التجميد" />
       <Cue at={reason} effect="key" name="سبب التجميد" gain={0.8} />
-      <Cue at={saveEntrance} effect="wood" name="ظهور حفظ الجدولة" />
       <Cue at={save} effect="button" name="حفظ الجدولة" />
       <Cue at={saved} effect="saved" name="تأكيد الجدولة" />
       <Cue

@@ -18,7 +18,7 @@ export const clamp = {
   extrapolateRight: "clamp",
 } as const;
 
-const settle = { ...clamp, easing: Easing.bezier(0.17, 0.83, 0.29, 1) };
+const settle = { ...clamp, easing: Easing.bezier(0.25, 0.48, 0.35, 1) };
 
 const effects = {
   felt: 175,
@@ -96,7 +96,7 @@ export const Reveal = ({
   children,
   className,
   axis = "y",
-  frames = 6,
+  frames = 10,
 }: {
   at: number;
   children: ReactNode;
@@ -110,7 +110,7 @@ export const Reveal = ({
     <div className={className} style={{ overflow: "hidden" }}>
       <Interactive.Div
         style={{
-          translate: axis === "x" ? `${48 * offset}px 0` : `0 ${36 * offset}px`,
+          translate: axis === "x" ? `${34 * offset}px 0` : `0 ${28 * offset}px`,
           opacity: interpolate(frame, [at - frames, at - 1], [0, 1], clamp),
           clipPath:
             axis === "x"
@@ -188,7 +188,7 @@ export const Underline = ({ at, color }: { at: number; color: string }) => {
       className="freeze-underline"
       style={{
         background: color,
-        scale: `${interpolate(frame, [at - 5, at], [0, 1], settle)} 1`,
+        scale: `${interpolate(frame, [at - 10, at], [0, 1], settle)} 1`,
       }}
     />
   );

@@ -31,7 +31,7 @@
   "audio": {
     "generator": "scripts/make-freeze-effects.mjs",
     "source": "Original local synthesis of short tactile effects, revised for stronger attacks and longer bodies",
-    "timedCues": 54,
+    "timedCues": 43,
     "sampleRate": 48000,
     "externalSamples": false,
     "music": false,

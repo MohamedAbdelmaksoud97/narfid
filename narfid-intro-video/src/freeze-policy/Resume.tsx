@@ -1,21 +1,21 @@
 import { interpolate, useCurrentFrame } from "remotion";
 import { clamp, Cue, Cursor, Reveal, Screen, Stage, Underline } from "./Stage";
 
-const hook = 4;
-const date = 21;
-const buttonEntrance = 40;
-const press = 60;
-const rewindFirst = 64;
-const rewindSecond = 67;
-const returned = 70;
-const active = 82;
-const extension = 106;
-const end = 131;
-const balance = 163;
-const debit = 179;
-const remaining = 194;
-const underlineActual = 232;
-const underlineRequested = 256;
+const hook = 10;
+const date = 38;
+const buttonEntrance = 59;
+const press = 86;
+const rewindFirst = 94;
+const rewindSecond = 102;
+const returned = 110;
+const active = 133;
+const extension = 169;
+const end = 207;
+const balance = 248;
+const debit = 270;
+const remaining = 303;
+const underlineActual = 225;
+const underlineRequested = 290;
 
 export const FreezeResume = () => {
   const frame = useCurrentFrame();
@@ -39,7 +39,12 @@ export const FreezeResume = () => {
         <div className="freeze-calendar-track" />
         <div className="freeze-calendar-range" style={{ width: `${right}%` }} />
         <div className="freeze-return-tick" style={{ right: `${right}%` }} />
-        <span className="freeze-return-old">١٧ ديسمبر</span>
+        <span
+          className="freeze-return-old"
+          style={{ opacity: frame >= returned ? 1 : 0 }}
+        >
+          ١٧ ديسمبر
+        </span>
       </div>
       <Screen
         file="resume"
@@ -63,7 +68,7 @@ export const FreezeResume = () => {
           </span>
         </Reveal>
       )}
-      <Cursor from={43} at={press} x={26} y={76} />
+      <Cursor from={press - 21} at={press} x={26} y={76} />
       <Reveal className="freeze-active" at={active}>
         <span className="freeze-status">نشط</span>
       </Reveal>
@@ -82,7 +87,7 @@ export const FreezeResume = () => {
           <Reveal className="freeze-outcome-label" at={extension} axis="x">
             تمديد الاشتراك
           </Reveal>
-          <Reveal className="freeze-outcome-number" at={extension} frames={8}>
+          <Reveal className="freeze-outcome-number" at={extension}>
             <span>
               ٤ أيام فعلية
               <Underline at={underlineActual} color="#66e3a6" />
@@ -101,7 +106,7 @@ export const FreezeResume = () => {
           <Reveal className="freeze-outcome-label" at={balance} axis="x">
             رصيد التجميد
           </Reveal>
-          <Reveal className="freeze-outcome-number" at={debit} frames={8}>
+          <Reveal className="freeze-outcome-number" at={debit}>
             <span>
               خصم ٧ أيام مطلوبة
               <Underline at={underlineRequested} color="#9bcbfb" />
@@ -114,19 +119,12 @@ export const FreezeResume = () => {
       </div>
       <Cue at={hook} effect="felt" name="عودة مبكرة" />
       <Cue at={date} effect="date" name="تاريخ العودة الفعلي" />
-      <Cue at={buttonEntrance} effect="wood" name="ظهور زر الاستئناف" />
       <Cue at={press} effect="button" name="الضغط على الاستئناف" gain={0.82} />
       <Cue
         at={rewindFirst}
         effect="tooth"
         name="تراجع الموعد · العلامة الأولى"
         gain={0.76}
-      />
-      <Cue
-        at={rewindSecond}
-        effect="tooth"
-        name="تراجع الموعد · العلامة الثانية"
-        gain={0.9}
       />
       <Cue at={returned} effect="release" name="تحرير حالة التجميد" />
       <Cue at={active} effect="rubber" name="عودة الحالة إلى نشط" />

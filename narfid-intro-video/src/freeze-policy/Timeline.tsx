@@ -1,14 +1,14 @@
 import { interpolate, useCurrentFrame } from "remotion";
 import { clamp, Cue, Reveal, Stage } from "./Stage";
 
-const firstTick = 4;
-const secondTick = 10;
-const start = 16;
-const lock = 30;
-const intervalMarks = [38, 42, 46, 50];
-const plannedReturn = 54;
-const endLabel = 83;
-const extension = 95;
+const firstTick = 10;
+const secondTick = 23;
+const start = 36;
+const lock = 62;
+const intervalMarks = [78, 94];
+const plannedReturn = 112;
+const endLabel = 140;
+const extension = 158;
 
 export const FreezeTimeline = () => {
   const frame = useCurrentFrame();
@@ -107,12 +107,6 @@ export const FreezeTimeline = () => {
         name="علامة التقويم الأولى"
         gain={0.6}
       />
-      <Cue
-        at={secondTick}
-        effect="tooth"
-        name="علامة التقويم الثانية"
-        gain={0.82}
-      />
       <Cue at={start} effect="date" name="الوصول إلى بداية التجميد" />
       <Cue at={lock} effect="lock" name="تحوّل الاشتراك إلى مجمّد" />
       <Cue
@@ -126,18 +120,6 @@ export const FreezeTimeline = () => {
         effect="tooth"
         name="تمدد النطاق · ثاني علامة"
         gain={0.65}
-      />
-      <Cue
-        at={intervalMarks[2]}
-        effect="tooth"
-        name="تمدد النطاق · ثالث علامة"
-        gain={0.85}
-      />
-      <Cue
-        at={intervalMarks[3]}
-        effect="tooth"
-        name="تمدد النطاق · آخر علامة"
-        gain={0.75}
       />
       <Cue at={plannedReturn} effect="date" name="العودة المخططة" gain={0.84} />
       <Cue at={endLabel} effect="wood-soft" name="عنوان نهاية الاشتراك" />

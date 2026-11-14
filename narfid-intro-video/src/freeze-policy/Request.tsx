@@ -3,19 +3,19 @@ import { clamp, Cue, Cursor, Masthead, Reveal, Screen, Stage } from "./Stage";
 
 export const FreezeRequest = () => {
   const frame = useCurrentFrame();
-  const request = 4;
-  const message = 16;
-  const date = 31;
-  const action = 74;
-  const press = 95;
+  const request = 8;
+  const message = 28;
+  const date = 52;
+  const action = 100;
+  const press = 122;
   return (
     <Stage>
       <Masthead />
       <div className="freeze-request-copy">
-        <Reveal className="freeze-kicker" at={request} frames={4}>
+        <Reveal className="freeze-kicker" at={request} frames={8}>
           تجميد الاشتراك
         </Reveal>
-        <Reveal className="freeze-hook" at={request} frames={4} axis="x">
+        <Reveal className="freeze-hook" at={request} frames={8} axis="x">
           «مسافر أسبوع»
         </Reveal>
         <Reveal className="freeze-request-line" at={message} axis="x">
@@ -32,7 +32,7 @@ export const FreezeRequest = () => {
         file="subscription"
         className="freeze-opening-screen"
         style={{
-          scale: interpolate(frame, [72, press], [1, 1.045], clamp),
+          scale: interpolate(frame, [action - 12, press], [1, 1.045], clamp),
           transformOrigin: "left center",
         }}
       />
@@ -44,7 +44,7 @@ export const FreezeRequest = () => {
           تجميد الاشتراك
         </span>
       </Reveal>
-      <Cursor from={82} at={press} x={19} y={78} />
+      <Cursor from={press - 20} at={press} x={19} y={78} />
       <Cue at={request} effect="felt" name="ظهور الطلب" gain={0.72} />
       <Cue at={message} effect="wood" name="سطر الطلب" />
       <Cue at={date} effect="date" name="تاريخ الطلب" gain={0.79} />

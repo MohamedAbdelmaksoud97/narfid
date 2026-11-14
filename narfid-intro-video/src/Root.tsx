@@ -65,14 +65,14 @@ import { FreezeResume } from "./freeze-policy/Resume";
 import { FreezeClosing } from "./freeze-policy/Closing";
 export const RemotionRoot = () => (
   <>
-    <Composition id="NarfidFreezePolicy" component={FreezePolicyFilm} width={1920} height={1080} fps={30} durationInFrames={1140} />
+    <Composition id="NarfidFreezePolicy" component={FreezePolicyFilm} width={1920} height={1080} fps={30} durationInFrames={1440} />
     <Folder name="Freeze-Policy-Scenes">
-      <Composition id="FreezeRequest" component={FreezeRequest} width={1920} height={1080} fps={30} durationInFrames={105} />
-      <Composition id="FreezePolicy" component={FreezePolicy} width={1920} height={1080} fps={30} durationInFrames={210} />
-      <Composition id="FreezeSchedule" component={FreezeSchedule} width={1920} height={1080} fps={30} durationInFrames={195} />
-      <Composition id="FreezeTimeline" component={FreezeTimeline} width={1920} height={1080} fps={30} durationInFrames={180} />
-      <Composition id="FreezeResume" component={FreezeResume} width={1920} height={1080} fps={30} durationInFrames={330} />
-      <Composition id="FreezeClosing" component={FreezeClosing} width={1920} height={1080} fps={30} durationInFrames={120} />
+      <Composition id="FreezeRequest" component={FreezeRequest} width={1920} height={1080} fps={30} durationInFrames={135} />
+      <Composition id="FreezePolicy" component={FreezePolicy} width={1920} height={1080} fps={30} durationInFrames={285} />
+      <Composition id="FreezeSchedule" component={FreezeSchedule} width={1920} height={1080} fps={30} durationInFrames={240} />
+      <Composition id="FreezeTimeline" component={FreezeTimeline} width={1920} height={1080} fps={30} durationInFrames={225} />
+      <Composition id="FreezeResume" component={FreezeResume} width={1920} height={1080} fps={30} durationInFrames={405} />
+      <Composition id="FreezeClosing" component={FreezeClosing} width={1920} height={1080} fps={30} durationInFrames={150} />
     </Folder>
     <Composition
       id="NarfidClubDay"
