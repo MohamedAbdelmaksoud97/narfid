@@ -8,7 +8,7 @@ The owner approved the eight-scene scenario, removed voiceover, and requested im
 
 | Time | Frames (end exclusive) | Message and picture | Sound |
 | --- | --- | --- | --- |
-| 0–6 | 0–180 | من جدّد؟ هل تأكّد الحجز؟ كم تحصّل؟ Arabic logo and readable sports-management descriptor. | Three tactile question accents; abstract room ambience; sparse original music. |
+| 0–6 | 0–180 | من جدّد؟ هل تأكّد الحجز؟ كم تحصّل؟ Arabic logo and readable sports-management descriptor. | Three tactile question accents over quiet music. |
 | 6–12 | 180–360 | ابدأ من مكان واحد. Actual subscriptions screen enters the composition. | Soft electronic click and rounded settling accent. |
 | 12–21 | 360–630 | من الاشتراك… إلى التجديد. Original subscription, real confirmation dialog and saved paid renewal with new dates. | Selection click, confirmation click, success after visible result. |
 | 21–30 | 630–900 | الموعد. السعة. حالة الحجز. Real class slot, capacity and confirmed complimentary reservation. | Soft electronic click, selection and confirmation accents. |
@@ -61,13 +61,13 @@ Delivery stays local. This film is outside NV-001–NV-050; no board record, web
 
 ## Quiet music revision
 
-The local cut uses the first minute of Liborio Conti’s “Baila Conmigo” instrumental at −40 dB relative to the source track in Remotion (1% linear gain). The music fades in over 1.25 seconds and out over the last three seconds. The transitions at 6, 21 and 49.5 seconds use the existing short electronic click. Studio and renders play the effects alone when the local music file is absent.
+The local cut uses the first minute of Liborio Conti’s “Baila Conmigo” instrumental at −40 dB relative to the source track in Remotion (1% linear gain). The music fades in over 1.25 seconds and out over the last three seconds. The opening room noise layer was removed. The transitions at 6, 21 and 49.5 seconds use the existing short electronic click. Studio and renders play the effects alone when the local music file is absent.
 
 ```powershell
 Copy-Item -LiteralPath 'F:/saas/Baila-Conmigo-Free-No-Copyright-Music-by-Liborio-Conti-02-Baila-Conmigo-Instrumental.mp3' -Destination 'public/club-day/audio/local-background.mp3'
 npm run build
-npx remotion render build NarfidClubDay out/club-day-qa/baila-conmigo-minus-40db-mix.wav --codec=wav --timeout=120000
-& node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe -y -i out/narfid-club-day-master.mp4 -i out/club-day-qa/baila-conmigo-minus-40db-mix.wav -map 0:v:0 -map 1:a:0 -c:v copy -af 'volume=7.87dB' -c:a aac -b:a 192k -ar 48000 -t 60 -movflags +faststart out/narfid-club-day-baila-conmigo-minus-40db.mp4
+npx remotion render build NarfidClubDay out/club-day-qa/clean-opening-mix.wav --codec=wav --timeout=120000
+& node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe -y -i out/narfid-club-day-master.mp4 -i out/club-day-qa/clean-opening-mix.wav -map 0:v:0 -map 1:a:0 -c:v copy -af 'volume=7.87dB' -c:a aac -b:a 192k -ar 48000 -t 60 -movflags +faststart out/narfid-club-day-clean-opening.mp4
 ```
 
 The export uses the same 7.87 dB mastering gain as the original cut to preserve the level of the other effects.

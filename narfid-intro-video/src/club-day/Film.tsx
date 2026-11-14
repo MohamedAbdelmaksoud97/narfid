@@ -6,7 +6,6 @@ import {
   staticFile,
   useVideoConfig,
   interpolate,
-  useCurrentFrame,
 } from "remotion";
 import { ClubDayOpening } from "./Opening";
 import { ClubDayEnter } from "./Enter";
@@ -23,7 +22,6 @@ const backgroundMusicGain = 10 ** (-40 / 20);
 
 export const ClubDayFilm = () => {
   const { fps } = useVideoConfig();
-  const f = useCurrentFrame();
   return (
     <AbsoluteFill style={{ background: "#101b16" }}>
       <Sequence
@@ -104,17 +102,6 @@ export const ClubDayFilm = () => {
           }
         />
       )}
-      <Audio
-        name="أجواء البداية"
-        src={staticFile("club-day/audio/room.wav")}
-        premountFor={fps}
-        volume={interpolate(
-          f,
-          [0, 0.5 * fps, 5 * fps, 7 * fps],
-          [0, 0.5, 0.5, 0],
-          clamp,
-        )}
-      />
       <Audio
         name="سؤال التجديد"
         src={staticFile("club-day/audio/question-1.wav")}
