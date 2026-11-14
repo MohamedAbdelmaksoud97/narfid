@@ -19,7 +19,7 @@ import { ClubDayClosing } from "./Closing";
 import { clamp } from "./Stage";
 
 const backgroundMusic = "club-day/audio/local-background.mp3";
-const backgroundMusicGain = 10 ** (-50 / 20);
+const backgroundMusicGain = 10 ** (-40 / 20);
 
 export const ClubDayFilm = () => {
   const { fps } = useVideoConfig();

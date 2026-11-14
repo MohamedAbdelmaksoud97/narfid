@@ -61,13 +61,13 @@ Delivery stays local. This film is outside NV-001–NV-050; no board record, web
 
 ## Quiet music revision
 
-The local cut uses the first minute of Liborio Conti’s “Baila Conmigo” instrumental at −50 dB relative to the source track in Remotion (about 0.316% linear gain). The music fades in over 1.25 seconds and out over the last three seconds. The transitions at 6, 21 and 49.5 seconds use the existing short electronic click. Studio and renders play the effects alone when the local music file is absent.
+The local cut uses the first minute of Liborio Conti’s “Baila Conmigo” instrumental at −40 dB relative to the source track in Remotion (1% linear gain). The music fades in over 1.25 seconds and out over the last three seconds. The transitions at 6, 21 and 49.5 seconds use the existing short electronic click. Studio and renders play the effects alone when the local music file is absent.
 
 ```powershell
 Copy-Item -LiteralPath 'F:/saas/Baila-Conmigo-Free-No-Copyright-Music-by-Liborio-Conti-02-Baila-Conmigo-Instrumental.mp3' -Destination 'public/club-day/audio/local-background.mp3'
 npm run build
-npx remotion render build NarfidClubDay out/club-day-qa/transition-clicks-mix.wav --codec=wav --timeout=120000
-& node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe -y -i out/narfid-club-day-master.mp4 -i out/club-day-qa/transition-clicks-mix.wav -map 0:v:0 -map 1:a:0 -c:v copy -af 'volume=7.87dB' -c:a aac -b:a 192k -ar 48000 -t 60 -movflags +faststart out/narfid-club-day-transition-clicks.mp4
+npx remotion render build NarfidClubDay out/club-day-qa/baila-conmigo-minus-40db-mix.wav --codec=wav --timeout=120000
+& node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe -y -i out/narfid-club-day-master.mp4 -i out/club-day-qa/baila-conmigo-minus-40db-mix.wav -map 0:v:0 -map 1:a:0 -c:v copy -af 'volume=7.87dB' -c:a aac -b:a 192k -ar 48000 -t 60 -movflags +faststart out/narfid-club-day-baila-conmigo-minus-40db.mp4
 ```
 
 The export uses the same 7.87 dB mastering gain as the original cut to preserve the level of the other effects.
