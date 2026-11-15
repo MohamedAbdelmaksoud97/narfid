@@ -186,6 +186,8 @@ export const solutionOperatingGuides: Record<string, { question: string; text: s
       "personal-training-schedule-control",
       "sports-class-waitlist-procedure",
       "academy-makeup-session-policy",
+      "academy-substitute-coach-handover",
+      "academy-player-group-transfer",
       "court-maintenance-booking-disruption",
     ],
   },

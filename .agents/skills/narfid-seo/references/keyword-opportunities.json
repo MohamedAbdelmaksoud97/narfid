@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-14",
+  "updatedAt": "2026-11-15",
   "baseline": {
     "keywords": "../../../../content/seo-campaign/keywords.json",
     "research": "../../../../content/seo-campaign/research-log.json",
@@ -9180,6 +9180,142 @@
         }
       ],
       "decision": "تحسين الوجهة القائمة /solutions/kitchen-inventory برابطين إلى دليلين منشورين؛ لا مقال جديد ولا تغيير ملكية الكلمات. الإضافة المميزة هي الفصل العملي بين تعديل رصيد المنتج وتصحيح استحقاق الوجبة. أحجام البحث والصعوبة غير متاحة، وترتيب الاسترجاع ليس ترتيب Google السعودية."
+    },
+    {
+      "id": "research-20261115-autopilot-bookings-links",
+      "researchedAt": "2026-11-15",
+      "provider": "web.run search_query + open",
+      "market": "السعودية سوق مقصود؛ بحث ويب عام دون تثبيت موقع Google أو الجهاز",
+      "googleSaudiVerified": false,
+      "queries": [
+        {
+          "query": "نقل اللاعب بين مجموعات التدريب الأكاديمية الرياضية حضور جدول المدرب تطبيق",
+          "searchedAt": "2026-11-15",
+          "results": [
+            {
+              "title": "GoSports Network",
+              "url": "https://mail.gosports-network.com/how-to-use/um-ar",
+              "inspection": {
+                "summary": "يوضح إجراء النقل باختيار اللاعب والمجموعة الجديدة داخل المنتج. دليل نرفد يضيف تاريخ السريان وحفظ سجل الحضور قبل انتقال القوائم.",
+                "status": "opened",
+                "checkedAt": "2026-11-15"
+              }
+            },
+            {
+              "title": "صافرة",
+              "url": "https://safrah.club/",
+              "inspection": {
+                "summary": "يذكر مقتطف البحث توزيع اللاعبين وربط المجموعة بمدرب وملعب. لم يُسترجع نص الصفحة عند الفتح.",
+                "status": "unreadable",
+                "checkedAt": "2026-11-15"
+              }
+            },
+            {
+              "title": "دواة",
+              "url": "https://dawat-app.com/academies",
+              "inspection": {
+                "summary": "يعرض سجل الحضور والمجموعات والمدربين والاشتراكات في صفحة منتج.",
+                "status": "opened",
+                "checkedAt": "2026-11-15"
+              }
+            },
+            {
+              "title": "Scoutlor",
+              "url": "https://scoutlor.com/ar/for-academies",
+              "inspection": {
+                "summary": "أُعيد توجيه الرابط إلى /ar/products/clubs؛ تعرض الصفحة سير الجدول وتحديثات أولياء الأمور وصلاحيات المدربين.",
+                "status": "redirected",
+                "checkedAt": "2026-11-15"
+              }
+            },
+            {
+              "title": "AskFlow",
+              "url": "https://askflow.sa/ar/academy-software",
+              "inspection": {
+                "summary": "يعرض جداول المدربين والمجموعات الثابتة وسجل الحصص وإشعارات أولياء الأمور.",
+                "status": "opened",
+                "checkedAt": "2026-11-15"
+              }
+            },
+            {
+              "title": "كورزا",
+              "url": "https://www.koorza.com/tour",
+              "inspection": {
+                "summary": "تُظهر جولة المنتج قوائم الحضور لكل مجموعة وسجل التقييم وعرض الجدول لولي الأمر.",
+                "status": "opened",
+                "checkedAt": "2026-11-15"
+              }
+            }
+          ]
+        },
+        {
+          "query": "إدارة غياب المدرب البديل حصص النادي الرياضي جدول الأكاديمية تدريب مجموعات",
+          "searchedAt": "2026-11-15",
+          "results": [
+            {
+              "title": "The FA",
+              "url": "https://www.thefa.com/-/media/files/thefaportal/governance-docs/anti-doping/2025-26/the-fa-whereabouts-guide-mens-2025-26.ashx",
+              "inspection": {
+                "summary": "دليل تبليغ تغييرات التدريب في رياضة المحترفين في إنجلترا؛ سياق تنظيمي مختلف عن تسليم مجموعة لمدرب بديل.",
+                "status": "opened",
+                "checkedAt": "2026-11-15"
+              }
+            }
+          ]
+        }
+      ],
+      "pageChecks": [
+        {
+          "title": "GoSports Network",
+          "url": "https://mail.gosports-network.com/how-to-use/um-ar",
+          "summary": "يوضح إجراء النقل باختيار اللاعب والمجموعة الجديدة داخل المنتج. دليل نرفد يضيف تاريخ السريان وحفظ سجل الحضور قبل انتقال القوائم.",
+          "status": "opened",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "title": "صافرة",
+          "url": "https://safrah.club/",
+          "summary": "يذكر مقتطف البحث توزيع اللاعبين وربط المجموعة بمدرب وملعب. لم يُسترجع نص الصفحة عند الفتح.",
+          "status": "unreadable",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "title": "دواة",
+          "url": "https://dawat-app.com/academies",
+          "summary": "يعرض سجل الحضور والمجموعات والمدربين والاشتراكات في صفحة منتج.",
+          "status": "opened",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "title": "Scoutlor",
+          "url": "https://scoutlor.com/ar/for-academies",
+          "summary": "أُعيد توجيه الرابط إلى /ar/products/clubs؛ تعرض الصفحة سير الجدول وتحديثات أولياء الأمور وصلاحيات المدربين.",
+          "status": "redirected",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "title": "AskFlow",
+          "url": "https://askflow.sa/ar/academy-software",
+          "summary": "يعرض جداول المدربين والمجموعات الثابتة وسجل الحصص وإشعارات أولياء الأمور.",
+          "status": "opened",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "title": "كورزا",
+          "url": "https://www.koorza.com/tour",
+          "summary": "تُظهر جولة المنتج قوائم الحضور لكل مجموعة وسجل التقييم وعرض الجدول لولي الأمر.",
+          "status": "opened",
+          "checkedAt": "2026-11-15"
+        },
+        {
+          "title": "The FA",
+          "url": "https://www.thefa.com/-/media/files/thefaportal/governance-docs/anti-doping/2025-26/the-fa-whereabouts-guide-mens-2025-26.ashx",
+          "summary": "دليل تبليغ تغييرات التدريب في رياضة المحترفين في إنجلترا؛ سياق تنظيمي مختلف عن تسليم مجموعة لمدرب بديل.",
+          "status": "opened",
+          "checkedAt": "2026-11-15"
+        }
+      ],
+      "decision": "إضافة رابطين من حل الحجوزات إلى دليلي نرفد المنشورين لنقل اللاعب بين مجموعتين وتسليم المجموعة عند غياب المدرب. كلا الدليلين كان يظهر في صفحة المكتبة الثانية فقط. يحفظ الأول تاريخ السريان وسجل الحضور، ويحدد الثاني المسؤول والتسليم للمدرب البديل. لم تتغير وجهات العبارات ولا يوجد قياس جديد لحجم الطلب أو الصعوبة."
     }
   ],
   "opportunities": [
@@ -9493,7 +9629,8 @@
       "intent": "informational",
       "categoryKey": "academy-bookings",
       "researchIds": [
-        "research-20261021-expansion-12"
+        "research-20261021-expansion-12",
+        "research-20261115-autopilot-bookings-links"
       ],
       "demandEvidence": "نموذج من مزود نماذج لتسليم الوردية في منشأة رياضية؛ ليس دليلًا مخصصًا للمدرب البديل. هذا دليل نوعي على حاجة أو تغطية، وليس قياسًا لحجم البحث.",
       "competitionRationale": "المطابقة المباشرة ضعيفة؛ الكلمات التدريبية العامة تجذب التعليم والعمل، والثقة منخفضة.",
@@ -9571,7 +9708,8 @@
       "intent": "informational",
       "categoryKey": "academy-bookings",
       "researchIds": [
-        "research-20261021-expansion-15"
+        "research-20261021-expansion-15",
+        "research-20261115-autopilot-bookings-links"
       ],
       "demandEvidence": "دليل استخدام عربي يشرح نقل لاعب من مجموعة لأخرى. هذا دليل نوعي على حاجة أو تغطية، وليس قياسًا لحجم البحث.",
       "competitionRationale": "الدليل وظيفي مرتبط بمنتج وتظهر نتائج لوائح انتقال رسمي؛ يلزم فصل النيتين.",

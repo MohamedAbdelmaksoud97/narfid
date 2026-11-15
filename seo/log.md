@@ -1,5 +1,7 @@
 # Shipped SEO changes
 
+- 2026-11-15 — Linked the published [coach-substitution](https://www.narfid.com/articles/academy-substitute-coach-handover) and [group-transfer](https://www.narfid.com/articles/academy-player-group-transfer) procedures from the [bookings solution](https://www.narfid.com/solutions/bookings). Refreshed the live crawl, Google reports and URL inspections, and recorded the first observed branded query. See the [daily report](reports/2026-11-15.md).
+
 - 2026-11-14 — Added contextual links to the published [meal-order correction](https://www.narfid.com/articles/club-meal-order-error-resolution) and [damaged retail stock](https://www.narfid.com/articles/gym-damaged-retail-stock) procedures from the [kitchen/inventory solution](https://www.narfid.com/solutions/kitchen-inventory), with an operational review scenario. Refreshed all 77 public pages, Google reports, two URL inspections and the incremental keyword owner for the existing class-occupancy guide. See [daily report](reports/2026-11-14.md).
 
 - 2026-11-13 — Linked the published guides for [unmatched payments](https://www.narfid.com/articles/gym-unidentified-payment-review) and [discount approvals](https://www.narfid.com/articles/gym-discount-approval-controls) from the [point-of-sale solution](https://www.narfid.com/solutions/point-of-sale). The live crawl, URL Inspection and reporting evidence are in the [daily follow-up](reports/2026-11-13-autopilot.md).

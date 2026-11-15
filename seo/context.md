@@ -1,6 +1,13 @@
 # SEO autopilot — narfid
 
-Last daily run: 2026-11-14. Setup baseline: 2026-11-12.
+Last daily run: 2026-11-15. Setup baseline: 2026-11-12.
+
+## Daily update — 2026-11-15
+
+- The 72 sitemap URLs and 77 discovered public pages returned HTTP 200 on their first requests. The HTML audit checked 78 internal targets and 291 fragment links and found server-rendered main content on every page. Its request p95 was 636 ms from this probe. Pagination pages 2–5 already have distinct titles and individual canonicals. They share a description, which [Google's pagination guidance](https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading#use-urls-correctly) allows. See [crawl evidence](reports/2026-11-15-health.json).
+- The bookings solution now links to the academy procedures for coach substitution and group transfers. Both guides were reachable only through library page 2 before the change, and URL Inspection already confirmed both indexed. The article library was discovered and awaiting indexing. See [daily report](reports/2026-11-15.md).
+- Search Console for October 18–November 14 showed 28 global impressions and 14 clicks, with 6 impressions and no clicks in Saudi Arabia. Final data ran through November 13. The only available query was branded (`narfid`), added as a supporting variant with its observed global position. GA4 reported 2 users, 7 Direct sessions, 43 views and 4 demo starts. Saudi GA4 and previous-period totals were unavailable. [Google evidence](reports/2026-11-15-metrics.json).
+- The footer profile commit introduced no changes to sourced prices, features, limits, or integration claims. The keyword map still has 72 primary owners, with its full rebuild dated November 12. Weekly work is due November 19 and monthly work December 12.
 
 ## Daily update — 2026-11-14
 
