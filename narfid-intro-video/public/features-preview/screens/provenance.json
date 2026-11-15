@@ -1,0 +1,26 @@
+{
+  "createdOn": "2026-11-15",
+  "composition": "NarfidFeaturesFilm",
+  "source": "Isolated club-day reference source copy with the existing Narfid capture branding",
+  "database": "Disposable in-memory PGlite, versioned local migrations, real service and API workflows",
+  "authentication": "Random test-only local token verifier for administrator, member and trainer accounts",
+  "network": "Loopback-only API, frontend and PGlite socket, browser routing guard and disabled service workers",
+  "productionAccess": false,
+  "data": "Fictional sports club, branches, member records, shifts, invoices, attendance events and sales follow-ups",
+  "assets": {
+    "attendance.jpg": "/attendance, persisted local check-in attempts",
+    "check-in.jpg": "/attendance?create=1, check-in form",
+    "cash-shifts.jpg": "/finance/shifts, locally opened reception shift",
+    "split-invoice.jpg": "/finance/invoices/[invoice], real local cash and card split allocated to one invoice",
+    "finance.jpg": "/finance, financial records and category views",
+    "crm.jpg": "/crm, fictional lead and scheduled follow-up",
+    "dashboard.jpg": "/, branch dashboard",
+    "reports.jpg": "/reports, available branch and date filters",
+    "expiry.jpg": "/reports, subscription expiry section",
+    "member-portal.jpg": "/self-service/membership, local member account",
+    "member-booking.jpg": "/self-service/discover, booking tab of the same local member account",
+    "operations.jpg": "/operations, employee shifts",
+    "positions.jpg": "/system-settings/roles, role permissions",
+    "trainer.jpg": "/trainer, trainer configuration and measurements navigation"
+  }
+}

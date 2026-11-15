@@ -1,4 +1,6 @@
 import { Composition, Folder } from "remotion";
+import { FeaturesPreview, FeaturesOpening, FeaturesMembership } from "./features-preview/Film";
+import { FeaturesFull } from "./features-preview/Full";
 import { ProductLaunchFilm } from "./product-launch/Film";
 import { ProductOpening } from "./product-launch/Opening";
 import { ProductMembership } from "./product-launch/Membership";
@@ -74,6 +76,12 @@ import {
 } from "./retail-film/Film";
 export const RemotionRoot = () => (
   <>
+    <Composition id="NarfidFeaturesFilm" component={FeaturesFull} width={1920} height={1080} fps={30} durationInFrames={5100} />
+    <Composition id="NarfidFeaturesPreview" component={FeaturesPreview} width={1920} height={1080} fps={30} durationInFrames={600} />
+    <Folder name="Features-Preview-Scenes">
+      <Composition id="FeaturesOpening" component={FeaturesOpening} width={1920} height={1080} fps={30} durationInFrames={318} />
+      <Composition id="FeaturesMembership" component={FeaturesMembership} width={1920} height={1080} fps={30} durationInFrames={282} />
+    </Folder>
     <Composition id="NarfidRetailFilm" component={RetailFilm} width={1080} height={1920} fps={30} durationInFrames={1350} />
     <Folder name="Retail-Film-Scenes">
       <Composition id="RetailOpening" component={RetailOpening} width={1080} height={1920} fps={30} durationInFrames={150} />
