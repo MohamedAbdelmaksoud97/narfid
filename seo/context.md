@@ -1,6 +1,13 @@
 # SEO autopilot — narfid
 
-Last daily run: 2026-11-15. Setup baseline: 2026-11-12.
+Last daily run: 2026-11-16. Setup baseline: 2026-11-12.
+
+## Daily update — 2026-11-16
+
+- The homepage links to the memberships solution, which now links to the published inquiry-call and locker-assignment guides. Their baseline depths of four and three become two. The guides retain their existing keyword owners. See [daily report](reports/2026-11-16.md) and [crawl evidence](reports/2026-11-16-health.json).
+- All 72 sitemap URLs and 77 discovered pages returned HTTP 200. The crawl checked 78 internal targets and 291 fragment links. Request p95 was 394 ms from this probe.
+- Search Console showed 38 global impressions and 15 clicks, with 9 Saudi impressions and no Saudi clicks. Final data ran through November 14. The only reported query was `narfid` at position 1.875 globally. URL Inspection confirmed the memberships solution indexed. The annual-cost guide was discovered, and the library URL returned unknown. GA4 recorded 2 users, 7 Direct sessions, 43 views and 4 demo starts. Saudi GA4 and previous-period totals were unavailable. See [Google evidence](reports/2026-11-16-metrics.json).
+- The commits since November 15 covered local walkthrough media and documentation. They did not change public product or pricing sources. Weekly and monthly work remain due November 19 and December 12.
 
 ## Daily update — 2026-11-15
 

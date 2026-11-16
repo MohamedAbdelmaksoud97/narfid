@@ -167,11 +167,13 @@ export function solutionBySlug(slug: string | null | undefined) {
 export const solutionOperatingGuides: Record<string, { question: string; text: string; articles: string[] }> = {
   memberships: {
     question: "هل تدير ناديًا أم أكاديمية للأطفال؟",
-    text: "ابدأ من طريقة بيع الخدمة: اشتراك زمني، أو باقة زيارات، أو تسجيل لاعب مرتبط بولي أمر. في برنامج إدارة اشتراكات وحضور النادي بالعربي، اختبر حالة الاشتراك ورصيد الخدمة وسجل اللاعب قبل اعتماد طريقة التشغيل.",
+    text: "ابدأ من طريقة بيع الخدمة: اشتراك زمني، أو باقة زيارات، أو تسجيل لاعب مرتبط بولي أمر. في برنامج إدارة اشتراكات وحضور النادي بالعربي، اختبر حالة الاشتراك ورصيد الخدمة وسجل اللاعب قبل اعتماد طريقة التشغيل. درّب فريق الاستقبال على توضيح ما تشمله الباقة وتوثيق الخطوة المتفق عليها مع المستفسر. وإذا وفّر النادي خزائن، حدّد متى تعود الخزانة إلى قائمة المتاح بعد استلام المفتاح.",
     articles: [
       "academy-children-guardian-records",
       "visit-based-membership-packages",
       "gym-reception-attendance-procedure",
+      "gym-inquiry-call-checklist",
+      "gym-locker-assignment-log",
       "academy-midterm-enrollment",
       "gym-first-week-member-onboarding",
       "annual-club-software-cost",

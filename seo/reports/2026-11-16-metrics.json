@@ -1,0 +1,495 @@
+{
+  "source": "Authorized production board APIs",
+  "checkedAt": "2026-11-16T15:09:43.129Z",
+  "results": {
+    "gaSaudi": {
+      "startedAt": "2026-11-16T15:09:43.138Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "sau",
+        "timeZone": "Asia/Riyadh",
+        "currentPeriod": {
+          "startDate": "2026-10-19",
+          "endDate": "2026-11-15"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-21",
+          "endDate": "2026-10-18"
+        },
+        "current": null,
+        "previous": null,
+        "pages": [],
+        "channels": [],
+        "events": [],
+        "warnings": [],
+        "fetchedAt": "2026-11-16T15:09:45.214Z"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "gscSaudi": {
+      "startedAt": "2026-11-16T15:09:43.136Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "sau",
+        "currentPeriod": {
+          "startDate": "2026-10-19",
+          "endDate": "2026-11-15"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-21",
+          "endDate": "2026-10-18"
+        },
+        "current": {
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 15.333333333333334
+        },
+        "previous": null,
+        "trend": [
+          {
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0,
+            "position": 0,
+            "key": "2026-11-09"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 7,
+            "key": "2026-11-10"
+          },
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 10.666666666666666,
+            "key": "2026-11-11"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 3,
+            "key": "2026-11-12"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 2,
+            "key": "2026-11-13"
+          },
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 31.333333333333332,
+            "key": "2026-11-14"
+          }
+        ],
+        "queries": [],
+        "pages": [],
+        "devices": [
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 39,
+            "key": "DESKTOP"
+          },
+          {
+            "clicks": 0,
+            "impressions": 6,
+            "ctr": 0,
+            "position": 3.5,
+            "key": "MOBILE"
+          }
+        ],
+        "fetchedAt": "2026-11-16T15:09:45.279Z",
+        "lastDataDate": "2026-11-14"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "gaHistorical": {
+      "startedAt": "2026-11-16T15:09:43.141Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "all",
+        "timeZone": "Asia/Riyadh",
+        "currentPeriod": {
+          "startDate": "2026-10-19",
+          "endDate": "2026-11-15"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-21",
+          "endDate": "2026-10-18"
+        },
+        "current": {
+          "users": 2,
+          "sessions": 7,
+          "views": 43
+        },
+        "previous": null,
+        "pages": [
+          {
+            "key": "/",
+            "value": 32
+          },
+          {
+            "key": "/articles",
+            "value": 6
+          },
+          {
+            "key": "/articles/club-employee-access-offboarding",
+            "value": 2
+          },
+          {
+            "key": "/articles/club-meal-pickup-handover",
+            "value": 2
+          },
+          {
+            "key": "/articles/club-data-export-exit-checklist",
+            "value": 1
+          }
+        ],
+        "channels": [
+          {
+            "key": "Direct",
+            "value": 7
+          }
+        ],
+        "events": [
+          {
+            "key": "page_view",
+            "value": 43
+          },
+          {
+            "key": "demo_request_start",
+            "value": 4
+          }
+        ],
+        "warnings": [],
+        "fetchedAt": "2026-11-16T15:09:45.203Z"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "gscAll": {
+      "startedAt": "2026-11-16T15:09:43.131Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "all",
+        "currentPeriod": {
+          "startDate": "2026-10-19",
+          "endDate": "2026-11-15"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-21",
+          "endDate": "2026-10-18"
+        },
+        "current": {
+          "clicks": 15,
+          "impressions": 38,
+          "ctr": 0.39473684210526316,
+          "position": 6.578947368421052
+        },
+        "previous": null,
+        "trend": [
+          {
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0,
+            "position": 0,
+            "key": "2026-11-09"
+          },
+          {
+            "clicks": 1,
+            "impressions": 3,
+            "ctr": 0.3333333333333333,
+            "position": 6.666666666666667,
+            "key": "2026-11-10"
+          },
+          {
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 9,
+            "key": "2026-11-11"
+          },
+          {
+            "clicks": 6,
+            "impressions": 8,
+            "ctr": 0.75,
+            "position": 2.625,
+            "key": "2026-11-12"
+          },
+          {
+            "clicks": 7,
+            "impressions": 12,
+            "ctr": 0.5833333333333334,
+            "position": 1.9166666666666665,
+            "key": "2026-11-13"
+          },
+          {
+            "clicks": 1,
+            "impressions": 10,
+            "ctr": 0.1,
+            "position": 14.1,
+            "key": "2026-11-14"
+          }
+        ],
+        "queries": [
+          {
+            "clicks": 11,
+            "impressions": 16,
+            "ctr": 0.6875,
+            "position": 1.875,
+            "key": "narfid"
+          }
+        ],
+        "pages": [
+          {
+            "clicks": 5,
+            "impressions": 16,
+            "ctr": 0.3125,
+            "position": 2.75,
+            "key": "https://www.narfid.com/about"
+          },
+          {
+            "clicks": 3,
+            "impressions": 14,
+            "ctr": 0.21428571428571427,
+            "position": 8.428571428571429,
+            "key": "https://www.narfid.com/"
+          },
+          {
+            "clicks": 2,
+            "impressions": 2,
+            "ctr": 1,
+            "position": 1.5,
+            "key": "https://www.narfid.com/articles/gym-unidentified-payment-review"
+          },
+          {
+            "clicks": 2,
+            "impressions": 2,
+            "ctr": 1,
+            "position": 2.5,
+            "key": "https://www.narfid.com/articles/womens-club-operations-system"
+          },
+          {
+            "clicks": 2,
+            "impressions": 9,
+            "ctr": 0.2222222222222222,
+            "position": 5.666666666666667,
+            "key": "https://www.narfid.com/solutions/bookings"
+          },
+          {
+            "clicks": 2,
+            "impressions": 10,
+            "ctr": 0.2,
+            "position": 5.2,
+            "key": "https://www.narfid.com/solutions/point-of-sale"
+          },
+          {
+            "clicks": 1,
+            "impressions": 1,
+            "ctr": 1,
+            "position": 2,
+            "key": "https://www.narfid.com/articles/academy-children-guardian-records"
+          },
+          {
+            "clicks": 1,
+            "impressions": 2,
+            "ctr": 0.5,
+            "position": 6.5,
+            "key": "https://www.narfid.com/articles/academy-makeup-session-policy"
+          },
+          {
+            "clicks": 1,
+            "impressions": 9,
+            "ctr": 0.1111111111111111,
+            "position": 4,
+            "key": "https://www.narfid.com/pricing"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 19,
+            "key": "https://www.narfid.com/articles/academy-parent-progress-update"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 8,
+            "key": "https://www.narfid.com/articles/academy-player-group-transfer"
+          },
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 10,
+            "key": "https://www.narfid.com/articles/club-data-export-exit-checklist"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4,
+            "key": "https://www.narfid.com/articles/club-employee-access-offboarding"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4,
+            "key": "https://www.narfid.com/articles/club-meal-production-planning"
+          },
+          {
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 2,
+            "key": "https://www.narfid.com/articles/gym-inquiry-call-checklist"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 7,
+            "key": "https://www.narfid.com/articles/gym-lost-property-register"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 9,
+            "key": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation"
+          },
+          {
+            "clicks": 0,
+            "impressions": 4,
+            "ctr": 0,
+            "position": 2.25,
+            "key": "https://www.narfid.com/articles/membership-renewal-freeze-guide"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 8,
+            "key": "https://www.narfid.com/articles/personal-training-schedule-control"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 8,
+            "key": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs"
+          }
+        ],
+        "devices": [
+          {
+            "clicks": 12,
+            "impressions": 28,
+            "ctr": 0.42857142857142855,
+            "position": 3.6785714285714284,
+            "key": "MOBILE"
+          },
+          {
+            "clicks": 3,
+            "impressions": 10,
+            "ctr": 0.3,
+            "position": 14.7,
+            "key": "DESKTOP"
+          }
+        ],
+        "fetchedAt": "2026-11-16T15:09:45.262Z",
+        "lastDataDate": "2026-11-14"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "/solutions/memberships": {
+      "startedAt": "2026-11-16T15:09:46.798Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/solutions/memberships",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-16T00:12:26Z",
+        "googleCanonical": "https://www.narfid.com/solutions/memberships",
+        "userCanonical": "https://www.narfid.com/solutions/memberships",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=heQWcCDpEiVoUukPgnl1gQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-16T15:09:54.958Z"
+      },
+      "stale": null
+    },
+    "/articles/annual-club-software-cost": {
+      "startedAt": "2026-11-16T15:09:53.782Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/annual-club-software-cost",
+        "verdict": "NEUTRAL",
+        "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=n1v_lEyQjXgitJDiR0QMzg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-16T15:10:01.888Z"
+      },
+      "stale": null
+    },
+    "/articles": {
+      "startedAt": "2026-11-16T15:10:00.672Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=kVclUucaWWVN48M1h1pZXQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-16T15:10:09.216Z"
+      },
+      "stale": null
+    }
+  }
+}

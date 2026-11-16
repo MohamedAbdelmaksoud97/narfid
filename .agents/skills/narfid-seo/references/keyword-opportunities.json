@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-16",
   "baseline": {
     "keywords": "../../../../content/seo-campaign/keywords.json",
     "research": "../../../../content/seo-campaign/research-log.json",
@@ -9180,6 +9180,119 @@
         }
       ],
       "decision": "تحسين الوجهة القائمة /solutions/kitchen-inventory برابطين إلى دليلين منشورين؛ لا مقال جديد ولا تغيير ملكية الكلمات. الإضافة المميزة هي الفصل العملي بين تعديل رصيد المنتج وتصحيح استحقاق الوجبة. أحجام البحث والصعوبة غير متاحة، وترتيب الاسترجاع ليس ترتيب Google السعودية."
+    },
+    {
+      "id": "research-20261116-autopilot-memberships-links",
+      "researchedAt": "2026-11-16",
+      "provider": "web.run search_query + open",
+      "market": "السعودية سوق مقصود؛ بحث ويب عام دون تثبيت موقع Google أو الجهاز",
+      "googleSaudiVerified": false,
+      "queries": [
+        {
+          "query": "برنامج إدارة اشتراكات وحضور النادي الرياضي السعودية برنامج اشتراكات جيم",
+          "searchedAt": "2026-11-16",
+          "results": [
+            {
+              "title": "سوليك",
+              "url": "https://soliq.net/systems/gym",
+              "inspection": {
+                "summary": "يعرض باقات وحضورًا بالكود وتحصيلًا في برنامج ويندوز.",
+                "status": "opened",
+                "checkedAt": "2026-11-16"
+              }
+            },
+            {
+              "title": "AskFlow",
+              "url": "https://askflow.sa/ar/gym-software",
+              "inspection": {
+                "summary": "يعرض ملف العضو والباقات والحضور عبر البوابة في جولة داخل المنتج.",
+                "status": "opened",
+                "checkedAt": "2026-11-16"
+              }
+            },
+            {
+              "title": "eClubs",
+              "url": "https://eclubs.co/",
+              "inspection": {
+                "summary": "يعرض الاشتراكات والحضور واشتراكات الخزائن ضمن قائمة وظائف المنتج. استُخدمت صفحة النطاق الأساسية بدل نتيجة www المكررة.",
+                "status": "opened",
+                "checkedAt": "2026-11-16"
+              }
+            },
+            {
+              "title": "ActiveFlow",
+              "url": "https://activeflowapp.com/ar/gym-management-software-saudi-arabia-ar/",
+              "inspection": {
+                "summary": "صفحة موجهة للسعودية تعرض إدارة الأعضاء والحضور والاشتراكات مع أمثلة على نطاق الربط.",
+                "status": "opened",
+                "checkedAt": "2026-11-16"
+              }
+            },
+            {
+              "title": "GymPro",
+              "url": "https://www.eysada.com/gympro",
+              "inspection": {
+                "summary": "يعرض ملف العضو والاشتراكات وتسجيل الحضور برمز QR وإدارة الفروع.",
+                "status": "opened",
+                "checkedAt": "2026-11-16"
+              }
+            }
+          ]
+        },
+        {
+          "query": "استقبال استفسارات الاشتراك نادي رياضي تسجيل الاستفسارات تخصيص خزائن الأعضاء سجل النادي إدارة",
+          "searchedAt": "2026-11-16",
+          "results": [
+            {
+              "title": "الوقائع المصرية",
+              "url": "https://mediadr.sis.gov.eg/xmlui/bitstream/handle/123456789/100936/WQ134_20250619_3991.pdf?isAllowed=y&sequence=2",
+              "inspection": {
+                "summary": "مقتطف لشروط عضوية نظامية في مصر.",
+                "status": "snippet-only",
+                "checkedAt": "2026-11-16"
+              }
+            }
+          ]
+        }
+      ],
+      "pageChecks": [
+        {
+          "title": "سوليك",
+          "url": "https://soliq.net/systems/gym",
+          "summary": "يعرض باقات وحضورًا بالكود وتحصيلًا في برنامج ويندوز.",
+          "status": "opened",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "title": "AskFlow",
+          "url": "https://askflow.sa/ar/gym-software",
+          "summary": "يعرض ملف العضو والباقات والحضور عبر البوابة في جولة داخل المنتج.",
+          "status": "opened",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "title": "eClubs",
+          "url": "https://eclubs.co/",
+          "summary": "يعرض الاشتراكات والحضور واشتراكات الخزائن ضمن قائمة وظائف المنتج. استُخدمت صفحة النطاق الأساسية بدل نتيجة www المكررة.",
+          "status": "opened",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "title": "ActiveFlow",
+          "url": "https://activeflowapp.com/ar/gym-management-software-saudi-arabia-ar/",
+          "summary": "صفحة موجهة للسعودية تعرض إدارة الأعضاء والحضور والاشتراكات مع أمثلة على نطاق الربط.",
+          "status": "opened",
+          "checkedAt": "2026-11-16"
+        },
+        {
+          "title": "GymPro",
+          "url": "https://www.eysada.com/gympro",
+          "summary": "يعرض ملف العضو والاشتراكات وتسجيل الحضور برمز QR وإدارة الفروع.",
+          "status": "opened",
+          "checkedAt": "2026-11-16"
+        }
+      ],
+      "decision": "صفحات المنتجات المفحوصة تركز على الوظائف. تربط صفحة العضويات القائمة بين طريقة عمل الاستقبال ودليلين منشورين يتضمنان نموذجًا لتسليم متابعة الاستفسار ونموذجًا لسجل تخصيص الخزانة وإرجاع مفتاحها. الاستعلام التجريبي المركّب لم يقدم دليل طلب صالحًا. تبقى العبارات في وجهاتها الحالية، وأحجام البحث والصعوبة غير متاحة."
     },
     {
       "id": "research-20261115-autopilot-bookings-links",
