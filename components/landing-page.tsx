@@ -467,6 +467,8 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                   اشتراكات سنوية، بمميزات واضحة.
                   <br />
                   اختر ما يناسب تشغيلك اليوم، واترك مساحة للغد.
+                  <br />
+                  نقاط البيع وورديات الصندوق ضمن كل الباقات.
                 </p>
                 <Badge variant="outline">
                   <CalendarDays />
@@ -538,7 +540,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
               ))}
             </div>
             <p className="pricing-note">
-              أسعار إطلاق مقترحة. الضرائب وتكاليف الأجهزة والتخصيص تُحدَّد في
+              الأسعار بالريال السعودي. الضرائب وتكاليف الأجهزة والتخصيص تُحدَّد في
               عرض السعر النهائي.
             </p>
             <div className="enterprise-card">
@@ -556,10 +558,15 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                   نبنيه معك.
                 </h3>
                 <p>
-                  تطبيق باسم ناديك، ربط بوابات الدخول، تكامل مع أنظمتك، أو تطوير
-                  خاص. ندرس احتياجك ونصمّم نطاقًا يناسبه.
+                  لثلاثة فروع فأكثر أو احتياجات تقنية خاصة. نحدد نطاق المنصة
+                  والفروع والتهيئة والدعم؛ ويمكن أن يقتصر الاتفاق على اشتراك
+                  المنصة. التطبيق والتكامل والتطوير تُسعّر بشكل مستقل عند الحاجة.
                 </p>
                 <div className="enterprise-options">
+                  <span>
+                    <GitBranch />
+                    ٣ فروع فأكثر
+                  </span>
                   <span>
                     <Smartphone />
                     تطبيق مخصص
@@ -575,14 +582,14 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                 </div>
               </div>
               <div className="enterprise-action">
-                <strong>حسب نطاق المشروع</strong>
-                <span>خدمات مخصصة تضاف إلى اشتراك المنصة</span>
+                <strong>عرض سعر حسب النطاق</strong>
+                <span>اشتراك للفروع، وخدمات تقنية حسب الاحتياج</span>
                 <DemoButton
                   variant="outline"
                   size="marketing"
                   plan="شراكة تقنية"
                 >
-                  ناقش مشروعك معنا
+                  ناقش احتياج مؤسستك
                   <ArrowUpLeft data-icon="inline-end" />
                 </DemoButton>
               </div>

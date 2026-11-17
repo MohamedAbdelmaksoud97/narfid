@@ -29,12 +29,13 @@ The form validates required names, preserves details when editing the reviewed r
 
 ## Commercial proposal
 
-- أساس: SAR 3,600/year, one branch.
-- تشغيل: SAR 7,200/year, one branch; adds POS, kitchen and retail inventory.
-- توسّع: SAR 12,000/year, up to three branches; adds bookings and branch reporting.
-- شراكة تقنية: separately scoped services added to the platform subscription.
+- أساس: SAR 1,800/year, one branch; memberships, attendance, POS, cash shifts, invoices, collection/refunds, permissions and basic reports.
+- تشغيل: SAR 3,300/year, one branch; adds bookings, trainers, measurements, training plans and employee schedules/attendance.
+- متكاملة: SAR 4,200/year, one branch; adds retail inventory, kitchen and meal subscriptions. Recommended for complete operations.
+- توسّع: SAR 6,600/year, two branches; complete scope with central branch management and reporting.
+- شراكة تقنية: a scoped quote for three or more branches or custom technology needs; platform-only agreements are supported and bespoke work is optional, separately priced.
 
-These are proposed launch prices. Taxes, migration, extra branches, hardware, customization and maintenance require a final quotation. Monthly equivalents are for comparison; billing is annual.
+The owner approved this structure and these amounts on 18 November 2026. Taxes, migration, hardware, customization, maintenance and service terms require a final quotation. Monthly equivalents of SAR 150/275/350/550 are for comparison; billing is annual. The existing cards are retained in four desktop columns, two tablet columns and one mobile column. The public catalog and private CRM catalog are updated together; existing contract snapshots and account links are preserved.
 
 See `market-and-pricing.md` for primary vendor sources and the platform audits for implementation evidence and SaaS gaps.
 
@@ -46,7 +47,7 @@ The live domain is `https://www.narfid.com` (launched 9 November 2026). Producti
 
 ## Verification boundary
 
-Production build, TypeScript, ESLint and HTTP checks are run against the completed source. CUA browser inventory returned no browsers or apps, so actual desktop/mobile rendering and browser interaction testing could not be performed in this session. Responsive rules, the request flow and RTL behavior were reviewed statically.
+Pricing verification on 18 November 2026: Next production build, TypeScript, ESLint and six CRM unit checks; Playwright rendering of the home and pricing pages at 320, 390, 768, 1024, 1200 and 1440 pixels with no horizontal overflow or page errors. All four home-page plan buttons select the correct demo-request option. The partnership page supports platform-only scope. The private catalog was verified against the public prices with existing plan IDs, account links and contract snapshots unchanged. The vinext/Cloudflare production build also passed, including public prerender verification; Worker preview was checked at 1440 and 390 pixels under the canonical host, including the four plan buttons.
 
 ## Next stage
 

@@ -1699,10 +1699,16 @@ h2 {
 }
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   margin-top: 67px;
   align-items: stretch;
+}
+@media (max-width: 1199px) {
+  .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 52px;
+  }
 }
 .plan-wrapper {
   position: relative;
@@ -2430,7 +2436,9 @@ h2 {
     bottom: -10px;
   }
   .pricing-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 13px;
+    row-gap: 52px;
   }
   .plan-card {
     --card-spacing: 18px;
@@ -4076,7 +4084,8 @@ h2 {
 .public-footer p { color:var(--muted-foreground); margin-top:8px; }
 .public-footer nav { display:flex; flex-wrap:wrap; gap:16px 24px; }
 .public-footer a:hover { color:var(--primary); }
-.public-pricing-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.public-pricing-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+@media (max-width:1199px) { .public-pricing-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 .public-pricing-grid [data-slot="card-content"] { display:flex; flex-direction:column; gap:16px; line-height:1.9; }
 .public-pricing-grid [data-slot="card-footer"] { margin-top:auto; }
 .public-price { font-size:34px; font-weight:700; }

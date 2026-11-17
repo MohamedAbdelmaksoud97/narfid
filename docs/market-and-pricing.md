@@ -1,8 +1,8 @@
 # Narfid: market research and provisional annual pricing
 
-Research date: **2026-10-13**. Currency for Narfid's proposed plans: **Saudi riyal (SAR)**.
+Research date: **2026-10-13**. Offer updated with owner approval on **2026-11-18**. Currency: **Saudi riyal (SAR)**.
 
-This is a commercial working proposal for review, not an approved sales offer. Vendor figures below were checked against their own public pages. Published prices are not negotiated quotes, and vendor claims about adoption, compliance, security or delivered features have not been independently audited.
+The current plan structure and amounts were approved by the owner on 18 November 2026; taxes, implementation and service terms still require a final quote. Vendor figures below are historical research checked against their public pages on 13 October, not a current-price guarantee. Published prices are not negotiated quotes, and vendor claims about adoption, compliance, security or delivered features have not been independently audited.
 
 ## Primary-source benchmarks
 
@@ -21,25 +21,26 @@ Gymtrics and IDS provide directly relevant Saudi-positioned public price anchors
 
 The sampled public offers use member bands, feature tiers, branch allowances and separately priced integrations. Their annual prices span a broad range, so the research does not establish a single market price or prove willingness to pay.
 
-A module-based structure suits Narfid's proposed offer: member administration establishes the entry tier; kitchen, inventory and POS justify the operations tier; bookings and consolidated branch management justify the expansion tier. Custom applications and integrations create a fourth relationship for clients who need a technical provider beyond the standard subscription.
+A module-based structure suits the approved offer: membership operations, POS, cash shifts, invoicing, collections and refunds establish the entry tier. Bookings, coaching and employee schedules/attendance begin at تشغيل; retail inventory and kitchen/meal workflows begin at متكاملة; توسّع applies the complete scope to two branches. Three or more branches use a scoped partnership quote, which may cover platform subscriptions alone. Custom development is optional and separately scoped.
 
-The proposed SAR 3,600 / 7,200 / 12,000 annual prices sit between the lower Saudi-published offers and broader higher-priced suites. This is an initial positioning judgement, not a validated cost or margin model. Revisit pricing after measuring hosting, onboarding, data migration, customer support and maintenance costs, and after interviewing target customers.
+The previous 13 October proposal was SAR 3,600 / 7,200 / 12,000 annually. It was superseded on 18 November by SAR 1,800 / 3,300 / 4,200 / 6,600. The owner's competitor screenshot showed annual prices of SAR 1,440 / 3,300 / 4,200 / 6,600; its vendor, date, tax treatment and branch allowances were not established, so it is a supplied reference rather than a verified current offer. The new prices are an approved launch decision, not a validated cost or margin model. Review hosting, onboarding, data migration, support and maintenance costs and buyer feedback.
 
-## Proposed launch plans
+## Current launch plans — approved 18 November 2026
 
-| Arabic name | Annual amount | Monthly equivalent, paid annually | Proposed scope |
+| Arabic name | Annual amount | Monthly equivalent, paid annually | Scope |
 | --- | ---: | ---: | --- |
-| **أساس** | **SAR 3,600** | SAR 300 | One branch; members, memberships, renewals and freezes, reception attendance, basic operating and financial reporting. |
-| **تشغيل** | **SAR 7,200** | SAR 600 | One branch; everything in أساس, plus kitchen operations, POS, products and inventory. Use a recommendation label rather than claiming this is the most purchased plan. |
-| **توسّع** | **SAR 12,000** | SAR 1,000 | Up to three branches; everything in تشغيل, plus facility bookings, branch management and consolidated reporting. Exact booking capabilities must match the repository review. |
-| **شراكة تقنية** | **By scoped quote** | Not applicable | A standard SaaS subscription plus separately scoped mobile applications, compatible entry-gate integrations, external-system integrations and custom development. Hardware, third-party fees and ongoing maintenance must be scoped explicitly. |
+| **أساس** | **SAR 1,800** | SAR 150 | One branch; members, memberships, renewals, freezes, attendance, POS, cash shifts, invoicing, collections, refunds, permissions and basic reports. |
+| **تشغيل** | **SAR 3,300** | SAR 275 | One branch; everything in أساس plus courts/classes/personal-training bookings, trainers, measurements, training plans, employee schedules and attendance. |
+| **متكاملة** | **SAR 4,200** | SAR 350 | One branch; everything in تشغيل plus retail products/inventory/returns, kitchen menus, meal subscriptions/redemption and operating reports. Recommended for complete operations; no most-purchased claim. |
+| **توسّع** | **SAR 6,600** | SAR 550 | Two branches; everything in متكاملة with central management, branch permissions and consolidated reporting. |
+| **شراكة تقنية** | **By scoped quote** | Not applicable | Three or more branches, or custom technology needs at any branch count. The quote may cover platform subscriptions, onboarding and support alone; apps, compatible gate integrations, external integrations and development are optional, separately scoped and priced. |
 
-These are proposed commercial packages. The existing system's capabilities do not, by themselves, establish production-ready SaaS tenancy, subscription billing, provisioning or support commitments. Go Fitness is the first club client, not the platform brand.
+The existing system's capabilities do not, by themselves, establish production-ready SaaS tenancy, subscription billing, provisioning or support commitments. Go Fitness is the first club client, not the platform brand.
 
 ## Scope and pricing rules to confirm
 
 - Keep role permissions and basic reporting available in every plan. Do not sell essential access controls as an upgrade.
-- Branch allowances above are proposed. Additional branches should use a scoped quote until their cost and support model is established.
+- The first three plans include one branch; توسّع includes two. Three or more branches use شراكة تقنية; buying custom development is not required.
 - Do not publish arbitrary staff-seat or member limits, or claim unlimited usage, before capacity and operating costs are reviewed.
 - VAT treatment is **pending confirmation**. The proposed amounts are not yet confirmed as VAT-inclusive or VAT-exclusive. Do not calculate or publish a final payable amount until the seller's tax treatment and pricing policy are confirmed.
 - Payment-provider charges, SMS/WhatsApp usage, hardware, implementation work and custom-development maintenance need explicit commercial terms. Do not promise their inclusion, absence or price without approval.
@@ -48,6 +49,6 @@ These are proposed commercial packages. The existing system's capabilities do no
 
 ## Landing-page presentation
 
-Show the annual amount first: **«3,600 ر.س / سنويًا»**. The secondary amount should read **«ما يعادل 300 ر.س شهريًا، بفوترة سنوية»**. Do not add a monthly-payment toggle while the commercial offer is annual-only.
+Show the annual amount first: **«1,800 ر.س / سنويًا»**. The secondary amount should read **«ما يعادل 150 ر.س شهريًا، بفوترة سنوية»**. Do not add a monthly-payment toggle while the commercial offer is annual-only.
 
-In this working version, identify the numbers as **«أسعار إطلاق مقترحة»**. Use a demo or plan-request action such as **«احجز عرضًا توضيحيًا»** or **«ناقش هذه الباقة»** until purchase, billing and provisioning are implemented. Custom mobile and gate work should be presented as scoped services rather than already included standard features.
+Present the approved prices with their annual billing period and a clear final-quote note for taxes and service terms. Use a demo or plan-request action such as **«احجز عرضًا توضيحيًا»** or **«ناقش هذه الباقة»** until purchase, billing and provisioning are implemented. Custom mobile and gate work should be presented as scoped services rather than already included standard features.
