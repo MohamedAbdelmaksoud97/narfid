@@ -1,0 +1,600 @@
+{
+  "checkedAt": "2026-11-17T13:01:22.022Z",
+  "site": "https://www.narfid.com",
+  "sitemapStatus": 200,
+  "sitemapUrls": 72,
+  "discoveredPages": 77,
+  "robots": "User-Agent: *\nAllow: /\nDisallow: /board\nDisallow: /login\nDisallow: /api/\n\nSitemap: https://www.narfid.com/sitemap.xml\n",
+  "dns": {
+    "verification": "Native system DNS"
+  },
+  "checks": {
+    "allFinal200": true,
+    "allFirstAttempt200": true,
+    "allSitemapCanonicalSelf": true,
+    "allIndexable": true,
+    "allExistingSchemasValid": true,
+    "allSitemapLinked": true
+  },
+  "transientFailures": [],
+  "pages": [
+    {
+      "url": "https://www.narfid.com/",
+      "status": 200,
+      "depth": 0,
+      "canonical": "https://www.narfid.com",
+      "ms": 377
+    },
+    {
+      "url": "https://www.narfid.com/articles",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/articles",
+      "ms": 632
+    },
+    {
+      "url": "https://www.narfid.com/pricing",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/pricing",
+      "ms": 557
+    },
+    {
+      "url": "https://www.narfid.com/about",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/about",
+      "ms": 167
+    },
+    {
+      "url": "https://www.narfid.com/contact",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/contact",
+      "ms": 199
+    },
+    {
+      "url": "https://www.narfid.com/technology-partnership",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/technology-partnership",
+      "ms": 205
+    },
+    {
+      "url": "https://www.narfid.com/visual-identity",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/visual-identity",
+      "ms": 516
+    },
+    {
+      "url": "https://www.narfid.com/authors/nerved-team",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/authors/nerved-team",
+      "ms": 197
+    },
+    {
+      "url": "https://www.narfid.com/solutions/memberships",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/solutions/memberships",
+      "ms": 198
+    },
+    {
+      "url": "https://www.narfid.com/solutions/bookings",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/solutions/bookings",
+      "ms": 173
+    },
+    {
+      "url": "https://www.narfid.com/solutions/point-of-sale",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/solutions/point-of-sale",
+      "ms": 335
+    },
+    {
+      "url": "https://www.narfid.com/solutions/kitchen-inventory",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/solutions/kitchen-inventory",
+      "ms": 341
+    },
+    {
+      "url": "https://www.narfid.com/solutions/branches",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/solutions/branches",
+      "ms": 170
+    },
+    {
+      "url": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+      "ms": 310
+    },
+    {
+      "url": "https://www.narfid.com/articles/choose-sports-club-management-system",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/choose-sports-club-management-system",
+      "ms": 1049
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-class-occupancy-report",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/articles/gym-class-occupancy-report",
+      "ms": 228
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+      "ms": 735
+    },
+    {
+      "url": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+      "ms": 202
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-data-migration-checklist",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/club-data-migration-checklist",
+      "ms": 289
+    },
+    {
+      "url": "https://www.narfid.com/articles/annual-club-software-cost",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/annual-club-software-cost",
+      "ms": 272
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-software-demo-checklist",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/academy-software-demo-checklist",
+      "ms": 333
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-children-guardian-records",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/academy-children-guardian-records",
+      "ms": 199
+    },
+    {
+      "url": "https://www.narfid.com/articles/visit-based-membership-packages",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/visit-based-membership-packages",
+      "ms": 231
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+      "ms": 242
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-retention-followup",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-member-retention-followup",
+      "ms": 392
+    },
+    {
+      "url": "https://www.narfid.com/articles/womens-club-operations-system",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/womens-club-operations-system",
+      "ms": 388
+    },
+    {
+      "url": "https://www.narfid.com/articles/personal-training-schedule-control",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/personal-training-schedule-control",
+      "ms": 321
+    },
+    {
+      "url": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+      "ms": 238
+    },
+    {
+      "url": "https://www.narfid.com/articles/padel-court-occupancy-report",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/padel-court-occupancy-report",
+      "ms": 234
+    },
+    {
+      "url": "https://www.narfid.com/articles/recurring-court-booking-control",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/recurring-court-booking-control",
+      "ms": 371
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-class-groups-capacity",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/academy-class-groups-capacity",
+      "ms": 428
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+      "ms": 196
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+      "ms": 246
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-refund-approval-record",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-refund-approval-record",
+      "ms": 246
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-expense-approval-workflow",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/club-expense-approval-workflow",
+      "ms": 279
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+      "ms": 299
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-production-planning",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/club-meal-production-planning",
+      "ms": 245
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-stock-count-reorder",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-stock-count-reorder",
+      "ms": 239
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-branch-performance-comparison",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/club-branch-performance-comparison",
+      "ms": 258
+    },
+    {
+      "url": "https://www.narfid.com/articles/new-reception-staff-training",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/new-reception-staff-training",
+      "ms": 188
+    },
+    {
+      "url": "https://www.narfid.com/articles/shift-handover-pending-cases",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/shift-handover-pending-cases",
+      "ms": 237
+    },
+    {
+      "url": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+      "ms": 498
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+      "ms": 177
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+      "ms": 197
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+      "ms": 327
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+      "ms": 263
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-lead-source-conversion",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/gym-lead-source-conversion",
+      "ms": 272
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-referral-program-tracking",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/gym-referral-program-tracking",
+      "ms": 269
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+      "ms": 287
+    },
+    {
+      "url": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+      "ms": 189
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+      "ms": 215
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-parent-progress-update",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/academy-parent-progress-update",
+      "ms": 222
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/academy-makeup-session-policy",
+      "ms": 231
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-player-group-transfer",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/academy-player-group-transfer",
+      "ms": 236
+    },
+    {
+      "url": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/academy-midterm-enrollment",
+      "ms": 172
+    },
+    {
+      "url": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+      "ms": 375
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-locker-assignment-log",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-locker-assignment-log",
+      "ms": 202
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-lost-property-register",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/gym-lost-property-register",
+      "ms": 183
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+      "ms": 173
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+      "ms": 223
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+      "ms": 216
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-pickup-handover",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/club-meal-pickup-handover",
+      "ms": 189
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+      "ms": 218
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+      "ms": 230
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-discount-approval-controls",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-discount-approval-controls",
+      "ms": 204
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-member-record-deduplication",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-member-record-deduplication",
+      "ms": 189
+    },
+    {
+      "url": "https://www.narfid.com/articles/gym-software-team-adoption",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/gym-software-team-adoption",
+      "ms": 211
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+      "ms": 249
+    },
+    {
+      "url": "https://www.narfid.com/articles/club-employee-access-offboarding",
+      "status": 200,
+      "depth": 1,
+      "canonical": "https://www.narfid.com/articles/club-employee-access-offboarding",
+      "ms": 220
+    },
+    {
+      "url": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+      "ms": 220
+    },
+    {
+      "url": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+      "ms": 239
+    },
+    {
+      "url": "https://www.narfid.com/articles/multi-branch-club-permissions",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles/multi-branch-club-permissions",
+      "ms": 162
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=2",
+      "status": 200,
+      "depth": 2,
+      "canonical": "https://www.narfid.com/articles?page=2",
+      "ms": 168
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=1",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles",
+      "ms": 172
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=3",
+      "status": 200,
+      "depth": 3,
+      "canonical": "https://www.narfid.com/articles?page=3",
+      "ms": 480
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=4",
+      "status": 200,
+      "depth": 4,
+      "canonical": "https://www.narfid.com/articles?page=4",
+      "ms": 547
+    },
+    {
+      "url": "https://www.narfid.com/articles?page=5",
+      "status": 200,
+      "depth": 5,
+      "canonical": "https://www.narfid.com/articles?page=5",
+      "ms": 396
+    }
+  ],
+  "contentAudit": {
+    "checkedAt": "2026-11-17T13:01:29.714Z",
+    "pages": 77,
+    "sitemapUrls": 72,
+    "internalTargets": 78,
+    "fragmentLinks": 291,
+    "p95ms": 400,
+    "maxMs": 510,
+    "issues": []
+  },
+  "metadata": {
+    "titleDuplicates": [
+      [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=1"
+      ]
+    ],
+    "descriptionDuplicates": [
+      [
+        "https://www.narfid.com/articles",
+        "https://www.narfid.com/articles?page=2",
+        "https://www.narfid.com/articles?page=1",
+        "https://www.narfid.com/articles?page=3",
+        "https://www.narfid.com/articles?page=4",
+        "https://www.narfid.com/articles?page=5"
+      ]
+    ],
+    "missing": []
+  },
+  "priorLinks": [
+    {
+      "url": "https://www.narfid.com/articles/annual-club-software-cost",
+      "inbound": [
+        "https://www.narfid.com/solutions/memberships",
+        "https://www.narfid.com/articles?page=5"
+      ],
+      "depth": 2
+    }
+  ]
+}

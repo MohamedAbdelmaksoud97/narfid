@@ -1,5 +1,7 @@
 # Shipped SEO changes
 
+- 2026-11-17 — Linked the published [annual cost comparison](https://www.narfid.com/articles/annual-club-software-cost) from the [pricing checklist](https://www.narfid.com/pricing). Refreshed crawl, Search Console, GA4 and six URL inspections. See the [daily report](reports/2026-11-17.md).
+
 - 2026-11-16 — Linked the published [inquiry-call](https://www.narfid.com/articles/gym-inquiry-call-checklist) and [locker-assignment](https://www.narfid.com/articles/gym-locker-assignment-log) guides from the [memberships solution](https://www.narfid.com/solutions/memberships). Refreshed the live crawl, Google reports and URL inspections. See the [daily report](reports/2026-11-16.md).
 
 - 2026-11-15 — Linked the published [coach-substitution](https://www.narfid.com/articles/academy-substitute-coach-handover) and [group-transfer](https://www.narfid.com/articles/academy-player-group-transfer) procedures from the [bookings solution](https://www.narfid.com/solutions/bookings). Refreshed the live crawl, Google reports and URL inspections, and recorded the first observed branded query. See the [daily report](reports/2026-11-15.md).

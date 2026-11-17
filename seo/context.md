@@ -1,6 +1,13 @@
 # SEO autopilot — narfid
 
-Last daily run: 2026-11-16. Setup baseline: 2026-11-12.
+Last daily run: 2026-11-17. Setup baseline: 2026-11-12.
+
+## Daily update — 2026-11-17
+
+- Added a link from the pricing checklist to the published annual software cost guide. The guide's worked example compares first-year and renewal costs on the same scope. Its two-click path from home also exists through the memberships solution. The campaign remains the source for its primary query. See [daily report](reports/2026-11-17.md).
+- The pre-change crawl returned HTTP 200 on the first request for all 72 sitemap URLs and 77 discovered pages. It checked 78 internal targets and 291 fragments. Request p95 was 400 ms from this probe. See [crawl evidence](reports/2026-11-17-health.json).
+- Search Console returned 42 global impressions and 16 clicks, with 11 impressions and zero clicks in Saudi Arabia. Final data ran through November 15. The only reported query was `narfid` at position 1.88 globally. URL Inspection confirmed four of six sampled URLs indexed and returned unknown for the annual cost guide and article library. GA4 reported 2 users, 7 Direct sessions, 43 views and 4 demo starts. Saudi GA4 and prior-period totals were unavailable. See [Google evidence](reports/2026-11-17-metrics.json).
+- There were no commits between the November 16 SEO checkpoint and the start of this run. Weekly work is due November 19 and the map rebuild is due December 12.
 
 ## Daily update — 2026-11-16
 
