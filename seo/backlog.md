@@ -2,6 +2,8 @@
 
 Ordered by expected buyer value per effort, using qualitative evidence; signups/hour cannot yet be estimated from this small baseline. No numeric search volume or ranking assumptions.
 
+The owner-confirmed Saudi Keyword Planner export now supplies monthly estimates for five mapped commercial variants. Review the [source evidence](reports/2026-11-17-keyword-planner-sa.json) before reprioritizing. Search-result intent remains unchecked for these variants, and organic difficulty is unavailable.
+
 | Priority | Query / owner | Action | Evidence and completion condition |
 | --- | --- | --- | --- |
 | Done availability, 2026-11-13 | All public pages, especially `/contact` and articles | Serve public build snapshots and prebuilt image variants within Workers Free | Owner accepted publication/build delay. All 58 articles and 76 public URLs passed live SEO checks; 304 repeated requests after automatic deployment returned 200. Keep observing actual failures: this sample does not establish a worst-case CPU bound or remove Free quotas. See the [Free rendering report](reports/2026-11-13-workers-free.md). No paid upgrade. |

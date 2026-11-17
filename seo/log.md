@@ -1,5 +1,7 @@
 # Shipped SEO changes
 
+- 2026-11-17 — Recorded the owner-confirmed Saudi Keyword Planner export and mapped five measured commercial variants to existing pages in `keyword-map.csv`. Preserved the 16 source rows, unavailable metrics, reported zeros and advertising competition in the [measurement evidence](reports/2026-11-17-keyword-planner-sa.json).
+
 - 2026-11-17 — Linked the published [annual cost comparison](https://www.narfid.com/articles/annual-club-software-cost) from the [pricing checklist](https://www.narfid.com/pricing). Refreshed crawl, Search Console, GA4 and six URL inspections. See the [daily report](reports/2026-11-17.md).
 
 - 2026-11-16 — Linked the published [inquiry-call](https://www.narfid.com/articles/gym-inquiry-call-checklist) and [locker-assignment](https://www.narfid.com/articles/gym-locker-assignment-log) guides from the [memberships solution](https://www.narfid.com/solutions/memberships). Refreshed the live crawl, Google reports and URL inspections. See the [daily report](reports/2026-11-16.md).

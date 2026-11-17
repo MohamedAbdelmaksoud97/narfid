@@ -2,6 +2,12 @@
 
 Last daily run: 2026-11-17. Setup baseline: 2026-11-12.
 
+## Keyword Planner follow-up — 2026-11-17
+
+- The owner supplied a Saudi export after identifying the previous export as Egyptian. The Saudi file covers November 2025–October 2026 and contains 16 phrases. Seven have an exported monthly estimate of 50, two have zero and seven have unavailable volume. Country is established by the owner's statement. The export shows EGP account currency and omits the location field. See [source records and limitations](reports/2026-11-17-keyword-planner-sa.json).
+- Five measured commercial variants now point to the existing homepage, bookings and point-of-sale pages in the keyword map. Primary owners retain their existing research. Overlap between close variants prevents summing the estimates into a distinct market total. Advertising competition is retained in the evidence. Organic difficulty remains unavailable.
+- The newly measured phrases have no fresh SERP intent check in this follow-up. Court/app booking can include consumer intent. Review before prioritizing a new page. The full map rebuild date remains November 12.
+
 ## Daily update — 2026-11-17
 
 - Added a link from the pricing checklist to the published annual software cost guide. The guide's worked example compares first-year and renewal costs on the same scope. Its two-click path from home also exists through the memberships solution. The campaign remains the source for its primary query. See [daily report](reports/2026-11-17.md).
