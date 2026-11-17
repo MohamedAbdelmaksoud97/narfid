@@ -29,11 +29,13 @@ The form validates required names, preserves details when editing the reviewed r
 
 ## Commercial proposal
 
-- أساس: SAR 1,800/year, one branch; memberships, attendance, POS, cash shifts, invoices, collection/refunds, permissions and basic reports.
-- تشغيل: SAR 3,300/year, one branch; adds bookings, trainers, measurements, training plans and employee schedules/attendance.
-- متكاملة: SAR 4,200/year, one branch; adds retail inventory, kitchen and meal subscriptions. Recommended for complete operations.
-- توسّع: SAR 6,600/year, two branches; complete scope with central branch management and reporting.
-- شراكة تقنية: a scoped quote for three or more branches or custom technology needs; platform-only agreements are supported and bespoke work is optional, separately priced.
+- أساس: SAR 1,800/year, one branch, up to 1,000 registered members.
+- نمو: SAR 3,300/year, one branch, up to 5,000 registered members; recommended for growing institutions.
+- احتراف: SAR 4,200/year, one branch, up to 10,000 registered members.
+- توسّع: SAR 6,600/year, two branches, 10,000 registered members combined; adds central branch management and reporting.
+- شراكة تقنية: scoped quote for higher member counts, three or more branches or custom technology needs; platform-only agreements remain possible and bespoke work is optional.
+
+Every fixed plan includes memberships, freezes/renewals, attendance, bookings, coaching/measurements/plans, POS/cash shifts/invoicing/collections/refunds, employee schedules/attendance, permissions and reports. Inventory and kitchen/meal workflows are optional, separately quoted addons. Count all registered members including old/frozen/expired records, once across branches/subscriptions; prospects before member registration do not count. The owner explicitly changed the metric from active members and authorized increasing the proposed bands on 18 November. Quota enforcement and automatic billing remain outside this website/CRM offer update.
 
 The owner approved this structure and these amounts on 18 November 2026. Taxes, migration, hardware, customization, maintenance and service terms require a final quotation. Monthly equivalents of SAR 150/275/350/550 are for comparison; billing is annual. The existing cards are retained in four desktop columns, two tablet columns and one mobile column. The public catalog and private CRM catalog are updated together; existing contract snapshots and account links are preserved.
 
@@ -48,6 +50,8 @@ The live domain is `https://www.narfid.com` (launched 9 November 2026). Producti
 ## Verification boundary
 
 Pricing verification on 18 November 2026: Next production build, TypeScript, ESLint and six CRM unit checks; Playwright rendering of the home and pricing pages at 320, 390, 768, 1024, 1200 and 1440 pixels with no horizontal overflow or page errors. All four home-page plan buttons select the correct demo-request option. The partnership page supports platform-only scope. The private catalog was verified against the public prices with existing plan IDs, account links and contract snapshots unchanged. The vinext/Cloudflare production build also passed, including public prerender verification; Worker preview was checked at 1440 and 390 pixels under the canonical host, including the four plan buttons.
+
+Registered-member revision verification on 18 November: the same build/lint/type/CRM and responsive checks passed after updating the bands to 1,000 / 5,000 / 10,000 and 10,000 combined across two branches. Browser assertions verify shared core features, optional inventory/kitchen addons, correct renamed demo selections and explicit inclusion of old/frozen/expired members. The live chairman view confirms the updated catalog. CRM migration retains IDs and leaves account links and historical contract snapshots unchanged. Independent review found no actionable defects.
 
 ## Next stage
 

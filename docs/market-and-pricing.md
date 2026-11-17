@@ -1,4 +1,4 @@
-# Narfid: market research and provisional annual pricing
+# Narfid: market research and registered-member annual pricing
 
 Research date: **2026-10-13**. Offer updated with owner approval on **2026-11-18**. Currency: **Saudi riyal (SAR)**.
 
@@ -21,7 +21,7 @@ Gymtrics and IDS provide directly relevant Saudi-positioned public price anchors
 
 The sampled public offers use member bands, feature tiers, branch allowances and separately priced integrations. Their annual prices span a broad range, so the research does not establish a single market price or prove willingness to pay.
 
-A module-based structure suits the approved offer: membership operations, POS, cash shifts, invoicing, collections and refunds establish the entry tier. Bookings, coaching and employee schedules/attendance begin at تشغيل; retail inventory and kitchen/meal workflows begin at متكاملة; توسّع applies the complete scope to two branches. Three or more branches use a scoped partnership quote, which may cover platform subscriptions alone. Custom development is optional and separately scoped.
+The owner subsequently approved member-based bands instead of feature gates, then explicitly required counting all registered members rather than only active subscriptions and authorized revising the bands. The adopted bands are 1,000 / 5,000 / 10,000 registered members, with the existing annual amounts unchanged. These are commercial limits, not load-test evidence. All fixed plans include the same core operations; inventory and kitchen/meal workflows are optional addons quoted separately. توسّع covers two branches and 10,000 registered members combined. Higher counts, three or more branches or custom technology needs use partnership; custom development remains optional.
 
 The previous 13 October proposal was SAR 3,600 / 7,200 / 12,000 annually. It was superseded on 18 November by SAR 1,800 / 3,300 / 4,200 / 6,600. The owner's competitor screenshot showed annual prices of SAR 1,440 / 3,300 / 4,200 / 6,600; its vendor, date, tax treatment and branch allowances were not established, so it is a supplied reference rather than a verified current offer. The new prices are an approved launch decision, not a validated cost or margin model. Review hosting, onboarding, data migration, support and maintenance costs and buyer feedback.
 
@@ -29,19 +29,22 @@ The previous 13 October proposal was SAR 3,600 / 7,200 / 12,000 annually. It was
 
 | Arabic name | Annual amount | Monthly equivalent, paid annually | Scope |
 | --- | ---: | ---: | --- |
-| **أساس** | **SAR 1,800** | SAR 150 | One branch; members, memberships, renewals, freezes, attendance, POS, cash shifts, invoicing, collections, refunds, permissions and basic reports. |
-| **تشغيل** | **SAR 3,300** | SAR 275 | One branch; everything in أساس plus courts/classes/personal-training bookings, trainers, measurements, training plans, employee schedules and attendance. |
-| **متكاملة** | **SAR 4,200** | SAR 350 | One branch; everything in تشغيل plus retail products/inventory/returns, kitchen menus, meal subscriptions/redemption and operating reports. Recommended for complete operations; no most-purchased claim. |
-| **توسّع** | **SAR 6,600** | SAR 550 | Two branches; everything in متكاملة with central management, branch permissions and consolidated reporting. |
-| **شراكة تقنية** | **By scoped quote** | Not applicable | Three or more branches, or custom technology needs at any branch count. The quote may cover platform subscriptions, onboarding and support alone; apps, compatible gate integrations, external integrations and development are optional, separately scoped and priced. |
+| **أساس** | **SAR 1,800** | SAR 150 | One branch, up to 1,000 registered members; all core operations below. |
+| **نمو** | **SAR 3,300** | SAR 275 | One branch, up to 5,000 registered members; same core operations. Recommended for growing institutions, without a most-purchased claim. |
+| **احتراف** | **SAR 4,200** | SAR 350 | One branch, up to 10,000 registered members; same core operations. |
+| **توسّع** | **SAR 6,600** | SAR 550 | Two branches, up to 10,000 registered members combined; core operations with central management, branch permissions and consolidated reporting. |
+| **شراكة تقنية** | **By scoped quote** | Not applicable | Higher member counts, three or more branches, or custom technology needs at any branch count. Platform-only agreements remain possible; apps, compatible gates and integrations/development are optional, separately quoted. |
+
+Core operations in every fixed plan: memberships, renewals/freezes, attendance, court/class/personal-training bookings, trainers, measurements, training plans, POS/cash shifts/invoices/collection/refunds, employee schedules/attendance, permissions and reports. Retail inventory and kitchen/meal subscriptions/redemption are optional at every tier, with prices determined after scoping setup and service. Do not invent addon prices or claim they are bundled.
 
 The existing system's capabilities do not, by themselves, establish production-ready SaaS tenancy, subscription billing, provisioning or support commitments. Go Fitness is the first club client, not the platform brand.
 
 ## Scope and pricing rules to confirm
 
 - Keep role permissions and basic reporting available in every plan. Do not sell essential access controls as an upgrade.
-- The first three plans include one branch; توسّع includes two. Three or more branches use شراكة تقنية; buying custom development is not required.
-- Do not publish arbitrary staff-seat or member limits, or claim unlimited usage, before capacity and operating costs are reviewed.
+- The first three plans include one branch; توسّع includes two, with a combined 10,000-member limit. More members or three or more branches use partnership; custom development is not required.
+- Count every registered member, including old member records and current, frozen and expired subscriptions. Count once across subscriptions/branches; prospects before member registration are excluded. A status change alone does not change the count. Upgrade and grace terms are agreed without immediate shutdown. This commercial policy is not an automated quota/billing implementation.
+- These owner-authorized member bands are not technical capacity guarantees. Do not invent staff limits or unlimited usage. Venue businesses relying on visitor bookings need a quote based on their operating model.
 - VAT treatment is **pending confirmation**. The proposed amounts are not yet confirmed as VAT-inclusive or VAT-exclusive. Do not calculate or publish a final payable amount until the seller's tax treatment and pricing policy are confirmed.
 - Payment-provider charges, SMS/WhatsApp usage, hardware, implementation work and custom-development maintenance need explicit commercial terms. Do not promise their inclusion, absence or price without approval.
 - Setup, migration, training, refunds, renewal terms, service levels and response times remain pending commercial confirmation. No guarantee is implied by this document.

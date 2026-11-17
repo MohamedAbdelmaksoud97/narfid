@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { plans } from "@/lib/landing-content";
+import { PricingDetails } from "@/components/pricing-details";
 import { pageMetadata } from "@/lib/seo";
 import { PublicPage, ContactCta } from "@/components/public/public-page";
 import {
@@ -13,7 +14,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 const description =
-  "قارن باقات نرفد السنوية لإدارة المؤسسات الرياضية، من العضويات إلى المطبخ والمخزون والحجوزات والفروع، مع نطاق واضح قبل الاتفاق.";
+  "قارن باقات نرفد السنوية حسب الأعضاء المسجلين والفروع، مع مميزات التشغيل الأساسية في كل الباقات وإضافات اختيارية للمخزون والمطبخ.";
 export const metadata = pageMetadata(
   "باقات إدارة المؤسسات الرياضية السنوية",
   description,
@@ -28,14 +29,15 @@ export default function PricingPage() {
       kicker="باقات نرفد"
     >
       <p className="public-lead">
-        ابدأ بالخدمات التي تستخدمها فعليًا. الأسعار بالريال السعودي؛ القيمة
+        اختر الباقة حسب عدد الأعضاء المسجلين والفروع. الأسعار بالريال السعودي؛ القيمة
         الشهرية للمقارنة، والتعاقد والفوترة سنويًا. تُحدد
         الضرائب والتهيئة ونقل البيانات والدعم وأي نطاق إضافي في عرض السعر
         النهائي.
       </p>
       <p>
-        نقاط البيع وورديات الصندوق والفواتير والتحصيل والمرتجعات ضمن كل الباقات
-        للخدمات المتاحة فيها. أساس وتشغيل ومتكاملة لفرع واحد، وتوسّع لفرعين.
+        جميع الباقات تشمل مميزات التشغيل الأساسية، من العضويات والحجوزات إلى
+        نقاط البيع وورديات الصندوق والتحصيل. أساس ونمو واحتراف لفرع واحد، وتوسّع
+        لفرعين. المطبخ والوجبات والمنتجات والمخزون إضافات اختيارية بعرض مستقل.
       </p>
       <div className="public-pricing-grid">
         {plans.map((p) => (
@@ -46,10 +48,14 @@ export default function PricingPage() {
               </CardDescription>
               <CardTitle>{p.name}</CardTitle>
               {p.recommended && (
-                <Badge variant="secondary">مقترحة للتشغيل المتكامل</Badge>
+                <Badge variant="secondary">موصى بها للنمو</Badge>
               )}
             </CardHeader>
             <CardContent>
+              <p>
+                حتى {new Intl.NumberFormat("ar-SA").format(p.memberLimit)} عضو مسجّل
+                {p.branches === "فرعان" ? " إجمالًا عبر الفرعين" : ""}
+              </p>
               <p className="public-price">
                 {new Intl.NumberFormat("ar-SA").format(p.annual)}{" "}
                 <span>ر.س / سنة</span>
@@ -76,10 +82,12 @@ export default function PricingPage() {
           </Card>
         ))}
       </div>
+      <PricingDetails />
       <section className="public-plan-note">
         <h2>شراكة تقنية حسب الاحتياج</h2>
         <p>
-          لثلاثة فروع فأكثر أو احتياجات تقنية خاصة، نحدد نطاق المنصة والفروع
+          لتجاوز حدود الأعضاء في الباقات، أو لثلاثة فروع فأكثر أو احتياجات تقنية
+          خاصة، نحدد نطاق المنصة والفروع
           والتهيئة والدعم بعرض سعر مخصص. يمكن أن يقتصر الاتفاق على اشتراك
           المنصة للفروع؛ التطبيق الخاص والتكاملات والتطوير تُسعّر بشكل مستقل
           عند الحاجة.{" "}

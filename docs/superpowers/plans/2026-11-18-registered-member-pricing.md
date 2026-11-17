@@ -1,0 +1,13 @@
+# Registered-member pricing implementation plan
+
+**Approved design:** The owner authorized the new pricing structure, then required counting all registered members rather than only active subscriptions and explicitly authorized adjusting the bands accordingly. Adopt 1,000 / 5,000 / 10,000 registered members for أساس / نمو / احتراف, at SAR 1,800 / 3,300 / 4,200 annually for one branch. توسّع costs SAR 6,600 annually for two branches and 10,000 registered members combined, deduplicated across branches. These are commercial plan limits, not independently load-tested capacity claims. The initial 500 / 1,500 / 3,000 active-member proposal was never delivered; this final policy supersedes it.
+
+**Shared scope:** Every fixed plan includes memberships, freezes/renewals, attendance, bookings/classes/personal training, trainers, measurements, training plans, cash shifts/POS/invoicing/collections/refunds, employee schedules/attendance, permissions and reporting. توسّع adds central branch management and consolidated reports. Inventory and kitchen/meal workflows are optional, separately quoted at every tier. Apps, compatible gates and bespoke integrations remain separately scoped. Three or more branches, more than 10,000 registered members or custom technology needs use partnership; platform-only agreements remain possible. Venue visitor bookings are scoped by operating model.
+
+**Counting and upgrade:** Count all registered members, including old records and current, frozen and expired memberships, once per institution across subscriptions/branches; exclude prospects before member registration. Agree upgrade/grace terms without immediate shutdown. This website/CRM offer does not implement automated quotas or SaaS billing.
+
+**Approach:** Reuse current cards/responsive layout and shared public catalog. Centralize included features and policy/addon copy. Apply a guarded forward catalog migration preserving existing plan IDs, account links and historical contract snapshots; do not rewrite earlier migrations. This plan supersedes the earlier feature-tier design in `2026-11-18-pricing.md`.
+
+- [x] Update public catalog, member limits, shared policies/addons, home/pricing/partnership and solution copy.
+- [x] Update brand/commercial references and migrate/verify CRM catalog without changing historical relationships.
+- [x] Verify lint/types/builds, annual totals, limit/count wording, shared features, optional addons, responsive cards and correct demo selection. Independent review found no actionable defects. Next preview passed at six widths; Worker preview passed on desktop/mobile. Live board catalog verified. Delivery follows through normal push and automatic deployment verification.

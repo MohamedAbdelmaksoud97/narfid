@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MemberAppSection } from "@/components/member-app-section";
 import { IdentityServiceSection } from "@/components/identity-service-section";
+import { PricingDetails } from "@/components/pricing-details";
 import type { ReactNode } from "react";
 import { DemoButton, LandingDemo } from "@/components/landing-demo";
 import { LandingHeader } from "@/components/landing-header";
@@ -464,11 +465,11 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
               </div>
               <div className="pricing-intro">
                 <p>
-                  اشتراكات سنوية، بمميزات واضحة.
+                  باقات حسب عدد الأعضاء المسجلين والفروع.
                   <br />
                   اختر ما يناسب تشغيلك اليوم، واترك مساحة للغد.
                   <br />
-                  نقاط البيع وورديات الصندوق ضمن كل الباقات.
+                  جميع مميزات التشغيل الأساسية من أول باقة.
                 </p>
                 <Badge variant="outline">
                   <CalendarDays />
@@ -487,7 +488,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                 >
                   {plan.recommended && (
                     <div className="recommended-label">
-                      <Sparkles /> اختيارنا للنادي المتكامل
+                      <Sparkles /> اختيارنا للمؤسسة النامية
                     </div>
                   )}
                   <Card className="plan-card">
@@ -499,6 +500,10 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                       <CardDescription>{plan.description}</CardDescription>
                     </CardHeader>
                     <CardContent>
+                      <p className="plan-includes">
+                        حتى {money.format(plan.memberLimit)} عضو مسجّل
+                        {plan.branches === "فرعان" ? " إجمالًا عبر الفرعين" : ""}
+                      </p>
                       <div className="plan-price">
                         <strong dir="ltr">{money.format(plan.annual)}</strong>
                         <span>
@@ -543,6 +548,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
               الأسعار بالريال السعودي. الضرائب وتكاليف الأجهزة والتخصيص تُحدَّد في
               عرض السعر النهائي.
             </p>
+            <PricingDetails />
             <div className="enterprise-card">
               <div className="enterprise-brand">
                 <span className="enterprise-icon">
@@ -558,7 +564,8 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                   نبنيه معك.
                 </h3>
                 <p>
-                  لثلاثة فروع فأكثر أو احتياجات تقنية خاصة. نحدد نطاق المنصة
+                  لتجاوز حدود الأعضاء، أو لثلاثة فروع فأكثر أو احتياجات تقنية
+                  خاصة. نحدد نطاق المنصة
                   والفروع والتهيئة والدعم؛ ويمكن أن يقتصر الاتفاق على اشتراك
                   المنصة. التطبيق والتكامل والتطوير تُسعّر بشكل مستقل عند الحاجة.
                 </p>
