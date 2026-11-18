@@ -17,41 +17,23 @@ The current plan structure and amounts were approved by the owner on 18 November
 
 Gymtrics and IDS provide directly relevant Saudi-positioned public price anchors. Rally provides a narrower booking-focused comparison. The international vendors show alternative pricing structures rather than evidence of Saudi deployment or local integration support. No currency conversion has been applied.
 
-## Interpretation
+## Current owner-approved offer — 18 November 2026
 
-The sampled public offers use member bands, feature tiers, branch allowances and separately priced integrations. Their annual prices span a broad range, so the research does not establish a single market price or prove willingness to pay.
+The latest owner instruction is to follow the supplied competitor screenshot's pricing and presentation exactly, retaining Narfid plan names and using evidenced Narfid features. It supersedes earlier feature/addon and member-only proposals. The screenshot is an owner-provided commercial reference; its vendor/date/tax treatment are not independently established. Historical vendor research above retains its original date.
 
-The owner subsequently approved member-based bands instead of feature gates, then explicitly required counting all registered members rather than only active subscriptions and authorized revising the bands. The adopted bands are 1,000 / 5,000 / 10,000 registered members, with the existing annual amounts unchanged. These are commercial limits, not load-test evidence. All fixed plans include the same core operations; inventory and kitchen/meal workflows are optional addons quoted separately. توسّع covers two branches and 10,000 registered members combined. Higher counts, three or more branches or custom technology needs use partnership; custom development remains optional.
+| Plan | Displayed monthly SAR | Paid annually SAR | Registered members | Staff accounts |
+| --- | ---: | ---: | --- | --- |
+| أساس | 120 | 1,440 | 1,000 | 2 |
+| نمو | 275 | 3,300 | 5,000 | 5 |
+| احتراف | 350 | 4,200 | 10,000 | 10 |
+| توسّع | 550 | 6,600 | Unlimited | Unlimited |
 
-The previous 13 October proposal was SAR 3,600 / 7,200 / 12,000 annually. It was superseded on 18 November by SAR 1,800 / 3,300 / 4,200 / 6,600. The owner's competitor screenshot showed annual prices of SAR 1,440 / 3,300 / 4,200 / 6,600; its vendor, date, tax treatment and branch allowances were not established, so it is a supplied reference rather than a verified current offer. The new prices are an approved launch decision, not a validated cost or margin model. Review hosting, onboarding, data migration, support and maintenance costs and buyer feedback.
+Show monthly price prominently, annual total below; annual payment only. Highlight احتراف. Use aligned feature rows and grey strike-through for exclusions. The owner's later correction preserves existing button text, styling and behavior: home buttons open plan requests; pricing-page links go to /contact. Keep ابدأ مع أساس / اختر باقة نمو / اختر باقة احتراف / خطّط لتوسّعك. No instant checkout/activation claim.
 
-## Current launch plans — approved 18 November 2026
+All plans: memberships, renewals/freezes/attendance, unlimited invoices, POS/cash shifts, collection/refunds, services/offers, permissions, revenue/expenses and reports. From نمو: online service requests, trainers, measurements, training plans, employee schedules/attendance and stock. From احتراف: kitchen/meals. توسّع: bookings plus central management of two branches. Do not copy unsupported WhatsApp, Saudi e-invoicing-compliance or bundled-site claims from the screenshot. The old optional-stock/kitchen model is superseded.
 
-| Arabic name | Annual amount | Monthly equivalent, paid annually | Scope |
-| --- | ---: | ---: | --- |
-| **أساس** | **SAR 1,800** | SAR 150 | One branch, up to 1,000 registered members; all core operations below. |
-| **نمو** | **SAR 3,300** | SAR 275 | One branch, up to 5,000 registered members; same core operations. Recommended for growing institutions, without a most-purchased claim. |
-| **احتراف** | **SAR 4,200** | SAR 350 | One branch, up to 10,000 registered members; same core operations. |
-| **توسّع** | **SAR 6,600** | SAR 550 | Two branches, up to 10,000 registered members combined; core operations with central management, branch permissions and consolidated reporting. |
-| **شراكة تقنية** | **By scoped quote** | Not applicable | Higher member counts, three or more branches, or custom technology needs at any branch count. Platform-only agreements remain possible; apps, compatible gates and integrations/development are optional, separately quoted. |
+First three plans include one branch; توسّع includes two with unlimited member/staff allowances. Partnership handles three or more branches or bespoke needs and may be platform-only. More than 10,000 members alone no longer requires partnership. Count all registered members (including old/frozen/expired) once across subscriptions/branches; exclude prospects before member registration. Staff accounts exclude member/guardian accounts.
 
-Core operations in every fixed plan: memberships, renewals/freezes, attendance, court/class/personal-training bookings, trainers, measurements, training plans, POS/cash shifts/invoices/collection/refunds, employee schedules/attendance, permissions and reports. Retail inventory and kitchen/meal subscriptions/redemption are optional at every tier, with prices determined after scoping setup and service. Do not invent addon prices or claim they are bundled.
+These are authorized commercial allowances, not load-test results, automatic quota enforcement or SaaS billing implementation. Taxes, setup, migration, training/support, renewal/refunds and third-party/hardware/maintenance costs require explicit quote terms. No VAT inclusion/exclusion or regulatory compliance is inferred. Custom apps and integrations remain separately scoped. Existing contract snapshots and account links must be preserved when updating the CRM catalog.
 
-The existing system's capabilities do not, by themselves, establish production-ready SaaS tenancy, subscription billing, provisioning or support commitments. Go Fitness is the first club client, not the platform brand.
-
-## Scope and pricing rules to confirm
-
-- Keep role permissions and basic reporting available in every plan. Do not sell essential access controls as an upgrade.
-- The first three plans include one branch; توسّع includes two, with a combined 10,000-member limit. More members or three or more branches use partnership; custom development is not required.
-- Count every registered member, including old member records and current, frozen and expired subscriptions. Count once across subscriptions/branches; prospects before member registration are excluded. A status change alone does not change the count. Upgrade and grace terms are agreed without immediate shutdown. This commercial policy is not an automated quota/billing implementation.
-- These owner-authorized member bands are not technical capacity guarantees. Do not invent staff limits or unlimited usage. Venue businesses relying on visitor bookings need a quote based on their operating model.
-- VAT treatment is **pending confirmation**. The proposed amounts are not yet confirmed as VAT-inclusive or VAT-exclusive. Do not calculate or publish a final payable amount until the seller's tax treatment and pricing policy are confirmed.
-- Payment-provider charges, SMS/WhatsApp usage, hardware, implementation work and custom-development maintenance need explicit commercial terms. Do not promise their inclusion, absence or price without approval.
-- Setup, migration, training, refunds, renewal terms, service levels and response times remain pending commercial confirmation. No guarantee is implied by this document.
-- Compliance, Saudi invoicing, security certification, gate integration and native mobile-app claims require implementation evidence and appropriate review. Competitor marketing is not evidence that Narfid delivers them.
-
-## Landing-page presentation
-
-Show the annual amount first: **«1,800 ر.س / سنويًا»**. The secondary amount should read **«ما يعادل 150 ر.س شهريًا، بفوترة سنوية»**. Do not add a monthly-payment toggle while the commercial offer is annual-only.
-
-Present the approved prices with their annual billing period and a clear final-quote note for taxes and service terms. Use a demo or plan-request action such as **«احجز عرضًا توضيحيًا»** or **«ناقش هذه الباقة»** until purchase, billing and provisioning are implemented. Custom mobile and gate work should be presented as scoped services rather than already included standard features.
+Remove the extra addon/counting section between the cards and enterprise section; keep counting explanations in FAQs. Use the same comparison on the home and pricing page.

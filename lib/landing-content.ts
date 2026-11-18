@@ -5,6 +5,17 @@ import {
   GitBranch,
   Package,
   UsersRound,
+  FileText,
+  CreditCard,
+  ClipboardCheck,
+  Tags,
+  ShieldCheck,
+  TrendingUp,
+  Dumbbell,
+  Wallet,
+  Ruler,
+  ClipboardList,
+  BriefcaseBusiness,
 } from "lucide-react";
 
 export const salesPhone = "201066471110";
@@ -77,15 +88,25 @@ export const features = [
   },
 ] as const;
 
-export const corePlanFeatures = [
-  "الأعضاء والاشتراكات والتجديد والتجميد",
-  "الحضور وحجوزات الملاعب والحصص",
-  "التدريب الشخصي والمدربون والقياسات",
-  "الخطط والبرامج التدريبية",
-  "نقاط البيع وورديات الصندوق",
-  "الفواتير والتحصيل والمرتجعات",
-  "جداول ودوام الموظفين",
-  "صلاحيات الفريق والتقارير",
+export const pricingFeatures = [
+  { label: "فواتير غير محدودة", icon: FileText, from: 0 },
+  { label: "نقاط البيع وورديات الصندوق", icon: CreditCard, from: 0 },
+  { label: "طلبات الخدمات أونلاين", icon: ClipboardCheck, from: 1 },
+  { label: "إدارة الأعضاء والاشتراكات", icon: UsersRound, from: 0 },
+  { label: "التجديد والتجميد والحضور", icon: CalendarDays, from: 0 },
+  { label: "إدارة الخدمات والعروض", icon: Tags, from: 0 },
+  { label: "صلاحيات المستخدمين", icon: ShieldCheck, from: 0 },
+  { label: "الإيرادات والتحصيل والمرتجعات", icon: TrendingUp, from: 0 },
+  { label: "إدارة المدربين", icon: Dumbbell, from: 1 },
+  { label: "إدارة المصروفات", icon: Wallet, from: 0 },
+  { label: "إدارة القياسات", icon: Ruler, from: 1 },
+  { label: "البرامج التدريبية", icon: ClipboardList, from: 1 },
+  { label: "التقارير", icon: ChartNoAxesCombined, from: 0 },
+  { label: "جداول ودوام الموظفين", icon: BriefcaseBusiness, from: 1 },
+  { label: "المنتجات والمخزون", icon: Package, from: 1 },
+  { label: "المطبخ واشتراكات الوجبات", icon: ChefHat, from: 2 },
+  { label: "حجوزات الملاعب والحصص والتدريب", icon: CalendarDays, from: 3 },
+  { label: "إدارة مركزية لفرعين", icon: GitBranch, from: 3 },
 ] as const;
 
 export const memberPolicy = {
@@ -97,33 +118,18 @@ export const memberPolicy = {
     "للملاعب التي تعتمد على حجوزات الزوار، نحدد عرضًا يناسب طريقة التشغيل؛ عدد العضويات وحده لا يكفي لاختيار الباقة.",
 } as const;
 
-export const planAddons = [
-  {
-    name: "المنتجات والمخزون",
-    description: "مخزون المنتجات والاستلام والبيع والمرتجعات وحدود إعادة الطلب.",
-  },
-  {
-    name: "المطبخ والوجبات",
-    description: "القوائم اليومية والتحضير واشتراكات الوجبات واستحقاقاتها وصرفها.",
-  },
-  {
-    name: "خدمات تقنية خاصة",
-    description: "تطبيق باسم المؤسسة، بوابات دخول متوافقة، تكاملات أو تطوير مخصص.",
-  },
-] as const;
-
 export const plans = [
   {
     name: "أساس",
     english: "ESSENTIAL",
     description: "بداية مرتّبة لناديك",
-    annual: 1800,
-    monthly: 150,
+    annual: 1440,
+    monthly: 120,
     memberLimit: 1000,
+    userLimit: 2,
     branches: "فرع واحد",
     recommended: false,
-    intro: "جميع مميزات التشغيل الأساسية",
-    features: corePlanFeatures,
+    features: pricingFeatures.filter((feature) => feature.from === 0).map((feature) => feature.label),
     cta: "ابدأ مع أساس",
   },
   {
@@ -133,10 +139,10 @@ export const plans = [
     annual: 3300,
     monthly: 275,
     memberLimit: 5000,
+    userLimit: 5,
     branches: "فرع واحد",
-    recommended: true,
-    intro: "جميع مميزات التشغيل الأساسية",
-    features: corePlanFeatures,
+    recommended: false,
+    features: pricingFeatures.filter((feature) => feature.from <= 1).map((feature) => feature.label),
     cta: "اختر باقة نمو",
   },
   {
@@ -146,10 +152,10 @@ export const plans = [
     annual: 4200,
     monthly: 350,
     memberLimit: 10000,
+    userLimit: 10,
     branches: "فرع واحد",
-    recommended: false,
-    intro: "جميع مميزات التشغيل الأساسية",
-    features: corePlanFeatures,
+    recommended: true,
+    features: pricingFeatures.filter((feature) => feature.from <= 2).map((feature) => feature.label),
     cta: "اختر باقة احتراف",
   },
   {
@@ -158,16 +164,11 @@ export const plans = [
     description: "منظومة تنمو مع طموحك",
     annual: 6600,
     monthly: 550,
-    memberLimit: 10000,
+    memberLimit: null,
+    userLimit: null,
     branches: "فرعان",
     recommended: false,
-    intro: "التشغيل الأساسي مع إدارة فرعين",
-    features: [
-      ...corePlanFeatures,
-      "إدارة مركزية للفروع",
-      "صلاحيات وتشغيل حسب الفرع",
-      "تقارير مجمّعة لمتابعة الأداء",
-    ],
+    features: pricingFeatures.map((feature) => feature.label),
     cta: "خطّط لتوسّعك",
   },
 ] as const;
@@ -191,12 +192,17 @@ export const faqs = [
   {
     question: "هل يمكنني ترقية الباقة أو إضافة فروع؟",
     answer:
-      "نعم، نراجع احتياجك وقيمة الترقية ومدتها في عرض السعر. أساس حتى ١٬٠٠٠ عضو مسجّل، ونمو حتى ٥٬٠٠٠، واحتراف حتى ١٠٬٠٠٠ لفرع واحد. توسّع لفرعين وحتى ١٠٬٠٠٠ عضو مسجّل إجمالًا. لتجاوز هذه الحدود أو لثلاثة فروع فأكثر نحدد شراكة تقنية بعرض سعر مخصص دون اشتراط تطوير خاص.",
+      "نعم. أساس تشمل ١٬٠٠٠ عضو ومستخدمين اثنين، ونمو ٥٬٠٠٠ عضو و٥ مستخدمين، واحتراف ١٠٬٠٠٠ عضو و١٠ مستخدمين؛ هذه الباقات لفرع واحد. توسّع بعدد أعضاء ومستخدمين غير محدود وتشمل إدارة فرعين. لثلاثة فروع فأكثر نحدد شراكة تقنية بعرض سعر مخصص دون اشتراط تطوير خاص.",
   },
   {
     question: "هل نقاط البيع وورديات الصندوق متاحة في كل الباقات؟",
     answer:
-      "نعم، جميع الباقات تشمل مميزات التشغيل الأساسية: العضويات والحضور والحجوزات والتدريب والمدربين والقياسات والخطط التدريبية، ونقاط البيع وورديات الصندوق والفواتير والتحصيل والمرتجعات، وجداول ودوام الموظفين والصلاحيات والتقارير. المنتجات والمخزون والمطبخ والوجبات إضافات اختيارية بعرض مستقل.",
+      "نعم، نقاط البيع وورديات الصندوق والفواتير والتحصيل والمرتجعات ضمن كل الباقات. المدربون والقياسات والبرامج التدريبية وجداول الموظفين والمنتجات والمخزون من نمو، والمطبخ والوجبات من احتراف، والحجوزات وإدارة الفرعين في توسّع. لا تعني الفواتير ربطًا مثبتًا مع فاتورة أو هيئة الزكاة والضريبة والجمارك.",
+  },
+  {
+    question: "من المقصود بالمستخدمين في الباقة؟",
+    answer:
+      "هم حسابات فريق العمل التي تدخل إلى لوحة إدارة المؤسسة، وليس حسابات الأعضاء. تشمل أساس مستخدمين اثنين، ونمو ٥، واحتراف ١٠، وتوسّع مستخدمين غير محدودين.",
   },
   {
     question: "كيف يُحسب عدد الأعضاء المسجلين؟",

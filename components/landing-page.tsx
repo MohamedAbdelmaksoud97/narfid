@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { MemberAppSection } from "@/components/member-app-section";
 import { IdentityServiceSection } from "@/components/identity-service-section";
-import { PricingDetails } from "@/components/pricing-details";
+import { PricingComparison } from "@/components/pricing-comparison";
 import type { ReactNode } from "react";
 import { DemoButton, LandingDemo } from "@/components/landing-demo";
 import { LandingHeader } from "@/components/landing-header";
@@ -24,7 +24,6 @@ import {
   ReceiptText,
   ShieldCheck,
   Smartphone,
-  Sparkles,
   UsersRound,
 } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
@@ -49,11 +48,9 @@ import {
   faqs,
   features,
   navigation,
-  plans,
   whatsappUrl,
 } from "@/lib/landing-content";
 
-const money = new Intl.NumberFormat("en-US");
 
 function Brand({ symbol = false }: { symbol?: boolean }) {
   return (
@@ -465,11 +462,11 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
               </div>
               <div className="pricing-intro">
                 <p>
-                  باقات حسب عدد الأعضاء المسجلين والفروع.
+                  باقات حسب عدد الأعضاء والمستخدمين.
                   <br />
                   اختر ما يناسب تشغيلك اليوم، واترك مساحة للغد.
                   <br />
-                  جميع مميزات التشغيل الأساسية من أول باقة.
+                  قارن المميزات واختر الباقة المناسبة.
                 </p>
                 <Badge variant="outline">
                   <CalendarDays />
@@ -477,78 +474,11 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                 </Badge>
               </div>
             </div>
-            <div className="pricing-grid">
-              {plans.map((plan) => (
-                <div
-                  key={plan.name}
-                  className={cn(
-                    "plan-wrapper",
-                    plan.recommended && "plan-recommended",
-                  )}
-                >
-                  {plan.recommended && (
-                    <div className="recommended-label">
-                      <Sparkles /> اختيارنا للمؤسسة النامية
-                    </div>
-                  )}
-                  <Card className="plan-card">
-                    <CardHeader>
-                      <div className="plan-top">
-                        <CardTitle>{plan.name}</CardTitle>
-                        <span dir="ltr">{plan.english}</span>
-                      </div>
-                      <CardDescription>{plan.description}</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="plan-includes">
-                        حتى {money.format(plan.memberLimit)} عضو مسجّل
-                        {plan.branches === "فرعان" ? " إجمالًا عبر الفرعين" : ""}
-                      </p>
-                      <div className="plan-price">
-                        <strong dir="ltr">{money.format(plan.annual)}</strong>
-                        <span>
-                          ر.س <small>/ سنويًا</small>
-                        </span>
-                      </div>
-                      <p className="monthly-equivalent">
-                        ما يعادل {money.format(plan.monthly)} ر.س شهريًا، بفوترة
-                        سنوية
-                      </p>
-                      <span className="plan-branch">
-                        <GitBranch />
-                        {plan.branches}
-                      </span>
-                      <Separator />
-                      <p className="plan-includes">{plan.intro}</p>
-                      <ul>
-                        {plan.features.map((feature) => (
-                          <li key={feature}>
-                            <Check />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                    <CardFooter>
-                      <DemoButton
-                        size="marketing"
-                        variant={plan.recommended ? "default" : "outline"}
-                        className="w-full"
-                        plan={plan.name}
-                      >
-                        {plan.cta}
-                        <ArrowUpLeft data-icon="inline-end" />
-                      </DemoButton>
-                    </CardFooter>
-                  </Card>
-                </div>
-              ))}
-            </div>
+            <PricingComparison />
             <p className="pricing-note">
               الأسعار بالريال السعودي. الضرائب وتكاليف الأجهزة والتخصيص تُحدَّد في
               عرض السعر النهائي.
             </p>
-            <PricingDetails />
             <div className="enterprise-card">
               <div className="enterprise-brand">
                 <span className="enterprise-icon">
@@ -564,7 +494,7 @@ export function LandingPage({ articles }: { articles: ReactNode }) {
                   نبنيه معك.
                 </h3>
                 <p>
-                  لتجاوز حدود الأعضاء، أو لثلاثة فروع فأكثر أو احتياجات تقنية
+                  لثلاثة فروع فأكثر أو احتياجات تقنية
                   خاصة. نحدد نطاق المنصة
                   والفروع والتهيئة والدعم؛ ويمكن أن يقتصر الاتفاق على اشتراك
                   المنصة. التطبيق والتكامل والتطوير تُسعّر بشكل مستقل عند الحاجة.
