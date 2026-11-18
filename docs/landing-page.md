@@ -27,13 +27,17 @@ The user supplied sales WhatsApp number `+201066471110`. Visitors enter their na
 
 The form validates required names, preserves details when editing the reviewed request and supports copying its text. It does not persist visitor data.
 
-## Current commercial offer
+## Commercial proposal
 
-The latest 18 November owner instruction follows the supplied screenshot: أساس 120/month (1,440 annually), 1,000 members/2 staff; نمو 275 (3,300), 5,000/5; احتراف 350 (4,200), 10,000/10; توسّع 550 (6,600), unlimited members/staff. Keep names; highlight the third plan. Show monthly first and annual total below; payment is annual. Use shared comparison cards with aligned inclusion/exclusion rows. The owner's subsequent correction preserves all existing button labels/styles/behavior: home buttons open plan requests and pricing-page links go to /contact.
+- أساس: SAR 1,800/year, one branch; memberships, attendance, POS, cash shifts, invoices, collection/refunds, permissions and basic reports.
+- تشغيل: SAR 3,300/year, one branch; adds bookings, trainers, measurements, training plans and employee schedules/attendance.
+- متكاملة: SAR 4,200/year, one branch; adds retail inventory, kitchen and meal subscriptions. Recommended for complete operations.
+- توسّع: SAR 6,600/year, two branches; complete scope with central branch management and reporting.
+- شراكة تقنية: a scoped quote for three or more branches or custom technology needs; platform-only agreements are supported and bespoke work is optional, separately priced.
 
-Narfid features replace unsupported competitor claims. POS/cash shifts/invoices/member management/financial records/permissions/reports are core; trainers/measurements/plans/workforce/stock/online requests begin at نمو; kitchen/meals at احتراف; bookings and two-branch operations in توسّع. Earlier optional-addon/common-core proposals are superseded. The extra addon/counting section before the enterprise section is removed, and member-counting policy stays in FAQs. The first three plans retain one branch; partnership handles three or more branches or custom needs, not a member ceiling on توسّع. Count all registered members, staff allowances exclude member accounts. Taxes and service terms are scoped in the final quote.
+The owner approved this structure and these amounts on 18 November 2026. Taxes, migration, hardware, customization, maintenance and service terms require a final quotation. Monthly equivalents of SAR 150/275/350/550 are for comparison; billing is annual. The existing cards are retained in four desktop columns, two tablet columns and one mobile column. The public catalog and private CRM catalog are updated together; existing contract snapshots and account links are preserved.
 
-See market-and-pricing.md for dated benchmarks and current commercial rules, and the platform audits for product evidence.
+See `market-and-pricing.md` for primary vendor sources and the platform audits for implementation evidence and SaaS gaps.
 
 ## Running locally
 
@@ -44,10 +48,6 @@ The live domain is `https://www.narfid.com` (launched 9 November 2026). Producti
 ## Verification boundary
 
 Pricing verification on 18 November 2026: Next production build, TypeScript, ESLint and six CRM unit checks; Playwright rendering of the home and pricing pages at 320, 390, 768, 1024, 1200 and 1440 pixels with no horizontal overflow or page errors. All four home-page plan buttons select the correct demo-request option. The partnership page supports platform-only scope. The private catalog was verified against the public prices with existing plan IDs, account links and contract snapshots unchanged. The vinext/Cloudflare production build also passed, including public prerender verification; Worker preview was checked at 1440 and 390 pixels under the canonical host, including the four plan buttons.
-
-Registered-member revision verification on 18 November: the same build/lint/type/CRM and responsive checks passed after updating the bands to 1,000 / 5,000 / 10,000 and 10,000 combined across two branches. Browser assertions verify shared core features, optional inventory/kitchen addons, correct renamed demo selections and explicit inclusion of old/frozen/expired members. The live chairman view confirms the updated catalog. CRM migration retains IDs and leaves account links and historical contract snapshots unchanged. Independent review found no actionable defects.
-
-Reference-alignment revision: monthly-first prices and annual totals, all member/staff allowances (including unlimited final tier), third-plan highlighting, supported feature gates and struck exclusions were verified in both public comparison renderings. Original home CTA text/icons/actions and pricing-page /contact links are preserved. The added addon/counting section was removed. Playwright passed at 320/390/768/1024/1200/1440 pixels, checking aligned desktop rows and no overflow; Worker preview passed at 1440/390. Next/vinext production builds, TypeScript, lint and six CRM checks passed. Live board catalog was verified without editing records; the migration preserves IDs/account links/contract snapshots. A review finding about visible branch scope was fixed with a comparison row.
 
 ## Next stage
 

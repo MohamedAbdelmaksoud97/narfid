@@ -1,9 +1,19 @@
 import Link from "next/link";
-import { PricingComparison } from "@/components/pricing-comparison";
+import { plans } from "@/lib/landing-content";
 import { pageMetadata } from "@/lib/seo";
 import { PublicPage, ContactCta } from "@/components/public/public-page";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 const description =
-  "قارن باقات نرفد: أساس ونمو واحتراف وتوسّع، حسب الأعضاء والمستخدمين والمميزات، بأسعار شهرية معلنة ودفع سنوي.";
+  "قارن باقات نرفد السنوية لإدارة المؤسسات الرياضية، من العضويات إلى المطبخ والمخزون والحجوزات والفروع، مع نطاق واضح قبل الاتفاق.";
 export const metadata = pageMetadata(
   "باقات إدارة المؤسسات الرياضية السنوية",
   description,
@@ -18,17 +28,58 @@ export default function PricingPage() {
       kicker="باقات نرفد"
     >
       <p className="public-lead">
-        اختر الباقة حسب عدد الأعضاء والمستخدمين والمميزات. الأسعار بالريال السعودي؛ القيمة
+        ابدأ بالخدمات التي تستخدمها فعليًا. الأسعار بالريال السعودي؛ القيمة
         الشهرية للمقارنة، والتعاقد والفوترة سنويًا. تُحدد
         الضرائب والتهيئة ونقل البيانات والدعم وأي نطاق إضافي في عرض السعر
         النهائي.
       </p>
-      <PricingComparison contactLinks />
+      <p>
+        نقاط البيع وورديات الصندوق والفواتير والتحصيل والمرتجعات ضمن كل الباقات
+        للخدمات المتاحة فيها. أساس وتشغيل ومتكاملة لفرع واحد، وتوسّع لفرعين.
+      </p>
+      <div className="public-pricing-grid">
+        {plans.map((p) => (
+          <Card key={p.name}>
+            <CardHeader>
+              <CardDescription>
+                {p.description} · {p.branches}
+              </CardDescription>
+              <CardTitle>{p.name}</CardTitle>
+              {p.recommended && (
+                <Badge variant="secondary">مقترحة للتشغيل المتكامل</Badge>
+              )}
+            </CardHeader>
+            <CardContent>
+              <p className="public-price">
+                {new Intl.NumberFormat("ar-SA").format(p.annual)}{" "}
+                <span>ر.س / سنة</span>
+              </p>
+              <p className="text-muted-foreground">
+                ما يعادل {p.monthly} ر.س شهريًا، بفوترة سنوية.
+              </p>
+              <h3>{p.intro}</h3>
+              <ul>
+                {p.features.map((f) => (
+                  <li key={f}>{f}</li>
+                ))}
+              </ul>
+            </CardContent>
+            <CardFooter>
+              <Link
+                href="/contact"
+                data-analytics="demo_request_start"
+                className={buttonVariants({ variant: "outline" })}
+              >
+                {p.cta}
+              </Link>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
       <section className="public-plan-note">
         <h2>شراكة تقنية حسب الاحتياج</h2>
         <p>
-          لثلاثة فروع فأكثر أو احتياجات تقنية
-          خاصة، نحدد نطاق المنصة والفروع
+          لثلاثة فروع فأكثر أو احتياجات تقنية خاصة، نحدد نطاق المنصة والفروع
           والتهيئة والدعم بعرض سعر مخصص. يمكن أن يقتصر الاتفاق على اشتراك
           المنصة للفروع؛ التطبيق الخاص والتكاملات والتطوير تُسعّر بشكل مستقل
           عند الحاجة.{" "}
