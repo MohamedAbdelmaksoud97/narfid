@@ -1,4 +1,4 @@
-# Backlog — 2026-11-17
+# Backlog — 2026-11-19
 
 Ordered by expected buyer value per effort, using qualitative evidence; signups/hour cannot yet be estimated from this small baseline. No numeric search volume or ranking assumptions.
 
@@ -21,12 +21,20 @@ The owner-confirmed Saudi Keyword Planner export now supplies monthly estimates 
 | Done daily, 2026-11-14 | إدارة مخزون منتجات النادي / تصحيح طلب وجبة → `/solutions/kitchen-inventory` | Link damaged-stock and meal-order-correction procedures with a team review scenario | Both are published and had library-only inbound links in the native-DNS crawl. Both already had depth two; contextual discovery improves without a click-depth claim. Existing published-only renderer retained. |
 | Done daily, 2026-11-15 | تغيير مدرب الأكاديمية / نقل لاعب بين المجموعات → `/solutions/bookings` | Link two published academy procedures from the bookings solution | Both guides had a single inbound link from library page 2. URL Inspection showed both were already indexed. The new links shorten the path from home from three clicks to two. |
 | Done daily, 2026-11-16 | الرد على استفسارات الاشتراكات / إدارة خزائن الأعضاء → `/solutions/memberships` | Link two existing reception guides from the membership solution | Inquiry and locker guides had only library links at depths four and three. The membership solution gives both a two-click path from home. |
-| P2 | تدريب الاستقبال / خدمة الأعضاء → existing articles | Review the remaining library-only guides for relevant contextual links | Referrals, off-peak offers and parent progress updates each have one library link. Member deduplication is linked from the library root and its page-one variant. |
+| Done weekly, 2026-11-19 | إحالات الأعضاء / تكرار الملف / تقرير ولي الأمر / عروض خارج الذروة → existing articles | Added four relevant links from memberships and bookings; existing keyword owners retained | Three guides were depth three; deduplication already depth two. Published-only renderer retained. Thirteen contextual links shipped November 13–19. |
 | Done recheck, 2026-11-15 | مقالات إدارة المؤسسات الرياضية → `/articles?page=2`–`5` | Verify pagination metadata and server HTML | Pages 2–5 have numbered titles and self-canonicals. `?page=1` canonicalizes to the library root. [Google's pagination guidance](https://developers.google.com/search/docs/specialty/ecommerce/pagination-and-incremental-page-loading#use-urls-correctly) allows the shared description. URL Inspection reports the library root discovered, awaiting indexing. |
 | P2 | برنامج إدارة نادي رياضي متعدد الخدمات → `/` | Reassess title/intro when non-brand query data arrives | November 17: the only reported global query was `narfid`. Search Console returned no Saudi query rows. |
 | P2 | مقالات إدارة المؤسسات الرياضية → `/articles` | Consider CollectionPage/ItemList JSON-LD for the library, only if useful to its existing semantics | Library has metadata/canonical and server-rendered content but no JSON-LD. This is an enhancement, not a proven indexing error. |
 | P2 weekly | Relevant terms in positions 8–20 | Compare real query rows with three current result pages and improve the owning page | The only available query on November 15 was branded at global average position 1.86. Review due 2026-11-19. |
 | P3 | AI category questions → `ai-prompts.md` | Obtain actual assistant-answer/citation samples through an authorized connected provider | All 25 questions are unchecked. Web snippets do not substitute for assistant answers. |
 | P3 monthly | Comparisons, calculators and link prospects | Reuse existing intent research; build only a distinctive page/tool and draft named outreach after verifying demand and sources | Map due 2026-12-12. No comparison matrix, calculator, directory submission or mail generated merely to fill a quota. |
+
+## Current follow-up
+
+- P1 — Recheck the 13 non-PASS URLs in [the complete November 19 inspection](reports/2026-11-19-metrics.json), especially `/articles`, `/contact`, branches and the annual-cost guide. They return 200 with intended canonicals and inbound links. No technical block found; no content-quality cause established.
+- P1 — Investigate consented GA4 page-view duplication without sending contact events. Current weekly rows unavailable; previous demo starts are not qualified requests. Owner confirmed Enhanced measurement Off.
+- P2 — Only branded `narfid` at global position 1.895 disclosed on November 19; no eligible position 8–20 query. Review November 26. Inspect IDS sitemap additions before considering any counter-page; query gains/publication dates are unverified.
+- P3 — Actual answers/citations need an authorized answer provider; all 25 prompts remain unverified. Ahrefs would add backlink/organic difficulty evidence. Retain available Keyword Planner volumes.
+- Next weekly November 26; monthly map rebuild December 12.
 
 No page deleted, redirected, unpublished, or repriced. The initial five inspected commercial search results are existing category product pages; this run uses the already-published operational examples instead of creating overlapping content.

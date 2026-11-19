@@ -1,6 +1,17 @@
 # SEO autopilot — narfid
 
-Last daily run: 2026-11-17. Setup baseline: 2026-11-12.
+Last daily run: 2026-11-19. Last weekly run: 2026-11-19. Setup baseline: 2026-11-12.
+
+## Daily and weekly update — 2026-11-19
+
+- Added four published-guide links from memberships/bookings: referrals, member deduplication, parent progress updates and off-peak offers. All four previously had only library inbound links. Three paths shorten from depth three to two; deduplication already had depth two. Thirteen contextual links shipped November 13–19 (2+2+2+2+1+4). No article created or republished.
+- Fresh crawl: 72 sitemap URLs, 77 navigable pages, all first-request 200, intended canonicals/indexability and valid existing JSON-LD. Checked 78 internal targets and 291 fragments without failures; request p95 491 ms, not CWV. [Evidence](reports/2026-11-19-health.json).
+- Google stored inspections cover every sitemap URL: 59 PASS and 13 NEUTRAL (unknown/discovered), no failed requests. No technical blocking, wrong canonical or orphaning found; delayed indexing has no established cause. [Evidence](reports/2026-11-19-metrics.json).
+- GSC October 22–November 18: global 59 impressions/17 clicks, Saudi 15/0; final daily rows through November 17. Only disclosed query is branded `narfid` (global position 1.895); none in positions 8–20. Returned rows November 11–17: global 56 impressions/16 clicks, weighted position 5.61, versus 3/1 and 6.67 for November 4–10 (only two returned post-launch days). Saudi 14/0 versus 1/0, positions 11 versus 7. Small/prelaunch comparison does not establish an SEO effect.
+- GA4 November 12–18 returned no rows; November 5–11 returned 2 users/7 sessions/43 views/4 demo starts. Saudi weeks and qualified requests unavailable. Rolling 28-day sessions are Direct. [Weekly aggregates](reports/2026-11-19-weekly-analytics.json).
+- Reviewed the four pricing commits since the last run, including final restore `90fffb2`. Live pricing and all five solutions agree with the current approved catalog; corrected outdated SEO-context prices below. [Facts](reports/2026-11-19-facts.json).
+- Competitor sitemaps: Gymtrics/AskFlow unchanged; IDS adds 14 URLs versus November 12. This proves URL changes, not publication dates or ranking gains. [Snapshots](competitors/2026-11-19/). All 25 AI prompts remain unverified without a connected actual answer/citation provider. Ahrefs/backlink difficulty remains unavailable.
+- Next weekly November 26; full map rebuild remains December 12 (last rebuild November 12). No recurring automation created.
 
 ## Keyword Planner follow-up — 2026-11-17
 
@@ -68,8 +79,8 @@ Ship mode: commit and normal push to the current branch's upstream after checks,
 | --- | --- |
 | Buyers: owners and managers of Saudi sports institutions; reception, finance, coaches and operations staff influence adoption | `.agents/skills/narfid/SKILL.md`, `lib/brand.ts` |
 | Memberships, renewals, freezes, attendance; bookings for courts/classes/personal training; invoices and collections; POS shifts, retail stock and meals; branches and permissions | `lib/solutions.ts`, `lib/landing-content.ts`, `docs/platform-backend-audit.md` |
-| أساس: SAR 3,600/year, one branch; تشغيل: SAR 7,200/year, one branch; توسّع: SAR 12,000/year, up to three branches | `lib/landing-content.ts`; [live pricing](https://www.narfid.com/pricing), checked 2026-11-12 |
-| Prices are launch proposals, annual billing; monthly figures are equivalents. Tax, setup, migration, training/support and extra scope require an agreed quote | same live pricing page and `app/pricing/page.tsx` |
+| أساس: SAR 1,800/year; تشغيل: SAR 3,300/year; متكاملة: SAR 4,200/year — each one branch. توسّع: SAR 6,600/year for two branches. Three or more branches/custom scope: technology-partnership quote | `lib/landing-content.ts`; [live pricing](https://www.narfid.com/pricing), checked 2026-11-19; [fact check](reports/2026-11-19-facts.json) |
+| Owner-approved annual catalog (November 18); monthly figures are equivalents. POS/cash shifts and financial records are in every plan for its services; bookings/training start at تشغيل, kitchen/retail inventory at متكاملة. Tax, setup, migration, training/support and extra scope require an agreed quote | live pricing, `lib/landing-content.ts`, `lib/solutions.ts`, `app/pricing/page.tsx` |
 | Custom applications, hardware/integrations and technology partnership are separately scoped; no universal device or automatic payment integration claim | `lib/solutions.ts`, `app/technology-partnership/page.tsx` |
 | Invoice/VAT calculations do not establish ZATCA integration; meal quantities do not establish recipe/ingredient costing | `docs/platform-backend-audit.md` §§ Finance, Kitchen |
 | Optional visual identity service has a separate quote | `docs/visual-identity.ar.md`, `lib/landing-content.ts` FAQs |

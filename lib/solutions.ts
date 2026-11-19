@@ -174,6 +174,9 @@ export const solutionOperatingGuides: Record<string, { question: string; text: s
       "gym-reception-attendance-procedure",
       "gym-inquiry-call-checklist",
       "gym-locker-assignment-log",
+      "gym-referral-program-tracking",
+      "gym-member-record-deduplication",
+      "academy-parent-progress-update",
       "academy-midterm-enrollment",
       "gym-first-week-member-onboarding",
       "annual-club-software-cost",
@@ -191,6 +194,7 @@ export const solutionOperatingGuides: Record<string, { question: string; text: s
       "academy-substitute-coach-handover",
       "academy-player-group-transfer",
       "court-maintenance-booking-disruption",
+      "gym-off-peak-offer-evaluation",
     ],
   },
   "point-of-sale": {

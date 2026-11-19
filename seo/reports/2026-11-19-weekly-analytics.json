@@ -1,0 +1,170 @@
+{
+  "checkedAt": "2026-11-19T11:31:41.857Z",
+  "source": "Existing authorized read-only Google connection; GA4 weekly aggregates, public hostname and path filters",
+  "timeZone": "Asia/Riyadh",
+  "currentPeriod": {
+    "startDate": "2026-11-12",
+    "endDate": "2026-11-18"
+  },
+  "previousPeriod": {
+    "startDate": "2026-11-05",
+    "endDate": "2026-11-11"
+  },
+  "countries": {
+    "all": {
+      "reports": [
+        {
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        },
+        {
+          "dimensionHeaders": [
+            {
+              "name": "eventName"
+            }
+          ],
+          "metricHeaders": [
+            {
+              "name": "eventCount",
+              "type": "TYPE_INTEGER"
+            }
+          ],
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        },
+        {
+          "metricHeaders": [
+            {
+              "name": "activeUsers",
+              "type": "TYPE_INTEGER"
+            },
+            {
+              "name": "sessions",
+              "type": "TYPE_INTEGER"
+            },
+            {
+              "name": "screenPageViews",
+              "type": "TYPE_INTEGER"
+            }
+          ],
+          "rows": [
+            {
+              "metricValues": [
+                {
+                  "value": "2"
+                },
+                {
+                  "value": "7"
+                },
+                {
+                  "value": "43"
+                }
+              ]
+            }
+          ],
+          "rowCount": 1,
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        },
+        {
+          "dimensionHeaders": [
+            {
+              "name": "eventName"
+            }
+          ],
+          "metricHeaders": [
+            {
+              "name": "eventCount",
+              "type": "TYPE_INTEGER"
+            }
+          ],
+          "rows": [
+            {
+              "dimensionValues": [
+                {
+                  "value": "demo_request_start"
+                }
+              ],
+              "metricValues": [
+                {
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "rowCount": 1,
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        }
+      ],
+      "kind": "analyticsData#batchRunReports"
+    },
+    "sau": {
+      "reports": [
+        {
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        },
+        {
+          "dimensionHeaders": [
+            {
+              "name": "eventName"
+            }
+          ],
+          "metricHeaders": [
+            {
+              "name": "eventCount",
+              "type": "TYPE_INTEGER"
+            }
+          ],
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        },
+        {
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        },
+        {
+          "dimensionHeaders": [
+            {
+              "name": "eventName"
+            }
+          ],
+          "metricHeaders": [
+            {
+              "name": "eventCount",
+              "type": "TYPE_INTEGER"
+            }
+          ],
+          "metadata": {
+            "currencyCode": "SAR",
+            "timeZone": "Asia/Riyadh"
+          },
+          "kind": "analyticsData#runReport"
+        }
+      ],
+      "kind": "analyticsData#batchRunReports"
+    }
+  }
+}

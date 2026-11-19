@@ -1,5 +1,7 @@
 # Shipped SEO changes
 
+- 2026-11-19 — Daily + weekly: added four contextual guide links on [memberships](https://www.narfid.com/solutions/memberships) and [bookings](https://www.narfid.com/solutions/bookings), crawled all sitemap URLs and inspected all 72 with Google (59 PASS, 13 NEUTRAL). Refreshed weekly aggregates, competitor diffs and approved pricing context. See [report](reports/2026-11-19.md).
+
 - 2026-11-17 — Recorded the owner-confirmed Saudi Keyword Planner export and mapped five measured commercial variants to existing pages in `keyword-map.csv`. Preserved the 16 source rows, unavailable metrics, reported zeros and advertising competition in the [measurement evidence](reports/2026-11-17-keyword-planner-sa.json).
 
 - 2026-11-17 — Linked the published [annual cost comparison](https://www.narfid.com/articles/annual-club-software-cost) from the [pricing checklist](https://www.narfid.com/pricing). Refreshed crawl, Search Console, GA4 and six URL inspections. See the [daily report](reports/2026-11-17.md).

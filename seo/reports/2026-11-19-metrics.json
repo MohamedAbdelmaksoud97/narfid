@@ -1,0 +1,2065 @@
+{
+  "source": "Authorized production board APIs",
+  "checkedAt": "2026-11-19T11:30:21.997Z",
+  "results": {
+    "gscAll": {
+      "startedAt": "2026-11-19T11:27:27.889Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "all",
+        "currentPeriod": {
+          "startDate": "2026-10-22",
+          "endDate": "2026-11-18"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-24",
+          "endDate": "2026-10-21"
+        },
+        "current": {
+          "clicks": 17,
+          "impressions": 59,
+          "ctr": 0.288135593220339,
+          "position": 5.661016949152542
+        },
+        "previous": null,
+        "trend": [
+          {
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0,
+            "position": 0,
+            "key": "2026-11-09"
+          },
+          {
+            "clicks": 1,
+            "impressions": 3,
+            "ctr": 0.3333333333333333,
+            "position": 6.666666666666667,
+            "key": "2026-11-10"
+          },
+          {
+            "clicks": 0,
+            "impressions": 5,
+            "ctr": 0,
+            "position": 9,
+            "key": "2026-11-11"
+          },
+          {
+            "clicks": 6,
+            "impressions": 8,
+            "ctr": 0.75,
+            "position": 2.625,
+            "key": "2026-11-12"
+          },
+          {
+            "clicks": 7,
+            "impressions": 12,
+            "ctr": 0.5833333333333334,
+            "position": 1.9166666666666665,
+            "key": "2026-11-13"
+          },
+          {
+            "clicks": 1,
+            "impressions": 10,
+            "ctr": 0.1,
+            "position": 14.1,
+            "key": "2026-11-14"
+          },
+          {
+            "clicks": 1,
+            "impressions": 4,
+            "ctr": 0.25,
+            "position": 4.5,
+            "key": "2026-11-15"
+          },
+          {
+            "clicks": 1,
+            "impressions": 9,
+            "ctr": 0.1111111111111111,
+            "position": 4.333333333333334,
+            "key": "2026-11-16"
+          },
+          {
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 3.375,
+            "key": "2026-11-17"
+          }
+        ],
+        "queries": [
+          {
+            "clicks": 13,
+            "impressions": 19,
+            "ctr": 0.6842105263157895,
+            "position": 1.8947368421052633,
+            "key": "narfid"
+          }
+        ],
+        "pages": [
+          {
+            "clicks": 5,
+            "impressions": 19,
+            "ctr": 0.2631578947368421,
+            "position": 3.1578947368421053,
+            "key": "https://www.narfid.com/about"
+          },
+          {
+            "clicks": 3,
+            "impressions": 19,
+            "ctr": 0.15789473684210525,
+            "position": 7.368421052631579,
+            "key": "https://www.narfid.com/"
+          },
+          {
+            "clicks": 2,
+            "impressions": 2,
+            "ctr": 1,
+            "position": 1.5,
+            "key": "https://www.narfid.com/articles/gym-unidentified-payment-review"
+          },
+          {
+            "clicks": 2,
+            "impressions": 2,
+            "ctr": 1,
+            "position": 2.5,
+            "key": "https://www.narfid.com/articles/womens-club-operations-system"
+          },
+          {
+            "clicks": 2,
+            "impressions": 10,
+            "ctr": 0.2,
+            "position": 5.9,
+            "key": "https://www.narfid.com/solutions/bookings"
+          },
+          {
+            "clicks": 2,
+            "impressions": 10,
+            "ctr": 0.2,
+            "position": 5.2,
+            "key": "https://www.narfid.com/solutions/point-of-sale"
+          },
+          {
+            "clicks": 1,
+            "impressions": 1,
+            "ctr": 1,
+            "position": 2,
+            "key": "https://www.narfid.com/articles/academy-children-guardian-records"
+          },
+          {
+            "clicks": 1,
+            "impressions": 2,
+            "ctr": 0.5,
+            "position": 6.5,
+            "key": "https://www.narfid.com/articles/academy-makeup-session-policy"
+          },
+          {
+            "clicks": 1,
+            "impressions": 2,
+            "ctr": 0.5,
+            "position": 3,
+            "key": "https://www.narfid.com/articles/academy-midterm-enrollment"
+          },
+          {
+            "clicks": 1,
+            "impressions": 2,
+            "ctr": 0.5,
+            "position": 2.5,
+            "key": "https://www.narfid.com/authors/nerved-team"
+          },
+          {
+            "clicks": 1,
+            "impressions": 9,
+            "ctr": 0.1111111111111111,
+            "position": 4,
+            "key": "https://www.narfid.com/pricing"
+          },
+          {
+            "clicks": 1,
+            "impressions": 3,
+            "ctr": 0.3333333333333333,
+            "position": 4.333333333333334,
+            "key": "https://www.narfid.com/solutions/kitchen-inventory"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4,
+            "key": "https://www.narfid.com/articles/academy-class-groups-capacity"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 19,
+            "key": "https://www.narfid.com/articles/academy-parent-progress-update"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 8,
+            "key": "https://www.narfid.com/articles/academy-player-group-transfer"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 3,
+            "key": "https://www.narfid.com/articles/club-branch-performance-comparison"
+          },
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 10,
+            "key": "https://www.narfid.com/articles/club-data-export-exit-checklist"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4,
+            "key": "https://www.narfid.com/articles/club-employee-access-offboarding"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 4,
+            "key": "https://www.narfid.com/articles/club-meal-production-planning"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 5,
+            "key": "https://www.narfid.com/articles/gym-class-occupancy-report"
+          }
+        ],
+        "devices": [
+          {
+            "clicks": 14,
+            "impressions": 43,
+            "ctr": 0.32558139534883723,
+            "position": 3.9767441860465116,
+            "key": "MOBILE"
+          },
+          {
+            "clicks": 3,
+            "impressions": 16,
+            "ctr": 0.1875,
+            "position": 10.1875,
+            "key": "DESKTOP"
+          }
+        ],
+        "fetchedAt": "2026-11-19T11:27:29.164Z",
+        "lastDataDate": "2026-11-17"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "gscSaudi": {
+      "startedAt": "2026-11-19T11:27:27.896Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "sau",
+        "currentPeriod": {
+          "startDate": "2026-10-22",
+          "endDate": "2026-11-18"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-24",
+          "endDate": "2026-10-21"
+        },
+        "current": {
+          "clicks": 0,
+          "impressions": 15,
+          "ctr": 0,
+          "position": 10.733333333333333
+        },
+        "previous": null,
+        "trend": [
+          {
+            "clicks": 0,
+            "impressions": 0,
+            "ctr": 0,
+            "position": 0,
+            "key": "2026-11-09"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 7,
+            "key": "2026-11-10"
+          },
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 10.666666666666666,
+            "key": "2026-11-11"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 3,
+            "key": "2026-11-12"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 2,
+            "key": "2026-11-13"
+          },
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 31.333333333333332,
+            "key": "2026-11-14"
+          },
+          {
+            "clicks": 0,
+            "impressions": 2,
+            "ctr": 0,
+            "position": 6,
+            "key": "2026-11-15"
+          },
+          {
+            "clicks": 0,
+            "impressions": 1,
+            "ctr": 0,
+            "position": 5,
+            "key": "2026-11-16"
+          },
+          {
+            "clicks": 0,
+            "impressions": 3,
+            "ctr": 0,
+            "position": 2,
+            "key": "2026-11-17"
+          }
+        ],
+        "queries": [],
+        "pages": [],
+        "devices": [
+          {
+            "clicks": 0,
+            "impressions": 6,
+            "ctr": 0,
+            "position": 20.5,
+            "key": "DESKTOP"
+          },
+          {
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 4.222222222222222,
+            "key": "MOBILE"
+          }
+        ],
+        "fetchedAt": "2026-11-19T11:27:29.563Z",
+        "lastDataDate": "2026-11-17"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "gaSaudi": {
+      "startedAt": "2026-11-19T11:27:27.900Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "sau",
+        "timeZone": "Asia/Riyadh",
+        "currentPeriod": {
+          "startDate": "2026-10-22",
+          "endDate": "2026-11-18"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-24",
+          "endDate": "2026-10-21"
+        },
+        "current": null,
+        "previous": null,
+        "pages": [],
+        "channels": [],
+        "events": [],
+        "warnings": [],
+        "fetchedAt": "2026-11-19T11:27:29.193Z"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "gaHistorical": {
+      "startedAt": "2026-11-19T11:27:27.904Z",
+      "status": 200,
+      "connected": true,
+      "error": null,
+      "code": null,
+      "report": {
+        "country": "all",
+        "timeZone": "Asia/Riyadh",
+        "currentPeriod": {
+          "startDate": "2026-10-22",
+          "endDate": "2026-11-18"
+        },
+        "previousPeriod": {
+          "startDate": "2026-09-24",
+          "endDate": "2026-10-21"
+        },
+        "current": {
+          "users": 2,
+          "sessions": 7,
+          "views": 43
+        },
+        "previous": null,
+        "pages": [
+          {
+            "key": "/",
+            "value": 32
+          },
+          {
+            "key": "/articles",
+            "value": 6
+          },
+          {
+            "key": "/articles/club-employee-access-offboarding",
+            "value": 2
+          },
+          {
+            "key": "/articles/club-meal-pickup-handover",
+            "value": 2
+          },
+          {
+            "key": "/articles/club-data-export-exit-checklist",
+            "value": 1
+          }
+        ],
+        "channels": [
+          {
+            "key": "Direct",
+            "value": 7
+          }
+        ],
+        "events": [
+          {
+            "key": "page_view",
+            "value": 43
+          },
+          {
+            "key": "demo_request_start",
+            "value": 4
+          }
+        ],
+        "warnings": [],
+        "fetchedAt": "2026-11-19T11:27:30.403Z"
+      },
+      "inspection": null,
+      "stale": null
+    },
+    "/solutions/memberships": {
+      "startedAt": "2026-11-19T11:27:30.617Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/solutions/memberships",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-16T00:12:26Z",
+        "googleCanonical": "https://www.narfid.com/solutions/memberships",
+        "userCanonical": "https://www.narfid.com/solutions/memberships",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=IE0fFPOwjPO2cq5Y3mZqeg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:27:38.392Z"
+      },
+      "stale": null
+    },
+    "/articles/annual-club-software-cost": {
+      "startedAt": "2026-11-19T11:27:37.845Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/annual-club-software-cost",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=4Pj8uQ9x-DmtjyUr_gkTcQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:27:46.934Z"
+      },
+      "stale": null
+    },
+    "/articles": {
+      "startedAt": "2026-11-19T11:27:46.339Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=3bEgPV8xuSR0L1LR15b3MQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:27:53.905Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-referral-program-tracking": {
+      "startedAt": "2026-11-19T11:27:53.320Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:16:35Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-referral-program-tracking",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=2qluYntGdR3W0pizLHsNcA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:28:01.131Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-off-peak-offer-evaluation": {
+      "startedAt": "2026-11-19T11:28:00.629Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:15:15Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-off-peak-offer-evaluation",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=yglh2QoQ3z8N0jjgBQeWdg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:28:08.231Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-parent-progress-update": {
+      "startedAt": "2026-11-19T11:28:07.722Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-parent-progress-update",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:06:08Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-parent-progress-update",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=aJdxuDioTXS0froyWWwVpw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:28:15.344Z"
+      },
+      "stale": null
+    },
+    "/": {
+      "startedAt": "2026-11-19T11:30:22.689Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-11T22:30:33Z",
+        "googleCanonical": "https://www.narfid.com/",
+        "userCanonical": "https://www.narfid.com/",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=2_mf8op0rGkCWnCjDDjtqg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:30.485Z"
+      },
+      "stale": null
+    },
+    "/pricing": {
+      "startedAt": "2026-11-19T11:30:22.690Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/pricing",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:59:45Z",
+        "googleCanonical": "https://www.narfid.com/pricing",
+        "userCanonical": "https://www.narfid.com/pricing",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=JyYf7caAqunOo424QeYRpw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:30.775Z"
+      },
+      "stale": null
+    },
+    "/about": {
+      "startedAt": "2026-11-19T11:30:22.691Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/about",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T05:19:55Z",
+        "googleCanonical": "https://www.narfid.com/about",
+        "userCanonical": "https://www.narfid.com/about",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=NMV4kDAdgnuXEEmxHdgRwQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:30.898Z"
+      },
+      "stale": null
+    },
+    "/contact": {
+      "startedAt": "2026-11-19T11:30:29.875Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/contact",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=lhcjsvNxi4LWjl2IhjjhWw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:37.561Z"
+      },
+      "stale": null
+    },
+    "/technology-partnership": {
+      "startedAt": "2026-11-19T11:30:30.172Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/technology-partnership",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T02:28:27Z",
+        "googleCanonical": "https://www.narfid.com/technology-partnership",
+        "userCanonical": "https://www.narfid.com/technology-partnership",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=kXzSrUmL31eL_fQbKIp9FA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:37.896Z"
+      },
+      "stale": null
+    },
+    "/visual-identity": {
+      "startedAt": "2026-11-19T11:30:30.440Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/visual-identity",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=BrpXSzfo5yd4aoYkG5x4iA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:38.241Z"
+      },
+      "stale": null
+    },
+    "/authors/nerved-team": {
+      "startedAt": "2026-11-19T11:30:36.974Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/authors/nerved-team",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-16T00:17:54Z",
+        "googleCanonical": "https://www.narfid.com/authors/nerved-team",
+        "userCanonical": "https://www.narfid.com/authors/nerved-team",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=yFcysWtPX2aRBuaNyaFjjw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:44.923Z"
+      },
+      "stale": null
+    },
+    "/solutions/bookings": {
+      "startedAt": "2026-11-19T11:30:37.363Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/solutions/bookings",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T02:21:19Z",
+        "googleCanonical": "https://www.narfid.com/solutions/bookings",
+        "userCanonical": "https://www.narfid.com/solutions/bookings",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=D6OG6HM6eSG8bkX0OMQjhg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:45.013Z"
+      },
+      "stale": null
+    },
+    "/solutions/point-of-sale": {
+      "startedAt": "2026-11-19T11:30:37.719Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/solutions/point-of-sale",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T07:52:00Z",
+        "googleCanonical": "https://www.narfid.com/solutions/point-of-sale",
+        "userCanonical": "https://www.narfid.com/solutions/point-of-sale",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=Ppu1_u6_7ws-43JO1HbF_g&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:45.641Z"
+      },
+      "stale": null
+    },
+    "/solutions/kitchen-inventory": {
+      "startedAt": "2026-11-19T11:30:44.989Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/solutions/kitchen-inventory",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-16T00:24:20Z",
+        "googleCanonical": "https://www.narfid.com/solutions/kitchen-inventory",
+        "userCanonical": "https://www.narfid.com/solutions/kitchen-inventory",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=uqcgG7cXSWkNkSQRypomkQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:52.844Z"
+      },
+      "stale": null
+    },
+    "/solutions/branches": {
+      "startedAt": "2026-11-19T11:30:46.262Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/solutions/branches",
+        "verdict": "NEUTRAL",
+        "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=9G0hp2b2KW2JLrxX3h3ULw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:53.773Z"
+      },
+      "stale": null
+    },
+    "/articles/retail-inventory-for-sports-clubs": {
+      "startedAt": "2026-11-19T11:30:46.761Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:24:12Z",
+        "googleCanonical": "https://www.narfid.com/articles/retail-inventory-for-sports-clubs",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=Ps4PEXPQlZo23XU7I0sfJQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:54.326Z"
+      },
+      "stale": null
+    },
+    "/articles/choose-sports-club-management-system": {
+      "startedAt": "2026-11-19T11:30:52.273Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/choose-sports-club-management-system",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=eG1jSDnKAsSdT1TapMw_gA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:30:59.929Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-class-occupancy-report": {
+      "startedAt": "2026-11-19T11:30:53.208Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-class-occupancy-report",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-15T04:15:05Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-class-occupancy-report",
+        "userCanonical": "https://www.narfid.com/articles/gym-class-occupancy-report",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=VSJydL2lsYOKMPk3ywZlzQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:00.842Z"
+      },
+      "stale": null
+    },
+    "/articles/club-cash-shift-reconciliation": {
+      "startedAt": "2026-11-19T11:30:53.744Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T04:13:38Z",
+        "googleCanonical": "https://www.narfid.com/articles/club-cash-shift-reconciliation",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=6B4Zhy_pWGb3E8oTtBTEEw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:01.526Z"
+      },
+      "stale": null
+    },
+    "/articles/sports-bookings-capacity-guide": {
+      "startedAt": "2026-11-19T11:30:59.345Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:34:55Z",
+        "googleCanonical": "https://www.narfid.com/articles/sports-bookings-capacity-guide",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=NhyQGwmibEAQAcsZsspP_g&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:06.891Z"
+      },
+      "stale": null
+    },
+    "/articles/club-data-migration-checklist": {
+      "startedAt": "2026-11-19T11:31:00.279Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-data-migration-checklist",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=Ln9d4-nsDlFvcYAdytvxfw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:07.983Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-software-demo-checklist": {
+      "startedAt": "2026-11-19T11:31:01.084Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-16T11:49:00Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "userCanonical": "https://www.narfid.com/articles/academy-software-demo-checklist",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=Z0O71LxglMC8Q_lFa3hBuw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:08.725Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-children-guardian-records": {
+      "startedAt": "2026-11-19T11:31:06.432Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-children-guardian-records",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:16:10Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-children-guardian-records",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=gztog73B-rMv1JKguMVI9A&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:14.272Z"
+      },
+      "stale": null
+    },
+    "/articles/visit-based-membership-packages": {
+      "startedAt": "2026-11-19T11:31:07.510Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/visit-based-membership-packages",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:23:44Z",
+        "googleCanonical": "https://www.narfid.com/articles/visit-based-membership-packages",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=sGKJq5Ye_BDjHoqmnLZYdA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:15.041Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-reception-attendance-procedure": {
+      "startedAt": "2026-11-19T11:31:08.122Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-reception-attendance-procedure",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=6TDBj_em93SuLlhK7uBvnA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:15.895Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-member-retention-followup": {
+      "startedAt": "2026-11-19T11:31:13.803Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-member-retention-followup",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T22:21:59Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-member-retention-followup",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=uxn5YPP4ELRTMqH8T-_VaA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:21.642Z"
+      },
+      "stale": null
+    },
+    "/articles/womens-club-operations-system": {
+      "startedAt": "2026-11-19T11:31:14.512Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/womens-club-operations-system",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:16:58Z",
+        "googleCanonical": "https://www.narfid.com/articles/womens-club-operations-system",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=iXT3To4C-C6rNNGTsRcu5Q&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:22.094Z"
+      },
+      "stale": null
+    },
+    "/articles/personal-training-schedule-control": {
+      "startedAt": "2026-11-19T11:31:15.300Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/personal-training-schedule-control",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:20:09Z",
+        "googleCanonical": "https://www.narfid.com/articles/personal-training-schedule-control",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=sQYqZUOWUoGUIiBZPgz8UQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:22.905Z"
+      },
+      "stale": null
+    },
+    "/articles/booking-cancellation-no-show-log": {
+      "startedAt": "2026-11-19T11:31:21.102Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:17:44Z",
+        "googleCanonical": "https://www.narfid.com/articles/booking-cancellation-no-show-log",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=BhyohZNK84uqV0oJ7wWRPQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:28.898Z"
+      },
+      "stale": null
+    },
+    "/articles/padel-court-occupancy-report": {
+      "startedAt": "2026-11-19T11:31:21.576Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:24:43Z",
+        "googleCanonical": "https://www.narfid.com/articles/padel-court-occupancy-report",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=-_gBD0Zw4za87bq8ypEyVA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:29.400Z"
+      },
+      "stale": null
+    },
+    "/articles/recurring-court-booking-control": {
+      "startedAt": "2026-11-19T11:31:22.429Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/recurring-court-booking-control",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:15:26Z",
+        "googleCanonical": "https://www.narfid.com/articles/recurring-court-booking-control",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=pypakMWm9mzh5JidPJdk0w&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:30.193Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-class-groups-capacity": {
+      "startedAt": "2026-11-19T11:31:28.319Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T01:00:13Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-class-groups-capacity",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=jx3Y9jxbJmJ53BTglvbkNA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:36.146Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-partial-payments-receivables": {
+      "startedAt": "2026-11-19T11:31:28.885Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T04:54:59Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-partial-payments-receivables",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=oPqsHR-3feSFX8Z8OqXHpQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:36.451Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-daily-sales-collections-report": {
+      "startedAt": "2026-11-19T11:31:29.718Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T00:49:22Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-daily-sales-collections-report",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=uZrvtkuZCvU7BRttB5NwtQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:37.285Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-refund-approval-record": {
+      "startedAt": "2026-11-19T11:31:35.561Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-refund-approval-record",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:15:05Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-refund-approval-record",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=wqrrHV7aU0KdpxuUEhY8-g&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:43.095Z"
+      },
+      "stale": null
+    },
+    "/articles/club-expense-approval-workflow": {
+      "startedAt": "2026-11-19T11:31:35.929Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-expense-approval-workflow",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=flCuZya_L3FuCS0HaDlf_w&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:43.643Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-pos-retail-sales-workflow": {
+      "startedAt": "2026-11-19T11:31:36.698Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:06:00Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-pos-retail-sales-workflow",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=adDorQyQSKx9V7JdLlzdLA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:44.308Z"
+      },
+      "stale": null
+    },
+    "/articles/club-meal-production-planning": {
+      "startedAt": "2026-11-19T11:31:42.525Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-meal-production-planning",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:22:25Z",
+        "googleCanonical": "https://www.narfid.com/articles/club-meal-production-planning",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=NGqHuBLNhTiOh4EByS8qCA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:50.188Z"
+      },
+      "stale": null
+    },
+    "/articles/club-branch-performance-comparison": {
+      "startedAt": "2026-11-19T11:31:43.859Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:03:25Z",
+        "googleCanonical": "https://www.narfid.com/articles/club-branch-performance-comparison",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=Qzn3l2EDuttiRYigt_uAhg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:51.543Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-stock-count-reorder": {
+      "startedAt": "2026-11-19T11:31:43.045Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:33:07Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-stock-count-reorder",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=wO88U6VwczTKY_XBjg-qOw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:50.668Z"
+      },
+      "stale": null
+    },
+    "/articles/new-reception-staff-training": {
+      "startedAt": "2026-11-19T11:31:50.284Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/new-reception-staff-training",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:15:29Z",
+        "googleCanonical": "https://www.narfid.com/articles/new-reception-staff-training",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=vckmwWUe4H9ucOd3ul4UkQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:57.877Z"
+      },
+      "stale": null
+    },
+    "/articles/shift-handover-pending-cases": {
+      "startedAt": "2026-11-19T11:31:52.224Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:34:17Z",
+        "googleCanonical": "https://www.narfid.com/articles/shift-handover-pending-cases",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=_vBdO5CZgIOmU258xDxVSA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:59.928Z"
+      },
+      "stale": null
+    },
+    "/articles/weekly-club-operations-meeting": {
+      "startedAt": "2026-11-19T11:31:52.262Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:25:03Z",
+        "googleCanonical": "https://www.narfid.com/articles/weekly-club-operations-meeting",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=KRJJs-ZZRzKNEpmYoe6qbw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:31:59.972Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-member-complaint-resolution": {
+      "startedAt": "2026-11-19T11:31:57.420Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:16:55Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-member-complaint-resolution",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=ZXs5Bc-kuJIkcgcyMmMSRA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:05.208Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-inquiry-call-checklist": {
+      "startedAt": "2026-11-19T11:31:59.588Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T00:00:43Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-inquiry-call-checklist",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=5rb1kys8QmBjAYDmg4CPgA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:07.437Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-first-week-member-onboarding": {
+      "startedAt": "2026-11-19T11:31:59.560Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:15:35Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-first-week-member-onboarding",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=9nljGSqIL2ar1jqNPSoX9g&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:07.684Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-trial-visit-conversion": {
+      "startedAt": "2026-11-19T11:32:04.694Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:11:57Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-trial-visit-conversion",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=AHMe7XxAcD3oo7dcPLfREA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:12.291Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-lead-source-conversion": {
+      "startedAt": "2026-11-19T11:32:06.832Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:14:55Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-lead-source-conversion",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=6axnTUw4pVzg2KfYonLgJA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:14.696Z"
+      },
+      "stale": null
+    },
+    "/articles/sports-class-waitlist-procedure": {
+      "startedAt": "2026-11-19T11:32:07.189Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/sports-class-waitlist-procedure",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=gz_N9EH-S5rVBaUxxU-Yzg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:14.930Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-substitute-coach-handover": {
+      "startedAt": "2026-11-19T11:32:11.732Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:13:59Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-substitute-coach-handover",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=3ydqyXd2ochr3aFaig0QOw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:19.418Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-makeup-session-policy": {
+      "startedAt": "2026-11-19T11:32:14.164Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:31:49Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-makeup-session-policy",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=9QyqmhOApoEaLDRLwh3UKQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:21.865Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-player-group-transfer": {
+      "startedAt": "2026-11-19T11:32:14.389Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-player-group-transfer",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T00:02:09Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-player-group-transfer",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=uP_XT5zBWI6jNeGwMS04ww&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:22.274Z"
+      },
+      "stale": null
+    },
+    "/articles/academy-midterm-enrollment": {
+      "startedAt": "2026-11-19T11:32:18.894Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:16:30Z",
+        "googleCanonical": "https://www.narfid.com/articles/academy-midterm-enrollment",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=MAQPgaKChI0AXgP_QLDMEQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:26.497Z"
+      },
+      "stale": null
+    },
+    "/articles/court-maintenance-booking-disruption": {
+      "startedAt": "2026-11-19T11:32:21.265Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:04:58Z",
+        "googleCanonical": "https://www.narfid.com/articles/court-maintenance-booking-disruption",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=9-901SSJJLXLAkRTFJc-lA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:28.981Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-locker-assignment-log": {
+      "startedAt": "2026-11-19T11:32:21.756Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-locker-assignment-log",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=MxKmlFXCxKjqV_zLJ8WD-Q&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:29.305Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-lost-property-register": {
+      "startedAt": "2026-11-19T11:32:25.906Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-lost-property-register",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:22:37Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-lost-property-register",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=q65t9cGzDNgzrJ8zVfH0yA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:33.650Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-stock-receiving-discrepancy": {
+      "startedAt": "2026-11-19T11:32:28.369Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:24:47Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-stock-receiving-discrepancy",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=J8vy9WZcV8tiMW2xBpZAkg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:36.215Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-damaged-retail-stock": {
+      "startedAt": "2026-11-19T11:32:28.734Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T04:13:49Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-damaged-retail-stock",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=LMrrVVZLlBBxiMyc7RTc5Q&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:36.475Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-interbranch-stock-transfer": {
+      "startedAt": "2026-11-19T11:32:33.133Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:16:49Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-interbranch-stock-transfer",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=mjX7so50PXbFtoQMIXwFgg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:40.947Z"
+      },
+      "stale": null
+    },
+    "/articles/club-meal-pickup-handover": {
+      "startedAt": "2026-11-19T11:32:35.640Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-18T08:06:34Z",
+        "googleCanonical": "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "userCanonical": "https://www.narfid.com/articles/club-meal-pickup-handover",
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=u-pRQH78gVJHsDtBJISWCw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:43.626Z"
+      },
+      "stale": null
+    },
+    "/articles/club-meal-order-error-resolution": {
+      "startedAt": "2026-11-19T11:32:36.064Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T00:49:32Z",
+        "googleCanonical": "https://www.narfid.com/articles/club-meal-order-error-resolution",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=044TPbeekqCMmS__xjlZKQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:43.798Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-unidentified-payment-review": {
+      "startedAt": "2026-11-19T11:32:40.396Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:16:50Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-unidentified-payment-review",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=B6su3V_8s5H3iNH4pxsbFw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:48.240Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-member-record-deduplication": {
+      "startedAt": "2026-11-19T11:32:43.309Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:17:23Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-member-record-deduplication",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=CIvLOjqLr2YJ88GOCRllbA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:50.782Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-discount-approval-controls": {
+      "startedAt": "2026-11-19T11:32:43.151Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:06:35Z",
+        "googleCanonical": "https://www.narfid.com/articles/gym-discount-approval-controls",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=djITozldngEkc5r3592Zsw&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:50.854Z"
+      },
+      "stale": null
+    },
+    "/articles/gym-software-team-adoption": {
+      "startedAt": "2026-11-19T11:32:47.715Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/gym-software-team-adoption",
+        "verdict": "NEUTRAL",
+        "coverage": "تم اكتشاف الصفحة - لم تتم فهرستها حتى الآن",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=eL0_EK6RO2XUpT0BxsN0Tg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:55.282Z"
+      },
+      "stale": null
+    },
+    "/articles/club-data-export-exit-checklist": {
+      "startedAt": "2026-11-19T11:32:50.330Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:21:42Z",
+        "googleCanonical": "https://www.narfid.com/articles/club-data-export-exit-checklist",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=YdLFPPL8N4MrOlG3895RFA&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:57.785Z"
+      },
+      "stale": null
+    },
+    "/articles/club-employee-access-offboarding": {
+      "startedAt": "2026-11-19T11:32:50.368Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/club-employee-access-offboarding",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-10T01:45:13Z",
+        "googleCanonical": "https://www.narfid.com/articles/club-employee-access-offboarding",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=XMAiqW36SZ8t1tlJCSlcew&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:32:57.978Z"
+      },
+      "stale": null
+    },
+    "/articles/meal-entitlements-and-daily-kitchen": {
+      "startedAt": "2026-11-19T11:32:54.754Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:33:19Z",
+        "googleCanonical": "https://www.narfid.com/articles/meal-entitlements-and-daily-kitchen",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=8KsS0RcuFFRZZEap8-jCRQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:33:02.283Z"
+      },
+      "stale": null
+    },
+    "/articles/membership-renewal-freeze-guide": {
+      "startedAt": "2026-11-19T11:32:57.294Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "verdict": "PASS",
+        "coverage": "تم إرسال الصفحة وتمت فهرستها",
+        "indexingState": "INDEXING_ALLOWED",
+        "robotsState": "ALLOWED",
+        "lastCrawlTime": "2026-11-09T23:04:23Z",
+        "googleCanonical": "https://www.narfid.com/articles/membership-renewal-freeze-guide",
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=wcU8dv38bnuoRnzMvQYYsQ&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:33:05.036Z"
+      },
+      "stale": null
+    },
+    "/articles/multi-branch-club-permissions": {
+      "startedAt": "2026-11-19T11:32:57.544Z",
+      "status": 200,
+      "connected": null,
+      "error": null,
+      "code": null,
+      "report": null,
+      "inspection": {
+        "url": "https://www.narfid.com/articles/multi-branch-club-permissions",
+        "verdict": "NEUTRAL",
+        "coverage": "لم يتعرّف محرّك بحث Google على عنوان URL.",
+        "indexingState": "INDEXING_STATE_UNSPECIFIED",
+        "robotsState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+        "lastCrawlTime": null,
+        "googleCanonical": null,
+        "userCanonical": null,
+        "inspectionLink": "https://search.google.com/search-console/inspect?resource_id=https://www.narfid.com/&id=m2gXXxHJaNfazHRWmS3uGg&utm_medium=link&utm_source=api",
+        "inspectedAt": "2026-11-19T11:33:05.289Z"
+      },
+      "stale": null
+    }
+  },
+  "indexingSummary": {
+    "sitemapUrls": 72,
+    "inspectionResults": 72,
+    "counts": {
+      "PASS": 59,
+      "NEUTRAL": 13
+    },
+    "unverified": [],
+    "interpretation": "Google stored index inspection, not a live test. Technical crawl success does not establish indexing; unknown/discovered states have no proven content-quality cause."
+  },
+  "weeklySearch": {
+    "source": "Daily trend rows in current authenticated GSC report",
+    "currentPeriod": {
+      "startDate": "2026-11-11",
+      "endDate": "2026-11-17"
+    },
+    "previousPeriod": {
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-10"
+    },
+    "timezone": "America/Los_Angeles",
+    "limitation": "Previous week spans prelaunch; only November 9–10 returned rows. Missing daily rows are not recorded as explicit zeros. Small site/query sample does not establish an SEO effect.",
+    "countries": {
+      "gscAll": {
+        "current": {
+          "returnedDays": [
+            "2026-11-11",
+            "2026-11-12",
+            "2026-11-13",
+            "2026-11-14",
+            "2026-11-15",
+            "2026-11-16",
+            "2026-11-17"
+          ],
+          "clicks": 16,
+          "impressions": 56,
+          "ctr": 0.2857142857142857,
+          "position": 5.607142857142857
+        },
+        "previous": {
+          "returnedDays": [
+            "2026-11-09",
+            "2026-11-10"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 6.666666666666667
+        }
+      },
+      "gscSaudi": {
+        "current": {
+          "returnedDays": [
+            "2026-11-11",
+            "2026-11-12",
+            "2026-11-13",
+            "2026-11-14",
+            "2026-11-15",
+            "2026-11-16",
+            "2026-11-17"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 11
+        },
+        "previous": {
+          "returnedDays": [
+            "2026-11-09",
+            "2026-11-10"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        }
+      }
+    }
+  }
+}

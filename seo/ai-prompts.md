@@ -31,3 +31,7 @@ These are proposed buyer questions, not measured search volume or actual assista
 | 25 | هل التطبيق الخاص وربط أجهزة الدخول داخل اشتراك نرفد؟ | `/technology-partnership` |
 
 For each future real observation append: question ID, provider/model, exact prompt, country/language, UTC timestamp, whether narfid was named, answer facts, cited URLs, observed errors, and a durable response/evidence reference. Record refusals/unavailable results explicitly. Do not overwrite the first sample or infer one assistant's answer from another.
+
+## Weekly check — 2026-11-19
+
+All 25 prompts: ChatGPT, Perplexity and Google AI Overviews **not verified**. No connected actual assistant-answer/citation provider is available. Web search results are not assistant answers; no brand-absence or sentiment conclusion recorded. Current approved pricing facts were rechecked in live public HTML and updated in `context.md`. Next weekly check November 26, subject to provider availability.
